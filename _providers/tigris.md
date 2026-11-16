@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 4
+artifact_total: 6
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tigris/refs/heads/main/skills/tigris-fork-for-agents.md
+  href: https://artifacts.apis.io/tigris/skills/tigris-fork-for-agents.md
   title: ''
   type: AgentSkill
   url: skills/tigris-fork-for-agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tigris/refs/heads/main/mcp/tigris-mcp.yml
+  href: https://artifacts.apis.io/tigris/mcp/tigris-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/tigris-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tigris/refs/heads/main/a2a/tigris-a2a.yml
+  href: https://artifacts.apis.io/tigris/a2a/tigris-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/tigris-a2a.yml
@@ -65,7 +68,7 @@ name: Tigris
 nav: Providers
 network: true
 overview: Tigris is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company and A2A.
-random_paper: 20
+random_paper: 10
 score:
   band: minimal
   composite: 5.8
@@ -101,8 +104,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -121,6 +124,12 @@ security:
   name: Tigris Trust Center
   slug: tigris-trust-center
   summary_line: SOC 2
+skill_count: 2
+skills:
+- name: Fork a dataset per agent with copy-on-write buckets
+  slug: tigris-fork-for-agents
+- name: Upload and serve objects on Tigris
+  slug: tigris-upload-and-serve
 slug: tigris
 tags:
 - Company

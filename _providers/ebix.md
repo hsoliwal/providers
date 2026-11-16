@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ebix/refs/heads/main/security/ebix-domain-security.yml
+  href: https://artifacts.apis.io/ebix/security/ebix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ebix-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebix/refs/heads/main/conformance/ebix-conformance.yml
+  href: https://artifacts.apis.io/ebix/conformance/ebix-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ebix-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ebix/refs/heads/main/llms/ebix-llms.txt
+  href: https://artifacts.apis.io/ebix/llms/ebix-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ebix-llms.txt
@@ -183,7 +186,7 @@ overview: 'Ebix is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Ebix''s developer surface includes documentation, support, engineering blog, and 29 more developer resources.'
-random_paper: 6
+random_paper: 16
 score:
   band: emerging
   composite: 15.3
@@ -218,14 +221,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ebix/refs/heads/main/screenshots/ebix-2026-07-25T212726.png
+screenshot: https://apis.io/screenshots/ebix/ebix-2026-07-25T212726.png
 security:
 - kind: authentication
   name: Ebix Authentication

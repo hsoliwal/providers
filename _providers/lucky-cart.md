@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: 'The core Lucky Cart API. POST /cart/ticket submits a validated shopping cart — cart identifier, shopper identifier, gross and net amounts, and product lines — and Lucky Cart determines whether a game '
@@ -58,7 +61,7 @@ apis:
 artifact_total: 10
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/security/lucky-cart-domain-security.yml
+  href: https://artifacts.apis.io/lucky-cart/security/lucky-cart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lucky-cart-domain-security.yml
@@ -95,32 +98,32 @@ common:
   type: Login
   url: https://app.luckycart.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/packages/lucky-cart-packages.yml
+  href: https://artifacts.apis.io/lucky-cart/packages/lucky-cart-packages.yml
   title: ''
   type: Packages
   url: packages/lucky-cart-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/packages/lucky-cart-packages.yml
+  href: https://artifacts.apis.io/lucky-cart/packages/lucky-cart-packages.yml
   title: ''
   type: SDKs
   url: packages/lucky-cart-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/authentication/lucky-cart-authentication.yml
+  href: https://artifacts.apis.io/lucky-cart/authentication/lucky-cart-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lucky-cart-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/conventions/lucky-cart-conventions.yml
+  href: https://artifacts.apis.io/lucky-cart/conventions/lucky-cart-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lucky-cart-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/components/lucky-cart-components.yml
+  href: https://artifacts.apis.io/lucky-cart/components/lucky-cart-components.yml
   title: ''
   type: Components
   url: components/lucky-cart-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/conformance/lucky-cart-conformance.yml
+  href: https://artifacts.apis.io/lucky-cart/conformance/lucky-cart-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lucky-cart-conformance.yml
@@ -129,22 +132,22 @@ common:
   type: Compliance
   url: https://www.luckycart.com/en/certifications
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/lifecycle/lucky-cart-lifecycle.yml
+  href: https://artifacts.apis.io/lucky-cart/lifecycle/lucky-cart-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lucky-cart-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/plans/lucky-cart-plans-pricing.yml
+  href: https://artifacts.apis.io/lucky-cart/plans/lucky-cart-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lucky-cart-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/rate-limits/lucky-cart-rate-limits.yml
+  href: https://artifacts.apis.io/lucky-cart/rate-limits/lucky-cart-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lucky-cart-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/llms/lucky-cart-llms.txt
+  href: https://artifacts.apis.io/lucky-cart/llms/lucky-cart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lucky-cart-llms.txt
@@ -164,7 +167,7 @@ plans:
 - name: Lucky Cart Plans Pricing
   plan_count: 0
   slug: lucky-cart-plans-pricing
-random_paper: 11
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Lucky Cart Rate Limits
@@ -173,7 +176,7 @@ score:
   band: emerging
   composite: 26.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -204,14 +207,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lucky-cart/refs/heads/main/screenshots/lucky-cart-2026-07-25T225646.png
+screenshot: https://apis.io/screenshots/lucky-cart/lucky-cart-2026-07-25T225646.png
 security:
 - kind: authentication
   name: Lucky Cart Authentication

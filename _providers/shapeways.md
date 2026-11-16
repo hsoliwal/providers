@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -63,11 +70,8 @@ apis:
   description: Place and track manufacturing orders.
   name: Shapeways Orders API
   slug: shapeways-orders-api
-artifact_total: 13
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Shapeways Cart API
   slug: open-shapeways-cart-api
@@ -90,7 +94,7 @@ common:
   type: BlogRSS
   url: https://www.shapeways.com/blog/feed
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/overlays/shapeways-overlay.yaml
+  href: https://artifacts.apis.io/shapeways/overlays/shapeways-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/shapeways-overlay.yaml
@@ -139,72 +143,72 @@ common:
   type: PrivacyPolicy
   url: https://www.shapeways.com/privacy-statement
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/authentication/shapeways-authentication.yml
+  href: https://artifacts.apis.io/shapeways/authentication/shapeways-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shapeways-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/scopes/shapeways-scopes.yml
+  href: https://artifacts.apis.io/shapeways/scopes/shapeways-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/shapeways-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/agentic-access/shapeways-agentic-access.yml
+  href: https://artifacts.apis.io/shapeways/agentic-access/shapeways-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/shapeways-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/security/shapeways-domain-security.yml
+  href: https://artifacts.apis.io/shapeways/security/shapeways-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shapeways-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/packages/shapeways-packages.yml
+  href: https://artifacts.apis.io/shapeways/packages/shapeways-packages.yml
   title: ''
   type: Packages
   url: packages/shapeways-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/packages/shapeways-packages.yml
+  href: https://artifacts.apis.io/shapeways/packages/shapeways-packages.yml
   title: ''
   type: SDKs
   url: packages/shapeways-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/conventions/shapeways-conventions.yml
+  href: https://artifacts.apis.io/shapeways/conventions/shapeways-conventions.yml
   title: ''
   type: Conventions
   url: conventions/shapeways-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/errors/shapeways-problem-types.yml
+  href: https://artifacts.apis.io/shapeways/errors/shapeways-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/shapeways-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/mcp/shapeways-mcp.yml
+  href: https://artifacts.apis.io/shapeways/mcp/shapeways-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/shapeways-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/llms/shapeways-llms.txt
+  href: https://artifacts.apis.io/shapeways/llms/shapeways-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shapeways-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/lifecycle/shapeways-lifecycle.yml
+  href: https://artifacts.apis.io/shapeways/lifecycle/shapeways-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/shapeways-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/conformance/shapeways-conformance.yml
+  href: https://artifacts.apis.io/shapeways/conformance/shapeways-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shapeways-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/data-model/shapeways-data-model.yml
+  href: https://artifacts.apis.io/shapeways/data-model/shapeways-data-model.yml
   title: ''
   type: DataModel
   url: data-model/shapeways-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/shapeways/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -223,8 +227,24 @@ network: true
 overview: 'Shapeways publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cart API, Materials API, Models API, and 1 more. Tagged areas include Company, 3D Printing, Manufacturing, Prototyping, and Hardware.
 
 
+  The Shapeways catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Shapeways'' developer surface includes engineering blog, documentation, API reference, getting-started guide, support, signup flow, authentication, and 22 more developer resources.'
-random_paper: 13
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Shapeways API Rules
+  rule_count: 63
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 1
+  slug: shapeways-rules
 scopes:
 - name: Shapeways Scopes
   scope_count: 0
@@ -232,23 +252,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.6
+  composite: 35.2
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 12.6
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 33.5
+  previous_composite: 35.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -265,13 +285,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/shapeways/refs/heads/main/screenshots/shapeways-2026-09-02T155109.png
+screenshot: https://apis.io/screenshots/shapeways/shapeways-2026-09-02T155109.png
 security:
 - kind: authentication
   name: Shapeways Authentication
@@ -281,6 +301,12 @@ security:
   name: Shapeways Domain Security
   slug: shapeways-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Manage Shapeways 3D models
+  slug: shapeways-manage-models
+- name: Upload a model and place a Shapeways order
+  slug: shapeways-upload-and-order
 slug: shapeways
 tags:
 - Company

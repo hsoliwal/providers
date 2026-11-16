@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: unknown
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -20,21 +24,24 @@ agent_readiness:
     auth_clarity: negotiable
     consent_identity: false
     delegated_identity: documented
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 27.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -63,7 +70,7 @@ apis:
   description: Send messages to devices and topics
   name: Google Firebase Messages API
   slug: google-firebase-messages-api
-artifact_total: 33
+artifact_total: 32
 collections:
 - collection_type: postman
   name: Google Firebase Firebase Cloud Messaging API (FCM) Data API
@@ -71,9 +78,6 @@ collections:
 - collection_type: postman
   name: Google Firebase Firebase Cloud Messaging API (FCM) Data Messages API
   slug: postman-google-firebase-messages-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Google Firebase Firebase Cloud Messaging API (FCM)
   slug: open-firebase-cloud-messaging
@@ -88,17 +92,17 @@ collections:
   slug: open-google-firebase-messages-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/plans/google-firebase-plans-pricing.yml
+  href: https://artifacts.apis.io/google-firebase/plans/google-firebase-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/google-firebase-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/rate-limits/google-firebase-rate-limits.yml
+  href: https://artifacts.apis.io/google-firebase/rate-limits/google-firebase-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/google-firebase-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/finops/google-firebase-finops.yml
+  href: https://artifacts.apis.io/google-firebase/finops/google-firebase-finops.yml
   title: ''
   type: FinOps
   url: finops/google-firebase-finops.yml
@@ -111,27 +115,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/google-firebase/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/agentic-access/google-firebase-agentic-access.yml
+  href: https://artifacts.apis.io/google-firebase/agentic-access/google-firebase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/google-firebase-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/security/google-firebase-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google-firebase/security/google-firebase-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-firebase-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/security/google-firebase-domain-security.yml
+  href: https://artifacts.apis.io/google-firebase/security/google-firebase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-firebase-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/authentication/google-firebase-authentication.yml
+  href: https://artifacts.apis.io/google-firebase/authentication/google-firebase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/google-firebase-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/scopes/google-firebase-scopes.yml
+  href: https://artifacts.apis.io/google-firebase/scopes/google-firebase-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/google-firebase-scopes.yml
@@ -172,7 +176,7 @@ common:
   type: StatusPage
   url: https://status.firebase.google.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/json-ld/google-firebase-context.jsonld
+  href: https://artifacts.apis.io/google-firebase/json-ld/google-firebase-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/google-firebase-context.jsonld
@@ -184,12 +188,12 @@ created: '2026-03-13'
 description: Google Firebase is a comprehensive app development platform that provides backend services, SDKs, and APIs for building and scaling mobile and web applications, including authentication, real-time databases, cloud messaging, hosting, and analytics.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Google Firebase Finops
   primary_unit: ''
-  service_category: Mobile / Web Backend
+  service_category: ''
   slug: google-firebase-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-firebase.png
 json_schemas:
 - name: AndroidConfig
@@ -244,7 +248,7 @@ plans:
 - name: Google Firebase Plans Pricing
   plan_count: 2
   slug: google-firebase-plans-pricing
-random_paper: 19
+random_paper: 3
 rate_limits:
 - limit_count: 11
   name: Google Firebase Rate Limits
@@ -280,23 +284,23 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 42.8
+  composite: 47.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 60.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 54.5
+    artifact_dirs: 20
+    catalog_earned: 66.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 48.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 15.8
+    access_clarity: 31.6
     contract_governance: 13.6
     contract_quality: 59.7
     developer_ergonomics: 56.0
     discoverability: 66.1
-    operational_transparency: 26.3
-  previous_composite: 44.3
+    operational_transparency: 36.8
+  previous_composite: 47.4
   provenance:
     agentic_access: derived
     contracts:
@@ -310,13 +314,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/google-firebase/refs/heads/main/screenshots/google-firebase-2026-06-20T182200.png
+screenshot: https://apis.io/screenshots/google-firebase/google-firebase-2026-06-20T182200.png
 security:
 - kind: authentication
   name: Google Firebase Authentication

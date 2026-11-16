@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: documented
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-10-17'
+  score: 37.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 9
   slug: jina-ai-agentic-access
   summary_line: 9 operations · 5 acting
-api_count: 3
+api_count: 4
 apis:
 - baseURL: https://api.jina.ai/v1
   baseurl_source: declared
@@ -65,11 +71,33 @@ apis:
   description: Cross-encoder reranking
   name: Jina AI Reranker API
   slug: jina-ai-reranker-api
-artifact_total: 20
+- baseURL: https://api.jina.ai
+  baseurl_source: declared
+  description: 'Asynchronous embedding for large workloads: up to 50,000 inputs from a GCS file URL, or 10,000 inline. Submit with `POST /v1/batch/embeddings`, poll `GET /v1/batch/{batch_id}` until the status is `com'
+  name: Jina AI Batch Embeddings API
+  slug: jina-ai-batch-embeddings-api
+- baseURL: https://api.jina.ai
+  baseurl_source: declared
+  description: 'Document transcription over the OpenAI chat completions schema. Point any OpenAI-compatible client at the server URL above with `/v1` appended, set `model`, and send a page image; the response is the '
+  name: Jina AI Generative Models API
+  slug: jina-ai-generative-models-api
+- baseURL: https://api.jina.ai
+  baseurl_source: declared
+  description: 'Every model this API serves, in OpenRouter-compatible form: identifiers, input and output modalities, context lengths and prices. Read it before hardcoding a model name — the catalogue moves.'
+  name: Jina AI Model List API
+  slug: jina-ai-model-list-api
+- baseURL: https://api.jina.ai
+  baseurl_source: declared
+  description: Search the web and get the result pages back in an LLM-friendly format.
+  name: Jina AI Search API
+  slug: jina-ai-search-api
+- baseURL: https://api.jina.ai
+  baseurl_source: declared
+  description: '**Embeddings** turn text, images, audio, video and PDFs into dense vectors for semantic search, RAG, clustering and classification. Task-specific variants (`retrieval.query`, `retrieval.passage`, `tex'
+  name: Jina AI Search Foundation Models API
+  slug: jina-ai-search-foundation-models-api
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Jina AI Embeddings Batch API
   slug: open-jina-ai-batch-api
@@ -93,17 +121,17 @@ collections:
   slug: open-jina-ai-reranker
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/plans/jina-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/jina-ai/plans/jina-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jina-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/rate-limits/jina-ai-rate-limits.yml
+  href: https://artifacts.apis.io/jina-ai/rate-limits/jina-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jina-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/finops/jina-ai-finops.yml
+  href: https://artifacts.apis.io/jina-ai/finops/jina-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/jina-ai-finops.yml
@@ -112,22 +140,22 @@ common:
   type: Blog
   url: https://jina.ai/news/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/capabilities/jina-ai-capability-edges.yml
+  href: https://artifacts.apis.io/jina-ai/capabilities/jina-ai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/jina-ai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/agentic-access/jina-ai-agentic-access.yml
+  href: https://artifacts.apis.io/jina-ai/agentic-access/jina-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jina-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/security/jina-ai-domain-security.yml
+  href: https://artifacts.apis.io/jina-ai/security/jina-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jina-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/authentication/jina-ai-authentication.yml
+  href: https://artifacts.apis.io/jina-ai/authentication/jina-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jina-ai-authentication.yml
@@ -190,7 +218,10 @@ modified: '2026-10-06'
 name: Jina AI
 nav: Providers
 network: true
-overview: 'Jina AI publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch API, Embeddings API, Reader API, and 1 more. Tagged areas include Artificial Intelligence, Embeddings, Machine Learning, Reranking, and Search.
+overview: 'Jina AI publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch API, Embeddings API, Reader API, and 6 more. Tagged areas include Artificial Intelligence, Embeddings, Machine Learning, Reranking, and Search.
+
+
+  The Jina AI catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Jina AI''s developer surface includes engineering blog, authentication, developer portal, documentation, getting-started guide, signup flow, and 11 more developer resources.'
@@ -198,37 +229,50 @@ plans:
 - name: Jina Ai Plans Pricing
   plan_count: 5
   slug: jina-ai-plans-pricing
-random_paper: 5
+random_paper: 17
 rate_limits:
 - limit_count: 9
   name: Jina Ai Rate Limits
   slug: jina-ai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Jina AI API Rules
+  rule_count: 56
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 4
+    warn: 11
+  slug: jina-ai-rules
 score:
   band: thin
-  composite: 31.1
+  composite: 36.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 46.0
+    artifact_dirs: 19
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 2.1
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
-    contract_quality: 48.7
-    developer_ergonomics: 33.3
+    contract_governance: 13.6
+    contract_quality: 52.3
+    developer_ergonomics: 45.2
     discoverability: 80.0
     operational_transparency: 10.5
-  previous_composite: 32.1
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 4
+      total: 16
     mcp: first-party
   regulatory:
     applies: true
@@ -236,13 +280,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/screenshots/jina-ai-2026-06-20T183733.png
+screenshot: https://apis.io/screenshots/jina-ai/jina-ai-2026-06-20T183733.png
 security:
 - kind: authentication
   name: Jina Ai Authentication

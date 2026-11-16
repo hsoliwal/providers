@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-10-17'
+  score: 12.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Ellipsis Drive API v3 provides programmatic access to manage, use, and integrate spatial data: accounts and organizations, users, folders/paths, maps, vector and raster layers, point clouds, acces'
@@ -94,42 +99,42 @@ common:
   type: PrivacyPolicy
   url: https://ellipsis-drive.com/privacy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/authentication/ellipsis-drive-authentication.yml
+  href: https://artifacts.apis.io/ellipsis-drive/authentication/ellipsis-drive-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ellipsis-drive-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/scopes/ellipsis-drive-scopes.yml
+  href: https://artifacts.apis.io/ellipsis-drive/scopes/ellipsis-drive-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/ellipsis-drive-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/packages/ellipsis-drive-packages.yml
+  href: https://artifacts.apis.io/ellipsis-drive/packages/ellipsis-drive-packages.yml
   title: ''
   type: Packages
   url: packages/ellipsis-drive-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/packages/ellipsis-drive-packages.yml
+  href: https://artifacts.apis.io/ellipsis-drive/packages/ellipsis-drive-packages.yml
   title: ''
   type: SDKs
   url: packages/ellipsis-drive-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/llms/ellipsis-drive-llms.txt
+  href: https://artifacts.apis.io/ellipsis-drive/llms/ellipsis-drive-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ellipsis-drive-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/conformance/ellipsis-drive-conformance.yml
+  href: https://artifacts.apis.io/ellipsis-drive/conformance/ellipsis-drive-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ellipsis-drive-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/lifecycle/ellipsis-drive-lifecycle.yml
+  href: https://artifacts.apis.io/ellipsis-drive/lifecycle/ellipsis-drive-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ellipsis-drive-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/security/ellipsis-drive-domain-security.yml
+  href: https://artifacts.apis.io/ellipsis-drive/security/ellipsis-drive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ellipsis-drive-domain-security.yml
@@ -138,7 +143,7 @@ description: Ellipsis Drive is a cloud-native spatial data management platform t
 image: https://ellipsis-drive.com/ogImages/homepageHeaderImage.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at mcp.ellipsis-drive.com over HTTP; 18 tools listed.
+- description: Remote MCP server at mcp.ellipsis-drive.com over HTTP; 65 tools listed.
   name: Ellipsis Drive MCP Server
   slug: ellipsis-drive
 modified: '2026-07-19'
@@ -149,7 +154,7 @@ overview: 'Ellipsis Drive is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Ellipsis Drive''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 14 more developer resources.'
-random_paper: 0
+random_paper: 12
 scopes:
 - name: Ellipsis Drive Scopes
   scope_count: 1
@@ -159,13 +164,13 @@ score:
   band: thin
   composite: 33.4
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
@@ -173,7 +178,7 @@ score:
     developer_ergonomics: 64.3
     discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 33.3
+  previous_composite: 33.4
   provenance:
     conformance: first-party
     mcp: first-party
@@ -183,14 +188,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ellipsis-drive/refs/heads/main/screenshots/ellipsis-drive-2026-07-25T213147.png
+screenshot: https://apis.io/screenshots/ellipsis-drive/ellipsis-drive-2026-07-25T213147.png
 security:
 - kind: authentication
   name: Ellipsis Drive Authentication

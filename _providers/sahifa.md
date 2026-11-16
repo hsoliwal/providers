@@ -1,6 +1,21 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -9,21 +24,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 32.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -31,7 +49,7 @@ agentic_access:
   operation_count: 4
   slug: sahifa-agentic-access
   summary_line: 4 operations · 2 acting
-api_count: 4
+api_count: 2
 apis:
 - baseURL: https://api.sahifa.dev
   baseurl_source: declared
@@ -48,65 +66,70 @@ apis:
   description: Service health
   name: Sahifa Status API
   slug: sahifa-status-api
-artifact_total: 8
+artifact_total: 10
 common:
+- group: commercial
+  href: https://artifacts.apis.io/sahifa/plans/sahifa-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/sahifa-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/agentic-access/sahifa-agentic-access.yml
+  href: https://artifacts.apis.io/sahifa/agentic-access/sahifa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sahifa-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/rules/sahifa-rules.yml
+  href: https://artifacts.apis.io/sahifa/rules/sahifa-rules.yml
   title: ''
   type: Spectral
   url: rules/sahifa-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/json-ld/sahifa-context.jsonld
+  href: https://artifacts.apis.io/sahifa/json-ld/sahifa-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sahifa-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/vocabulary/sahifa-vocabulary.yml
+  href: https://artifacts.apis.io/sahifa/vocabulary/sahifa-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sahifa-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/data-model/sahifa-data-model.yml
+  href: https://artifacts.apis.io/sahifa/data-model/sahifa-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sahifa-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/changelog/sahifa-changelog.yml
+  href: https://artifacts.apis.io/sahifa/changelog/sahifa-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/sahifa-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/authentication/sahifa-authentication.yml
+  href: https://artifacts.apis.io/sahifa/authentication/sahifa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sahifa-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/errors/sahifa-problem-types.yml
+  href: https://artifacts.apis.io/sahifa/errors/sahifa-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sahifa-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/conformance/sahifa-conformance.yml
+  href: https://artifacts.apis.io/sahifa/conformance/sahifa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sahifa-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/hosts/sahifa-hosts.yml
+  href: https://artifacts.apis.io/sahifa/hosts/sahifa-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sahifa-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/packages/sahifa-packages.yml
+  href: https://artifacts.apis.io/sahifa/packages/sahifa-packages.yml
   title: ''
   type: SDKs
   url: packages/sahifa-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/packages/sahifa-packages.yml
+  href: https://artifacts.apis.io/sahifa/packages/sahifa-packages.yml
   title: ''
   type: Packages
   url: packages/sahifa-packages.yml
@@ -123,7 +146,7 @@ common:
   type: ChangeLog
   url: https://sahifa.dev/en/docs/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/security/sahifa-domain-security.yml
+  href: https://artifacts.apis.io/sahifa/security/sahifa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sahifa-domain-security.yml
@@ -148,7 +171,7 @@ common:
   type: Support
   url: https://sahifa.dev/en/contact
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/llms/sahifa-llms.txt
+  href: https://artifacts.apis.io/sahifa/llms/sahifa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sahifa-llms.txt
@@ -170,6 +193,14 @@ common:
   url: https://sahifa.dev/en/data-residency
 created: '2026-09-28'
 description: Sahifa provides a PDF and screenshot API hosted in Saudi Arabia, converting HTML to PDF and web pages to images. It runs on Oracle Cloud in Jeddah, ensuring data never leaves the Kingdom. The service offers a free sandbox tier and paid plans for businesses needing secure, localized document rendering.
+finops:
+- has_sources: true
+  method: derived
+  name: Sahifa Finops
+  primary_unit: render
+  service_category: ''
+  slug: sahifa-finops
+  template: false
 jsonld:
 - class_count: 1
   name: Sahifa Context
@@ -186,8 +217,12 @@ overview: 'Sahifa publishes 3 API contracts indexed on the [APIs.io](https://api
   The Sahifa catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Sahifa''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, pricing, and 19 more developer resources.'
-random_paper: 4
+  Sahifa''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, pricing, and 20 more developer resources.'
+plans:
+- name: Sahifa Plans Pricing
+  plan_count: 4
+  slug: sahifa-plans-pricing
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -203,22 +238,22 @@ rules:
   slug: sahifa-rules
 score:
   band: developing
-  composite: 48.3
+  composite: 46.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 48.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 66.3
+    artifact_dirs: 23
+    catalog_earned: 60.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 9.7
+  delta: -8.8
   facets:
-    access_clarity: 39.5
+    access_clarity: 59.2
     contract_governance: 22.0
-    contract_quality: 54.6
-    developer_ergonomics: 52.4
-    discoverability: 75.0
-    operational_transparency: 31.6
+    contract_quality: 60.3
+    developer_ergonomics: 35.7
+    discoverability: 69.6
+    operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -227,14 +262,14 @@ score:
     regions:
     - mena
     - middle-east
-  previous_composite: 38.6
+  previous_composite: 55.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: derived
   regulatory:
@@ -242,14 +277,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 33.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 27.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sahifa/refs/heads/main/screenshots/sahifa-2026-10-11T125502.png
+screenshot: https://apis.io/screenshots/sahifa/sahifa-2026-10-11T125502.png
 security:
 - kind: authentication
   name: Sahifa Authentication

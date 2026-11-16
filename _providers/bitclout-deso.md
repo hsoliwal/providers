@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The HTTP JSON API served by every DeSo node — data endpoints (profiles, posts, users, NFTs, creator/DAO coins, messages) plus transaction-construction endpoints. The public node is node.deso.org; tran
@@ -78,67 +83,67 @@ common:
   type: GraphQL
   url: https://graphql-prod.deso.com/graphql
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/packages/bitclout-deso-packages.yml
+  href: https://artifacts.apis.io/bitclout-deso/packages/bitclout-deso-packages.yml
   title: ''
   type: Packages
   url: packages/bitclout-deso-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/packages/bitclout-deso-packages.yml
+  href: https://artifacts.apis.io/bitclout-deso/packages/bitclout-deso-packages.yml
   title: ''
   type: SDKs
   url: packages/bitclout-deso-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/mcp/bitclout-deso-mcp.yml
+  href: https://artifacts.apis.io/bitclout-deso/mcp/bitclout-deso-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bitclout-deso-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/llms/bitclout-deso-llms.txt
+  href: https://artifacts.apis.io/bitclout-deso/llms/bitclout-deso-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitclout-deso-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/authentication/bitclout-deso-authentication.yml
+  href: https://artifacts.apis.io/bitclout-deso/authentication/bitclout-deso-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bitclout-deso-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/conventions/bitclout-deso-conventions.yml
+  href: https://artifacts.apis.io/bitclout-deso/conventions/bitclout-deso-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bitclout-deso-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/conformance/bitclout-deso-conformance.yml
+  href: https://artifacts.apis.io/bitclout-deso/conformance/bitclout-deso-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitclout-deso-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/lifecycle/bitclout-deso-lifecycle.yml
+  href: https://artifacts.apis.io/bitclout-deso/lifecycle/bitclout-deso-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bitclout-deso-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/changelog/bitclout-deso-changelog.yml
+  href: https://artifacts.apis.io/bitclout-deso/changelog/bitclout-deso-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bitclout-deso-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/sandbox/bitclout-deso-sandbox.yml
+  href: https://artifacts.apis.io/bitclout-deso/sandbox/bitclout-deso-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bitclout-deso-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/components/bitclout-deso-components.yml
+  href: https://artifacts.apis.io/bitclout-deso/components/bitclout-deso-components.yml
   title: ''
   type: Components
   url: components/bitclout-deso-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/data-model/bitclout-deso-data-model.yml
+  href: https://artifacts.apis.io/bitclout-deso/data-model/bitclout-deso-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bitclout-deso-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/security/bitclout-deso-domain-security.yml
+  href: https://artifacts.apis.io/bitclout-deso/security/bitclout-deso-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitclout-deso-domain-security.yml
@@ -158,7 +163,7 @@ overview: 'BitClout (DeSo) is listed with 1 API on the [APIs.io](https://apis.io
 
 
   BitClout (DeSo)''s developer surface includes documentation, API reference, getting-started guide, support, authentication, changelog, sandbox, and 15 more developer resources.'
-random_paper: 0
+random_paper: 22
 score:
   band: thin
   composite: 26.6
@@ -187,14 +192,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bitclout-deso/refs/heads/main/screenshots/bitclout-deso-2026-07-25T203136.png
+screenshot: https://apis.io/screenshots/bitclout-deso/bitclout-deso-2026-07-25T203136.png
 security:
 - kind: authentication
   name: Bitclout Deso Authentication

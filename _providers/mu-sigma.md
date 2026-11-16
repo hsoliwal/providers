@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -62,22 +65,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/Mu-Sigma
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mu-sigma/refs/heads/main/packages/mu-sigma-packages.yml
+  href: https://artifacts.apis.io/mu-sigma/packages/mu-sigma-packages.yml
   title: ''
   type: Packages
   url: packages/mu-sigma-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mu-sigma/refs/heads/main/llms/mu-sigma-llms.txt
+  href: https://artifacts.apis.io/mu-sigma/llms/mu-sigma-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mu-sigma-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mu-sigma/refs/heads/main/security/mu-sigma-domain-security.yml
+  href: https://artifacts.apis.io/mu-sigma/security/mu-sigma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mu-sigma-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mu-sigma/refs/heads/main/plans/mu-sigma-plans-pricing.yml
+  href: https://artifacts.apis.io/mu-sigma/plans/mu-sigma-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mu-sigma-plans-pricing.yml
@@ -122,7 +125,7 @@ score:
   band: minimal
   composite: 4.4
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -150,14 +153,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mu-sigma/refs/heads/main/screenshots/mu-sigma-2026-09-02T150647.png
+screenshot: https://apis.io/screenshots/mu-sigma/mu-sigma-2026-09-02T150647.png
 security:
 - kind: domain-security
   name: Mu Sigma Domain Security

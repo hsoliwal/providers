@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: OData v4/v5 data-services API exposing Convercent compliance data (case management, campaigns, policy attestations, course completions) for BI and reporting tools. Authenticated with HTTP Basic; acces
@@ -79,32 +82,32 @@ common:
   type: Compliance
   url: https://www.convercent.com/products/gdpr
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/authentication/convercent-authentication.yml
+  href: https://artifacts.apis.io/convercent/authentication/convercent-authentication.yml
   title: ''
   type: Authentication
   url: authentication/convercent-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/conventions/convercent-conventions.yml
+  href: https://artifacts.apis.io/convercent/conventions/convercent-conventions.yml
   title: ''
   type: Conventions
   url: conventions/convercent-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/conformance/convercent-conformance.yml
+  href: https://artifacts.apis.io/convercent/conformance/convercent-conformance.yml
   title: ''
   type: Conformance
   url: conformance/convercent-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/lifecycle/convercent-lifecycle.yml
+  href: https://artifacts.apis.io/convercent/lifecycle/convercent-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/convercent-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/security/convercent-domain-security.yml
+  href: https://artifacts.apis.io/convercent/security/convercent-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/convercent-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/llms/convercent-llms.txt
+  href: https://artifacts.apis.io/convercent/llms/convercent-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/convercent-llms.txt
@@ -120,12 +123,12 @@ overview: 'Convercent is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Convercent''s developer surface includes documentation, support, authentication, and 12 more developer resources.'
-random_paper: 1
+random_paper: 23
 score:
   band: emerging
   composite: 26.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -152,14 +155,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/convercent/refs/heads/main/screenshots/convercent-2026-07-25T210346.png
+screenshot: https://apis.io/screenshots/convercent/convercent-2026-07-25T210346.png
 security:
 - kind: authentication
   name: Convercent Authentication

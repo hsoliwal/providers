@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.7
-  scored_at: '2026-10-17'
+  score: 38.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,11 +53,8 @@ apis:
   description: The tokens API from Seismic Systems — 2 operation(s) for tokens.
   name: Seismic Systems Tokens API
   slug: seismic-systems-tokens-api
-artifact_total: 6
+artifact_total: 7
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Seismic SRC20 Factory REST tokens API
   slug: open-seismic-systems-tokens-api
@@ -62,12 +64,12 @@ common:
   type: Website
   url: https://www.seismic.systems/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/mcp/seismic-systems-mcp.yml
+  href: https://artifacts.apis.io/seismic-systems/mcp/seismic-systems-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/seismic-systems-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/overlays/seismic-systems-src20-factory-overlay.yaml
+  href: https://artifacts.apis.io/seismic-systems/overlays/seismic-systems-src20-factory-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/seismic-systems-src20-factory-overlay.yaml
@@ -104,57 +106,57 @@ common:
   type: PrivacyPolicy
   url: https://docs.seismic.systems/reference/privacy-policy.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/llms/seismic-systems-llms.txt
+  href: https://artifacts.apis.io/seismic-systems/llms/seismic-systems-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/seismic-systems-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/packages/seismic-systems-packages.yml
+  href: https://artifacts.apis.io/seismic-systems/packages/seismic-systems-packages.yml
   title: ''
   type: Packages
   url: packages/seismic-systems-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/packages/seismic-systems-packages.yml
+  href: https://artifacts.apis.io/seismic-systems/packages/seismic-systems-packages.yml
   title: ''
   type: SDKs
   url: packages/seismic-systems-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/cli/seismic-systems-cli.yml
+  href: https://artifacts.apis.io/seismic-systems/cli/seismic-systems-cli.yml
   title: ''
   type: CLI
   url: cli/seismic-systems-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/sandbox/seismic-systems-sandbox.yml
+  href: https://artifacts.apis.io/seismic-systems/sandbox/seismic-systems-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/seismic-systems-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/seismic-systems/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/authentication/seismic-systems-authentication.yml
+  href: https://artifacts.apis.io/seismic-systems/authentication/seismic-systems-authentication.yml
   title: ''
   type: Authentication
   url: authentication/seismic-systems-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/conventions/seismic-systems-conventions.yml
+  href: https://artifacts.apis.io/seismic-systems/conventions/seismic-systems-conventions.yml
   title: ''
   type: Conventions
   url: conventions/seismic-systems-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/conformance/seismic-systems-conformance.yml
+  href: https://artifacts.apis.io/seismic-systems/conformance/seismic-systems-conformance.yml
   title: ''
   type: Conformance
   url: conformance/seismic-systems-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/lifecycle/seismic-systems-lifecycle.yml
+  href: https://artifacts.apis.io/seismic-systems/lifecycle/seismic-systems-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/seismic-systems-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/security/seismic-systems-domain-security.yml
+  href: https://artifacts.apis.io/seismic-systems/security/seismic-systems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/seismic-systems-domain-security.yml
@@ -169,27 +171,43 @@ network: true
 overview: 'Seismic Systems publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Tokens API. Tagged areas include Company, Blockchain, Privacy, Encryption, and Stablecoins.
 
 
+  The Seismic Systems catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Seismic Systems'' developer surface includes documentation, API reference, getting-started guide, support, CLI, sandbox, authentication, and 15 more developer resources.'
 random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Seismic Systems API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: seismic-systems-rules
 score:
   band: developing
-  composite: 40.8
+  composite: 42.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 57.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 12.4
     developer_ergonomics: 83.3
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 40.7
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -206,14 +224,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/seismic-systems/refs/heads/main/screenshots/seismic-systems-2026-09-02T154810.png
+screenshot: https://apis.io/screenshots/seismic-systems/seismic-systems-2026-09-02T154810.png
 security:
 - kind: authentication
   name: Seismic Systems Authentication
@@ -223,6 +241,10 @@ security:
   name: Seismic Systems Domain Security
   slug: seismic-systems-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Query SRC20 tokens via the Factory REST API
+  slug: seismic-systems-query-src20-tokens
 slug: seismic-systems
 tags:
 - Company

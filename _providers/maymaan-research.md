@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/maymaan-research/refs/heads/main/security/maymaan-research-domain-security.yml
+  href: https://artifacts.apis.io/maymaan-research/security/maymaan-research-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/maymaan-research-domain-security.yml
@@ -71,7 +74,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/maymaan-research-llc/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/maymaan-research/refs/heads/main/llms/maymaan-research-llms.txt
+  href: https://artifacts.apis.io/maymaan-research/llms/maymaan-research-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/maymaan-research-llms.txt
@@ -104,12 +107,12 @@ overview: 'MayMaan Research is profiled on the [APIs.io](https://apis.io/) netwo
 
 
   MayMaan Research''s developer surface includes support, engineering blog, and 7 more developer resources.'
-random_paper: 2
+random_paper: 22
 score:
   band: emerging
   composite: 11.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -137,14 +140,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/maymaan-research/refs/heads/main/screenshots/maymaan-research-2026-09-02T150448.png
+screenshot: https://apis.io/screenshots/maymaan-research/maymaan-research-2026-09-02T150448.png
 security:
 - kind: domain-security
   name: Maymaan Research Domain Security

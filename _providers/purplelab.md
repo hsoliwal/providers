@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Subscription-based, pre-built healthcare data feeds and scoring APIs that augment a client's internal datasets with PurpleLab's proprietary claims scoring, forecasting, ranking and segmentation. Purpl
@@ -100,42 +106,42 @@ common:
   type: Twitter
   url: https://twitter.com/purplelabinc
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/conformance/purplelab-conformance.yml
+  href: https://artifacts.apis.io/purplelab/conformance/purplelab-conformance.yml
   title: ''
   type: Conformance
   url: conformance/purplelab-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/conformance/purplelab-conformance.yml
+  href: https://artifacts.apis.io/purplelab/conformance/purplelab-conformance.yml
   title: ''
   type: Compliance
   url: conformance/purplelab-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/security/purplelab-domain-security.yml
+  href: https://artifacts.apis.io/purplelab/security/purplelab-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/purplelab-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/packages/purplelab-packages.yml
+  href: https://artifacts.apis.io/purplelab/packages/purplelab-packages.yml
   title: ''
   type: Packages
   url: packages/purplelab-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/plans/purplelab-plans-pricing.yml
+  href: https://artifacts.apis.io/purplelab/plans/purplelab-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/purplelab-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/rate-limits/purplelab-rate-limits.yml
+  href: https://artifacts.apis.io/purplelab/rate-limits/purplelab-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/purplelab-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/lifecycle/purplelab-lifecycle.yml
+  href: https://artifacts.apis.io/purplelab/lifecycle/purplelab-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/purplelab-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/llms/purplelab-llms.txt
+  href: https://artifacts.apis.io/purplelab/llms/purplelab-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/purplelab-llms.txt
@@ -172,7 +178,7 @@ plans:
 - name: Purplelab Plans Pricing
   plan_count: 0
   slug: purplelab-plans-pricing
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Purplelab Rate Limits
@@ -181,7 +187,7 @@ score:
   band: emerging
   composite: 19.0
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -212,14 +218,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/purplelab/refs/heads/main/screenshots/purplelab-2026-09-02T152342.png
+screenshot: https://apis.io/screenshots/purplelab/purplelab-2026-09-02T152342.png
 security:
 - kind: authentication
   name: Purplelab Authentication

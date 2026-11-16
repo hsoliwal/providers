@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Jemena Electricity Networks' CSIP-AUS compliant control server — an IEEE 2030.5 (Smart Energy Profile 2.0) implementation of the Common Smart Inverter Profile Australia (SA TS 5573) — used to discover
@@ -44,7 +47,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/security/jemena-domain-security.yml
+  href: https://artifacts.apis.io/jemena/security/jemena-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jemena-domain-security.yml
@@ -89,42 +92,42 @@ common:
   type: Blog
   url: https://www.jemena.com.au/about-us/news-media/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/authentication/jemena-authentication.yml
+  href: https://artifacts.apis.io/jemena/authentication/jemena-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jemena-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/conventions/jemena-conventions.yml
+  href: https://artifacts.apis.io/jemena/conventions/jemena-conventions.yml
   title: ''
   type: Conventions
   url: conventions/jemena-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/errors/jemena-error-codes.yml
+  href: https://artifacts.apis.io/jemena/errors/jemena-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/jemena-error-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/sandbox/jemena-sandbox.yml
+  href: https://artifacts.apis.io/jemena/sandbox/jemena-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/jemena-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/data-model/jemena-data-model.yml
+  href: https://artifacts.apis.io/jemena/data-model/jemena-data-model.yml
   title: ''
   type: DataModel
   url: data-model/jemena-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/conformance/jemena-conformance.yml
+  href: https://artifacts.apis.io/jemena/conformance/jemena-conformance.yml
   title: ''
   type: Conformance
   url: conformance/jemena-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/lifecycle/jemena-lifecycle.yml
+  href: https://artifacts.apis.io/jemena/lifecycle/jemena-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/jemena-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/llms/jemena-llms.txt
+  href: https://artifacts.apis.io/jemena/llms/jemena-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/jemena-llms.txt
@@ -141,7 +144,7 @@ overview: 'Jemena is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Jemena''s developer surface includes documentation, signup flow, support, engineering blog, authentication, sandbox, and 13 more developer resources.'
-random_paper: 8
+random_paper: 0
 score:
   band: thin
   composite: 28.1
@@ -176,14 +179,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/jemena/refs/heads/main/screenshots/jemena-2026-08-07T170956.png
+screenshot: https://apis.io/screenshots/jemena/jemena-2026-08-07T170956.png
 security:
 - kind: authentication
   name: Jemena Authentication

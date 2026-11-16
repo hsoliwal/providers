@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Convert JSON to JSONP (on-the-fly) for easy cross-domain data requests using client-side JavaScript
@@ -45,7 +49,7 @@ common:
   type: Blog
   url: https://json2jsonp.com/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/json-2-jsonp/refs/heads/main/security/json-2-jsonp-domain-security.yml
+  href: https://artifacts.apis.io/json-2-jsonp/security/json-2-jsonp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/json-2-jsonp-domain-security.yml
@@ -69,7 +73,7 @@ overview: 'JSON 2 JSONP is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   JSON 2 JSONP''s developer surface includes engineering blog and 3 more developer resources.'
-random_paper: 14
+random_paper: 8
 score:
   band: minimal
   composite: 3.7
@@ -80,7 +84,7 @@ score:
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -88,21 +92,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 46.4
     operational_transparency: 0.0
-  previous_composite: 3.2
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/json-2-jsonp/refs/heads/main/screenshots/json-2-jsonp-2026-06-20T183813.png
+screenshot: https://apis.io/screenshots/json-2-jsonp/json-2-jsonp-2026-06-20T183813.png
 security:
 - kind: domain-security
   name: Json 2 Jsonp Domain Security

@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,19 +37,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-10-17'
-api_count: 2
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://events.analytics.helika.io
   baseurl_source: declared
   description: The Events API from Helika — 1 operation(s) for events.
   name: Helika Events API
   slug: helika-events-api
-artifact_total: 5
+artifact_total: 6
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Helika Analytics Service Events API
   slug: open-helika-events-api
@@ -60,7 +60,7 @@ common:
   type: BlogRSS
   url: https://www.helika.io/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/overlays/helika-events-overlay.yaml
+  href: https://artifacts.apis.io/helika/overlays/helika-events-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/helika-events-overlay.yaml
@@ -105,62 +105,62 @@ common:
   type: PrivacyPolicy
   url: https://www.helika.io/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/llms/helika-llms.txt
+  href: https://artifacts.apis.io/helika/llms/helika-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/helika-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/packages/helika-packages.yml
+  href: https://artifacts.apis.io/helika/packages/helika-packages.yml
   title: ''
   type: Packages
   url: packages/helika-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/packages/helika-packages.yml
+  href: https://artifacts.apis.io/helika/packages/helika-packages.yml
   title: ''
   type: SDKs
   url: packages/helika-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/mcp/helika-mcp.yml
+  href: https://artifacts.apis.io/helika/mcp/helika-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/helika-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/security/helika-domain-security.yml
+  href: https://artifacts.apis.io/helika/security/helika-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/helika-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/authentication/helika-authentication.yml
+  href: https://artifacts.apis.io/helika/authentication/helika-authentication.yml
   title: ''
   type: Authentication
   url: authentication/helika-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/conventions/helika-conventions.yml
+  href: https://artifacts.apis.io/helika/conventions/helika-conventions.yml
   title: ''
   type: Conventions
   url: conventions/helika-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/errors/helika-problem-types.yml
+  href: https://artifacts.apis.io/helika/errors/helika-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/helika-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/conformance/helika-conformance.yml
+  href: https://artifacts.apis.io/helika/conformance/helika-conformance.yml
   title: ''
   type: Conformance
   url: conformance/helika-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/lifecycle/helika-lifecycle.yml
+  href: https://artifacts.apis.io/helika/lifecycle/helika-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/helika-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/data-model/helika-data-model.yml
+  href: https://artifacts.apis.io/helika/data-model/helika-data-model.yml
   title: ''
   type: DataModel
   url: data-model/helika-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/helika/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -175,33 +175,49 @@ network: true
 overview: 'Helika publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Events API. Tagged areas include Company, Cryptocurrency, Gaming, Analytics, and Game Analytics.
 
 
+  The Helika catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Helika''s developer surface includes engineering blog, documentation, getting-started guide, API reference, support, authentication, and 19 more developer resources.'
-random_paper: 6
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 77
+  extends:
+  - spectral:oas
+  name: Helika API Rules
+  rule_count: 36
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 1
+  slug: helika-rules
 score:
   band: thin
-  composite: 33.1
+  composite: 37.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 3.2
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 38.0
-    developer_ergonomics: 47.0
+    contract_governance: 18.2
+    contract_quality: 42.2
+    developer_ergonomics: 57.7
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 32.5
+  previous_composite: 34.7
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: derived
     skills: derived
@@ -211,13 +227,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/screenshots/helika-2026-07-25T220913.png
+screenshot: https://apis.io/screenshots/helika/helika-2026-07-25T220913.png
 security:
 - kind: authentication
   name: Helika Authentication
@@ -227,6 +243,10 @@ security:
   name: Helika Domain Security
   slug: helika-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Send analytics events to Helika
+  slug: helika-send-events
 slug: helika
 tags:
 - Company

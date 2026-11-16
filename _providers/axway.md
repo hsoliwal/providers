@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.2
-  scored_at: '2026-10-17'
+  score: 43.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 83
   human_in_the_loop: 2
@@ -247,9 +254,6 @@ collections:
   name: Amplify Platform API v1.0.0 aca user API
   slug: postman-axway-user-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Amplify Platform API v1.0.0 aca API
   slug: open-axway-aca-api
 - collection_type: open
@@ -314,92 +318,92 @@ collections:
   slug: open-axway-user-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/finops/axway-finops.yml
+  href: https://artifacts.apis.io/axway/finops/axway-finops.yml
   title: ''
   type: FinOps
   url: finops/axway-finops.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/rate-limits/axway-rate-limits.yml
+  href: https://artifacts.apis.io/axway/rate-limits/axway-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/axway-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/plans/axway-plans-pricing.yml
+  href: https://artifacts.apis.io/axway/plans/axway-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/axway-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/rules/axway-spectral-rules.yml
+  href: https://artifacts.apis.io/axway/rules/axway-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/axway-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/rules/axway-rules.yml
+  href: https://artifacts.apis.io/axway/rules/axway-rules.yml
   title: ''
   type: Spectral
   url: rules/axway-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/rules/axway-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/axway/rules/axway-jsonschema-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/axway-jsonschema-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/json-ld/axway-context.jsonld
+  href: https://artifacts.apis.io/axway/json-ld/axway-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/axway-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/json-ld/axway-amplify-platform-context.jsonld
+  href: https://artifacts.apis.io/axway/json-ld/axway-amplify-platform-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/axway-amplify-platform-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/vocabulary/axway-vocabulary.yml
+  href: https://artifacts.apis.io/axway/vocabulary/axway-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/axway-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/axway/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/data-model/axway-data-model.yml
+  href: https://artifacts.apis.io/axway/data-model/axway-data-model.yml
   title: ''
   type: DataModel
   url: data-model/axway-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/changelog/axway-changelog.yml
+  href: https://artifacts.apis.io/axway/changelog/axway-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/axway-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/errors/axway-problem-types.yml
+  href: https://artifacts.apis.io/axway/errors/axway-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/axway-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/conformance/axway-conformance.yml
+  href: https://artifacts.apis.io/axway/conformance/axway-conformance.yml
   title: ''
   type: Conformance
   url: conformance/axway-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/well-known/axway-well-known.yml
+  href: https://artifacts.apis.io/axway/well-known/axway-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/axway-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/hosts/axway-hosts.yml
+  href: https://artifacts.apis.io/axway/hosts/axway-hosts.yml
   title: ''
   type: Hosts
   url: hosts/axway-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/vendors/axway-vendors.yml
+  href: https://artifacts.apis.io/axway/vendors/axway-vendors.yml
   title: ''
   type: Vendors
   url: vendors/axway-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/packages/axway-packages.yml
+  href: https://artifacts.apis.io/axway/packages/axway-packages.yml
   title: ''
   type: Packages
   url: packages/axway-packages.yml
@@ -420,27 +424,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/axway/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/agentic-access/axway-agentic-access.yml
+  href: https://artifacts.apis.io/axway/agentic-access/axway-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/axway-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/security/axway-trust-center.yml
+  href: https://artifacts.apis.io/axway/security/axway-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/axway-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/security/axway-domain-security.yml
+  href: https://artifacts.apis.io/axway/security/axway-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axway-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/authentication/axway-authentication.yml
+  href: https://artifacts.apis.io/axway/authentication/axway-authentication.yml
   title: ''
   type: Authentication
   url: authentication/axway-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/scopes/axway-scopes.yml
+  href: https://artifacts.apis.io/axway/scopes/axway-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/axway-scopes.yml
@@ -521,7 +525,7 @@ common:
   type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/vocabulary/axway-vocabulary.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/capabilities/axway-capability-edges.yml
+  href: https://artifacts.apis.io/axway/capabilities/axway-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/axway-capability-edges.yml
@@ -1995,7 +1999,7 @@ json_schemas:
   property_count: 0
   slug: axway-clientlist
 - name: com.appcelerator.platform.org.user.create
-  property_count: 5
+  property_count: 11
   slug: axway-com-appcelerator-platform-org-user-create
 - name: com.appcelerator.platform.org.user.create
   property_count: 5
@@ -2010,7 +2014,7 @@ json_schemas:
   property_count: 0
   slug: axway-custom-query-list
 - name: CustomQuery
-  property_count: 23
+  property_count: 26
   slug: axway-custom-query
 - name: CustomQuery
   property_count: 23
@@ -2061,7 +2065,7 @@ json_schemas:
   property_count: 0
   slug: axway-environmentlist
 - name: Error
-  property_count: 0
+  property_count: 3
   slug: axway-error
 - name: Event
   property_count: 5
@@ -2100,7 +2104,7 @@ json_schemas:
   property_count: 0
   slug: axway-identity-provider-list
 - name: IdentityProvider
-  property_count: 7
+  property_count: 10
   slug: axway-identity-provider
 - name: IdentityProvider
   property_count: 7
@@ -2109,10 +2113,10 @@ json_schemas:
   property_count: 0
   slug: axway-identityproviderlist
 - name: marketplace.create
-  property_count: 23
+  property_count: 28
   slug: axway-marketplace-create
 - name: marketplace.settings.update
-  property_count: 24
+  property_count: 29
   slug: axway-marketplace-settings-update
 - name: marketplace.ai.disable
   property_count: 2
@@ -2202,10 +2206,10 @@ json_schemas:
   property_count: 9
   slug: axway-passwordpolicy
 - name: platform.org.user.role.update
-  property_count: 5
+  property_count: 11
   slug: axway-platform-org-user-role-update
 - name: platform.session.create
-  property_count: 5
+  property_count: 11
   slug: axway-platform-session-create
 - name: platform.activation.access
   property_count: 2
@@ -2436,7 +2440,7 @@ json_schemas:
   property_count: 0
   slug: axway-subscriptionlist
 - name: Success
-  property_count: 0
+  property_count: 1
   slug: axway-success
 - name: TeamList
   property_count: 0
@@ -3031,7 +3035,7 @@ plans:
 - name: Axway Plans Pricing
   plan_count: 3
   slug: axway-plans-pricing
-random_paper: 4
+random_paper: 2
 rate_limits:
 - limit_count: 2
   name: Axway Rate Limits
@@ -3078,24 +3082,29 @@ scopes:
   slug: axway-scopes
   summary_line: 1 scope · clientCredentials/authorizationCode/implicit
 score:
-  band: strong
-  composite: 54.6
+  band: developing
+  composite: 52.1
   coverage:
-    artifact_dirs: 34
+    artifact_dirs: 36
     catalog_earned: 66.0
     catalog_earned_first_party: 0.0
     catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.9
+  delta: -2.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 22.4
     contract_governance: 31.8
     contract_quality: 68.6
-    developer_ergonomics: 72.0
-    discoverability: 66.1
+    developer_ergonomics: 66.1
+    discoverability: 65.2
     operational_transparency: 39.5
-  previous_composite: 58.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 54.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -3112,13 +3121,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/axway/refs/heads/main/screenshots/axway-2026-06-20T172828.png
+screenshot: https://apis.io/screenshots/axway/axway-2026-06-20T172828.png
 security:
 - kind: authentication
   name: Axway Authentication
@@ -3132,6 +3141,10 @@ security:
   name: Axway Trust Center
   slug: axway-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018, PCI DSS, HIPAA, FedRAMP, GDPR, CSA STAR
+skill_count: 1
+skills:
+- name: axway-delete-session
+  slug: axway-delete-session
 slug: axway
 solutions:
 - description: Open banking, PSD2 compliance, and secure API-driven banking ecosystems.

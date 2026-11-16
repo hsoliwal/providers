@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,13 +40,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Code payments gRPC/Protobuf API — account, currency, messaging, and transaction (intent/swap) services that power the Code wallet and SDK.
   name: Code Protobuf API
   slug: code-protobuf-api
-artifact_total: 4
+artifact_total: 5
 asyncapis:
 - description: ''
   name: Code Webhooks
@@ -74,82 +81,82 @@ common:
   type: Support
   url: https://discord.gg/T8Tpj8DBFp
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/packages/code-packages.yml
+  href: https://artifacts.apis.io/code/packages/code-packages.yml
   title: ''
   type: Packages
   url: packages/code-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/packages/code-packages.yml
+  href: https://artifacts.apis.io/code/packages/code-packages.yml
   title: ''
   type: SDKs
   url: packages/code-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/components/code-components.yml
+  href: https://artifacts.apis.io/code/components/code-components.yml
   title: ''
   type: Components
   url: components/code-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/authentication/code-authentication.yml
+  href: https://artifacts.apis.io/code/authentication/code-authentication.yml
   title: ''
   type: Authentication
   url: authentication/code-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/conventions/code-conventions.yml
+  href: https://artifacts.apis.io/code/conventions/code-conventions.yml
   title: ''
   type: Conventions
   url: conventions/code-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/conventions/code-conventions.yml
+  href: https://artifacts.apis.io/code/conventions/code-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/code-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/asyncapi/code-webhooks.yml
+  href: https://artifacts.apis.io/code/asyncapi/code-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/code-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/errors/code-problem-types.yml
+  href: https://artifacts.apis.io/code/errors/code-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/code-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/conformance/code-conformance.yml
+  href: https://artifacts.apis.io/code/conformance/code-conformance.yml
   title: ''
   type: Conformance
   url: conformance/code-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/data-model/code-data-model.yml
+  href: https://artifacts.apis.io/code/data-model/code-data-model.yml
   title: ''
   type: DataModel
   url: data-model/code-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/lifecycle/code-lifecycle.yml
+  href: https://artifacts.apis.io/code/lifecycle/code-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/code-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/changelog/code-changelog.yml
+  href: https://artifacts.apis.io/code/changelog/code-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/code-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/mcp/code-mcp.yml
+  href: https://artifacts.apis.io/code/mcp/code-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/code-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/llms/code-llms.txt
+  href: https://artifacts.apis.io/code/llms/code-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/code-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/code/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/security/code-domain-security.yml
+  href: https://artifacts.apis.io/code/security/code-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/code-domain-security.yml
@@ -168,12 +175,12 @@ overview: 'Code is listed with 1 API on the [APIs.io](https://apis.io/) network.
 
 
   Code''s developer surface includes documentation, API reference, getting-started guide, support, authentication, changelog, and 17 more developer resources.'
-random_paper: 15
+random_paper: 3
 score:
   band: thin
   composite: 33.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -198,14 +205,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/code/refs/heads/main/screenshots/code-2026-07-25T205901.png
+screenshot: https://apis.io/screenshots/code/code-2026-07-25T205901.png
 security:
 - kind: authentication
   name: Code Authentication
@@ -215,6 +222,10 @@ security:
   name: Code Domain Security
   slug: code-domain-security
   summary_line: DMARC
+skill_count: 1
+skills:
+- name: Request and verify a Code payment
+  slug: code-request-and-verify-payment
 slug: code
 tags:
 - Company

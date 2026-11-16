@@ -1,11 +1,12 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/medeloop/refs/heads/main/plans/medeloop-plans-pricing.yml
+  href: https://artifacts.apis.io/medeloop/plans/medeloop-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/medeloop-plans-pricing.yml
@@ -94,7 +98,7 @@ plans:
 - name: Medeloop Plans Pricing
   plan_count: 12
   slug: medeloop-plans-pricing
-random_paper: 17
+random_paper: 13
 score:
   band: emerging
   composite: 18.0
@@ -105,7 +109,7 @@ score:
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.9
+  delta: 0.0
   facets:
     access_clarity: 63.2
     contract_governance: 0.0
@@ -113,21 +117,21 @@ score:
     developer_ergonomics: 7.1
     discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.1
+  previous_composite: 18.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/medeloop/refs/heads/main/screenshots/medeloop-2026-08-07T172319.png
+screenshot: https://apis.io/screenshots/medeloop/medeloop-2026-08-07T172319.png
 slug: medeloop
 tags:
 - Company

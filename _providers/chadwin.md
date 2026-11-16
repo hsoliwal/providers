@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.0
-  scored_at: '2026-10-17'
+  score: 41.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Financial data API for US-listed companies, KPIs, reports, and more.
@@ -64,85 +78,85 @@ apis:
   description: Annual financial statements and financial metrics.
   name: Chadwin Normalized financial statements API
   slug: chadwin-normalized-financial-statements-api
-artifact_total: 19
+artifact_total: 21
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/rules/chadwin-rules.yml
+  href: https://artifacts.apis.io/chadwin/rules/chadwin-rules.yml
   title: ''
   type: Spectral
   url: rules/chadwin-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/json-ld/chadwin-context.jsonld
+  href: https://artifacts.apis.io/chadwin/json-ld/chadwin-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chadwin-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/vocabulary/chadwin-vocabulary.yml
+  href: https://artifacts.apis.io/chadwin/vocabulary/chadwin-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/chadwin-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/conformance/chadwin-conformance.yml
+  href: https://artifacts.apis.io/chadwin/conformance/chadwin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chadwin-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/plans/chadwin-plans-pricing.yml
+  href: https://artifacts.apis.io/chadwin/plans/chadwin-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chadwin-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/chadwin/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/data-model/chadwin-data-model.yml
+  href: https://artifacts.apis.io/chadwin/data-model/chadwin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chadwin-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/security/chadwin-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chadwin/security/chadwin-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/chadwin-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/errors/chadwin-problem-types.yml
+  href: https://artifacts.apis.io/chadwin/errors/chadwin-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/chadwin-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/llms/chadwin-llms.txt
+  href: https://artifacts.apis.io/chadwin/llms/chadwin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chadwin-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/well-known/chadwin-security.txt
+  href: https://artifacts.apis.io/chadwin/well-known/chadwin-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/chadwin-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/well-known/chadwin-chadwin-security.txt
+  href: https://artifacts.apis.io/chadwin/well-known/chadwin-chadwin-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/chadwin-chadwin-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/well-known/chadwin-api-security.txt
+  href: https://artifacts.apis.io/chadwin/well-known/chadwin-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/chadwin-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/well-known/chadwin-well-known.yml
+  href: https://artifacts.apis.io/chadwin/well-known/chadwin-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/chadwin-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/hosts/chadwin-hosts.yml
+  href: https://artifacts.apis.io/chadwin/hosts/chadwin-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chadwin-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/vendors/chadwin-vendors.yml
+  href: https://artifacts.apis.io/chadwin/vendors/chadwin-vendors.yml
   title: ''
   type: Vendors
   url: vendors/chadwin-vendors.yml
@@ -155,12 +169,12 @@ common:
   type: DeveloperPortal
   url: https://api.chadwin.co</span
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/security/chadwin-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chadwin/security/chadwin-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/chadwin-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chadwin/refs/heads/main/security/chadwin-domain-security.yml
+  href: https://artifacts.apis.io/chadwin/security/chadwin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chadwin-domain-security.yml
@@ -198,6 +212,14 @@ common:
   url: https://www.chadwin.co/privacy
 created: '2026-10-16'
 description: Chadwin is a technology company specializing in advanced data analytics and integration solutions for enterprises. Founded in 2020, Chadwin provides a suite of APIs that enable seamless data ingestion, transformation, and real-time analytics across multiple platforms. Their platform supports robust security features, scalable architecture, and comprehensive documentation to help developers integrate their services quickly and efficiently. The company focuses on delivering high-performance, reliable APIs that empower businesses to unlock insights from their data and drive informed decision-making.
+finops:
+- has_sources: true
+  method: derived
+  name: Chadwin Finops
+  primary_unit: ''
+  service_category: ''
+  slug: chadwin-finops
+  template: true
 image: https://www.chadwin.co/open-graph.png
 json_schemas:
 - name: CompanyReportPage
@@ -239,7 +261,10 @@ plans:
 - name: Chadwin Plans Pricing
   plan_count: 2
   slug: chadwin-plans-pricing
-random_paper: 8
+- name: Chadwin Price Estimates
+  plan_count: 0
+  slug: chadwin-price-estimates
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 56
@@ -255,21 +280,23 @@ rules:
   slug: chadwin-rules
 score:
   band: developing
-  composite: 49.3
+  composite: 41.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 23
     catalog_earned: 65.8
     catalog_earned_first_party: 8.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.2
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 22.0
     contract_quality: 66.6
-    developer_ergonomics: 35.0
+    developer_ergonomics: 20.7
     discoverability: 64.3
-    operational_transparency: 15.8
+    operational_transparency: 13.2
+  previous_composite: 49.3
   provenance:
     conformance: derived
     contracts:
@@ -284,13 +311,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/chadwin/chadwin-2026-11-03T123753.png
 security:
 - kind: domain-security
   name: Chadwin Domain Security

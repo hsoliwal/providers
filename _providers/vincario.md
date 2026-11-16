@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: quarter
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 31.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,28 +87,24 @@ apis:
   name: Vincario Enums API
   slug: vincario-enums-api
 artifact_total: 16
-collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/agentic-access/vincario-agentic-access.yml
+  href: https://artifacts.apis.io/vincario/agentic-access/vincario-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/vincario-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/security/vincario-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/vincario/security/vincario-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/vincario-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/security/vincario-domain-security.yml
+  href: https://artifacts.apis.io/vincario/security/vincario-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vincario-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/authentication/vincario-authentication.yml
+  href: https://artifacts.apis.io/vincario/authentication/vincario-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vincario-authentication.yml
@@ -127,7 +129,7 @@ common:
   type: OpenAPI
   url: https://vincario.com/api-docs/openapi/3.2
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/mcp/vincario-mcp.yml
+  href: https://artifacts.apis.io/vincario/mcp/vincario-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/vincario-mcp.yml
@@ -136,17 +138,17 @@ common:
   type: GitHubRepository
   url: https://github.com/Vincario/MCP-vincario
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/plans/vincario-plans-pricing.yml
+  href: https://artifacts.apis.io/vincario/plans/vincario-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vincario-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/rate-limits/vincario-rate-limits.yml
+  href: https://artifacts.apis.io/vincario/rate-limits/vincario-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vincario-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/finops/vincario-finops.yml
+  href: https://artifacts.apis.io/vincario/finops/vincario-finops.yml
   title: ''
   type: FinOps
   url: finops/vincario-finops.yml
@@ -174,7 +176,10 @@ modified: '2026-10-06'
 name: Vincario
 nav: Providers
 network: true
-overview: 'Vincario publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including VIN Decoder API, OEM VIN Lookup API, OEM Service History API, and 4 more. Tagged areas include VIN, Vehicle Data, Automotive, VIN Decoder, and Market Value.
+overview: 'Vincario publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including VIN Decoder API, OEM VIN Lookup API, OEM Service History API, and 4 more. Tagged areas include VIN, Vehicle Data, Automotive, VIN Decoding, and Market Value.
+
+
+  The Vincario catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Vincario''s developer surface includes authentication, documentation, API reference, engineering blog, and 11 more developer resources.'
@@ -182,36 +187,49 @@ plans:
 - name: Vincario Plans Pricing
   plan_count: 5
   slug: vincario-plans-pricing
-random_paper: 1
+random_paper: 19
 rate_limits:
 - limit_count: 2
   name: Vincario Rate Limits
   slug: vincario-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Vincario API Rules
+  rule_count: 48
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 1
+  slug: vincario-rules
 score:
   band: thin
-  composite: 28.4
+  composite: 31.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.8
+  delta: -0.4
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 48.4
-    developer_ergonomics: 31.0
+    contract_governance: 13.6
+    contract_quality: 53.7
+    developer_ergonomics: 22.6
     discoverability: 68.3
-    operational_transparency: 10.5
-  previous_composite: 35.2
+    operational_transparency: 21.1
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: first-party
   regulatory:
@@ -220,14 +238,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/vincario/refs/heads/main/screenshots/vincario-2026-09-02T165927.png
+screenshot: https://apis.io/screenshots/vincario/vincario-2026-09-02T165927.png
 security:
 - kind: authentication
   name: Vincario Authentication
@@ -246,7 +264,7 @@ tags:
 - VIN
 - Vehicle Data
 - Automotive
-- VIN Decoder
+- VIN Decoding
 - Market Value
 website: https://vincario.com
 ---

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.5
-  scored_at: '2026-10-17'
+  score: 20.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL API for querying Arweave transaction and block metadata by tags, owner addresses, recipients, block height ranges, and transaction IDs. Supports cursor-based pagination and sorting. Primary en
@@ -42,32 +46,32 @@ apis:
 - description: Managed bundling upload service (ar.io Turbo) that implements ANS-104 bundling for high-throughput data uploads to Arweave. Handles millions of uploads daily with automatic retry, sub-100 KiB free tie
   name: Arweave Turbo Upload API
   slug: arweave-turbo-upload-api
-- baseURL: https://arweave.net
+- baseURL: https://arweave.net/graphql
   baseurl_source: declared
-  description: Endpoints for retrieving block data
-  name: Arweave Blocks API
-  slug: arweave-blocks-api
-- baseURL: https://arweave.net
+  description: Account balance and wallet information
+  name: Arweave Account API
+  slug: arweave-account-api
+- baseURL: https://arweave.net/graphql
   baseurl_source: declared
-  description: Endpoints for uploading and downloading data chunks
-  name: Arweave Chunks API
-  slug: arweave-chunks-api
-- baseURL: https://arweave.net
+  description: Pricing calculation endpoints
+  name: Arweave Pricing API
+  slug: arweave-pricing-api
+- baseURL: https://arweave.net/graphql
   baseurl_source: declared
-  description: Endpoints for querying network state and peer information
-  name: Arweave Network API
-  slug: arweave-network-api
-- baseURL: https://arweave.net
+  description: Service information and health endpoints
+  name: Arweave Service Info API
+  slug: arweave-service-info-api
+- baseURL: https://arweave.net/graphql
   baseurl_source: declared
-  description: Endpoints for submitting and retrieving transactions
-  name: Arweave Transactions API
-  slug: arweave-transactions-api
-- baseURL: https://arweave.net
+  description: Transaction status and metadata retrieval
+  name: Arweave Transaction Data API
+  slug: arweave-transaction-data-api
+- baseURL: https://arweave.net/graphql
   baseurl_source: declared
-  description: Endpoints for querying wallet balances and transaction history
-  name: Arweave Wallets API
-  slug: arweave-wallets-api
-artifact_total: 32
+  description: Data item upload endpoints (single and multi-part)
+  name: Arweave Upload API
+  slug: arweave-upload-api
+artifact_total: 31
 collections:
 - collection_type: postman
   name: Arweave HTTP Node Blocks API
@@ -84,9 +88,6 @@ collections:
 - collection_type: postman
   name: Arweave HTTP Node Wallets API
   slug: postman-arweave-wallets-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Arweave HTTP Node Blocks API
   slug: open-arweave-blocks-api
@@ -112,7 +113,7 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/arweave/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arweave/refs/heads/main/security/arweave-domain-security.yml
+  href: https://artifacts.apis.io/arweave/security/arweave-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arweave-domain-security.yml
@@ -231,7 +232,7 @@ modified: '2026-10-06'
 name: Arweave
 nav: Providers
 network: true
-overview: 'Arweave publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Blocks API, Chunks API, Network API, and 4 more. Tagged areas include Decentralized Storage, Blockchain, Permaweb, Web3, and Data Storage.
+overview: 'Arweave publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Pricing API, Service Info API, and 4 more. Tagged areas include Decentralized Storage, Blockchain, Permaweb, Web3, and Data Storage.
 
 
   The Arweave catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -242,7 +243,7 @@ plans:
 - name: Plans
   plan_count: 3
   slug: plans
-random_paper: 21
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Rate Limits
@@ -261,42 +262,42 @@ rules:
   slug: arweave-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 33.0
+  composite: 32.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 70.8
     catalog_earned_first_party: 0.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.4
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
-    contract_quality: 63.9
-    developer_ergonomics: 29.8
+    contract_quality: 61.2
+    developer_ergonomics: 32.9
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 41.2
+  previous_composite: 32.5
   provenance:
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 45.5
+      total: 11
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/arweave/refs/heads/main/screenshots/arweave-2026-06-20T172449.png
+screenshot: https://apis.io/screenshots/arweave/arweave-2026-06-20T172449.png
 security:
 - kind: domain-security
   name: Arweave Domain Security

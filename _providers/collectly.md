@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.3
-  scored_at: '2026-10-17'
+  score: 22.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 0
@@ -171,38 +174,43 @@ asyncapis:
   name: Collectly Webhooks
   slug: collectly-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/collectly/capabilities/collectly-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/collectly-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/agentic-access/collectly-agentic-access.yml
+  href: https://artifacts.apis.io/collectly/agentic-access/collectly-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/collectly-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/rules/collectly-rules.yml
+  href: https://artifacts.apis.io/collectly/rules/collectly-rules.yml
   title: ''
   type: Spectral
   url: rules/collectly-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/json-ld/collectly-context.jsonld
+  href: https://artifacts.apis.io/collectly/json-ld/collectly-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/collectly-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/vocabulary/collectly-vocabulary.yml
+  href: https://artifacts.apis.io/collectly/vocabulary/collectly-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/collectly-vocabulary.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/lifecycle/collectly-lifecycle.yml
+  href: https://artifacts.apis.io/collectly/lifecycle/collectly-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/collectly-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/hosts/collectly-hosts.yml
+  href: https://artifacts.apis.io/collectly/hosts/collectly-hosts.yml
   title: ''
   type: Hosts
   url: hosts/collectly-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/vendors/collectly-vendors.yml
+  href: https://artifacts.apis.io/collectly/vendors/collectly-vendors.yml
   title: ''
   type: Vendors
   url: vendors/collectly-vendors.yml
@@ -247,17 +255,17 @@ common:
   type: Compliance
   url: https://www.collectly.co/security-compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/security/collectly-trust-center.yml
+  href: https://artifacts.apis.io/collectly/security/collectly-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/collectly-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/security/collectly-domain-security.yml
+  href: https://artifacts.apis.io/collectly/security/collectly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/collectly-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/llms/collectly-llms.txt
+  href: https://artifacts.apis.io/collectly/llms/collectly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/collectly-llms.txt
@@ -303,8 +311,8 @@ overview: 'Collectly publishes 24 API contracts indexed on the [APIs.io](https:/
   The Collectly catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Collectly''s developer surface includes documentation, API reference, getting-started guide, engineering blog, and 17 more developer resources.'
-random_paper: 3
+  Collectly''s developer surface includes documentation, API reference, getting-started guide, engineering blog, and 18 more developer resources.'
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -319,24 +327,24 @@ rules:
     warn: 2
   slug: collectly-rules
 score:
-  band: developing
-  composite: 54.2
+  band: strong
+  composite: 57.0
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 14.3
+  delta: 2.8
   facets:
     access_clarity: 43.4
     contract_governance: 35.6
-    contract_quality: 64.8
-    developer_ergonomics: 46.4
+    contract_quality: 69.6
+    developer_ergonomics: 59.5
     discoverability: 73.2
-    operational_transparency: 31.6
-  previous_composite: 39.9
+    operational_transparency: 23.7
+  previous_composite: 54.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -356,13 +364,13 @@ score:
     regime: Health
     regime_id: health
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/collectly/refs/heads/main/screenshots/collectly-2026-07-25T210051.png
+screenshot: https://apis.io/screenshots/collectly/collectly-2026-07-25T210051.png
 security:
 - kind: authentication
   name: Collectly Authentication

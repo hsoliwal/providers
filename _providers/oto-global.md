@@ -1,18 +1,22 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 28.6
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.tryoto.com/rest/v2
@@ -138,15 +145,12 @@ apis:
   description: 'WEBHOOK for ORDER There are 3 types of webhook for now, newOrders, orderStatus , shipmentError and walletTransaction. OTO will push updates to the registered webhook endpoint for the orderStatus type '
   name: OTO Global Webhook API
   slug: oto-global-webhook-api
-artifact_total: 45
+artifact_total: 49
 asyncapis:
 - description: ''
   name: Oto Global Webhooks
   slug: oto-global-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OTO API V2 Account API
   slug: open-oto-global-account-api
@@ -209,17 +213,17 @@ collections:
   slug: open-oto-global-webhook-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/plans/oto-global-plans-pricing.yml
+  href: https://artifacts.apis.io/oto-global/plans/oto-global-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/oto-global-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/capabilities/oto-global-capability-edges.yml
+  href: https://artifacts.apis.io/oto-global/capabilities/oto-global-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/oto-global-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/security/oto-global-domain-security.yml
+  href: https://artifacts.apis.io/oto-global/security/oto-global-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oto-global-domain-security.yml
@@ -276,82 +280,90 @@ common:
   type: StatusPage
   url: https://status.tryoto.com
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/openapi/_original/oto-global-openapi.yml
+  href: https://artifacts.apis.io/oto-global/openapi/_original/oto-global-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/oto-global-openapi.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/postman/oto-global-postman.json
+  href: https://artifacts.apis.io/oto-global/postman/oto-global-postman.json
   title: ''
   type: Postman
   url: postman/oto-global-postman.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/authentication/oto-global-authentication.yml
+  href: https://artifacts.apis.io/oto-global/authentication/oto-global-authentication.yml
   title: ''
   type: Authentication
   url: authentication/oto-global-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/conventions/oto-global-conventions.yml
+  href: https://artifacts.apis.io/oto-global/conventions/oto-global-conventions.yml
   title: ''
   type: Conventions
   url: conventions/oto-global-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/errors/oto-global-error-codes.yml
+  href: https://artifacts.apis.io/oto-global/errors/oto-global-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/oto-global-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/lifecycle/oto-global-lifecycle.yml
+  href: https://artifacts.apis.io/oto-global/lifecycle/oto-global-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/oto-global-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/sandbox/oto-global-sandbox.yml
+  href: https://artifacts.apis.io/oto-global/sandbox/oto-global-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/oto-global-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/conformance/oto-global-conformance.yml
+  href: https://artifacts.apis.io/oto-global/conformance/oto-global-conformance.yml
   title: ''
   type: Conformance
   url: conformance/oto-global-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/data-model/oto-global-data-model.yml
+  href: https://artifacts.apis.io/oto-global/data-model/oto-global-data-model.yml
   title: ''
   type: DataModel
   url: data-model/oto-global-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/well-known/oto-global-well-known.yml
+  href: https://artifacts.apis.io/oto-global/well-known/oto-global-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/oto-global-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/mcp/oto-global-mcp.yml
+  href: https://artifacts.apis.io/oto-global/mcp/oto-global-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/oto-global-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/llms/oto-global-llms.txt
+  href: https://artifacts.apis.io/oto-global/llms/oto-global-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/oto-global-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/overlays/oto-global-openapi-overlay.yaml
+  href: https://artifacts.apis.io/oto-global/overlays/oto-global-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/oto-global-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/asyncapi/oto-global-webhooks.yml
+  href: https://artifacts.apis.io/oto-global/asyncapi/oto-global-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/oto-global-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/oto-global/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: OTO is a multi-carrier shipping and fulfillment platform for e-commerce businesses, headquartered in Saudi Arabia and serving 10,000+ merchants. It connects a single integration to 450+ shipping carriers and provides order management, warehouse and picking/packing automation, real-time tracking with customer notifications, returns management, address validation, and omnichannel order synchronization. The OTO REST API V2 (base https://api.tryoto.com/rest/v2, staging at staging-api.tryoto.com) exposes 74 operations across orders, shipments, returns, tracking, shipping rates, carrier integrations, pickup locations, products, stock management, sales channels, and webhooks. Authentication is a bearer access_token minted from a dashboard refresh_token.
+finops:
+- has_sources: true
+  method: derived
+  name: Oto Global Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: oto-global-finops
+  template: false
 image: https://www.tryoto.com/favicon.ico
 layout: provider
 modified: '2026-07-20'
@@ -361,7 +373,7 @@ network: true
 overview: 'OTO Global publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Authorization API, Brands API, and 17 more. Tagged areas include Company, Shipping, Logistics, Fulfillment, and E-Commerce.
 
 
-  The OTO Global catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The OTO Global catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   OTO Global''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
@@ -369,21 +381,34 @@ plans:
 - name: Oto Global Plans Pricing
   plan_count: 5
   slug: oto-global-plans-pricing
-random_paper: 18
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: OTO Global API Rules
+  rule_count: 57
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 2
+  slug: oto-global-rules
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 56.7
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
-    access_clarity: 69.7
-    contract_governance: 4.5
+    access_clarity: 77.6
+    contract_governance: 18.2
     contract_quality: 58.5
     developer_ergonomics: 67.3
     discoverability: 73.2
@@ -396,7 +421,7 @@ score:
     regions:
     - mena
     - middle-east
-  previous_composite: 53.5
+  previous_composite: 56.7
   provenance:
     conformance: derived
     contracts:
@@ -412,13 +437,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/oto-global/refs/heads/main/screenshots/oto-global-2026-08-07T191028.png
+screenshot: https://apis.io/screenshots/oto-global/oto-global-2026-08-07T191028.png
 security:
 - kind: authentication
   name: Oto Global Authentication
@@ -428,6 +453,14 @@ security:
   name: Oto Global Domain Security
   slug: oto-global-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Create an order and ship it with OTO
+  slug: oto-global-create-order-and-ship
+- name: Create and manage a return with OTO
+  slug: oto-global-handle-return
+- name: Register OTO webhooks for order and wallet events
+  slug: oto-global-register-webhooks
 slug: oto-global
 tags:
 - Company

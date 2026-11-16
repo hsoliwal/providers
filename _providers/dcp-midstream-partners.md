@@ -5,7 +5,10 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,42 +38,42 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/security/dcp-midstream-partners-domain-security.yml
+  href: https://artifacts.apis.io/dcp-midstream-partners/security/dcp-midstream-partners-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dcp-midstream-partners-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/well-known/dcp-midstream-partners-well-known.yml
+  href: https://artifacts.apis.io/dcp-midstream-partners/well-known/dcp-midstream-partners-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dcp-midstream-partners-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/authentication/dcp-midstream-partners-authentication.yml
+  href: https://artifacts.apis.io/dcp-midstream-partners/authentication/dcp-midstream-partners-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dcp-midstream-partners-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/conformance/dcp-midstream-partners-conformance.yml
+  href: https://artifacts.apis.io/dcp-midstream-partners/conformance/dcp-midstream-partners-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dcp-midstream-partners-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/plans/dcp-midstream-partners-plans-pricing.yml
+  href: https://artifacts.apis.io/dcp-midstream-partners/plans/dcp-midstream-partners-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dcp-midstream-partners-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/rate-limits/dcp-midstream-partners-rate-limits.yml
+  href: https://artifacts.apis.io/dcp-midstream-partners/rate-limits/dcp-midstream-partners-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dcp-midstream-partners-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/llms/dcp-midstream-partners-llms.txt
+  href: https://artifacts.apis.io/dcp-midstream-partners/llms/dcp-midstream-partners-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dcp-midstream-partners-llms.txt
@@ -169,7 +175,7 @@ press:
 - date: ''
   title: DCP Midstream Benefits from Eagle Ford, DJ Basin Assets in ...
   url: https://www.industrialinfo.com/news/article/dcp-midstream-benefits-from-eagle-ford-dj-basin-assets-in-2014-puts-2015-growth-capex-at-300-million--246924
-random_paper: 2
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Dcp Midstream Partners Rate Limits
@@ -201,14 +207,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dcp-midstream-partners/refs/heads/main/screenshots/dcp-midstream-partners-2026-06-20T175739.png
+screenshot: https://apis.io/screenshots/dcp-midstream-partners/dcp-midstream-partners-2026-06-20T175739.png
 security:
 - kind: authentication
   name: Dcp Midstream Partners Authentication

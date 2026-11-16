@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -21,22 +22,25 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.6
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 26.0
+  scored_at: '2026-11-06'
+api_count: 3
 apis:
 - baseURL: https://api.akkio.com/v1
   baseurl_source: declared
@@ -428,11 +432,8 @@ apis:
   description: The OAuth API from Akkio — 3 operation(s) for oauth.
   name: Akkio O Auth API
   slug: akkio-oauth-api
-artifact_total: 87
+artifact_total: 92
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Akkio Datasets API
   slug: open-akkio-datasets-api
@@ -441,12 +442,12 @@ collections:
   slug: open-akkio-models-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/capabilities/akkio-capability-edges.yml
+  href: https://artifacts.apis.io/akkio/capabilities/akkio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/akkio-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/security/akkio-domain-security.yml
+  href: https://artifacts.apis.io/akkio/security/akkio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/akkio-domain-security.yml
@@ -507,93 +508,101 @@ common:
   type: Compliance
   url: https://www.akkio.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/security/akkio-trust-center.yml
+  href: https://artifacts.apis.io/akkio/security/akkio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/akkio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/security/akkio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/akkio/security/akkio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/akkio-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/authentication/akkio-authentication.yml
+  href: https://artifacts.apis.io/akkio/authentication/akkio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/akkio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/conventions/akkio-conventions.yml
+  href: https://artifacts.apis.io/akkio/conventions/akkio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/akkio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/conformance/akkio-conformance.yml
+  href: https://artifacts.apis.io/akkio/conformance/akkio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/akkio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/data-model/akkio-data-model.yml
+  href: https://artifacts.apis.io/akkio/data-model/akkio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/akkio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/lifecycle/akkio-lifecycle.yml
+  href: https://artifacts.apis.io/akkio/lifecycle/akkio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/akkio-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/packages/akkio-packages.yml
+  href: https://artifacts.apis.io/akkio/packages/akkio-packages.yml
   title: ''
   type: Packages
   url: packages/akkio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/packages/akkio-packages.yml
+  href: https://artifacts.apis.io/akkio/packages/akkio-packages.yml
   title: ''
   type: SDKs
   url: packages/akkio-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/llms/akkio-llms.txt
+  href: https://artifacts.apis.io/akkio/llms/akkio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/akkio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/akkio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/openapi/_original/akkio-api-openapi.yml
+  href: https://artifacts.apis.io/akkio/openapi/_original/akkio-api-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/akkio-api-openapi.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/rate-limits/akkio-rate-limits.yml
+  href: https://artifacts.apis.io/akkio/rate-limits/akkio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/akkio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/plans/akkio-plans-pricing.yml
+  href: https://artifacts.apis.io/akkio/plans/akkio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/akkio-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/errors/akkio-problem-types.yml
+  href: https://artifacts.apis.io/akkio/errors/akkio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/akkio-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/overlays/akkio-public-api-overlay.yaml
+  href: https://artifacts.apis.io/akkio/overlays/akkio-public-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/akkio-public-api-overlay.yaml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/openapi/_original/akkio-public-api-openapi.yaml
+  href: https://artifacts.apis.io/akkio/openapi/_original/akkio-public-api-openapi.yaml
   title: ''
   type: OpenAPI
   url: openapi/_original/akkio-public-api-openapi.yaml
 created: '2026-07-17'
 description: 'Akkio is a no-code predictive AI and AI-workflow-automation platform built for media agencies and data providers. Teams use it to activate data across the campaign lifecycle: audience segmentation, propensity modeling, RFM analysis, media-mix modeling, performance measurement, and campaign-strategy development, all from unified intelligence. Beyond the app, Akkio ships a developer REST API on https://api.akkio.com in two generations: the legacy /v1 datasets and models routes (api_key in query or body), and the current "Akkio Public API (Beta)" at /api/v1, which covers projects, asynchronous model training and Chat Explore natural-language querying behind an X-API-Key header. Akkio publishes its own OpenAPI 3.1.0 document at /api/v1/api.yaml with a Swagger UI at /api/v1/docs and documents generating clients from it; the two first-party SDKs (PyPI and npm `akkio`) cover only the legacy surface and have not been released since 2021. The company is SOC 2 Type 2 and HIPAA compliant
   (verified via Drata).'
+finops:
+- has_sources: true
+  method: derived
+  name: Akkio Finops
+  primary_unit: ''
+  service_category: ''
+  slug: akkio-finops
+  template: true
 image: https://cdn.prod.website-files.com/5c97e8c9de94e8a3480419a5/6959836988084dcbb9ac3605_Screenshot%202026-01-03%20at%2012.58.19%E2%80%AFPM.png
 layout: provider
 modified: '2026-08-13'
@@ -603,41 +612,57 @@ network: true
 overview: 'Akkio publishes 78 API contracts indexed on the [APIs.io](https://apis.io/) network, including Datasets API, Models API, Ad Analytics API, and 75 more. Tagged areas include Company, Ai Apps, Machine Learning, Predictive Analytics, and No-Code.
 
 
+  The Akkio catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Akkio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
 plans:
 - name: Akkio Plans Pricing
-  plan_count: 0
+  plan_count: 1
   slug: akkio-plans-pricing
-random_paper: 21
+random_paper: 23
 rate_limits:
 - limit_count: 1
   name: Akkio Rate Limits
   slug: akkio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Akkio API Rules
+  rule_count: 53
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 3
+    warn: 12
+  slug: akkio-rules
 score:
-  band: developing
-  composite: 49.2
+  band: strong
+  composite: 56.2
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 48.0
-    catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    artifact_dirs: 29
+    catalog_earned: 60.5
+    catalog_earned_first_party: 16.0
+    catalog_gap: 54.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.1
   facets:
-    access_clarity: 47.4
-    contract_governance: 18.2
-    contract_quality: 40.5
+    access_clarity: 68.4
+    contract_governance: 31.8
+    contract_quality: 44.8
     developer_ergonomics: 66.1
     discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 49.2
+  previous_composite: 55.1
   provenance:
     conformance: first-party
     contracts:
       callable: 2.6
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 97.4
       total: 78
     mcp: derived
     skills: derived
@@ -653,13 +678,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/akkio/refs/heads/main/screenshots/akkio-2026-07-25T195516.png
+screenshot: https://apis.io/screenshots/akkio/akkio-2026-07-25T195516.png
 security:
 - kind: authentication
   name: Akkio Authentication
@@ -677,6 +702,16 @@ security:
   name: Akkio Trust Center
   slug: akkio-trust-center
   summary_line: SOC 2 Type 2, HIPAA
+skill_count: 4
+skills:
+- name: Ask questions of Akkio data with Chat Explore
+  slug: akkio-chat-explore
+- name: Make predictions with an Akkio model
+  slug: akkio-make-prediction
+- name: Train an Akkio model with the async Training API
+  slug: akkio-train-model-async
+- name: Train an Akkio predictive model
+  slug: akkio-train-model
 slug: akkio
 tags:
 - Company

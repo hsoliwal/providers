@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -73,32 +80,32 @@ common:
   type: Security
   url: https://security.kitabisa.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/security/kita-bisa-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kita-bisa/security/kita-bisa-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kita-bisa-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/well-known/kita-bisa-security.txt
+  href: https://artifacts.apis.io/kita-bisa/well-known/kita-bisa-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/kita-bisa-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/well-known/kita-bisa-well-known.yml
+  href: https://artifacts.apis.io/kita-bisa/well-known/kita-bisa-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kita-bisa-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/security/kita-bisa-domain-security.yml
+  href: https://artifacts.apis.io/kita-bisa/security/kita-bisa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kita-bisa-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/packages/kita-bisa-packages.yml
+  href: https://artifacts.apis.io/kita-bisa/packages/kita-bisa-packages.yml
   title: ''
   type: Packages
   url: packages/kita-bisa-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/llms/kita-bisa-llms.txt
+  href: https://artifacts.apis.io/kita-bisa/llms/kita-bisa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kita-bisa-llms.txt
@@ -115,12 +122,12 @@ overview: 'Kita Bisa is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Kita Bisa''s developer surface includes engineering blog, support, and 13 more developer resources.'
-random_paper: 5
+random_paper: 21
 score:
   band: emerging
   composite: 13.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -148,14 +155,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 17.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kita-bisa/refs/heads/main/screenshots/kita-bisa-2026-07-25T223902.png
+screenshot: https://apis.io/screenshots/kita-bisa/kita-bisa-2026-07-25T223902.png
 security:
 - kind: domain-security
   name: Kita Bisa Domain Security

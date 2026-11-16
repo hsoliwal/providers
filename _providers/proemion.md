@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Obtain and configure machine data from the DataPlatform, Proemion's API-first telematics cloud. Secured with OAuth2 client credentials (OpenID Connect / Keycloak).
@@ -48,7 +53,7 @@ apis:
 artifact_total: 8
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/security/proemion-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/proemion/security/proemion-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/proemion-vulnerability-disclosure.yml
@@ -57,7 +62,7 @@ common:
   type: Security
   url: https://docs.proemion.com/docs/shared/pdf/proemion_vdp_v1.0.pdf
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/security/proemion-domain-security.yml
+  href: https://artifacts.apis.io/proemion/security/proemion-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/proemion-domain-security.yml
@@ -106,62 +111,62 @@ common:
   type: TrustCenter
   url: https://trust.proemion.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/grpc/proemion-clmapi.proto
+  href: https://artifacts.apis.io/proemion/grpc/proemion-clmapi.proto
   title: ''
   type: Protobuf
   url: grpc/proemion-clmapi.proto
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/packages/proemion-packages.yml
+  href: https://artifacts.apis.io/proemion/packages/proemion-packages.yml
   title: ''
   type: Packages
   url: packages/proemion-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/packages/proemion-packages.yml
+  href: https://artifacts.apis.io/proemion/packages/proemion-packages.yml
   title: ''
   type: SDKs
   url: packages/proemion-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/cli/proemion-cli.yml
+  href: https://artifacts.apis.io/proemion/cli/proemion-cli.yml
   title: ''
   type: CLI
   url: cli/proemion-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/well-known/proemion-well-known.yml
+  href: https://artifacts.apis.io/proemion/well-known/proemion-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/proemion-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/well-known/proemion-security.txt
+  href: https://artifacts.apis.io/proemion/well-known/proemion-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/proemion-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/authentication/proemion-authentication.yml
+  href: https://artifacts.apis.io/proemion/authentication/proemion-authentication.yml
   title: ''
   type: Authentication
   url: authentication/proemion-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/scopes/proemion-scopes.yml
+  href: https://artifacts.apis.io/proemion/scopes/proemion-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/proemion-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/conformance/proemion-conformance.yml
+  href: https://artifacts.apis.io/proemion/conformance/proemion-conformance.yml
   title: ''
   type: Conformance
   url: conformance/proemion-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/conventions/proemion-conventions.yml
+  href: https://artifacts.apis.io/proemion/conventions/proemion-conventions.yml
   title: ''
   type: Conventions
   url: conventions/proemion-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/lifecycle/proemion-lifecycle.yml
+  href: https://artifacts.apis.io/proemion/lifecycle/proemion-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/proemion-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/llms/proemion-llms.txt
+  href: https://artifacts.apis.io/proemion/llms/proemion-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/proemion-llms.txt
@@ -181,7 +186,7 @@ overview: 'Proemion is listed with 3 APIs on the [APIs.io](https://apis.io/) net
 
 
   Proemion''s developer surface includes documentation, API reference, engineering blog, support, CLI, authentication, and 20 more developer resources.'
-random_paper: 15
+random_paper: 9
 scopes:
 - name: Proemion Scopes
   scope_count: 12
@@ -191,7 +196,7 @@ score:
   band: thin
   composite: 37.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -215,14 +220,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/screenshots/proemion-2026-09-02T152122.png
+screenshot: https://apis.io/screenshots/proemion/proemion-2026-09-02T152122.png
 security:
 - kind: authentication
   name: Proemion Authentication

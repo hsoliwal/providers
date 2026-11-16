@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: Open Neural Network Exchange (ONNX) is an open format for representing deep learning models, enabling interoperability between AI frameworks.
@@ -72,17 +76,17 @@ apis:
 artifact_total: 15
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lf-ai-and-data/refs/heads/main/plans/lf-ai-and-data-plans-pricing.yml
+  href: https://artifacts.apis.io/lf-ai-and-data/plans/lf-ai-and-data-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lf-ai-and-data-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lf-ai-and-data/refs/heads/main/rate-limits/lf-ai-and-data-rate-limits.yml
+  href: https://artifacts.apis.io/lf-ai-and-data/rate-limits/lf-ai-and-data-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lf-ai-and-data-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lf-ai-and-data/refs/heads/main/finops/lf-ai-and-data-finops.yml
+  href: https://artifacts.apis.io/lf-ai-and-data/finops/lf-ai-and-data-finops.yml
   title: ''
   type: FinOps
   url: finops/lf-ai-and-data-finops.yml
@@ -111,7 +115,7 @@ common:
   type: License
   url: https://github.com/onnx/onnx/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lf-ai-and-data/refs/heads/main/security/lf-ai-and-data-domain-security.yml
+  href: https://artifacts.apis.io/lf-ai-and-data/security/lf-ai-and-data-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lf-ai-and-data-domain-security.yml
@@ -145,7 +149,7 @@ finops:
 - has_sources: false
   method: generated
   name: Lf Ai And Data Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: lf-ai-and-data-finops
   template: true
@@ -163,7 +167,7 @@ plans:
 - name: Lf Ai And Data Plans Pricing
   plan_count: 3
   slug: lf-ai-and-data-plans-pricing
-random_paper: 10
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Lf Ai And Data Rate Limits
@@ -172,13 +176,13 @@ score:
   band: emerging
   composite: 22.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -189,21 +193,21 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 23.7
+  previous_composite: 22.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lf-ai-and-data/refs/heads/main/screenshots/lf-ai-and-data-2026-06-20T184449.png
+screenshot: https://apis.io/screenshots/lf-ai-and-data/lf-ai-and-data-2026-06-20T184449.png
 security:
 - kind: domain-security
   name: Lf Ai And Data Domain Security

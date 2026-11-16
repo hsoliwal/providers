@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 35.3
-  scored_at: '2026-10-17'
+  score: 36.6
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
-- description: Social media scraping API suite providing programmatic access to content, profiles, comments, and analytics across multiple platforms.
+- baseURL: https://api.fetchlayer.dev
+  baseurl_source: spec
+  description: Social media scraping API suite providing programmatic access to content, profiles, comments, and analytics across multiple platforms.
   name: FetchLayer API
-  slug: fetchlayer-api-2
+  slug: fetchlayer-api
 - baseURL: https://api.fetchlayer.dev
   baseurl_source: declared
   description: The Airbnb API from HootCodes — 1 operation(s) for airbnb.
@@ -64,80 +80,80 @@ apis:
   description: The Weibo API from HootCodes — 1 operation(s) for weibo.
   name: HootCodes Weibo API
   slug: fetchlayer-weibo-api
-artifact_total: 19
+artifact_total: 21
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/plans/fetchlayer-plans-pricing.yml
+  href: https://artifacts.apis.io/fetchlayer/plans/fetchlayer-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fetchlayer-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/rules/fetchlayer-rules.yml
+  href: https://artifacts.apis.io/fetchlayer/rules/fetchlayer-rules.yml
   title: ''
   type: Spectral
   url: rules/fetchlayer-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/json-ld/fetchlayer-context.jsonld
+  href: https://artifacts.apis.io/fetchlayer/json-ld/fetchlayer-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/fetchlayer-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/vocabulary/fetchlayer-vocabulary.yml
+  href: https://artifacts.apis.io/fetchlayer/vocabulary/fetchlayer-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/fetchlayer-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/data-model/fetchlayer-data-model.yml
+  href: https://artifacts.apis.io/fetchlayer/data-model/fetchlayer-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fetchlayer-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/security/fetchlayer-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fetchlayer/security/fetchlayer-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/fetchlayer-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/conformance/fetchlayer-conformance.yml
+  href: https://artifacts.apis.io/fetchlayer/conformance/fetchlayer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fetchlayer-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/llms/fetchlayer-llms.txt
+  href: https://artifacts.apis.io/fetchlayer/llms/fetchlayer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fetchlayer-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/well-known/fetchlayer-security.txt
+  href: https://artifacts.apis.io/fetchlayer/well-known/fetchlayer-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fetchlayer-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/well-known/fetchlayer-api-security.txt
+  href: https://artifacts.apis.io/fetchlayer/well-known/fetchlayer-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fetchlayer-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/well-known/fetchlayer-well-known.yml
+  href: https://artifacts.apis.io/fetchlayer/well-known/fetchlayer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fetchlayer-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/hosts/fetchlayer-hosts.yml
+  href: https://artifacts.apis.io/fetchlayer/hosts/fetchlayer-hosts.yml
   title: ''
   type: Hosts
   url: hosts/fetchlayer-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/vendors/fetchlayer-vendors.yml
+  href: https://artifacts.apis.io/fetchlayer/vendors/fetchlayer-vendors.yml
   title: ''
   type: Vendors
   url: vendors/fetchlayer-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/packages/fetchlayer-packages.yml
+  href: https://artifacts.apis.io/fetchlayer/packages/fetchlayer-packages.yml
   title: ''
   type: SDKs
   url: packages/fetchlayer-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/packages/fetchlayer-packages.yml
+  href: https://artifacts.apis.io/fetchlayer/packages/fetchlayer-packages.yml
   title: ''
   type: Packages
   url: packages/fetchlayer-packages.yml
@@ -174,12 +190,12 @@ common:
   type: APIReference
   url: https://fetchlayer.dev/llms-full.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/security/fetchlayer-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fetchlayer/security/fetchlayer-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fetchlayer-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fetchlayer/refs/heads/main/security/fetchlayer-domain-security.yml
+  href: https://artifacts.apis.io/fetchlayer/security/fetchlayer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fetchlayer-domain-security.yml
@@ -215,6 +231,14 @@ coverage:
   state: unreadable
 created: '2026-10-16'
 description: HootCodes, operating as FetchLayer, provides a multi‑platform social media scraping API suite. It enables developers to programmatically access content, profiles, comments, and analytics across Reddit, X/Twitter, YouTube, TikTok, Instagram, Weibo, and more. The service offers endpoints for ad libraries, app store reviews, and various other data sources, targeting SaaS applications that need scalable social data extraction.
+finops:
+- has_sources: true
+  method: derived
+  name: Fetchlayer Finops
+  primary_unit: ''
+  service_category: ''
+  slug: fetchlayer-finops
+  template: true
 image: https://fetchlayer.dev/og.png?p=%2F&t=Multi-Platform+Social+Media+Scraping+API+%7C+FetchLayer&s=Access+structured+data+from+social+platforms+and+popular+websites+through+one+web+scraping+API.+Clean+JSON+with+no+scrapers+or+proxies+to+maintain.
 json_schemas:
 - name: PostBingBingidResponse
@@ -245,7 +269,7 @@ modified: '2026-10-16'
 name: HootCodes
 nav: Providers
 network: true
-overview: 'HootCodes is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Airbnb API, Bing API, Douyin API, and 5 more. Tagged areas include Company, Social Media, Data Extraction, and Software-as-a-Service.
+overview: 'HootCodes is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including FetchLayer API, Airbnb API, Bing API, and 5 more. Tagged areas include Company, Social Media, Data Extraction, and Software-as-a-Service.
 
 
   The HootCodes catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -256,6 +280,9 @@ plans:
 - name: Fetchlayer Plans Pricing
   plan_count: 4
   slug: fetchlayer-plans-pricing
+- name: Fetchlayer Price Estimates
+  plan_count: 0
+  slug: fetchlayer-price-estimates
 random_paper: 7
 rules:
 - authorship: generated
@@ -271,22 +298,24 @@ rules:
     warn: 1
   slug: fetchlayer-rules
 score:
-  band: developing
-  composite: 46.2
+  band: thin
+  composite: 35.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 20
     catalog_earned: 67.8
     catalog_earned_first_party: 12.0
     catalog_gap: 47.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.7
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
     contract_quality: 26.3
-    developer_ergonomics: 50.0
+    developer_ergonomics: 28.6
     discoverability: 60.7
-    operational_transparency: 31.6
+    operational_transparency: 21.1
+  previous_composite: 46.2
   provenance:
     conformance: derived
     contracts:
@@ -300,12 +329,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/fetchlayer/fetchlayer-2026-11-03T131940.png
 security:
 - kind: domain-security
   name: Fetchlayer Domain Security

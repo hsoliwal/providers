@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -57,17 +63,17 @@ common:
   type: SourceCode
   url: https://github.com/beme/abide
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/beme/refs/heads/main/packages/beme-packages.yml
+  href: https://artifacts.apis.io/beme/packages/beme-packages.yml
   title: ''
   type: Packages
   url: packages/beme-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beme/refs/heads/main/lifecycle/beme-lifecycle.yml
+  href: https://artifacts.apis.io/beme/lifecycle/beme-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/beme-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beme/refs/heads/main/llms/beme-llms.txt
+  href: https://artifacts.apis.io/beme/llms/beme-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/beme-llms.txt
@@ -80,12 +86,12 @@ name: Beme
 nav: Providers
 network: true
 overview: Beme is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Social Media, Mobile App, and Media.
-random_paper: 13
+random_paper: 1
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -121,14 +127,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/beme/refs/heads/main/screenshots/beme-2026-07-25T202726.png
+screenshot: https://apis.io/screenshots/beme/beme-2026-07-25T202726.png
 slug: beme
 tags:
 - Company

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/msc-industrial-direct/refs/heads/main/security/msc-industrial-direct-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/msc-industrial-direct/security/msc-industrial-direct-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/msc-industrial-direct-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/msc-industrial-direct/refs/heads/main/security/msc-industrial-direct-domain-security.yml
+  href: https://artifacts.apis.io/msc-industrial-direct/security/msc-industrial-direct-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/msc-industrial-direct-domain-security.yml
@@ -91,10 +95,10 @@ press:
 - date: ''
   title: MSC Industrial Supply Co. to Webcast Review of Fiscal 2026 ...
   url: https://www.thepublicopinion.com/press-release/story/40988/msc-industrial-supply-co-to-webcast-review-of-fiscal-2026-second-quarter-results/
-random_paper: 1
+random_paper: 23
 score:
   band: minimal
-  composite: 3.4
+  composite: 4.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 22.0
@@ -109,22 +113,22 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 39.3
-    operational_transparency: 0.0
-  previous_composite: 3.4
+    operational_transparency: 10.5
+  previous_composite: 4.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/msc-industrial-direct/refs/heads/main/screenshots/msc-industrial-direct-2026-06-20T185850.png
+screenshot: https://apis.io/screenshots/msc-industrial-direct/msc-industrial-direct-2026-06-20T185850.png
 security:
 - kind: domain-security
   name: Msc Industrial Direct Domain Security

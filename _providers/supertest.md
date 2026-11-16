@@ -1,6 +1,6 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: SuperTest is a Node.js library for testing HTTP servers by providing a high-level abstraction for HTTP assertions with a fluent API built on SuperAgent. Supports GET, POST, PUT, DELETE, PATCH HTTP met
@@ -42,17 +45,17 @@ apis:
 artifact_total: 10
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/supertest/refs/heads/main/plans/supertest-plans-pricing.yml
+  href: https://artifacts.apis.io/supertest/plans/supertest-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/supertest-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/supertest/refs/heads/main/rate-limits/supertest-rate-limits.yml
+  href: https://artifacts.apis.io/supertest/rate-limits/supertest-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/supertest-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/supertest/refs/heads/main/finops/supertest-finops.yml
+  href: https://artifacts.apis.io/supertest/finops/supertest-finops.yml
   title: ''
   type: FinOps
   url: finops/supertest-finops.yml
@@ -105,7 +108,7 @@ finops:
 - has_sources: false
   method: generated
   name: Supertest Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: supertest-finops
   template: true
@@ -139,7 +142,7 @@ plans:
 - name: Supertest Plans Pricing
   plan_count: 3
   slug: supertest-plans-pricing
-random_paper: 17
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Supertest Rate Limits
@@ -160,13 +163,13 @@ score:
   band: emerging
   composite: 22.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 59.2
     catalog_earned_first_party: 0.0
     catalog_gap: 55.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
@@ -177,21 +180,21 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 24.2
+  previous_composite: 22.9
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/supertest/refs/heads/main/screenshots/supertest-2026-06-20T194726.png
+screenshot: https://apis.io/screenshots/supertest/supertest-2026-06-20T194726.png
 slug: supertest
 tags:
 - Testing

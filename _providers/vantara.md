@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/security/vantara-domain-security.yml
+  href: https://artifacts.apis.io/vantara/security/vantara-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vantara-domain-security.yml
@@ -107,72 +112,72 @@ common:
   type: Security
   url: https://github.com/VantaraAI/milana-sdk/blob/main/SECURITY.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/llms/vantara-llms.txt
+  href: https://artifacts.apis.io/vantara/llms/vantara-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vantara-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/mcp/vantara-mcp.yml
+  href: https://artifacts.apis.io/vantara/mcp/vantara-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/vantara-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/packages/vantara-packages.yml
+  href: https://artifacts.apis.io/vantara/packages/vantara-packages.yml
   title: ''
   type: Packages
   url: packages/vantara-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/packages/vantara-packages.yml
+  href: https://artifacts.apis.io/vantara/packages/vantara-packages.yml
   title: ''
   type: SDKs
   url: packages/vantara-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/well-known/vantara-well-known.yml
+  href: https://artifacts.apis.io/vantara/well-known/vantara-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vantara-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/well-known/vantara-security.txt
+  href: https://artifacts.apis.io/vantara/well-known/vantara-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/vantara-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/scopes/vantara-scopes.yml
+  href: https://artifacts.apis.io/vantara/scopes/vantara-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/vantara-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/authentication/vantara-authentication.yml
+  href: https://artifacts.apis.io/vantara/authentication/vantara-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vantara-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/lifecycle/vantara-lifecycle.yml
+  href: https://artifacts.apis.io/vantara/lifecycle/vantara-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/vantara-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/conformance/vantara-conformance.yml
+  href: https://artifacts.apis.io/vantara/conformance/vantara-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vantara-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/security/vantara-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/vantara/security/vantara-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/vantara-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/security/vantara-trust-center.yml
+  href: https://artifacts.apis.io/vantara/security/vantara-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/vantara-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/skills/vantara-install-milana.md
+  href: https://artifacts.apis.io/vantara/skills/vantara-install-milana.md
   title: ''
   type: AgentSkill
   url: skills/vantara-install-milana.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/changelog/vantara-changelog.yml
+  href: https://artifacts.apis.io/vantara/changelog/vantara-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/vantara-changelog.yml
@@ -192,7 +197,7 @@ overview: 'Milana is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Milana''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, changelog, and 24 more developer resources.'
-random_paper: 1
+random_paper: 5
 scopes:
 - name: Vantara Scopes
   scope_count: 7
@@ -202,13 +207,13 @@ score:
   band: thin
   composite: 37.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
@@ -216,7 +221,7 @@ score:
     developer_ergonomics: 61.9
     discoverability: 55.4
     operational_transparency: 44.7
-  previous_composite: 36.9
+  previous_composite: 37.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -227,14 +232,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/screenshots/vantara-2026-09-02T165523.png
+screenshot: https://apis.io/screenshots/vantara/vantara-2026-09-02T165523.png
 security:
 - kind: authentication
   name: Vantara Authentication
@@ -252,6 +257,10 @@ security:
   name: Vantara Trust Center
   slug: vantara-trust-center
   summary_line: trust center published
+skill_count: 1
+skills:
+- name: Install and configure the Milana SDK in a codebase
+  slug: vantara-install-milana
 slug: vantara
 tags:
 - Company

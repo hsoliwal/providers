@@ -1,11 +1,17 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
   pricing: unknown
-  public: false
-  source: []
+  public: true
+  source:
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The HTTP and A2A surface of Booz Allen's Agent Foundry agent baseline, an Apache-2.0 composition root that teams fork and deploy in their own environment. It serves three REST groups — /api/v1/query (
@@ -43,20 +52,20 @@ apis:
   description: The agile API from Booz Allen Hamilton — 1 operation(s) for agile.
   name: Booz Allen Hamilton Agile API
   slug: booz-allen-hamilton-agile-api
-artifact_total: 16
+artifact_total: 17
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/capabilities/booz-allen-hamilton-capability-edges.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/capabilities/booz-allen-hamilton-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/booz-allen-hamilton-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/overlays/booz-allen-hamilton-palm-overlay.yaml
+  href: https://artifacts.apis.io/booz-allen-hamilton/overlays/booz-allen-hamilton-palm-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/booz-allen-hamilton-palm-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/security/booz-allen-hamilton-domain-security.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/security/booz-allen-hamilton-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/booz-allen-hamilton-domain-security.yml
@@ -109,57 +118,57 @@ common:
   type: PrivacyPolicy
   url: https://www.boozallen.com/tools/footer-navigation/privacy-policy.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/packages/booz-allen-hamilton-packages.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/packages/booz-allen-hamilton-packages.yml
   title: ''
   type: Packages
   url: packages/booz-allen-hamilton-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/packages/booz-allen-hamilton-packages.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/packages/booz-allen-hamilton-packages.yml
   title: ''
   type: SDKs
   url: packages/booz-allen-hamilton-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/conventions/booz-allen-hamilton-conventions.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/conventions/booz-allen-hamilton-conventions.yml
   title: ''
   type: Conventions
   url: conventions/booz-allen-hamilton-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/conventions/booz-allen-hamilton-conventions.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/conventions/booz-allen-hamilton-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/booz-allen-hamilton-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/errors/booz-allen-hamilton-problem-types.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/errors/booz-allen-hamilton-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/booz-allen-hamilton-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/data-model/booz-allen-hamilton-data-model.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/data-model/booz-allen-hamilton-data-model.yml
   title: ''
   type: DataModel
   url: data-model/booz-allen-hamilton-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/lifecycle/booz-allen-hamilton-lifecycle.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/lifecycle/booz-allen-hamilton-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/booz-allen-hamilton-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/changelog/booz-allen-hamilton-changelog.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/changelog/booz-allen-hamilton-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/booz-allen-hamilton-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/conformance/booz-allen-hamilton-conformance.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/conformance/booz-allen-hamilton-conformance.yml
   title: ''
   type: Conformance
   url: conformance/booz-allen-hamilton-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/conformance/booz-allen-hamilton-conformance.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/conformance/booz-allen-hamilton-conformance.yml
   title: ''
   type: Compliance
   url: conformance/booz-allen-hamilton-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/security/booz-allen-hamilton-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/security/booz-allen-hamilton-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/booz-allen-hamilton-vulnerability-disclosure.yml
@@ -168,27 +177,27 @@ common:
   type: Security
   url: https://www.boozallen.com/e/about-content/cyber-security-concern-reporting.html
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/mcp/booz-allen-hamilton-mcp.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/mcp/booz-allen-hamilton-mcp.yml
   title: ''
   type: MCPClient
   url: mcp/booz-allen-hamilton-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/plans/booz-allen-hamilton-plans-pricing.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/plans/booz-allen-hamilton-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/booz-allen-hamilton-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/rate-limits/booz-allen-hamilton-rate-limits.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/rate-limits/booz-allen-hamilton-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/booz-allen-hamilton-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/well-known/booz-allen-hamilton-well-known.yml
+  href: https://artifacts.apis.io/booz-allen-hamilton/well-known/booz-allen-hamilton-well-known.yml
   title: ''
   type: X-WellKnownProbe
   url: well-known/booz-allen-hamilton-well-known.yml
@@ -229,6 +238,9 @@ network: true
 overview: 'Booz Allen Hamilton publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agile API, and 1 more. Tagged areas include Artificial Intelligence, Consulting, Cybersecurity, Defense, and Federal Government.
 
 
+  The Booz Allen Hamilton catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Booz Allen Hamilton''s developer surface includes GitHub presence, engineering blog, changelog, and 29 more developer resources.'
 plans:
 - name: Booz Allen Hamilton Plans Pricing
@@ -250,25 +262,38 @@ press:
 - date: ''
   title: Booz Allen outlines tech strategy and key risks
   url: https://www.stocktitan.net/sec-filings/BAH/10-k-booz-allen-hamilton-holding-corp-files-annual-report-f81cdf47fedf.html
-random_paper: 2
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Booz Allen Hamilton Rate Limits
   slug: booz-allen-hamilton-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 63
+  extends:
+  - spectral:oas
+  name: Booz Allen Hamilton API Rules
+  rule_count: 22
+  severity_counts:
+    error: 20
+    hint: 0
+    info: 1
+    warn: 1
+  slug: booz-allen-hamilton-rules
 score:
-  band: thin
-  composite: 38.4
+  band: developing
+  composite: 40.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 28.9
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 34.3
     developer_ergonomics: 45.2
     discoverability: 73.2
@@ -278,7 +303,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 38.4
+  previous_composite: 40.0
   provenance:
     conformance: first-party
     contracts:
@@ -294,13 +319,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/screenshots/booz-allen-hamilton-2026-06-20T173608.png
+screenshot: https://apis.io/screenshots/booz-allen-hamilton/booz-allen-hamilton-2026-06-20T173608.png
 security:
 - kind: authentication
   name: Booz Allen Hamilton Authentication

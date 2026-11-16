@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - baseURL: https://packages.cloud.google.com
@@ -84,42 +97,42 @@ apis:
 artifact_total: 21
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/rules/vertex-ai-search-rules.yml
+  href: https://artifacts.apis.io/vertex-ai-search/rules/vertex-ai-search-rules.yml
   title: ''
   type: Spectral
   url: rules/vertex-ai-search-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/json-ld/vertex-ai-search-context.jsonld
+  href: https://artifacts.apis.io/vertex-ai-search/json-ld/vertex-ai-search-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/vertex-ai-search-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/vocabulary/vertex-ai-search-vocabulary.yml
+  href: https://artifacts.apis.io/vertex-ai-search/vocabulary/vertex-ai-search-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/vertex-ai-search-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/data-model/vertex-ai-search-data-model.yml
+  href: https://artifacts.apis.io/vertex-ai-search/data-model/vertex-ai-search-data-model.yml
   title: ''
   type: DataModel
   url: data-model/vertex-ai-search-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/conformance/vertex-ai-search-conformance.yml
+  href: https://artifacts.apis.io/vertex-ai-search/conformance/vertex-ai-search-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vertex-ai-search-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/well-known/vertex-ai-search-google-security.txt
+  href: https://artifacts.apis.io/vertex-ai-search/well-known/vertex-ai-search-google-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/vertex-ai-search-google-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/well-known/vertex-ai-search-well-known.yml
+  href: https://artifacts.apis.io/vertex-ai-search/well-known/vertex-ai-search-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vertex-ai-search-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/hosts/vertex-ai-search-hosts.yml
+  href: https://artifacts.apis.io/vertex-ai-search/hosts/vertex-ai-search-hosts.yml
   title: ''
   type: Hosts
   url: hosts/vertex-ai-search-hosts.yml
@@ -152,12 +165,12 @@ common:
   type: GettingStarted
   url: https://docs.cloud.google.com/docs/get-started/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/security/vertex-ai-search-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/vertex-ai-search/security/vertex-ai-search-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/vertex-ai-search-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vertex-ai-search/refs/heads/main/security/vertex-ai-search-domain-security.yml
+  href: https://artifacts.apis.io/vertex-ai-search/security/vertex-ai-search-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vertex-ai-search-domain-security.yml
@@ -236,21 +249,23 @@ rules:
   slug: vertex-ai-search-rules
 score:
   band: thin
-  composite: 33.7
+  composite: 28.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.1
   facets:
-    access_clarity: 34.2
+    access_clarity: 27.6
     contract_governance: 22.0
     contract_quality: 25.6
-    developer_ergonomics: 40.5
+    developer_ergonomics: 25.0
     discoverability: 71.4
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 33.7
   provenance:
     conformance: derived
     contracts:
@@ -265,11 +280,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/vertex-ai-search/vertex-ai-search-2026-11-03T145735.png
 security:
 - kind: domain-security
   name: Vertex Ai Search Domain Security

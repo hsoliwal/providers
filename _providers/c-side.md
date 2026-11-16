@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,22 +26,30 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-10-17'
+  score: 26.9
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 5
+artifact_total: 8
 asyncapis:
 - description: ''
   name: C Side Webhooks
   slug: c-side-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/c-side/plans/c-side-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/c-side-plans-pricing.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -85,57 +95,57 @@ common:
   type: GitHubOrganization
   url: https://github.com/client-side-dev
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/mcp/c-side-mcp.yml
+  href: https://artifacts.apis.io/c-side/mcp/c-side-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/c-side-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/llms/c-side-llms.txt
+  href: https://artifacts.apis.io/c-side/llms/c-side-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/c-side-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/packages/c-side-packages.yml
+  href: https://artifacts.apis.io/c-side/packages/c-side-packages.yml
   title: ''
   type: Packages
   url: packages/c-side-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/packages/c-side-packages.yml
+  href: https://artifacts.apis.io/c-side/packages/c-side-packages.yml
   title: ''
   type: SDKs
   url: packages/c-side-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/cli/c-side-cli.yml
+  href: https://artifacts.apis.io/c-side/cli/c-side-cli.yml
   title: ''
   type: CLI
   url: cli/c-side-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/components/c-side-components.yml
+  href: https://artifacts.apis.io/c-side/components/c-side-components.yml
   title: ''
   type: Components
   url: components/c-side-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/well-known/c-side-well-known.yml
+  href: https://artifacts.apis.io/c-side/well-known/c-side-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/c-side-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/well-known/c-side-security.txt
+  href: https://artifacts.apis.io/c-side/well-known/c-side-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/c-side-security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/asyncapi/c-side-webhooks.yml
+  href: https://artifacts.apis.io/c-side/asyncapi/c-side-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/c-side-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/changelog/c-side-changelog.yml
+  href: https://artifacts.apis.io/c-side/changelog/c-side-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/c-side-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/lifecycle/c-side-lifecycle.yml
+  href: https://artifacts.apis.io/c-side/lifecycle/c-side-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/c-side-lifecycle.yml
@@ -144,7 +154,7 @@ common:
   type: StatusPage
   url: https://status.cside.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/conformance/c-side-conformance.yml
+  href: https://artifacts.apis.io/c-side/conformance/c-side-conformance.yml
   title: ''
   type: Conformance
   url: conformance/c-side-conformance.yml
@@ -153,12 +163,12 @@ common:
   type: Compliance
   url: https://trust.cside.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/security/c-side-trust-center.yml
+  href: https://artifacts.apis.io/c-side/security/c-side-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/c-side-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/security/c-side-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/c-side/security/c-side-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/c-side-vulnerability-disclosure.yml
@@ -167,13 +177,21 @@ common:
   type: Security
   url: https://cside.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/security/c-side-domain-security.yml
+  href: https://artifacts.apis.io/c-side/security/c-side-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/c-side-domain-security.yml
 created: '2026-07-17'
 description: c/side (cside) is a client-side security platform that detects script attacks, AI agents, account takeover, and fraud at the browser layer. It provides active runtime detection that watches what third-party scripts, users, and agents actually do as they execute in the live browser session, in real time, rather than relying on static scans or block-lists, and it automates PCI DSS 4.0.1 requirements 6.4.3 and 11.6.1 (validated by a VikingCloud QSA). cside deploys as a single JavaScript snippet with no proxy and no DNS changes, and was the first client-side security product with integrated AI analysis. The platform protects websites from malicious third-party scripts, e-skimming, Magecart, and supply chain attacks, and adds device fingerprinting (102+ signals), VPN/bot/AI-agent detection, chargeback evidence, and privacy monitoring for GDPR, CCPA, and HIPAA. Founded in 2024 and backed by Uncork Capital, cside integrates via a CLI, Next.js and Vite plugins, a manual script tag,
   and Salesforce Lightning, and sends security alerts through webhook, S3, and Jira/Linear notification endpoints. cside publishes an llms.txt, a public read-only MCP server, and a Trust Center covering SOC 2 Type II, PCI SAQ-D, and ISO 27001.
+finops:
+- has_sources: true
+  method: derived
+  name: C Side Finops
+  primary_unit: api calls
+  service_category: ''
+  slug: c-side-finops
+  template: false
 image: https://og.cside.com/?title=cside%2C%20Client-Side%20Security%20%26%20Browser%20Fraud%20Prevention
 layout: provider
 mcp_servers:
@@ -190,27 +208,34 @@ overview: 'c/side is profiled on the [APIs.io](https://apis.io/) network. Tagged
   The c/side catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  c/side''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, CLI, changelog, and 22 more developer resources.'
-random_paper: 15
+  c/side''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, CLI, changelog, and 23 more developer resources.'
+plans:
+- name: C Side Plans Pricing
+  plan_count: 6
+  slug: c-side-plans-pricing
+- name: C Side Price Estimates
+  plan_count: 0
+  slug: c-side-price-estimates
+random_paper: 13
 score:
   band: developing
-  composite: 43.0
+  composite: 50.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 18
+    catalog_earned: 42.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 36.8
+    access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 39.0
     developer_ergonomics: 52.4
     discoverability: 58.3
     operational_transparency: 52.6
-  previous_composite: 43.0
+  previous_composite: 50.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -228,14 +253,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 23.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/c-side/refs/heads/main/screenshots/c-side-2026-07-25T204147.png
+screenshot: https://apis.io/screenshots/c-side/c-side-2026-07-25T204147.png
 security:
 - kind: domain-security
   name: C Side Domain Security

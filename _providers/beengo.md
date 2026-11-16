@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beengo/refs/heads/main/security/beengo-domain-security.yml
+  href: https://artifacts.apis.io/beengo/security/beengo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/beengo-domain-security.yml
@@ -89,7 +93,7 @@ overview: 'Beengo is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Beengo''s developer surface includes engineering blog, signup flow, support, and 7 more developer resources.'
-random_paper: 8
+random_paper: 0
 score:
   band: emerging
   composite: 12.0
@@ -115,14 +119,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/beengo/refs/heads/main/screenshots/beengo-2026-07-25T202635.png
+screenshot: https://apis.io/screenshots/beengo/beengo-2026-07-25T202635.png
 security:
 - kind: domain-security
   name: Beengo Domain Security

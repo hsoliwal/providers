@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -42,12 +48,12 @@ common:
   type: BlogRSS
   url: https://www.raywhite.com/rss/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/security/ray-white-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ray-white/security/ray-white-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ray-white-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/security/ray-white-domain-security.yml
+  href: https://artifacts.apis.io/ray-white/security/ray-white-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ray-white-domain-security.yml
@@ -76,12 +82,12 @@ common:
   type: Press
   url: https://www.raywhite.com/news-and-market-insights/news-media/ray-white-and-rea-group-announce-landmark-partnership
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/well-known/ray-white-security.txt
+  href: https://artifacts.apis.io/ray-white/well-known/ray-white-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ray-white-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/well-known/ray-white-well-known.yml
+  href: https://artifacts.apis.io/ray-white/well-known/ray-white-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ray-white-well-known.yml
@@ -90,12 +96,12 @@ common:
   type: Security
   url: https://www.raywhite.com/.well-known/security.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/packages/ray-white-packages.yml
+  href: https://artifacts.apis.io/ray-white/packages/ray-white-packages.yml
   title: ''
   type: Packages
   url: packages/ray-white-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/llms/ray-white-llms.txt
+  href: https://artifacts.apis.io/ray-white/llms/ray-white-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ray-white-llms.txt
@@ -127,18 +133,18 @@ overview: 'Ray White is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Ray White''s developer surface includes engineering blog, support, and 16 more developer resources.'
-random_paper: 20
+random_paper: 10
 score:
   band: emerging
   composite: 11.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -153,21 +159,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 11.6
+  previous_composite: 11.7
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 18.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ray-white/refs/heads/main/screenshots/ray-white-2026-10-11T192828.png
+screenshot: https://apis.io/screenshots/ray-white/ray-white-2026-10-11T192828.png
 security:
 - kind: domain-security
   name: Ray White Domain Security

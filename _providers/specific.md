@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,13 +40,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Specific control plane and CLI that builds, deploys and runs agent-defined infrastructure from a single specific.hcl file, spanning local development and production on Specific Cloud.
   name: Specific Platform
   slug: specific-platform
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -82,62 +89,62 @@ common:
   type: ChangeLog
   url: https://specific.dev/changelog
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/packages/specific-packages.yml
+  href: https://artifacts.apis.io/specific/packages/specific-packages.yml
   title: ''
   type: Packages
   url: packages/specific-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/packages/specific-packages.yml
+  href: https://artifacts.apis.io/specific/packages/specific-packages.yml
   title: ''
   type: SDKs
   url: packages/specific-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/cli/specific-cli.yml
+  href: https://artifacts.apis.io/specific/cli/specific-cli.yml
   title: ''
   type: CLI
   url: cli/specific-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/mcp/specific-mcp.yml
+  href: https://artifacts.apis.io/specific/mcp/specific-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/specific-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/llms/specific-llms.txt
+  href: https://artifacts.apis.io/specific/llms/specific-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/specific-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/changelog/specific-changelog.yml
+  href: https://artifacts.apis.io/specific/changelog/specific-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/specific-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/authentication/specific-authentication.yml
+  href: https://artifacts.apis.io/specific/authentication/specific-authentication.yml
   title: ''
   type: Authentication
   url: authentication/specific-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/conventions/specific-conventions.yml
+  href: https://artifacts.apis.io/specific/conventions/specific-conventions.yml
   title: ''
   type: Conventions
   url: conventions/specific-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/lifecycle/specific-lifecycle.yml
+  href: https://artifacts.apis.io/specific/lifecycle/specific-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/specific-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/well-known/specific-well-known.yml
+  href: https://artifacts.apis.io/specific/well-known/specific-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/specific-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/security/specific-domain-security.yml
+  href: https://artifacts.apis.io/specific/security/specific-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/specific-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/specific/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -157,18 +164,18 @@ overview: 'Specific is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Specific''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, changelog, CLI, and 15 more developer resources.'
-random_paper: 2
+random_paper: 22
 score:
   band: emerging
   composite: 24.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
@@ -176,7 +183,7 @@ score:
     developer_ergonomics: 66.7
     discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 24.4
+  previous_composite: 24.5
   provenance:
     mcp: first-party
     skills: first-party
@@ -186,14 +193,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/specific/refs/heads/main/screenshots/specific-2026-09-02T160346.png
+screenshot: https://apis.io/screenshots/specific/specific-2026-09-02T160346.png
 security:
 - kind: authentication
   name: Specific Authentication
@@ -203,6 +210,10 @@ security:
   name: Specific Domain Security
   slug: specific-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: specific
+  slug: specific-specific
 slug: specific
 tags:
 - Company

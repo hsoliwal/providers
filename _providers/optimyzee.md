@@ -25,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.9
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.optimyzee.com
@@ -236,14 +239,14 @@ apis:
   description: Operations/User
   name: Optimyzee Operations/User API
   slug: optimyzee-operations-user-api
-artifact_total: 45
+artifact_total: 49
 collections:
 - collection_type: open
   name: Optimyzee Application API
   slug: open-optimyzee
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/rate-limits/optimyzee-rate-limits.yml
+  href: https://artifacts.apis.io/optimyzee/rate-limits/optimyzee-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/optimyzee-rate-limits.yml
@@ -256,12 +259,12 @@ common:
   type: BlogRSS
   url: https://optimyzee.com/blog/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/capabilities/optimyzee-capability-edges.yml
+  href: https://artifacts.apis.io/optimyzee/capabilities/optimyzee-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/optimyzee-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/security/optimyzee-domain-security.yml
+  href: https://artifacts.apis.io/optimyzee/security/optimyzee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/optimyzee-domain-security.yml
@@ -302,57 +305,57 @@ common:
   type: GitHubOrganization
   url: https://github.com/optimyzee
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/openapi/_original/optimyzee-openapi.yml
+  href: https://artifacts.apis.io/optimyzee/openapi/_original/optimyzee-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/optimyzee-openapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/authentication/optimyzee-authentication.yml
+  href: https://artifacts.apis.io/optimyzee/authentication/optimyzee-authentication.yml
   title: ''
   type: Authentication
   url: authentication/optimyzee-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/conventions/optimyzee-conventions.yml
+  href: https://artifacts.apis.io/optimyzee/conventions/optimyzee-conventions.yml
   title: ''
   type: Conventions
   url: conventions/optimyzee-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/errors/optimyzee-problem-types.yml
+  href: https://artifacts.apis.io/optimyzee/errors/optimyzee-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/optimyzee-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/data-model/optimyzee-data-model.yml
+  href: https://artifacts.apis.io/optimyzee/data-model/optimyzee-data-model.yml
   title: ''
   type: DataModel
   url: data-model/optimyzee-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/lifecycle/optimyzee-lifecycle.yml
+  href: https://artifacts.apis.io/optimyzee/lifecycle/optimyzee-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/optimyzee-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/conformance/optimyzee-conformance.yml
+  href: https://artifacts.apis.io/optimyzee/conformance/optimyzee-conformance.yml
   title: ''
   type: Conformance
   url: conformance/optimyzee-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/overlays/optimyzee-openapi-overlay.yaml
+  href: https://artifacts.apis.io/optimyzee/overlays/optimyzee-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/optimyzee-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/llms/optimyzee-llms.txt
+  href: https://artifacts.apis.io/optimyzee/llms/optimyzee-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/optimyzee-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/plans/optimyzee-plans-pricing.yml
+  href: https://artifacts.apis.io/optimyzee/plans/optimyzee-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/optimyzee-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/optimyzee/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -368,35 +371,51 @@ network: true
 overview: 'Optimyzee publishes 40 API contracts indexed on the [APIs.io](https://apis.io/) network, including App/Analyze/Google Ads/Audit API, App/Analyze/Google Ads/Health API, App/Analyze/Google Ads/Optimization API, and 37 more. Tagged areas include Company, Advertising, Google Ads, PPC, and Marketing.
 
 
+  The Optimyzee catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Optimyzee''s developer surface includes engineering blog, pricing, signup flow, support, authentication, and 20 more developer resources.'
 plans:
 - name: Optimyzee Plans Pricing
   plan_count: 3
   slug: optimyzee-plans-pricing
-random_paper: 8
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Optimyzee Rate Limits
   slug: optimyzee-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Optimyzee API Rules
+  rule_count: 47
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 3
+    warn: 9
+  slug: optimyzee-rules
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 40.4
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 26
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 69.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 39.4
     developer_ergonomics: 20.8
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 38.7
+  previous_composite: 40.4
   provenance:
     conformance: derived
     contracts:
@@ -412,13 +431,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/optimyzee/refs/heads/main/screenshots/optimyzee-2026-08-07T190810.png
+screenshot: https://apis.io/screenshots/optimyzee/optimyzee-2026-08-07T190810.png
 security:
 - kind: authentication
   name: Optimyzee Authentication
@@ -428,6 +447,14 @@ security:
   name: Optimyzee Domain Security
   slug: optimyzee-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: optimyzee-audit-and-optimize-account
+  slug: optimyzee-audit-and-optimize-account
+- name: optimyzee-build-ai-search-campaign
+  slug: optimyzee-build-ai-search-campaign
+- name: optimyzee-link-google-ads-account
+  slug: optimyzee-link-google-ads-account
 slug: optimyzee
 tags:
 - Company

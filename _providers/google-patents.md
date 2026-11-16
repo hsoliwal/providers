@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: Programmatic access to Google Patents data via Google APIs.
+- baseURL: https://risc.googleapis.com
+  baseurl_source: spec
+  description: Programmatic access to Google Patents data via Google APIs.
   name: Google Patents API
-  slug: google-patents-api-2
+  slug: google-patents-api
 - baseURL: https://risc.googleapis.com
   baseurl_source: declared
   description: The Repos API from Google Patents — 1 operation(s) for repos.
@@ -42,42 +57,42 @@ apis:
 artifact_total: 8
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/rules/google-patents-rules.yml
+  href: https://artifacts.apis.io/google-patents/rules/google-patents-rules.yml
   title: ''
   type: Spectral
   url: rules/google-patents-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/json-ld/google-patents-context.jsonld
+  href: https://artifacts.apis.io/google-patents/json-ld/google-patents-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/google-patents-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/vocabulary/google-patents-vocabulary.yml
+  href: https://artifacts.apis.io/google-patents/vocabulary/google-patents-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/google-patents-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/data-model/google-patents-data-model.yml
+  href: https://artifacts.apis.io/google-patents/data-model/google-patents-data-model.yml
   title: ''
   type: DataModel
   url: data-model/google-patents-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/conformance/google-patents-conformance.yml
+  href: https://artifacts.apis.io/google-patents/conformance/google-patents-conformance.yml
   title: ''
   type: Conformance
   url: conformance/google-patents-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/well-known/google-patents-google-security.txt
+  href: https://artifacts.apis.io/google-patents/well-known/google-patents-google-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/google-patents-google-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/well-known/google-patents-well-known.yml
+  href: https://artifacts.apis.io/google-patents/well-known/google-patents-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/google-patents-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/hosts/google-patents-hosts.yml
+  href: https://artifacts.apis.io/google-patents/hosts/google-patents-hosts.yml
   title: ''
   type: Hosts
   url: hosts/google-patents-hosts.yml
@@ -110,12 +125,12 @@ common:
   type: DeveloperPortal
   url: https://developers.googleblog.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/security/google-patents-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google-patents/security/google-patents-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-patents-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-patents/refs/heads/main/security/google-patents-domain-security.yml
+  href: https://artifacts.apis.io/google-patents/security/google-patents-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-patents-domain-security.yml
@@ -149,14 +164,14 @@ modified: '2026-10-12'
 name: Google Patents
 nav: Providers
 network: true
-overview: 'Google Patents is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Repos API, V1Beta API, and 1 more. Tagged areas include Company, Patents, Search, Intellectual-Property, and Google.
+overview: 'Google Patents is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Repos API, V1Beta API, and 1 more. Tagged areas include Company, Patents, Search, Intellectual Property, and Google.
 
 
   The Google Patents catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Google Patents'' developer surface includes sandbox, documentation, and 16 more developer resources.'
-random_paper: 19
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -171,22 +186,24 @@ rules:
     warn: 1
   slug: google-patents-rules
 score:
-  band: thin
-  composite: 28.3
+  band: emerging
+  composite: 25.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 49.2
     catalog_earned_first_party: 0.0
     catalog_gap: 65.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.7
   facets:
-    access_clarity: 34.2
+    access_clarity: 27.6
     contract_governance: 22.0
     contract_quality: 19.0
-    developer_ergonomics: 26.2
+    developer_ergonomics: 22.6
     discoverability: 58.9
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 28.3
   provenance:
     conformance: derived
     contracts:
@@ -201,11 +218,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/google-patents/google-patents-2026-11-03T132937.png
 security:
 - kind: domain-security
   name: Google Patents Domain Security
@@ -220,7 +239,7 @@ tags:
 - Company
 - Patents
 - Search
-- Intellectual-Property
+- Intellectual Property
 - Google
 website: https://patents.google.com/
 ---

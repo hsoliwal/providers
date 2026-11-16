@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Paid (free trial) · Open access
-  onboarding: open
+  confidence: medium
+  label: Paid
+  onboarding: unknown
   pricing: paid
-  public: true
+  public: false
   source:
   - plans
   - authentication
-  trial: true
-  try_now: true
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 27.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -66,9 +70,6 @@ apis:
   slug: quenza-tasks-api
 artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Quenza ArchiveClient API
   slug: open-quenza-archiveclient-api
@@ -131,22 +132,22 @@ common:
   type: Pricing
   url: https://quenza.com/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/capabilities/quenza-capability-edges.yml
+  href: https://artifacts.apis.io/quenza/capabilities/quenza-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/quenza-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/agentic-access/quenza-agentic-access.yml
+  href: https://artifacts.apis.io/quenza/agentic-access/quenza-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/quenza-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/security/quenza-domain-security.yml
+  href: https://artifacts.apis.io/quenza/security/quenza-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quenza-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/authentication/quenza-authentication.yml
+  href: https://artifacts.apis.io/quenza/authentication/quenza-authentication.yml
   title: ''
   type: Authentication
   url: authentication/quenza-authentication.yml
@@ -167,17 +168,17 @@ common:
   type: SupportKnowledgeBase
   url: https://help.quenza.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/plans/quenza-plans-pricing.yml
+  href: https://artifacts.apis.io/quenza/plans/quenza-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quenza-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/rate-limits/quenza-rate-limits.yml
+  href: https://artifacts.apis.io/quenza/rate-limits/quenza-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/quenza-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/finops/quenza-finops.yml
+  href: https://artifacts.apis.io/quenza/finops/quenza-finops.yml
   title: ''
   type: FinOps
   url: finops/quenza-finops.yml
@@ -200,6 +201,9 @@ network: true
 overview: 'Quenza publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clients API, Groups API, Members API, and 1 more. Tagged areas include Coaching, Therapy, Client Engagement, Digital Health, and Mental Health.
 
 
+  The Quenza catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Quenza''s developer surface includes engineering blog, pricing, authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Quenza Plans Pricing
@@ -208,34 +212,47 @@ plans:
 - name: Quenza Price Estimates
   plan_count: 0
   slug: quenza-price-estimates
-random_paper: 0
+random_paper: 12
 rate_limits:
 - limit_count: 4
   name: Quenza Rate Limits
   slug: quenza-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Quenza API Rules
+  rule_count: 48
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 1
+  slug: quenza-rules
 score:
   band: thin
-  composite: 33.6
+  composite: 33.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 52.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.7
+  delta: -1.1
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
-    contract_quality: 49.7
+    access_clarity: 36.8
+    contract_governance: 13.6
+    contract_quality: 46.7
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 37.3
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 4
@@ -245,13 +262,13 @@ score:
     regime: Health
     regime_id: health
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/quenza/refs/heads/main/screenshots/quenza-2026-09-02T152638.png
+screenshot: https://apis.io/screenshots/quenza/quenza-2026-09-02T152638.png
 security:
 - kind: authentication
   name: Quenza Authentication

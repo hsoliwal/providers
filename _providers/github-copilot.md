@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,8 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -27,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.0
-  scored_at: '2026-10-17'
+  score: 49.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -115,14 +123,11 @@ arazzos:
 - description: Pull organization-wide Copilot metrics, then drill into a specific team's aggregated metrics.
   name: GitHub Copilot Team Metrics Report
   slug: github-copilot-team-metrics-report-workflow
-artifact_total: 192
+artifact_total: 193
 collections:
 - collection_type: postman
   name: GitHub Copilot REST API
   slug: postman-github-copilot
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: GitHub Copilot REST Copilot Billing API
   slug: open-github-copilot-copilot-billing-api
@@ -145,18 +150,66 @@ collections:
   name: GitHub Copilot REST API
   slug: open-github-copilot
 common:
+- group: company
+  title: ''
+  type: Website
+  url: https://github.com/features/copilot
+- group: operate
+  href: https://artifacts.apis.io/github-copilot/rate-limits/github-copilot-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/github-copilot-rate-limits.yml
+- group: design
+  href: https://artifacts.apis.io/github-copilot/rules/github-copilot-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-copilot-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/github-copilot/rules/github-copilot-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-copilot-rules.yml
+- group: design
+  href: https://artifacts.apis.io/github-copilot/rules/github-copilot-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-copilot-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/github-copilot/vocabulary/github-copilot-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/github-copilot-vocabulary.yml
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://docs.github.com/en/rest/overview/breaking-changes
+- group: other
+  href: https://artifacts.apis.io/github-copilot/hosts/github-copilot-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/github-copilot-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/github-copilot/integrations/github-copilot-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/github-copilot-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/github-copilot/vendors/github-copilot-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/github-copilot-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/finops/github-copilot-finops.yml
+  href: https://artifacts.apis.io/github-copilot/finops/github-copilot-finops.yml
   title: ''
   type: FinOps
   url: finops/github-copilot-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/plans/github-copilot-plans-pricing.yml
+  href: https://artifacts.apis.io/github-copilot/plans/github-copilot-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/github-copilot-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/capabilities/github-copilot-capability-edges.yml
+  href: https://artifacts.apis.io/github-copilot/capabilities/github-copilot-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/github-copilot-capability-edges.yml
@@ -185,97 +238,87 @@ common:
   type: License
   url: https://github.com/github/github-mcp-server/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/agentic-access/github-copilot-agentic-access.yml
+  href: https://artifacts.apis.io/github-copilot/agentic-access/github-copilot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/github-copilot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/authentication/github-copilot-authentication.yml
+  href: https://artifacts.apis.io/github-copilot/authentication/github-copilot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/github-copilot-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/scopes/github-copilot-scopes.yml
+  href: https://artifacts.apis.io/github-copilot/scopes/github-copilot-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/github-copilot-scopes.yml
-- group: build
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/packages/github-copilot-packages.yml
-  title: ''
-  type: Packages
-  url: packages/github-copilot-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/well-known/github-copilot-well-known.yml
+  href: https://artifacts.apis.io/github-copilot/well-known/github-copilot-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/github-copilot-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/well-known/github-copilot-security.txt
+  href: https://artifacts.apis.io/github-copilot/well-known/github-copilot-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/github-copilot-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/mcp/github-copilot-mcp.yml
+  href: https://artifacts.apis.io/github-copilot/mcp/github-copilot-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/github-copilot-mcp.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/llms/github-copilot-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/github-copilot-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/overlays/github-copilot-openapi-overlay.yaml
+  href: https://artifacts.apis.io/github-copilot/overlays/github-copilot-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/github-copilot-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/conformance/github-copilot-conformance.yml
+  href: https://artifacts.apis.io/github-copilot/conformance/github-copilot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/github-copilot-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/errors/github-copilot-problem-types.yml
+  href: https://artifacts.apis.io/github-copilot/errors/github-copilot-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/github-copilot-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/lifecycle/github-copilot-lifecycle.yml
+  href: https://artifacts.apis.io/github-copilot/lifecycle/github-copilot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/github-copilot-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/conventions/github-copilot-conventions.yml
+  href: https://artifacts.apis.io/github-copilot/conventions/github-copilot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/github-copilot-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/changelog/github-copilot-changelog.yml
+  href: https://artifacts.apis.io/github-copilot/changelog/github-copilot-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/github-copilot-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/cli/github-copilot-cli.yml
+  href: https://artifacts.apis.io/github-copilot/cli/github-copilot-cli.yml
   title: ''
   type: CLI
   url: cli/github-copilot-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/data-model/github-copilot-data-model.yml
+  href: https://artifacts.apis.io/github-copilot/data-model/github-copilot-data-model.yml
   title: ''
   type: DataModel
   url: data-model/github-copilot-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/security/github-copilot-domain-security.yml
+  href: https://artifacts.apis.io/github-copilot/security/github-copilot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/github-copilot-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/security/github-copilot-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/github-copilot/security/github-copilot-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/github-copilot-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/security/github-copilot-trust-center.yml
+  href: https://artifacts.apis.io/github-copilot/security/github-copilot-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/github-copilot-trust-center.yml
@@ -284,37 +327,37 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/github-copilot/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-audit-seats-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-audit-seats-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-audit-seats-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-deprovision-users-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-deprovision-users-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-deprovision-users-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-enterprise-metrics-report-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-enterprise-metrics-report-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-enterprise-metrics-report-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-org-metrics-report-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-org-metrics-report-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-org-metrics-report-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-provision-teams-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-provision-teams-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-provision-teams-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-provision-users-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-provision-users-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-provision-users-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/arazzo/github-copilot-team-metrics-report-workflow.yml
+  href: https://artifacts.apis.io/github-copilot/arazzo/github-copilot-team-metrics-report-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-copilot-team-metrics-report-workflow.yml
@@ -557,10 +600,10 @@ features:
   name: Seat Management
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Github Copilot Finops
-  primary_unit: ''
-  service_category: Developer Tools / AI
+  primary_unit: user
+  service_category: ''
   slug: github-copilot-finops
   template: false
 image: https://github.githubassets.com/images/modules/site/copilot/copilot-logo.png
@@ -849,15 +892,18 @@ network: true
 overview: 'GitHub Copilot publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Content Exclusion API, Metrics API, and 9 more. Tagged areas include Agents, Artificial Intelligence, Code Generation, Code Review, and Coding Agents.
 
 
-  The GitHub Copilot catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The GitHub Copilot catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  GitHub Copilot''s developer surface includes authentication, changelog, CLI, developer portal, getting-started guide, engineering blog, signup flow, and 47 more developer resources.'
+  GitHub Copilot''s developer surface includes authentication, changelog, CLI, developer portal, getting-started guide, engineering blog, signup flow, and 55 more developer resources.'
 plans:
 - name: Github Copilot Plans Pricing
   plan_count: 4
   slug: github-copilot-plans-pricing
-random_paper: 20
+- name: Github Copilot Price Estimates
+  plan_count: 0
+  slug: github-copilot-price-estimates
+random_paper: 10
 rate_limits:
 - limit_count: 11
   name: Github Copilot Rate Limits
@@ -874,6 +920,18 @@ rules:
     info: 1
     warn: 5
   slug: github-copilot-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: GitHub Copilot API Rules
+  rule_count: 69
+  severity_counts:
+    error: 63
+    hint: 0
+    info: 1
+    warn: 5
+  slug: github-copilot-rules
 - authorship: generated
   effective_rule_count: 61
   extends:
@@ -893,26 +951,26 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 68.7
+  composite: 72.5
   coverage:
-    artifact_dirs: 33
-    catalog_earned: 60.5
+    artifact_dirs: 38
+    catalog_earned: 68.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 54.5
+    catalog_gap: 47.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.9
+  delta: 2.4
   facets:
-    access_clarity: 84.2
-    contract_governance: 18.2
+    access_clarity: 92.1
+    contract_governance: 31.8
     contract_quality: 67.0
     developer_ergonomics: 65.5
     discoverability: 58.3
-    operational_transparency: 52.6
+    operational_transparency: 60.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 65.8
+  previous_composite: 70.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -928,13 +986,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/github-copilot/refs/heads/main/screenshots/github-copilot-2026-06-20T181939.png
+screenshot: https://apis.io/screenshots/github-copilot/github-copilot-2026-06-20T181939.png
 security:
 - kind: authentication
   name: Github Copilot Authentication

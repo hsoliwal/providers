@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-10-17'
+  score: 31.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -77,9 +84,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Datalastic Maritime Historical API
   slug: open-datalastic-historical-api
 - collection_type: open
@@ -101,18 +105,23 @@ collections:
   name: Datalastic Maritime API
   slug: open-datalastic
 common:
+- group: other
+  href: https://artifacts.apis.io/datalastic/capabilities/datalastic-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/datalastic-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/agentic-access/datalastic-agentic-access.yml
+  href: https://artifacts.apis.io/datalastic/agentic-access/datalastic-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/datalastic-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/security/datalastic-domain-security.yml
+  href: https://artifacts.apis.io/datalastic/security/datalastic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/datalastic-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/authentication/datalastic-authentication.yml
+  href: https://artifacts.apis.io/datalastic/authentication/datalastic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/datalastic-authentication.yml
@@ -137,17 +146,17 @@ common:
   type: Pricing
   url: https://datalastic.com/pricing/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/plans/datalastic-plans-pricing.yml
+  href: https://artifacts.apis.io/datalastic/plans/datalastic-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/datalastic-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/rate-limits/datalastic-rate-limits.yml
+  href: https://artifacts.apis.io/datalastic/rate-limits/datalastic-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/datalastic-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/finops/datalastic-finops.yml
+  href: https://artifacts.apis.io/datalastic/finops/datalastic-finops.yml
   title: ''
   type: FinOps
   url: finops/datalastic-finops.yml
@@ -178,35 +187,51 @@ network: true
 overview: 'Datalastic publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Historical API, Live Tracking API, Ports API, and 3 more. Tagged areas include Vessel Tracking, Maritime, AIS, Ships, and Ports.
 
 
-  Datalastic''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, and 7 more developer resources.'
+  The Datalastic catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Datalastic''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, and 8 more developer resources.'
 plans:
 - name: Datalastic Plans Pricing
   plan_count: 6
   slug: datalastic-plans-pricing
-random_paper: 16
+random_paper: 18
 rate_limits:
 - limit_count: 7
   name: Datalastic Rate Limits
   slug: datalastic-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Datalastic API Rules
+  rule_count: 69
+  severity_counts:
+    error: 63
+    hint: 0
+    info: 2
+    warn: 4
+  slug: datalastic-rules
 score:
-  band: emerging
-  composite: 24.8
+  band: thin
+  composite: 26.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.3
     developer_ergonomics: 21.4
     discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 33.1
+  previous_composite: 26.5
   provenance:
     agentic_access: derived
     contracts:
@@ -221,13 +246,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/datalastic/refs/heads/main/screenshots/datalastic-2026-07-25T211330.png
+screenshot: https://apis.io/screenshots/datalastic/datalastic-2026-07-25T211330.png
 security:
 - kind: authentication
   name: Datalastic Authentication

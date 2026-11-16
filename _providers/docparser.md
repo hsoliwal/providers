@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid (free trial) · Open access
   onboarding: open
   pricing: paid
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-10-17'
+  score: 27.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -64,7 +71,7 @@ apis:
   description: Retrieve parsed data results
   name: Docparser Results API
   slug: docparser-results-api
-artifact_total: 29
+artifact_total: 28
 collections:
 - collection_type: postman
   name: Docparser REST Documents API
@@ -78,9 +85,6 @@ collections:
 - collection_type: postman
   name: Docparser REST Documents Results API
   slug: postman-docparser-results-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Docparser REST Documents API
   slug: open-docparser-documents-api
@@ -99,22 +103,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/docparser/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/agentic-access/docparser-agentic-access.yml
+  href: https://artifacts.apis.io/docparser/agentic-access/docparser-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/docparser-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/security/docparser-trust-center.yml
+  href: https://artifacts.apis.io/docparser/security/docparser-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/docparser-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/security/docparser-domain-security.yml
+  href: https://artifacts.apis.io/docparser/security/docparser-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/docparser-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/authentication/docparser-authentication.yml
+  href: https://artifacts.apis.io/docparser/authentication/docparser-authentication.yml
   title: ''
   type: Authentication
   url: authentication/docparser-authentication.yml
@@ -159,17 +163,17 @@ common:
   type: SDKs
   url: https://github.com/Docparser
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/plans/docparser-plans-pricing.yml
+  href: https://artifacts.apis.io/docparser/plans/docparser-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/docparser-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/rate-limits/docparser-rate-limits.yml
+  href: https://artifacts.apis.io/docparser/rate-limits/docparser-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/docparser-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/finops/docparser-finops.yml
+  href: https://artifacts.apis.io/docparser/finops/docparser-finops.yml
   title: ''
   type: FinOps
   url: finops/docparser-finops.yml
@@ -228,7 +232,7 @@ plans:
 - name: Docparser Plans Pricing
   plan_count: 4
   slug: docparser-plans-pricing
-random_paper: 17
+random_paper: 3
 rate_limits:
 - limit_count: 8
   name: Docparser Rate Limits
@@ -249,13 +253,13 @@ score:
   band: thin
   composite: 38.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 57.3
     catalog_earned_first_party: 0.0
     catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -263,7 +267,7 @@ score:
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 36.8
-  previous_composite: 46.9
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     contracts:
@@ -277,13 +281,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/docparser/refs/heads/main/screenshots/docparser-2026-06-20T180109.png
+screenshot: https://apis.io/screenshots/docparser/docparser-2026-06-20T180109.png
 security:
 - kind: authentication
   name: Docparser Authentication

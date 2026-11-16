@@ -1,6 +1,6 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: OkHttp is an efficient HTTP and HTTP/2 client for Android and Java applications with connection pooling and transparent GZIP.
@@ -42,17 +45,17 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/okhttp/refs/heads/main/plans/okhttp-plans-pricing.yml
+  href: https://artifacts.apis.io/okhttp/plans/okhttp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/okhttp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/okhttp/refs/heads/main/rate-limits/okhttp-rate-limits.yml
+  href: https://artifacts.apis.io/okhttp/rate-limits/okhttp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/okhttp-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/okhttp/refs/heads/main/finops/okhttp-finops.yml
+  href: https://artifacts.apis.io/okhttp/finops/okhttp-finops.yml
   title: ''
   type: FinOps
   url: finops/okhttp-finops.yml
@@ -74,7 +77,7 @@ finops:
 - has_sources: false
   method: generated
   name: Okhttp Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: okhttp-finops
   template: true
@@ -92,7 +95,7 @@ plans:
 - name: Okhttp Plans Pricing
   plan_count: 3
   slug: okhttp-plans-pricing
-random_paper: 6
+random_paper: 18
 rate_limits:
 - limit_count: 5
   name: Okhttp Rate Limits
@@ -107,7 +110,7 @@ score:
     catalog_gap: 87.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -115,21 +118,21 @@ score:
     developer_ergonomics: 0.0
     discoverability: 39.3
     operational_transparency: 10.5
-  previous_composite: 6.1
+  previous_composite: 4.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/okhttp/refs/heads/main/screenshots/okhttp-2026-06-20T190647.png
+screenshot: https://apis.io/screenshots/okhttp/okhttp-2026-06-20T190647.png
 slug: okhttp
 tags:
 - Android

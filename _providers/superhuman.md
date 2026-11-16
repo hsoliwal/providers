@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/superhuman/refs/heads/main/plans/superhuman-plans-pricing.yml
+  href: https://artifacts.apis.io/superhuman/plans/superhuman-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/superhuman-plans-pricing.yml
@@ -62,7 +67,7 @@ common:
   type: APIReference
   url: https://coda.io/developers/apis/v1
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/superhuman/refs/heads/main/mcp/superhuman-mcp.yml
+  href: https://artifacts.apis.io/superhuman/mcp/superhuman-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/superhuman-mcp.yml
@@ -71,12 +76,12 @@ common:
   type: StatusPage
   url: https://status.superhuman.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/superhuman/refs/heads/main/lifecycle/superhuman-lifecycle.yml
+  href: https://artifacts.apis.io/superhuman/lifecycle/superhuman-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/superhuman-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/superhuman/refs/heads/main/security/superhuman-trust-center.yml
+  href: https://artifacts.apis.io/superhuman/security/superhuman-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/superhuman-trust-center.yml
@@ -85,7 +90,7 @@ common:
   type: Compliance
   url: https://trust.superhuman.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/superhuman/refs/heads/main/security/superhuman-domain-security.yml
+  href: https://artifacts.apis.io/superhuman/security/superhuman-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/superhuman-domain-security.yml
@@ -137,18 +142,18 @@ plans:
 - name: Superhuman Plans Pricing
   plan_count: 4
   slug: superhuman-plans-pricing
-random_paper: 18
+random_paper: 16
 score:
   band: thin
   composite: 32.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 92.1
     contract_governance: 0.0
@@ -156,7 +161,7 @@ score:
     developer_ergonomics: 33.3
     discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 26.2
+  previous_composite: 32.6
   provenance:
     mcp: first-party
   regulatory:
@@ -165,14 +170,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/superhuman/refs/heads/main/screenshots/superhuman-2026-09-02T161236.png
+screenshot: https://apis.io/screenshots/superhuman/superhuman-2026-09-02T161236.png
 security:
 - kind: domain-security
   name: Superhuman Domain Security

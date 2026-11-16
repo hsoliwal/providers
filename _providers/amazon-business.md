@@ -1,10 +1,25 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
     consent_identity: false
@@ -15,20 +30,32 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: quarter
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-10-17'
+  score: 35.0
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 6
+  human_in_the_loop: 0
+  name: Amazon Business Agentic Access
+  operation_count: 19
+  slug: amazon-business-agentic-access
+  summary_line: 19 operations · 6 acting
 api_count: 6
 apis:
-- description: APIs for Amazon Business platform
+- baseURL: https://na.business-api.amazon.com
+  baseurl_source: spec
+  description: APIs for Amazon Business platform
   name: Amazon Business API
-  slug: amazon-business-api-2
+  slug: amazon-business-api
 - baseURL: https://na.business-api.amazon.com
   baseurl_source: declared
   description: The Ab Invoice API from Amazon Business — 3 operation(s) for ab invoice.
@@ -54,44 +81,49 @@ apis:
   description: The Reports API from Amazon Business — 3 operation(s) for reports.
   name: Amazon Business Reports API
   slug: amazon-business-reports-api
-artifact_total: 19
+artifact_total: 20
 asyncapis:
 - description: ''
   name: Amazon Business Webhooks
   slug: amazon-business-webhooks
 common:
+- group: agent
+  href: https://artifacts.apis.io/amazon-business/agentic-access/amazon-business-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/amazon-business-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/rules/amazon-business-rules.yml
+  href: https://artifacts.apis.io/amazon-business/rules/amazon-business-rules.yml
   title: ''
   type: Spectral
   url: rules/amazon-business-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/json-ld/amazon-business-context.jsonld
+  href: https://artifacts.apis.io/amazon-business/json-ld/amazon-business-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/amazon-business-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/vocabulary/amazon-business-vocabulary.yml
+  href: https://artifacts.apis.io/amazon-business/vocabulary/amazon-business-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-business-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/asyncapi/amazon-business-webhooks.yml
+  href: https://artifacts.apis.io/amazon-business/asyncapi/amazon-business-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/amazon-business-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/data-model/amazon-business-data-model.yml
+  href: https://artifacts.apis.io/amazon-business/data-model/amazon-business-data-model.yml
   title: ''
   type: DataModel
   url: data-model/amazon-business-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/changelog/amazon-business-changelog.yml
+  href: https://artifacts.apis.io/amazon-business/changelog/amazon-business-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/amazon-business-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/sandbox/amazon-business-sandbox.yml
+  href: https://artifacts.apis.io/amazon-business/sandbox/amazon-business-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/amazon-business-sandbox.yml
@@ -100,47 +132,47 @@ common:
   type: Security
   url: https://hackerone.com/amazonvrp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/authentication/amazon-business-authentication.yml
+  href: https://artifacts.apis.io/amazon-business/authentication/amazon-business-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-business-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/conformance/amazon-business-conformance.yml
+  href: https://artifacts.apis.io/amazon-business/conformance/amazon-business-conformance.yml
   title: ''
   type: Conformance
   url: conformance/amazon-business-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/llms/amazon-business-llms.txt
+  href: https://artifacts.apis.io/amazon-business/llms/amazon-business-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/amazon-business-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/mcp/amazon-business-mcp.yml
+  href: https://artifacts.apis.io/amazon-business/mcp/amazon-business-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/amazon-business-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/well-known/amazon-business-aws-security.txt
+  href: https://artifacts.apis.io/amazon-business/well-known/amazon-business-aws-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/amazon-business-aws-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/well-known/amazon-business-amazon-security.txt
+  href: https://artifacts.apis.io/amazon-business/well-known/amazon-business-amazon-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/amazon-business-amazon-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/well-known/amazon-business-well-known.yml
+  href: https://artifacts.apis.io/amazon-business/well-known/amazon-business-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/amazon-business-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/hosts/amazon-business-hosts.yml
+  href: https://artifacts.apis.io/amazon-business/hosts/amazon-business-hosts.yml
   title: ''
   type: Hosts
   url: hosts/amazon-business-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/vendors/amazon-business-vendors.yml
+  href: https://artifacts.apis.io/amazon-business/vendors/amazon-business-vendors.yml
   title: ''
   type: Vendors
   url: vendors/amazon-business-vendors.yml
@@ -165,12 +197,12 @@ common:
   type: ChangeLog
   url: https://business.amazon.com/en/release-notes
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/security/amazon-business-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-business/security/amazon-business-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-business-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-business/refs/heads/main/security/amazon-business-domain-security.yml
+  href: https://artifacts.apis.io/amazon-business/security/amazon-business-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-business-domain-security.yml
@@ -243,45 +275,48 @@ modified: '2026-10-13'
 name: Amazon Business
 nav: Providers
 network: true
-overview: 'Amazon Business is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Ab Invoice API, Cart API, Ordering API, and 3 more. Tagged areas include Company, B2B, Procurement, Marketplace, and BulkPurchasing.
+overview: 'Amazon Business is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Ab Invoice API, Cart API, and 4 more. Tagged areas include Company, B2B, Procurement, Marketplace, and BulkPurchasing.
 
 
   The Amazon Business catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Amazon Business'' developer surface includes changelog, sandbox, authentication, documentation, getting-started guide, support, engineering blog, and 22 more developer resources.'
-random_paper: 5
+  Amazon Business'' developer surface includes changelog, sandbox, authentication, documentation, getting-started guide, support, engineering blog, and 23 more developer resources.'
+random_paper: 7
 rules:
 - authorship: generated
-  effective_rule_count: 50
+  effective_rule_count: 83
   extends:
   - spectral:oas
   name: Amazon Business API Rules
-  rule_count: 9
+  rule_count: 42
   severity_counts:
-    error: 7
+    error: 35
     hint: 0
-    info: 1
-    warn: 1
+    info: 3
+    warn: 4
   slug: amazon-business-rules
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 32.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 22
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 22.0
-    contract_quality: 32.3
-    developer_ergonomics: 57.1
+    contract_quality: 32.4
+    developer_ergonomics: 42.9
     discoverability: 71.7
-    operational_transparency: 39.5
+    operational_transparency: 23.7
+  previous_composite: 40.2
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
@@ -294,12 +329,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 24.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/amazon-business/amazon-business-2026-11-03T120757.png
 security:
 - kind: authentication
   name: Amazon Business Authentication

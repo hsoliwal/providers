@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Live authenticated application backend for Examedi's consumer apps (Django REST Framework). Requires authorization; no public developer documentation or OpenAPI definition is published. Discovered via
@@ -45,12 +49,12 @@ common:
   type: BlogRSS
   url: https://blog.examedi.com/rss/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/examedi/refs/heads/main/security/examedi-domain-security.yml
+  href: https://artifacts.apis.io/examedi/security/examedi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/examedi-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/examedi/refs/heads/main/llms/examedi-llms.txt
+  href: https://artifacts.apis.io/examedi/llms/examedi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/examedi-llms.txt
@@ -67,12 +71,12 @@ name: Examedi
 nav: Providers
 network: true
 overview: Examedi is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Health Tech, and Diagnostics.
-random_paper: 7
+random_paper: 13
 score:
   band: minimal
   composite: 6.2
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -98,14 +102,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/examedi/refs/heads/main/screenshots/examedi-2026-07-25T213839.png
+screenshot: https://apis.io/screenshots/examedi/examedi-2026-07-25T213839.png
 security:
 - kind: domain-security
   name: Examedi Domain Security

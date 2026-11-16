@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Enterprise · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -301,7 +305,7 @@ arazzos:
 - description: Find a student in a term, pull their record, then review class enrollment and financial aid awards.
   name: PeopleSoft Student Enrollment and Aid Review
   slug: peoplesoft-student-enrollment-review-workflow
-artifact_total: 208
+artifact_total: 207
 collections:
 - collection_type: postman
   name: PeopleSoft Application Services Framework API
@@ -366,9 +370,6 @@ collections:
 - collection_type: postman
   name: PeopleSoft Update Manager API
   slug: postman-update-manager
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: PeopleSoft Application Services Framework API
   slug: open-application-services-framework
@@ -548,22 +549,22 @@ collections:
   slug: open-update-manager
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/plans/peoplesoft-plans-pricing.yml
+  href: https://artifacts.apis.io/peoplesoft/plans/peoplesoft-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/peoplesoft-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/rate-limits/peoplesoft-rate-limits.yml
+  href: https://artifacts.apis.io/peoplesoft/rate-limits/peoplesoft-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/peoplesoft-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/finops/peoplesoft-finops.yml
+  href: https://artifacts.apis.io/peoplesoft/finops/peoplesoft-finops.yml
   title: ''
   type: FinOps
   url: finops/peoplesoft-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/capabilities/peoplesoft-capability-edges.yml
+  href: https://artifacts.apis.io/peoplesoft/capabilities/peoplesoft-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/peoplesoft-capability-edges.yml
@@ -572,22 +573,22 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/oracle/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/agentic-access/peoplesoft-agentic-access.yml
+  href: https://artifacts.apis.io/peoplesoft/agentic-access/peoplesoft-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/peoplesoft-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/security/peoplesoft-domain-security.yml
+  href: https://artifacts.apis.io/peoplesoft/security/peoplesoft-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peoplesoft-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/authentication/peoplesoft-authentication.yml
+  href: https://artifacts.apis.io/peoplesoft/authentication/peoplesoft-authentication.yml
   title: ''
   type: Authentication
   url: authentication/peoplesoft-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/scopes/peoplesoft-scopes.yml
+  href: https://artifacts.apis.io/peoplesoft/scopes/peoplesoft-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/peoplesoft-scopes.yml
@@ -596,62 +597,62 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/peoplesoft/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-approval-process-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-approval-process-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-approval-process-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-component-upsert-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-component-upsert-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-component-upsert-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-customer-case-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-customer-case-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-customer-case-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-employee-payroll-review-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-employee-payroll-review-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-employee-payroll-review-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-env-provision-notify-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-env-provision-notify-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-env-provision-notify-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-financial-period-review-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-financial-period-review-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-financial-period-review-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-pivot-grid-dashboard-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-pivot-grid-dashboard-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-pivot-grid-dashboard-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-query-export-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-query-export-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-query-export-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-recruiting-apply-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-recruiting-apply-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-recruiting-apply-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-scheduled-process-poll-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-scheduled-process-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-scheduled-process-poll-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-search-reindex-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-search-reindex-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-search-reindex-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/arazzo/peoplesoft-student-enrollment-review-workflow.yml
+  href: https://artifacts.apis.io/peoplesoft/arazzo/peoplesoft-student-enrollment-review-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/peoplesoft-student-enrollment-review-workflow.yml
@@ -918,7 +919,7 @@ plans:
 - name: Peoplesoft Plans Pricing
   plan_count: 1
   slug: peoplesoft-plans-pricing
-random_paper: 11
+random_paper: 9
 rate_limits:
 - limit_count: 1
   name: Peoplesoft Rate Limits
@@ -956,13 +957,13 @@ score:
   band: developing
   composite: 49.8
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 59.5
     catalog_earned_first_party: 0.0
     catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
@@ -970,7 +971,7 @@ score:
     developer_ergonomics: 58.3
     discoverability: 72.3
     operational_transparency: 47.4
-  previous_composite: 51.4
+  previous_composite: 49.8
   provenance:
     agentic_access: derived
     contracts:
@@ -984,13 +985,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/peoplesoft/refs/heads/main/screenshots/peoplesoft-2026-06-20T191552.png
+screenshot: https://apis.io/screenshots/peoplesoft/peoplesoft-2026-06-20T191552.png
 security:
 - kind: authentication
   name: Peoplesoft Authentication

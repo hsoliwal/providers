@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -61,9 +67,6 @@ apis:
 artifact_total: 13
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Cerebrium Cortex Inference API
   slug: open-cerebrium-inference-api
 - collection_type: open
@@ -82,17 +85,17 @@ common:
   type: Blog
   url: https://cerebrium.ai/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/agentic-access/cerebrium-agentic-access.yml
+  href: https://artifacts.apis.io/cerebrium/agentic-access/cerebrium-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cerebrium-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/security/cerebrium-domain-security.yml
+  href: https://artifacts.apis.io/cerebrium/security/cerebrium-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cerebrium-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/authentication/cerebrium-authentication.yml
+  href: https://artifacts.apis.io/cerebrium/authentication/cerebrium-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cerebrium-authentication.yml
@@ -113,17 +116,17 @@ common:
   type: Documentation
   url: https://www.cerebrium.ai/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/plans/cerebrium-plans-pricing.yml
+  href: https://artifacts.apis.io/cerebrium/plans/cerebrium-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cerebrium-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/rate-limits/cerebrium-rate-limits.yml
+  href: https://artifacts.apis.io/cerebrium/rate-limits/cerebrium-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cerebrium-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/finops/cerebrium-finops.yml
+  href: https://artifacts.apis.io/cerebrium/finops/cerebrium-finops.yml
   title: ''
   type: FinOps
   url: finops/cerebrium-finops.yml
@@ -146,35 +149,51 @@ network: true
 overview: 'Cerebrium publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Inference API, OpenAI Compatible API, and 1 more. Tagged areas include Artificial Intelligence, GPU, Serverless, Inference, and ML Infrastructure.
 
 
+  The Cerebrium catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cerebrium''s developer surface includes pricing, engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Cerebrium Plans Pricing
   plan_count: 16
   slug: cerebrium-plans-pricing
-random_paper: 12
+random_paper: 22
 rate_limits:
 - limit_count: 4
   name: Cerebrium Rate Limits
   slug: cerebrium-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Cerebrium API Rules
+  rule_count: 63
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cerebrium-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 36.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 52.0
+    artifact_dirs: 16
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: -1.0
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 37.1
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -188,13 +207,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cerebrium/refs/heads/main/screenshots/cerebrium-2026-10-11T184148.png
+screenshot: https://apis.io/screenshots/cerebrium/cerebrium-2026-10-11T184148.png
 security:
 - kind: authentication
   name: Cerebrium Authentication

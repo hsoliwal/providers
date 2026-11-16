@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: EcoCart's developer API for programmatic integration of climate contributions, shipping protection, and sustainable-checkout features. The API reference is hosted on Stoplight.
@@ -41,7 +45,7 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/security/ecocart-domain-security.yml
+  href: https://artifacts.apis.io/ecocart/security/ecocart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ecocart-domain-security.yml
@@ -94,27 +98,27 @@ common:
   type: StatusPage
   url: https://status.ecocart.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/lifecycle/ecocart-lifecycle.yml
+  href: https://artifacts.apis.io/ecocart/lifecycle/ecocart-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ecocart-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/packages/ecocart-packages.yml
+  href: https://artifacts.apis.io/ecocart/packages/ecocart-packages.yml
   title: ''
   type: Packages
   url: packages/ecocart-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/components/ecocart-components.yml
+  href: https://artifacts.apis.io/ecocart/components/ecocart-components.yml
   title: ''
   type: Components
   url: components/ecocart-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/well-known/ecocart-well-known.yml
+  href: https://artifacts.apis.io/ecocart/well-known/ecocart-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ecocart-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/llms/ecocart-llms.txt
+  href: https://artifacts.apis.io/ecocart/llms/ecocart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ecocart-llms.txt
@@ -130,12 +134,12 @@ overview: 'EcoCart is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   EcoCart''s developer surface includes documentation, API reference, pricing, engineering blog, support, signup flow, and 12 more developer resources.'
-random_paper: 11
+random_paper: 17
 score:
   band: emerging
   composite: 20.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -156,14 +160,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ecocart/refs/heads/main/screenshots/ecocart-2026-07-25T212756.png
+screenshot: https://apis.io/screenshots/ecocart/ecocart-2026-07-25T212756.png
 security:
 - kind: domain-security
   name: Ecocart Domain Security

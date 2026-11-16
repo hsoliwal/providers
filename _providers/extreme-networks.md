@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.1
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 338
   human_in_the_loop: 21
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 628
   slug: extreme-networks-agentic-access
   summary_line: 628 operations · 338 acting · 21 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: On-premises REST API gateway exposed by the ExtremeCloud IQ Controller (the wired and wireless campus controller). Provides programmatic access to controller configuration, sites, RF management, AP an
   name: ExtremeCloud IQ Controller REST API Gateway
@@ -293,9 +296,6 @@ apis:
 artifact_total: 102
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: ExtremeCloud IQ Account API
   slug: open-extreme-networks-account-api
 - collection_type: open
@@ -435,7 +435,7 @@ collections:
   slug: open-extremecloud-iq
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/extreme-networks/refs/heads/main/capabilities/extreme-networks-capability-edges.yml
+  href: https://artifacts.apis.io/extreme-networks/capabilities/extreme-networks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/extreme-networks-capability-edges.yml
@@ -448,17 +448,17 @@ common:
   type: License
   url: https://github.com/extremenetworks/ansible_collections.extreme.exos/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/extreme-networks/refs/heads/main/agentic-access/extreme-networks-agentic-access.yml
+  href: https://artifacts.apis.io/extreme-networks/agentic-access/extreme-networks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/extreme-networks-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extreme-networks/refs/heads/main/security/extreme-networks-domain-security.yml
+  href: https://artifacts.apis.io/extreme-networks/security/extreme-networks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/extreme-networks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extreme-networks/refs/heads/main/authentication/extreme-networks-authentication.yml
+  href: https://artifacts.apis.io/extreme-networks/authentication/extreme-networks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/extreme-networks-authentication.yml
@@ -558,33 +558,49 @@ network: true
 overview: 'Extreme Networks publishes 52 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Administration API, AFC API, and 49 more. Tagged areas include Networking, Wireless, Wired, Switching, and Wi-Fi.
 
 
+  The Extreme Networks catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Extreme Networks'' developer surface includes authentication, API reference, GitHub presence, documentation, support, engineering blog, status page, and 20 more developer resources.'
-random_paper: 6
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 116
+  extends:
+  - spectral:oas
+  name: Extreme Networks API Rules
+  rule_count: 75
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 3
+    warn: 16
+  slug: extreme-networks-rules
 score:
-  band: thin
-  composite: 38.1
+  band: developing
+  composite: 42.6
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 32.0
+    artifact_dirs: 13
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.8
   facets:
     access_clarity: 34.2
-    contract_governance: 0.0
-    contract_quality: 51.8
-    developer_ergonomics: 59.5
+    contract_governance: 13.6
+    contract_quality: 57.3
+    developer_ergonomics: 66.7
     discoverability: 58.0
     operational_transparency: 5.3
-  previous_composite: 38.1
+  previous_composite: 39.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 45
   regulatory:
     applies: true
@@ -592,13 +608,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/extreme-networks/refs/heads/main/screenshots/extreme-networks-2026-06-20T180950.png
+screenshot: https://apis.io/screenshots/extreme-networks/extreme-networks-2026-06-20T180950.png
 security:
 - kind: authentication
   name: Extreme Networks Authentication

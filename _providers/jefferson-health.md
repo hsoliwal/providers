@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,10 +11,12 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-10-17'
+  score: 38.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -42,7 +50,7 @@ agentic_access:
   operation_count: 21
   slug: jefferson-health-agentic-access
   summary_line: 21 operations
-api_count: 2
+api_count: 1
 apis:
 - description: The legacy Thomas Jefferson University Hospital DSTU2 FHIR endpoint listed in Epic's public R4 endpoint registry under the organization "Jefferson Health". It remains available for backward compatibil
   name: Thomas Jefferson University Hospital FHIR DSTU2 API
@@ -53,31 +61,6 @@ apis:
 - description: MyJeffersonHealth is the patient-facing Epic MyChart deployment used by Jefferson Health patients to view test results, message providers, request prescription renewals, schedule appointments, pay bil
   name: MyJeffersonHealth MyChart Patient Portal
   slug: myjeffersonhealth-mychart
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: Risk of harmful or undesirable physiological response to a substance.
-  name: Jefferson Health Allergy Intolerance API
-  slug: jefferson-health-allergy-intolerance-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: HL7 FHIR Bulk Data Access Group-level export.
-  name: Jefferson Health Bulk Data API
-  slug: jefferson-health-bulk-data-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: Detailed information about conditions, problems, or diagnoses.
-  name: Jefferson Health Condition API
-  slug: jefferson-health-condition-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: A reference to a document, often a CCDA or clinical note.
-  name: Jefferson Health Document Reference API
-  slug: jefferson-health-document-reference-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: An interaction between a patient and healthcare provider(s).
-  name: Jefferson Health Encounter API
-  slug: jefferson-health-encounter-api
 - baseURL: https://providerfhirapi.healthpartnersplans.com
   baseurl_source: declared
   description: The technical details of an endpoint that can be used for electronic services.
@@ -85,59 +68,46 @@ apis:
   slug: jefferson-health-endpoint-api
 - baseURL: https://providerfhirapi.healthpartnersplans.com
   baseurl_source: declared
-  description: The details of a healthcare service available at a location.
-  name: Jefferson Health Healthcare Service API
-  slug: jefferson-health-healthcare-service-api
-- baseURL: https://providerfhirapi.healthpartnersplans.com
-  baseurl_source: declared
-  description: Details of a Health Insurance product/plan provided by an organization.
-  name: Jefferson Health Insurance Plan API
-  slug: jefferson-health-insurance-plan-api
-- baseURL: https://providerfhirapi.healthpartnersplans.com
-  baseurl_source: declared
   description: Details and position information for a physical place.
   name: Jefferson Health Location API
   slug: jefferson-health-location-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: An order or request for both supply of the medication and the instructions for administration.
-  name: Jefferson Health Medication Request API
-  slug: jefferson-health-medication-request-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: FHIR conformance discovery.
-  name: Jefferson Health Metadata API
-  slug: jefferson-health-metadata-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: Measurements and simple assertions made about a patient.
-  name: Jefferson Health Observation API
-  slug: jefferson-health-observation-api
 - baseURL: https://providerfhirapi.healthpartnersplans.com
   baseurl_source: declared
   description: A formally or informally recognized grouping of people or organizations.
   name: Jefferson Health Organization API
   slug: jefferson-health-organization-api
-- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/R4
-  baseurl_source: declared
-  description: Demographics and other administrative information about an individual receiving care.
-  name: Jefferson Health Patient API
-  slug: jefferson-health-patient-api
 - baseURL: https://providerfhirapi.healthpartnersplans.com
   baseurl_source: declared
   description: A person who is directly or indirectly involved in the provisioning of healthcare.
   name: Jefferson Health Practitioner API
   slug: jefferson-health-practitioner-api
-- baseURL: https://providerfhirapi.healthpartnersplans.com
+- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/DSTU2
   baseurl_source: declared
-  description: A specific set of roles a practitioner may perform at an organization for a period of time.
+  description: The OrganizationAffiliation FHIR resource type
+  name: Jefferson Health Organization Affiliation API
+  slug: jefferson-health-organizationaffiliation-api
+- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/DSTU2
+  baseurl_source: declared
+  description: Server-level operations
+  name: Jefferson Health System Level Operations API
+  slug: jefferson-health-system-level-operations-api
+- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/DSTU2
+  baseurl_source: declared
+  description: The HealthcareService FHIR resource type
+  name: Jefferson Health Healthcare Service API
+  slug: jefferson-health-healthcare-service-api
+- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/DSTU2
+  baseurl_source: declared
+  description: The InsurancePlan FHIR resource type
+  name: Jefferson Health Insurance Plan API
+  slug: jefferson-health-insurance-plan-api
+- baseURL: https://fhir.jefferson.edu/FHIRProxy/api/FHIR/DSTU2
+  baseurl_source: declared
+  description: The PractitionerRole FHIR resource type
   name: Jefferson Health Practitioner Role API
   slug: jefferson-health-practitioner-role-api
-artifact_total: 62
+artifact_total: 58
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Jefferson Health Plans Provider Directory FHIR Allergy Intolerance API
   slug: open-jefferson-health-allergy-intolerance-api
@@ -194,57 +164,57 @@ collections:
   slug: open-jefferson-health-tjuh-fhir-r4-api
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/rules/jefferson-health-tjuh-fhir-r4-rules.yml
+  href: https://artifacts.apis.io/jefferson-health/rules/jefferson-health-tjuh-fhir-r4-rules.yml
   title: ''
   type: Spectral
   url: rules/jefferson-health-tjuh-fhir-r4-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/rules/jefferson-health-rules.yml
+  href: https://artifacts.apis.io/jefferson-health/rules/jefferson-health-rules.yml
   title: ''
   type: Spectral
   url: rules/jefferson-health-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/rules/jefferson-health-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/jefferson-health/rules/jefferson-health-jsonschema-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/jefferson-health-jsonschema-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/rules/jefferson-health-jhp-provider-directory-fhir-rules.yml
+  href: https://artifacts.apis.io/jefferson-health/rules/jefferson-health-jhp-provider-directory-fhir-rules.yml
   title: ''
   type: Spectral
   url: rules/jefferson-health-jhp-provider-directory-fhir-rules.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/lifecycle/jefferson-health-lifecycle.yml
+  href: https://artifacts.apis.io/jefferson-health/lifecycle/jefferson-health-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/jefferson-health-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/hosts/jefferson-health-hosts.yml
+  href: https://artifacts.apis.io/jefferson-health/hosts/jefferson-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/jefferson-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/capabilities/jefferson-health-capability-edges.yml
+  href: https://artifacts.apis.io/jefferson-health/capabilities/jefferson-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/jefferson-health-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/agentic-access/jefferson-health-agentic-access.yml
+  href: https://artifacts.apis.io/jefferson-health/agentic-access/jefferson-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jefferson-health-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/security/jefferson-health-domain-security.yml
+  href: https://artifacts.apis.io/jefferson-health/security/jefferson-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jefferson-health-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/authentication/jefferson-health-authentication.yml
+  href: https://artifacts.apis.io/jefferson-health/authentication/jefferson-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jefferson-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/scopes/jefferson-health-scopes.yml
+  href: https://artifacts.apis.io/jefferson-health/scopes/jefferson-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/jefferson-health-scopes.yml
@@ -305,102 +275,102 @@ common:
   type: Compliance
   url: https://www.healthit.gov/curesrule/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/json-ld/jefferson-health-context.jsonld
+  href: https://artifacts.apis.io/jefferson-health/json-ld/jefferson-health-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/jefferson-health-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/vocabulary/jefferson-health-vocabulary.yml
+  href: https://artifacts.apis.io/jefferson-health/vocabulary/jefferson-health-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/jefferson-health-vocabulary.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/json-schema/jefferson-health-patient-schema.json
+  href: https://artifacts.apis.io/jefferson-health/json-schema/jefferson-health-patient-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/jefferson-health-patient-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/json-schema/jefferson-health-observation-schema.json
+  href: https://artifacts.apis.io/jefferson-health/json-schema/jefferson-health-observation-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/jefferson-health-observation-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/json-schema/jefferson-health-practitioner-schema.json
+  href: https://artifacts.apis.io/jefferson-health/json-schema/jefferson-health-practitioner-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/jefferson-health-practitioner-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/json-structure/jefferson-health-fhir-encounter-structure.json
+  href: https://artifacts.apis.io/jefferson-health/json-structure/jefferson-health-fhir-encounter-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/jefferson-health-fhir-encounter-structure.json
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/plans/jefferson-health-plans-pricing.yml
+  href: https://artifacts.apis.io/jefferson-health/plans/jefferson-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jefferson-health-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/finops/jefferson-health-finops.yml
+  href: https://artifacts.apis.io/jefferson-health/finops/jefferson-health-finops.yml
   title: ''
   type: FinOps
   url: finops/jefferson-health-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/llms/jefferson-health-llms.txt
+  href: https://artifacts.apis.io/jefferson-health/llms/jefferson-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/jefferson-health-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/well-known/jefferson-health-well-known.yml
+  href: https://artifacts.apis.io/jefferson-health/well-known/jefferson-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/jefferson-health-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/conformance/jefferson-health-conformance.yml
+  href: https://artifacts.apis.io/jefferson-health/conformance/jefferson-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/jefferson-health-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/conformance/jefferson-health-tjuh-fhir-r4-capabilitystatement.json
+  href: https://artifacts.apis.io/jefferson-health/conformance/jefferson-health-tjuh-fhir-r4-capabilitystatement.json
   title: ''
   type: CapabilityStatement
   url: conformance/jefferson-health-tjuh-fhir-r4-capabilitystatement.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/conformance/jefferson-health-jhp-provider-directory-capabilitystatement.json
+  href: https://artifacts.apis.io/jefferson-health/conformance/jefferson-health-jhp-provider-directory-capabilitystatement.json
   title: ''
   type: CapabilityStatement
   url: conformance/jefferson-health-jhp-provider-directory-capabilitystatement.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/errors/jefferson-health-problem-types.yml
+  href: https://artifacts.apis.io/jefferson-health/errors/jefferson-health-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/jefferson-health-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/lifecycle/jefferson-health-lifecycle.yml
+  href: https://artifacts.apis.io/jefferson-health/lifecycle/jefferson-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/jefferson-health-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/conventions/jefferson-health-conventions.yml
+  href: https://artifacts.apis.io/jefferson-health/conventions/jefferson-health-conventions.yml
   title: ''
   type: Conventions
   url: conventions/jefferson-health-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/data-model/jefferson-health-data-model.yml
+  href: https://artifacts.apis.io/jefferson-health/data-model/jefferson-health-data-model.yml
   title: ''
   type: DataModel
   url: data-model/jefferson-health-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/overlays/jefferson-health-tjuh-fhir-r4-overlay.yaml
+  href: https://artifacts.apis.io/jefferson-health/overlays/jefferson-health-tjuh-fhir-r4-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/jefferson-health-tjuh-fhir-r4-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/overlays/jefferson-health-jhp-provider-directory-overlay.yaml
+  href: https://artifacts.apis.io/jefferson-health/overlays/jefferson-health-jhp-provider-directory-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/jefferson-health-jhp-provider-directory-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/jefferson-health/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -463,8 +433,8 @@ examples:
   name: Tjuh Fhir R4 Smart Configuration Example
   slug: tjuh-fhir-r4-smart-configuration-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Jefferson Health Finops
   primary_unit: ''
   service_category: ''
@@ -504,7 +474,7 @@ modified: '2026-08-15'
 name: Jefferson Health
 nav: Providers
 network: true
-overview: 'Jefferson Health publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Allergy Intolerance API, Bulk Data API, Condition API, and 16 more. Tagged areas include Academic Medical Center, CARIN Blue Button, CMS Interoperability, Cures Act, and Da Vinci Plan-Net.
+overview: 'Jefferson Health publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Endpoint API, Location API, Organization API, and 9 more. Tagged areas include Academic Medical Center, CARIN Blue Button, CMS Interoperability, Cures Act, and Da Vinci Plan-Net.
 
 
   The Jefferson Health catalog on APIs.io includes 1 JSON-LD context and 4 Spectral governance rulesets.
@@ -515,7 +485,7 @@ plans:
 - name: Jefferson Health Plans Pricing
   plan_count: 4
   slug: jefferson-health-plans-pricing
-random_paper: 9
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Jefferson Health Rate Limits
@@ -575,19 +545,19 @@ scopes:
   summary_line: 15 scopes · authorizationCode
 score:
   band: strong
-  composite: 60.3
+  composite: 59.5
   coverage:
-    artifact_dirs: 33
+    artifact_dirs: 35
     catalog_earned: 71.8
     catalog_earned_first_party: 12.0
     catalog_gap: 43.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.6
+  delta: 0.3
   facets:
     access_clarity: 73.7
     contract_governance: 35.6
-    contract_quality: 61.7
+    contract_quality: 58.4
     developer_ergonomics: 58.9
     discoverability: 74.1
     operational_transparency: 10.5
@@ -598,15 +568,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 64.9
+  previous_composite: 59.2
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 16
+      marker_coverage: 33.3
+      total: 27
     mcp: derived
     skills: derived
   regulatory:
@@ -615,14 +585,14 @@ score:
     regime: Health
     regime_id: health
     score: 47.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/jefferson-health/refs/heads/main/screenshots/jefferson-health-2026-06-20T183715.png
+screenshot: https://apis.io/screenshots/jefferson-health/jefferson-health-2026-06-20T183715.png
 security:
 - kind: authentication
   name: Jefferson Health Authentication
@@ -632,6 +602,16 @@ security:
   name: Jefferson Health Domain Security
   slug: jefferson-health-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: jefferson-health-bulk-data-export
+  slug: jefferson-health-bulk-data-export
+- name: jefferson-health-capability-discovery
+  slug: jefferson-health-capability-discovery
+- name: jefferson-health-patient-record-retrieval
+  slug: jefferson-health-patient-record-retrieval
+- name: jefferson-health-provider-directory-search
+  slug: jefferson-health-provider-directory-search
 slug: jefferson-health
 tags:
 - Academic Medical Center
@@ -645,11 +625,12 @@ tags:
 - Healthcare
 - Hospital System
 - MyChart
-- Authentication
+- OAuth
 - Patient Access
 - Provider Directory
 - SMART on FHIR
 - US Core
 - USCDI
+- Authentication
 website: https://www.jeffersonhealth.org/
 ---

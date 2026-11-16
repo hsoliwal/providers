@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,13 +38,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Goji Platform API for private-markets investing: create and KYC/KYB investors, open and administer IF ISAs, move funds via investor and manager payment APIs, settle debt and equity investments, ma'
   name: Goji Platform API
   slug: goji-platform-api
-artifact_total: 4
+artifact_total: 5
 asyncapis:
 - description: ''
   name: Goji Webhooks
@@ -52,7 +55,7 @@ common:
   type: BlogRSS
   url: https://goji.investments/insights/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/security/goji-domain-security.yml
+  href: https://artifacts.apis.io/goji/security/goji-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/goji-domain-security.yml
@@ -97,57 +100,57 @@ common:
   type: PrivacyPolicy
   url: https://goji.investments/disclosures
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/authentication/goji-authentication.yml
+  href: https://artifacts.apis.io/goji/authentication/goji-authentication.yml
   title: ''
   type: Authentication
   url: authentication/goji-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/conventions/goji-conventions.yml
+  href: https://artifacts.apis.io/goji/conventions/goji-conventions.yml
   title: ''
   type: Conventions
   url: conventions/goji-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/conventions/goji-conventions.yml
+  href: https://artifacts.apis.io/goji/conventions/goji-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/goji-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/sandbox/goji-sandbox.yml
+  href: https://artifacts.apis.io/goji/sandbox/goji-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/goji-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/asyncapi/goji-webhooks.yml
+  href: https://artifacts.apis.io/goji/asyncapi/goji-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/goji-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/mcp/goji-mcp.yml
+  href: https://artifacts.apis.io/goji/mcp/goji-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/goji-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/conformance/goji-conformance.yml
+  href: https://artifacts.apis.io/goji/conformance/goji-conformance.yml
   title: ''
   type: Conformance
   url: conformance/goji-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/lifecycle/goji-lifecycle.yml
+  href: https://artifacts.apis.io/goji/lifecycle/goji-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/goji-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/data-model/goji-data-model.yml
+  href: https://artifacts.apis.io/goji/data-model/goji-data-model.yml
   title: ''
   type: DataModel
   url: data-model/goji-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/goji/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/llms/goji-llms.txt
+  href: https://artifacts.apis.io/goji/llms/goji-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/goji-llms.txt
@@ -166,12 +169,12 @@ overview: 'Goji is listed with 1 API on the [APIs.io](https://apis.io/) network.
 
 
   Goji''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, authentication, and 16 more developer resources.'
-random_paper: 7
+random_paper: 17
 score:
   band: thin
   composite: 36.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -196,14 +199,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/goji/refs/heads/main/screenshots/goji-2026-07-25T220023.png
+screenshot: https://apis.io/screenshots/goji/goji-2026-07-25T220023.png
 security:
 - kind: authentication
   name: Goji Authentication
@@ -213,6 +216,10 @@ security:
   name: Goji Domain Security
   slug: goji-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Onboard and KYC an investor with Goji
+  slug: goji-onboard-investor
 slug: goji
 tags:
 - Company

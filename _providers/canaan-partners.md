@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -20,7 +20,7 @@ modified: '2026-07-17'
 name: Canaan Partners
 nav: Providers
 network: true
-random_paper: 16
+random_paper: 22
 slug: canaan-partners
 tags:
 - Venture Capital

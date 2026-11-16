@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,32 +37,32 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/security/selective-insurance-group-domain-security.yml
+  href: https://artifacts.apis.io/selective-insurance-group/security/selective-insurance-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/selective-insurance-group-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/llms/selective-insurance-group-llms.txt
+  href: https://artifacts.apis.io/selective-insurance-group/llms/selective-insurance-group-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/selective-insurance-group-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/conformance/selective-insurance-group-conformance.yml
+  href: https://artifacts.apis.io/selective-insurance-group/conformance/selective-insurance-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/selective-insurance-group-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/plans/selective-insurance-group-plans-pricing.yml
+  href: https://artifacts.apis.io/selective-insurance-group/plans/selective-insurance-group-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/selective-insurance-group-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/rate-limits/selective-insurance-group-rate-limits.yml
+  href: https://artifacts.apis.io/selective-insurance-group/rate-limits/selective-insurance-group-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/selective-insurance-group-rate-limits.yml
@@ -145,7 +150,7 @@ press:
 - date: ''
   title: Selective Insurance Group, Inc.
   url: https://www.fitchratings.com/research/insurance/selective-insurance-group-inc-20-05-2025
-random_paper: 5
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Selective Insurance Group Rate Limits
@@ -177,14 +182,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/screenshots/selective-insurance-group-2026-10-11T125654.png
+screenshot: https://apis.io/screenshots/selective-insurance-group/selective-insurance-group-2026-10-11T125654.png
 security:
 - kind: domain-security
   name: Selective Insurance Group Domain Security

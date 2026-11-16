@@ -1,15 +1,20 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
+  - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -22,19 +27,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: derived
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -51,14 +59,14 @@ apis:
   slug: gridspace-conversations-api
 - baseURL: https://api.goguava.ai/v1
   baseurl_source: declared
-  description: Send SMS messages and read inbound messages received on your Guava numbers.
-  name: Gridspace Messages API
-  slug: gridspace-messages-api
+  description: The Check Deprecation API from Gridspace — 1 operation(s) for check deprecation.
+  name: Gridspace Check Deprecation API
+  slug: gridspace-check-deprecation-api
 - baseURL: https://api.goguava.ai/v1
   baseurl_source: declared
-  description: SDK lifecycle utilities.
-  name: Gridspace SDK API
-  slug: gridspace-sdk-api
+  description: The SMS API from Gridspace — 1 operation(s) for sms.
+  name: Gridspace SMS API
+  slug: gridspace-sms-api
 arazzos:
 - description: List recent conversations, then fetch one call's details, transcript, and recording.
   name: Pull a call's full record
@@ -66,7 +74,7 @@ arazzos:
 - description: Send an SMS from a Guava number, then poll the inbox for the recipient's reply.
   name: Send an SMS and poll for the reply
   slug: gridspace-send-and-poll-sms
-artifact_total: 16
+artifact_total: 20
 collections:
 - collection_type: postman
   name: Guava Voice Agent REST Conversations API
@@ -78,9 +86,6 @@ collections:
   name: Guava Voice Agent REST Conversations SDK API
   slug: postman-gridspace-sdk-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Guava Voice Agent REST Conversations API
   slug: open-gridspace-conversations-api
 - collection_type: open
@@ -90,6 +95,11 @@ collections:
   name: Guava Voice Agent REST Conversations SDK API
   slug: open-gridspace-sdk-api
 common:
+- group: other
+  href: https://artifacts.apis.io/gridspace/capabilities/gridspace-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gridspace-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -151,164 +161,191 @@ common:
   type: ChangeLog
   url: https://goguava.ai/docs/release-notes
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/authentication/gridspace-authentication.yml
+  href: https://artifacts.apis.io/gridspace/authentication/gridspace-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gridspace-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/packages/gridspace-packages.yml
+  href: https://artifacts.apis.io/gridspace/packages/gridspace-packages.yml
   title: ''
   type: Packages
   url: packages/gridspace-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/packages/gridspace-packages.yml
+  href: https://artifacts.apis.io/gridspace/packages/gridspace-packages.yml
   title: ''
   type: SDKs
   url: packages/gridspace-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/cli/gridspace-cli.yml
+  href: https://artifacts.apis.io/gridspace/cli/gridspace-cli.yml
   title: ''
   type: CLI
   url: cli/gridspace-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/conventions/gridspace-conventions.yml
+  href: https://artifacts.apis.io/gridspace/conventions/gridspace-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gridspace-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/errors/gridspace-problem-types.yml
+  href: https://artifacts.apis.io/gridspace/errors/gridspace-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gridspace-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/data-model/gridspace-data-model.yml
+  href: https://artifacts.apis.io/gridspace/data-model/gridspace-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gridspace-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/lifecycle/gridspace-lifecycle.yml
+  href: https://artifacts.apis.io/gridspace/lifecycle/gridspace-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gridspace-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/lifecycle/gridspace-lifecycle.yml
+  href: https://artifacts.apis.io/gridspace/lifecycle/gridspace-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/gridspace-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/changelog/gridspace-changelog.yml
+  href: https://artifacts.apis.io/gridspace/changelog/gridspace-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/gridspace-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/conformance/gridspace-conformance.yml
+  href: https://artifacts.apis.io/gridspace/conformance/gridspace-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gridspace-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/conformance/gridspace-conformance.yml
+  href: https://artifacts.apis.io/gridspace/conformance/gridspace-conformance.yml
   title: ''
   type: Compliance
   url: conformance/gridspace-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/components/gridspace-components.yml
+  href: https://artifacts.apis.io/gridspace/components/gridspace-components.yml
   title: ''
   type: Components
   url: components/gridspace-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/sandbox/gridspace-sandbox.yml
+  href: https://artifacts.apis.io/gridspace/sandbox/gridspace-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/gridspace-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/mcp/gridspace-mcp.yml
+  href: https://artifacts.apis.io/gridspace/mcp/gridspace-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/gridspace-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/llms/gridspace-llms.txt
+  href: https://artifacts.apis.io/gridspace/llms/gridspace-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gridspace-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/overlays/gridspace-guava-overlay.yaml
+  href: https://artifacts.apis.io/gridspace/overlays/gridspace-guava-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/gridspace-guava-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/agentic-access/gridspace-agentic-access.yml
+  href: https://artifacts.apis.io/gridspace/agentic-access/gridspace-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gridspace-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/security/gridspace-domain-security.yml
+  href: https://artifacts.apis.io/gridspace/security/gridspace-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gridspace-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gridspace/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/arazzo/gridspace-pull-call-record.yml
+  href: https://artifacts.apis.io/gridspace/arazzo/gridspace-pull-call-record.yml
   title: ''
   type: Arazzo
   url: arazzo/gridspace-pull-call-record.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/arazzo/gridspace-send-and-poll-sms.yml
+  href: https://artifacts.apis.io/gridspace/arazzo/gridspace-send-and-poll-sms.yml
   title: ''
   type: Arazzo
   url: arazzo/gridspace-send-and-poll-sms.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/plans/gridspace-plans.yml
+  href: https://artifacts.apis.io/gridspace/plans/gridspace-plans.yml
   title: ''
   type: Plans
   url: plans/gridspace-plans.yml
 created: '2026-07-17'
 description: Gridspace is a voice AI company (founded 2013) that now operates as Guava (goguava.ai) — a voice agent platform built for regulated industries such as healthcare, banking, insurance, BPOs, and government. Guava provides an end-to-end conversational voice stack (ASR, LLM, TTS, plus compliance guardrails) exposed through Python, TypeScript, and Elixir SDKs, a "guava" CLI, a managed cloud deployment platform, and a REST API for managing conversations, transcripts, recordings, and SMS. It supports inbound and outbound calling over WebRTC and SIP, with SOC 2 Type II, HITRUST i1, and PCI DSS posture and built-in TCPA / A2P 10DLC / SHAKEN-STIR telephony compliance workflows. The legacy gridspace.com domain now redirects to goguava.ai.
+finops:
+- has_sources: true
+  method: derived
+  name: Gridspace Finops
+  primary_unit: minutes
+  service_category: ''
+  slug: gridspace-finops
+  template: false
 image: https://goguava.ai/favicon.ico
 layout: provider
 modified: '2026-07-19'
 name: Gridspace
 nav: Providers
 network: true
-overview: 'Gridspace publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Conversations API, Messages API, and SDK API. Tagged areas include Company, Voice AI, Conversational AI, Voice Agents, and Speech Recognition.
+overview: 'Gridspace publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Conversations API, Check Deprecation API, and SMS API. Tagged areas include Company, Voice AI, Conversational AI, Voice Agents, and Speech Recognition.
 
 
-  Gridspace''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 31 more developer resources.'
+  The Gridspace catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Gridspace''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 32 more developer resources.'
 plans:
 - name: Gridspace Plans
-  plan_count: 4
+  plan_count: 5
   slug: gridspace-plans
-random_paper: 0
+- name: Gridspace Price Estimates
+  plan_count: 0
+  slug: gridspace-price-estimates
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Gridspace API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: gridspace-rules
 score:
   band: strong
-  composite: 59.3
+  composite: 63.1
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 49.0
+    artifact_dirs: 32
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
-    access_clarity: 84.2
-    contract_governance: 18.2
-    contract_quality: 48.8
+    access_clarity: 92.1
+    contract_governance: 31.8
+    contract_quality: 51.3
     developer_ergonomics: 81.5
     discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 59.3
+  previous_composite: 62.5
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 0.0
+      callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 3
+      marker_coverage: 42.9
+      total: 7
     mcp: derived
     skills: derived
   regulatory:
@@ -317,13 +354,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gridspace/refs/heads/main/screenshots/gridspace-2026-07-25T220327.png
+screenshot: https://apis.io/screenshots/gridspace/gridspace-2026-07-25T220327.png
 security:
 - kind: authentication
   name: Gridspace Authentication
@@ -333,6 +370,12 @@ security:
   name: Gridspace Domain Security
   slug: gridspace-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Pull a Guava call record
+  slug: gridspace-pull-call-record
+- name: Send an SMS and read replies with Guava
+  slug: gridspace-send-and-poll-sms
 slug: gridspace
 tags:
 - Company

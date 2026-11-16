@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Machine-readable API providing tools list and healthcare job data via JSON-RPC.
@@ -42,27 +55,27 @@ apis:
 artifact_total: 5
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carejobs-now/refs/heads/main/rules/carejobs-now-rules.yml
+  href: https://artifacts.apis.io/carejobs-now/rules/carejobs-now-rules.yml
   title: ''
   type: Spectral
   url: rules/carejobs-now-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carejobs-now/refs/heads/main/conformance/carejobs-now-conformance.yml
+  href: https://artifacts.apis.io/carejobs-now/conformance/carejobs-now-conformance.yml
   title: ''
   type: Conformance
   url: conformance/carejobs-now-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carejobs-now/refs/heads/main/llms/carejobs-now-llms.txt
+  href: https://artifacts.apis.io/carejobs-now/llms/carejobs-now-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/carejobs-now-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carejobs-now/refs/heads/main/hosts/carejobs-now-hosts.yml
+  href: https://artifacts.apis.io/carejobs-now/hosts/carejobs-now-hosts.yml
   title: ''
   type: Hosts
   url: hosts/carejobs-now-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carejobs-now/refs/heads/main/vendors/carejobs-now-vendors.yml
+  href: https://artifacts.apis.io/carejobs-now/vendors/carejobs-now-vendors.yml
   title: ''
   type: Vendors
   url: vendors/carejobs-now-vendors.yml
@@ -75,7 +88,7 @@ common:
   type: GettingStarted
   url: https://carejobs.now/learn/how-hospital-hiring-works
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carejobs-now/refs/heads/main/security/carejobs-now-domain-security.yml
+  href: https://artifacts.apis.io/carejobs-now/security/carejobs-now-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carejobs-now-domain-security.yml
@@ -119,7 +132,7 @@ overview: 'CareJobs.Now is listed with 3 APIs on the [APIs.io](https://apis.io/)
 
 
   CareJobs.Now''s developer surface includes signup flow, getting-started guide, documentation, and 9 more developer resources.'
-random_paper: 16
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 49
@@ -135,21 +148,28 @@ rules:
   slug: carejobs-now-rules
 score:
   band: emerging
-  composite: 23.9
+  composite: 17.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 44.5
     catalog_earned_first_party: 0.0
     catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.0
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 9.4
-    developer_ergonomics: 21.4
+    developer_ergonomics: 10.7
     discoverability: 78.6
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 23.9
   provenance:
     conformance: derived
     contracts:
@@ -162,13 +182,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 11.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/carejobs-now/carejobs-now-2026-11-03T123329.png
 security:
 - kind: domain-security
   name: Carejobs Now Domain Security

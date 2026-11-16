@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.quo.com
@@ -82,15 +86,12 @@ apis:
   description: Operations related to webhooks
   name: Quo Webhooks API
   slug: quo-webhooks-api
-artifact_total: 24
+artifact_total: 29
 asyncapis:
 - description: ''
   name: Quo Webhooks
   slug: quo-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Quo Public Calls API
   slug: open-quo-calls-api
@@ -128,17 +129,17 @@ common:
   type: BlogRSS
   url: https://www.quo.com/blog/feed/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/plans/quo-plans-pricing.yml
+  href: https://artifacts.apis.io/quo/plans/quo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quo-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/capabilities/quo-capability-edges.yml
+  href: https://artifacts.apis.io/quo/capabilities/quo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/quo-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/overlays/quo-public-api-v1-overlay.yaml
+  href: https://artifacts.apis.io/quo/overlays/quo-public-api-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/quo-public-api-v1-overlay.yaml
@@ -179,57 +180,73 @@ common:
   type: ChangeLog
   url: https://support.quo.com/changelog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/llms/quo-llms.txt
+  href: https://artifacts.apis.io/quo/llms/quo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/quo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/authentication/quo-authentication.yml
+  href: https://artifacts.apis.io/quo/authentication/quo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/quo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/conformance/quo-conformance.yml
+  href: https://artifacts.apis.io/quo/conformance/quo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/quo-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/security/quo-domain-security.yml
+  href: https://artifacts.apis.io/quo/security/quo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/security/quo-trust-center.yml
+  href: https://artifacts.apis.io/quo/security/quo-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/quo-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/security/quo-trust-center.yml
+  href: https://artifacts.apis.io/quo/security/quo-trust-center.yml
   title: ''
   type: Compliance
   url: security/quo-trust-center.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/lifecycle/quo-lifecycle.yml
+  href: https://artifacts.apis.io/quo/lifecycle/quo-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/quo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/asyncapi/quo-webhooks.yml
+  href: https://artifacts.apis.io/quo/asyncapi/quo-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/quo-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/mcp/quo-mcp.yml
+  href: https://artifacts.apis.io/quo/mcp/quo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/quo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/quo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://www.quo.com/docs/mdx/api-reference/error-codes
+- group: company
+  title: ''
+  type: Website
+  url: https://www.quo.com/
 created: '2026-07-17'
 description: Quo (formerly OpenPhone) is an AI-powered business communication platform that unifies calls, texts, and contacts in one shared workspace for startups and small businesses. Its REST Public API (https://api.quo.com/v1) lets developers send and receive SMS, manage contacts, conversations, and tasks, retrieve AI-generated call summaries and transcripts, and subscribe to Standard-Webhooks-signed events for messages and calls. Authentication is via a workspace API key sent in the Authorization header. This profile was added to the API Evangelist network from VC portfolio discovery and enriched from Quo's live developer documentation and published OpenAPI.
+finops:
+- has_sources: true
+  method: derived
+  name: Quo Finops
+  primary_unit: message segment
+  service_category: ''
+  slug: quo-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quo.png
 layout: provider
 modified: '2026-10-06'
@@ -239,34 +256,47 @@ network: true
 overview: 'Quo publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calls API, Contact Custom Fields API, Contacts API, and 6 more. Tagged areas include Company, Communications, Messaging, SMS, and Voice.
 
 
-  The Quo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Quo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Quo''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, changelog, and 17 more developer resources.'
+  Quo''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, changelog, and 19 more developer resources.'
 plans:
 - name: Quo Plans Pricing
   plan_count: 2
   slug: quo-plans-pricing
-random_paper: 11
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Quo API Rules
+  rule_count: 66
+  severity_counts:
+    error: 64
+    hint: 0
+    info: 1
+    warn: 1
+  slug: quo-rules
 score:
-  band: developing
-  composite: 53.0
+  band: strong
+  composite: 56.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 45.0
+    artifact_dirs: 27
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
-    access_clarity: 57.9
-    contract_governance: 4.5
+    access_clarity: 65.8
+    contract_governance: 18.2
     contract_quality: 61.5
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 52.5
+  previous_composite: 56.2
   provenance:
     conformance: derived
     contracts:
@@ -288,13 +318,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 21.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/screenshots/quo-2026-08-17T081432.png
+screenshot: https://apis.io/screenshots/quo/quo-2026-08-17T081432.png
 security:
 - kind: authentication
   name: Quo Authentication
@@ -308,6 +338,16 @@ security:
   name: Quo Trust Center
   slug: quo-trust-center
   summary_line: SOC 2, HIPAA, GDPR
+skill_count: 4
+skills:
+- name: Retrieve Quo call summaries and transcripts
+  slug: quo-call-intelligence
+- name: Manage Quo tasks
+  slug: quo-manage-tasks
+- name: Send a text message with Quo
+  slug: quo-send-text-message
+- name: Sync contacts into Quo
+  slug: quo-sync-contacts
 slug: quo
 tags:
 - Company
@@ -321,5 +361,12 @@ tags:
 - Business Phone
 - CPaaS
 - Contact Center
+- Phone System
+- Shared Numbers
+- AI Agents
+- Small Business
+- Integration
+- CRM
+- Call Routing
 website: https://quo.com
 ---

@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.7
-  scored_at: '2026-10-17'
+  score: 44.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -79,44 +87,44 @@ apis:
   description: The Webhooks API from 180 Insurance — 3 operation(s) for webhooks.
   name: 180 Insurance Webhooks API
   slug: 180-insurance-webhooks-api
-artifact_total: 13
+artifact_total: 15
 asyncapis:
 - description: ''
   name: 180 Insurance Webhooks
   slug: 180-insurance-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/agentic-access/180-insurance-agentic-access.yml
+  href: https://artifacts.apis.io/180-insurance/agentic-access/180-insurance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/180-insurance-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/rules/180-insurance-rules.yml
+  href: https://artifacts.apis.io/180-insurance/rules/180-insurance-rules.yml
   title: ''
   type: Spectral
   url: rules/180-insurance-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/vocabulary/180-insurance-vocabulary.yml
+  href: https://artifacts.apis.io/180-insurance/vocabulary/180-insurance-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/180-insurance-vocabulary.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/lifecycle/180-insurance-lifecycle.yml
+  href: https://artifacts.apis.io/180-insurance/lifecycle/180-insurance-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/180-insurance-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/hosts/180-insurance-hosts.yml
+  href: https://artifacts.apis.io/180-insurance/hosts/180-insurance-hosts.yml
   title: ''
   type: Hosts
   url: hosts/180-insurance-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/vendors/180-insurance-vendors.yml
+  href: https://artifacts.apis.io/180-insurance/vendors/180-insurance-vendors.yml
   title: ''
   type: Vendors
   url: vendors/180-insurance-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/scopes/180-insurance-scopes.yml
+  href: https://artifacts.apis.io/180-insurance/scopes/180-insurance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/180-insurance-scopes.yml
@@ -169,37 +177,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/180seg
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/authentication/180-insurance-authentication.yml
+  href: https://artifacts.apis.io/180-insurance/authentication/180-insurance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/180-insurance-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/conventions/180-insurance-conventions.yml
+  href: https://artifacts.apis.io/180-insurance/conventions/180-insurance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/180-insurance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/errors/180-insurance-problem-types.yml
+  href: https://artifacts.apis.io/180-insurance/errors/180-insurance-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/180-insurance-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/asyncapi/180-insurance-webhooks.yml
+  href: https://artifacts.apis.io/180-insurance/asyncapi/180-insurance-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/180-insurance-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/mcp/180-insurance-mcp.yml
+  href: https://artifacts.apis.io/180-insurance/mcp/180-insurance-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/180-insurance-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/lifecycle/180-insurance-lifecycle.yml
+  href: https://artifacts.apis.io/180-insurance/lifecycle/180-insurance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/180-insurance-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/conformance/180-insurance-conformance.yml
+  href: https://artifacts.apis.io/180-insurance/conformance/180-insurance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/180-insurance-conformance.yml
@@ -208,32 +216,32 @@ common:
   type: Compliance
   url: https://180s.com.br/tecnologia-180/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/data-model/180-insurance-data-model.yml
+  href: https://artifacts.apis.io/180-insurance/data-model/180-insurance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/180-insurance-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/sandbox/180-insurance-sandbox.yml
+  href: https://artifacts.apis.io/180-insurance/sandbox/180-insurance-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/180-insurance-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/well-known/180-insurance-well-known.yml
+  href: https://artifacts.apis.io/180-insurance/well-known/180-insurance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/180-insurance-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/security/180-insurance-domain-security.yml
+  href: https://artifacts.apis.io/180-insurance/security/180-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/180-insurance-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/llms/180-insurance-llms.txt
+  href: https://artifacts.apis.io/180-insurance/llms/180-insurance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/180-insurance-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/180-insurance/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -252,7 +260,7 @@ overview: '180 Insurance publishes 7 API contracts indexed on the [APIs.io](http
 
 
   180 Insurance''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 26 more developer resources.'
-random_paper: 0
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -273,19 +281,19 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 46.8
+  composite: 48.0
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 42.8
     catalog_earned_first_party: 0.0
     catalog_gap: 72.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.3
+  delta: 1.2
   facets:
     access_clarity: 26.3
     contract_governance: 35.6
-    contract_quality: 53.5
+    contract_quality: 58.4
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 18.4
@@ -296,7 +304,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 38.5
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -317,13 +325,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 37.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/180-insurance/refs/heads/main/screenshots/180-insurance-2026-07-25T181107.png
+screenshot: https://apis.io/screenshots/180-insurance/180-insurance-2026-07-25T181107.png
 security:
 - kind: authentication
   name: 180 Insurance Authentication
@@ -333,6 +341,12 @@ security:
   name: 180 Insurance Domain Security
   slug: 180-insurance-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Quote to policy (cotação → proposta → venda)
+  slug: 180-insurance-quote-to-policy
+- name: Subscribe to and verify 180 Seguros webhooks
+  slug: 180-insurance-webhook-subscription
 slug: 180-insurance
 tags:
 - Company

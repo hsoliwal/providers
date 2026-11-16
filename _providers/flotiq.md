@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Auto-generated RESTful and GraphQL APIs derived from user-defined content type definitions, enabling full CRUD operations on content objects with OpenAPI schema support.
@@ -41,7 +45,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flotiq/refs/heads/main/security/flotiq-domain-security.yml
+  href: https://artifacts.apis.io/flotiq/security/flotiq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flotiq-domain-security.yml
@@ -66,17 +70,17 @@ common:
   type: Pricing
   url: https://flotiq.com/pricing/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flotiq/refs/heads/main/plans/flotiq-plans.md
+  href: https://artifacts.apis.io/flotiq/plans/flotiq-plans.md
   title: ''
   type: Plans
   url: plans/flotiq-plans.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flotiq/refs/heads/main/rate-limits/flotiq-rate-limits.md
+  href: https://artifacts.apis.io/flotiq/rate-limits/flotiq-rate-limits.md
   title: ''
   type: RateLimits
   url: rate-limits/flotiq-rate-limits.md
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flotiq/refs/heads/main/finops/flotiq-finops.md
+  href: https://artifacts.apis.io/flotiq/finops/flotiq-finops.md
   title: ''
   type: FinOps
   url: finops/flotiq-finops.md
@@ -104,12 +108,12 @@ overview: 'Flotiq is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Flotiq''s developer surface includes documentation, pricing, engineering blog, and 7 more developer resources.'
-random_paper: 17
+random_paper: 7
 score:
   band: emerging
   composite: 19.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -132,14 +136,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flotiq/refs/heads/main/screenshots/flotiq-2026-06-20T181326.png
+screenshot: https://apis.io/screenshots/flotiq/flotiq-2026-06-20T181326.png
 security:
 - kind: domain-security
   name: Flotiq Domain Security

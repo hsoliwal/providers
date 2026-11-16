@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,13 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.6
-  scored_at: '2026-10-17'
+  score: 39.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 112
   human_in_the_loop: 3
@@ -302,9 +311,6 @@ apis:
 artifact_total: 113
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Miro Developer Platform AI Interaction Logs API
   slug: open-miro-ai-interaction-logs-api
 - collection_type: open
@@ -462,32 +468,32 @@ collections:
   slug: open-miro
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/capabilities/miro-capability-edges.yml
+  href: https://artifacts.apis.io/miro/capabilities/miro-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/miro-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/agentic-access/miro-agentic-access.yml
+  href: https://artifacts.apis.io/miro/agentic-access/miro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/miro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/security/miro-trust-center.yml
+  href: https://artifacts.apis.io/miro/security/miro-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/miro-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/security/miro-domain-security.yml
+  href: https://artifacts.apis.io/miro/security/miro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/miro-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/authentication/miro-authentication.yml
+  href: https://artifacts.apis.io/miro/authentication/miro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/miro-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/scopes/miro-scopes.yml
+  href: https://artifacts.apis.io/miro/scopes/miro-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/miro-scopes.yml
@@ -512,17 +518,17 @@ common:
   type: GitHub
   url: https://github.com/miroapp
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/plans/miro-plans-pricing.yml
+  href: https://artifacts.apis.io/miro/plans/miro-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/miro-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/rate-limits/miro-rate-limits.yml
+  href: https://artifacts.apis.io/miro/rate-limits/miro-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/miro-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/finops/miro-finops.yml
+  href: https://artifacts.apis.io/miro/finops/miro-finops.yml
   title: ''
   type: FinOps
   url: finops/miro-finops.yml
@@ -534,10 +540,10 @@ created: '2026-05-08'
 description: Miro is an online collaborative whiteboard used by distributed teams for brainstorming, diagramming, and workshops. The Miro REST API exposes boards, board items (sticky notes, cards, shapes, frames, images, embeds, etc.), connectors, tags, mind maps, members, organizations, teams, webhooks, audit logs, and SCIM provisioning. Miro also offers a Web SDK for in-board apps.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Miro Finops
-  primary_unit: ''
-  service_category: Productivity
+  primary_unit: member
+  service_category: ''
   slug: miro-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/miro.png
@@ -549,6 +555,9 @@ network: true
 overview: 'Miro publishes 51 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Interaction Logs API, App card items API, App metrics (experimental) API, and 48 more. Tagged areas include Productivity, Whiteboard, Visual Collaboration, Diagramming, and Software-as-a-Service.
 
 
+  The Miro catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Miro''s developer surface includes authentication, pricing, GitHub presence, engineering blog, and 11 more developer resources.'
 plans:
 - name: Miro Plans Pricing
@@ -557,11 +566,24 @@ plans:
 - name: Miro Price Estimates
   plan_count: 0
   slug: miro-price-estimates
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 5
   name: Miro Rate Limits
   slug: miro-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Miro API Rules
+  rule_count: 63
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 5
+    warn: 19
+  slug: miro-rules
 scopes:
 - name: Miro Scopes
   scope_count: 8
@@ -569,23 +591,23 @@ scopes:
   summary_line: 8 scopes · authorizationCode
 score:
   band: developing
-  composite: 41.6
+  composite: 46.4
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 61.0
+    artifact_dirs: 18
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.6
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
+    access_clarity: 57.9
+    contract_governance: 13.6
     contract_quality: 54.7
-    developer_ergonomics: 27.4
+    developer_ergonomics: 35.7
     discoverability: 66.1
     operational_transparency: 36.8
-  previous_composite: 43.1
+  previous_composite: 44.8
   provenance:
     agentic_access: derived
     contracts:
@@ -599,13 +621,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/miro/refs/heads/main/screenshots/miro-2026-08-07T183725.png
+screenshot: https://apis.io/screenshots/miro/miro-2026-08-07T183725.png
 security:
 - kind: authentication
   name: Miro Authentication

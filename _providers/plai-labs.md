@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Deploy a Salt AI workflow as a production HTTP API. A POST to the deployment execution endpoint accepts a workflow_input map (per input node: value + value_type such as RAW) and an optional callback U'
@@ -49,7 +53,7 @@ common:
   type: Website
   url: https://www.salt.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plai-labs/refs/heads/main/security/plai-labs-domain-security.yml
+  href: https://artifacts.apis.io/plai-labs/security/plai-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/plai-labs-domain-security.yml
@@ -98,17 +102,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/plailabs
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plai-labs/refs/heads/main/asyncapi/plai-labs-execution-webhook.yml
+  href: https://artifacts.apis.io/plai-labs/asyncapi/plai-labs-execution-webhook.yml
   title: ''
   type: Webhooks
   url: asyncapi/plai-labs-execution-webhook.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plai-labs/refs/heads/main/conventions/plai-labs-conventions.yml
+  href: https://artifacts.apis.io/plai-labs/conventions/plai-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/plai-labs-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plai-labs/refs/heads/main/llms/plai-labs-llms.txt
+  href: https://artifacts.apis.io/plai-labs/llms/plai-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/plai-labs-llms.txt
@@ -127,12 +131,12 @@ overview: 'Plai Labs is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Plai Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, and 10 more developer resources.'
-random_paper: 5
+random_paper: 21
 score:
   band: thin
   composite: 28.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -153,14 +157,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/plai-labs/refs/heads/main/screenshots/plai-labs-2026-09-02T151353.png
+screenshot: https://apis.io/screenshots/plai-labs/plai-labs-2026-09-02T151353.png
 security:
 - kind: domain-security
   name: Plai Labs Domain Security

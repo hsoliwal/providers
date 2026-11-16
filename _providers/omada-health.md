@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -45,12 +49,12 @@ common:
   type: BlogRSS
   url: https://www.omadahealth.com/resource-center/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/security/omada-health-trust-center.yml
+  href: https://artifacts.apis.io/omada-health/security/omada-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/omada-health-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/security/omada-health-domain-security.yml
+  href: https://artifacts.apis.io/omada-health/security/omada-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/omada-health-domain-security.yml
@@ -79,12 +83,12 @@ common:
   type: Compliance
   url: https://www.omadahealth.com/about-us/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/conformance/omada-health-conformance.yml
+  href: https://artifacts.apis.io/omada-health/conformance/omada-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/omada-health-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/lifecycle/omada-health-lifecycle.yml
+  href: https://artifacts.apis.io/omada-health/lifecycle/omada-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/omada-health-lifecycle.yml
@@ -93,7 +97,7 @@ common:
   type: StatusPage
   url: https://status.omadahealth.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/llms/omada-health-llms.txt
+  href: https://artifacts.apis.io/omada-health/llms/omada-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/omada-health-llms.txt
@@ -118,12 +122,12 @@ overview: 'Omada Health is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Omada Health''s developer surface includes engineering blog, support, and 14 more developer resources.'
-random_paper: 1
+random_paper: 13
 score:
   band: emerging
   composite: 19.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -157,14 +161,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/screenshots/omada-health-2026-08-07T190132.png
+screenshot: https://apis.io/screenshots/omada-health/omada-health-2026-08-07T190132.png
 security:
 - kind: domain-security
   name: Omada Health Domain Security

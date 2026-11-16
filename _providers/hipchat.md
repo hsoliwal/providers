@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The HipChat REST API v2 was the primary developer surface for the team chat platform, exposing rooms, users, messages, notifications, emoticons, OAuth sessions, add-on capabilities, and webhook manage
@@ -49,7 +53,7 @@ asyncapis:
   slug: hipchat-webhooks-asyncapi
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/plans/hipchat-plans-pricing.yml
+  href: https://artifacts.apis.io/hipchat/plans/hipchat-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hipchat-plans-pricing.yml
@@ -58,17 +62,17 @@ common:
   type: Website
   url: https://www.atlassian.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/security/hipchat-trust-center.yml
+  href: https://artifacts.apis.io/hipchat/security/hipchat-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hipchat-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/security/hipchat-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hipchat/security/hipchat-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hipchat-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/security/hipchat-domain-security.yml
+  href: https://artifacts.apis.io/hipchat/security/hipchat-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hipchat-domain-security.yml
@@ -93,17 +97,17 @@ common:
   type: Sunset
   url: https://www.atlassian.com/migration/move-from-hipchat-to-slack
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/plans/hipchat-plans-pricing.yml
+  href: https://artifacts.apis.io/hipchat/plans/hipchat-plans-pricing.yml
   title: Historical pricing (no longer in market)
   type: Pricing
   url: plans/hipchat-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/rate-limits/hipchat-rate-limits.yml
+  href: https://artifacts.apis.io/hipchat/rate-limits/hipchat-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hipchat-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/finops/hipchat-finops.yml
+  href: https://artifacts.apis.io/hipchat/finops/hipchat-finops.yml
   title: Historical FinOps record (no longer billable)
   type: FinOps
   url: finops/hipchat-finops.yml
@@ -174,7 +178,7 @@ plans:
 - name: Hipchat Plans Pricing
   plan_count: 4
   slug: hipchat-plans-pricing
-random_paper: 11
+random_paper: 17
 rate_limits:
 - limit_count: 2
   name: Hipchat Rate Limits
@@ -219,7 +223,7 @@ score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -247,14 +251,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hipchat/refs/heads/main/screenshots/hipchat-2026-06-20T182747.png
+screenshot: https://apis.io/screenshots/hipchat/hipchat-2026-06-20T182747.png
 security:
 - kind: domain-security
   name: Hipchat Domain Security

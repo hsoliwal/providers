@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -20,21 +24,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 23.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -46,69 +53,171 @@ api_count: 1
 apis:
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Auth API from Bytebase — 1 operation(s) for auth.
-  name: Bytebase Auth API
-  slug: bytebase-auth-api
+  description: AccessGrantService manages temporary access grants within projects.
+  name: Bytebase Access Grant Service API
+  slug: bytebase-accessgrantservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Databases API from Bytebase — 2 operation(s) for databases.
-  name: Bytebase Databases API
-  slug: bytebase-databases-api
+  description: ActuatorService manages system health and operational information.
+  name: Bytebase Actuator Service API
+  slug: bytebase-actuatorservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Groups API from Bytebase — 1 operation(s) for groups.
-  name: Bytebase Groups API
-  slug: bytebase-groups-api
+  description: AIService provides AI chat capabilities for the page agent.
+  name: Bytebase AI Service API
+  slug: bytebase-aiservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Instances API from Bytebase — 2 operation(s) for instances.
-  name: Bytebase Instances API
-  slug: bytebase-instances-api
+  description: AuditLogService manages audit logs for system activities and API calls.
+  name: Bytebase Audit Log Service API
+  slug: bytebase-auditlogservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Issues API from Bytebase — 3 operation(s) for issues.
-  name: Bytebase Issues API
-  slug: bytebase-issues-api
+  description: CelService manages CEL (Common Expression Language) parsing and formatting operations.
+  name: Bytebase Cel Service API
+  slug: bytebase-celservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Plans API from Bytebase — 1 operation(s) for plans.
-  name: Bytebase Plans API
-  slug: bytebase-plans-api
+  description: ChangelogService manages database migration history.
+  name: Bytebase Changelog Service API
+  slug: bytebase-changelogservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Projects API from Bytebase — 2 operation(s) for projects.
-  name: Bytebase Projects API
-  slug: bytebase-projects-api
+  description: DatabaseCatalogService manages database schema metadata and classification.
+  name: Bytebase Database Catalog Service API
+  slug: bytebase-databasecatalogservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Roles API from Bytebase — 1 operation(s) for roles.
-  name: Bytebase Roles API
-  slug: bytebase-roles-api
+  description: DatabaseGroupService manages database groups for organizing databases by criteria.
+  name: Bytebase Database Group Service API
+  slug: bytebase-databasegroupservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Rollouts API from Bytebase — 2 operation(s) for rollouts.
-  name: Bytebase Rollouts API
-  slug: bytebase-rollouts-api
+  description: DatabaseService manages databases and their schemas.
+  name: Bytebase Database Service API
+  slug: bytebase-databaseservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Sheets API from Bytebase — 1 operation(s) for sheets.
-  name: Bytebase Sheets API
-  slug: bytebase-sheets-api
+  description: GroupService manages user groups for organizing users and permissions.
+  name: Bytebase Group Service API
+  slug: bytebase-groupservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Users API from Bytebase — 1 operation(s) for users.
-  name: Bytebase Users API
-  slug: bytebase-users-api
+  description: IdentityProviderService manages external identity providers for SSO authentication.
+  name: Bytebase Identity Provider Service API
+  slug: bytebase-identityproviderservice-api
 - baseURL: https://demo.bytebase.com/v1
   baseurl_source: declared
-  description: The Webhooks API from Bytebase — 1 operation(s) for webhooks.
-  name: Bytebase Webhooks API
-  slug: bytebase-webhooks-api
-artifact_total: 33
+  description: InstanceRoleService manages database roles within instances.
+  name: Bytebase Instance Role Service API
+  slug: bytebase-instanceroleservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: InstanceService manages database instances and their connections.
+  name: Bytebase Instance Service API
+  slug: bytebase-instanceservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: IssueService manages issues for tracking database changes and tasks.
+  name: Bytebase Issue Service API
+  slug: bytebase-issueservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: OrgPolicyService manages organizational policies at various resource levels.
+  name: Bytebase Org Policy Service API
+  slug: bytebase-orgpolicyservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: PlanService manages deployment plans for database changes.
+  name: Bytebase Plan Service API
+  slug: bytebase-planservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: ProjectService manages projects that group databases and changes.
+  name: Bytebase Project Service API
+  slug: bytebase-projectservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: QueryHistoryService manages query history records of SQL Editor queries and exports.
+  name: Bytebase Query History Service API
+  slug: bytebase-queryhistoryservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: ReleaseService manages releases for coordinating deployments.
+  name: Bytebase Release Service API
+  slug: bytebase-releaseservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: ReviewConfigService manages approval flow configurations.
+  name: Bytebase Review Config Service API
+  slug: bytebase-reviewconfigservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: RevisionService manages schema revision history.
+  name: Bytebase Revision Service API
+  slug: bytebase-revisionservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: RoleService manages workspace roles and permissions.
+  name: Bytebase Role Service API
+  slug: bytebase-roleservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: RolloutService manages the execution of deployment plans.
+  name: Bytebase Rollout Service API
+  slug: bytebase-rolloutservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: 'SavedQueryService manages saved queries in the SQL Editor. A saved query is private to its creator until shared. Permissions come from three places: - The creator owns the saved query and holds every '
+  name: Bytebase Saved Query Service API
+  slug: bytebase-savedqueryservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: ServiceAccountService manages service accounts for API integrations.
+  name: Bytebase Service Account Service API
+  slug: bytebase-serviceaccountservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: SettingService manages workspace-level settings and configurations.
+  name: Bytebase Setting Service API
+  slug: bytebase-settingservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: SheetService manages SQL scripts and saved queries.
+  name: Bytebase Sheet Service API
+  slug: bytebase-sheetservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: SQLService executes SQL queries and manages query operations.
+  name: Bytebase SQL Service API
+  slug: bytebase-sqlservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: SubscriptionService manages enterprise subscriptions and licensing.
+  name: Bytebase Subscription Service API
+  slug: bytebase-subscriptionservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: UserService manages user accounts and authentication.
+  name: Bytebase User Service API
+  slug: bytebase-userservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: WorkloadIdentityService manages workload identities for external CI/CD integrations.
+  name: Bytebase Workload Identity Service API
+  slug: bytebase-workloadidentityservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: WorkspaceService manages workspace-level operations and profile.
+  name: Bytebase Workspace Service API
+  slug: bytebase-workspaceservice-api
+- baseURL: https://demo.bytebase.com/v1
+  baseurl_source: declared
+  description: AuthService handles user authentication operations.
+  name: Bytebase Auth Service API
+  slug: bytebase-auth-service-api
+artifact_total: 54
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Bytebase Auth API
   slug: open-bytebase-auth-api
@@ -154,27 +263,27 @@ common:
   type: Blog
   url: https://www.bytebase.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/capabilities/bytebase-capability-edges.yml
+  href: https://artifacts.apis.io/bytebase/capabilities/bytebase-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bytebase-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/agentic-access/bytebase-agentic-access.yml
+  href: https://artifacts.apis.io/bytebase/agentic-access/bytebase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bytebase-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/security/bytebase-trust-center.yml
+  href: https://artifacts.apis.io/bytebase/security/bytebase-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bytebase-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/security/bytebase-domain-security.yml
+  href: https://artifacts.apis.io/bytebase/security/bytebase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bytebase-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/authentication/bytebase-authentication.yml
+  href: https://artifacts.apis.io/bytebase/authentication/bytebase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bytebase-authentication.yml
@@ -195,17 +304,17 @@ common:
   type: Documentation
   url: https://docs.bytebase.com/integrations/api/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/plans/bytebase-plans-pricing.yml
+  href: https://artifacts.apis.io/bytebase/plans/bytebase-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bytebase-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/rate-limits/bytebase-rate-limits.yml
+  href: https://artifacts.apis.io/bytebase/rate-limits/bytebase-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bytebase-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/finops/bytebase-finops.yml
+  href: https://artifacts.apis.io/bytebase/finops/bytebase-finops.yml
   title: ''
   type: FinOps
   url: finops/bytebase-finops.yml
@@ -225,7 +334,10 @@ modified: '2026-10-06'
 name: Bytebase
 nav: Providers
 network: true
-overview: 'Bytebase publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Databases API, Groups API, and 9 more. Tagged areas include Database, DevOps, Schema Migration, CI/CD, and DevSecOps.
+overview: 'Bytebase publishes 33 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Grant Service API, Actuator Service API, AI Service API, and 30 more. Tagged areas include Database, DevOps, Schema Migration, CI/CD, and DevSecOps.
+
+
+  The Bytebase catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Bytebase''s developer surface includes engineering blog, authentication, documentation, and 10 more developer resources.'
@@ -233,50 +345,63 @@ plans:
 - name: Bytebase Plans Pricing
   plan_count: 3
   slug: bytebase-plans-pricing
-random_paper: 11
+random_paper: 7
 rate_limits:
 - limit_count: 4
   name: Bytebase Rate Limits
   slug: bytebase-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Bytebase API Rules
+  rule_count: 46
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 2
+    warn: 13
+  slug: bytebase-rules
 score:
-  band: emerging
-  composite: 26.1
+  band: thin
+  composite: 28.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.8
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
-    contract_quality: 43.6
+    contract_governance: 13.6
+    contract_quality: 45.4
     developer_ergonomics: 22.6
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 33.9
+  previous_composite: 27.4
   provenance:
     agentic_access: derived
     contracts:
-      callable: 0.0
+      callable: 28.3
       derived: 0
-      marker_coverage: 0.0
-      total: 12
+      marker_coverage: 71.7
+      total: 46
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bytebase/refs/heads/main/screenshots/bytebase-2026-07-25T204142.png
+screenshot: https://apis.io/screenshots/bytebase/bytebase-2026-07-25T204142.png
 security:
 - kind: authentication
   name: Bytebase Authentication

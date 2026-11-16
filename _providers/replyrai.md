@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 23.0
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://app.replyr.ai/api
   baseurl_source: declared
@@ -72,14 +75,14 @@ apis:
   description: The Templates API from Replyr.ai — 1 operation(s) for templates.
   name: Replyr.ai Templates API
   slug: replyrai-templates-api
-artifact_total: 11
+artifact_total: 15
 common:
 - group: company
   title: ''
   type: Blog
   url: https://replyr.ai/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/capabilities/replyrai-capability-edges.yml
+  href: https://artifacts.apis.io/replyrai/capabilities/replyrai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/replyrai-capability-edges.yml
@@ -104,67 +107,67 @@ common:
   type: Support
   url: https://wa.me/60109696912
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/security/replyrai-domain-security.yml
+  href: https://artifacts.apis.io/replyrai/security/replyrai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/replyrai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/authentication/replyrai-authentication.yml
+  href: https://artifacts.apis.io/replyrai/authentication/replyrai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/replyrai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/conventions/replyrai-conventions.yml
+  href: https://artifacts.apis.io/replyrai/conventions/replyrai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/replyrai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/errors/replyrai-problem-types.yml
+  href: https://artifacts.apis.io/replyrai/errors/replyrai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/replyrai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/data-model/replyrai-data-model.yml
+  href: https://artifacts.apis.io/replyrai/data-model/replyrai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/replyrai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/lifecycle/replyrai-lifecycle.yml
+  href: https://artifacts.apis.io/replyrai/lifecycle/replyrai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/replyrai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/conformance/replyrai-conformance.yml
+  href: https://artifacts.apis.io/replyrai/conformance/replyrai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/replyrai-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/packages/replyrai-packages.yml
+  href: https://artifacts.apis.io/replyrai/packages/replyrai-packages.yml
   title: ''
   type: Packages
   url: packages/replyrai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/llms/replyrai-llms.txt
+  href: https://artifacts.apis.io/replyrai/llms/replyrai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/replyrai-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/overlays/replyrai-platform-api-overlay.yaml
+  href: https://artifacts.apis.io/replyrai/overlays/replyrai-platform-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/replyrai-platform-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/replyrai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/plans/replyrai-plans-pricing.yml
+  href: https://artifacts.apis.io/replyrai/plans/replyrai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/replyrai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/rate-limits/replyrai-rate-limits.yml
+  href: https://artifacts.apis.io/replyrai/rate-limits/replyrai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/replyrai-rate-limits.yml
@@ -180,31 +183,47 @@ network: true
 overview: 'Replyr.ai publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, AI Agents API, Appointment Management API, and 4 more. Tagged areas include Company, Artificial Intelligence, Chatbots, Conversational AI, and Customer Engagement.
 
 
+  The Replyr.ai catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Replyr.ai''s developer surface includes engineering blog, API reference, documentation, support, authentication, and 15 more developer resources.'
 plans:
 - name: Replyrai Plans Pricing
   plan_count: 0
   slug: replyrai-plans-pricing
-random_paper: 14
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Replyrai Rate Limits
   slug: replyrai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Replyr.ai API Rules
+  rule_count: 47
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 2
+    warn: 6
+  slug: replyrai-rules
 score:
   band: thin
-  composite: 26.2
+  composite: 29.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.2
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
-    contract_quality: 43.4
+    contract_governance: 18.2
+    contract_quality: 48.3
     developer_ergonomics: 37.5
     discoverability: 66.1
     operational_transparency: 0.0
@@ -215,13 +234,13 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 25.6
+  previous_composite: 27.8
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: derived
     skills: derived
@@ -231,13 +250,13 @@ score:
     regime: Health
     regime_id: health
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/replyrai/refs/heads/main/screenshots/replyrai-2026-09-02T153511.png
+screenshot: https://apis.io/screenshots/replyrai/replyrai-2026-09-02T153511.png
 security:
 - kind: authentication
   name: Replyrai Authentication
@@ -247,6 +266,14 @@ security:
   name: Replyrai Domain Security
   slug: replyrai-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: replyrai-capture-and-qualify-a-lead
+  slug: replyrai-capture-and-qualify-a-lead
+- name: replyrai-run-a-sales-pipeline
+  slug: replyrai-run-a-sales-pipeline
+- name: replyrai-send-messages-across-channels
+  slug: replyrai-send-messages-across-channels
 slug: replyrai
 tags:
 - Company

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,7 +77,7 @@ common:
   type: YouTube
   url: https://www.youtube.com/channel/UCsVKZ5RaxOY3JGm30NSPj_Q
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/converzai/refs/heads/main/security/converzai-domain-security.yml
+  href: https://artifacts.apis.io/converzai/security/converzai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/converzai-domain-security.yml
@@ -89,12 +93,12 @@ overview: 'ConverzAI is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   ConverzAI''s developer surface includes engineering blog, support, YouTube channel, and 7 more developer resources.'
-random_paper: 9
+random_paper: 17
 score:
   band: minimal
   composite: 2.8
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -122,14 +126,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/converzai/refs/heads/main/screenshots/converzai-2026-07-25T210350.png
+screenshot: https://apis.io/screenshots/converzai/converzai-2026-07-25T210350.png
 security:
 - kind: domain-security
   name: Converzai Domain Security

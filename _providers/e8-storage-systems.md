@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 api_count: 0
@@ -16,7 +17,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/amazon/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/e8-storage-systems/refs/heads/main/security/e8-storage-systems-domain-security.yml
+  href: https://artifacts.apis.io/e8-storage-systems/security/e8-storage-systems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/e8-storage-systems-domain-security.yml
@@ -29,7 +30,7 @@ name: E8 Storage Systems
 nav: Providers
 network: true
 overview: E8 Storage Systems is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Big Data, Storage, NVMe, and Flash Storage.
-random_paper: 14
+random_paper: 20
 security:
 - kind: domain-security
   name: E8 Storage Systems Domain Security

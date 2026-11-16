@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Live REST/JSON API behind Agerpoint Cloud and the Agerpoint Capture apps, served from cloudapi.agerpoint.com on ASP.NET Core (Kestrel). Resource families observed on the public first-party web client '
@@ -64,57 +81,57 @@ common:
   type: TermsOfService
   url: https://www.agerpoint.com/contracts
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/well-known/agerpoint-well-known.yml
+  href: https://artifacts.apis.io/agerpoint/well-known/agerpoint-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/agerpoint-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/authentication/agerpoint-authentication.yml
+  href: https://artifacts.apis.io/agerpoint/authentication/agerpoint-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agerpoint-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/scopes/agerpoint-scopes.yml
+  href: https://artifacts.apis.io/agerpoint/scopes/agerpoint-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/agerpoint-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/conventions/agerpoint-conventions.yml
+  href: https://artifacts.apis.io/agerpoint/conventions/agerpoint-conventions.yml
   title: ''
   type: Conventions
   url: conventions/agerpoint-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/conformance/agerpoint-conformance.yml
+  href: https://artifacts.apis.io/agerpoint/conformance/agerpoint-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agerpoint-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/security/agerpoint-domain-security.yml
+  href: https://artifacts.apis.io/agerpoint/security/agerpoint-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agerpoint-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/packages/agerpoint-packages.yml
+  href: https://artifacts.apis.io/agerpoint/packages/agerpoint-packages.yml
   title: ''
   type: Packages
   url: packages/agerpoint-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/llms/agerpoint-llms.txt
+  href: https://artifacts.apis.io/agerpoint/llms/agerpoint-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agerpoint-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/plans/agerpoint-plans-pricing.yml
+  href: https://artifacts.apis.io/agerpoint/plans/agerpoint-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/agerpoint-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/rate-limits/agerpoint-rate-limits.yml
+  href: https://artifacts.apis.io/agerpoint/rate-limits/agerpoint-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/agerpoint-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/lifecycle/agerpoint-lifecycle.yml
+  href: https://artifacts.apis.io/agerpoint/lifecycle/agerpoint-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/agerpoint-lifecycle.yml
@@ -151,7 +168,7 @@ plans:
 - name: Agerpoint Plans Pricing
   plan_count: 0
   slug: agerpoint-plans-pricing
-random_paper: 1
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Agerpoint Rate Limits
@@ -165,13 +182,13 @@ score:
   band: emerging
   composite: 21.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -179,7 +196,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 20.9
+  previous_composite: 21.0
   provenance:
     conformance: first-party
   regulatory:
@@ -188,14 +205,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/agerpoint/refs/heads/main/screenshots/agerpoint-2026-10-11T093111.png
+screenshot: https://apis.io/screenshots/agerpoint/agerpoint-2026-10-11T093111.png
 security:
 - kind: authentication
   name: Agerpoint Authentication

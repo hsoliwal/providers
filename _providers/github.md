@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,9 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -24,18 +30,21 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
-    event_surface_described: derived
+    event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 59.9
-  scored_at: '2026-10-17'
+  score: 63.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1717
   human_in_the_loop: 47
@@ -43,7 +52,7 @@ agentic_access:
   operation_count: 3388
   slug: github-agentic-access
   summary_line: 3388 operations · 1717 acting · 47 human-in-the-loop
-api_count: 38
+api_count: 39
 apis:
 - baseURL: https://api.github.com/
   baseurl_source: declared
@@ -160,7 +169,7 @@ apis:
   description: The GitHub Projects API enables developers to programmatically create and manage GitHub Projects, which are flexible tools for planning and tracking work using customizable boards, tables, and roadmap
   name: GitHub Projects API
   phrasing_intents:
-  - id: projects/list-for-org
+  - id: getOrgsByOrgProjects
     intent: List an organization's project boards
     question: Which classic project boards does an organization have?
   - id: projects/create-for-org
@@ -279,7 +288,9 @@ apis:
 - description: 'The GitHub Deployments API lets you create and manage deployments and deployment statuses for repositories. Deployments are requests to deploy a specific ref (branch, SHA, tag) to an environment, and '
   name: GitHub Deployments API
   slug: github-deployments-api
-- description: The GitHub Releases API lets you create, edit, and delete releases for a repository, as well as upload and manage release assets (binaries, installers, archives). Releases are based on Git tags and pr
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Releases API lets you create, edit, and delete releases for a repository, as well as upload and manage release assets (binaries, installers, archives). Releases are based on Git tags and pr
   name: GitHub Releases API
   slug: github-releases-api
 - description: The GitHub Pages API lets you manage GitHub Pages sites for repositories, including creating, updating, and deleting sites, configuring custom domains and HTTPS enforcement, and triggering and monitor
@@ -288,13 +299,19 @@ apis:
 - description: The GitHub Git Database API provides low-level access to Git objects (blobs, commits, refs, tags, and trees) in a repository. It lets you read and write raw Git data directly, enabling operations like
   name: GitHub Git Database API
   slug: github-git-database-api
-- description: The GitHub Codespaces API lets you create, manage, start, stop, and delete cloud development environments (codespaces) for repositories. It provides endpoints for managing codespace secrets, machine t
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Codespaces API lets you create, manage, start, stop, and delete cloud development environments (codespaces) for repositories. It provides endpoints for managing codespace secrets, machine t
   name: GitHub Codespaces API
   slug: github-codespaces-api
-- description: The GitHub Copilot API lets organization and enterprise owners manage GitHub Copilot seat assignments, retrieve usage metrics and billing information, and configure Copilot policies. It provides endpo
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Copilot API lets organization and enterprise owners manage GitHub Copilot seat assignments, retrieve usage metrics and billing information, and configure Copilot policies. It provides endpo
   name: GitHub Copilot API
   slug: github-copilot-api
-- description: The GitHub Security Advisories API lets you view and manage security advisories for repositories and access the GitHub Advisory Database. It provides endpoints to create, update, and list repository s
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Security Advisories API lets you view and manage security advisories for repositories and access the GitHub Advisory Database. It provides endpoints to create, update, and list repository s
   name: GitHub Security Advisories API
   slug: github-security-advisories-api
 - description: The GitHub Commits API lets you list, retrieve, and compare commits in a repository, as well as manage commit comments and commit statuses. It provides endpoints for viewing commit details, listing pu
@@ -306,7 +323,9 @@ apis:
 - description: The GitHub Metrics API lets you access community profile and repository statistics, including contributor activity, commit frequency, code frequency, participation data, punch card data, and community
   name: GitHub Metrics API
   slug: github-metrics-api
-- description: The GitHub Interactions API lets you temporarily restrict which users can comment, open issues, or create pull requests in public repositories. It supports setting interaction limits at the repository
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Interactions API lets you temporarily restrict which users can comment, open issues, or create pull requests in public repositories. It supports setting interaction limits at the repository
   name: GitHub Interactions API
   slug: github-interactions-api
 - description: The GitHub Models API provides access to the GitHub Models catalog, letting you list and retrieve details about AI models available on the GitHub platform. It supports browsing model metadata includin
@@ -315,22 +334,32 @@ apis:
 - description: The GitHub GraphQL API provides a flexible query language for accessing GitHub data, allowing clients to request exactly the fields they need in a single request. It supports queries, mutations, and s
   name: GitHub GraphQL API
   slug: github-graphql-api
-- description: The GitHub Campaigns API lets organization owners and security managers create and manage security campaigns that coordinate remediation of code scanning alerts across multiple repositories. It provid
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Campaigns API lets organization owners and security managers create and manage security campaigns that coordinate remediation of code scanning alerts across multiple repositories. It provid
   name: GitHub Campaigns API
   slug: github-campaigns-api
-- description: The GitHub Classroom API lets you programmatically interact with GitHub Classroom, providing endpoints to list classrooms, get classroom details, list assignments for a classroom, get assignment detai
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Classroom API lets you programmatically interact with GitHub Classroom, providing endpoints to list classrooms, get classroom details, list assignments for a classroom, get assignment detai
   name: GitHub Classroom API
   slug: github-classroom-api
-- description: The GitHub Code Security API lets organizations and enterprises create and manage reusable code security configurations that standardize security settings across repositories. It provides endpoints to
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Code Security API lets organizations and enterprises create and manage reusable code security configurations that standardize security settings across repositories. It provides endpoints to
   name: GitHub Code Security API
   slug: github-code-security-api
-- description: The GitHub Credentials API lets you programmatically manage authentication credentials, providing endpoints to revoke a list of credentials such as tokens and keys for security purposes. It enables au
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: The GitHub Credentials API lets you programmatically manage authentication credentials, providing endpoints to revoke a list of credentials such as tokens and keys for security purposes. It enables au
   name: GitHub Credentials API
   slug: github-credentials-api
 - description: 'The GitHub Enterprise Teams API lets enterprise owners create and manage enterprise-level teams. It provides endpoints to list, create, get, update, and delete teams, manage team membership including '
   name: GitHub Enterprise Teams API
   slug: github-enterprise-teams-api
-- description: 'The GitHub Private Registries API lets organizations configure and manage private package registries. It provides endpoints to list, create, get, update, and delete private registry configurations at '
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: 'The GitHub Private Registries API lets organizations configure and manage private package registries. It provides endpoints to list, create, get, update, and delete private registry configurations at '
   name: GitHub Private Registries API
   slug: github-private-registries-api
 - description: The GitHub Starring API lets you bookmark repositories and manage your starred list. It provides endpoints to list stargazers for a repository, list repositories starred by the authenticated user or a
@@ -344,21 +373,6 @@ apis:
   description: Endpoints to manage GitHub Actions using the REST API.
   name: GitHub Actions API
   phrasing_intents:
-  - id: actions/get-actions-cache-usage-for-enterprise
-    intent: Check Actions cache usage for an enterprise
-    question: How much GitHub Actions cache storage is my whole enterprise using right now?
-  - id: actions/get-actions-cache-usage-policy-for-enterprise
-    intent: Get the enterprise Actions cache size policy
-    question: What cache size limit do repos in my enterprise get for GitHub Actions by default?
-  - id: actions/set-actions-cache-usage-policy-for-enterprise
-    intent: Set the enterprise Actions cache size policy
-    question: Can I raise the default Actions cache size limit for every repo in my enterprise?
-  - id: actions/get-github-actions-default-workflow-permissions-enterprise
-    intent: Get default GITHUB_TOKEN permissions for an enterprise
-    question: What permissions does GITHUB_TOKEN get by default in workflows across my enterprise?
-  - id: actions/set-github-actions-default-workflow-permissions-enterprise
-    intent: Set default GITHUB_TOKEN permissions for an enterprise
-    question: Can I make GITHUB_TOKEN read-only by default for every workflow in my enterprise?
   - id: actions/get-actions-cache-usage-for-org
     intent: Check Actions cache usage for an organization
     question: How much Actions cache storage is my organization using in total?
@@ -368,6 +382,21 @@ apis:
   - id: actions/get-github-actions-permissions-organization
     intent: Get the Actions permissions policy for an org
     question: Which repositories in my organization are allowed to run GitHub Actions?
+  - id: actions/set-github-actions-permissions-organization
+    intent: Set the Actions permissions policy for an org
+    question: Can I turn GitHub Actions on for only selected repositories in my organization?
+  - id: actions/list-selected-repositories-enabled-github-actions-organization
+    intent: List repos enabled for Actions in an org
+    question: Which specific repositories have been picked to run Actions in my org?
+  - id: actions/set-selected-repositories-enabled-github-actions-organization
+    intent: Replace the repos enabled for Actions in an org
+    question: Can I replace the whole list of repositories allowed to run Actions in my org at once?
+  - id: actions/enable-selected-repository-github-actions-organization
+    intent: Enable Actions for one repo in an org
+    question: How do I let one more repository in my org start running GitHub Actions?
+  - id: actions/disable-selected-repository-github-actions-organization
+    intent: Disable Actions for one repo in an org
+    question: How do I stop one repository in my org from running GitHub Actions?
   phrasing_ops: 137
   slug: github-actions-api
 - baseURL: https://api.github.com
@@ -481,9 +510,6 @@ apis:
   description: Retrieve code scanning alerts from a repository.
   name: GitHub Code-Scanning API
   phrasing_intents:
-  - id: code-scanning/list-alerts-for-enterprise
-    intent: List code scanning alerts across an enterprise
-    question: What code scanning alerts are open across every organization in our enterprise?
   - id: code-scanning/list-alerts-for-org
     intent: List code scanning alerts across an organization
     question: Which repositories in our organization have critical code scanning alerts on the default branch?
@@ -505,6 +531,9 @@ apis:
   - id: code-scanning/get-analysis
     intent: Get one code scanning analysis
     question: What did a single code scanning analysis find, and can I download it as SARIF?
+  - id: code-scanning/delete-analysis
+    intent: Delete a code scanning analysis
+    question: Can I delete a bad code scanning analysis that was uploaded by mistake?
   phrasing_ops: 13
   slug: github-code-scanning-api
 - baseURL: https://api.github.com
@@ -745,9 +774,6 @@ apis:
   - id: orgs/list
     intent: List every organization on the server
     question: Can I get a list of all organizations on our GitHub Enterprise Server in the order they were created?
-  - id: orgs/list-custom-roles
-    intent: List custom repository roles (deprecated, by org ID)
-    question: Is there an older endpoint that lists an organization's custom repository roles by numeric organization ID?
   - id: orgs/get
     intent: Get an organization's profile and settings
     question: What details can I pull about a GitHub organization, like its plan, billing email and settings?
@@ -757,15 +783,18 @@ apis:
   - id: orgs/delete
     intent: Delete an organization and all its repositories
     question: What happens to the repositories when I delete a whole organization?
-  - id: announcement-banners/get-announcement-banner-for-org
-    intent: Get an organization's announcement banner
-    question: What announcement banner is currently showing to members of our organization?
-  - id: announcement-banners/set-announcement-banner-for-org
-    intent: Set an organization's announcement banner
-    question: Can I post a banner message that every member of my organization sees?
-  - id: announcement-banners/remove-announcement-banner-for-org
-    intent: Remove an organization's announcement banner
-    question: How do I take down the announcement banner from our organization?
+  - id: orgs/list-webhooks
+    intent: List an organization's webhooks
+    question: Which webhooks are configured at the organization level?
+  - id: orgs/create-webhook
+    intent: Create an organization webhook
+    question: How do I get notified at my own URL whenever something happens across my organization?
+  - id: orgs/get-webhook
+    intent: Get an organization webhook
+    question: Which events is a specific organization webhook subscribed to, and is it active?
+  - id: orgs/update-webhook
+    intent: Update an organization webhook's events or status
+    question: Can I pause an organization webhook without deleting it?
   phrasing_ops: 49
   slug: github-orgs-api
 - baseURL: https://api.github.com
@@ -845,30 +874,30 @@ apis:
   description: 'The GitHub Reactions API lets you create, list, and delete emoji reactions on issues, pull requests, issue comments, pull request review comments, commit comments, release assets, and team discussion '
   name: GitHub Reactions API
   phrasing_intents:
-  - id: reactions/list-for-team-discussion-comment-in-org
-    intent: List reactions on a team discussion comment
-    question: What emoji reactions has a reply on our team discussion received?
-  - id: reactions/create-for-team-discussion-comment-in-org
-    intent: React to a team discussion comment
-    question: How do I add an emoji reaction to a reply in a team discussion?
-  - id: reactions/delete-for-team-discussion-comment
-    intent: Remove a reaction from a team discussion comment
-    question: Can I take back an emoji reaction I left on a team discussion reply?
-  - id: reactions/list-for-team-discussion-in-org
-    intent: List reactions on a team discussion
-    question: How are people reacting to a discussion post on our team page?
-  - id: reactions/create-for-team-discussion-in-org
-    intent: React to a team discussion
-    question: Can I put an emoji reaction on a team discussion post itself?
-  - id: reactions/delete-for-team-discussion
-    intent: Remove a reaction from a team discussion
-    question: How can I remove a reaction I put on a team discussion post?
   - id: reactions/list-for-commit-comment
     intent: List reactions on a commit comment
     question: What reactions has a comment on a commit gotten?
   - id: reactions/create-for-commit-comment
     intent: React to a commit comment
     question: How do I add an emoji reaction to a comment on a commit?
+  - id: reactions/delete-for-commit-comment
+    intent: Remove a reaction from a commit comment
+    question: Can I remove a reaction I added to a commit comment?
+  - id: reactions/list-for-issue-comment
+    intent: List reactions on an issue comment
+    question: How many people reacted to a specific comment on an issue?
+  - id: reactions/create-for-issue-comment
+    intent: React to an issue comment
+    question: How do I thumbs-up someone's comment on an issue?
+  - id: reactions/delete-for-issue-comment
+    intent: Remove a reaction from an issue comment
+    question: Can I retract my emoji on someone's issue comment?
+  - id: reactions/list-for-issue
+    intent: List reactions on an issue
+    question: How many thumbs-up votes does an issue have?
+  - id: reactions/create-for-issue
+    intent: React to an issue
+    question: Can I upvote an issue with a reaction through the API?
   phrasing_ops: 25
   slug: github-reactions-api
 - baseURL: https://api.github.com
@@ -876,9 +905,6 @@ apis:
   description: The GitHub Secret Scanning API lets you retrieve and manage secret scanning alerts for repositories, organizations, and enterprises. Secret scanning detects tokens, keys, and other credentials acciden
   name: GitHub Secret Scanning API
   phrasing_intents:
-  - id: secret-scanning/list-alerts-for-enterprise
-    intent: List leaked-secret alerts across an enterprise
-    question: Where have secrets been leaked across all the organizations in our enterprise?
   - id: secret-scanning/list-alerts-for-org
     intent: List leaked-secret alerts across an organization
     question: Which repositories in our organization have exposed credentials that are still open?
@@ -894,6 +920,9 @@ apis:
   - id: secret-scanning/list-locations-for-alert
     intent: List where a leaked secret was found
     question: In which files and commits was a leaked secret found?
+  - id: secret-scanning/list-alerts-for-enterprise
+    intent: List leaked-secret alerts across an enterprise
+    question: Where have secrets been leaked across all the organizations in our enterprise?
   phrasing_ops: 6
   slug: github-secret-scanning-api
 - baseURL: https://api.github.com
@@ -901,12 +930,6 @@ apis:
   description: Interact with GitHub Teams.
   name: GitHub Teams API
   phrasing_intents:
-  - id: teams/external-idp-group-info-for-org
-    intent: Look up an external identity provider group
-    question: Which members and teams are tied to one of our external IdP groups?
-  - id: teams/list-external-idp-groups-for-org
-    intent: List external IdP groups in an organization
-    question: What external identity provider groups are available to my organization?
   - id: teams/list
     intent: List the teams in an organization
     question: What teams exist in my organization?
@@ -922,21 +945,392 @@ apis:
   - id: teams/delete-in-org
     intent: Delete a team from an organization
     question: What happens to child teams when I delete a parent team in my org?
-  - id: teams/list-discussions-in-org
-    intent: List discussions on a team's page
-    question: What discussions have been posted on my team's page?
+  - id: teams/list-members-in-org
+    intent: List the members of a team
+    question: Who is on a particular team in my org?
+  - id: teams/get-membership-for-user-in-org
+    intent: Check a user's membership in a team
+    question: Is a specific person a member or maintainer of my team?
+  - id: teams/add-or-update-membership-for-user-in-org
+    intent: Add a user to a team or change their role
+    question: How do I add someone in my org to a team?
   phrasing_ops: 63
   slug: github-teams-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: The GitHub V3 REST API API from GitHub — 0 operation(s) for github v3 rest api.
-  name: GitHub V3 REST API
-  slug: github-github-v3-rest-api-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Application API API from GitHub — 0 operation(s) for github application api.
   name: GitHub GitHub Application API
   slug: github-github-application-api-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage and interact with agent automations.
+  name: GitHub Agent Automations API
+  slug: github-agent-automations-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage and interact with agent tasks.
+  name: GitHub Agent Tasks API
+  slug: github-agent-tasks-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints for Agents secrets and variables.
+  name: GitHub Agents API
+  slug: github-agents-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage campaigns via the REST API.
+  name: GitHub Campaigns API
+  slug: github-campaigns-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Interact with GitHub Classroom.
+  name: GitHub Classroom API
+  slug: github-classroom-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Insights into reliability, maintainability, and efficiency of your codebase.
+  name: GitHub Code Quality API
+  slug: github-code-quality-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage Code security using the REST API.
+  name: GitHub Code Security API
+  slug: github-code-security-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage Codespaces using the REST API.
+  name: GitHub Codespaces API
+  slug: github-codespaces-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage Copilot using the REST API.
+  name: GitHub Copilot API
+  slug: github-copilot-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Endpoints to manage Copilot Spaces using the REST API.
+  name: GitHub Copilot Spaces API
+  slug: github-copilot-spaces-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Revoke compromised or leaked GitHub credentials.
+  name: GitHub Credentials API
+  slug: github-credentials-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Manage hosted compute networking resources.
+  name: GitHub Hosted Compute API
+  slug: github-hosted-compute-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Owner or admin management of users interactions.
+  name: GitHub Interactions API
+  slug: github-interactions-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Interact with GitHub Merge Queues.
+  name: GitHub Merge Queue API
+  slug: github-merge-queue-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Manage private registry configurations.
+  name: GitHub Private Registries API
+  slug: github-private-registries-api
+- baseURL: https://api.github.com
+  baseurl_source: declared
+  description: Manage security advisories.
+  name: GitHub Security Advisories API
+  slug: github-security-advisories-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Add API from GitHub — 4 operation(s) for add.
+  name: GitHub Add API
+  slug: github-add-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The All API from GitHub — 4 operation(s) for all.
+  name: GitHub All API
+  slug: github-all-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Applications API from GitHub — 2 operation(s) for applications.
+  name: GitHub Applications API
+  slug: github-applications-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Attribute API from GitHub — 2 operation(s) for attribute.
+  name: GitHub Attribute API
+  slug: github-attribute-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Authorization API from GitHub — 4 operation(s) for authorization.
+  name: GitHub Authorization API
+  slug: github-authorization-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Authorized API from GitHub — 1 operation(s) for authorized.
+  name: GitHub Authorized API
+  slug: github-authorized-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Card API from GitHub — 3 operation(s) for card.
+  name: GitHub Card API
+  slug: github-card-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Cards API from GitHub — 1 operation(s) for cards.
+  name: GitHub Cards API
+  slug: github-cards-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Collaborators API from GitHub — 2 operation(s) for collaborators.
+  name: GitHub Collaborators API
+  slug: github-collaborators-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Column API from GitHub — 1 operation(s) for column.
+  name: GitHub Column API
+  slug: github-column-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Columns API from GitHub — 2 operation(s) for columns.
+  name: GitHub Columns API
+  slug: github-columns-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Configuration API from GitHub — 2 operation(s) for configuration.
+  name: GitHub Configuration API
+  slug: github-configuration-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Create API from GitHub — 10 operation(s) for create.
+  name: GitHub Create API
+  slug: github-create-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Delete API from GitHub — 7 operation(s) for delete.
+  name: GitHub Delete API
+  slug: github-delete-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Disables API from GitHub — 1 operation(s) for disables.
+  name: GitHub Disables API
+  slug: github-disables-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Enterprise API from GitHub — 4 operation(s) for enterprise.
+  name: GitHub Enterprise API
+  slug: github-enterprise-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Existing API from GitHub — 3 operation(s) for existing.
+  name: GitHub Existing API
+  slug: github-existing-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Fingerprint API from GitHub — 1 operation(s) for fingerprint.
+  name: GitHub Fingerprint API
+  slug: github-fingerprint-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Get API from GitHub — 14 operation(s) for get.
+  name: GitHub Get API
+  slug: github-get-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The GitHub Auth API API from GitHub — 0 operation(s) for github auth api.
+  name: GitHub GitHub Auth API
+  slug: github-github-auth-api-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The GitHub Manage API API from GitHub — 0 operation(s) for github manage api.
+  name: GitHub GitHub Manage API
+  slug: github-github-manage-api-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The GitHub Projects API API from GitHub — 0 operation(s) for github projects api.
+  name: GitHub GitHub Projects API
+  slug: github-github-projects-api-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The GitHub SCIM API API from GitHub — 0 operation(s) for github scim api.
+  name: GitHub GitHub SCIM API
+  slug: github-github-scim-api-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The GitHub V3 REST API API from GitHub — 0 operation(s) for github v3 rest api.
+  name: GitHub GitHub V3 REST API
+  slug: github-github-v3-rest-api-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Groups API from GitHub — 2 operation(s) for groups.
+  name: GitHub Groups API
+  slug: github-groups-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Identities API from GitHub — 1 operation(s) for identities.
+  name: GitHub Identities API
+  slug: github-identities-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Impersonation API from GitHub — 1 operation(s) for impersonation.
+  name: GitHub Impersonation API
+  slug: github-impersonation-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Information API from GitHub — 2 operation(s) for information.
+  name: GitHub Information API
+  slug: github-information-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Keys API from GitHub — 1 operation(s) for keys.
+  name: GitHub Keys API
+  slug: github-keys-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Legacy API from GitHub — 2 operation(s) for legacy.
+  name: GitHub Legacy API
+  slug: github-legacy-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Lists API from GitHub — 11 operation(s) for lists.
+  name: GitHub Lists API
+  slug: github-lists-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Move API from GitHub — 2 operation(s) for move.
+  name: GitHub Move API
+  slug: github-move-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Node API from GitHub — 1 operation(s) for node.
+  name: GitHub Node API
+  slug: github-node-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Nodes API from GitHub — 3 operation(s) for nodes.
+  name: GitHub Nodes API
+  slug: github-nodes-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The OAuth API from GitHub — 1 operation(s) for oauth.
+  name: GitHub OAuth API
+  slug: github-oauth-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Organizations API from GitHub — 1 operation(s) for organizations.
+  name: GitHub Organizations API
+  slug: github-organizations-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Permission API from GitHub — 1 operation(s) for permission.
+  name: GitHub Permission API
+  slug: github-permission-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Permissions API from GitHub — 2 operation(s) for permissions.
+  name: GitHub Permissions API
+  slug: github-permissions-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Project API from GitHub — 1 operation(s) for project.
+  name: GitHub Project API
+  slug: github-project-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Provision API from GitHub — 2 operation(s) for provision.
+  name: GitHub Provision API
+  slug: github-provision-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Provisioned API from GitHub — 4 operation(s) for provisioned.
+  name: GitHub Provisioned API
+  slug: github-provisioned-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Provisioning API from GitHub — 2 operation(s) for provisioning.
+  name: GitHub Provisioning API
+  slug: github-provisioning-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Releases API from GitHub — 1 operation(s) for releases.
+  name: GitHub Releases API
+  slug: github-releases-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Remove API from GitHub — 4 operation(s) for remove.
+  name: GitHub Remove API
+  slug: github-remove-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Replicas API from GitHub — 1 operation(s) for replicas.
+  name: GitHub Replicas API
+  slug: github-replicas-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Repositories API from GitHub — 1 operation(s) for repositories.
+  name: GitHub Repositories API
+  slug: github-repositories-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Running API from GitHub — 1 operation(s) for running.
+  name: GitHub Running API
+  slug: github-running-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The SCIM API from GitHub — 4 operation(s) for scim.
+  name: GitHub SCIM API
+  slug: github-scim-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Sets API from GitHub — 3 operation(s) for sets.
+  name: GitHub Sets API
+  slug: github-sets-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Settings API from GitHub — 1 operation(s) for settings.
+  name: GitHub Settings API
+  slug: github-settings-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Setup API from GitHub — 1 operation(s) for setup.
+  name: GitHub Setup API
+  slug: github-setup-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Single API from GitHub — 1 operation(s) for single.
+  name: GitHub Single API
+  slug: github-single-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Specific API from GitHub — 2 operation(s) for specific.
+  name: GitHub Specific API
+  slug: github-specific-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The SSH API from GitHub — 1 operation(s) for ssh.
+  name: GitHub SSH API
+  slug: github-ssh-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Status API from GitHub — 1 operation(s) for status.
+  name: GitHub Status API
+  slug: github-status-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Tokens API from GitHub — 1 operation(s) for tokens.
+  name: GitHub Tokens API
+  slug: github-tokens-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Update API from GitHub — 8 operation(s) for update.
+  name: GitHub Update API
+  slug: github-update-api
+- baseURL: https://api.github.com/
+  baseurl_source: declared
+  description: The Versions API from GitHub — 1 operation(s) for versions.
+  name: GitHub Versions API
+  slug: github-versions-api
 arazzos:
 - description: Branch off the default branch and commit a new file to that branch.
   name: GitHub Commit a File to a New Branch
@@ -998,7 +1392,7 @@ arazzos:
 - description: Confirm a head branch exists, then merge it into a base branch.
   name: GitHub Verify a Branch and Merge It
   slug: github-verify-and-merge-branch-workflow
-artifact_total: 1376
+artifact_total: 1454
 asyncapis:
 - description: GitHub Webhooks deliver HTTP POST payloads to a configured URL whenever specified events occur on GitHub, such as pushes, pull requests, issues, releases, and more. Webhooks can be configured at the r
   name: GitHub Webhooks
@@ -1073,9 +1467,6 @@ collections:
 - collection_type: postman
   name: GitHub Zen API
   slug: postman-github-zen
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Github About API
   slug: open-github-about-api
@@ -2151,93 +2542,132 @@ collections:
   name: GitHub Repos API
   slug: open-temp
 common:
+- group: other
+  href: https://artifacts.apis.io/github/overlays/github-actions-api-phrasing-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/github-actions-api-phrasing-overlay.yaml
+- group: build
+  href: https://artifacts.apis.io/github/cli/github-cli.yml
+  title: ''
+  type: CLI
+  url: cli/github-cli.yml
+- group: operate
+  href: https://artifacts.apis.io/github/changelog/github-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/github-changelog.yml
+- group: design
+  href: https://artifacts.apis.io/github/conventions/github-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/github-conventions.yml
+- group: auth
+  href: https://artifacts.apis.io/github/security/github-vulnerability-disclosure.yml
+  title: ''
+  type: VulnerabilityDisclosure
+  url: security/github-vulnerability-disclosure.yml
+- group: auth
+  href: https://artifacts.apis.io/github/scopes/github-scopes.yml
+  title: ''
+  type: OAuthScopes
+  url: scopes/github-scopes.yml
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://docs.github.com/en/rest/about-the-rest-api/api-versions
+- group: design
+  href: https://artifacts.apis.io/github/lifecycle/github-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/github-lifecycle.yml
+- group: build
+  href: https://artifacts.apis.io/github/integrations/github-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/github-integration-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/finops/github-finops.yml
+  href: https://artifacts.apis.io/github/finops/github-finops.yml
   title: ''
   type: FinOps
   url: finops/github-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-spectral-rules.yml
+  href: https://artifacts.apis.io/github/rules/github-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/github-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-rules.yml
+  href: https://artifacts.apis.io/github/rules/github-rules.yml
   title: ''
   type: Spectral
   url: rules/github-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/github/rules/github-jsonschema-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/github-jsonschema-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-asyncapi-spectral-rules.yml
+  href: https://artifacts.apis.io/github/rules/github-asyncapi-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/github-asyncapi-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/vocabulary/github-vocabulary.yml
+  href: https://artifacts.apis.io/github/vocabulary/github-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/github-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/github/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/asyncapi/github-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/github/asyncapi/github-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/github-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/data-model/github-data-model.yml
+  href: https://artifacts.apis.io/github/data-model/github-data-model.yml
   title: ''
   type: DataModel
   url: data-model/github-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/errors/github-problem-types.yml
+  href: https://artifacts.apis.io/github/errors/github-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/github-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/conformance/github-conformance.yml
+  href: https://artifacts.apis.io/github/conformance/github-conformance.yml
   title: ''
   type: Conformance
   url: conformance/github-conformance.yml
-- group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/overlays/github-actions-api-overlay.yaml
-  title: ''
-  type: Overlay
-  url: overlays/github-actions-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/well-known/github-well-known.yml
+  href: https://artifacts.apis.io/github/well-known/github-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/github-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/hosts/github-hosts.yml
+  href: https://artifacts.apis.io/github/hosts/github-hosts.yml
   title: ''
   type: Hosts
   url: hosts/github-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/vendors/github-vendors.yml
+  href: https://artifacts.apis.io/github/vendors/github-vendors.yml
   title: ''
   type: Vendors
   url: vendors/github-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/packages/github-packages.yml
+  href: https://artifacts.apis.io/github/packages/github-packages.yml
   title: ''
   type: Packages
   url: packages/github-packages.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/vendor-facets/github-vendor-facets.yml
+  href: https://artifacts.apis.io/github/vendor-facets/github-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/github-vendor-facets.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rate-limits/github-rate-limits.yml
+  href: https://artifacts.apis.io/github/rate-limits/github-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/github-rate-limits.yml
@@ -2246,22 +2676,22 @@ common:
   type: Pricing
   url: https://github.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/plans/github-plans-pricing.yml
+  href: https://artifacts.apis.io/github/plans/github-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/github-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/capabilities/github-capability-edges.yml
+  href: https://artifacts.apis.io/github/capabilities/github-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/github-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/agentic-access/github-agentic-access.yml
+  href: https://artifacts.apis.io/github/agentic-access/github-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/github-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/authentication/github-authentication.yml
+  href: https://artifacts.apis.io/github/authentication/github-authentication.yml
   title: ''
   type: Authentication
   url: authentication/github-authentication.yml
@@ -2274,102 +2704,102 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/github/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-commit-file-to-new-branch-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-commit-file-to-new-branch-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-commit-file-to-new-branch-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-create-label-and-triage-issue-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-create-label-and-triage-issue-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-create-label-and-triage-issue-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-create-milestone-and-issue-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-create-milestone-and-issue-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-create-milestone-and-issue-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-create-org-repository-and-issue-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-create-org-repository-and-issue-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-create-org-repository-and-issue-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-create-repository-and-issue-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-create-repository-and-issue-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-create-repository-and-issue-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-dispatch-workflow-and-poll-run-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-dispatch-workflow-and-poll-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-dispatch-workflow-and-poll-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-fork-and-branch-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-fork-and-branch-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-fork-and-branch-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-fork-gist-and-comment-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-fork-gist-and-comment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-fork-gist-and-comment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-inspect-latest-commit-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-inspect-latest-commit-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-inspect-latest-commit-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-onboard-org-member-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-onboard-org-member-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-onboard-org-member-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-open-and-merge-pull-request-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-open-and-merge-pull-request-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-open-and-merge-pull-request-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-open-pull-request-and-request-reviewers-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-open-pull-request-and-request-reviewers-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-open-pull-request-and-request-reviewers-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-propose-change-pull-request-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-propose-change-pull-request-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-propose-change-pull-request-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-provision-org-repo-with-webhook-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-provision-org-repo-with-webhook-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-provision-org-repo-with-webhook-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-publish-release-with-asset-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-publish-release-with-asset-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-publish-release-with-asset-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-report-bug-issue-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-report-bug-issue-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-report-bug-issue-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-review-and-merge-pull-request-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-review-and-merge-pull-request-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-review-and-merge-pull-request-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-star-and-comment-gist-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-star-and-comment-gist-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-star-and-comment-gist-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-tag-commit-and-release-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-tag-commit-and-release-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-tag-commit-and-release-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/arazzo/github-verify-and-merge-branch-workflow.yml
+  href: https://artifacts.apis.io/github/arazzo/github-verify-and-merge-branch-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/github-verify-and-merge-branch-workflow.yml
@@ -2514,42 +2944,42 @@ common:
   type: SDKs
   url: https://github.com/octokit
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-repository-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-repository-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-repository-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-issue-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-issue-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-issue-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-pull-request-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-pull-request-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-pull-request-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-user-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-user-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-user-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-organization-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-organization-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-organization-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-commit-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-commit-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-commit-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-schema/github-webhook-delivery-schema.json
+  href: https://artifacts.apis.io/github/json-schema/github-webhook-delivery-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/github-webhook-delivery-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/json-ld/github-context.jsonld
+  href: https://artifacts.apis.io/github/json-ld/github-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/github-context.jsonld
@@ -3359,10 +3789,10 @@ features:
 - GitHub Marketplace for app distribution and billing
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Github Finops
-  primary_unit: ''
-  service_category: Developer Platform
+  primary_unit: user
+  service_category: ''
   slug: github-finops
   template: false
 graphqls:
@@ -5240,21 +5670,21 @@ modified: '2026-09-16'
 name: GitHub
 nav: Providers
 network: true
-overview: 'GitHub publishes 56 API contracts indexed on the [APIs.io](https://apis.io/) network, including Gists API, Issues API, Licenses API, and 53 more. Tagged areas include Code, Developer Tools, Pipelines, Platform, and Software Development.
+overview: 'GitHub publishes 129 API contracts indexed on the [APIs.io](https://apis.io/) network, including Gists API, Issues API, Licenses API, and 126 more. Tagged areas include Code, Developer Tools, Pipelines, Platform, and Software Development.
 
 
   The GitHub catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 4 Spectral governance rulesets.
 
 
-  GitHub''s developer surface includes pricing, authentication, documentation, CLI, support, getting-started guide, engineering blog, and 83 more developer resources.'
+  GitHub''s developer surface includes CLI, changelog, pricing, authentication, documentation, support, getting-started guide, and 91 more developer resources.'
 plans:
 - name: Github Plans Pricing
   plan_count: 6
   slug: github-plans-pricing
 - name: Github Price Estimates
-  plan_count: 1
+  plan_count: 0
   slug: github-price-estimates
-random_paper: 5
+random_paper: 19
 rate_limits:
 - limit_count: 18
   name: Github Rate Limits
@@ -5284,16 +5714,16 @@ rules:
     warn: 5
   slug: github-jsonschema-spectral-rules
 - authorship: generated
-  effective_rule_count: 53
+  effective_rule_count: 110
   extends:
   - spectral:oas
   name: GitHub API Rules
-  rule_count: 12
+  rule_count: 69
   severity_counts:
-    error: 8
+    error: 45
     hint: 0
-    info: 1
-    warn: 3
+    info: 7
+    warn: 17
   slug: github-rules
 - authorship: unmarked
   effective_rule_count: 20
@@ -5306,33 +5736,43 @@ rules:
     info: 3
     warn: 3
   slug: github-spectral-rules
+scopes:
+- name: Github Scopes
+  scope_count: 35
+  slug: github-scopes
+  summary_line: 35 scopes
 score:
   band: exemplar
-  composite: 78.8
+  composite: 86.0
   coverage:
-    artifact_dirs: 37
-    catalog_earned: 88.0
+    artifact_dirs: 45
+    catalog_earned: 91.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 27.0
+    catalog_gap: 24.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.9
+  delta: 4.6
   facets:
-    access_clarity: 76.3
+    access_clarity: 84.2
     contract_governance: 31.8
-    contract_quality: 75.6
+    contract_quality: 84.4
     developer_ergonomics: 74.4
     discoverability: 71.7
-    operational_transparency: 92.1
-  previous_composite: 82.7
+    operational_transparency: 100.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 81.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 0.0
+      callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 35
+      marker_coverage: 20.8
+      total: 173
     mcp: first-party
     skills: derived
   regulatory:
@@ -5340,19 +5780,33 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 40.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/screenshots/github-2026-06-20T181834.png
+screenshot: https://apis.io/screenshots/github/github-2026-06-20T181834.png
 security:
 - kind: authentication
   name: Github Authentication
   slug: github-authentication
   summary_line: http · 1 scheme
+- kind: vulnerability-disclosure
+  name: Github Vulnerability Disclosure
+  slug: github-vulnerability-disclosure
+  summary_line: Hackerone · contact published
+skill_count: 4
+skills:
+- name: github-create-and-star-gist
+  slug: github-create-and-star-gist
+- name: github-create-issue-with-labels-and-assignees
+  slug: github-create-issue-with-labels-and-assignees
+- name: github-create-org-repo-and-list-branches
+  slug: github-create-org-repo-and-list-branches
+- name: github-create-repo-project-with-column-and-card
+  slug: github-create-repo-project-with-column-and-card
 slug: github
 solutions:
 - description: Free tier with unlimited public and private repos, Actions minutes, and Packages storage.
@@ -5372,7 +5826,6 @@ tags:
 - Version Control
 - T1
 - GitHub
-- Git
 use_cases:
 - description: Automate build, test, and deployment pipelines with GitHub Actions API.
   name: CI/CD Automation

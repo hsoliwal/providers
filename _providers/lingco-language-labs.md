@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 7.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Lingco Classroom is registered in an LMS as an IMS/1EdTech LTI 1.3 tool. The platform performs an OIDC third-party-initiated login against Lingco's initiation endpoint, launches into the target link U
@@ -78,42 +82,42 @@ common:
   type: Compliance
   url: https://lingco.io/terms_of_service
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/authentication/lingco-language-labs-authentication.yml
+  href: https://artifacts.apis.io/lingco-language-labs/authentication/lingco-language-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lingco-language-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/conformance/lingco-language-labs-conformance.yml
+  href: https://artifacts.apis.io/lingco-language-labs/conformance/lingco-language-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lingco-language-labs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/lifecycle/lingco-language-labs-lifecycle.yml
+  href: https://artifacts.apis.io/lingco-language-labs/lifecycle/lingco-language-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lingco-language-labs-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/conventions/lingco-language-labs-conventions.yml
+  href: https://artifacts.apis.io/lingco-language-labs/conventions/lingco-language-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lingco-language-labs-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/well-known/lingco-language-labs-well-known.yml
+  href: https://artifacts.apis.io/lingco-language-labs/well-known/lingco-language-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lingco-language-labs-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/well-known/lingco-language-labs-robots.txt
+  href: https://artifacts.apis.io/lingco-language-labs/well-known/lingco-language-labs-robots.txt
   title: ''
   type: ContentSignal
   url: well-known/lingco-language-labs-robots.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/security/lingco-language-labs-domain-security.yml
+  href: https://artifacts.apis.io/lingco-language-labs/security/lingco-language-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lingco-language-labs-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/llms/lingco-language-labs-llms.txt
+  href: https://artifacts.apis.io/lingco-language-labs/llms/lingco-language-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lingco-language-labs-llms.txt
@@ -129,12 +133,12 @@ overview: 'Lingco Language Labs is listed with 1 API on the [APIs.io](https://ap
 
 
   Lingco Language Labs'' developer surface includes documentation, support, authentication, and 14 more developer resources.'
-random_paper: 0
+random_paper: 12
 score:
   band: emerging
   composite: 25.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -157,14 +161,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lingco-language-labs/refs/heads/main/screenshots/lingco-language-labs-2026-07-25T225237.png
+screenshot: https://apis.io/screenshots/lingco-language-labs/lingco-language-labs-2026-07-25T225237.png
 security:
 - kind: authentication
   name: Lingco Language Labs Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pair-team/refs/heads/main/security/pair-team-domain-security.yml
+  href: https://artifacts.apis.io/pair-team/security/pair-team-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pair-team-domain-security.yml
@@ -93,7 +97,7 @@ overview: 'Pair Team is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Pair Team''s developer surface includes engineering blog, support, signup flow, and 8 more developer resources.'
-random_paper: 16
+random_paper: 8
 score:
   band: emerging
   composite: 12.9
@@ -119,14 +123,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pair-team/refs/heads/main/screenshots/pair-team-2026-08-07T191307.png
+screenshot: https://apis.io/screenshots/pair-team/pair-team-2026-08-07T191307.png
 security:
 - kind: domain-security
   name: Pair Team Domain Security

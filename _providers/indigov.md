@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
-  onboarding: unknown
+  label: Requires approval
+  onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -57,12 +62,12 @@ common:
   type: Security
   url: https://indigov.com/pages/responsible-disclosure
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/security/indigov-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/indigov/security/indigov-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/indigov-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/security/indigov-domain-security.yml
+  href: https://artifacts.apis.io/indigov/security/indigov-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/indigov-domain-security.yml
@@ -75,27 +80,27 @@ common:
   type: Login
   url: https://app.indigov.com/auth/signin
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/packages/indigov-packages.yml
+  href: https://artifacts.apis.io/indigov/packages/indigov-packages.yml
   title: ''
   type: Packages
   url: packages/indigov-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/llms/indigov-llms.txt
+  href: https://artifacts.apis.io/indigov/llms/indigov-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/indigov-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/plans/indigov-plans-pricing.yml
+  href: https://artifacts.apis.io/indigov/plans/indigov-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/indigov-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/rate-limits/indigov-rate-limits.yml
+  href: https://artifacts.apis.io/indigov/rate-limits/indigov-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/indigov-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/conformance/indigov-conformance.yml
+  href: https://artifacts.apis.io/indigov/conformance/indigov-conformance.yml
   title: ''
   type: Conformance
   url: conformance/indigov-conformance.yml
@@ -129,7 +134,7 @@ plans:
 - name: Indigov Plans Pricing
   plan_count: 0
   slug: indigov-plans-pricing
-random_paper: 4
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Indigov Rate Limits
@@ -138,7 +143,7 @@ score:
   band: emerging
   composite: 15.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -161,14 +166,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/indigov/refs/heads/main/screenshots/indigov-2026-07-25T222319.png
+screenshot: https://apis.io/screenshots/indigov/indigov-2026-07-25T222319.png
 security:
 - kind: domain-security
   name: Indigov Domain Security

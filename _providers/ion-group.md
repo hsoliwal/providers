@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
+  score: 35.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -56,9 +62,6 @@ apis:
 artifact_total: 11
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Ion Group Acuris Entities API
   slug: open-ion-group-entities-api
 - collection_type: open
@@ -66,17 +69,17 @@ collections:
   slug: open-ion-group
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/plans/ion-group-plans-pricing.yml
+  href: https://artifacts.apis.io/ion-group/plans/ion-group-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ion-group-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/rate-limits/ion-group-rate-limits.yml
+  href: https://artifacts.apis.io/ion-group/rate-limits/ion-group-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ion-group-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/finops/ion-group-finops.yml
+  href: https://artifacts.apis.io/ion-group/finops/ion-group-finops.yml
   title: ''
   type: FinOps
   url: finops/ion-group-finops.yml
@@ -85,17 +88,17 @@ common:
   type: BlogRSS
   url: https://iongroup.com/blog/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/agentic-access/ion-group-agentic-access.yml
+  href: https://artifacts.apis.io/ion-group/agentic-access/ion-group-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ion-group-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/security/ion-group-domain-security.yml
+  href: https://artifacts.apis.io/ion-group/security/ion-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ion-group-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/authentication/ion-group-authentication.yml
+  href: https://artifacts.apis.io/ion-group/authentication/ion-group-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ion-group-authentication.yml
@@ -121,7 +124,7 @@ finops:
 - has_sources: false
   method: generated
   name: Ion Group Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: ion-group-finops
   template: true
@@ -134,35 +137,51 @@ network: true
 overview: 'Ion Group publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Entities API, and 1 more. Tagged areas include Analytics, Finance, Financial Services, and Trading.
 
 
+  The Ion Group catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ion Group''s developer surface includes authentication, developer portal, and 9 more developer resources.'
 plans:
 - name: Ion Group Plans Pricing
   plan_count: 3
   slug: ion-group-plans-pricing
-random_paper: 4
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Ion Group Rate Limits
   slug: ion-group-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Ion Group API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ion-group-rules
 score:
-  band: emerging
-  composite: 25.5
+  band: thin
+  composite: 27.1
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 33.0
+    artifact_dirs: 15
+    catalog_earned: 37.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 82.0
+    catalog_gap: 77.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.4
     developer_ergonomics: 31.0
     discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 27.0
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     contracts:
@@ -176,14 +195,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ion-group/refs/heads/main/screenshots/ion-group-2026-06-20T183527.png
+screenshot: https://apis.io/screenshots/ion-group/ion-group-2026-06-20T183527.png
 security:
 - kind: authentication
   name: Ion Group Authentication

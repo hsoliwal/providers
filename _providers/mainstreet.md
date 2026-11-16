@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The OpenID Connect / OAuth 2.0 authorization surface behind MainStreet sign-in, served from login.mainstreet.com on an Auth0 tenant. It publishes a complete OIDC Discovery 1.0 document and an RFC 8414
@@ -92,42 +95,42 @@ common:
   type: ChangeLog
   url: https://mainstreet.ai/updates.html
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/changelog/mainstreet-changelog.yml
+  href: https://artifacts.apis.io/mainstreet/changelog/mainstreet-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mainstreet-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/authentication/mainstreet-authentication.yml
+  href: https://artifacts.apis.io/mainstreet/authentication/mainstreet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mainstreet-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/scopes/mainstreet-scopes.yml
+  href: https://artifacts.apis.io/mainstreet/scopes/mainstreet-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/mainstreet-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/well-known/mainstreet-well-known.yml
+  href: https://artifacts.apis.io/mainstreet/well-known/mainstreet-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mainstreet-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/llms/mainstreet-llms.txt
+  href: https://artifacts.apis.io/mainstreet/llms/mainstreet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mainstreet-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/conformance/mainstreet-conformance.yml
+  href: https://artifacts.apis.io/mainstreet/conformance/mainstreet-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mainstreet-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/lifecycle/mainstreet-lifecycle.yml
+  href: https://artifacts.apis.io/mainstreet/lifecycle/mainstreet-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mainstreet-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/security/mainstreet-domain-security.yml
+  href: https://artifacts.apis.io/mainstreet/security/mainstreet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mainstreet-domain-security.yml
@@ -148,7 +151,7 @@ overview: 'MainStreet is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   MainStreet''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 14 more developer resources.'
-random_paper: 6
+random_paper: 4
 scopes:
 - name: Mainstreet Scopes
   scope_count: 14
@@ -185,14 +188,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mainstreet/refs/heads/main/screenshots/mainstreet-2026-08-07T171931.png
+screenshot: https://apis.io/screenshots/mainstreet/mainstreet-2026-08-07T171931.png
 security:
 - kind: authentication
   name: Mainstreet Authentication

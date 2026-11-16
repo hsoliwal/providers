@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   - '{''url'': ''https://www.eigenlayer.xyz/'', ''status'': 302, ''note'': ''declared website redirects to https://www.eigencloud.xyz/ — a different registrable domain (eigenlayer.xyz -> eigencloud.xyz), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: Solidity smart contracts that implement the EigenLayer restaking protocol - StrategyManager, DelegationManager, EigenPodManager, AVSDirectory, and the slasher. Operators register, stakers delegate, an
@@ -67,17 +71,17 @@ asyncapis:
   slug: eigenlayer-streaming-asyncapi
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/eigenlayer/refs/heads/main/plans/eigenlayer-plans-pricing.yml
+  href: https://artifacts.apis.io/eigenlayer/plans/eigenlayer-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/eigenlayer-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/eigenlayer/refs/heads/main/rate-limits/eigenlayer-rate-limits.yml
+  href: https://artifacts.apis.io/eigenlayer/rate-limits/eigenlayer-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/eigenlayer-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/eigenlayer/refs/heads/main/finops/eigenlayer-finops.yml
+  href: https://artifacts.apis.io/eigenlayer/finops/eigenlayer-finops.yml
   title: ''
   type: FinOps
   url: finops/eigenlayer-finops.yml
@@ -94,7 +98,7 @@ common:
   type: ContributionGuide
   url: https://github.com/Layr-Labs/eigenlayer-contracts/blob/main/CONTRIBUTING.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eigenlayer/refs/heads/main/security/eigenlayer-domain-security.yml
+  href: https://artifacts.apis.io/eigenlayer/security/eigenlayer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eigenlayer-domain-security.yml
@@ -177,7 +181,7 @@ score:
     catalog_gap: 67.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 11.4
@@ -185,21 +189,21 @@ score:
     developer_ergonomics: 14.3
     discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 30.4
+  previous_composite: 24.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/eigenlayer/refs/heads/main/screenshots/eigenlayer-2026-06-20T180610.png
+screenshot: https://apis.io/screenshots/eigenlayer/eigenlayer-2026-06-20T180610.png
 security:
 - kind: domain-security
   name: Eigenlayer Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-10-17'
+  score: 24.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 75
   human_in_the_loop: 3
@@ -130,11 +136,8 @@ apis:
   description: Sites can be organized into groups of documents called workspaces.
   name: Grist Workspaces API
   slug: grist-workspaces-api
-artifact_total: 50
+artifact_total: 49
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Grist attachments API
   slug: open-grist-attachments-api
@@ -187,23 +190,27 @@ collections:
   name: Grist attachments workspaces API
   slug: open-grist-workspaces-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/grist/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/grist/refs/heads/main/capabilities/grist-capability-edges.yml
+  href: https://artifacts.apis.io/grist/capabilities/grist-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/grist-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/grist/refs/heads/main/agentic-access/grist-agentic-access.yml
+  href: https://artifacts.apis.io/grist/agentic-access/grist-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/grist-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grist/refs/heads/main/security/grist-domain-security.yml
+  href: https://artifacts.apis.io/grist/security/grist-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/grist-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grist/refs/heads/main/authentication/grist-authentication.yml
+  href: https://artifacts.apis.io/grist/authentication/grist-authentication.yml
   title: ''
   type: Authentication
   url: authentication/grist-authentication.yml
@@ -321,12 +328,12 @@ overview: 'Grist publishes 17 API contracts indexed on the [APIs.io](https://api
   The Grist catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Grist''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 15 more developer resources.'
+  Grist''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 16 more developer resources.'
 plans:
 - name: Grist Plans Pricing
   plan_count: 5
   slug: grist-plans-pricing
-random_paper: 3
+random_paper: 1
 rate_limits:
 - limit_count: 6
   name: Grist Rate Limits
@@ -345,23 +352,23 @@ rules:
   slug: grist-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 36.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 58.8
     catalog_earned_first_party: 0.0
     catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 23.5
     contract_quality: 51.5
-    developer_ergonomics: 26.2
+    developer_ergonomics: 27.4
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 44.7
+  previous_composite: 36.6
   provenance:
     agentic_access: derived
     contracts:
@@ -375,13 +382,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/grist/refs/heads/main/screenshots/grist-2026-06-20T182409.png
+screenshot: https://apis.io/screenshots/grist/grist-2026-06-20T182409.png
 security:
 - kind: authentication
   name: Grist Authentication

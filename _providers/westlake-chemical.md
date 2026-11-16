@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 12
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/westlake-chemical/refs/heads/main/security/westlake-chemical-domain-security.yml
+  href: https://artifacts.apis.io/westlake-chemical/security/westlake-chemical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/westlake-chemical-domain-security.yml
@@ -113,12 +117,12 @@ press:
 - date: ''
   title: Westlake Chemical Partners LP Announces First Quarter 2026 ...
   url: https://markets.chroniclejournal.com/chroniclejournal/article/bizwire-2026-5-5-westlake-chemical-partners-lp-announces-first-quarter-2026-results
-random_paper: 15
+random_paper: 3
 score:
   band: minimal
   composite: 10.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -139,14 +143,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/westlake-chemical/refs/heads/main/screenshots/westlake-chemical-2026-06-20T201407.png
+screenshot: https://apis.io/screenshots/westlake-chemical/westlake-chemical-2026-06-20T201407.png
 security:
 - kind: domain-security
   name: Westlake Chemical Domain Security

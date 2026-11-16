@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/anshinewenergy/refs/heads/main/hosts/anshinewenergy-hosts.yml
+  href: https://artifacts.apis.io/anshinewenergy/hosts/anshinewenergy-hosts.yml
   title: ''
   type: Hosts
   url: hosts/anshinewenergy-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/anshinewenergy/refs/heads/main/vendors/anshinewenergy-vendors.yml
+  href: https://artifacts.apis.io/anshinewenergy/vendors/anshinewenergy-vendors.yml
   title: ''
   type: Vendors
   url: vendors/anshinewenergy-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anshinewenergy/refs/heads/main/security/anshinewenergy-domain-security.yml
+  href: https://artifacts.apis.io/anshinewenergy/security/anshinewenergy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/anshinewenergy-domain-security.yml
@@ -54,12 +67,12 @@ name: Anshinewenergy
 nav: Providers
 network: true
 overview: Anshinewenergy is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Renewables, Solar, and Cleantech.
-random_paper: 15
+random_paper: 23
 score:
   band: minimal
   composite: 3.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
@@ -86,14 +99,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/anshinewenergy/refs/heads/main/screenshots/anshinewenergy-2026-10-11T095753.png
+screenshot: https://apis.io/screenshots/anshinewenergy/anshinewenergy-2026-10-11T095753.png
 security:
 - kind: domain-security
   name: Anshinewenergy Domain Security

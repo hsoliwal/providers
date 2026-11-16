@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -22,22 +22,25 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: true
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.5
-  scored_at: '2026-10-17'
-api_count: 6
+  score: 47.8
+  scored_at: '2026-11-06'
+api_count: 4
 apis:
 - baseURL: https://api.monetate.net/api/data/v1/{retailerShortname}/production
   baseurl_source: declared
@@ -77,7 +80,7 @@ apis:
   description: File upload related endpoints.
   name: Monetate Upload API
   slug: monetate-upload-api
-artifact_total: 19
+artifact_total: 25
 collections:
 - collection_type: open
   name: Monetate Auth API
@@ -101,12 +104,12 @@ common:
   type: BlogRSS
   url: https://monetate.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/overlays/monetate-engine-api-overlay.yaml
+  href: https://artifacts.apis.io/monetate/overlays/monetate-engine-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/monetate-engine-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/overlays/monetate-auth-api-overlay.yaml
+  href: https://artifacts.apis.io/monetate/overlays/monetate-auth-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/monetate-auth-api-overlay.yaml
@@ -151,7 +154,7 @@ common:
   type: Pricing
   url: https://monetate.com/pricing/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/plans/monetate-plans-pricing.yml
+  href: https://artifacts.apis.io/monetate/plans/monetate-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/monetate-plans-pricing.yml
@@ -180,7 +183,7 @@ common:
   type: ChangeLog
   url: https://docs.monetate.com/docs/release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/changelog/monetate-changelog.yml
+  href: https://artifacts.apis.io/monetate/changelog/monetate-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/monetate-changelog.yml
@@ -189,77 +192,85 @@ common:
   type: TrustCenter
   url: https://trust.monetate.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/security/monetate-trust-center.yml
+  href: https://artifacts.apis.io/monetate/security/monetate-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/monetate-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/lifecycle/monetate-lifecycle.yml
+  href: https://artifacts.apis.io/monetate/lifecycle/monetate-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/monetate-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/authentication/monetate-authentication.yml
+  href: https://artifacts.apis.io/monetate/authentication/monetate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/monetate-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/conventions/monetate-conventions.yml
+  href: https://artifacts.apis.io/monetate/conventions/monetate-conventions.yml
   title: ''
   type: Conventions
   url: conventions/monetate-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/errors/monetate-problem-types.yml
+  href: https://artifacts.apis.io/monetate/errors/monetate-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/monetate-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/rate-limits/monetate-rate-limits.yml
+  href: https://artifacts.apis.io/monetate/rate-limits/monetate-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/monetate-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/conformance/monetate-conformance.yml
+  href: https://artifacts.apis.io/monetate/conformance/monetate-conformance.yml
   title: ''
   type: Conformance
   url: conformance/monetate-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/data-model/monetate-data-model.yml
+  href: https://artifacts.apis.io/monetate/data-model/monetate-data-model.yml
   title: ''
   type: DataModel
   url: data-model/monetate-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/security/monetate-domain-security.yml
+  href: https://artifacts.apis.io/monetate/security/monetate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/monetate-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/well-known/monetate-well-known.yml
+  href: https://artifacts.apis.io/monetate/well-known/monetate-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/monetate-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/llms/monetate-llms.txt
+  href: https://artifacts.apis.io/monetate/llms/monetate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/monetate-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/packages/monetate-packages.yml
+  href: https://artifacts.apis.io/monetate/packages/monetate-packages.yml
   title: ''
   type: Packages
   url: packages/monetate-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/packages/monetate-packages.yml
+  href: https://artifacts.apis.io/monetate/packages/monetate-packages.yml
   title: ''
   type: SDKs
   url: packages/monetate-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/monetate/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-08-12'
 description: Monetate is an enterprise experience-optimization and personalization platform for ecommerce and digital businesses, delivering A/B and multivariate testing, automated 1:1 personalization, product and content recommendations, personalized search, dynamic bundles, social proof and product badging across web, mobile, email and in-store channels. Its decision engine is exposed to developers through four public REST APIs — the Engine API (real-time decision requests), the Data API (schema definition, customer/product data ingestion and default catalog management), the Metadata API (accounts, experiences, page events and custom targets) and the Auth API (bearer-token issue and refresh) — plus a browser JavaScript API and native SDKs for iOS, Android, React Web and React Native. Monetate operates as part of Kibo Commerce.
+finops:
+- has_sources: true
+  method: derived
+  name: Monetate Finops
+  primary_unit: ''
+  service_category: ''
+  slug: monetate-finops
+  template: true
 image: https://images.archbee.com/ceIfEvQHzQk1IVxoRWUh7/48dIncdY24xPwZLOvfSEr_horizontal-pink-blue-800px.png
 layout: provider
 mcp_servers:
@@ -273,35 +284,51 @@ network: true
 overview: 'Monetate publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Metadata API, Decision API, and 5 more. Tagged areas include Company, Personalization, Experience Optimization, A/B Testing, and E-Commerce.
 
 
+  The Monetate catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Monetate''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 30 more developer resources.'
 plans:
 - name: Monetate Plans Pricing
   plan_count: 0
   slug: monetate-plans-pricing
-random_paper: 3
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Monetate Rate Limits
   slug: monetate-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Monetate API Rules
+  rule_count: 60
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 4
+    warn: 9
+  slug: monetate-rules
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 55.1
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 26
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 52.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.9
     developer_ergonomics: 66.1
     discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 53.3
+  previous_composite: 55.1
   provenance:
     conformance: derived
     contracts:
@@ -317,13 +344,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/screenshots/monetate-2026-08-17T081059.png
+screenshot: https://apis.io/screenshots/monetate/monetate-2026-08-17T081059.png
 security:
 - kind: authentication
   name: Monetate Authentication
@@ -341,6 +368,16 @@ security:
   name: Monetate Trust Center
   slug: monetate-trust-center
   summary_line: trust center published
+skill_count: 4
+skills:
+- name: monetate-load-customer-data
+  slug: monetate-load-customer-data
+- name: monetate-mint-api-token
+  slug: monetate-mint-api-token
+- name: monetate-request-decisions
+  slug: monetate-request-decisions
+- name: monetate-resolve-experience-metadata
+  slug: monetate-resolve-experience-metadata
 slug: monetate
 tags:
 - Company

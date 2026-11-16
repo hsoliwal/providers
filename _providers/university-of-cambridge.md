@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 39
   slug: university-of-cambridge-agentic-access
   summary_line: 39 operations
-api_count: 2
+api_count: 1
 apis:
 - description: The University's central web authentication service. Raven OAuth2 conforms to OpenID Connect; applications register client credentials to authenticate Cambridge users. An identity/SSO interface rather
   name: Raven Authentication (OAuth2 / OpenID Connect)
@@ -88,11 +95,8 @@ apis:
 - description: 'Cambridge''s current research information system (CRIS) is Symplectic Elements, reached at elements.admin.cam.ac.uk. The host sits under cam.ac.uk but resolves via CNAME to cam.elements.symplectic.org '
   name: Symplectic Elements research information system — TENANT
   slug: elements-symplectic
-artifact_total: 35
+artifact_total: 34
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Lookup/Ibis web service group API
   slug: open-university-of-cambridge-group-api
@@ -106,18 +110,23 @@ collections:
   name: Lookup/Ibis web service group person API
   slug: open-university-of-cambridge-person-api
 common:
+- group: other
+  href: https://artifacts.apis.io/university-of-cambridge/capabilities/university-of-cambridge-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/university-of-cambridge-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/agentic-access/university-of-cambridge-agentic-access.yml
+  href: https://artifacts.apis.io/university-of-cambridge/agentic-access/university-of-cambridge-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/university-of-cambridge-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/security/university-of-cambridge-domain-security.yml
+  href: https://artifacts.apis.io/university-of-cambridge/security/university-of-cambridge-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/university-of-cambridge-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/authentication/university-of-cambridge-authentication.yml
+  href: https://artifacts.apis.io/university-of-cambridge/authentication/university-of-cambridge-authentication.yml
   title: ''
   type: Authentication
   url: authentication/university-of-cambridge-authentication.yml
@@ -142,22 +151,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/school/university-of-cambridge/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/plans/university-of-cambridge-plans-pricing.yml
+  href: https://artifacts.apis.io/university-of-cambridge/plans/university-of-cambridge-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/university-of-cambridge-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/rate-limits/university-of-cambridge-rate-limits.yml
+  href: https://artifacts.apis.io/university-of-cambridge/rate-limits/university-of-cambridge-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/university-of-cambridge-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/finops/university-of-cambridge-finops.yml
+  href: https://artifacts.apis.io/university-of-cambridge/finops/university-of-cambridge-finops.yml
   title: ''
   type: FinOps
   url: finops/university-of-cambridge-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/university-of-cambridge/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -214,17 +223,17 @@ common:
   type: Support
   url: https://help.uis.cam.ac.uk/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/conformance/university-of-cambridge-education-standards.yml
+  href: https://artifacts.apis.io/university-of-cambridge/conformance/university-of-cambridge-education-standards.yml
   title: ''
   type: Conformance
   url: conformance/university-of-cambridge-education-standards.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/lifecycle/university-of-cambridge-gateway-lifecycle.yml
+  href: https://artifacts.apis.io/university-of-cambridge/lifecycle/university-of-cambridge-gateway-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/university-of-cambridge-gateway-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/errors/university-of-cambridge-errors.yml
+  href: https://artifacts.apis.io/university-of-cambridge/errors/university-of-cambridge-errors.yml
   title: ''
   type: Errors
   url: errors/university-of-cambridge-errors.yml
@@ -286,12 +295,12 @@ overview: 'University of Cambridge publishes 12 API contracts indexed on the [AP
   The University of Cambridge catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  University of Cambridge''s developer surface includes authentication, engineering blog, documentation, API reference, support, and 23 more developer resources.'
+  University of Cambridge''s developer surface includes authentication, engineering blog, documentation, API reference, support, and 24 more developer resources.'
 plans:
 - name: University Of Cambridge Plans Pricing
   plan_count: 2
   slug: university-of-cambridge-plans-pricing
-random_paper: 19
+random_paper: 23
 rate_limits:
 - limit_count: 1
   name: University Of Cambridge Rate Limits
@@ -322,19 +331,19 @@ rules:
   slug: university-of-cambridge-rules
 score:
   band: developing
-  composite: 43.9
+  composite: 45.2
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 24
     catalog_earned: 53.9
     catalog_earned_first_party: 0.0
     catalog_gap: 61.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 1.3
   facets:
     access_clarity: 39.5
     contract_governance: 31.8
-    contract_quality: 56.0
+    contract_quality: 60.9
     developer_ergonomics: 45.2
     discoverability: 57.1
     operational_transparency: 10.5
@@ -346,14 +355,14 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 50.0
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
   regulatory:
     applies: true
@@ -361,14 +370,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/university-of-cambridge/refs/heads/main/screenshots/university-of-cambridge-2026-06-20T200140.png
+screenshot: https://apis.io/screenshots/university-of-cambridge/university-of-cambridge-2026-06-20T200140.png
 security:
 - kind: authentication
   name: University Of Cambridge Authentication

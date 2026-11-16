@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Unified REST API surface across Nova Credit's products (Credit Passport v4, Cash Atlas v2, Income Navigator v2, Eligibility Compass v1). Server-side clients authenticate with HTTP Basic to mint a shor
@@ -92,67 +95,67 @@ common:
   type: PrivacyPolicy
   url: https://www.novacredit.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/authentication/nova-credit-authentication.yml
+  href: https://artifacts.apis.io/nova-credit/authentication/nova-credit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nova-credit-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/conventions/nova-credit-conventions.yml
+  href: https://artifacts.apis.io/nova-credit/conventions/nova-credit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nova-credit-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/errors/nova-credit-error-codes.yml
+  href: https://artifacts.apis.io/nova-credit/errors/nova-credit-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/nova-credit-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/lifecycle/nova-credit-lifecycle.yml
+  href: https://artifacts.apis.io/nova-credit/lifecycle/nova-credit-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nova-credit-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/sandbox/nova-credit-sandbox.yml
+  href: https://artifacts.apis.io/nova-credit/sandbox/nova-credit-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/nova-credit-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/asyncapi/nova-credit-webhooks.yml
+  href: https://artifacts.apis.io/nova-credit/asyncapi/nova-credit-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/nova-credit-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/conformance/nova-credit-conformance.yml
+  href: https://artifacts.apis.io/nova-credit/conformance/nova-credit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nova-credit-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/components/nova-credit-components.yml
+  href: https://artifacts.apis.io/nova-credit/components/nova-credit-components.yml
   title: ''
   type: Components
   url: components/nova-credit-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/data-model/nova-credit-data-model.yml
+  href: https://artifacts.apis.io/nova-credit/data-model/nova-credit-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nova-credit-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/mcp/nova-credit-mcp.yml
+  href: https://artifacts.apis.io/nova-credit/mcp/nova-credit-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nova-credit-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/llms/nova-credit-llms.txt
+  href: https://artifacts.apis.io/nova-credit/llms/nova-credit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nova-credit-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/security/nova-credit-domain-security.yml
+  href: https://artifacts.apis.io/nova-credit/security/nova-credit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nova-credit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/security/nova-credit-trust-center.yml
+  href: https://artifacts.apis.io/nova-credit/security/nova-credit-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/nova-credit-trust-center.yml
@@ -171,7 +174,7 @@ overview: 'Nova Credit is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Nova Credit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 17 more developer resources.'
-random_paper: 16
+random_paper: 12
 score:
   band: developing
   composite: 39.3
@@ -200,14 +203,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nova-credit/refs/heads/main/screenshots/nova-credit-2026-08-07T185554.png
+screenshot: https://apis.io/screenshots/nova-credit/nova-credit-2026-08-07T185554.png
 security:
 - kind: authentication
   name: Nova Credit Authentication

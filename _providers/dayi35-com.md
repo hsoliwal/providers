@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -46,7 +49,7 @@ common:
   type: About
   url: https://www.dayi35.com/about/index.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dayi35-com/refs/heads/main/security/dayi35-com-domain-security.yml
+  href: https://artifacts.apis.io/dayi35-com/security/dayi35-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dayi35-com-domain-security.yml
@@ -58,7 +61,7 @@ name: 大易有塑 (dayi35.com)
 nav: Providers
 network: true
 overview: 大易有塑 (dayi35.com) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Plastics, Chemicals, B2B Marketplace, and E-Commerce.
-random_paper: 11
+random_paper: 3
 score:
   band: minimal
   composite: 2.2
@@ -91,8 +94,8 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 5.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

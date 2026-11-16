@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.9
-  scored_at: '2026-10-17'
+  score: 30.3
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: CloudHealth API provides access to cloud financial management data.
@@ -62,42 +75,42 @@ apis:
 artifact_total: 16
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/vendors/cloudhealthsystems-vendors.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/vendors/cloudhealthsystems-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudhealthsystems-vendors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/rules/cloudhealthsystems-rules.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/rules/cloudhealthsystems-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudhealthsystems-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/json-ld/cloudhealthsystems-context.jsonld
+  href: https://artifacts.apis.io/cloudhealthsystems/json-ld/cloudhealthsystems-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloudhealthsystems-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/vocabulary/cloudhealthsystems-vocabulary.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/vocabulary/cloudhealthsystems-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cloudhealthsystems-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/data-model/cloudhealthsystems-data-model.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/data-model/cloudhealthsystems-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudhealthsystems-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/conformance/cloudhealthsystems-conformance.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/conformance/cloudhealthsystems-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudhealthsystems-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/well-known/cloudhealthsystems-well-known.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/well-known/cloudhealthsystems-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudhealthsystems-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/hosts/cloudhealthsystems-hosts.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/hosts/cloudhealthsystems-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudhealthsystems-hosts.yml
@@ -114,7 +127,7 @@ common:
   type: Documentation
   url: https://apidocs.cloudhealthtech.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudhealthsystems/refs/heads/main/security/cloudhealthsystems-domain-security.yml
+  href: https://artifacts.apis.io/cloudhealthsystems/security/cloudhealthsystems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudhealthsystems-domain-security.yml
@@ -160,7 +173,7 @@ overview: 'Cloudhealthsystems is listed with 7 APIs on the [APIs.io](https://api
 
 
   Cloudhealthsystems'' developer surface includes support, getting-started guide, documentation, and 10 more developer resources.'
-random_paper: 21
+random_paper: 13
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -176,21 +189,23 @@ rules:
   slug: cloudhealthsystems-rules
 score:
   band: emerging
-  composite: 20.6
+  composite: 19.0
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 63.8
     catalog_earned_first_party: 0.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.6
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 26.2
+    developer_ergonomics: 17.9
     discoverability: 67.9
     operational_transparency: 0.0
+  previous_composite: 20.6
   provenance:
     conformance: derived
     contracts:
@@ -205,11 +220,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cloudhealthsystems/cloudhealthsystems-2026-11-03T124511.png
 security:
 - kind: domain-security
   name: Cloudhealthsystems Domain Security

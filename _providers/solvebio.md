@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for querying biomedical and genomic datasets (now the QuartzBio EDP REST API). Served per-customer on instance hosts; requires authentication.
@@ -46,7 +50,7 @@ common:
   type: Website
   url: https://solvebio.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/security/solvebio-domain-security.yml
+  href: https://artifacts.apis.io/solvebio/security/solvebio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/solvebio-domain-security.yml
@@ -55,42 +59,42 @@ common:
   type: GitHubOrganization
   url: https://github.com/solvebio
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/packages/solvebio-packages.yml
+  href: https://artifacts.apis.io/solvebio/packages/solvebio-packages.yml
   title: ''
   type: Packages
   url: packages/solvebio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/packages/solvebio-packages.yml
+  href: https://artifacts.apis.io/solvebio/packages/solvebio-packages.yml
   title: ''
   type: SDKs
   url: packages/solvebio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/cli/solvebio-cli.yml
+  href: https://artifacts.apis.io/solvebio/cli/solvebio-cli.yml
   title: ''
   type: CLI
   url: cli/solvebio-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/authentication/solvebio-authentication.yml
+  href: https://artifacts.apis.io/solvebio/authentication/solvebio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/solvebio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/conventions/solvebio-conventions.yml
+  href: https://artifacts.apis.io/solvebio/conventions/solvebio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/solvebio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/lifecycle/solvebio-lifecycle.yml
+  href: https://artifacts.apis.io/solvebio/lifecycle/solvebio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/solvebio-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/lifecycle/solvebio-lifecycle.yml
+  href: https://artifacts.apis.io/solvebio/lifecycle/solvebio-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/solvebio-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/llms/solvebio-llms.txt
+  href: https://artifacts.apis.io/solvebio/llms/solvebio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/solvebio-llms.txt
@@ -106,12 +110,12 @@ overview: 'SolveBio is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   SolveBio''s developer surface includes CLI, authentication, and 9 more developer resources.'
-random_paper: 9
+random_paper: 3
 score:
   band: emerging
   composite: 13.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -132,14 +136,14 @@ score:
     regime: Health
     regime_id: health
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/solvebio/refs/heads/main/screenshots/solvebio-2026-10-11T130105.png
+screenshot: https://apis.io/screenshots/solvebio/solvebio-2026-10-11T130105.png
 security:
 - kind: authentication
   name: Solvebio Authentication

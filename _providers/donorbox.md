@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -22,21 +25,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: na
+    dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: na
+    idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
-    reversibility_documented: na
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.5
-  scored_at: '2026-10-17'
+  score: 39.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,44 +54,11 @@ api_count: 1
 apis:
 - baseURL: https://donorbox.org/api/v1
   baseurl_source: declared
-  description: Fundraising campaigns.
-  name: Donorbox Campaigns API
-  slug: donorbox-campaigns-api
-- baseURL: https://donorbox.org/api/v1
-  baseurl_source: declared
-  description: One-time and recurring donation transactions.
-  name: Donorbox Donations API
-  slug: donorbox-donations-api
-- baseURL: https://donorbox.org/api/v1
-  baseurl_source: declared
-  description: Donor/supporter profiles.
-  name: Donorbox Donors API
-  slug: donorbox-donors-api
-- baseURL: https://donorbox.org/api/v1
-  baseurl_source: declared
-  description: Ticketed fundraising events.
-  name: Donorbox Events API
-  slug: donorbox-events-api
-- baseURL: https://donorbox.org/api/v1
-  baseurl_source: declared
-  description: Recurring donation subscriptions.
-  name: Donorbox Plans API
-  slug: donorbox-plans-api
-- baseURL: https://donorbox.org/api/v1
-  baseurl_source: declared
-  description: Event ticket purchase transactions.
-  name: Donorbox Purchases API
-  slug: donorbox-purchases-api
-- baseURL: https://donorbox.org/api/v1
-  baseurl_source: declared
-  description: Individual event tickets.
-  name: Donorbox Tickets API
-  slug: donorbox-tickets-api
-artifact_total: 25
+  description: The Agent API from Donorbox — 3 operation(s) for agent.
+  name: Donorbox Agent API
+  slug: donorbox-agent-api
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Donorbox Campaigns API
   slug: open-donorbox-campaigns-api
@@ -111,28 +84,33 @@ collections:
   name: Donorbox API
   slug: open-donorbox
 common:
+- group: other
+  href: https://artifacts.apis.io/donorbox/capabilities/donorbox-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/donorbox-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/agentic-access/donorbox-agentic-access.yml
+  href: https://artifacts.apis.io/donorbox/agentic-access/donorbox-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/donorbox-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/security/donorbox-trust-center.yml
+  href: https://artifacts.apis.io/donorbox/security/donorbox-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/donorbox-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/security/donorbox-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/donorbox/security/donorbox-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/donorbox-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/security/donorbox-domain-security.yml
+  href: https://artifacts.apis.io/donorbox/security/donorbox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/donorbox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/authentication/donorbox-authentication.yml
+  href: https://artifacts.apis.io/donorbox/authentication/donorbox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/donorbox-authentication.yml
@@ -153,17 +131,17 @@ common:
   type: Documentation
   url: https://github.com/donorbox/donorbox-api/wiki
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/plans/donorbox-plans-pricing.yml
+  href: https://artifacts.apis.io/donorbox/plans/donorbox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/donorbox-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/rate-limits/donorbox-rate-limits.yml
+  href: https://artifacts.apis.io/donorbox/rate-limits/donorbox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/donorbox-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/finops/donorbox-finops.yml
+  href: https://artifacts.apis.io/donorbox/finops/donorbox-finops.yml
   title: ''
   type: FinOps
   url: finops/donorbox-finops.yml
@@ -191,45 +169,61 @@ modified: '2026-07-03'
 name: Donorbox
 nav: Providers
 network: true
-overview: 'Donorbox publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Donations API, Donors API, and 4 more. Tagged areas include Non-Profit, Fundraising, Donations, Payments, and Recurring Giving.
+overview: 'Donorbox publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Agent API. Tagged areas include Non-Profit, Fundraising, Donations, Payments, and Recurring Giving.
 
 
-  Donorbox''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
+  The Donorbox catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Donorbox''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Donorbox Plans Pricing
   plan_count: 4
   slug: donorbox-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Donorbox Rate Limits
   slug: donorbox-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 69
+  extends:
+  - spectral:oas
+  name: Donorbox API Rules
+  rule_count: 28
+  severity_counts:
+    error: 26
+    hint: 0
+    info: 1
+    warn: 1
+  slug: donorbox-rules
 score:
   band: thin
-  composite: 30.1
+  composite: 29.7
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 42.0
+    artifact_dirs: 19
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.5
+  delta: 0.1
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
-    contract_quality: 50.2
+    contract_governance: 13.6
+    contract_quality: 39.3
     developer_ergonomics: 32.1
     discoverability: 68.3
-    operational_transparency: 7.9
-  previous_composite: 37.6
+    operational_transparency: 18.4
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 88.9
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 11.1
+      total: 9
     mcp: first-party
   regulatory:
     applies: true
@@ -237,14 +231,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
-    applies: false
-    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
-    reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/donorbox/refs/heads/main/screenshots/donorbox-2026-07-25T212301.png
+    applies: true
+    score: 0.0
+screenshot: https://apis.io/screenshots/donorbox/donorbox-2026-07-25T212301.png
 security:
 - kind: authentication
   name: Donorbox Authentication

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 143
   human_in_the_loop: 5
@@ -160,11 +164,8 @@ apis:
   description: Manage Views to use ArangoSearch for information retrieval
   name: ArangoDB Views API
   slug: arangodb-views-api
-artifact_total: 52
+artifact_total: 58
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ArangoDB Core Administration API
   slug: open-arangodb-administration-api
@@ -233,7 +234,7 @@ collections:
   slug: open-arangodb-views-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/plans/arangodb-plans-pricing.yml
+  href: https://artifacts.apis.io/arangodb/plans/arangodb-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/arangodb-plans-pricing.yml
@@ -242,12 +243,12 @@ common:
   type: BlogRSS
   url: https://arango.ai/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/capabilities/arangodb-capability-edges.yml
+  href: https://artifacts.apis.io/arangodb/capabilities/arangodb-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/arangodb-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/overlays/arangodb-core-overlay.yaml
+  href: https://artifacts.apis.io/arangodb/overlays/arangodb-core-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/arangodb-core-overlay.yaml
@@ -304,97 +305,105 @@ common:
   type: Deprecation
   url: https://docs.arango.ai/arangodb/stable/release-notes/deprecated-and-removed-features/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/changelog/arangodb-changelog.yml
+  href: https://artifacts.apis.io/arangodb/changelog/arangodb-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/arangodb-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/lifecycle/arangodb-lifecycle.yml
+  href: https://artifacts.apis.io/arangodb/lifecycle/arangodb-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/arangodb-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/authentication/arangodb-authentication.yml
+  href: https://artifacts.apis.io/arangodb/authentication/arangodb-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arangodb-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/conventions/arangodb-conventions.yml
+  href: https://artifacts.apis.io/arangodb/conventions/arangodb-conventions.yml
   title: ''
   type: Conventions
   url: conventions/arangodb-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/errors/arangodb-error-codes.yml
+  href: https://artifacts.apis.io/arangodb/errors/arangodb-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/arangodb-error-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/packages/arangodb-packages.yml
+  href: https://artifacts.apis.io/arangodb/packages/arangodb-packages.yml
   title: ''
   type: Packages
   url: packages/arangodb-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/packages/arangodb-packages.yml
+  href: https://artifacts.apis.io/arangodb/packages/arangodb-packages.yml
   title: ''
   type: SDKs
   url: packages/arangodb-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/cli/arangodb-cli.yml
+  href: https://artifacts.apis.io/arangodb/cli/arangodb-cli.yml
   title: ''
   type: CLI
   url: cli/arangodb-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/mcp/arangodb-mcp.yml
+  href: https://artifacts.apis.io/arangodb/mcp/arangodb-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/arangodb-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/mcp/arangodb-tool-crosswalk.yml
+  href: https://artifacts.apis.io/arangodb/mcp/arangodb-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/arangodb-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/arangodb/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/llms/arangodb-llms.txt
+  href: https://artifacts.apis.io/arangodb/llms/arangodb-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arangodb-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/well-known/arangodb-well-known.yml
+  href: https://artifacts.apis.io/arangodb/well-known/arangodb-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arangodb-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/grpc/
+  href: https://artifacts.apis.io/arangodb/grpc/
   title: ''
   type: Protobuf
   url: grpc/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/conformance/arangodb-conformance.yml
+  href: https://artifacts.apis.io/arangodb/conformance/arangodb-conformance.yml
   title: ''
   type: Conformance
   url: conformance/arangodb-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/data-model/arangodb-data-model.yml
+  href: https://artifacts.apis.io/arangodb/data-model/arangodb-data-model.yml
   title: ''
   type: DataModel
   url: data-model/arangodb-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/security/arangodb-domain-security.yml
+  href: https://artifacts.apis.io/arangodb/security/arangodb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arangodb-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/agentic-access/arangodb-agentic-access.yml
+  href: https://artifacts.apis.io/arangodb/agentic-access/arangodb-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arangodb-agentic-access.yml
 created: '2026-08-02'
 description: ArangoDB (now operating as Arango) is the company behind the open-source, graph-native multi-model database of the same name, which unifies graph, document, key/value, vector and full-text search in a single core with one declarative query language, AQL. The database exposes its entire feature surface over a RESTful HTTP API documented with OpenAPI 3.1, and the company also runs the Arango Managed Platform (AMP, formerly ArangoGraph Insights Platform / Oasis) — a managed cloud on AWS, GCP and Azure whose control plane is a gRPC/Protobuf API at api.cloud.arangodb.com with a companion oasisctl CLI. Arango publishes official drivers for JavaScript, Python, Java, Go and PHP, an official Model Context Protocol server for AQL generation, and a Kubernetes operator.
+finops:
+- has_sources: true
+  method: derived
+  name: Arangodb Finops
+  primary_unit: ''
+  service_category: ''
+  slug: arangodb-finops
+  template: true
 image: https://arango.ai/wp-content/uploads/2026/03/arango-home-social-horz-2026.03-compress.png
 layout: provider
 mcp_servers:
@@ -408,31 +417,47 @@ network: true
 overview: 'ArangoDB publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Administration API, Analyzers API, Authentication API, and 21 more. Tagged areas include Company, Database, Graph Database, Multi-Model Database, and NoSQL.
 
 
+  The ArangoDB catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   ArangoDB''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 28 more developer resources.'
 plans:
 - name: Arangodb Plans Pricing
   plan_count: 4
   slug: arangodb-plans-pricing
-random_paper: 16
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: ArangoDB API Rules
+  rule_count: 50
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 8
+  slug: arangodb-rules
 score:
-  band: developing
-  composite: 52.7
+  band: strong
+  composite: 54.4
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 30
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 65.8
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 42.3
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 46.3
+  previous_composite: 54.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -449,13 +474,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/screenshots/arangodb-2026-08-07T161603.png
+screenshot: https://apis.io/screenshots/arangodb/arangodb-2026-08-07T161603.png
 security:
 - kind: authentication
   name: Arangodb Authentication
@@ -465,6 +490,18 @@ security:
   name: Arangodb Domain Security
   slug: arangodb-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 5
+skills:
+- name: Build a named graph and traverse it
+  slug: arangodb-build-a-named-graph
+- name: Provision an ArangoDB database and grant least-privilege access
+  slug: arangodb-provision-database-and-access
+- name: Run an AQL query against ArangoDB and page the whole result set
+  slug: arangodb-run-aql-query
+- name: Index a collection for search and vector similarity
+  slug: arangodb-search-and-vector-index
+- name: Create and update ArangoDB documents safely
+  slug: arangodb-write-documents-safely
 slug: arangodb
 tags:
 - Company

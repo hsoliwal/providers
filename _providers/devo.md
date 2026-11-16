@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Run queries against data ingested into Devo. Supports synchronous JSON/CSV/TSV responses and asynchronous job-based delivery to repositories (HDFS, Amazon S3, Kafka). Job requests start, stop, check s
@@ -82,7 +85,7 @@ common:
   type: GettingStarted
   url: https://docs.devo.com/space/latest/95128301/Running+queries+with+the+Query+API
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/authentication/devo-authentication.yml
+  href: https://artifacts.apis.io/devo/authentication/devo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/devo-authentication.yml
@@ -115,7 +118,7 @@ common:
   type: PrivacyPolicy
   url: https://www.devo.com/privacy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/security/devo-trust-center.yml
+  href: https://artifacts.apis.io/devo/security/devo-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/devo-trust-center.yml
@@ -124,52 +127,52 @@ common:
   type: Compliance
   url: https://www.devo.com/trust-center/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/packages/devo-packages.yml
+  href: https://artifacts.apis.io/devo/packages/devo-packages.yml
   title: ''
   type: Packages
   url: packages/devo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/packages/devo-packages.yml
+  href: https://artifacts.apis.io/devo/packages/devo-packages.yml
   title: ''
   type: SDKs
   url: packages/devo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/cli/devo-cli.yml
+  href: https://artifacts.apis.io/devo/cli/devo-cli.yml
   title: ''
   type: CLI
   url: cli/devo-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/components/devo-components.yml
+  href: https://artifacts.apis.io/devo/components/devo-components.yml
   title: ''
   type: Components
   url: components/devo-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/well-known/devo-well-known.yml
+  href: https://artifacts.apis.io/devo/well-known/devo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/devo-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/conventions/devo-conventions.yml
+  href: https://artifacts.apis.io/devo/conventions/devo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/devo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/conformance/devo-conformance.yml
+  href: https://artifacts.apis.io/devo/conformance/devo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/devo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/lifecycle/devo-lifecycle.yml
+  href: https://artifacts.apis.io/devo/lifecycle/devo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/devo-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/security/devo-domain-security.yml
+  href: https://artifacts.apis.io/devo/security/devo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/devo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/llms/devo-llms.txt
+  href: https://artifacts.apis.io/devo/llms/devo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/devo-llms.txt
@@ -185,12 +188,12 @@ overview: 'Devo is listed with 6 APIs on the [APIs.io](https://apis.io/) network
 
 
   Devo''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, signup flow, and 19 more developer resources.'
-random_paper: 12
+random_paper: 22
 score:
   band: thin
   composite: 36.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -213,14 +216,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/screenshots/devo-2026-07-25T211822.png
+screenshot: https://apis.io/screenshots/devo/devo-2026-07-25T211822.png
 security:
 - kind: authentication
   name: Devo Authentication

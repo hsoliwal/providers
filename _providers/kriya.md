@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 25.0
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.kriya.co/payments/
@@ -68,15 +71,12 @@ apis:
   description: The Scenario API from Kriya — 1 operation(s) for scenario.
   name: Kriya Scenario API
   slug: kriya-scenario-api
-artifact_total: 17
+artifact_total: 20
 asyncapis:
 - description: ''
   name: Kriya Payments Webhooks
   slug: kriya-payments-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Kriya Onboarding Buyers API
   slug: open-kriya-buyers-api
@@ -97,7 +97,7 @@ collections:
   slug: open-kriya-scenario-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/overlays/kriya-onboarding-overlay.yaml
+  href: https://artifacts.apis.io/kriya/overlays/kriya-onboarding-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kriya-onboarding-overlay.yaml
@@ -146,77 +146,77 @@ common:
   type: Security
   url: https://www.kriya.co/responsible-disclosure
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/authentication/kriya-authentication.yml
+  href: https://artifacts.apis.io/kriya/authentication/kriya-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kriya-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/conventions/kriya-conventions.yml
+  href: https://artifacts.apis.io/kriya/conventions/kriya-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kriya-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/errors/kriya-problem-types.yml
+  href: https://artifacts.apis.io/kriya/errors/kriya-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kriya-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/errors/kriya-decline-codes.yml
+  href: https://artifacts.apis.io/kriya/errors/kriya-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/kriya-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/lifecycle/kriya-lifecycle.yml
+  href: https://artifacts.apis.io/kriya/lifecycle/kriya-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kriya-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/conformance/kriya-conformance.yml
+  href: https://artifacts.apis.io/kriya/conformance/kriya-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kriya-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/asyncapi/kriya-payments-webhooks.yml
+  href: https://artifacts.apis.io/kriya/asyncapi/kriya-payments-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/kriya-payments-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/sandbox/kriya-sandbox.yml
+  href: https://artifacts.apis.io/kriya/sandbox/kriya-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/kriya-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/data-model/kriya-data-model.yml
+  href: https://artifacts.apis.io/kriya/data-model/kriya-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kriya-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/components/kriya-components.yml
+  href: https://artifacts.apis.io/kriya/components/kriya-components.yml
   title: ''
   type: Components
   url: components/kriya-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/mcp/kriya-mcp.yml
+  href: https://artifacts.apis.io/kriya/mcp/kriya-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kriya-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/llms/kriya-llms.txt
+  href: https://artifacts.apis.io/kriya/llms/kriya-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kriya-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kriya/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/security/kriya-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kriya/security/kriya-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kriya-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/security/kriya-domain-security.yml
+  href: https://artifacts.apis.io/kriya/security/kriya-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kriya-domain-security.yml
@@ -231,25 +231,38 @@ network: true
 overview: 'Kriya publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Buyers API, Onboarding API, OnboardingJourney API, and 3 more. Tagged areas include Company, Fintech, Payments, Embedded Finance, and Buy Now Pay Later.
 
 
-  The Kriya catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Kriya catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Kriya''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 20 more developer resources.'
 random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Kriya API Rules
+  rule_count: 58
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 7
+    warn: 8
+  slug: kriya-rules
 score:
   band: thin
-  composite: 37.1
+  composite: 38.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.8
     developer_ergonomics: 28.0
     discoverability: 73.2
@@ -262,7 +275,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 37.1
+  previous_composite: 38.8
   provenance:
     conformance: derived
     contracts:
@@ -278,13 +291,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/kriya/refs/heads/main/screenshots/kriya-2026-07-25T224301.png
+screenshot: https://apis.io/screenshots/kriya/kriya-2026-07-25T224301.png
 security:
 - kind: authentication
   name: Kriya Authentication
@@ -298,6 +311,14 @@ security:
   name: Kriya Vulnerability Disclosure
   slug: kriya-vulnerability-disclosure
   summary_line: contact published
+skill_count: 3
+skills:
+- name: Take payment through the Kriya hosted Payments Journey
+  slug: kriya-hosted-payments-journey
+- name: Onboard a Kriya buyer and place a B2B PayLater order
+  slug: kriya-onboard-buyer-and-place-order
+- name: Run Kriya onboarding and KYC checks on a buyer company
+  slug: kriya-run-onboarding-checks
 slug: kriya
 tags:
 - Company

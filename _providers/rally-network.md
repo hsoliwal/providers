@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Open-source web3 mobile toolkit exposed as first-party SDKs (React Native/Expo, Flutter, Unity) plus TypeScript libraries. Provides natively embedded self-custodial wallets and gasless transactions vi
@@ -41,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rally-network/refs/heads/main/security/rally-network-domain-security.yml
+  href: https://artifacts.apis.io/rally-network/security/rally-network-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rally-network-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rally-network/refs/heads/main/packages/rally-network-packages.yml
+  href: https://artifacts.apis.io/rally-network/packages/rally-network-packages.yml
   title: ''
   type: SDKs
   url: packages/rally-network-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rally-network/refs/heads/main/packages/rally-network-packages.yml
+  href: https://artifacts.apis.io/rally-network/packages/rally-network-packages.yml
   title: ''
   type: Packages
   url: packages/rally-network-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rally-network/refs/heads/main/llms/rally-network-llms.txt
+  href: https://artifacts.apis.io/rally-network/llms/rally-network-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rally-network-llms.txt
@@ -69,7 +73,7 @@ name: Rally Network
 nav: Providers
 network: true
 overview: Rally Network is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, Blockchain, SDK, and Mobile.
-random_paper: 7
+random_paper: 3
 score:
   band: minimal
   composite: 8.9
@@ -95,14 +99,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 5.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rally-network/refs/heads/main/screenshots/rally-network-2026-09-02T152832.png
+screenshot: https://apis.io/screenshots/rally-network/rally-network-2026-09-02T152832.png
 security:
 - kind: domain-security
   name: Rally Network Domain Security

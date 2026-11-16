@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-10-17'
+  score: 33.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -125,15 +128,12 @@ apis:
   description: The Zones API from Spot AI — 1 operation(s) for zones.
   name: Spot AI Zones API
   slug: spot-ai-zones-api
-artifact_total: 38
+artifact_total: 42
 asyncapis:
 - description: ''
   name: Spot Webhooks
   slug: spot-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Spot AI — Spot Connect (beta) Analytics API
   slug: open-spot-analytics-api
@@ -181,27 +181,27 @@ collections:
   slug: open-spot-zones-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/plans/spot-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/spot-ai/plans/spot-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/spot-ai-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/security/spot-trust-center.yml
+  href: https://artifacts.apis.io/spot-ai/security/spot-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/spot-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/security/spot-domain-security.yml
+  href: https://artifacts.apis.io/spot-ai/security/spot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spot-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/agentic-access/spot-agentic-access.yml
+  href: https://artifacts.apis.io/spot-ai/agentic-access/spot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/authentication/spot-authentication.yml
+  href: https://artifacts.apis.io/spot-ai/authentication/spot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spot-authentication.yml
@@ -266,57 +266,65 @@ common:
   type: Compliance
   url: https://www.spot.ai/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/llms/spot-llms.txt
+  href: https://artifacts.apis.io/spot-ai/llms/spot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/spot-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/errors/spot-problem-types.yml
+  href: https://artifacts.apis.io/spot-ai/errors/spot-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/spot-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/conventions/spot-conventions.yml
+  href: https://artifacts.apis.io/spot-ai/conventions/spot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/spot-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/lifecycle/spot-lifecycle.yml
+  href: https://artifacts.apis.io/spot-ai/lifecycle/spot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/spot-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/conformance/spot-conformance.yml
+  href: https://artifacts.apis.io/spot-ai/conformance/spot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/spot-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/data-model/spot-data-model.yml
+  href: https://artifacts.apis.io/spot-ai/data-model/spot-data-model.yml
   title: ''
   type: DataModel
   url: data-model/spot-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/asyncapi/spot-webhooks.yml
+  href: https://artifacts.apis.io/spot-ai/asyncapi/spot-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/spot-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/mcp/spot-mcp.yml
+  href: https://artifacts.apis.io/spot-ai/mcp/spot-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/spot-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/spot-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/overlays/spot-devices-overlay.yaml
+  href: https://artifacts.apis.io/spot-ai/overlays/spot-devices-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/spot-devices-overlay.yaml
 created: '2026-07-17'
 description: 'Spot AI is a physical-security video-AI platform that turns surveillance cameras into AI agents which monitor spaces 24/7, detect suspicious activity, and trigger automated responses across retail, manufacturing, construction, healthcare, and education. The Spot AI Developer API is a JSON REST API on https://dev-api.spot.ai/ (bearer API-key auth) with three surfaces: Devices (locations, appliances, cameras, live/VOD embeds, historical footage, zones, shared searches, audio playback), Intelligence (people/vehicle counting, idle/presence analytics, and License Plate Recognition interest lists), and Spot Connect (a beta integrations platform that links external business events to camera footage via integrations, devices, event types, and events, with signed RSA256 webhooks for real-time delivery).'
+finops:
+- has_sources: true
+  method: derived
+  name: Spot Ai Finops
+  primary_unit: ''
+  service_category: ''
+  slug: spot-ai-finops
+  template: true
 image: https://cdn.prod.website-files.com/5fe2250e2f83cc02cbfefbcf/68ae36e3393364b50b65e143_Spot%20AI.png
 layout: provider
 modified: '2026-07-21'
@@ -326,7 +334,7 @@ network: true
 overview: 'Spot AI publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Appliances API, Audio API, and 12 more. Tagged areas include Company, Video, Physical Security, Surveillance, and Computer Vision.
 
 
-  The Spot AI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Spot AI catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Spot AI''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 23 more developer resources.'
@@ -334,26 +342,39 @@ plans:
 - name: Spot Ai Plans Pricing
   plan_count: 0
   slug: spot-ai-plans-pricing
-random_paper: 19
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Spot AI API Rules
+  rule_count: 62
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 3
+    warn: 11
+  slug: spot-ai-rules
 score:
   band: developing
-  composite: 46.0
+  composite: 51.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.8
   facets:
     access_clarity: 47.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 58.7
-    developer_ergonomics: 39.9
+    developer_ergonomics: 58.9
     discoverability: 78.6
     operational_transparency: 21.1
-  previous_composite: 46.0
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -374,13 +395,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/spot-ai/refs/heads/main/screenshots/spot-2026-08-17T082037.png
+screenshot: https://apis.io/screenshots/spot-ai/spot-2026-08-17T082037.png
 security:
 - kind: authentication
   name: Spot Authentication
@@ -394,6 +415,14 @@ security:
   name: Spot Trust Center
   slug: spot-trust-center
   summary_line: SOC 2, HIPAA
+skill_count: 3
+skills:
+- name: Browse the camera estate and open a live view
+  slug: spot-camera-live-view
+- name: Stand up a Spot Connect integration and ingest business events
+  slug: spot-connect-ingest-events
+- name: Monitor license plates with an LPR interest list
+  slug: spot-lpr-interest-list
 slug: spot-ai
 tags:
 - Company

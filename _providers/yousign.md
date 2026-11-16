@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   - '{''url'': ''https://yousign.com'', ''status'': 301, ''note'': ''declared website redirects to https://youtrust.com/ — a different registrable domain (yousign.com -> youtrust.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
@@ -22,21 +26,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 37.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 89
   human_in_the_loop: 0
@@ -236,11 +243,8 @@ apis:
   description: A way to partition your Yousign organization into separate entities.
   name: YouSign Workspace API
   slug: yousign-workspace-api
-artifact_total: 87
+artifact_total: 86
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Public Api v3 Applicant API
   slug: open-yousign-applicant-api
@@ -357,27 +361,27 @@ collections:
   slug: open-yousign-workspace-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/capabilities/yousign-capability-edges.yml
+  href: https://artifacts.apis.io/yousign/capabilities/yousign-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/yousign-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/agentic-access/yousign-agentic-access.yml
+  href: https://artifacts.apis.io/yousign/agentic-access/yousign-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/yousign-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/security/yousign-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/yousign/security/yousign-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/yousign-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/security/yousign-domain-security.yml
+  href: https://artifacts.apis.io/yousign/security/yousign-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yousign-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/authentication/yousign-authentication.yml
+  href: https://artifacts.apis.io/yousign/authentication/yousign-authentication.yml
   title: ''
   type: Authentication
   url: authentication/yousign-authentication.yml
@@ -422,30 +426,30 @@ common:
   type: Developers
   url: https://yousign.com/developers
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/plans/yousign-plans-pricing.yml
+  href: https://artifacts.apis.io/yousign/plans/yousign-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/yousign-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/rate-limits/yousign-rate-limits.yml
+  href: https://artifacts.apis.io/yousign/rate-limits/yousign-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/yousign-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/finops/yousign-finops.yml
+  href: https://artifacts.apis.io/yousign/finops/yousign-finops.yml
   title: ''
   type: FinOps
   url: finops/yousign-finops.yml
 created: '2026-06-13'
 description: European e-signature platform compliant with eIDAS with a REST API for creating signature requests, managing signers, sending documents, and tracking signing workflows across simple, advanced, and qualified signature levels.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Yousign Finops
-  primary_unit: ''
+  primary_unit: month, excl. vat
   service_category: ''
   slug: yousign-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/yousign.png
 jsonld:
 - class_count: 29
@@ -471,7 +475,7 @@ plans:
 - name: Yousign Price Estimates
   plan_count: 0
   slug: yousign-price-estimates
-random_paper: 12
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Yousign Rate Limits
@@ -489,29 +493,29 @@ rules:
     warn: 4
   slug: yousign-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 51.9
+  band: strong
+  composite: 57.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 85.2
+    artifact_dirs: 20
+    catalog_earned: 88.2
     catalog_earned_first_party: 24.0
-    catalog_gap: 29.9
+    catalog_gap: 26.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 2.7
   facets:
-    access_clarity: 42.1
+    access_clarity: 50.0
     contract_governance: 23.5
     contract_quality: 70.0
-    developer_ergonomics: 27.4
+    developer_ergonomics: 35.7
     discoverability: 66.1
-    operational_transparency: 60.5
+    operational_transparency: 78.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 53.4
+  previous_composite: 54.8
   provenance:
     agentic_access: derived
     contracts:
@@ -525,13 +529,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/yousign/refs/heads/main/screenshots/yousign-2026-06-20T201749.png
+screenshot: https://apis.io/screenshots/yousign/yousign-2026-06-20T201749.png
 security:
 - kind: authentication
   name: Yousign Authentication

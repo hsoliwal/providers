@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: documented
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.5
-  scored_at: '2026-10-17'
+  score: 26.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 44
   slug: column-agentic-access
   summary_line: 44 operations · 21 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.column.com
   baseurl_source: declared
@@ -147,9 +150,6 @@ apis:
 artifact_total: 42
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Column Account Numbers API
   slug: open-column-account-numbers-api
 - collection_type: open
@@ -193,7 +193,7 @@ collections:
   slug: open-column
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/capabilities/column-capability-edges.yml
+  href: https://artifacts.apis.io/column/capabilities/column-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/column-capability-edges.yml
@@ -226,17 +226,17 @@ common:
   type: Login
   url: https://dashboard.column.com/login
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/agentic-access/column-agentic-access.yml
+  href: https://artifacts.apis.io/column/agentic-access/column-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/column-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/security/column-domain-security.yml
+  href: https://artifacts.apis.io/column/security/column-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/column-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/authentication/column-authentication.yml
+  href: https://artifacts.apis.io/column/authentication/column-authentication.yml
   title: ''
   type: Authentication
   url: authentication/column-authentication.yml
@@ -253,17 +253,17 @@ common:
   type: Blog
   url: https://column.com/blog
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/plans/column-plans-pricing.yml
+  href: https://artifacts.apis.io/column/plans/column-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/column-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/rate-limits/column-rate-limits.yml
+  href: https://artifacts.apis.io/column/rate-limits/column-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/column-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/finops/column-finops.yml
+  href: https://artifacts.apis.io/column/finops/column-finops.yml
   title: ''
   type: FinOps
   url: finops/column-finops.yml
@@ -290,55 +290,71 @@ network: true
 overview: 'Column publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including ACH Transfers API, Wire Transfers API, International Wires API, and 18 more. Tagged areas include Fintech, Banking, Banking as a Service, ACH, and Wires.
 
 
+  The Column catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Column''s developer surface includes sandbox, API reference, changelog, getting-started guide, authentication, engineering blog, and 12 more developer resources.'
 plans:
 - name: Column Plans Pricing
   plan_count: 1
   slug: column-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 1
   name: Column Rate Limits
   slug: column-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Column API Rules
+  rule_count: 58
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 6
+    warn: 8
+  slug: column-rules
 score:
   band: thin
-  composite: 35.7
+  composite: 36.4
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 36.0
+    artifact_dirs: 17
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.4
   facets:
     access_clarity: 11.8
-    contract_governance: 0.0
-    contract_quality: 53.9
+    contract_governance: 13.6
+    contract_quality: 50.0
     developer_ergonomics: 50.0
     discoverability: 64.3
     operational_transparency: 44.7
-  previous_composite: 37.3
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 13
+      marker_coverage: 50.0
+      total: 52
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/column/refs/heads/main/screenshots/column-2026-10-11T103336.png
+screenshot: https://apis.io/screenshots/column/column-2026-10-11T103336.png
 security:
 - kind: authentication
   name: Column Authentication

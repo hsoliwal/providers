@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 16.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 0
@@ -185,11 +191,8 @@ apis:
 - description: Chalmers' timetable and room-booking layer is a TimeEdit tenancy, public at cloud.timeedit.net/chalmers/web/public/ and federated through SWAMID as service provider https://se.timeedit.net/chalmers-sp
   name: TimeEdit Scheduling Tenant
   slug: timeedit-scheduling-tenant
-artifact_total: 71
+artifact_total: 70
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ChalmersResearch ContractImport API
   slug: open-chalmers-university-of-technology-contractimport-api
@@ -258,22 +261,22 @@ collections:
   slug: open-chalmers-university-of-technology-solrimport-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/capabilities/chalmers-university-of-technology-capability-edges.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/capabilities/chalmers-university-of-technology-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/chalmers-university-of-technology-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/agentic-access/chalmers-university-of-technology-agentic-access.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/agentic-access/chalmers-university-of-technology-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/chalmers-university-of-technology-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/security/chalmers-university-of-technology-domain-security.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/security/chalmers-university-of-technology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chalmers-university-of-technology-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/authentication/chalmers-university-of-technology-authentication.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/authentication/chalmers-university-of-technology-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chalmers-university-of-technology-authentication.yml
@@ -294,22 +297,22 @@ common:
   type: SourceCode
   url: https://github.com/ChalmersLibrary
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/plans/chalmers-university-of-technology-plans-pricing.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/plans/chalmers-university-of-technology-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chalmers-university-of-technology-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/rate-limits/chalmers-university-of-technology-rate-limits.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/rate-limits/chalmers-university-of-technology-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chalmers-university-of-technology-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/finops/chalmers-university-of-technology-finops.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/finops/chalmers-university-of-technology-finops.yml
   title: ''
   type: FinOps
   url: finops/chalmers-university-of-technology-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -350,7 +353,7 @@ common:
   type: Library
   url: https://www.chalmers.se/en/departments/cls/chalmers-library/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/conformance/chalmers-university-of-technology-conformance.yml
+  href: https://artifacts.apis.io/chalmers-university-of-technology/conformance/chalmers-university-of-technology-conformance.yml
   title: ''
   type: x-conformance
   url: conformance/chalmers-university-of-technology-conformance.yml
@@ -411,7 +414,7 @@ plans:
 - name: Chalmers University Of Technology Plans Pricing
   plan_count: 2
   slug: chalmers-university-of-technology-plans-pricing
-random_paper: 13
+random_paper: 17
 rate_limits:
 - limit_count: 1
   name: Chalmers University Of Technology Rate Limits
@@ -444,13 +447,13 @@ score:
   band: thin
   composite: 32.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 65.5
     catalog_earned_first_party: 0.0
     catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
@@ -466,7 +469,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 38.7
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -481,13 +484,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/chalmers-university-of-technology/refs/heads/main/screenshots/chalmers-university-of-technology-2026-06-20T174208.png
+screenshot: https://apis.io/screenshots/chalmers-university-of-technology/chalmers-university-of-technology-2026-06-20T174208.png
 security:
 - kind: authentication
   name: Chalmers University Of Technology Authentication

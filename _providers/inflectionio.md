@@ -23,19 +23,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: verified
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.3
-  scored_at: '2026-10-17'
+  score: 57.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -65,23 +68,40 @@ apis:
   description: The Email Versions API from Inflection.io — 1 operation for pushing a per-contact personalized version of a Personalized Email Asset.
   name: Inflection.io Email Versions API
   slug: inflectionio-email-versions-api
-- baseURL: https://api.inflection.io/v1
-  baseurl_source: declared
-  description: The Lists and Members API from Inflection.io — 7 operation(s) for lists and members.
-  name: Inflection.io Lists and Members API
-  slug: inflectionio-lists-and-members-api
 - description: Inflection's first-party remote MCP server — the agent-facing authoring surface for journeys, audiences, segments, emails, tokens and analytics, gated by OAuth 2.1 with PKCE.
   name: Inflection MCP
   slug: inflectionio-mcp
-artifact_total: 20
+- baseURL: https://api.inflection.io/v1
+  baseurl_source: declared
+  description: Read journeys (campaigns), their schedule and their derived status.
+  name: Inflection.io Journeys API
+  slug: inflectionio-journeys-api
+- baseURL: https://api.inflection.io/v1
+  baseurl_source: declared
+  description: Static and dynamic lists, and static-list members.
+  name: Inflection.io Lists API
+  slug: inflectionio-lists-api
+- baseURL: https://api.inflection.io/v1
+  baseurl_source: declared
+  description: Read organizations (company accounts) and a contact's memberships.
+  name: Inflection.io Organizations API
+  slug: inflectionio-organizations-api
+- baseURL: https://api.inflection.io/v1
+  baseurl_source: declared
+  description: Read product users -- the logins underneath a contact -- by id or email, and list them for a contact or an organization.
+  name: Inflection.io Product Users API
+  slug: inflectionio-product-users-api
+- baseURL: https://api.inflection.io/v1
+  baseurl_source: declared
+  description: Send and engagement metrics for journeys and emails, with a journey rollup.
+  name: Inflection.io Stats API
+  slug: inflectionio-stats-api
+artifact_total: 31
 asyncapis:
 - description: ''
   name: Inflectionio Webhooks
   slug: inflectionio-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Inflection Developer Contact Activity API
   slug: open-inflectionio-contact-activity-api
@@ -93,7 +113,7 @@ collections:
   slug: open-inflectionio-lists-and-members-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/capabilities/inflectionio-capability-edges.yml
+  href: https://artifacts.apis.io/inflectionio/capabilities/inflectionio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/inflectionio-capability-edges.yml
@@ -158,52 +178,52 @@ common:
   type: ChangeLog
   url: https://docs.inflection.io/whats-new/july-2026
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/changelog/inflectionio-changelog.yml
+  href: https://artifacts.apis.io/inflectionio/changelog/inflectionio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/inflectionio-changelog.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/openapi/_original/inflectionio-openapi-original.yml
+  href: https://artifacts.apis.io/inflectionio/openapi/_original/inflectionio-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/inflectionio-openapi-original.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/overlays/inflectionio-openapi-overlay.yaml
+  href: https://artifacts.apis.io/inflectionio/overlays/inflectionio-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/inflectionio-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/authentication/inflectionio-authentication.yml
+  href: https://artifacts.apis.io/inflectionio/authentication/inflectionio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/inflectionio-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/scopes/inflectionio-scopes.yml
+  href: https://artifacts.apis.io/inflectionio/scopes/inflectionio-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/inflectionio-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/conventions/inflectionio-conventions.yml
+  href: https://artifacts.apis.io/inflectionio/conventions/inflectionio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/inflectionio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/errors/inflectionio-problem-types.yml
+  href: https://artifacts.apis.io/inflectionio/errors/inflectionio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/inflectionio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/data-model/inflectionio-data-model.yml
+  href: https://artifacts.apis.io/inflectionio/data-model/inflectionio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/inflectionio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/lifecycle/inflectionio-lifecycle.yml
+  href: https://artifacts.apis.io/inflectionio/lifecycle/inflectionio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/inflectionio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/conformance/inflectionio-conformance.yml
+  href: https://artifacts.apis.io/inflectionio/conformance/inflectionio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/inflectionio-conformance.yml
@@ -212,7 +232,7 @@ common:
   type: Compliance
   url: https://docs.inflection.io/agents/mcp-trust-security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/security/inflectionio-trust-center.yml
+  href: https://artifacts.apis.io/inflectionio/security/inflectionio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/inflectionio-trust-center.yml
@@ -221,72 +241,72 @@ common:
   type: Security
   url: https://docs.inflection.io/agents/mcp-trust-security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/security/inflectionio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/inflectionio/security/inflectionio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/inflectionio-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/security/inflectionio-domain-security.yml
+  href: https://artifacts.apis.io/inflectionio/security/inflectionio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/inflectionio-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/mcp/inflectionio-mcp.yml
+  href: https://artifacts.apis.io/inflectionio/mcp/inflectionio-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/inflectionio-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/mcp/inflectionio-tool-crosswalk.yml
+  href: https://artifacts.apis.io/inflectionio/mcp/inflectionio-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/inflectionio-tool-crosswalk.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/a2a/inflectionio-a2a.yml
+  href: https://artifacts.apis.io/inflectionio/a2a/inflectionio-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/inflectionio-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/inflectionio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/well-known/inflectionio-well-known.yml
+  href: https://artifacts.apis.io/inflectionio/well-known/inflectionio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/inflectionio-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/llms/inflectionio-llms.txt
+  href: https://artifacts.apis.io/inflectionio/llms/inflectionio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/inflectionio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/agentic-access/inflectionio-agentic-access.yml
+  href: https://artifacts.apis.io/inflectionio/agentic-access/inflectionio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/inflectionio-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/rate-limits/inflectionio-rate-limits.yml
+  href: https://artifacts.apis.io/inflectionio/rate-limits/inflectionio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/inflectionio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/plans/inflectionio-plans-pricing.yml
+  href: https://artifacts.apis.io/inflectionio/plans/inflectionio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/inflectionio-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/asyncapi/inflectionio-webhooks.yml
+  href: https://artifacts.apis.io/inflectionio/asyncapi/inflectionio-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/inflectionio-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/packages/inflectionio-packages.yml
+  href: https://artifacts.apis.io/inflectionio/packages/inflectionio-packages.yml
   title: ''
   type: Packages
   url: packages/inflectionio-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/components/inflectionio-components.yml
+  href: https://artifacts.apis.io/inflectionio/components/inflectionio-components.yml
   title: ''
   type: Components
   url: components/inflectionio-components.yml
@@ -297,6 +317,14 @@ common:
 created: '2026-07-17'
 description: 'Inflection.io is a B2B marketing automation platform positioned as a modern, AI-native replacement for legacy tools like Marketo. It unifies target accounts, product users, customers, and leads with product-usage, sales, and behavioral signals so marketing teams can build audiences, draft campaigns, map customer journeys, score accounts, and report to the CMO — executing in minutes rather than weeks. The Inflection Developer API is a JSON-over-HTTPS REST API (OpenAPI 3.1, base https://api.inflection.io/v1) for reading and writing the people in a workspace: their profiles, product and marketing activity, static lists, emails, and per-contact personalized email versions, authenticated with scoped Personal Access Tokens or an OAuth 2.1 connected app. Alongside it Inflection runs a first-party remote MCP server at mcp.inflection.io — OAuth 2.1 with PKCE, its own trust and security page — that exposes the authoring surface the REST API does not: journeys, audiences, segments, tokens
   and analytics, driven by specialist agents. Surfaced as a version-one-ventures portfolio company and enriched from the provider''s public developer, agent, and trust surfaces.'
+finops:
+- has_sources: true
+  method: derived
+  name: Inflectionio Finops
+  primary_unit: monthly marketed contacts (mmcs)
+  service_category: ''
+  slug: inflectionio-finops
+  template: false
 image: https://www.inflection.io/img/asset/YXNzZXRzL29nLWltYWdlLmpwZw/og-image.jpg
 layout: provider
 mcp_servers:
@@ -307,54 +335,70 @@ modified: '2026-08-13'
 name: Inflection.io
 nav: Providers
 network: true
-overview: 'Inflection.io publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contact Activity API, Contacts API, Emails API, and 3 more. Tagged areas include Company, Software-as-a-Service, Marketing, Marketing Automation, and Email Marketing.
+overview: 'Inflection.io publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contact Activity API, Contacts API, Emails API, and 7 more. Tagged areas include Company, Software-as-a-Service, Marketing, Marketing Automation, and Email Marketing.
 
 
-  The Inflection.io catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Inflection.io catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Inflection.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
 plans:
 - name: Inflectionio Plans Pricing
-  plan_count: 1
+  plan_count: 2
   slug: inflectionio-plans-pricing
-random_paper: 7
+- name: Inflectionio Price Estimates
+  plan_count: 0
+  slug: inflectionio-price-estimates
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Inflectionio Rate Limits
   slug: inflectionio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Inflection.io API Rules
+  rule_count: 61
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 7
+  slug: inflectionio-rules
 scopes:
 - name: Inflectionio Scopes
   scope_count: 3
   slug: inflectionio-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: strong
-  composite: 64.6
+  band: exemplar
+  composite: 67.8
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 53.0
+    artifact_dirs: 33
+    catalog_earned: 60.5
     catalog_earned_first_party: 16.0
-    catalog_gap: 62.0
+    catalog_gap: 54.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.9
   facets:
-    access_clarity: 68.4
-    contract_governance: 18.2
-    contract_quality: 57.7
+    access_clarity: 76.3
+    contract_governance: 31.8
+    contract_quality: 61.8
     developer_ergonomics: 64.3
     discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 64.6
+  previous_composite: 66.9
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 60.0
+      total: 15
     mcp: first-party
     skills: first-party
   regulatory:
@@ -363,13 +407,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/screenshots/inflectionio-2026-07-25T222410.png
+    score: 22.2
+screenshot: https://apis.io/screenshots/inflectionio/inflectionio-2026-07-25T222410.png
 security:
 - kind: authentication
   name: Inflectionio Authentication
@@ -387,6 +431,18 @@ security:
   name: Inflectionio Trust Center
   slug: inflectionio-trust-center
   summary_line: SOC 2, GDPR, CCPA, Penetration test
+skill_count: 5
+skills:
+- name: Batch upsert contacts
+  slug: inflectionio-batch-upsert-contacts
+- name: Build and populate a static list
+  slug: inflectionio-build-static-list
+- name: Send a per-contact personalized email version
+  slug: inflectionio-personalized-email-version
+- name: Inflection
+  slug: inflectionio-provider-published-skill
+- name: Sync a contact into Inflection
+  slug: inflectionio-sync-contact
 slug: inflectionio
 tags:
 - Company

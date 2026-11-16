@@ -1,16 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
-  - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -27,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.8
-  scored_at: '2026-10-17'
+  score: 43.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -115,11 +117,8 @@ apis:
   description: The Trainers API from The Racing API — 7 operation(s) for trainers.
   name: The Racing API Trainers API
   slug: the-racing-api-trainers-api
-artifact_total: 420
+artifact_total: 419
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: The Racing Australia API
   slug: open-the-racing-api-australia-api
@@ -176,27 +175,27 @@ collections:
   slug: open-the-racing-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/plans/the-racing-api-plans-pricing.yml
+  href: https://artifacts.apis.io/the-racing-api/plans/the-racing-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/the-racing-api-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/finops/the-racing-api-finops.yml
+  href: https://artifacts.apis.io/the-racing-api/finops/the-racing-api-finops.yml
   title: ''
   type: FinOps
   url: finops/the-racing-api-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/agentic-access/the-racing-api-agentic-access.yml
+  href: https://artifacts.apis.io/the-racing-api/agentic-access/the-racing-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/the-racing-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/security/the-racing-api-domain-security.yml
+  href: https://artifacts.apis.io/the-racing-api/security/the-racing-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/the-racing-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/authentication/the-racing-api-authentication.yml
+  href: https://artifacts.apis.io/the-racing-api/authentication/the-racing-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/the-racing-api-authentication.yml
@@ -225,12 +224,12 @@ common:
   type: Dashboard
   url: https://www.theracingapi.com/dashboard
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/rules/the-racing-api-spectral-rules.yml
+  href: https://artifacts.apis.io/the-racing-api/rules/the-racing-api-spectral-rules.yml
   title: The Racing API Spectral Rules
   type: SpectralRules
   url: rules/the-racing-api-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/vocabulary/the-racing-api-vocabulary.yml
+  href: https://artifacts.apis.io/the-racing-api/vocabulary/the-racing-api-vocabulary.yml
   title: The Racing API Vocabulary
   type: Vocabulary
   url: vocabulary/the-racing-api-vocabulary.yml
@@ -625,12 +624,12 @@ features:
 - 'Public URL: https://theracingapi.com/'
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: The Racing Api Finops
   primary_unit: ''
-  service_category: Sports Data
+  service_category: ''
   slug: the-racing-api-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/the-racing-api.png
 integrations:
 - description: Integration via remote MCP server for AI-powered racing insights
@@ -1398,9 +1397,9 @@ overview: 'The Racing API publishes 14 API contracts indexed on the [APIs.io](ht
   The Racing API''s developer surface includes authentication, documentation, signup flow, pricing, and 13 more developer resources.'
 plans:
 - name: The Racing Api Plans Pricing
-  plan_count: 1
+  plan_count: 0
   slug: the-racing-api-plans-pricing
-random_paper: 11
+random_paper: 9
 rate_limits:
 - limit_count: 1
   name: The Racing Api Rate Limits
@@ -1430,24 +1429,24 @@ rules:
     warn: 17
   slug: the-racing-api-spectral-rules
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 17
-    catalog_earned: 66.4
+    catalog_earned: 64.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.6
+    catalog_gap: 50.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 34.2
     contract_governance: 27.3
     contract_quality: 64.4
     developer_ergonomics: 21.4
     discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 41.7
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     contracts:
@@ -1462,14 +1461,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/the-racing-api/refs/heads/main/screenshots/the-racing-api-2026-06-20T195235.png
+screenshot: https://apis.io/screenshots/the-racing-api/the-racing-api-2026-06-20T195235.png
 security:
 - kind: authentication
   name: The Racing Api Authentication

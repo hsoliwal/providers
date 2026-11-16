@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +26,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.7
-  scored_at: '2026-10-17'
+  score: 32.0
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: API for GPTfy's AI services, offering chat and content generation endpoints.
   name: AskAI API
-  slug: askai-api-2
+  slug: askai-api
 - description: The GPTfy API API from GPTfy — 1 operation(s) for gptfy api.
   name: GPTfy GPTfy API
   slug: askai-gptfy-api-api
@@ -38,42 +52,42 @@ apis:
 artifact_total: 9
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/plans/askai-plans-pricing.yml
+  href: https://artifacts.apis.io/askai/plans/askai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/askai-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/rules/askai-rules.yml
+  href: https://artifacts.apis.io/askai/rules/askai-rules.yml
   title: ''
   type: Spectral
   url: rules/askai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/json-ld/askai-context.jsonld
+  href: https://artifacts.apis.io/askai/json-ld/askai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/askai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/vocabulary/askai-vocabulary.yml
+  href: https://artifacts.apis.io/askai/vocabulary/askai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/askai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/data-model/askai-data-model.yml
+  href: https://artifacts.apis.io/askai/data-model/askai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/askai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/conformance/askai-conformance.yml
+  href: https://artifacts.apis.io/askai/conformance/askai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/askai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/well-known/askai-well-known.yml
+  href: https://artifacts.apis.io/askai/well-known/askai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/askai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/hosts/askai-hosts.yml
+  href: https://artifacts.apis.io/askai/hosts/askai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/askai-hosts.yml
@@ -110,7 +124,7 @@ common:
   type: Website
   url: https://askai.free/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/askai/refs/heads/main/security/askai-domain-security.yml
+  href: https://artifacts.apis.io/askai/security/askai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/askai-domain-security.yml
@@ -142,7 +156,7 @@ modified: '2026-10-16'
 name: GPTfy
 nav: Providers
 network: true
-overview: 'GPTfy is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including GPTfy API, Chat Completions API, and 1 more. Tagged areas include Company, Artificial Intelligence, Language-Model, and Platform.
+overview: 'GPTfy is listed with 3 APIs on the [APIs.io](https://apis.io/) network: AskAI API, GPTfy API, and Chat Completions API. Tagged areas include Company, Artificial Intelligence, Language-Model, and Platform.
 
 
   The GPTfy catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -153,7 +167,7 @@ plans:
 - name: Askai Plans Pricing
   plan_count: 3
   slug: askai-plans-pricing
-random_paper: 15
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -169,21 +183,23 @@ rules:
   slug: askai-rules
 score:
   band: thin
-  composite: 34.7
+  composite: 27.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 18
     catalog_earned: 61.8
     catalog_earned_first_party: 12.0
     catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.4
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 35.6
     contract_quality: 20.1
-    developer_ergonomics: 23.8
+    developer_ergonomics: 11.9
     discoverability: 53.6
     operational_transparency: 0.0
+  previous_composite: 34.7
   provenance:
     conformance: first-party
     contracts:
@@ -200,12 +216,14 @@ score:
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/askai/askai-2026-11-03T121157.png
 security:
 - kind: domain-security
   name: Askai Domain Security

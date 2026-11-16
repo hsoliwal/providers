@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,37 +36,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/security/remnote-domain-security.yml
+  href: https://artifacts.apis.io/remnote/security/remnote-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/remnote-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/packages/remnote-packages.yml
+  href: https://artifacts.apis.io/remnote/packages/remnote-packages.yml
   title: ''
   type: Packages
   url: packages/remnote-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/packages/remnote-packages.yml
+  href: https://artifacts.apis.io/remnote/packages/remnote-packages.yml
   title: ''
   type: SDKs
   url: packages/remnote-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/llms/remnote-llms.txt
+  href: https://artifacts.apis.io/remnote/llms/remnote-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/remnote-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/lifecycle/remnote-lifecycle.yml
+  href: https://artifacts.apis.io/remnote/lifecycle/remnote-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/remnote-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/changelog/remnote-changelog.yml
+  href: https://artifacts.apis.io/remnote/changelog/remnote-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/remnote-changelog.yml
@@ -142,18 +146,18 @@ overview: 'Remnote is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Remnote''s developer surface includes changelog, documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, and 15 more developer resources.'
-random_paper: 14
+random_paper: 18
 score:
   band: emerging
   composite: 24.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -161,21 +165,21 @@ score:
     developer_ergonomics: 52.4
     discoverability: 55.4
     operational_transparency: 39.5
-  previous_composite: 23.9
+  previous_composite: 24.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
     score: 9.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/remnote/refs/heads/main/screenshots/remnote-2026-09-02T153349.png
+screenshot: https://apis.io/screenshots/remnote/remnote-2026-09-02T153349.png
 security:
 - kind: domain-security
   name: Remnote Domain Security

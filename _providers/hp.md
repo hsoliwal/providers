@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Free
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 16.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -61,9 +65,6 @@ apis:
 artifact_total: 15
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: HP PrintOS Device Analytics API
   slug: open-hp-analytics-api
 - collection_type: open
@@ -80,32 +81,32 @@ collections:
   slug: open-hp-workforce-solutions-analytics-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/plans/hp-plans-pricing.yml
+  href: https://artifacts.apis.io/hp/plans/hp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/rate-limits/hp-rate-limits.yml
+  href: https://artifacts.apis.io/hp/rate-limits/hp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hp-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/finops/hp-finops.yml
+  href: https://artifacts.apis.io/hp/finops/hp-finops.yml
   title: ''
   type: FinOps
   url: finops/hp-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/agentic-access/hp-agentic-access.yml
+  href: https://artifacts.apis.io/hp/agentic-access/hp-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hp-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/security/hp-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hp/security/hp-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hp-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/security/hp-domain-security.yml
+  href: https://artifacts.apis.io/hp/security/hp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hp-domain-security.yml
@@ -141,7 +142,10 @@ modified: '2026-05-19'
 name: HP
 nav: Providers
 network: true
-overview: 'HP publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Analytics API, Devices API, and Incidents API. Tagged areas include Computer Hardware, Device Management, Printing, Technology, and Fortune 100.'
+overview: 'HP publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Analytics API, Devices API, and Incidents API. Tagged areas include Computer Hardware, Device Management, Printing, Technology, and Fortune 100.
+
+
+  The HP catalog on APIs.io includes 1 Spectral governance ruleset.'
 plans:
 - name: Hp Plans Pricing
   plan_count: 3
@@ -162,30 +166,43 @@ press:
 - date: ''
   title: HP acquires Humane Platform and team for $116M
   url: https://www.facebook.com/groups/AIUGM/posts/4020109041603394/
-random_paper: 18
+random_paper: 0
 rate_limits:
 - limit_count: 2
   name: Hp Rate Limits
   slug: hp-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: HP API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: hp-rules
 score:
   band: emerging
-  composite: 22.4
+  composite: 24.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 37.0
+    artifact_dirs: 17
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -0.6
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.1
     developer_ergonomics: 19.0
     discoverability: 57.1
-    operational_transparency: 7.9
-  previous_composite: 23.9
+    operational_transparency: 13.2
+  previous_composite: 25.4
   provenance:
     agentic_access: derived
     contracts:
@@ -199,13 +216,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/screenshots/hp-2026-06-20T182854.png
+screenshot: https://apis.io/screenshots/hp/hp-2026-06-20T182854.png
 security:
 - kind: domain-security
   name: Hp Domain Security

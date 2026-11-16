@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.0
-  scored_at: '2026-10-17'
+  score: 14.6
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://aai.openaire.eu
@@ -49,47 +62,47 @@ apis:
 artifact_total: 9
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/rules/openaire-rules.yml
+  href: https://artifacts.apis.io/openaire/rules/openaire-rules.yml
   title: ''
   type: Spectral
   url: rules/openaire-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/json-ld/openaire-context.jsonld
+  href: https://artifacts.apis.io/openaire/json-ld/openaire-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/openaire-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/vocabulary/openaire-vocabulary.yml
+  href: https://artifacts.apis.io/openaire/vocabulary/openaire-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/openaire-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/data-model/openaire-data-model.yml
+  href: https://artifacts.apis.io/openaire/data-model/openaire-data-model.yml
   title: ''
   type: DataModel
   url: data-model/openaire-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/changelog/openaire-changelog.yml
+  href: https://artifacts.apis.io/openaire/changelog/openaire-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/openaire-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/conformance/openaire-conformance.yml
+  href: https://artifacts.apis.io/openaire/conformance/openaire-conformance.yml
   title: ''
   type: Conformance
   url: conformance/openaire-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/hosts/openaire-hosts.yml
+  href: https://artifacts.apis.io/openaire/hosts/openaire-hosts.yml
   title: ''
   type: Hosts
   url: hosts/openaire-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/packages/openaire-packages.yml
+  href: https://artifacts.apis.io/openaire/packages/openaire-packages.yml
   title: ''
   type: SDKs
   url: packages/openaire-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/packages/openaire-packages.yml
+  href: https://artifacts.apis.io/openaire/packages/openaire-packages.yml
   title: ''
   type: Packages
   url: packages/openaire-packages.yml
@@ -110,7 +123,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/openaire
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openaire/refs/heads/main/security/openaire-domain-security.yml
+  href: https://artifacts.apis.io/openaire/security/openaire-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openaire-domain-security.yml
@@ -176,7 +189,7 @@ overview: 'OpenAIRE is listed with 4 APIs on the [APIs.io](https://apis.io/) net
 
 
   OpenAIRE''s developer surface includes changelog, documentation, support, engineering blog, signup flow, and 16 more developer resources.'
-random_paper: 15
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -191,22 +204,29 @@ rules:
     warn: 1
   slug: openaire-rules
 score:
-  band: thin
-  composite: 31.4
+  band: emerging
+  composite: 23.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.1
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 20.2
-    developer_ergonomics: 33.3
-    discoverability: 69.6
-    operational_transparency: 21.1
+    developer_ergonomics: 20.2
+    discoverability: 68.8
+    operational_transparency: 10.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+  previous_composite: 31.4
   provenance:
     conformance: derived
     contracts:
@@ -220,13 +240,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/openaire/openaire-2026-11-03T140631.png
 security:
 - kind: domain-security
   name: Openaire Domain Security

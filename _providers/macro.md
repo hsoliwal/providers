@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,20 +40,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Official hosted (remote) Model Context Protocol server for Macro. Connects AI clients over OAuth to search, read and act across a Macro workspace — email, messages, tasks, docs, threads, entities and '
   name: Macro MCP Server
   slug: macro-mcp-server
-artifact_total: 5
+artifact_total: 7
 common:
 - group: company
   title: ''
   type: Website
   url: https://www.macro.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/security/macro-domain-security.yml
+  href: https://artifacts.apis.io/macro/security/macro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/macro-domain-security.yml
@@ -79,57 +86,57 @@ common:
   type: GitHubOrganization
   url: https://github.com/macro-inc
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/changelog/macro-changelog.yml
+  href: https://artifacts.apis.io/macro/changelog/macro-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/macro-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/mcp/macro-mcp.yml
+  href: https://artifacts.apis.io/macro/mcp/macro-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/macro-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/llms/macro-llms.txt
+  href: https://artifacts.apis.io/macro/llms/macro-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/macro-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/authentication/macro-authentication.yml
+  href: https://artifacts.apis.io/macro/authentication/macro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/macro-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/conventions/macro-conventions.yml
+  href: https://artifacts.apis.io/macro/conventions/macro-conventions.yml
   title: ''
   type: Conventions
   url: conventions/macro-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/lifecycle/macro-lifecycle.yml
+  href: https://artifacts.apis.io/macro/lifecycle/macro-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/macro-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/data-model/macro-data-model.yml
+  href: https://artifacts.apis.io/macro/data-model/macro-data-model.yml
   title: ''
   type: DataModel
   url: data-model/macro-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/conformance/macro-conformance.yml
+  href: https://artifacts.apis.io/macro/conformance/macro-conformance.yml
   title: ''
   type: Conformance
   url: conformance/macro-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/conformance/macro-conformance.yml
+  href: https://artifacts.apis.io/macro/conformance/macro-conformance.yml
   title: ''
   type: Compliance
   url: conformance/macro-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/security/macro-trust-center.yml
+  href: https://artifacts.apis.io/macro/security/macro-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/macro-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/macro/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -154,13 +161,13 @@ score:
   band: thin
   composite: 29.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
@@ -168,7 +175,7 @@ score:
     developer_ergonomics: 56.5
     discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 29.5
+  previous_composite: 29.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -179,14 +186,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/macro/refs/heads/main/screenshots/macro-2026-07-25T225820.png
+screenshot: https://apis.io/screenshots/macro/macro-2026-07-25T225820.png
 security:
 - kind: authentication
   name: Macro Authentication
@@ -200,6 +207,12 @@ security:
   name: Macro Trust Center
   slug: macro-trust-center
   summary_line: SOC 2 Type II
+skill_count: 2
+skills:
+- name: macro-call-transcript-to-tasks
+  slug: macro-call-transcript-to-tasks
+- name: macro-daily-inbox-brief
+  slug: macro-daily-inbox-brief
 slug: macro
 tags:
 - Company

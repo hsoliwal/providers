@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 26.6
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.grayswan.ai
   baseurl_source: declared
@@ -53,11 +56,8 @@ apis:
   description: The Policies API from Gray Swan — 8 operation(s) for policies.
   name: Gray Swan Policies API
   slug: gray-swan-policies-api
-artifact_total: 12
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Gray Swan AI Activity API
   slug: open-gray-swan-activity-api
@@ -69,12 +69,12 @@ collections:
   slug: open-gray-swan-policies-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/mcp/gray-swan-mcp.yml
+  href: https://artifacts.apis.io/gray-swan/mcp/gray-swan-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/gray-swan-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/overlays/gray-swan-cygnal-overlay.yaml
+  href: https://artifacts.apis.io/gray-swan/overlays/gray-swan-cygnal-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/gray-swan-cygnal-overlay.yaml
@@ -119,62 +119,62 @@ common:
   type: PrivacyPolicy
   url: https://www.grayswan.ai/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/authentication/gray-swan-authentication.yml
+  href: https://artifacts.apis.io/gray-swan/authentication/gray-swan-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gray-swan-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/errors/gray-swan-problem-types.yml
+  href: https://artifacts.apis.io/gray-swan/errors/gray-swan-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gray-swan-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/rate-limits/gray-swan-rate-limits.yml
+  href: https://artifacts.apis.io/gray-swan/rate-limits/gray-swan-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gray-swan-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/conventions/gray-swan-conventions.yml
+  href: https://artifacts.apis.io/gray-swan/conventions/gray-swan-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gray-swan-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/data-model/gray-swan-data-model.yml
+  href: https://artifacts.apis.io/gray-swan/data-model/gray-swan-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gray-swan-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/lifecycle/gray-swan-lifecycle.yml
+  href: https://artifacts.apis.io/gray-swan/lifecycle/gray-swan-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gray-swan-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/conformance/gray-swan-conformance.yml
+  href: https://artifacts.apis.io/gray-swan/conformance/gray-swan-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gray-swan-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/conformance/gray-swan-conformance.yml
+  href: https://artifacts.apis.io/gray-swan/conformance/gray-swan-conformance.yml
   title: ''
   type: Compliance
   url: conformance/gray-swan-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/llms/gray-swan-llms.txt
+  href: https://artifacts.apis.io/gray-swan/llms/gray-swan-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gray-swan-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gray-swan/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/well-known/gray-swan-well-known.yml
+  href: https://artifacts.apis.io/gray-swan/well-known/gray-swan-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gray-swan-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/well-known/gray-swan-security.txt
+  href: https://artifacts.apis.io/gray-swan/well-known/gray-swan-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/gray-swan-security.txt
@@ -183,17 +183,17 @@ common:
   type: Security
   url: https://grayswan.ai/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/security/gray-swan-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gray-swan/security/gray-swan-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gray-swan-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/security/gray-swan-domain-security.yml
+  href: https://artifacts.apis.io/gray-swan/security/gray-swan-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gray-swan-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/security/gray-swan-trust-center.yml
+  href: https://artifacts.apis.io/gray-swan/security/gray-swan-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/gray-swan-trust-center.yml
@@ -208,37 +208,53 @@ network: true
 overview: 'Gray Swan publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Activity API, Cygnal API, and Policies API. Tagged areas include Company, Artificial Intelligence, AI Security, LLM Security, and Guardrails.
 
 
+  The Gray Swan catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Gray Swan''s developer surface includes documentation, API reference, quickstart, signup flow, engineering blog, authentication, and 22 more developer resources.'
-random_paper: 19
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Gray Swan Rate Limits
   slug: gray-swan-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Gray Swan API Rules
+  rule_count: 46
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 1
+    warn: 10
+  slug: gray-swan-rules
 score:
   band: developing
-  composite: 41.8
+  composite: 44.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.3
   facets:
     access_clarity: 36.8
-    contract_governance: 4.5
-    contract_quality: 48.5
+    contract_governance: 18.2
+    contract_quality: 53.8
     developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 41.8
+  previous_composite: 43.5
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: derived
     skills: derived
@@ -248,13 +264,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gray-swan/refs/heads/main/screenshots/gray-swan-2026-07-25T220255.png
+screenshot: https://apis.io/screenshots/gray-swan/gray-swan-2026-07-25T220255.png
 security:
 - kind: authentication
   name: Gray Swan Authentication
@@ -272,6 +288,12 @@ security:
   name: Gray Swan Trust Center
   slug: gray-swan-trust-center
   summary_line: SOC 2 Type 2, Cyber Essentials
+skill_count: 2
+skills:
+- name: gray-swan-manage-policies
+  slug: gray-swan-manage-policies
+- name: gray-swan-secure-completions
+  slug: gray-swan-secure-completions
 slug: gray-swan
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -28,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Listed in the Aviva API Developer Portal service catalogue as an API that calculates premiums for Aviva consumer Private Medical Insurance policies — the quote/rating verb of the Aviva Health API fami
@@ -48,47 +54,47 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/security/aviva-plc-domain-security.yml
+  href: https://artifacts.apis.io/aviva-plc/security/aviva-plc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aviva-plc-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/authentication/aviva-plc-authentication.yml
+  href: https://artifacts.apis.io/aviva-plc/authentication/aviva-plc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aviva-plc-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/well-known/aviva-plc-well-known.yml
+  href: https://artifacts.apis.io/aviva-plc/well-known/aviva-plc-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/aviva-plc-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/conventions/aviva-plc-conventions.yml
+  href: https://artifacts.apis.io/aviva-plc/conventions/aviva-plc-conventions.yml
   title: ''
   type: Conventions
   url: conventions/aviva-plc-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/conformance/aviva-plc-conformance.yml
+  href: https://artifacts.apis.io/aviva-plc/conformance/aviva-plc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aviva-plc-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/lifecycle/aviva-plc-lifecycle.yml
+  href: https://artifacts.apis.io/aviva-plc/lifecycle/aviva-plc-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/aviva-plc-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/sandbox/aviva-plc-sandbox.yml
+  href: https://artifacts.apis.io/aviva-plc/sandbox/aviva-plc-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/aviva-plc-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/rate-limits/aviva-plc-rate-limits.yml
+  href: https://artifacts.apis.io/aviva-plc/rate-limits/aviva-plc-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aviva-plc-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/llms/aviva-plc-llms.txt
+  href: https://artifacts.apis.io/aviva-plc/llms/aviva-plc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aviva-plc-llms.txt
@@ -166,7 +172,7 @@ overview: 'Aviva is listed with 2 APIs on the [APIs.io](https://apis.io/) networ
 
 
   Aviva''s developer surface includes authentication, sandbox, documentation, getting-started guide, support, developer portal, engineering blog, and 17 more developer resources.'
-random_paper: 19
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Aviva Plc Rate Limits
@@ -206,14 +212,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aviva-plc/refs/heads/main/screenshots/aviva-plc-2026-07-25T201951.png
+screenshot: https://apis.io/screenshots/aviva-plc/aviva-plc-2026-07-25T201951.png
 security:
 - kind: authentication
   name: Aviva Plc Authentication

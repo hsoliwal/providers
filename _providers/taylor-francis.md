@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Paid
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: The Taylor & Francis Content API provides programmatic access to eBook and chapter downloads from the taylorfrancis.com platform. Using DOI-based identifiers, institutional subscribers can retrieve PD
@@ -51,22 +55,22 @@ apis:
 artifact_total: 8
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/taylor-francis/refs/heads/main/plans/taylor-francis-plans-pricing.yml
+  href: https://artifacts.apis.io/taylor-francis/plans/taylor-francis-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/taylor-francis-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/taylor-francis/refs/heads/main/rate-limits/taylor-francis-rate-limits.yml
+  href: https://artifacts.apis.io/taylor-francis/rate-limits/taylor-francis-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/taylor-francis-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/taylor-francis/refs/heads/main/finops/taylor-francis-finops.yml
+  href: https://artifacts.apis.io/taylor-francis/finops/taylor-francis-finops.yml
   title: ''
   type: FinOps
   url: finops/taylor-francis-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taylor-francis/refs/heads/main/security/taylor-francis-domain-security.yml
+  href: https://artifacts.apis.io/taylor-francis/security/taylor-francis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/taylor-francis-domain-security.yml
@@ -120,7 +124,7 @@ finops:
 - has_sources: false
   method: generated
   name: Taylor Francis Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: taylor-francis-finops
   template: true
@@ -138,7 +142,7 @@ plans:
 - name: Taylor Francis Plans Pricing
   plan_count: 3
   slug: taylor-francis-plans-pricing
-random_paper: 2
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Taylor Francis Rate Limits
@@ -153,7 +157,7 @@ score:
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
@@ -166,21 +170,21 @@ score:
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 28.4
+  previous_composite: 20.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/taylor-francis/refs/heads/main/screenshots/taylor-francis-2026-06-20T194941.png
+screenshot: https://apis.io/screenshots/taylor-francis/taylor-francis-2026-06-20T194941.png
 security:
 - kind: domain-security
   name: Taylor Francis Domain Security

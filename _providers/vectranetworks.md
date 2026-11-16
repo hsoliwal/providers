@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.6
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 25.3
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://platform.vectra.ai/api/v3.3
   baseurl_source: declared
@@ -124,11 +128,8 @@ apis:
 - description: The Vectra AI Platform REST API (api.vectra.io) provides programmatic access to detections, hosts, accounts, assignments, threat-intelligence indicators, and platform configuration for the Vectra AI P
   name: Vectra AI Platform API
   slug: vectra-ai-platform-api
-artifact_total: 40
+artifact_total: 43
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Vectra Detect Accounts API
   slug: open-vectranetworks-accounts-api
@@ -186,27 +187,27 @@ common:
   type: BlogRSS
   url: https://www.vectra.ai/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/capabilities/vectranetworks-capability-edges.yml
+  href: https://artifacts.apis.io/vectranetworks/capabilities/vectranetworks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/vectranetworks-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/overlays/vectranetworks-detect-v2.3-overlay.yaml
+  href: https://artifacts.apis.io/vectranetworks/overlays/vectranetworks-detect-v2.3-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/vectranetworks-detect-v2.3-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/security/vectranetworks-domain-security.yml
+  href: https://artifacts.apis.io/vectranetworks/security/vectranetworks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vectranetworks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/authentication/vectranetworks-authentication.yml
+  href: https://artifacts.apis.io/vectranetworks/authentication/vectranetworks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vectranetworks-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/scopes/vectranetworks-scopes.yml
+  href: https://artifacts.apis.io/vectranetworks/scopes/vectranetworks-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/vectranetworks-scopes.yml
@@ -243,7 +244,7 @@ common:
   type: TermsOfService
   url: https://www.vectra.ai/legal/terms-of-service
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/llms/vectranetworks-llms.txt
+  href: https://artifacts.apis.io/vectranetworks/llms/vectranetworks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vectranetworks-llms.txt
@@ -256,57 +257,57 @@ common:
   type: ChangeLog
   url: https://support.vectra.ai/s/topic/0TO6S000000J745WAC/product-announcements
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/packages/vectranetworks-packages.yml
+  href: https://artifacts.apis.io/vectranetworks/packages/vectranetworks-packages.yml
   title: ''
   type: Packages
   url: packages/vectranetworks-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/packages/vectranetworks-packages.yml
+  href: https://artifacts.apis.io/vectranetworks/packages/vectranetworks-packages.yml
   title: ''
   type: SDKs
   url: packages/vectranetworks-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/well-known/vectranetworks-well-known.yml
+  href: https://artifacts.apis.io/vectranetworks/well-known/vectranetworks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vectranetworks-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/mcp/vectranetworks-mcp.yml
+  href: https://artifacts.apis.io/vectranetworks/mcp/vectranetworks-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/vectranetworks-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/conformance/vectranetworks-conformance.yml
+  href: https://artifacts.apis.io/vectranetworks/conformance/vectranetworks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vectranetworks-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/errors/vectranetworks-problem-types.yml
+  href: https://artifacts.apis.io/vectranetworks/errors/vectranetworks-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/vectranetworks-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/lifecycle/vectranetworks-lifecycle.yml
+  href: https://artifacts.apis.io/vectranetworks/lifecycle/vectranetworks-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/vectranetworks-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/conventions/vectranetworks-conventions.yml
+  href: https://artifacts.apis.io/vectranetworks/conventions/vectranetworks-conventions.yml
   title: ''
   type: Conventions
   url: conventions/vectranetworks-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/data-model/vectranetworks-data-model.yml
+  href: https://artifacts.apis.io/vectranetworks/data-model/vectranetworks-data-model.yml
   title: ''
   type: DataModel
   url: data-model/vectranetworks-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/security/vectranetworks-trust-center.yml
+  href: https://artifacts.apis.io/vectranetworks/security/vectranetworks-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/vectranetworks-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/vectranetworks/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -321,8 +322,24 @@ network: true
 overview: 'Vectra AI publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Assignment Outcomes API, Assignments API, and 15 more. Tagged areas include Company, Cybersecurity, Network Detection and Response, Threat Detection, and Security Operations.
 
 
+  The Vectra AI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Vectra AI''s developer surface includes authentication, engineering blog, support, pricing, documentation, changelog, and 22 more developer resources.'
-random_paper: 20
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Vectra AI API Rules
+  rule_count: 61
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 3
+    warn: 11
+  slug: vectranetworks-rules
 scopes:
 - name: Vectranetworks Scopes
   scope_count: 0
@@ -330,29 +347,29 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 43.8
+  composite: 45.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.8
   facets:
     access_clarity: 39.5
-    contract_governance: 4.5
-    contract_quality: 43.0
+    contract_governance: 18.2
+    contract_quality: 46.0
     developer_ergonomics: 54.2
-    discoverability: 78.6
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 43.2
+  previous_composite: 44.9
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 64.7
       total: 17
     mcp: derived
     skills: derived
@@ -362,13 +379,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/vectranetworks/refs/heads/main/screenshots/vectranetworks-2026-09-02T165546.png
+screenshot: https://apis.io/screenshots/vectranetworks/vectranetworks-2026-09-02T165546.png
 security:
 - kind: authentication
   name: Vectranetworks Authentication
@@ -382,6 +399,14 @@ security:
   name: Vectranetworks Trust Center
   slug: vectranetworks-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: vectranetworks-investigate-detection
+  slug: vectranetworks-investigate-detection
+- name: vectranetworks-stream-events-to-siem
+  slug: vectranetworks-stream-events-to-siem
+- name: vectranetworks-triage-prioritized-entities
+  slug: vectranetworks-triage-prioritized-entities
 slug: vectranetworks
 tags:
 - Company

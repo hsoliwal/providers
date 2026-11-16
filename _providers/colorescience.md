@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL endpoint providing schema for Colorescience data.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/colorescience/refs/heads/main/llms/colorescience-llms.txt
+  href: https://artifacts.apis.io/colorescience/llms/colorescience-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/colorescience-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/colorescience/refs/heads/main/well-known/colorescience-well-known.yml
+  href: https://artifacts.apis.io/colorescience/well-known/colorescience-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/colorescience-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/colorescience/refs/heads/main/hosts/colorescience-hosts.yml
+  href: https://artifacts.apis.io/colorescience/hosts/colorescience-hosts.yml
   title: ''
   type: Hosts
   url: hosts/colorescience-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/colorescience/refs/heads/main/vendors/colorescience-vendors.yml
+  href: https://artifacts.apis.io/colorescience/vendors/colorescience-vendors.yml
   title: ''
   type: Vendors
   url: vendors/colorescience-vendors.yml
@@ -68,7 +81,7 @@ common:
   type: Blog
   url: https://www.colorescience.com/blogs/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/colorescience/refs/heads/main/security/colorescience-domain-security.yml
+  href: https://artifacts.apis.io/colorescience/security/colorescience-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/colorescience-domain-security.yml
@@ -84,28 +97,30 @@ modified: '2026-10-09'
 name: Colorescience
 nav: Providers
 network: true
-overview: 'Colorescience is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Skincare, sunscreen, Cosmetics, Health, and E-Commerce.
+overview: 'Colorescience is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Skincare, Sunscreen, Cosmetics, Health, and E-Commerce.
 
 
   Colorescience''s developer surface includes support, engineering blog, and 8 more developer resources.'
-random_paper: 10
+random_paper: 6
 score:
-  band: emerging
-  composite: 13.5
+  band: minimal
+  composite: 10.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.3
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
+    developer_ergonomics: 3.6
     discoverability: 80.4
     operational_transparency: 0.0
+  previous_composite: 13.5
   provenance:
     mcp: unknown
   regulatory:
@@ -113,13 +128,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/colorescience/colorescience-2026-11-03T124902.png
 security:
 - kind: domain-security
   name: Colorescience Domain Security
@@ -128,7 +145,7 @@ security:
 slug: colorescience
 tags:
 - Skincare
-- sunscreen
+- Sunscreen
 - Cosmetics
 - Health
 - E-Commerce

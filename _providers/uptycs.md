@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Per-customer JSON REST API over each Uptycs stack covering alerts and alert rules, events and event rules, assets and asset groups/tags, ad-hoc and saved SQL (osquery) queries, threat indicators/sourc
@@ -83,52 +86,52 @@ common:
   type: Compliance
   url: https://www.uptycs.com/about/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/security/uptycs-trust-center.yml
+  href: https://artifacts.apis.io/uptycs/security/uptycs-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/uptycs-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/security/uptycs-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/uptycs/security/uptycs-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/uptycs-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/security/uptycs-domain-security.yml
+  href: https://artifacts.apis.io/uptycs/security/uptycs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/uptycs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/authentication/uptycs-authentication.yml
+  href: https://artifacts.apis.io/uptycs/authentication/uptycs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/uptycs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/conformance/uptycs-conformance.yml
+  href: https://artifacts.apis.io/uptycs/conformance/uptycs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/uptycs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/conventions/uptycs-conventions.yml
+  href: https://artifacts.apis.io/uptycs/conventions/uptycs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/uptycs-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/llms/uptycs-llms.txt
+  href: https://artifacts.apis.io/uptycs/llms/uptycs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/uptycs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/mcp/uptycs-mcp.yml
+  href: https://artifacts.apis.io/uptycs/mcp/uptycs-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/uptycs-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/packages/uptycs-packages.yml
+  href: https://artifacts.apis.io/uptycs/packages/uptycs-packages.yml
   title: ''
   type: Packages
   url: packages/uptycs-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/well-known/uptycs-well-known.yml
+  href: https://artifacts.apis.io/uptycs/well-known/uptycs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/uptycs-well-known.yml
@@ -144,12 +147,12 @@ overview: 'Uptycs is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Uptycs'' developer surface includes pricing, support, engineering blog, authentication, and 16 more developer resources.'
-random_paper: 20
+random_paper: 8
 score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -177,14 +180,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/uptycs/refs/heads/main/screenshots/uptycs-2026-09-02T165149.png
+screenshot: https://apis.io/screenshots/uptycs/uptycs-2026-09-02T165149.png
 security:
 - kind: authentication
   name: Uptycs Authentication

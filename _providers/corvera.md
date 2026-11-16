@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,13 +38,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Corvera''s hosted Model Context Protocol server. A single OAuth-secured HTTP MCP endpoint that exposes governed CPG datasets — retailer, distributor, logistics, ERP, warehouse, and ecommerce data — as '
   name: Corvera MCP Server
   slug: corvera-mcp-server
-artifact_total: 5
+artifact_total: 8
 common:
 - group: start
   title: ''
@@ -54,52 +59,52 @@ common:
   type: GettingStarted
   url: https://docs.corvera.ai/quickstart
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/mcp/corvera-mcp.yml
+  href: https://artifacts.apis.io/corvera/mcp/corvera-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/corvera-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/authentication/corvera-authentication.yml
+  href: https://artifacts.apis.io/corvera/authentication/corvera-authentication.yml
   title: ''
   type: Authentication
   url: authentication/corvera-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/scopes/corvera-scopes.yml
+  href: https://artifacts.apis.io/corvera/scopes/corvera-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/corvera-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/well-known/corvera-well-known.yml
+  href: https://artifacts.apis.io/corvera/well-known/corvera-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/corvera-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/llms/corvera-llms.txt
+  href: https://artifacts.apis.io/corvera/llms/corvera-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/corvera-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/changelog/corvera-changelog.yml
+  href: https://artifacts.apis.io/corvera/changelog/corvera-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/corvera-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/conventions/corvera-conventions.yml
+  href: https://artifacts.apis.io/corvera/conventions/corvera-conventions.yml
   title: ''
   type: Conventions
   url: conventions/corvera-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/conformance/corvera-conformance.yml
+  href: https://artifacts.apis.io/corvera/conformance/corvera-conformance.yml
   title: ''
   type: Conformance
   url: conformance/corvera-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/security/corvera-domain-security.yml
+  href: https://artifacts.apis.io/corvera/security/corvera-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/corvera-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/corvera/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -144,7 +149,7 @@ overview: 'Corvera is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Corvera''s developer surface includes documentation, getting-started guide, authentication, changelog, engineering blog, signup flow, and 13 more developer resources.'
-random_paper: 6
+random_paper: 10
 scopes:
 - name: Corvera Scopes
   scope_count: 4
@@ -154,13 +159,13 @@ score:
   band: emerging
   composite: 25.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
@@ -168,7 +173,7 @@ score:
     developer_ergonomics: 20.8
     discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 25.5
+  previous_composite: 25.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -179,14 +184,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/corvera/refs/heads/main/screenshots/corvera-2026-07-25T210449.png
+screenshot: https://apis.io/screenshots/corvera/corvera-2026-07-25T210449.png
 security:
 - kind: authentication
   name: Corvera Authentication
@@ -196,6 +201,14 @@ security:
   name: Corvera Domain Security
   slug: corvera-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Connect Corvera and explore available data
+  slug: corvera-connect-and-explore
+- name: Compare cross-retailer sales week-for-week
+  slug: corvera-cross-retailer-sales
+- name: Track distributor depletions and velocity
+  slug: corvera-distributor-depletions
 slug: corvera
 tags:
 - Company

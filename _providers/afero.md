@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 22.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -64,11 +67,8 @@ apis:
   description: 'The Afero Over-the-Air (OTA) Update API lets a partner drive firmware releases from their own CI/CD pipeline instead of the OTA Manager web application. It creates and updates partner firmware types, '
   name: Afero Cloud OTA Firmware API
   slug: ota-api
-artifact_total: 13
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Afero Cloud Authentication API
   slug: open-afero-authentication-api
@@ -83,27 +83,27 @@ collections:
   slug: open-afero-users-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/mcp/afero-mcp.yml
+  href: https://artifacts.apis.io/afero/mcp/afero-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/afero-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/agentic-access/afero-agentic-access.yml
+  href: https://artifacts.apis.io/afero/agentic-access/afero-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/afero-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/security/afero-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/afero/security/afero-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/afero-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/security/afero-domain-security.yml
+  href: https://artifacts.apis.io/afero/security/afero-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/afero-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/authentication/afero-authentication.yml
+  href: https://artifacts.apis.io/afero/authentication/afero-authentication.yml
   title: ''
   type: Authentication
   url: authentication/afero-authentication.yml
@@ -164,62 +164,62 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/afero
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/packages/afero-packages.yml
+  href: https://artifacts.apis.io/afero/packages/afero-packages.yml
   title: ''
   type: Packages
   url: packages/afero-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/packages/afero-packages.yml
+  href: https://artifacts.apis.io/afero/packages/afero-packages.yml
   title: ''
   type: SDKs
   url: packages/afero-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/well-known/afero-well-known.yml
+  href: https://artifacts.apis.io/afero/well-known/afero-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/afero-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/well-known/afero-security.txt
+  href: https://artifacts.apis.io/afero/well-known/afero-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/afero-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/llms/afero-llms.txt
+  href: https://artifacts.apis.io/afero/llms/afero-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/afero-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/conventions/afero-conventions.yml
+  href: https://artifacts.apis.io/afero/conventions/afero-conventions.yml
   title: ''
   type: Conventions
   url: conventions/afero-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/errors/afero-problem-types.yml
+  href: https://artifacts.apis.io/afero/errors/afero-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/afero-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/lifecycle/afero-lifecycle.yml
+  href: https://artifacts.apis.io/afero/lifecycle/afero-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/afero-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/changelog/afero-changelog.yml
+  href: https://artifacts.apis.io/afero/changelog/afero-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/afero-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/conformance/afero-conformance.yml
+  href: https://artifacts.apis.io/afero/conformance/afero-conformance.yml
   title: ''
   type: Conformance
   url: conformance/afero-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/data-model/afero-data-model.yml
+  href: https://artifacts.apis.io/afero/data-model/afero-data-model.yml
   title: ''
   type: DataModel
   url: data-model/afero-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/afero/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -232,7 +232,7 @@ common:
   type: ReleaseNotes
   url: https://afero-docs.readthedocs.io/en/latest/RelNotes/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/overlays/afero-cloud-api-overlay.yaml
+  href: https://artifacts.apis.io/afero/overlays/afero-cloud-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/afero-cloud-api-overlay.yaml
@@ -247,32 +247,48 @@ network: true
 overview: 'Afero publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cloud Authentication API, Cloud Users API, Cloud Devices API, and 1 more. Tagged areas include Company, IoT, IoT Platform, Connected Devices, and Device Management.
 
 
+  The Afero catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Afero''s developer surface includes authentication, documentation, API reference, getting-started guide, developer console, support, engineering blog, and 27 more developer resources.'
-random_paper: 19
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Afero API Rules
+  rule_count: 73
+  severity_counts:
+    error: 65
+    hint: 0
+    info: 1
+    warn: 7
+  slug: afero-rules
 score:
   band: thin
-  composite: 36.5
+  composite: 38.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 14.9
+    contract_governance: 18.2
+    contract_quality: 14.1
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 36.5
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 4
       marker_coverage: 100.0
       total: 4
@@ -284,13 +300,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 25.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/afero/refs/heads/main/screenshots/afero-2026-08-07T161019.png
+screenshot: https://apis.io/screenshots/afero/afero-2026-08-07T161019.png
 security:
 - kind: authentication
   name: Afero Authentication
@@ -304,6 +320,16 @@ security:
   name: Afero Vulnerability Disclosure
   slug: afero-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 4
+skills:
+- name: Audit the firmware inventory of an Afero device type
+  slug: afero-audit-firmware-fleet
+- name: Control an Afero device by writing an attribute
+  slug: afero-control-a-device
+- name: Publish a firmware image and push it over the air
+  slug: afero-publish-firmware-ota
+- name: Read the state of the devices on an Afero account
+  slug: afero-read-device-state
 slug: afero
 tags:
 - Company

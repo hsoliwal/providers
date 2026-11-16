@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.5
-  scored_at: '2026-10-17'
+  score: 20.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -47,11 +51,8 @@ apis:
   description: Placeholder image retrieval
   name: PlaceKitten Image API
   slug: placekitten-image-api
-artifact_total: 15
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: PlaceKitten Image API
   slug: open-placekitten-image-api
@@ -60,12 +61,12 @@ collections:
   slug: open-placekitten
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/placekitten/refs/heads/main/agentic-access/placekitten-agentic-access.yml
+  href: https://artifacts.apis.io/placekitten/agentic-access/placekitten-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/placekitten-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/placekitten/refs/heads/main/security/placekitten-domain-security.yml
+  href: https://artifacts.apis.io/placekitten/security/placekitten-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/placekitten-domain-security.yml
@@ -119,7 +120,7 @@ overview: 'PlaceKitten publishes 1 API contract indexed on the [APIs.io](https:/
 
 
   The PlaceKitten catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
-random_paper: 6
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -176,14 +177,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/placekitten/refs/heads/main/screenshots/placekitten-2026-10-11T191932.png
+screenshot: https://apis.io/screenshots/placekitten/placekitten-2026-10-11T191932.png
 security:
 - kind: domain-security
   name: Placekitten Domain Security

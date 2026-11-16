@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -64,32 +77,32 @@ apis:
 artifact_total: 9
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/agentic-access/doaj-agentic-access.yml
+  href: https://artifacts.apis.io/doaj/agentic-access/doaj-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/doaj-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/rules/doaj-rules.yml
+  href: https://artifacts.apis.io/doaj/rules/doaj-rules.yml
   title: ''
   type: Spectral
   url: rules/doaj-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/errors/doaj-problem-types.yml
+  href: https://artifacts.apis.io/doaj/errors/doaj-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/doaj-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/conformance/doaj-conformance.yml
+  href: https://artifacts.apis.io/doaj/conformance/doaj-conformance.yml
   title: ''
   type: Conformance
   url: conformance/doaj-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/hosts/doaj-hosts.yml
+  href: https://artifacts.apis.io/doaj/hosts/doaj-hosts.yml
   title: ''
   type: Hosts
   url: hosts/doaj-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/vendors/doaj-vendors.yml
+  href: https://artifacts.apis.io/doaj/vendors/doaj-vendors.yml
   title: ''
   type: Vendors
   url: vendors/doaj-vendors.yml
@@ -98,7 +111,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/DOAJ
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/doaj/refs/heads/main/security/doaj-domain-security.yml
+  href: https://artifacts.apis.io/doaj/security/doaj-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/doaj-domain-security.yml
@@ -141,14 +154,14 @@ modified: '2026-10-14'
 name: DOAJ
 nav: Providers
 network: true
-overview: 'DOAJ publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bulk API, CRUD Applications API, CRUD Articles API, and 3 more. Tagged areas include OpenAccess, Journals, ScholarlyPublishing, and Metadata.
+overview: 'DOAJ publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bulk API, CRUD Applications API, CRUD Articles API, and 3 more. Tagged areas include Open Access, Journals, Scholarly Publishing, and Metadata.
 
 
   The DOAJ catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   DOAJ''s developer surface includes API reference, getting-started guide, support, engineering blog, signup flow, and 11 more developer resources.'
-random_paper: 18
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 49
@@ -163,22 +176,24 @@ rules:
     warn: 1
   slug: doaj-rules
 score:
-  band: thin
-  composite: 30.1
+  band: emerging
+  composite: 22.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 15
     catalog_earned: 34.5
     catalog_earned_first_party: 0.0
     catalog_gap: 80.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.9
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 40.0
-    developer_ergonomics: 26.2
+    developer_ergonomics: 13.1
     discoverability: 53.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -190,15 +205,17 @@ score:
     mcp: derived
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: tags
+    regime: Education & Research
+    regime_id: education
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/doaj/doaj-2026-11-03T130833.png
 security:
 - kind: domain-security
   name: Doaj Domain Security
@@ -206,9 +223,9 @@ security:
   summary_line: TLSv1.3
 slug: doaj
 tags:
-- OpenAccess
+- Open Access
 - Journals
-- ScholarlyPublishing
+- Scholarly Publishing
 - Metadata
 website: https://doaj.org
 ---

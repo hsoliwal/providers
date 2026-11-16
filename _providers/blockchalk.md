@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -33,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: http://blockchalk.com/api
@@ -44,9 +51,6 @@ apis:
 artifact_total: 5
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: BlockChalk API (historical) chalks API
   slug: open-blockchalk-chalks-api
 common:
@@ -55,7 +59,7 @@ common:
   type: Website
   url: https://www.archive.org/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blockchalk/refs/heads/main/overlays/blockchalk-chalks-overlay.yaml
+  href: https://artifacts.apis.io/blockchalk/overlays/blockchalk-chalks-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/blockchalk-chalks-overlay.yaml
@@ -68,22 +72,22 @@ common:
   type: APIReference
   url: http://web.archive.org/web/20090810213933/http://blockchalk.com/developers
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blockchalk/refs/heads/main/packages/blockchalk-packages.yml
+  href: https://artifacts.apis.io/blockchalk/packages/blockchalk-packages.yml
   title: ''
   type: Packages
   url: packages/blockchalk-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockchalk/refs/heads/main/well-known/blockchalk-well-known.yml
+  href: https://artifacts.apis.io/blockchalk/well-known/blockchalk-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blockchalk-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blockchalk/refs/heads/main/security/blockchalk-domain-security.yml
+  href: https://artifacts.apis.io/blockchalk/security/blockchalk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blockchalk-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockchalk/refs/heads/main/llms/blockchalk-llms.txt
+  href: https://artifacts.apis.io/blockchalk/llms/blockchalk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blockchalk-llms.txt
@@ -99,16 +103,32 @@ network: true
 overview: 'BlockChalk publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Chalks API. Tagged areas include Company, Location, Geolocation, Social, and Messaging.
 
 
+  The BlockChalk catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   BlockChalk''s developer surface includes documentation, API reference, and 6 more developer resources.'
-random_paper: 4
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 78
+  extends:
+  - spectral:oas
+  name: BlockChalk API Rules
+  rule_count: 37
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 1
+    warn: 1
+  slug: blockchalk-rules
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 17
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -134,14 +154,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/blockchalk/refs/heads/main/screenshots/blockchalk-2026-07-25T203346.png
+screenshot: https://apis.io/screenshots/blockchalk/blockchalk-2026-07-25T203346.png
 security:
 - kind: authentication
   name: Blockchalk Authentication

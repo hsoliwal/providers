@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'Multi-modal MaaS API for Unisound U2 models: OpenAI-compatible chat completions and Anthropic-compatible messages for the U2 and U2-Med LLMs (streaming, function calling, structured output, context ca'
@@ -49,14 +52,14 @@ apis:
 - description: 'WebSocket speech APIs on the Unisound AI Open Platform: one-sentence speech recognition (Mandarin, Cantonese, Sichuanese, English; domain models for medical, finance, law, and more), real-time transcr'
   name: Unisound AI Open Platform Speech WebAPI
   slug: unisound-ai-open-platform-speech-webapi
-artifact_total: 7
+artifact_total: 8
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.unisound.com/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/security/unisound-domain-security.yml
+  href: https://artifacts.apis.io/unisound/security/unisound-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unisound-domain-security.yml
@@ -105,7 +108,7 @@ common:
   type: SignUp
   url: https://maas.unisound.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/rate-limits/unisound-rate-limits.yml
+  href: https://artifacts.apis.io/unisound/rate-limits/unisound-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/unisound-rate-limits.yml
@@ -118,62 +121,70 @@ common:
   type: ChangeLog
   url: https://maas.unisound.com/docs/release/notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/changelog/unisound-changelog.yml
+  href: https://artifacts.apis.io/unisound/changelog/unisound-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/unisound-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/packages/unisound-packages.yml
+  href: https://artifacts.apis.io/unisound/packages/unisound-packages.yml
   title: ''
   type: Packages
   url: packages/unisound-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/packages/unisound-packages.yml
+  href: https://artifacts.apis.io/unisound/packages/unisound-packages.yml
   title: ''
   type: SDKs
   url: packages/unisound-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/llms/unisound-llms.txt
+  href: https://artifacts.apis.io/unisound/llms/unisound-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unisound-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/conformance/unisound-conformance.yml
+  href: https://artifacts.apis.io/unisound/conformance/unisound-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unisound-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/errors/unisound-problem-types.yml
+  href: https://artifacts.apis.io/unisound/errors/unisound-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/unisound-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/lifecycle/unisound-lifecycle.yml
+  href: https://artifacts.apis.io/unisound/lifecycle/unisound-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unisound-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/authentication/unisound-authentication.yml
+  href: https://artifacts.apis.io/unisound/authentication/unisound-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unisound-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/sandbox/unisound-sandbox.yml
+  href: https://artifacts.apis.io/unisound/sandbox/unisound-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/unisound-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/conventions/unisound-conventions.yml
+  href: https://artifacts.apis.io/unisound/conventions/unisound-conventions.yml
   title: ''
   type: Conventions
   url: conventions/unisound-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/plans/unisound-plans.yml
+  href: https://artifacts.apis.io/unisound/plans/unisound-plans.yml
   title: ''
   type: Plans
   url: plans/unisound-plans.yml
 created: '2026-07-17'
 description: Unisound (云知声) is a Chinese AGI technology company delivering conversational AI across smart living and smart healthcare. Its Token Hub MaaS platform exposes OpenAI- and Anthropic-compatible APIs for the Unisound U2 agent-native large language model and U2-Med medical model, plus U2-ASR speech transcription, U2-TTS synthesis and voice cloning, voiceprint, and U1-OCR document parsing services, alongside the legacy AI Open Platform WebSocket speech APIs and the Shanhai (UniGPT) LLM WebAPI.
+finops:
+- has_sources: true
+  method: derived
+  name: Unisound Finops
+  primary_unit: ''
+  service_category: ''
+  slug: unisound-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unisound.png
 layout: provider
 modified: '2026-10-06'
@@ -188,7 +199,7 @@ plans:
 - name: Unisound Plans
   plan_count: 3
   slug: unisound-plans
-random_paper: 5
+random_paper: 21
 rate_limits:
 - limit_count: 9
   name: Unisound Rate Limits
@@ -197,7 +208,7 @@ score:
   band: developing
   composite: 45.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 64.0
     catalog_earned_first_party: 24.0
     catalog_gap: 51.0
@@ -225,14 +236,14 @@ score:
     regime: Health
     regime_id: health
     score: 17.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/screenshots/unisound-2026-08-17T082618.png
+screenshot: https://apis.io/screenshots/unisound/unisound-2026-08-17T082618.png
 security:
 - kind: authentication
   name: Unisound Authentication

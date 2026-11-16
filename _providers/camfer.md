@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Requires approval
   onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/camfer/refs/heads/main/security/camfer-domain-security.yml
+  href: https://artifacts.apis.io/camfer/security/camfer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/camfer-domain-security.yml
@@ -81,11 +85,11 @@ modified: '2026-07-18'
 name: Camfer
 nav: Providers
 network: true
-overview: 'Camfer is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Computer-Aided Design, CAD, Mechanical Engineering, and Artificial Intelligence.
+overview: 'Camfer is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, CAD, Mechanical Engineering, Artificial Intelligence, and Generative Design.
 
 
   Camfer''s developer surface includes engineering blog, signup flow, support, and 6 more developer resources.'
-random_paper: 6
+random_paper: 22
 score:
   band: minimal
   composite: 10.4
@@ -96,7 +100,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
@@ -104,21 +108,21 @@ score:
     developer_ergonomics: 7.1
     discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 10.3
+  previous_composite: 10.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 9.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/camfer/refs/heads/main/screenshots/camfer-2026-07-25T204317.png
+screenshot: https://apis.io/screenshots/camfer/camfer-2026-07-25T204317.png
 security:
 - kind: domain-security
   name: Camfer Domain Security
@@ -127,7 +131,6 @@ security:
 slug: camfer
 tags:
 - Company
-- Computer-Aided Design
 - CAD
 - Mechanical Engineering
 - Artificial Intelligence

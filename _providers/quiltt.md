@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -71,9 +77,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Quiltt Admin & Auth REST Connections API
   slug: open-quiltt-connections-api
 - collection_type: open
@@ -90,17 +93,17 @@ collections:
   slug: open-quiltt
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/agentic-access/quiltt-agentic-access.yml
+  href: https://artifacts.apis.io/quiltt/agentic-access/quiltt-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/quiltt-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/security/quiltt-domain-security.yml
+  href: https://artifacts.apis.io/quiltt/security/quiltt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quiltt-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/authentication/quiltt-authentication.yml
+  href: https://artifacts.apis.io/quiltt/authentication/quiltt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/quiltt-authentication.yml
@@ -121,17 +124,17 @@ common:
   type: Documentation
   url: https://www.quiltt.dev
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/plans/quiltt-plans-pricing.yml
+  href: https://artifacts.apis.io/quiltt/plans/quiltt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quiltt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/rate-limits/quiltt-rate-limits.yml
+  href: https://artifacts.apis.io/quiltt/rate-limits/quiltt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/quiltt-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/finops/quiltt-finops.yml
+  href: https://artifacts.apis.io/quiltt/finops/quiltt-finops.yml
   title: ''
   type: FinOps
   url: finops/quiltt-finops.yml
@@ -162,35 +165,51 @@ network: true
 overview: 'Quiltt publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connections API, Profiles API, Session Tokens API, and 2 more. Tagged areas include Fintech, Open Banking, Financial Data, Aggregation, and GraphQL.
 
 
+  The Quiltt catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Quiltt''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Quiltt Plans Pricing
   plan_count: 3
   slug: quiltt-plans-pricing
-random_paper: 15
+random_paper: 3
 rate_limits:
 - limit_count: 4
   name: Quiltt Rate Limits
   slug: quiltt-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Quiltt API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: quiltt-rules
 score:
   band: thin
-  composite: 26.3
+  composite: 28.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.7
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 34.7
+  previous_composite: 28.0
   provenance:
     agentic_access: derived
     contracts:
@@ -204,13 +223,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/quiltt/refs/heads/main/screenshots/quiltt-2026-09-02T152701.png
+screenshot: https://apis.io/screenshots/quiltt/quiltt-2026-09-02T152701.png
 security:
 - kind: authentication
   name: Quiltt Authentication

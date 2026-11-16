@@ -1,15 +1,17 @@
 ---
 access_model:
   confidence: high
-  label: Freemium (free trial) · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
-  trial: true
-  try_now: true
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 26.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -90,9 +95,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Union FlyteAdmin Control Plane API (HTTP/JSON Gateway) Domains API
   slug: open-unionai-domains-api
 - collection_type: open
@@ -125,32 +127,32 @@ common:
   type: Pricing
   url: https://www.union.ai/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/capabilities/unionai-capability-edges.yml
+  href: https://artifacts.apis.io/unionai/capabilities/unionai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/unionai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/agentic-access/unionai-agentic-access.yml
+  href: https://artifacts.apis.io/unionai/agentic-access/unionai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/unionai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/security/unionai-trust-center.yml
+  href: https://artifacts.apis.io/unionai/security/unionai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/unionai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/security/unionai-domain-security.yml
+  href: https://artifacts.apis.io/unionai/security/unionai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unionai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/authentication/unionai-authentication.yml
+  href: https://artifacts.apis.io/unionai/authentication/unionai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unionai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/scopes/unionai-scopes.yml
+  href: https://artifacts.apis.io/unionai/scopes/unionai-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/unionai-scopes.yml
@@ -175,17 +177,17 @@ common:
   type: Documentation
   url: https://www.union.ai/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/plans/unionai-plans-pricing.yml
+  href: https://artifacts.apis.io/unionai/plans/unionai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/unionai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/rate-limits/unionai-rate-limits.yml
+  href: https://artifacts.apis.io/unionai/rate-limits/unionai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/unionai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/finops/unionai-finops.yml
+  href: https://artifacts.apis.io/unionai/finops/unionai-finops.yml
   title: ''
   type: FinOps
   url: finops/unionai-finops.yml
@@ -208,16 +210,32 @@ network: true
 overview: 'Union.ai publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Domains API, Executions API, Launch Plans API, and 6 more. Tagged areas include Artificial Intelligence, Machine Learning, Orchestration, Workflows, and MLOps.
 
 
+  The Union.ai catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Union.ai''s developer surface includes pricing, authentication, documentation, and 12 more developer resources.'
 plans:
 - name: Unionai Plans Pricing
   plan_count: 9
   slug: unionai-plans-pricing
-random_paper: 7
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Unionai Rate Limits
   slug: unionai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Union.ai API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: unionai-rules
 scopes:
 - name: Unionai Scopes
   scope_count: 1
@@ -225,23 +243,23 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 35.0
+  composite: 35.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 49.0
+    artifact_dirs: 17
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.5
+  delta: -1.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
+    access_clarity: 44.7
+    contract_governance: 13.6
     contract_quality: 45.6
     developer_ergonomics: 29.8
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 37.5
+  previous_composite: 36.6
   provenance:
     agentic_access: derived
     contracts:
@@ -255,13 +273,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/screenshots/unionai-2026-06-20T200031.png
+screenshot: https://apis.io/screenshots/unionai/unionai-2026-06-20T200031.png
 security:
 - kind: authentication
   name: Unionai Authentication

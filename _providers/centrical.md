@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/security/centrical-domain-security.yml
+  href: https://artifacts.apis.io/centrical/security/centrical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/centrical-domain-security.yml
@@ -78,17 +81,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/gameffective
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/conformance/centrical-conformance.yml
+  href: https://artifacts.apis.io/centrical/conformance/centrical-conformance.yml
   title: ''
   type: Conformance
   url: conformance/centrical-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/conformance/centrical-conformance.yml
+  href: https://artifacts.apis.io/centrical/conformance/centrical-conformance.yml
   title: ''
   type: Compliance
   url: conformance/centrical-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/security/centrical-trust-center.yml
+  href: https://artifacts.apis.io/centrical/security/centrical-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/centrical-trust-center.yml
@@ -97,22 +100,22 @@ common:
   type: StatusPage
   url: https://centrical.statuspage.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/lifecycle/centrical-lifecycle.yml
+  href: https://artifacts.apis.io/centrical/lifecycle/centrical-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/centrical-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/plans/centrical-plans-pricing.yml
+  href: https://artifacts.apis.io/centrical/plans/centrical-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/centrical-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/rate-limits/centrical-rate-limits.yml
+  href: https://artifacts.apis.io/centrical/rate-limits/centrical-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/centrical-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/llms/centrical-llms.txt
+  href: https://artifacts.apis.io/centrical/llms/centrical-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/centrical-llms.txt
@@ -149,7 +152,7 @@ plans:
 - name: Centrical Plans Pricing
   plan_count: 1
   slug: centrical-plans-pricing
-random_paper: 3
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Centrical Rate Limits
@@ -158,7 +161,7 @@ score:
   band: thin
   composite: 27.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
@@ -181,14 +184,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/centrical/refs/heads/main/screenshots/centrical-2026-09-02T145029.png
+screenshot: https://apis.io/screenshots/centrical/centrical-2026-09-02T145029.png
 security:
 - kind: authentication
   name: Centrical Authentication

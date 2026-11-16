@@ -1,12 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Free
   onboarding: unknown
-  pricing: unknown
+  pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -57,11 +61,8 @@ apis:
   description: Prometheus-compatible metrics endpoints exposing containerd runtime statistics including gRPC request rates, snapshot usage, and task lifecycle counts.
   name: Containerd Metrics API
   slug: containerd-metrics-api
-artifact_total: 17
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Containerd Metrics API
   slug: open-containerd-metrics-api
@@ -70,22 +71,22 @@ collections:
   slug: open-containerd-metrics
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/plans/containerd-plans-pricing.yml
+  href: https://artifacts.apis.io/containerd/plans/containerd-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/containerd-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/rate-limits/containerd-rate-limits.yml
+  href: https://artifacts.apis.io/containerd/rate-limits/containerd-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/containerd-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/finops/containerd-finops.yml
+  href: https://artifacts.apis.io/containerd/finops/containerd-finops.yml
   title: ''
   type: FinOps
   url: finops/containerd-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/capabilities/containerd-capability-edges.yml
+  href: https://artifacts.apis.io/containerd/capabilities/containerd-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/containerd-capability-edges.yml
@@ -98,12 +99,12 @@ common:
   type: Releases
   url: https://github.com/containerd/nri/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/agentic-access/containerd-agentic-access.yml
+  href: https://artifacts.apis.io/containerd/agentic-access/containerd-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/containerd-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/security/containerd-domain-security.yml
+  href: https://artifacts.apis.io/containerd/security/containerd-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/containerd-domain-security.yml
@@ -144,22 +145,22 @@ common:
   type: License
   url: https://github.com/containerd/containerd/blob/main/LICENSE
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/json-ld/containerd-context.jsonld
+  href: https://artifacts.apis.io/containerd/json-ld/containerd-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/containerd-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/json-schema/containerd-config-schema.json
+  href: https://artifacts.apis.io/containerd/json-schema/containerd-config-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/containerd-config-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/json-schema/containerd-oci-runtime-spec-schema.json
+  href: https://artifacts.apis.io/containerd/json-schema/containerd-oci-runtime-spec-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/containerd-oci-runtime-spec-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/rules/containerd-rules.yml
+  href: https://artifacts.apis.io/containerd/rules/containerd-rules.yml
   title: ''
   type: Spectral
   url: rules/containerd-rules.yml
@@ -235,13 +236,13 @@ score:
   band: thin
   composite: 30.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 53.5
     catalog_earned_first_party: 0.0
     catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 13.6
@@ -252,7 +253,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 29.0
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     contracts:
@@ -266,14 +267,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/containerd/refs/heads/main/screenshots/containerd-2026-06-20T174921.png
+screenshot: https://apis.io/screenshots/containerd/containerd-2026-06-20T174921.png
 security:
 - kind: domain-security
   name: Containerd Domain Security

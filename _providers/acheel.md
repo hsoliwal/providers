@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,37 +37,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/security/acheel-domain-security.yml
+  href: https://artifacts.apis.io/acheel/security/acheel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acheel-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/conformance/acheel-conformance.yml
+  href: https://artifacts.apis.io/acheel/conformance/acheel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acheel-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/llms/acheel-llms.txt
+  href: https://artifacts.apis.io/acheel/llms/acheel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acheel-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/plans/acheel-plans-pricing.yml
+  href: https://artifacts.apis.io/acheel/plans/acheel-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acheel-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/rate-limits/acheel-rate-limits.yml
+  href: https://artifacts.apis.io/acheel/rate-limits/acheel-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acheel-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/components/acheel-components.yml
+  href: https://artifacts.apis.io/acheel/components/acheel-components.yml
   title: ''
   type: Components
   url: components/acheel-components.yml
@@ -141,7 +144,7 @@ plans:
 - name: Acheel Plans Pricing
   plan_count: 0
   slug: acheel-plans-pricing
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Acheel Rate Limits
@@ -185,14 +188,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acheel/refs/heads/main/screenshots/acheel-2026-09-02T144111.png
+screenshot: https://apis.io/screenshots/acheel/acheel-2026-09-02T144111.png
 security:
 - kind: domain-security
   name: Acheel Domain Security

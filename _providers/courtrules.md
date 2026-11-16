@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -6,24 +18,27 @@ agent_readiness:
     agent_skills: false
     agentic_access: false
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.7
-  scored_at: '2026-10-17'
+  score: 12.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Deterministic court rules compliance checking for federal filings
@@ -31,52 +46,57 @@ apis:
   slug: court-rules-api
 artifact_total: 5
 common:
+- group: build
+  href: https://artifacts.apis.io/courtrules/integrations/courtrules-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/courtrules-integration-edges.yml
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.courtrules.app/blog/feed
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/rate-limits/courtrules-rate-limits.yml
+  href: https://artifacts.apis.io/courtrules/rate-limits/courtrules-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/courtrules-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/authentication/courtrules-authentication.yml
+  href: https://artifacts.apis.io/courtrules/authentication/courtrules-authentication.yml
   title: ''
   type: Authentication
   url: authentication/courtrules-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/conformance/courtrules-conformance.yml
+  href: https://artifacts.apis.io/courtrules/conformance/courtrules-conformance.yml
   title: ''
   type: Conformance
   url: conformance/courtrules-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/llms/courtrules-llms.txt
+  href: https://artifacts.apis.io/courtrules/llms/courtrules-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/courtrules-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/a2a/courtrules-a2a.yml
+  href: https://artifacts.apis.io/courtrules/a2a/courtrules-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/courtrules-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/mcp/courtrules-mcp.yml
+  href: https://artifacts.apis.io/courtrules/mcp/courtrules-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/courtrules-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/well-known/courtrules-well-known.yml
+  href: https://artifacts.apis.io/courtrules/well-known/courtrules-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/courtrules-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/hosts/courtrules-hosts.yml
+  href: https://artifacts.apis.io/courtrules/hosts/courtrules-hosts.yml
   title: ''
   type: Hosts
   url: hosts/courtrules-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/vendors/courtrules-vendors.yml
+  href: https://artifacts.apis.io/courtrules/vendors/courtrules-vendors.yml
   title: ''
   type: Vendors
   url: vendors/courtrules-vendors.yml
@@ -93,7 +113,7 @@ common:
   type: APIReference
   url: https://docs.courtrules.app/api-reference/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/security/courtrules-domain-security.yml
+  href: https://artifacts.apis.io/courtrules/security/courtrules-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/courtrules-domain-security.yml
@@ -140,29 +160,29 @@ network: true
 overview: 'Court Rules is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Legal Data, CourtRules, Compliance, and US Law.
 
 
-  Court Rules'' developer surface includes authentication, getting-started guide, API reference, documentation, signup flow, support, engineering blog, and 14 more developer resources.'
-random_paper: 12
+  Court Rules'' developer surface includes authentication, getting-started guide, API reference, documentation, signup flow, support, engineering blog, and 15 more developer resources.'
+random_paper: 8
 rate_limits:
 - limit_count: 3
   name: Courtrules Rate Limits
   slug: courtrules-rate-limits
 score:
-  band: thin
-  composite: 29.2
+  band: emerging
+  composite: 21.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.6
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 47.6
-    discoverability: 68.3
+    developer_ergonomics: 29.8
+    discoverability: 67.5
     operational_transparency: 31.6
   previous_composite: 29.2
   provenance:
@@ -173,15 +193,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/courtrules/refs/heads/main/screenshots/courtrules-2026-10-11T103301.png
+screenshot: https://apis.io/screenshots/courtrules/courtrules-2026-10-11T103301.png
 security:
 - kind: authentication
   name: Courtrules Authentication

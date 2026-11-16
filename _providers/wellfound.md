@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Remote MCP server exposing a recruiter's inbound job applications to an agent, and letting it accept or reject them. Named "Wellfound recruiter applications" in its own RFC 9728 protected-resource doc
@@ -79,87 +98,87 @@ common:
   type: TrustCenter
   url: https://trust.wellfound.ai/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/mcp/wellfound-mcp.yml
+  href: https://artifacts.apis.io/wellfound/mcp/wellfound-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/wellfound-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/authentication/wellfound-authentication.yml
+  href: https://artifacts.apis.io/wellfound/authentication/wellfound-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wellfound-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/scopes/wellfound-scopes.yml
+  href: https://artifacts.apis.io/wellfound/scopes/wellfound-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/wellfound-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/well-known/wellfound-well-known.yml
+  href: https://artifacts.apis.io/wellfound/well-known/wellfound-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wellfound-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/well-known/wellfound-security.txt
+  href: https://artifacts.apis.io/wellfound/well-known/wellfound-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/wellfound-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/security/wellfound-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/wellfound/security/wellfound-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/wellfound-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/security/wellfound-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/wellfound/security/wellfound-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/wellfound-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/security/wellfound-domain-security.yml
+  href: https://artifacts.apis.io/wellfound/security/wellfound-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wellfound-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/security/wellfound-trust-center.yml
+  href: https://artifacts.apis.io/wellfound/security/wellfound-trust-center.yml
   title: ''
   type: Compliance
   url: security/wellfound-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/conformance/wellfound-conformance.yml
+  href: https://artifacts.apis.io/wellfound/conformance/wellfound-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wellfound-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/conventions/wellfound-conventions.yml
+  href: https://artifacts.apis.io/wellfound/conventions/wellfound-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wellfound-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/errors/wellfound-problem-types.yml
+  href: https://artifacts.apis.io/wellfound/errors/wellfound-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/wellfound-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/lifecycle/wellfound-lifecycle.yml
+  href: https://artifacts.apis.io/wellfound/lifecycle/wellfound-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wellfound-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/plans/wellfound-plans-pricing.yml
+  href: https://artifacts.apis.io/wellfound/plans/wellfound-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wellfound-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/rate-limits/wellfound-rate-limits.yml
+  href: https://artifacts.apis.io/wellfound/rate-limits/wellfound-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wellfound-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/packages/wellfound-packages.yml
+  href: https://artifacts.apis.io/wellfound/packages/wellfound-packages.yml
   title: ''
   type: Packages
   url: packages/wellfound-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wellfound/refs/heads/main/llms/wellfound-llms.txt
+  href: https://artifacts.apis.io/wellfound/llms/wellfound-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wellfound-llms.txt
@@ -183,7 +202,7 @@ plans:
 - name: Wellfound Plans Pricing
   plan_count: 0
   slug: wellfound-plans-pricing
-random_paper: 8
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Wellfound Rate Limits
@@ -197,7 +216,7 @@ score:
   band: thin
   composite: 32.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -221,8 +240,8 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -256,7 +275,8 @@ tags:
 - Startups
 - MCP
 - Agent-Native
-- Authentication
+- OAuth
 - AI Sourcing
+- Authentication
 website: https://wellfound.com/
 ---

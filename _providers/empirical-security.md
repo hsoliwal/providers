@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-10-17'
+  score: 34.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,11 +66,8 @@ apis:
   description: Retrieve CVE detail, scores, malware hashes and history.
   name: Empirical Security CV Es API
   slug: empirical-security-cves-api
-artifact_total: 11
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Empirical Security CVE Groups API
   slug: open-empirical-security-cve-groups-api
@@ -73,12 +78,42 @@ collections:
   name: Empirical Security CVE Groups Search API
   slug: open-empirical-security-search-api
 common:
+- group: design
+  href: https://artifacts.apis.io/empirical-security/rules/empirical-security-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/empirical-security-rules.yml
+- group: design
+  href: https://artifacts.apis.io/empirical-security/json-ld/empirical-security-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/empirical-security-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/empirical-security/vocabulary/empirical-security-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/empirical-security-vocabulary.yml
+- group: other
+  href: https://artifacts.apis.io/empirical-security/hosts/empirical-security-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/empirical-security-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/empirical-security/integrations/empirical-security-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/empirical-security-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/empirical-security/vendors/empirical-security-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/empirical-security-vendors.yml
 - group: company
   title: ''
   type: BlogRSS
   url: https://research.empiricalsecurity.com/research?format=rss
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/overlays/empirical-security-openapi-overlay.yaml
+  href: https://artifacts.apis.io/empirical-security/overlays/empirical-security-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/empirical-security-openapi-overlay.yaml
@@ -123,73 +158,86 @@ common:
   type: PrivacyPolicy
   url: https://www.empiricalsecurity.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/authentication/empirical-security-authentication.yml
+  href: https://artifacts.apis.io/empirical-security/authentication/empirical-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/empirical-security-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/scopes/empirical-security-scopes.yml
+  href: https://artifacts.apis.io/empirical-security/scopes/empirical-security-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/empirical-security-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/errors/empirical-security-problem-types.yml
+  href: https://artifacts.apis.io/empirical-security/errors/empirical-security-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/empirical-security-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/conventions/empirical-security-conventions.yml
+  href: https://artifacts.apis.io/empirical-security/conventions/empirical-security-conventions.yml
   title: ''
   type: Conventions
   url: conventions/empirical-security-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/lifecycle/empirical-security-lifecycle.yml
+  href: https://artifacts.apis.io/empirical-security/lifecycle/empirical-security-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/empirical-security-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/conformance/empirical-security-conformance.yml
+  href: https://artifacts.apis.io/empirical-security/conformance/empirical-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/empirical-security-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/data-model/empirical-security-data-model.yml
+  href: https://artifacts.apis.io/empirical-security/data-model/empirical-security-data-model.yml
   title: ''
   type: DataModel
   url: data-model/empirical-security-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/well-known/empirical-security-well-known.yml
+  href: https://artifacts.apis.io/empirical-security/well-known/empirical-security-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/empirical-security-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/mcp/empirical-security-mcp.yml
+  href: https://artifacts.apis.io/empirical-security/mcp/empirical-security-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/empirical-security-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/agentic-access/empirical-security-agentic-access.yml
+  href: https://artifacts.apis.io/empirical-security/agentic-access/empirical-security-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/empirical-security-agentic-access.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/llms/empirical-security-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/empirical-security-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/security/empirical-security-domain-security.yml
+  href: https://artifacts.apis.io/empirical-security/security/empirical-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/empirical-security-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/empirical-security/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Empirical Security builds data-driven models that predict which vulnerabilities will actually be exploited, so security teams can prioritize remediation by real-world risk instead of raw CVSS severity. It operates the Foundation (global) model, which combines real-time internet exploitation telemetry with EPSS and monitors 18,000+ exploited CVEs; hourly-updated EPSS models (epss_v3, epss_v4, epss_v5); and Radiant, an organization-specific model that layers your local assets, configurations and internal telemetry on top of the Foundation data. The read-only REST API exposes CVE detail, per-model scores and percentiles, malware hashes, critical indicators, score history, change history, full dataset export, search, and saved CVE groups, secured with OAuth 2.0 client credentials (JWT bearer). Empirical Security is backed by Costanoa Ventures.
 image: https://www.empiricalsecurity.com/favicon.ico
+json_schemas:
+- name: CveGroup
+  property_count: 4
+  slug: empirical-security-cve-group
+- name: Cve
+  property_count: 6
+  slug: empirical-security-cve
+- name: MalwareHash
+  property_count: 3
+  slug: empirical-security-malware-hash
+- name: ScoreHistory
+  property_count: 2
+  slug: empirical-security-score-history
+jsonld:
+- class_count: 6
+  name: Empirical Security Context
+  property_count: 17
+  slug: empirical-security-context
 layout: provider
 modified: '2026-10-06'
 name: Empirical Security
@@ -198,8 +246,24 @@ network: true
 overview: 'Empirical Security publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: CVE Groups API, Search API, and CV Es API. Tagged areas include Company, Security, Cybersecurity, Vulnerability Management, and Vulnerability Prioritization.
 
 
-  Empirical Security''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 19 more developer resources.'
-random_paper: 13
+  The Empirical Security catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  Empirical Security''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 24 more developer resources.'
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Empirical Security API Rules
+  rule_count: 60
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 1
+  slug: empirical-security-rules
 scopes:
 - name: Empirical Security Scopes
   scope_count: 1
@@ -207,31 +271,31 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 32.0
+  composite: 37.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 62.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.8
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 14.5
+    contract_governance: 22.0
+    contract_quality: 28.1
     developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 32.0
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
-      derived: 3
+      derived: 4
       marker_coverage: 100.0
-      total: 3
+      total: 4
     mcp: derived
     skills: derived
   regulatory:
@@ -240,14 +304,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/empirical-security/refs/heads/main/screenshots/empirical-security-2026-07-25T213247.png
+screenshot: https://apis.io/screenshots/empirical-security/empirical-security-2026-07-25T213247.png
 security:
 - kind: authentication
   name: Empirical Security Authentication
@@ -257,6 +321,12 @@ security:
   name: Empirical Security Domain Security
   slug: empirical-security-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Monitor a saved CVE group
+  slug: empirical-security-monitor-cve-group
+- name: Prioritize CVEs by exploitation probability
+  slug: empirical-security-prioritize-cves
 slug: empirical-security
 tags:
 - Company

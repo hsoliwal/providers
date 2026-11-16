@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.2
-  scored_at: '2026-10-17'
+  score: 18.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.zohoapis.com/books/v3
@@ -55,11 +60,8 @@ apis:
   description: The Organizations API from Zoho Books — 1 operation(s) for organizations.
   name: Zoho Books Organizations API
   slug: zoho-books-organizations-api
-artifact_total: 13
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Zoho Books Contacts API
   slug: open-zoho-books-contacts-api
@@ -74,22 +76,22 @@ collections:
   slug: open-zoho-books-organizations-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zoho-books/refs/heads/main/plans/zoho-books-plans-pricing.yml
+  href: https://artifacts.apis.io/zoho-books/plans/zoho-books-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zoho-books-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoho-books/refs/heads/main/capabilities/zoho-books-capability-edges.yml
+  href: https://artifacts.apis.io/zoho-books/capabilities/zoho-books-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zoho-books-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoho-books/refs/heads/main/security/zoho-books-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/zoho-books/security/zoho-books-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/zoho-books-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoho-books/refs/heads/main/security/zoho-books-domain-security.yml
+  href: https://artifacts.apis.io/zoho-books/security/zoho-books-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zoho-books-domain-security.yml
@@ -147,6 +149,14 @@ common:
   url: https://api-console.zoho.com/
 created: '2026-05-11'
 description: Zoho Books is online accounting software for small and growing businesses that handles invoicing, expenses, banking, projects, inventory, vendor bills, reporting, and end-to-end GST/VAT compliance. It is part of the Zoho Finance suite and integrates with the rest of the Zoho One platform alongside payment gateways, banks, and tax authorities. The Zoho Books REST API exposes the full accounting data model — contacts, invoices, estimates, expenses, bills, banking, items, taxes, and reports — using OAuth 2.0 (Zoho-oauthtoken) for authentication and per-region data center base URLs.
+finops:
+- has_sources: true
+  method: derived
+  name: Zoho Books Finops
+  primary_unit: price/org/month
+  service_category: ''
+  slug: zoho-books-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zoho-books.png
 layout: provider
 modified: '2026-05-11'
@@ -154,6 +164,9 @@ name: Zoho Books
 nav: Providers
 network: true
 overview: 'Zoho Books publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contacts API, Invoices API, Items API, and 1 more. Tagged areas include Accounting, Bookkeeping, Invoicing, Expenses, and Banking.
+
+
+  The Zoho Books catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Zoho Books'' developer surface includes documentation, pricing, signup flow, support, engineering blog, developer console, and 11 more developer resources.'
@@ -164,26 +177,39 @@ plans:
 - name: Zoho Books Price Estimates
   plan_count: 0
   slug: zoho-books-price-estimates
-random_paper: 1
+random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Zoho Books API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: zoho-books-rules
 score:
   band: developing
-  composite: 41.0
+  composite: 45.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 49.0
+    artifact_dirs: 13
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 69.7
-    contract_governance: 0.0
+    access_clarity: 77.6
+    contract_governance: 13.6
     contract_quality: 46.3
     developer_ergonomics: 35.7
     discoverability: 66.1
-    operational_transparency: 18.4
-  previous_composite: 40.9
+    operational_transparency: 28.9
+  previous_composite: 45.5
   provenance:
     contracts:
       callable: 100.0
@@ -196,13 +222,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zoho-books/refs/heads/main/screenshots/zoho-books-2026-06-20T201932.png
+screenshot: https://apis.io/screenshots/zoho-books/zoho-books-2026-06-20T201932.png
 security:
 - kind: domain-security
   name: Zoho Books Domain Security

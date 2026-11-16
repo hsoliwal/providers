@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.9
-  scored_at: '2026-10-17'
+  score: 23.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +45,7 @@ agentic_access:
   operation_count: 9
   slug: dragos-agentic-access
   summary_line: 9 operations
-api_count: 2
+api_count: 1
 apis:
 - description: Customer-gated Dragos Platform SiteStore v2 API for tenants to read OT assets and alerts from their monitoring platform. Per-tenant host of the form https://<company>.platform.dragos.cloud. Authentica
   name: Dragos Platform SiteStore API
@@ -61,11 +65,8 @@ apis:
   description: The Tags API from Dragos — 2 operation(s) for tags.
   name: Dragos Tags API
   slug: dragos-tags-api
-artifact_total: 12
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dragos WorldView Indicators API
   slug: open-dragos-indicators-api
@@ -77,7 +78,7 @@ collections:
   slug: open-dragos-tags-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/capabilities/dragos-capability-edges.yml
+  href: https://artifacts.apis.io/dragos/capabilities/dragos-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dragos-capability-edges.yml
@@ -86,7 +87,7 @@ common:
   type: Website
   url: https://www.dragos.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/security/dragos-domain-security.yml
+  href: https://artifacts.apis.io/dragos/security/dragos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dragos-domain-security.yml
@@ -127,47 +128,47 @@ common:
   type: PrivacyPolicy
   url: https://www.dragos.com/privacy/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/openapi/_original/dragos-worldview-openapi-original.json
+  href: https://artifacts.apis.io/dragos/openapi/_original/dragos-worldview-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/dragos-worldview-openapi-original.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/overlays/dragos-worldview-overlay.yaml
+  href: https://artifacts.apis.io/dragos/overlays/dragos-worldview-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/dragos-worldview-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/packages/dragos-packages.yml
+  href: https://artifacts.apis.io/dragos/packages/dragos-packages.yml
   title: ''
   type: Packages
   url: packages/dragos-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/packages/dragos-packages.yml
+  href: https://artifacts.apis.io/dragos/packages/dragos-packages.yml
   title: ''
   type: SDKs
   url: packages/dragos-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/well-known/dragos-well-known.yml
+  href: https://artifacts.apis.io/dragos/well-known/dragos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dragos-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/well-known/dragos-security.txt
+  href: https://artifacts.apis.io/dragos/well-known/dragos-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/dragos-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/mcp/dragos-mcp.yml
+  href: https://artifacts.apis.io/dragos/mcp/dragos-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/dragos-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/llms/dragos-llms.txt
+  href: https://artifacts.apis.io/dragos/llms/dragos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dragos-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/conformance/dragos-conformance.yml
+  href: https://artifacts.apis.io/dragos/conformance/dragos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dragos-conformance.yml
@@ -176,52 +177,52 @@ common:
   type: Compliance
   url: https://www.dragos.com/security-program/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/errors/dragos-problem-types.yml
+  href: https://artifacts.apis.io/dragos/errors/dragos-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dragos-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/lifecycle/dragos-lifecycle.yml
+  href: https://artifacts.apis.io/dragos/lifecycle/dragos-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dragos-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/lifecycle/dragos-lifecycle.yml
+  href: https://artifacts.apis.io/dragos/lifecycle/dragos-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/dragos-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/conventions/dragos-conventions.yml
+  href: https://artifacts.apis.io/dragos/conventions/dragos-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dragos-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/changelog/dragos-changelog.yml
+  href: https://artifacts.apis.io/dragos/changelog/dragos-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/dragos-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/data-model/dragos-data-model.yml
+  href: https://artifacts.apis.io/dragos/data-model/dragos-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dragos-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/authentication/dragos-authentication.yml
+  href: https://artifacts.apis.io/dragos/authentication/dragos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dragos-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/agentic-access/dragos-agentic-access.yml
+  href: https://artifacts.apis.io/dragos/agentic-access/dragos-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dragos-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dragos/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/security/dragos-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dragos/security/dragos-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dragos-vulnerability-disclosure.yml
@@ -240,34 +241,50 @@ network: true
 overview: 'Dragos publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Indicators API, Products API, Tags API, and 1 more. Tagged areas include Company, Cybersecurity, OT Security, ICS, and Threat Intelligence.
 
 
+  The Dragos catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Dragos'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 26 more developer resources.'
-random_paper: 2
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Dragos API Rules
+  rule_count: 44
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 1
+  slug: dragos-rules
 score:
   band: developing
-  composite: 46.3
+  composite: 49.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.1
   facets:
     access_clarity: 28.9
-    contract_governance: 18.2
-    contract_quality: 40.0
+    contract_governance: 31.8
+    contract_quality: 44.4
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 46.2
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: derived
     skills: derived
@@ -283,14 +300,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/screenshots/dragos-2026-07-25T212343.png
+screenshot: https://apis.io/screenshots/dragos/dragos-2026-07-25T212343.png
 security:
 - kind: authentication
   name: Dragos Authentication
@@ -304,6 +321,10 @@ security:
   name: Dragos Vulnerability Disclosure
   slug: dragos-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: Pull OT threat indicators from Dragos WorldView
+  slug: dragos-worldview-indicators
 slug: dragos
 tags:
 - Company

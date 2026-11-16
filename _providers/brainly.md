@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -61,22 +65,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/brainly
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brainly/refs/heads/main/well-known/brainly-security.txt
+  href: https://artifacts.apis.io/brainly/well-known/brainly-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/brainly-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brainly/refs/heads/main/well-known/brainly-well-known.yml
+  href: https://artifacts.apis.io/brainly/well-known/brainly-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brainly-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brainly/refs/heads/main/security/brainly-domain-security.yml
+  href: https://artifacts.apis.io/brainly/security/brainly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brainly-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brainly/refs/heads/main/security/brainly-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/brainly/security/brainly-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/brainly-vulnerability-disclosure.yml
@@ -96,12 +100,12 @@ overview: 'Brainly is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Brainly''s developer surface includes pricing and 10 more developer resources.'
-random_paper: 5
+random_paper: 9
 score:
   band: emerging
   composite: 13.0
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -127,14 +131,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/brainly/refs/heads/main/screenshots/brainly-2026-10-11T183613.png
+screenshot: https://apis.io/screenshots/brainly/brainly-2026-10-11T183613.png
 security:
 - kind: domain-security
   name: Brainly Domain Security

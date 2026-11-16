@@ -1,6 +1,22 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -9,21 +25,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 39.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -31,7 +50,7 @@ agentic_access:
   operation_count: 43
   slug: axuall-agentic-access
   summary_line: 43 operations · 14 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.axuall.net
   baseurl_source: declared
@@ -108,93 +127,98 @@ apis:
   description: The Tasks API from Axuall — 3 operation(s) for tasks.
   name: Axuall Tasks API
   slug: axuall-tasks-api
-artifact_total: 28
+artifact_total: 31
 asyncapis:
 - description: ''
   name: Axuall Webhooks
   slug: axuall-webhooks
 common:
 - group: commercial
+  href: https://artifacts.apis.io/axuall/finops/axuall-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/axuall-finops.yml
+- group: commercial
   title: ''
   type: Pricing
   url: https://docs.readme.com/main/docs/plans-and-pricing
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/agentic-access/axuall-agentic-access.yml
+  href: https://artifacts.apis.io/axuall/agentic-access/axuall-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/axuall-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/plans/axuall-plans-pricing.yml
+  href: https://artifacts.apis.io/axuall/plans/axuall-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/axuall-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/rules/axuall-rules.yml
+  href: https://artifacts.apis.io/axuall/rules/axuall-rules.yml
   title: ''
   type: Spectral
   url: rules/axuall-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/json-ld/axuall-context.jsonld
+  href: https://artifacts.apis.io/axuall/json-ld/axuall-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/axuall-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/vocabulary/axuall-vocabulary.yml
+  href: https://artifacts.apis.io/axuall/vocabulary/axuall-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/axuall-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/axuall/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/asyncapi/axuall-webhooks.yml
+  href: https://artifacts.apis.io/axuall/asyncapi/axuall-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/axuall-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/data-model/axuall-data-model.yml
+  href: https://artifacts.apis.io/axuall/data-model/axuall-data-model.yml
   title: ''
   type: DataModel
   url: data-model/axuall-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/cli/axuall-cli.yml
+  href: https://artifacts.apis.io/axuall/cli/axuall-cli.yml
   title: ''
   type: CLI
   url: cli/axuall-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/authentication/axuall-authentication.yml
+  href: https://artifacts.apis.io/axuall/authentication/axuall-authentication.yml
   title: ''
   type: Authentication
   url: authentication/axuall-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/errors/axuall-problem-types.yml
+  href: https://artifacts.apis.io/axuall/errors/axuall-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/axuall-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/conformance/axuall-conformance.yml
+  href: https://artifacts.apis.io/axuall/conformance/axuall-conformance.yml
   title: ''
   type: Conformance
   url: conformance/axuall-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/well-known/axuall-help-security.txt
+  href: https://artifacts.apis.io/axuall/well-known/axuall-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/axuall-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/well-known/axuall-well-known.yml
+  href: https://artifacts.apis.io/axuall/well-known/axuall-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/axuall-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/hosts/axuall-hosts.yml
+  href: https://artifacts.apis.io/axuall/hosts/axuall-hosts.yml
   title: ''
   type: Hosts
   url: hosts/axuall-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/vendors/axuall-vendors.yml
+  href: https://artifacts.apis.io/axuall/vendors/axuall-vendors.yml
   title: ''
   type: Vendors
   url: vendors/axuall-vendors.yml
@@ -211,7 +235,7 @@ common:
   type: ChangeLog
   url: https://axuall.com/post/whats-new
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/security/axuall-domain-security.yml
+  href: https://artifacts.apis.io/axuall/security/axuall-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axuall-domain-security.yml
@@ -254,6 +278,14 @@ coverage:
   state: gated
 created: '2026-09-27'
 description: Axuall provides a healthcare data network that empowers credentialing teams with AI‑assisted insights. Their platform integrates with enterprise systems to streamline verification of clinicians, reduce administrative workload, and improve patient access. Axuall offers solutions for exploring, confirming, and syncing credential data, targeting hospitals, health systems, and insurers.
+finops:
+- has_sources: true
+  method: derived
+  name: Axuall Finops
+  primary_unit: seat
+  service_category: ''
+  slug: axuall-finops
+  template: false
 json_schemas:
 - name: AgentChatRequestSchema
   property_count: 8
@@ -289,51 +321,54 @@ overview: 'Axuall publishes 15 API contracts indexed on the [APIs.io](https://ap
   The Axuall catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Axuall''s developer surface includes pricing, CLI, authentication, changelog, documentation, API reference, getting-started guide, and 21 more developer resources.'
+  Axuall''s developer surface includes pricing, CLI, authentication, changelog, documentation, API reference, getting-started guide, and 22 more developer resources.'
 plans:
 - name: Axuall Plans Pricing
   plan_count: 3
   slug: axuall-plans-pricing
-random_paper: 9
+- name: Axuall Price Estimates
+  plan_count: 0
+  slug: axuall-price-estimates
+random_paper: 23
 rules:
 - authorship: generated
-  effective_rule_count: 55
+  effective_rule_count: 92
   extends:
   - spectral:oas
   name: Axuall API Rules
-  rule_count: 14
+  rule_count: 51
   severity_counts:
-    error: 11
+    error: 37
     hint: 0
-    info: 1
-    warn: 2
+    info: 2
+    warn: 12
   slug: axuall-rules
 score:
   band: strong
-  composite: 60.1
+  composite: 55.3
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 72.8
+    artifact_dirs: 26
+    catalog_earned: 75.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.3
+    catalog_gap: 39.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: -7.7
   facets:
-    access_clarity: 71.1
+    access_clarity: 59.2
     contract_governance: 35.6
-    contract_quality: 70.6
-    developer_ergonomics: 54.2
-    discoverability: 64.3
-    operational_transparency: 23.7
-  previous_composite: 57.9
+    contract_quality: 76.1
+    developer_ergonomics: 37.5
+    discoverability: 63.4
+    operational_transparency: 26.3
+  previous_composite: 63.0
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 15
     mcp: derived
     skills: derived
@@ -342,14 +377,14 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 22.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 17.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/axuall/refs/heads/main/screenshots/axuall-2026-10-11T101402.png
+screenshot: https://apis.io/screenshots/axuall/axuall-2026-10-11T101402.png
 security:
 - kind: authentication
   name: Axuall Authentication
@@ -359,6 +394,10 @@ security:
   name: Axuall Domain Security
   slug: axuall-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: axuall-send-message-and-retrieve-response
+  slug: axuall-send-message-and-retrieve-response
 slug: axuall
 tags:
 - Company

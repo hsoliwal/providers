@@ -11,8 +11,8 @@
 # All weights and point values are tunable. Keep this file the single source
 # of truth for the rubric — code that scores providers should read from here.
 
-schema_version: 0.24.0
-last_updated: '2026-10-15'
+schema_version: 0.27.0
+last_updated: '2026-11-06'
 maintainer: kin@apievangelist.com
 
 # The public "what changed" note. The apis.io /rating/ page renders this rather than
@@ -22,56 +22,31 @@ maintainer: kin@apievangelist.com
 # checked against schema_version by test_rubric_record.py: a rubric cannot reach a
 # rebuild carrying the previous release's story.
 release_note:
-  version: 0.24.0
+  version: 0.27.0
   body: |
-    THE FIRST WEEKLY RELEASE, published 15 October 2026. No weight or band-cut changes. Four
-    corrections to how we credit artifacts, one new regulatory regime and one new regulatory check.
-    Against the scores published 2026-10-11, measured on the full catalog (28,952 providers):
-    7,232 composites move by more than 0.1 (7,044 down, 188 up, median -1.6); 1,949 band changes
-    (1,845 down, 104 up). No band share moved more than 1.3 points, so no re-cut. Agent readiness
-    is untouched by this release. Our own record: apis.io 90.6 -> 93.6.
+    Three changes. No provider goes down.
 
-    A PLANS FILE WE GENERATED IS CREDITED AS OURS. This is a correction to our own credit, not a
-    penalty on anyone. The enrichment pipeline writes plans, rate-limit, schema and ruleset files
-    for providers who publish none, and since 2026-10-07 it stamps them `method: generated`. 0.24.0
-    reads that stamp: 5,460 providers whose plans file we generated now earn the derived credit
-    (0.25) instead of full credit for work they did not publish. A provider who publishes its own
-    plans -- and marks them -- gets the full credit back (roadmap#943).
+    Contract provenance: the first-party share of a provider's OpenAPI corpus now pays. 0.23.0 lowered
+    `unknown` to 0.90 so declared authorship would be worth something, but an OpenAPI corpus had no
+    first-party state: a spec stamped `method: harvested` against the provider's own source was
+    credited like an unmarked one, and a corpus with a few derived specs slid down from 0.90. The
+    first-party share now lifts the credit from 0.90 toward 1.00; derived, scaffold and
+    platform-generated corpora are unchanged.
 
-    FINOPS MAPPING NOW NEEDS A STATED UNIT. Through 0.23.0 the 3-point `finops_mapped` check awarded
-    for the existence of a FinOps artifact, and almost all of the 6,680 in the catalog are sweep
-    output restating the FinOps framework. From 0.24.0 the check awards only an artifact that names
-    the billing unit, cites its source and is not a template: 96 providers keep it, the rest lose
-    3 points (-1.5 composite). The templated artifacts are marked `x-coverage: unmeasured` and no
-    longer badge FOCUS alignment. A FinOps artifact that names your unit and source restores the
-    award on the next build (roadmap#942).
+    Contract governance: overlay_published becomes graded (roadmap#809). A hosted OpenAPI Overlay still
+    earns the full 4 points. A provider with no Overlay but with PUBLIC evidence of a CI-enforced spec
+    bundling pipeline -- a Redocly, Fern or Speakeasy config run by a pull_request workflow in its own
+    GitHub org -- now earns half. Linters (Spectral) and SDK generators do not count: they govern or
+    consume the contract, they do not produce it. Evidence is probed read-only from public GitHub and
+    recorded in _data/spec-pipeline.json.
 
-    A PROVIDER'S RULESETS ARE GRADED BY THE ONE THE SCORE USES. Authorship was read from whichever
-    ruleset sorted first; the rules checks credit the largest. An unmarked ruleset is now read as
-    ours -- the enrichment pipeline writes them, and a provider who wrote their own marks it and
-    gets full credit. Measured on the candidate: 174 composites fall (median -3.8), 45 band changes.
-    Our own record rises, because apis.io's ruleset is marked as authored by apis.io
-    (roadmap#795, #791).
+    Agent readiness: a live x402 payment challenge now earns agentic commerce, graded like UCP and ACP.
+    The probe sends an unauthenticated GET, requires a 402 with protocol evidence, refuses catch-all
+    hosts, and pays nothing. Results are recorded in _data/x402-adoption.json.
 
-    AUTHORSHIP WRITTEN INSIDE A BLOCK COUNTS. An artifact that records who made it under
-    `x-provenance:` or `info:` rather than at the top of the file was read as unmarked. It is now
-    read: 89 providers, mostly JSON Schema sets we generated; 75 composites fall, median -0.9
-    (roadmap#794).
-
-    AI AND BIOMETRIC PROVIDERS HAVE THEIR OWN REGIME. Face, voice, fingerprint and liveness
-    processing, and generative and person-facing AI, were scored as one horizontal company among
-    seventeen thousand. A new AI & Biometrics regime -- EU AI Act Art. 5, Annex III, Art. 50 and
-    Art. 53-55, GDPR Art. 9, BIPA, Texas CUBI and TRAIGA, Washington RCW 19.375 and My Health My
-    Data -- sits above the horizontal fallback and below every sector, so it only ever moves a
-    provider off the fallback: 763 do. A bare `LLM` tag does not qualify; gateways and tooling stay
-    horizontal. A provider with a biometric surface is now asked for its public retention and
-    destruction policy (BIPA s.15(a)) in any regime (roadmap#797).
-
-    EVERY REGIME MEAN WAS RE-MEASURED, because the regulatory facet gained a regime and a check.
-    Defunct companies excluded, 27,830 regulated providers: AI & Biometrics 17.9 (n=759); horizontal
-    15.6 -> 15.1, because the new regime took its above-mean members; the sectoral means move by 0.3
-    or less. The re-centring itself moves composites by at most 0.1.
-
+    Modelled 2026-11-04 on the full catalog of 37,880 providers, same pages under both rubrics.
+    Composite: 2,213 move, all up, median +1.1, at most +2.2; 155 band changes, all upward. Agent
+    readiness: 8 move, all up, at most +3.9; no agent band changes. No band is re-cut.
 aliases:
   # 0.13 (roadmap#71) — the Examples family. A provider publishing a separate example
   # corpus wired `Examples` in good faith and it was read by NOTHING; four spellings of
@@ -99,6 +74,10 @@ aliases:
     - Spectral
     - Spectral Rules
     - SpectralRuleset
+    - OpenLint
+    - OpenLint Rules
+    - OpenLintRules
+    - OpenLintRuleset
     - Rules
   GitHubOrganization:
     - GitHubOrg
@@ -514,6 +493,9 @@ provenance:
   author_markers:
     methods: [declared, authored, published, self-reported]
     requires: [publisher, source]
+  # 0.27.0 — the first-party share of an OpenAPI corpus lifts its credit from `unknown` toward
+  # `first-party` (score.rb openapi_first_party_lift). Absent, the corpus stays graded as 0.26.0.
+  first_party_share_lifts: true
   credit:
     first-party: 1.00
     conformance: 0.75
@@ -2407,7 +2389,8 @@ artifacts:
         label: Publishes an OpenAPI Overlay
         facet: contract_governance
         points: 4
-        rule: 'apis.yml carries an Overlay pointer to an http(s) URL the provider hosts; a local overlays/ file (generated by our enrichment) does not count'
+        rule: 'apis.yml carries an Overlay pointer to an http(s) URL the provider hosts (full credit); otherwise, public evidence of a CI-enforced bundling pipeline -- a Redocly/Fern/Speakeasy config run by a pull_request workflow in the provider''s own GitHub org -- earns pipeline_credit. A local overlays/ file (generated by our enrichment) does not count'
+        pipeline_credit: 0.5
         description: >
           An OpenAPI Overlay — the provider expressing a repeatable, versioned
           transformation of its own contract rather than hand-editing it. Evidence of a
@@ -4039,7 +4022,7 @@ agent_readiness:
       credit:
         self: 1.00
         platform: 0.25
-      signal: 'a parsing /.well-known/ucp.json or acp.json declaring a version and at least one service — `self` when its endpoints are on the provider''s own domain, `platform` when they are on a vendor''s'
+      signal: 'a parsing /.well-known/ucp.json or acp.json declaring a version and at least one service, OR (0.27) a live x402 payment challenge from _data/x402-adoption.json — `self` when its endpoints are on the provider''s own domain, `platform` when they are on a vendor''s'
       description: >
         197 providers hold a real, parsing `/.well-known/ucp.json` and every one scored
         zero before this: `well_known_catalog` credits only api-catalog, security.txt
@@ -4056,13 +4039,74 @@ agent_readiness:
         exists — a buyer's agent can transact there.
         A PARSING DOCUMENT IS NOT ENOUGH: a version and at least one declared service
         are required, or it is a stub at the right path.
-        NO AP2 CHECK AND NO x402 CHECK. AP2 defines no well-known path and no pointer —
+        0.27.0 (Kin, 2026-10-28: "x402 is agentic commerce"): a live x402 payment challenge now
+        earns this dimension. The measurement this description said the surface did not permit
+        exists: engine/probe-x402-adoption.py sends an unauthenticated GET to each declared API
+        base, requires a 402 AND protocol evidence (an x402 header, or a body with x402Version /
+        accepts[]), and refuses any host whose made-up path answers the same way (catch-all). It
+        pays nothing. Results are snapshotted in signals/_data/x402-adoption.json (2026-10-28:
+        9 adopters of 132 tagged x402; 0 catch-all). Graded like UCP/ACP — self on the provider's
+        own domain, platform on a vendor's.
+        NO AP2 CHECK. (The x402 half of what follows is superseded above.) AP2 defines no well-known path and no pointer —
         its artifacts are SD-JWT mandate chains presented in-band at transaction time,
         under authentication, so nothing anonymous is ever fetchable; 0 of the 197 UCP
         documents reference it. x402 is a 402 plus a response header and needs a live
         request to a paid endpoint. Scoring either would claim a measurement the surface
         does not permit — the rule the rubric already applies to draft-klrc-aiagent-auth.
         APPENDED AT SLOT 19.
+    - id: pagination_ratio
+      label: Pagination
+      points: 5
+      graded: true
+      credit:
+        paginated: 1.0
+        partial: 0.5
+      signal: 'share of collection GETs (an array, or one wrapped in data/items/results ...) that declare a page/limit/offset/cursor parameter, a Link header or a next/cursor field; na with no collection GETs'
+      description: >
+        0.25.0 (roadmap#982). An agent that cannot page a collection either truncates silently or pulls
+        everything. Paginated at 90% of collection GETs, partial at 50%. Measured on a 1,000-provider
+        sample: 35% of the providers with collection GETs paginate none of them.
+    - id: operation_distinctiveness
+      label: Distinct Operations
+      points: 3
+      graded: true
+      credit:
+        distinct: 1.0
+        mostly: 0.5
+      signal: 'share of operations whose summary is unique within its document after light normalisation; na without two summarised operations'
+      description: >
+        0.25.0 (roadmap#983, step 1). An agent choosing a tool by its description cannot tell two identical
+        summaries apart, and it is the cheapest agent-readiness failure to fix. Distinct at 98% unique,
+        mostly at 90%. Exact and normalised matches only; embedding distance is a later step.
+    - id: mcp_tool_quality
+      label: MCP Tool Quality
+      points: 6
+      graded: true
+      credit:
+        full: 1.0
+        three_quarters: 0.75
+        half: 0.5
+        quarter: 0.25
+      manifest_check: tool_quality
+      signal: 'graded from the `tool_quality` block of the provider''s mcp/ manifest (a live tools/list capture, mcp_tool_quality.py); the 0-1 credit of the four sub-checks, rounded to the nearest quarter; na with no capture or a platform-authored server'
+      subchecks:
+        - id: annotations
+          points: 2
+          rule: 'share of tools carrying readOnlyHint or destructiveHint; full credit at >= 90%, linear below'
+        - id: param_descriptions
+          points: 2
+          rule: 'share of parameters with a description; full credit at >= 90%, linear below; no parameters = full credit'
+        - id: hazard_hints
+          points: 1
+          rule: 'no state-changing tool (name heuristic) is missing a destructiveHint'
+        - id: weight
+          points: 1
+          rule: '0.5 for a tool list under 20k tokens, plus 0.5 for no single tool over 1,200 tokens'
+      description: >
+        0.26.0 (roadmap#994, promoted from the 0.25 observed signal). Whether an agent can use a server's
+        tools safely and cheaply: annotated hazards, described parameters, and a tool list that fits in a
+        context window. Not applicable without a live capture, or for a platform-authored server whose tool
+        shape is not the provider's design (mcp_server already discounts those).
   # Cut points calibrated against the real distribution (re-cut 2026-07-28,
   # 25,573 providers) — re-derive with band_distribution.rb after any change to
   # dimensions or points. The spread is deliberately bimodal: a large floor at
@@ -4443,25 +4487,12 @@ agent_readiness:
 
   # What is queued next, and why each is waiting:
   planned_dimensions:
-    - id: extensions_in_served_contract
-      label: Agentic Extensions in the Served Contract
-      signal: 'x-agentic-access (and peers) present in the spec the provider serves, not only the catalog artifact'
-      supersedes: agentic_access
-      blocked_on: probe
-      description: >
-        `agentic_access` credits a provider-authored agentic-access artifact in
-        the catalog. It cannot see whether those classifications reach the
-        contract an agent actually fetches. A provider can hold the full award
-        with an operation-by-operation contract in this catalog and zero
-        `x-agentic-access` extensions in their served OpenAPI — observed, with
-        honestly-labelled artifacts, at the top of the 0.6 distribution. That is
-        the widest remaining gap between declaration and the thing an agent
-        reads at runtime, and closing it needs a fetch of the live spec plus a
-        diff against the catalog copy, not new rubric math.
     - id: artifact_liveness
       label: Declared Artifact Liveness
-      signal: 'declared common[] URLs resolve, and their content matches the declared type'
+      signal: 'a live common[] URL whose content matches its declared type, on a pointer-liveness file kept fresh — liveness itself already ships (roadmap#16)'
       blocked_on: probe
+      status: build
+      issue: https://github.com/api-evangelist/roadmap/issues/984
       description: >
         Most operational and commercial checks are presence-only — they credit
         `common[].type` and never fetch the URL. A StatusPage entry pointing at
@@ -4472,74 +4503,12 @@ agent_readiness:
         resolves / wrong-content / dead, feeding a multiplier rather than a new
         dimension. It is also the step that makes every downstream attestation
         claim defensible.
-    - id: pagination_ratio
-      label: Pagination Coverage
-      signal: 'share of collection-returning GET operations declaring pagination'
-      blocked_on: parser
-      description: >
-        JAIRF scores pagination as a RATIO of paginated GET resources and this model
-        does not read it at all. Computable from the refined per-tag OpenAPIs the
-        catalog already carries; it needs a resource-classifier to know which GETs
-        return collections, which is the only reason it is not in 0.6.
-    - id: operation_distinctiveness
-      label: Operation Distinctiveness
-      signal: 'embedding distance between operation summaries within a spec'
-      blocked_on: parser
-      description: >
-        Whether an agent can tell two operations apart from their descriptions.
-        JAIRF computes it with embeddings; nothing equivalent exists here. The most
-        directly agent-relevant check in a competitor's spec that this rubric lacks.
-
-    # -----------------------------------------------------------------------
-    # THE AGENT-AUTH CLUSTER — proposed 2026-08-23 off the IETF draft
-    # `draft-klrc-aiagent-auth-00`, "AI Agent Authentication and Authorization"
-    # (Kasselman/Defakto, Lombardo/AWS, Rosomakho/Zscaler, Campbell/Ping;
-    # Informational, expires 3 September 2026, not WG-adopted).
-    #
-    # The draft defines NO header, NO claim and NO well-known path of its own.
-    # It is a composition argument: an agent is a workload, so it gets one
-    # WIMSE/SPIFFE identifier, a short-lived cryptographically bound credential
-    # issued off attestation, mTLS or WPT/HTTP-Message-Signatures for
-    # authentication, and OAuth 2.0 for delegation. There is therefore NOTHING
-    # to scan for named "draft-klrc-aiagent-auth", and no dimension should ever
-    # claim to measure conformance to it. Each dimension below measures ONE
-    # constituent the draft names, from evidence that already exists or from a
-    # probe this catalog already knows how to run.
-    #
-    # The draft's sharpest sentence for this rubric is that static API keys are
-    # an antipattern for agent identity: bearer artifacts, not cryptographically
-    # bound, conveying no identity, long-lived, hard to rotate. `auth_clarity`
-    # currently awards its full 10 points when `common[].type` includes API Keys
-    # — the antipattern scores identically to OIDC discovery. That is the first
-    # thing to fix, and it is a REGRADE of an existing dimension, not a new one.
-    #
-    # MEASURED 2026-08-23 across all/*/openapi (96,612 specs, 6,265 providers
-    # declaring any securityScheme):
-    #     apiKey ONLY .............. 2,209 providers (35.3%)
-    #     any oauth2 ............... 1,142 providers (18.2%)
-    #     any openIdConnect ........... 37 providers (0.6%)
-    #     any mutualTLS ............... 13 providers (0.2%)
-    # A cluster this empty discriminates at the top only. Weight it accordingly,
-    # and do not add it to the composite until the distribution justifies it.
-    # -----------------------------------------------------------------------
-    - id: auth_scheme_strength
-      label: Bound vs Bearer Authentication
-      signal: 'grade auth_clarity by scheme class rather than crediting any declared scheme equally'
-      supersedes: auth_clarity
-      blocked_on: rubric
-      description: >
-        Regrade, not a new dimension. `auth_clarity` reads presence and stops:
-        `apiKey` earns the same 10 points as `openIdConnect`. Proposed credit —
-        bound (mutualTLS, or an http scheme naming DPoP/Signature) 1.00;
-        negotiable (oauth2 with an authorizationCode or clientCredentials flow, or
-        openIdConnect) 0.75; bearer-only (http bearer, apiKey) 0.35. The floor stays
-        well above zero on purpose: a documented API key is still machine-readable
-        auth, and zeroing 2,209 providers would measure the market rather than them.
-        Readable TODAY from the refined per-tag OpenAPIs — no probe, no new artifact.
     - id: aauth_resource_metadata
       label: AAuth Resource Metadata
       signal: 'a served /.well-known/aauth-resource.json carrying `issuer` and `jwks_uri`'
       blocked_on: adoption
+      status: parked
+      issue: https://github.com/api-evangelist/roadmap/issues/985
       description: >
         draft-hardt-oauth-aauth-protocol (Dick Hardt, 20 August 2026, Standards Track,
         expires 21 February 2027) — catalogued at /store/aauth/. Unlike
@@ -4578,6 +4547,8 @@ agent_readiness:
       label: Workload Identity for Callers
       signal: 'WIMSE/SPIFFE identifiers, WIT/SVID credentials, or Workload-Proof-Token accepted at the API surface'
       blocked_on: collection
+      status: parked
+      issue: https://github.com/api-evangelist/roadmap/issues/985
       description: >
         Sections 5-6 — the identifier and its cryptographic binding, the actual spine
         of the draft. Almost certainly near-empty on the public API surface today:
@@ -4586,3 +4557,7 @@ agent_readiness:
         deliberately, not dropped. Re-measure before building it; a dimension nobody
         can earn measures the market, not the provider, and belongs in a report
         finding rather than in a score.
+# 0.25.0 (roadmap#986): per-operation contract checks grade only documents that carry operations. A
+# webhooks-only document (GatiFlow's split) has nothing these can measure.
+spec_checks_per_operation: [operations_summary_coverage, operations_description_coverage, operations_tagged,
+  operations_operation_ids, response_coverage, error_responses_documented, security_applied]

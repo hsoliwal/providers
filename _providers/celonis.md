@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.8
-  scored_at: '2026-10-17'
+  score: 51.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 5
@@ -129,7 +135,7 @@ apis:
   description: The Triggers API from Celonis — 2 operation(s) for triggers.
   name: Celonis Triggers API
   slug: celonis-triggers-api
-artifact_total: 59
+artifact_total: 61
 asyncapis:
 - description: ''
   name: Celonis Subscription Webhooks
@@ -187,9 +193,6 @@ collections:
   name: OpenAPI Specification Agents - Conversation Triggers API
   slug: postman-celonis-triggers-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: OpenAPI Specification Agents - Conversation API
   slug: open-celonis-agents-conversation-api
 - collection_type: open
@@ -242,12 +245,12 @@ collections:
   slug: open-celonis-triggers-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/capabilities/celonis-capability-edges.yml
+  href: https://artifacts.apis.io/celonis/capabilities/celonis-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/celonis-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/overlays/celonis-knowledge-model-overlay.yaml
+  href: https://artifacts.apis.io/celonis/overlays/celonis-knowledge-model-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/celonis-knowledge-model-overlay.yaml
@@ -300,72 +303,72 @@ common:
   type: PrivacyPolicy
   url: https://www.celonis.com/privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/authentication/celonis-authentication.yml
+  href: https://artifacts.apis.io/celonis/authentication/celonis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/celonis-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/scopes/celonis-scopes.yml
+  href: https://artifacts.apis.io/celonis/scopes/celonis-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/celonis-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/mcp/celonis-mcp.yml
+  href: https://artifacts.apis.io/celonis/mcp/celonis-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/celonis-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/celonis/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/agentic-access/celonis-agentic-access.yml
+  href: https://artifacts.apis.io/celonis/agentic-access/celonis-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/celonis-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/packages/celonis-packages.yml
+  href: https://artifacts.apis.io/celonis/packages/celonis-packages.yml
   title: ''
   type: Packages
   url: packages/celonis-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/packages/celonis-packages.yml
+  href: https://artifacts.apis.io/celonis/packages/celonis-packages.yml
   title: ''
   type: SDKs
   url: packages/celonis-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/cli/celonis-cli.yml
+  href: https://artifacts.apis.io/celonis/cli/celonis-cli.yml
   title: ''
   type: CLI
   url: cli/celonis-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/sandbox/celonis-sandbox.yml
+  href: https://artifacts.apis.io/celonis/sandbox/celonis-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/celonis-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/conventions/celonis-conventions.yml
+  href: https://artifacts.apis.io/celonis/conventions/celonis-conventions.yml
   title: ''
   type: Conventions
   url: conventions/celonis-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/errors/celonis-problem-types.yml
+  href: https://artifacts.apis.io/celonis/errors/celonis-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/celonis-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/data-model/celonis-data-model.yml
+  href: https://artifacts.apis.io/celonis/data-model/celonis-data-model.yml
   title: ''
   type: DataModel
   url: data-model/celonis-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/asyncapi/celonis-subscription-webhooks.yml
+  href: https://artifacts.apis.io/celonis/asyncapi/celonis-subscription-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/celonis-subscription-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/lifecycle/celonis-lifecycle.yml
+  href: https://artifacts.apis.io/celonis/lifecycle/celonis-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/celonis-lifecycle.yml
@@ -374,17 +377,17 @@ common:
   type: StatusPage
   url: https://status.celonis.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/lifecycle/celonis-lifecycle.yml
+  href: https://artifacts.apis.io/celonis/lifecycle/celonis-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/celonis-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/changelog/celonis-changelog.yml
+  href: https://artifacts.apis.io/celonis/changelog/celonis-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/celonis-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/conformance/celonis-conformance.yml
+  href: https://artifacts.apis.io/celonis/conformance/celonis-conformance.yml
   title: ''
   type: Conformance
   url: conformance/celonis-conformance.yml
@@ -393,22 +396,22 @@ common:
   type: Compliance
   url: https://trust.celonis.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/security/celonis-trust-center.yml
+  href: https://artifacts.apis.io/celonis/security/celonis-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/celonis-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/security/celonis-domain-security.yml
+  href: https://artifacts.apis.io/celonis/security/celonis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/celonis-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/well-known/celonis-well-known.yml
+  href: https://artifacts.apis.io/celonis/well-known/celonis-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/celonis-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/llms/celonis-llms.txt
+  href: https://artifacts.apis.io/celonis/llms/celonis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/celonis-llms.txt
@@ -431,11 +434,24 @@ network: true
 overview: 'Celonis publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents - Conversation API, Beta: OData Protocol API, Beta: Semantics for 3P AI Agents API, and 14 more. Tagged areas include Company, Automation, Process Mining, Process Intelligence, and Data.
 
 
-  The Celonis catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Celonis catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Celonis'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
-random_paper: 1
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Celonis API Rules
+  rule_count: 54
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 5
+    warn: 8
+  slug: celonis-rules
 scopes:
 - name: Celonis Scopes
   scope_count: 2
@@ -443,28 +459,33 @@ scopes:
   summary_line: 2 scopes
 score:
   band: strong
-  composite: 62.5
+  composite: 63.9
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 40.0
+    artifact_dirs: 30
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 60.5
-    contract_governance: 18.2
-    contract_quality: 61.0
+    contract_governance: 31.8
+    contract_quality: 60.2
     developer_ergonomics: 81.5
     discoverability: 76.7
     operational_transparency: 50.0
-  previous_composite: 62.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 63.9
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 43.8
+      callable: 18.8
       derived: 0
       marker_coverage: 0.0
       total: 17
@@ -476,13 +497,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/screenshots/celonis-2026-07-25T204910.png
+screenshot: https://apis.io/screenshots/celonis/celonis-2026-07-25T204910.png
 security:
 - kind: authentication
   name: Celonis Authentication
@@ -496,6 +517,12 @@ security:
   name: Celonis Trust Center
   slug: celonis-trust-center
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR, CSA STAR
+skill_count: 2
+skills:
+- name: Query a Celonis Knowledge Model
+  slug: celonis-query-knowledge-model
+- name: Subscribe to Celonis Knowledge Model events
+  slug: celonis-subscribe-to-events
 slug: celonis
 tags:
 - Company

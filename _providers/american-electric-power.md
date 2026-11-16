@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: American Electric Power operates an Azure API Management instance (apim-aep-prod-use2-001) fronted by the "AEP API Management" developer portal at developer.aep.com and the gateway host api.aep.com. T
@@ -41,17 +46,17 @@ apis:
 artifact_total: 20
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/american-electric-power/refs/heads/main/plans/american-electric-power-plans-pricing.yml
+  href: https://artifacts.apis.io/american-electric-power/plans/american-electric-power-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/american-electric-power-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/american-electric-power/refs/heads/main/rate-limits/american-electric-power-rate-limits.yml
+  href: https://artifacts.apis.io/american-electric-power/rate-limits/american-electric-power-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/american-electric-power-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-electric-power/refs/heads/main/security/american-electric-power-domain-security.yml
+  href: https://artifacts.apis.io/american-electric-power/security/american-electric-power-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/american-electric-power-domain-security.yml
@@ -96,7 +101,7 @@ common:
   type: PrivacyPolicy
   url: https://www.aep.com/privacy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-electric-power/refs/heads/main/llms/american-electric-power-llms.txt
+  href: https://artifacts.apis.io/american-electric-power/llms/american-electric-power-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/american-electric-power-llms.txt
@@ -170,7 +175,7 @@ press:
 - date: ''
   title: AEP Receives U.S. Department of Energy Loan Guarantee ...
   url: https://www.aep.com/news/stories/view/10501/
-random_paper: 12
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: American Electric Power Rate Limits
@@ -179,7 +184,7 @@ score:
   band: emerging
   composite: 17.2
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -207,14 +212,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/american-electric-power/refs/heads/main/screenshots/american-electric-power-2026-06-20T171909.png
+screenshot: https://apis.io/screenshots/american-electric-power/american-electric-power-2026-06-20T171909.png
 security:
 - kind: domain-security
   name: American Electric Power Domain Security

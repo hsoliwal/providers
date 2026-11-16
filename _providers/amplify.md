@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Private partner-facing API behind api.getamplifylife.com, used for Amplify's embedded distribution motion ("Embed your products inside trusted partner ecosystems via API", per the Carrier Solutions pa
@@ -71,42 +74,42 @@ common:
   type: PrivacyPolicy
   url: https://getamplifylife.com/privacy-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/components/amplify-components.yml
+  href: https://artifacts.apis.io/amplify/components/amplify-components.yml
   title: ''
   type: Components
   url: components/amplify-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/well-known/amplify-well-known.yml
+  href: https://artifacts.apis.io/amplify/well-known/amplify-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/amplify-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/security/amplify-domain-security.yml
+  href: https://artifacts.apis.io/amplify/security/amplify-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amplify-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/authentication/amplify-authentication.yml
+  href: https://artifacts.apis.io/amplify/authentication/amplify-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amplify-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/errors/amplify-error-codes.yml
+  href: https://artifacts.apis.io/amplify/errors/amplify-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/amplify-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/conventions/amplify-conventions.yml
+  href: https://artifacts.apis.io/amplify/conventions/amplify-conventions.yml
   title: ''
   type: Conventions
   url: conventions/amplify-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/conformance/amplify-conformance.yml
+  href: https://artifacts.apis.io/amplify/conformance/amplify-conformance.yml
   title: ''
   type: Conformance
   url: conformance/amplify-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/llms/amplify-llms.txt
+  href: https://artifacts.apis.io/amplify/llms/amplify-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/amplify-llms.txt
@@ -123,12 +126,12 @@ overview: 'Amplify is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Amplify''s developer surface includes engineering blog, pricing, authentication, and 12 more developer resources.'
-random_paper: 6
+random_paper: 10
 score:
   band: emerging
   composite: 21.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -151,14 +154,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/amplify/refs/heads/main/screenshots/amplify-2026-07-25T200128.png
+screenshot: https://apis.io/screenshots/amplify/amplify-2026-07-25T200128.png
 security:
 - kind: authentication
   name: Amplify Authentication

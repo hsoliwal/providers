@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Config API from iGrant.io — 8 operation(s) for config.
@@ -36,67 +51,67 @@ asyncapis:
   slug: igrant-io-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/rules/igrant-io-rules.yml
+  href: https://artifacts.apis.io/igrant-io/rules/igrant-io-rules.yml
   title: ''
   type: Spectral
   url: rules/igrant-io-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/json-ld/igrant-io-context.jsonld
+  href: https://artifacts.apis.io/igrant-io/json-ld/igrant-io-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/igrant-io-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/vocabulary/igrant-io-vocabulary.yml
+  href: https://artifacts.apis.io/igrant-io/vocabulary/igrant-io-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/igrant-io-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/asyncapi/igrant-io-webhooks.yml
+  href: https://artifacts.apis.io/igrant-io/asyncapi/igrant-io-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/igrant-io-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/data-model/igrant-io-data-model.yml
+  href: https://artifacts.apis.io/igrant-io/data-model/igrant-io-data-model.yml
   title: ''
   type: DataModel
   url: data-model/igrant-io-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/changelog/igrant-io-changelog.yml
+  href: https://artifacts.apis.io/igrant-io/changelog/igrant-io-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/igrant-io-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/conventions/igrant-io-conventions.yml
+  href: https://artifacts.apis.io/igrant-io/conventions/igrant-io-conventions.yml
   title: ''
   type: Conventions
   url: conventions/igrant-io-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/sandbox/igrant-io-sandbox.yml
+  href: https://artifacts.apis.io/igrant-io/sandbox/igrant-io-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/igrant-io-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/authentication/igrant-io-authentication.yml
+  href: https://artifacts.apis.io/igrant-io/authentication/igrant-io-authentication.yml
   title: ''
   type: Authentication
   url: authentication/igrant-io-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/conformance/igrant-io-conformance.yml
+  href: https://artifacts.apis.io/igrant-io/conformance/igrant-io-conformance.yml
   title: ''
   type: Conformance
   url: conformance/igrant-io-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/llms/igrant-io-llms.txt
+  href: https://artifacts.apis.io/igrant-io/llms/igrant-io-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/igrant-io-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/hosts/igrant-io-hosts.yml
+  href: https://artifacts.apis.io/igrant-io/hosts/igrant-io-hosts.yml
   title: ''
   type: Hosts
   url: hosts/igrant-io-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/vendors/igrant-io-vendors.yml
+  href: https://artifacts.apis.io/igrant-io/vendors/igrant-io-vendors.yml
   title: ''
   type: Vendors
   url: vendors/igrant-io-vendors.yml
@@ -117,7 +132,7 @@ common:
   type: ChangeLog
   url: https://docs.igrant.io/docs/changelog/2026-q3/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/igrant-io/refs/heads/main/security/igrant-io-domain-security.yml
+  href: https://artifacts.apis.io/igrant-io/security/igrant-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/igrant-io-domain-security.yml
@@ -203,7 +218,7 @@ overview: 'iGrant.io is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   iGrant.io''s developer surface includes changelog, sandbox, authentication, documentation, API reference, getting-started guide, support, and 20 more developer resources.'
-random_paper: 4
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -218,22 +233,24 @@ rules:
     warn: 1
   slug: igrant-io-rules
 score:
-  band: developing
-  composite: 40.9
+  band: thin
+  composite: 32.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 52.8
     catalog_earned_first_party: 0.0
     catalog_gap: 62.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.6
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 35.6
     contract_quality: 35.7
-    developer_ergonomics: 71.4
-    discoverability: 57.1
-    operational_transparency: 28.9
+    developer_ergonomics: 48.8
+    discoverability: 56.3
+    operational_transparency: 18.4
+  previous_composite: 40.9
   provenance:
     conformance: first-party
     contracts:
@@ -247,12 +264,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/igrant-io/igrant-io-2026-11-03T133642.png
 security:
 - kind: authentication
   name: Igrant Io Authentication

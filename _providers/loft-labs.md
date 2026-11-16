@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 27.5
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - baseURL: https://github.com
@@ -54,47 +72,47 @@ apis:
 artifact_total: 9
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/plans/loft-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/loft-labs/plans/loft-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/loft-labs-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/rules/loft-labs-rules.yml
+  href: https://artifacts.apis.io/loft-labs/rules/loft-labs-rules.yml
   title: ''
   type: Spectral
   url: rules/loft-labs-rules.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/cli/loft-labs-cli.yml
+  href: https://artifacts.apis.io/loft-labs/cli/loft-labs-cli.yml
   title: ''
   type: CLI
   url: cli/loft-labs-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/authentication/loft-labs-authentication.yml
+  href: https://artifacts.apis.io/loft-labs/authentication/loft-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/loft-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/conformance/loft-labs-conformance.yml
+  href: https://artifacts.apis.io/loft-labs/conformance/loft-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/loft-labs-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/llms/loft-labs-llms.txt
+  href: https://artifacts.apis.io/loft-labs/llms/loft-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/loft-labs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/well-known/loft-labs-well-known.yml
+  href: https://artifacts.apis.io/loft-labs/well-known/loft-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/loft-labs-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/hosts/loft-labs-hosts.yml
+  href: https://artifacts.apis.io/loft-labs/hosts/loft-labs-hosts.yml
   title: ''
   type: Hosts
   url: hosts/loft-labs-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/vendors/loft-labs-vendors.yml
+  href: https://artifacts.apis.io/loft-labs/vendors/loft-labs-vendors.yml
   title: ''
   type: Vendors
   url: vendors/loft-labs-vendors.yml
@@ -119,7 +137,7 @@ common:
   type: ChangeLog
   url: https://www.vcluster.com/releases
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loft-labs/refs/heads/main/security/loft-labs-domain-security.yml
+  href: https://artifacts.apis.io/loft-labs/security/loft-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/loft-labs-domain-security.yml
@@ -170,7 +188,7 @@ plans:
 - name: Loft Labs Plans Pricing
   plan_count: 2
   slug: loft-labs-plans-pricing
-random_paper: 20
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -186,21 +204,23 @@ rules:
   slug: loft-labs-rules
 score:
   band: thin
-  composite: 38.3
+  composite: 30.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 16
     catalog_earned: 52.5
     catalog_earned_first_party: 8.0
     catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.1
   facets:
-    access_clarity: 52.6
+    access_clarity: 36.8
     contract_governance: 31.8
     contract_quality: 11.9
-    developer_ergonomics: 42.9
+    developer_ergonomics: 31.0
     discoverability: 78.6
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 38.3
   provenance:
     conformance: first-party
     contracts:
@@ -214,12 +234,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/loft-labs/loft-labs-2026-11-03T135037.png
 security:
 - kind: authentication
   name: Loft Labs Authentication

@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -69,9 +76,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Microsoft Defender for Cloud REST Alerts API
   slug: open-microsoft-defender-for-cloud-alerts-api
 - collection_type: open
@@ -88,32 +92,32 @@ collections:
   slug: open-microsoft-defender-for-cloud
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/capabilities/microsoft-defender-for-cloud-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-defender-for-cloud/capabilities/microsoft-defender-for-cloud-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-defender-for-cloud-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/agentic-access/microsoft-defender-for-cloud-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-defender-for-cloud/agentic-access/microsoft-defender-for-cloud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-defender-for-cloud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/security/microsoft-defender-for-cloud-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-defender-for-cloud/security/microsoft-defender-for-cloud-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-defender-for-cloud-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/security/microsoft-defender-for-cloud-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-defender-for-cloud/security/microsoft-defender-for-cloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-defender-for-cloud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/authentication/microsoft-defender-for-cloud-authentication.yml
+  href: https://artifacts.apis.io/microsoft-defender-for-cloud/authentication/microsoft-defender-for-cloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-defender-for-cloud-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/scopes/microsoft-defender-for-cloud-scopes.yml
+  href: https://artifacts.apis.io/microsoft-defender-for-cloud/scopes/microsoft-defender-for-cloud-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-defender-for-cloud-scopes.yml
@@ -160,8 +164,24 @@ network: true
 overview: 'Microsoft Defender for Cloud publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Assessments API, Pricings API, and 2 more. Tagged areas include Cloud Security, CSPM, CWPP, CNAPP, and Threat Protection.
 
 
+  The Microsoft Defender for Cloud catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Microsoft Defender for Cloud''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
-random_paper: 14
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Microsoft Defender for Cloud API Rules
+  rule_count: 54
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 1
+  slug: microsoft-defender-for-cloud-rules
 scopes:
 - name: Microsoft Defender For Cloud Scopes
   scope_count: 1
@@ -169,23 +189,23 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: thin
-  composite: 29.4
+  composite: 32.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 37.0
+    artifact_dirs: 13
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.9
     developer_ergonomics: 23.8
     discoverability: 80.4
-    operational_transparency: 0.0
-  previous_composite: 29.3
+    operational_transparency: 10.5
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     contracts:
@@ -199,13 +219,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-defender-for-cloud/refs/heads/main/screenshots/microsoft-defender-for-cloud-2026-06-20T185451.png
+screenshot: https://apis.io/screenshots/microsoft-defender-for-cloud/microsoft-defender-for-cloud-2026-06-20T185451.png
 security:
 - kind: authentication
   name: Microsoft Defender For Cloud Authentication

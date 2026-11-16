@@ -1,12 +1,18 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 26.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 171
   human_in_the_loop: 1
@@ -383,54 +392,59 @@ apis:
   description: 'Phone.com’s standard phone service allows callers to leave a voicemail if the incoming call was not answered. The /voicemail services show a history of voicemail and allow users to download voicemail '
   name: Phone Com Voicemail API
   slug: phone-com-voicemail-api
-artifact_total: 82
+artifact_total: 87
 asyncapis:
 - description: ''
   name: Phone Com Events Webhooks
   slug: phone-com-events-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/phone-com/plans/phone-com-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/phone-com-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/capabilities/phone-com-capability-edges.yml
+  href: https://artifacts.apis.io/phone-com/capabilities/phone-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/phone-com-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/agentic-access/phone-com-agentic-access.yml
+  href: https://artifacts.apis.io/phone-com/agentic-access/phone-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/phone-com-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/rules/phone-com-rules.yml
+  href: https://artifacts.apis.io/phone-com/rules/phone-com-rules.yml
   title: ''
   type: Spectral
   url: rules/phone-com-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/json-ld/phone-com-context.jsonld
+  href: https://artifacts.apis.io/phone-com/json-ld/phone-com-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/phone-com-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/vocabulary/phone-com-vocabulary.yml
+  href: https://artifacts.apis.io/phone-com/vocabulary/phone-com-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/phone-com-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/errors/phone-com-problem-types.yml
+  href: https://artifacts.apis.io/phone-com/errors/phone-com-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/phone-com-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/hosts/phone-com-hosts.yml
+  href: https://artifacts.apis.io/phone-com/hosts/phone-com-hosts.yml
   title: ''
   type: Hosts
   url: hosts/phone-com-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/integrations/phone-com-integration-edges.yml
+  href: https://artifacts.apis.io/phone-com/integrations/phone-com-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/phone-com-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/vendors/phone-com-vendors.yml
+  href: https://artifacts.apis.io/phone-com/vendors/phone-com-vendors.yml
   title: ''
   type: Vendors
   url: vendors/phone-com-vendors.yml
@@ -495,92 +509,100 @@ common:
   type: PrivacyPolicy
   url: https://www.phone.com/privacy-statement/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/packages/phone-com-packages.yml
+  href: https://artifacts.apis.io/phone-com/packages/phone-com-packages.yml
   title: ''
   type: Packages
   url: packages/phone-com-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/packages/phone-com-packages.yml
+  href: https://artifacts.apis.io/phone-com/packages/phone-com-packages.yml
   title: ''
   type: SDKs
   url: packages/phone-com-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/llms/phone-com-llms.txt
+  href: https://artifacts.apis.io/phone-com/llms/phone-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/phone-com-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/authentication/phone-com-authentication.yml
+  href: https://artifacts.apis.io/phone-com/authentication/phone-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/phone-com-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/scopes/phone-com-scopes.yml
+  href: https://artifacts.apis.io/phone-com/scopes/phone-com-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/phone-com-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/conventions/phone-com-conventions.yml
+  href: https://artifacts.apis.io/phone-com/conventions/phone-com-conventions.yml
   title: ''
   type: Conventions
   url: conventions/phone-com-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/lifecycle/phone-com-lifecycle.yml
+  href: https://artifacts.apis.io/phone-com/lifecycle/phone-com-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/phone-com-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/lifecycle/phone-com-lifecycle.yml
+  href: https://artifacts.apis.io/phone-com/lifecycle/phone-com-lifecycle.yml
   title: ''
   type: StatusPage
   url: lifecycle/phone-com-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/security/phone-com-domain-security.yml
+  href: https://artifacts.apis.io/phone-com/security/phone-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/phone-com-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/security/phone-com-trust-center.yml
+  href: https://artifacts.apis.io/phone-com/security/phone-com-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/phone-com-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/security/phone-com-trust-center.yml
+  href: https://artifacts.apis.io/phone-com/security/phone-com-trust-center.yml
   title: ''
   type: Compliance
   url: security/phone-com-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/well-known/phone-com-well-known.yml
+  href: https://artifacts.apis.io/phone-com/well-known/phone-com-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/phone-com-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/conformance/phone-com-conformance.yml
+  href: https://artifacts.apis.io/phone-com/conformance/phone-com-conformance.yml
   title: ''
   type: Conformance
   url: conformance/phone-com-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/mcp/phone-com-mcp.yml
+  href: https://artifacts.apis.io/phone-com/mcp/phone-com-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/phone-com-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/asyncapi/phone-com-events-webhooks.yml
+  href: https://artifacts.apis.io/phone-com/asyncapi/phone-com-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/phone-com-events-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/data-model/phone-com-data-model.yml
+  href: https://artifacts.apis.io/phone-com/data-model/phone-com-data-model.yml
   title: ''
   type: DataModel
   url: data-model/phone-com-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/phone-com/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Phone.com is a cloud business phone and unified communications provider for small and mid-sized businesses, offering VoIP calling, SMS/MMS, video conferencing, fax, and virtual phone numbers. Its developer platform is the JSON REST v4 API (codenamed "Phoenix") at api.phone.com, which gives programmatic control over accounts, extensions, devices, phone numbers, call routing (routes, menus, queues, schedules), media, messaging, and an event callback/listener webhook system. Authentication is OAuth 2.0. First-party SDKs are published for Go, Python, PHP, Android, and JavaScript. Surfaced as a portfolio company of Lightspeed Venture Partners and enriched into the API Evangelist network.
+finops:
+- has_sources: true
+  method: derived
+  name: Phone Com Finops
+  primary_unit: user
+  service_category: ''
+  slug: phone-com-finops
+  template: false
 image: https://github.com/phonedotcom.png
 json_schemas:
 - name: Account
@@ -617,8 +639,15 @@ overview: 'Phone Com publishes 68 API contracts indexed on the [APIs.io](https:/
   The Phone Com catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Phone Com''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 34 more developer resources.'
-random_paper: 0
+  Phone Com''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 35 more developer resources.'
+plans:
+- name: Phone Com Plans Pricing
+  plan_count: 2
+  slug: phone-com-plans-pricing
+- name: Phone Com Price Estimates
+  plan_count: 0
+  slug: phone-com-price-estimates
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -639,23 +668,23 @@ scopes:
   summary_line: 4 scopes · oauth2
 score:
   band: strong
-  composite: 55.9
+  composite: 64.6
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 62.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 52.3
+    artifact_dirs: 31
+    catalog_earned: 73.8
+    catalog_earned_first_party: 8.0
+    catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.9
+  delta: 2.9
   facets:
-    access_clarity: 60.5
+    access_clarity: 89.5
     contract_governance: 35.6
-    contract_quality: 68.4
-    developer_ergonomics: 47.0
-    discoverability: 75.0
+    contract_quality: 73.6
+    developer_ergonomics: 55.4
+    discoverability: 74.1
     operational_transparency: 26.3
-  previous_composite: 47.0
+  previous_composite: 61.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -672,13 +701,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/phone-com/refs/heads/main/screenshots/phone-com-2026-08-17T081209.png
+screenshot: https://apis.io/screenshots/phone-com/phone-com-2026-08-17T081209.png
 security:
 - kind: authentication
   name: Phone Com Authentication
@@ -692,6 +721,12 @@ security:
   name: Phone Com Trust Center
   slug: phone-com-trust-center
   summary_line: SOC 2 Type 2, HIPAA, PCI DSS
+skill_count: 2
+skills:
+- name: Register a Phone.com event webhook (callback + listener)
+  slug: phone-com-register-event-webhook
+- name: Send an SMS from a Phone.com extension
+  slug: phone-com-send-sms
 slug: phone-com
 tags:
 - Company

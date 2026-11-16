@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-10-17'
+  score: 27.6
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: API documented at Capillary Documentation hub
@@ -52,62 +68,62 @@ apis:
 artifact_total: 13
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/rate-limits/capillary-technologies-rate-limits.yml
+  href: https://artifacts.apis.io/capillary-technologies/rate-limits/capillary-technologies-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/capillary-technologies-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/rules/capillary-technologies-rules.yml
+  href: https://artifacts.apis.io/capillary-technologies/rules/capillary-technologies-rules.yml
   title: ''
   type: Spectral
   url: rules/capillary-technologies-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/json-ld/capillary-technologies-context.jsonld
+  href: https://artifacts.apis.io/capillary-technologies/json-ld/capillary-technologies-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/capillary-technologies-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/vocabulary/capillary-technologies-vocabulary.yml
+  href: https://artifacts.apis.io/capillary-technologies/vocabulary/capillary-technologies-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/capillary-technologies-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/data-model/capillary-technologies-data-model.yml
+  href: https://artifacts.apis.io/capillary-technologies/data-model/capillary-technologies-data-model.yml
   title: ''
   type: DataModel
   url: data-model/capillary-technologies-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/sandbox/capillary-technologies-sandbox.yml
+  href: https://artifacts.apis.io/capillary-technologies/sandbox/capillary-technologies-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/capillary-technologies-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/authentication/capillary-technologies-authentication.yml
+  href: https://artifacts.apis.io/capillary-technologies/authentication/capillary-technologies-authentication.yml
   title: ''
   type: Authentication
   url: authentication/capillary-technologies-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/conformance/capillary-technologies-conformance.yml
+  href: https://artifacts.apis.io/capillary-technologies/conformance/capillary-technologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/capillary-technologies-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/llms/capillary-technologies-llms.txt
+  href: https://artifacts.apis.io/capillary-technologies/llms/capillary-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/capillary-technologies-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/mcp/capillary-technologies-mcp.yml
+  href: https://artifacts.apis.io/capillary-technologies/mcp/capillary-technologies-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/capillary-technologies-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/hosts/capillary-technologies-hosts.yml
+  href: https://artifacts.apis.io/capillary-technologies/hosts/capillary-technologies-hosts.yml
   title: ''
   type: Hosts
   url: hosts/capillary-technologies-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/vendors/capillary-technologies-vendors.yml
+  href: https://artifacts.apis.io/capillary-technologies/vendors/capillary-technologies-vendors.yml
   title: ''
   type: Vendors
   url: vendors/capillary-technologies-vendors.yml
@@ -120,7 +136,7 @@ common:
   type: Documentation
   url: https://docs.capillarytech.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/capillary-technologies/refs/heads/main/security/capillary-technologies-domain-security.yml
+  href: https://artifacts.apis.io/capillary-technologies/security/capillary-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/capillary-technologies-domain-security.yml
@@ -159,14 +175,14 @@ modified: '2026-10-06'
 name: Capillary Technologies
 nav: Providers
 network: true
-overview: 'Capillary Technologies is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Events API, Simulation API, Webhooks API, and 2 more. Tagged areas include Loyalty, Marketing, Software-as-a-Service, Enterprise, and Customer-Engagement.
+overview: 'Capillary Technologies is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Events API, Simulation API, Webhooks API, and 2 more. Tagged areas include Loyalty, Marketing, Software-as-a-Service, Enterprise, and Customer Engagement.
 
 
   The Capillary Technologies catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Capillary Technologies'' developer surface includes sandbox, authentication, getting-started guide, documentation, and 12 more developer resources.'
-random_paper: 2
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Capillary Technologies Rate Limits
@@ -186,21 +202,23 @@ rules:
   slug: capillary-technologies-rules
 score:
   band: emerging
-  composite: 25.2
+  composite: 23.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 60.8
     catalog_earned_first_party: 8.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.1
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 21.5
-    developer_ergonomics: 40.5
+    developer_ergonomics: 29.8
     discoverability: 68.3
     operational_transparency: 21.1
+  previous_composite: 25.2
   provenance:
     conformance: derived
     contracts:
@@ -215,11 +233,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/capillary-technologies/capillary-technologies-2026-11-03T123207.png
 security:
 - kind: authentication
   name: Capillary Technologies Authentication
@@ -235,6 +255,6 @@ tags:
 - Marketing
 - Software-as-a-Service
 - Enterprise
-- Customer-Engagement
+- Customer Engagement
 website: https://www.capillarytech.com/
 ---

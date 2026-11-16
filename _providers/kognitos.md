@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.8
-  scored_at: '2026-10-17'
+  score: 45.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 1
@@ -32,7 +51,7 @@ agentic_access:
   operation_count: 102
   slug: kognitos-agentic-access
   summary_line: 102 operations · 30 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: 'The Kognitos MCP Server lets AI assistants (Claude Desktop, Claude Code, Claude.ai and other Model Context Protocol clients) list automations, start runs, inspect exceptions and manage schedules in a '
   name: Kognitos MCP Server
@@ -77,55 +96,55 @@ apis:
   description: Manage workspaces, members, roles, invitations, and preferences.
   name: Kognitos Workspaces API
   slug: kognitos-workspaces-api
-artifact_total: 25
+artifact_total: 30
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/agentic-access/kognitos-agentic-access.yml
+  href: https://artifacts.apis.io/kognitos/agentic-access/kognitos-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kognitos-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/plans/kognitos-plans-pricing.yml
+  href: https://artifacts.apis.io/kognitos/plans/kognitos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kognitos-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/rules/kognitos-rules.yml
+  href: https://artifacts.apis.io/kognitos/rules/kognitos-rules.yml
   title: ''
   type: Spectral
   url: rules/kognitos-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/rules/kognitos-openapi-spectral-rules.yml
+  href: https://artifacts.apis.io/kognitos/rules/kognitos-openapi-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/kognitos-openapi-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/json-ld/kognitos-context.jsonld
+  href: https://artifacts.apis.io/kognitos/json-ld/kognitos-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/kognitos-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/vocabulary/kognitos-vocabulary.yml
+  href: https://artifacts.apis.io/kognitos/vocabulary/kognitos-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/kognitos-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kognitos/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/data-model/kognitos-data-model.yml
+  href: https://artifacts.apis.io/kognitos/data-model/kognitos-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kognitos-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/conventions/kognitos-conventions.yml
+  href: https://artifacts.apis.io/kognitos/conventions/kognitos-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kognitos-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/sandbox/kognitos-sandbox.yml
+  href: https://artifacts.apis.io/kognitos/sandbox/kognitos-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/kognitos-sandbox.yml
@@ -134,67 +153,67 @@ common:
   type: Compliance
   url: https://trust.kognitos.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/lifecycle/kognitos-lifecycle.yml
+  href: https://artifacts.apis.io/kognitos/lifecycle/kognitos-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/kognitos-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/lifecycle/kognitos-lifecycle.yml
+  href: https://artifacts.apis.io/kognitos/lifecycle/kognitos-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kognitos-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/errors/kognitos-problem-types.yml
+  href: https://artifacts.apis.io/kognitos/errors/kognitos-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kognitos-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/conformance/kognitos-conformance.yml
+  href: https://artifacts.apis.io/kognitos/conformance/kognitos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kognitos-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/overlays/kognitos-openapi-overlay.yaml
+  href: https://artifacts.apis.io/kognitos/overlays/kognitos-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kognitos-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/llms/kognitos-llms.txt
+  href: https://artifacts.apis.io/kognitos/llms/kognitos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kognitos-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/mcp/kognitos-tool-crosswalk.yml
+  href: https://artifacts.apis.io/kognitos/mcp/kognitos-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/kognitos-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/mcp/kognitos-mcp.yml
+  href: https://artifacts.apis.io/kognitos/mcp/kognitos-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kognitos-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/well-known/kognitos-well-known.yml
+  href: https://artifacts.apis.io/kognitos/well-known/kognitos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kognitos-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/hosts/kognitos-hosts.yml
+  href: https://artifacts.apis.io/kognitos/hosts/kognitos-hosts.yml
   title: ''
   type: Hosts
   url: hosts/kognitos-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/vendors/kognitos-vendors.yml
+  href: https://artifacts.apis.io/kognitos/vendors/kognitos-vendors.yml
   title: ''
   type: Vendors
   url: vendors/kognitos-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/packages/kognitos-packages.yml
+  href: https://artifacts.apis.io/kognitos/packages/kognitos-packages.yml
   title: ''
   type: SDKs
   url: packages/kognitos-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/packages/kognitos-packages.yml
+  href: https://artifacts.apis.io/kognitos/packages/kognitos-packages.yml
   title: ''
   type: Packages
   url: packages/kognitos-packages.yml
@@ -203,17 +222,17 @@ common:
   type: Newsroom
   url: https://www.kognitos.com/news/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/authentication/kognitos-authentication.yml
+  href: https://artifacts.apis.io/kognitos/authentication/kognitos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kognitos-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/security/kognitos-trust-center.yml
+  href: https://artifacts.apis.io/kognitos/security/kognitos-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kognitos-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/security/kognitos-domain-security.yml
+  href: https://artifacts.apis.io/kognitos/security/kognitos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kognitos-domain-security.yml
@@ -295,6 +314,14 @@ common:
   url: https://github.com/kognitos/openapi/blob/edf6b8b8988fd6aff8938039aaa1e96c2ec88b6b/.spectral.yaml
 created: '2026-10-09'
 description: Kognitos is a neurosymbolic agentic AI platform that automates finance, accounts payable, healthcare, and IT workflows in plain English ("English as code"), positioned as deterministic agentic AI for the enterprise with zero hallucinations and full audit compliance. The platform runs on AWS, offers integrations with SAP, Oracle Cloud ERP, Microsoft Dynamics 365 and Workday, and exposes a REST API (base https://app.us-1.kognitos.com/api/v1, Bearer personal access tokens) for managing organizations, workspaces, automations, runs, books, files, exceptions and analytics.
+finops:
+- has_sources: true
+  method: derived
+  name: Kognitos Finops
+  primary_unit: ''
+  service_category: ''
+  slug: kognitos-finops
+  template: true
 image: https://www.kognitos.com/img/kognitos-og.png?v=cee38495
 json_schemas:
 - name: apiHttpBody
@@ -340,7 +367,7 @@ plans:
 - name: Kognitos Plans Pricing
   plan_count: 2
   slug: kognitos-plans-pricing
-random_paper: 20
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Kognitos Rate Limits
@@ -371,24 +398,24 @@ rules:
     warn: 3
   slug: kognitos-rules
 score:
-  band: strong
-  composite: 61.0
+  band: developing
+  composite: 47.9
   coverage:
-    artifact_dirs: 29
+    artifact_dirs: 32
     catalog_earned: 70.8
     catalog_earned_first_party: 8.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.2
+  delta: -13.1
   facets:
-    access_clarity: 71.1
+    access_clarity: 46.1
     contract_governance: 35.6
     contract_quality: 60.0
-    developer_ergonomics: 73.2
-    discoverability: 76.7
-    operational_transparency: 28.9
-  previous_composite: 66.2
+    developer_ergonomics: 44.6
+    discoverability: 75.8
+    operational_transparency: 18.4
+  previous_composite: 61.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -404,14 +431,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kognitos/refs/heads/main/screenshots/kognitos-2026-10-11T190428.png
+screenshot: https://apis.io/screenshots/kognitos/kognitos-2026-10-11T190428.png
 security:
 - kind: authentication
   name: Kognitos Authentication
@@ -425,6 +452,16 @@ security:
   name: Kognitos Trust Center
   slug: kognitos-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 4
+skills:
+- name: kognitos-run-an-automation
+  slug: kognitos-run-an-automation
+- name: kognitos-schedule-an-automation
+  slug: kognitos-schedule-an-automation
+- name: kognitos-triage-exceptions
+  slug: kognitos-triage-exceptions
+- name: kognitos-upload-file-input
+  slug: kognitos-upload-file-input
 slug: kognitos
 tags:
 - Company

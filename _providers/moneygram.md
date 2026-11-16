@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 20.9
-  scored_at: '2026-10-17'
+  score: 22.5
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - baseURL: https://sandboxapi.moneygram.com
@@ -74,57 +88,57 @@ apis:
 artifact_total: 19
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/rules/moneygram-rules.yml
+  href: https://artifacts.apis.io/moneygram/rules/moneygram-rules.yml
   title: ''
   type: Spectral
   url: rules/moneygram-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/json-ld/moneygram-context.jsonld
+  href: https://artifacts.apis.io/moneygram/json-ld/moneygram-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/moneygram-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/vocabulary/moneygram-vocabulary.yml
+  href: https://artifacts.apis.io/moneygram/vocabulary/moneygram-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/moneygram-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/data-model/moneygram-data-model.yml
+  href: https://artifacts.apis.io/moneygram/data-model/moneygram-data-model.yml
   title: ''
   type: DataModel
   url: data-model/moneygram-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/authentication/moneygram-authentication.yml
+  href: https://artifacts.apis.io/moneygram/authentication/moneygram-authentication.yml
   title: ''
   type: Authentication
   url: authentication/moneygram-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/lifecycle/moneygram-lifecycle.yml
+  href: https://artifacts.apis.io/moneygram/lifecycle/moneygram-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/moneygram-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/lifecycle/moneygram-lifecycle.yml
+  href: https://artifacts.apis.io/moneygram/lifecycle/moneygram-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/moneygram-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/conformance/moneygram-conformance.yml
+  href: https://artifacts.apis.io/moneygram/conformance/moneygram-conformance.yml
   title: ''
   type: Conformance
   url: conformance/moneygram-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/well-known/moneygram-well-known.yml
+  href: https://artifacts.apis.io/moneygram/well-known/moneygram-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/moneygram-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/hosts/moneygram-hosts.yml
+  href: https://artifacts.apis.io/moneygram/hosts/moneygram-hosts.yml
   title: ''
   type: Hosts
   url: hosts/moneygram-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/vendors/moneygram-vendors.yml
+  href: https://artifacts.apis.io/moneygram/vendors/moneygram-vendors.yml
   title: ''
   type: Vendors
   url: vendors/moneygram-vendors.yml
@@ -145,7 +159,7 @@ common:
   type: Leadership
   url: https://corporate.moneygram.com/leadership
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/moneygram/refs/heads/main/security/moneygram-domain-security.yml
+  href: https://artifacts.apis.io/moneygram/security/moneygram-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/moneygram-domain-security.yml
@@ -232,7 +246,7 @@ overview: 'MoneyGram is listed with 9 APIs on the [APIs.io](https://apis.io/) ne
 
 
   MoneyGram''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, and 19 more developer resources.'
-random_paper: 7
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -248,21 +262,28 @@ rules:
   slug: moneygram-rules
 score:
   band: thin
-  composite: 37.5
+  composite: 27.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 65.0
     catalog_earned_first_party: 0.0
     catalog_gap: 50.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.7
   facets:
-    access_clarity: 42.1
+    access_clarity: 21.1
     contract_governance: 19.7
     contract_quality: 25.6
-    developer_ergonomics: 57.1
-    discoverability: 75.0
+    developer_ergonomics: 34.5
+    discoverability: 73.2
     operational_transparency: 7.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - global
+  previous_composite: 37.5
   provenance:
     conformance: derived
     contracts:
@@ -276,12 +297,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/moneygram/moneygram-2026-11-03T135829.png
 security:
 - kind: authentication
   name: Moneygram Authentication

@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,16 +30,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.8
-  scored_at: '2026-10-17'
-api_count: 6
+  score: 41.5
+  scored_at: '2026-11-06'
+api_count: 5
 apis:
 - description: Aiera's hosted remote Model Context Protocol server, exposing the financial research corpus to LLMs and agentic workflows as roughly three dozen specialized tools across equities and financials, index
   name: Aiera MCP Server
@@ -135,14 +152,19 @@ apis:
   description: User entitlements and permissions
   name: Aiera Users v1 API
   slug: aiera-users-v1-api
-artifact_total: 28
+artifact_total: 34
 common:
+- group: other
+  href: https://artifacts.apis.io/aiera/capabilities/aiera-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/aiera-capability-edges.yml
 - group: company
   title: ''
   type: BlogRSS
   url: https://aiera.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/overlays/aiera-rest-api-overlay.yaml
+  href: https://artifacts.apis.io/aiera/overlays/aiera-rest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/aiera-rest-api-overlay.yaml
@@ -199,92 +221,100 @@ common:
   type: StatusPage
   url: https://status.aiera.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/mcp/aiera-mcp.yml
+  href: https://artifacts.apis.io/aiera/mcp/aiera-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/aiera-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/aiera/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/llms/aiera-llms.txt
+  href: https://artifacts.apis.io/aiera/llms/aiera-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aiera-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/well-known/aiera-well-known.yml
+  href: https://artifacts.apis.io/aiera/well-known/aiera-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/aiera-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/authentication/aiera-authentication.yml
+  href: https://artifacts.apis.io/aiera/authentication/aiera-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aiera-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/scopes/aiera-scopes.yml
+  href: https://artifacts.apis.io/aiera/scopes/aiera-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/aiera-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/conventions/aiera-conventions.yml
+  href: https://artifacts.apis.io/aiera/conventions/aiera-conventions.yml
   title: ''
   type: Conventions
   url: conventions/aiera-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/lifecycle/aiera-lifecycle.yml
+  href: https://artifacts.apis.io/aiera/lifecycle/aiera-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/aiera-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/conformance/aiera-conformance.yml
+  href: https://artifacts.apis.io/aiera/conformance/aiera-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aiera-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/security/aiera-domain-security.yml
+  href: https://artifacts.apis.io/aiera/security/aiera-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aiera-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/packages/aiera-packages.yml
+  href: https://artifacts.apis.io/aiera/packages/aiera-packages.yml
   title: ''
   type: Packages
   url: packages/aiera-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/packages/aiera-packages.yml
+  href: https://artifacts.apis.io/aiera/packages/aiera-packages.yml
   title: ''
   type: SDKs
   url: packages/aiera-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/components/aiera-components.yml
+  href: https://artifacts.apis.io/aiera/components/aiera-components.yml
   title: ''
   type: Components
   url: components/aiera-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/rate-limits/aiera-rate-limits.yml
+  href: https://artifacts.apis.io/aiera/rate-limits/aiera-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aiera-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/plans/aiera-plans-pricing.yml
+  href: https://artifacts.apis.io/aiera/plans/aiera-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aiera-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/errors/aiera-problem-types.yml
+  href: https://artifacts.apis.io/aiera/errors/aiera-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/aiera-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/data-model/aiera-data-model.yml
+  href: https://artifacts.apis.io/aiera/data-model/aiera-data-model.yml
   title: ''
   type: DataModel
   url: data-model/aiera-data-model.yml
 created: '2026-09-14'
 description: Aiera is a New York-based financial research technology company that provides real-time and historical intelligence on public-company events. Its platform covers earnings calls, investor days, conferences and shareholder meetings with live AI transcription plus human-edited transcripts, and layers on AI-generated summaries, topic and tonal-sentiment analysis, SEC filings, company-published documents, broker research, expert-insight content (including Third Bridge) and financial news. Aiera exposes that corpus to buy-side and sell-side institutions through an entitlement-aware REST API, a hosted remote MCP server for LLM and agentic workflows, embeddable web components (AieraChat, Aieracast, EventList), and an open-source Python MCP package.
+finops:
+- has_sources: true
+  method: derived
+  name: Aiera Finops
+  primary_unit: ''
+  service_category: ''
+  slug: aiera-finops
+  template: true
 image: https://aiera.com/wp-content/uploads/2025/09/aiera-default-feature.jpg
 layout: provider
 mcp_servers:
@@ -298,16 +328,32 @@ network: true
 overview: 'Aiera publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calendar API, Calendar v2 API, Calendars v1 API, and 19 more. Tagged areas include Financial Research, Earnings Calls, Transcripts, SEC Filings, and Market Data.
 
 
-  Aiera''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 25 more developer resources.'
+  The Aiera catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Aiera''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 26 more developer resources.'
 plans:
 - name: Aiera Plans Pricing
   plan_count: 0
   slug: aiera-plans-pricing
-random_paper: 8
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Aiera Rate Limits
   slug: aiera-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Aiera API Rules
+  rule_count: 53
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 18
+  slug: aiera-rules
 scopes:
 - name: Aiera Scopes
   scope_count: 3
@@ -315,19 +361,19 @@ scopes:
   summary_line: 3 scopes · authorization_code
 score:
   band: developing
-  composite: 40.9
+  composite: 43.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.7
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 51.4
+    contract_governance: 18.2
+    contract_quality: 54.2
     developer_ergonomics: 60.1
     discoverability: 80.0
     operational_transparency: 10.5
@@ -338,13 +384,13 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.9
+  previous_composite: 42.5
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 52.4
       total: 21
     mcp: first-party
     skills: derived
@@ -354,13 +400,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 38.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/aiera/refs/heads/main/screenshots/aiera-2026-10-11T093253.png
+screenshot: https://apis.io/screenshots/aiera/aiera-2026-10-11T093253.png
 security:
 - kind: authentication
   name: Aiera Authentication
@@ -370,6 +416,16 @@ security:
   name: Aiera Domain Security
   slug: aiera-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: aiera-earnings-call-research
+  slug: aiera-earnings-call-research
+- name: aiera-event-calendar-monitoring
+  slug: aiera-event-calendar-monitoring
+- name: aiera-mcp-agent-access
+  slug: aiera-mcp-agent-access
+- name: aiera-sec-filings-and-documents
+  slug: aiera-sec-filings-and-documents
 slug: aiera
 tags:
 - Financial Research

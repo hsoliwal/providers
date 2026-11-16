@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - scopes
   - security
   trial: false
   try_now: false
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -70,11 +74,8 @@ apis:
   description: Track shipments and delivery status.
   name: Dana Shipping API
   slug: dana-shipping-api
-artifact_total: 24
+artifact_total: 23
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dana Aftermarket API
   slug: open-dana-aftermarket-api
@@ -95,27 +96,27 @@ collections:
   slug: open-dana-shipping-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/plans/dana-plans-pricing.yml
+  href: https://artifacts.apis.io/dana/plans/dana-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dana-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/rate-limits/dana-rate-limits.yml
+  href: https://artifacts.apis.io/dana/rate-limits/dana-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dana-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/finops/dana-finops.yml
+  href: https://artifacts.apis.io/dana/finops/dana-finops.yml
   title: ''
   type: FinOps
   url: finops/dana-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/well-known/dana-well-known.yml
+  href: https://artifacts.apis.io/dana/well-known/dana-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dana-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/scopes/dana-scopes.yml
+  href: https://artifacts.apis.io/dana/scopes/dana-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/dana-scopes.yml
@@ -124,27 +125,27 @@ common:
   type: OpenIDConnect
   url: https://www.dana.com/.well-known/openid-configuration
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/conformance/dana-conformance.yml
+  href: https://artifacts.apis.io/dana/conformance/dana-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dana-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/conformance/dana-conformance.yml
+  href: https://artifacts.apis.io/dana/conformance/dana-conformance.yml
   title: ''
   type: Compliance
   url: conformance/dana-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/lifecycle/dana-lifecycle.yml
+  href: https://artifacts.apis.io/dana/lifecycle/dana-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dana-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/packages/dana-packages.yml
+  href: https://artifacts.apis.io/dana/packages/dana-packages.yml
   title: ''
   type: Packages
   url: packages/dana-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/llms/dana-llms.txt
+  href: https://artifacts.apis.io/dana/llms/dana-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dana-llms.txt
@@ -181,17 +182,17 @@ common:
   type: Alias
   url: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/apis.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/agentic-access/dana-agentic-access.yml
+  href: https://artifacts.apis.io/dana/agentic-access/dana-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dana-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/security/dana-domain-security.yml
+  href: https://artifacts.apis.io/dana/security/dana-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dana-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/authentication/dana-authentication.yml
+  href: https://artifacts.apis.io/dana/authentication/dana-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dana-authentication.yml
@@ -208,12 +209,12 @@ common:
   type: Portal
   url: https://developer.danaaftermarket.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/json-ld/dana-context.jsonld
+  href: https://artifacts.apis.io/dana/json-ld/dana-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/dana-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/vocabulary/dana-vocabulary.yml
+  href: https://artifacts.apis.io/dana/vocabulary/dana-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dana-vocabulary.yml
@@ -272,7 +273,7 @@ press:
 - date: ''
   title: Dana and Chrysler relations fester as costs rise
   url: https://www.autonews.com/article/20080807/OEM02/308079998/dana-and-chrysler-relations-fester-as-costs-rise/
-random_paper: 8
+random_paper: 20
 rate_limits:
 - limit_count: 1
   name: Dana Rate Limits
@@ -310,13 +311,13 @@ score:
   band: developing
   composite: 42.3
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 26
     catalog_earned: 67.0
     catalog_earned_first_party: 0.0
     catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 45.5
@@ -324,7 +325,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 74.1
     operational_transparency: 5.3
-  previous_composite: 48.0
+  previous_composite: 42.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -339,13 +340,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dana/refs/heads/main/screenshots/dana-2026-06-20T175459.png
+screenshot: https://apis.io/screenshots/dana/dana-2026-06-20T175459.png
 security:
 - kind: authentication
   name: Dana Authentication

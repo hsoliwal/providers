@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 25.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 5
   slug: opentripmap-agentic-access
   summary_line: 5 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.opentripmap.com/0.1
   baseurl_source: declared
@@ -60,11 +66,8 @@ apis:
   description: The Objects list API from OpenTripMap — 3 operation(s) for objects list.
   name: OpenTripMap Objects list API
   slug: opentripmap-objects-list-api
-artifact_total: 25
+artifact_total: 24
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OpenTripMap Geographic coordinates of populated place API
   slug: open-opentripmap-geographic-coordinates-of-populated-place-api
@@ -76,17 +79,17 @@ collections:
   slug: open-opentripmap-objects-list-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/agentic-access/opentripmap-agentic-access.yml
+  href: https://artifacts.apis.io/opentripmap/agentic-access/opentripmap-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/opentripmap-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/security/opentripmap-domain-security.yml
+  href: https://artifacts.apis.io/opentripmap/security/opentripmap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opentripmap-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/authentication/opentripmap-authentication.yml
+  href: https://artifacts.apis.io/opentripmap/authentication/opentripmap-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opentripmap-authentication.yml
@@ -123,17 +126,17 @@ common:
   type: X
   url: https://twitter.com/hashtag/opentripmap
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/plans/opentripmap-plans-pricing.yml
+  href: https://artifacts.apis.io/opentripmap/plans/opentripmap-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/opentripmap-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/rate-limits/opentripmap-rate-limits.yml
+  href: https://artifacts.apis.io/opentripmap/rate-limits/opentripmap-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/opentripmap-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/finops/opentripmap-finops.yml
+  href: https://artifacts.apis.io/opentripmap/finops/opentripmap-finops.yml
   title: ''
   type: FinOps
   url: finops/opentripmap-finops.yml
@@ -201,7 +204,7 @@ plans:
 - name: Opentripmap Plans Pricing
   plan_count: 4
   slug: opentripmap-plans-pricing
-random_paper: 11
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Opentripmap Rate Limits
@@ -220,29 +223,29 @@ rules:
   slug: opentripmap-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 32.2
+  composite: 33.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 1.3
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 52.0
+    contract_quality: 57.1
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 37.8
+  previous_composite: 32.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
   regulatory:
     applies: true
@@ -250,14 +253,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/opentripmap/refs/heads/main/screenshots/opentripmap-2026-06-20T191049.png
+screenshot: https://apis.io/screenshots/opentripmap/opentripmap-2026-06-20T191049.png
 security:
 - kind: authentication
   name: Opentripmap Authentication

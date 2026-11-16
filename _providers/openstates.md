@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-10-17'
+  score: 24.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +45,7 @@ agentic_access:
   operation_count: 12
   slug: openstates-agentic-access
   summary_line: 12 operations
-api_count: 2
+api_count: 1
 apis:
 - description: Legacy GraphQL API providing access to Open States legislative data. This API has been deprecated in favour of API v3. Existing integrations should migrate to the REST v3 API.
   name: Open States GraphQL API (v2 - Deprecated)
@@ -76,11 +80,8 @@ apis:
   description: The people API from Open States — 2 operation(s) for people.
   name: Open States People API
   slug: openstates-people-api
-artifact_total: 28
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Open States API v3 bills API
   slug: open-openstates-bills-api
@@ -121,12 +122,12 @@ common:
   type: License
   url: https://github.com/openstates/api-v3/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openstates/refs/heads/main/agentic-access/openstates-agentic-access.yml
+  href: https://artifacts.apis.io/openstates/agentic-access/openstates-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/openstates-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openstates/refs/heads/main/security/openstates-domain-security.yml
+  href: https://artifacts.apis.io/openstates/security/openstates-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openstates-domain-security.yml
@@ -155,17 +156,17 @@ common:
   type: X
   url: https://twitter.com/openstates
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openstates/refs/heads/main/plans/openstates-plans-pricing.yml
+  href: https://artifacts.apis.io/openstates/plans/openstates-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/openstates-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/openstates/refs/heads/main/rate-limits/openstates-rate-limits.yml
+  href: https://artifacts.apis.io/openstates/rate-limits/openstates-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/openstates-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openstates/refs/heads/main/finops/openstates-finops.yml
+  href: https://artifacts.apis.io/openstates/finops/openstates-finops.yml
   title: ''
   type: FinOps
   url: finops/openstates-finops.yml
@@ -214,7 +215,7 @@ modified: '2026-10-06'
 name: Open States
 nav: Providers
 network: true
-overview: 'Open States publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bills API, Committees API, Events API, and 4 more. Tagged areas include Government, Legislative Data, Civic Technology, State Legislature, and Bills.
+overview: 'Open States publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bills API, Committees API, Events API, and 4 more. Tagged areas include Government, Legislative, Civic Technology, State Legislature, and Bills.
 
 
   The Open States catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -225,7 +226,7 @@ plans:
 - name: Openstates Plans Pricing
   plan_count: 4
   slug: openstates-plans-pricing
-random_paper: 16
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Openstates Rate Limits
@@ -244,32 +245,32 @@ rules:
   slug: openstates-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 25.0
+  composite: 25.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.1
+  delta: 0.8
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 47.9
+    contract_quality: 51.7
     developer_ergonomics: 11.9
     discoverability: 66.1
     operational_transparency: 5.3
   open_source:
     applies: true
     score: 15.0
-  previous_composite: 30.1
+  previous_composite: 25.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 6
   regulatory:
     applies: true
@@ -277,14 +278,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/openstates/refs/heads/main/screenshots/openstates-2026-06-20T191040.png
+screenshot: https://apis.io/screenshots/openstates/openstates-2026-06-20T191040.png
 security:
 - kind: domain-security
   name: Openstates Domain Security
@@ -293,7 +294,7 @@ security:
 slug: openstates
 tags:
 - Government
-- Legislative Data
+- Legislative
 - Civic Technology
 - State Legislature
 - Bills

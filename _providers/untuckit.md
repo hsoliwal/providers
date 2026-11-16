@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'Live MCP endpoint implementing the Universal Commerce Protocol shopping service for the UNTUCKit store: catalog search, cart, checkout, fulfillment, discounts, and orders, with Shop Pay / Google Pay /'
@@ -49,52 +57,52 @@ common:
   type: Website
   url: https://untuckit.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/mcp/untuckit-mcp.yml
+  href: https://artifacts.apis.io/untuckit/mcp/untuckit-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/untuckit-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/llms/untuckit-llms.txt
+  href: https://artifacts.apis.io/untuckit/llms/untuckit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/untuckit-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/well-known/untuckit-well-known.yml
+  href: https://artifacts.apis.io/untuckit/well-known/untuckit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/untuckit-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/untuckit/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/scopes/untuckit-scopes.yml
+  href: https://artifacts.apis.io/untuckit/scopes/untuckit-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/untuckit-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/authentication/untuckit-authentication.yml
+  href: https://artifacts.apis.io/untuckit/authentication/untuckit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/untuckit-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/conformance/untuckit-conformance.yml
+  href: https://artifacts.apis.io/untuckit/conformance/untuckit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/untuckit-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/conventions/untuckit-conventions.yml
+  href: https://artifacts.apis.io/untuckit/conventions/untuckit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/untuckit-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/lifecycle/untuckit-lifecycle.yml
+  href: https://artifacts.apis.io/untuckit/lifecycle/untuckit-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/untuckit-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/security/untuckit-domain-security.yml
+  href: https://artifacts.apis.io/untuckit/security/untuckit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/untuckit-domain-security.yml
@@ -134,7 +142,7 @@ overview: 'UNTUCKit is listed with 2 APIs on the [APIs.io](https://apis.io/) net
 
 
   UNTUCKit''s developer surface includes authentication, support, engineering blog, and 13 more developer resources.'
-random_paper: 7
+random_paper: 23
 scopes:
 - name: Untuckit Scopes
   scope_count: 4
@@ -144,13 +152,13 @@ score:
   band: emerging
   composite: 24.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -158,7 +166,7 @@ score:
     developer_ergonomics: 35.7
     discoverability: 66.7
     operational_transparency: 0.0
-  previous_composite: 24.3
+  previous_composite: 24.4
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -169,14 +177,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/untuckit/refs/heads/main/screenshots/untuckit-2026-09-02T165005.png
+screenshot: https://apis.io/screenshots/untuckit/untuckit-2026-09-02T165005.png
 security:
 - kind: authentication
   name: Untuckit Authentication

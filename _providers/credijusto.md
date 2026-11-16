@@ -1,44 +1,57 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: false
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: false
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.8
-  scored_at: '2026-10-17'
+  score: 0.0
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credijusto/refs/heads/main/well-known/credijusto-well-known.yml
+  href: https://artifacts.apis.io/credijusto/well-known/credijusto-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/credijusto-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credijusto/refs/heads/main/hosts/credijusto-hosts.yml
+  href: https://artifacts.apis.io/credijusto/hosts/credijusto-hosts.yml
   title: ''
   type: Hosts
   url: hosts/credijusto-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credijusto/refs/heads/main/vendors/credijusto-vendors.yml
+  href: https://artifacts.apis.io/credijusto/vendors/credijusto-vendors.yml
   title: ''
   type: Vendors
   url: vendors/credijusto-vendors.yml
@@ -51,7 +64,7 @@ common:
   type: Documentation
   url: https://docs.covalto.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credijusto/refs/heads/main/security/credijusto-domain-security.yml
+  href: https://artifacts.apis.io/credijusto/security/credijusto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/credijusto-domain-security.yml
@@ -79,24 +92,33 @@ overview: 'Credijusto is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   Credijusto''s developer surface includes engineering blog, documentation, and 5 more developer resources.'
-random_paper: 6
+random_paper: 4
 score:
   band: minimal
-  composite: 5.6
+  composite: 3.7
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.9
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 11.9
+    developer_ergonomics: 6.0
     discoverability: 48.2
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - mexico
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - latin-america
+  previous_composite: 5.6
   provenance:
     mcp: unknown
   regulatory:
@@ -104,13 +126,15 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 4.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/credijusto/credijusto-2026-11-03T125546.png
 security:
 - kind: domain-security
   name: Credijusto Domain Security

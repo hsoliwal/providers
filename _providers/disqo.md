@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://projects-api.audience.disqo.com
@@ -91,62 +94,62 @@ common:
   type: PrivacyPolicy
   url: https://www.disqo.com/privacy-policy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/postman/disqo-audience-api-postman.json
+  href: https://artifacts.apis.io/disqo/postman/disqo-audience-api-postman.json
   title: ''
   type: Postman
   url: postman/disqo-audience-api-postman.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/llms/disqo-llms.txt
+  href: https://artifacts.apis.io/disqo/llms/disqo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/disqo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/authentication/disqo-authentication.yml
+  href: https://artifacts.apis.io/disqo/authentication/disqo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/disqo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/conventions/disqo-conventions.yml
+  href: https://artifacts.apis.io/disqo/conventions/disqo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/disqo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/errors/disqo-error-codes.yml
+  href: https://artifacts.apis.io/disqo/errors/disqo-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/disqo-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/lifecycle/disqo-lifecycle.yml
+  href: https://artifacts.apis.io/disqo/lifecycle/disqo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/disqo-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/changelog/disqo-changelog.yml
+  href: https://artifacts.apis.io/disqo/changelog/disqo-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/disqo-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/sandbox/disqo-sandbox.yml
+  href: https://artifacts.apis.io/disqo/sandbox/disqo-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/disqo-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/data-model/disqo-data-model.yml
+  href: https://artifacts.apis.io/disqo/data-model/disqo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/disqo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/conformance/disqo-conformance.yml
+  href: https://artifacts.apis.io/disqo/conformance/disqo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/disqo-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/packages/disqo-packages.yml
+  href: https://artifacts.apis.io/disqo/packages/disqo-packages.yml
   title: ''
   type: Packages
   url: packages/disqo-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/security/disqo-domain-security.yml
+  href: https://artifacts.apis.io/disqo/security/disqo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/disqo-domain-security.yml
@@ -171,7 +174,7 @@ score:
   band: thin
   composite: 29.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -195,14 +198,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/disqo/refs/heads/main/screenshots/disqo-2026-08-07T164402.png
+screenshot: https://apis.io/screenshots/disqo/disqo-2026-08-07T164402.png
 security:
 - kind: authentication
   name: Disqo Authentication

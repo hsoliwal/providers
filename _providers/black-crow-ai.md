@@ -5,7 +5,11 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Live, versioned HTTP event-ingest API behind the Black Crow AI JavaScript tag. POST /v1/events/{event_name} accepts a JSON body identified by siteName, pageId and visitorId and carries the visit, purc
@@ -44,12 +51,12 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/security/black-crow-ai-domain-security.yml
+  href: https://artifacts.apis.io/black-crow-ai/security/black-crow-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/black-crow-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/security/black-crow-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/black-crow-ai/security/black-crow-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/black-crow-ai-vulnerability-disclosure.yml
@@ -58,72 +65,72 @@ common:
   type: Security
   url: https://www.blackcrow.ai/legal/security-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/well-known/black-crow-ai-security.txt
+  href: https://artifacts.apis.io/black-crow-ai/well-known/black-crow-ai-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/black-crow-ai-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/well-known/black-crow-ai-well-known.yml
+  href: https://artifacts.apis.io/black-crow-ai/well-known/black-crow-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/black-crow-ai-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/llms/black-crow-ai-llms.txt
+  href: https://artifacts.apis.io/black-crow-ai/llms/black-crow-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/black-crow-ai-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/packages/black-crow-ai-packages.yml
+  href: https://artifacts.apis.io/black-crow-ai/packages/black-crow-ai-packages.yml
   title: ''
   type: Packages
   url: packages/black-crow-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/packages/black-crow-ai-packages.yml
+  href: https://artifacts.apis.io/black-crow-ai/packages/black-crow-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/black-crow-ai-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/authentication/black-crow-ai-authentication.yml
+  href: https://artifacts.apis.io/black-crow-ai/authentication/black-crow-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/black-crow-ai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/conventions/black-crow-ai-conventions.yml
+  href: https://artifacts.apis.io/black-crow-ai/conventions/black-crow-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/black-crow-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/errors/black-crow-ai-error-codes.yml
+  href: https://artifacts.apis.io/black-crow-ai/errors/black-crow-ai-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/black-crow-ai-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/lifecycle/black-crow-ai-lifecycle.yml
+  href: https://artifacts.apis.io/black-crow-ai/lifecycle/black-crow-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/black-crow-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/conformance/black-crow-ai-conformance.yml
+  href: https://artifacts.apis.io/black-crow-ai/conformance/black-crow-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/black-crow-ai-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/sandbox/black-crow-ai-sandbox.yml
+  href: https://artifacts.apis.io/black-crow-ai/sandbox/black-crow-ai-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/black-crow-ai-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/components/black-crow-ai-components.yml
+  href: https://artifacts.apis.io/black-crow-ai/components/black-crow-ai-components.yml
   title: ''
   type: Components
   url: components/black-crow-ai-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/rate-limits/black-crow-ai-rate-limits.yml
+  href: https://artifacts.apis.io/black-crow-ai/rate-limits/black-crow-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/black-crow-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/plans/black-crow-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/black-crow-ai/plans/black-crow-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/black-crow-ai-plans-pricing.yml
@@ -183,7 +190,7 @@ plans:
 - name: Black Crow Ai Plans Pricing
   plan_count: 0
   slug: black-crow-ai-plans-pricing
-random_paper: 12
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Black Crow Ai Rate Limits
@@ -192,13 +199,13 @@ score:
   band: thin
   composite: 31.0
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
@@ -206,7 +213,7 @@ score:
     developer_ergonomics: 54.8
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 30.9
+  previous_composite: 31.0
   provenance:
     conformance: first-party
   regulatory:
@@ -215,14 +222,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/black-crow-ai/refs/heads/main/screenshots/black-crow-ai-2026-07-25T203228.png
+screenshot: https://apis.io/screenshots/black-crow-ai/black-crow-ai-2026-07-25T203228.png
 security:
 - kind: authentication
   name: Black Crow Ai Authentication

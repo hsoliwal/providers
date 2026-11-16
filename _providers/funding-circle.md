@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 28.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.fundingcircle.co.uk/v1
@@ -51,15 +59,12 @@ apis:
   description: Create and manage business loan applications
   name: Funding Circle Loan Applications API
   slug: funding-circle-loan-applications-api
-artifact_total: 10
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Funding Circle Webhooks
   slug: funding-circle-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Funding Circle Introducer Decisions API
   slug: open-funding-circle-decisions-api
@@ -107,67 +112,67 @@ common:
   type: GitHubOrganization
   url: https://github.com/FundingCircle
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/authentication/funding-circle-authentication.yml
+  href: https://artifacts.apis.io/funding-circle/authentication/funding-circle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/funding-circle-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/errors/funding-circle-problem-types.yml
+  href: https://artifacts.apis.io/funding-circle/errors/funding-circle-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/funding-circle-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/conventions/funding-circle-conventions.yml
+  href: https://artifacts.apis.io/funding-circle/conventions/funding-circle-conventions.yml
   title: ''
   type: Conventions
   url: conventions/funding-circle-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/sandbox/funding-circle-sandbox.yml
+  href: https://artifacts.apis.io/funding-circle/sandbox/funding-circle-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/funding-circle-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/lifecycle/funding-circle-lifecycle.yml
+  href: https://artifacts.apis.io/funding-circle/lifecycle/funding-circle-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/funding-circle-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/asyncapi/funding-circle-webhooks.yml
+  href: https://artifacts.apis.io/funding-circle/asyncapi/funding-circle-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/funding-circle-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/mcp/funding-circle-mcp.yml
+  href: https://artifacts.apis.io/funding-circle/mcp/funding-circle-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/funding-circle-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/conformance/funding-circle-conformance.yml
+  href: https://artifacts.apis.io/funding-circle/conformance/funding-circle-conformance.yml
   title: ''
   type: Conformance
   url: conformance/funding-circle-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/data-model/funding-circle-data-model.yml
+  href: https://artifacts.apis.io/funding-circle/data-model/funding-circle-data-model.yml
   title: ''
   type: DataModel
   url: data-model/funding-circle-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/funding-circle/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/llms/funding-circle-llms.txt
+  href: https://artifacts.apis.io/funding-circle/llms/funding-circle-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/funding-circle-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/overlays/funding-circle-introducer-overlay.yaml
+  href: https://artifacts.apis.io/funding-circle/overlays/funding-circle-introducer-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/funding-circle-introducer-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/security/funding-circle-domain-security.yml
+  href: https://artifacts.apis.io/funding-circle/security/funding-circle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/funding-circle-domain-security.yml
@@ -182,30 +187,43 @@ network: true
 overview: 'Funding Circle publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Decisions API, Documents API, and Loan Applications API. Tagged areas include Company, Consumer, Lending, Small Business, and Fintech.
 
 
-  The Funding Circle catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Funding Circle catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Funding Circle''s developer surface includes documentation, API reference, support, authentication, sandbox, and 17 more developer resources.'
-random_paper: 10
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Funding Circle API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: funding-circle-rules
 score:
   band: thin
-  composite: 30.2
+  composite: 31.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 21.6
     developer_ergonomics: 51.8
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 30.2
+  previous_composite: 31.9
   provenance:
     conformance: derived
     contracts:
@@ -221,13 +239,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/funding-circle/refs/heads/main/screenshots/funding-circle-2026-08-17T123438.png
+screenshot: https://apis.io/screenshots/funding-circle/funding-circle-2026-08-17T123438.png
 security:
 - kind: authentication
   name: Funding Circle Authentication
@@ -237,6 +255,10 @@ security:
   name: Funding Circle Domain Security
   slug: funding-circle-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Submit and track a Funding Circle loan application
+  slug: funding-circle-submit-loan-application
 slug: funding-circle
 tags:
 - Company

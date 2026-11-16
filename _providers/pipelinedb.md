@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -57,27 +60,27 @@ common:
   type: License
   url: https://github.com/pipelinedb/pipelinedb
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pipelinedb/refs/heads/main/packages/pipelinedb-packages.yml
+  href: https://artifacts.apis.io/pipelinedb/packages/pipelinedb-packages.yml
   title: ''
   type: Packages
   url: packages/pipelinedb-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pipelinedb/refs/heads/main/packages/pipelinedb-packages.yml
+  href: https://artifacts.apis.io/pipelinedb/packages/pipelinedb-packages.yml
   title: ''
   type: SDKs
   url: packages/pipelinedb-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pipelinedb/refs/heads/main/lifecycle/pipelinedb-lifecycle.yml
+  href: https://artifacts.apis.io/pipelinedb/lifecycle/pipelinedb-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pipelinedb-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pipelinedb/refs/heads/main/lifecycle/pipelinedb-lifecycle.yml
+  href: https://artifacts.apis.io/pipelinedb/lifecycle/pipelinedb-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/pipelinedb-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pipelinedb/refs/heads/main/llms/pipelinedb-llms.txt
+  href: https://artifacts.apis.io/pipelinedb/llms/pipelinedb-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pipelinedb-llms.txt
@@ -90,12 +93,12 @@ name: Pipelinedb
 nav: Providers
 network: true
 overview: Pipelinedb is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Database, PostgreSQL, Streaming, and Time Series.
-random_paper: 18
+random_paper: 20
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -126,8 +129,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

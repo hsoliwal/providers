@@ -1,13 +1,13 @@
 ---
 access_model:
-  confidence: high
-  label: NHS partner conformance (IM1 / GP Connect / TPP Integration Request)
-  onboarding: unknown
-  pricing: enterprise
+  confidence: low
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
   public: false
   source:
-  - integration-request
-  - im1-pairing
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: TPP's local client-integration interface allowing an approved third-party application to interact with a running SystmOne client. Communication is performed with XML documents (validated against publi
@@ -62,7 +65,7 @@ common:
   type: BlogRSS
   url: https://tpp-uk.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/security/tpp-systmone-domain-security.yml
+  href: https://artifacts.apis.io/tpp-systmone/security/tpp-systmone-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tpp-systmone-domain-security.yml
@@ -103,27 +106,27 @@ common:
   type: Compliance
   url: https://tpp-uk.com/iso-27001/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/authentication/tpp-systmone-authentication.yml
+  href: https://artifacts.apis.io/tpp-systmone/authentication/tpp-systmone-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tpp-systmone-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/conformance/tpp-systmone-conformance.yml
+  href: https://artifacts.apis.io/tpp-systmone/conformance/tpp-systmone-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tpp-systmone-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/well-known/tpp-systmone-well-known.yml
+  href: https://artifacts.apis.io/tpp-systmone/well-known/tpp-systmone-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tpp-systmone-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/lifecycle/tpp-systmone-lifecycle.yml
+  href: https://artifacts.apis.io/tpp-systmone/lifecycle/tpp-systmone-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tpp-systmone-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/llms/tpp-systmone-llms.txt
+  href: https://artifacts.apis.io/tpp-systmone/llms/tpp-systmone-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tpp-systmone-llms.txt
@@ -140,12 +143,12 @@ overview: 'TPP (SystmOne) is listed with 6 APIs on the [APIs.io](https://apis.io
 
 
   TPP (SystmOne)''s developer surface includes documentation, getting-started guide, engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 7
+random_paper: 11
 score:
   band: emerging
   composite: 23.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -176,14 +179,14 @@ score:
     regime: Health
     regime_id: health
     score: 21.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/screenshots/tpp-systmone-2026-09-02T164009.png
+screenshot: https://apis.io/screenshots/tpp-systmone/tpp-systmone-2026-09-02T164009.png
 security:
 - kind: authentication
   name: Tpp Systmone Authentication

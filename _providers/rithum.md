@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -85,7 +91,7 @@ apis:
   description: Event stream management for real-time data
   name: Rithum Streams API
   slug: rithum-streams-api
-artifact_total: 40
+artifact_total: 39
 collections:
 - collection_type: postman
   name: Dsco Platform Authentication API
@@ -111,9 +117,6 @@ collections:
 - collection_type: postman
   name: Dsco Platform Authentication Streams API
   slug: postman-rithum-streams-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dsco Platform API
   slug: open-dsco-platform
@@ -143,22 +146,22 @@ collections:
   slug: open-rithum-streams-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/plans/rithum-plans-pricing.yml
+  href: https://artifacts.apis.io/rithum/plans/rithum-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rithum-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/rate-limits/rithum-rate-limits.yml
+  href: https://artifacts.apis.io/rithum/rate-limits/rithum-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rithum-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/finops/rithum-finops.yml
+  href: https://artifacts.apis.io/rithum/finops/rithum-finops.yml
   title: ''
   type: FinOps
   url: finops/rithum-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/capabilities/rithum-capability-edges.yml
+  href: https://artifacts.apis.io/rithum/capabilities/rithum-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rithum-capability-edges.yml
@@ -167,17 +170,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/rithum/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/agentic-access/rithum-agentic-access.yml
+  href: https://artifacts.apis.io/rithum/agentic-access/rithum-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rithum-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/security/rithum-domain-security.yml
+  href: https://artifacts.apis.io/rithum/security/rithum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rithum-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/authentication/rithum-authentication.yml
+  href: https://artifacts.apis.io/rithum/authentication/rithum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rithum-authentication.yml
@@ -225,6 +228,14 @@ common:
   title: ''
   type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/vocabulary/rithum-vocabulary.yml
+- group: start
+  title: ''
+  type: DeveloperPortal
+  url: http://dev.rithum.com
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://dev.rithum.com/
 created: '2025-02-12'
 description: Rithum is a commerce operations platform providing dropship, marketplace, and supply chain integration solutions for retailers, brands, and suppliers. Formerly known as CommerceHub and ChannelAdvisor, Rithum connects brands and retailers to manage product listings, inventory, order workflows, and performance across ecommerce channels. The platform powers the Dsco API for dropship and marketplace integrations. In 2025, Rithum launched RithumIQ, an AI engine for automated commerce recommendations and operational insights.
 examples:
@@ -238,7 +249,7 @@ finops:
 - has_sources: false
   method: generated
   name: Rithum Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: rithum-finops
   template: true
@@ -270,12 +281,12 @@ overview: 'Rithum publishes 8 API contracts indexed on the [APIs.io](https://api
   The Rithum catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Rithum''s developer surface includes authentication, documentation, support, engineering blog, GitHub presence, and 14 more developer resources.'
+  Rithum''s developer surface includes authentication, documentation, support, engineering blog, GitHub presence, and 16 more developer resources.'
 plans:
 - name: Rithum Plans Pricing
   plan_count: 3
   slug: rithum-plans-pricing
-random_paper: 5
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Rithum Rate Limits
@@ -306,23 +317,23 @@ rules:
   slug: rithum-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 40.3
+  composite: 41.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 69.0
     catalog_earned_first_party: 0.0
     catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.8
+  delta: 1.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
     contract_quality: 62.2
-    developer_ergonomics: 41.7
+    developer_ergonomics: 46.4
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 46.1
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     contracts:
@@ -336,13 +347,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rithum/refs/heads/main/screenshots/rithum-2026-06-20T193131.png
+screenshot: https://apis.io/screenshots/rithum/rithum-2026-06-20T193131.png
 security:
 - kind: authentication
   name: Rithum Authentication
@@ -360,5 +371,7 @@ tags:
 - E-Commerce
 - Supply Chain
 - Retail
+- B2B
+- Platform
 website: https://www.rithum.com
 ---

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: LeapC is the native C API of the Ultraleap Hand Tracking Software. A client opens a connection to the locally running tracking service and polls it for tracking frames (hands, palms, digits, bones), d
@@ -45,17 +58,17 @@ common:
   type: IssueTracker
   url: https://github.com/ultraleap/UltraleapTrackingWebSocket/issues
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/errors/ultraleap-error-codes.yml
+  href: https://artifacts.apis.io/ultraleap/errors/ultraleap-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/ultraleap-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/conventions/ultraleap-conventions.yml
+  href: https://artifacts.apis.io/ultraleap/conventions/ultraleap-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ultraleap-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/data-model/ultraleap-data-model.yml
+  href: https://artifacts.apis.io/ultraleap/data-model/ultraleap-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ultraleap-data-model.yml
@@ -120,47 +133,47 @@ common:
   type: ChangeLog
   url: https://docs.ultraleap.com/openxr/changelog/index.html
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/changelog/ultraleap-changelog.yml
+  href: https://artifacts.apis.io/ultraleap/changelog/ultraleap-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ultraleap-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/packages/ultraleap-packages.yml
+  href: https://artifacts.apis.io/ultraleap/packages/ultraleap-packages.yml
   title: ''
   type: Packages
   url: packages/ultraleap-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/packages/ultraleap-packages.yml
+  href: https://artifacts.apis.io/ultraleap/packages/ultraleap-packages.yml
   title: ''
   type: SDKs
   url: packages/ultraleap-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/components/ultraleap-components.yml
+  href: https://artifacts.apis.io/ultraleap/components/ultraleap-components.yml
   title: ''
   type: Components
   url: components/ultraleap-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/conformance/ultraleap-conformance.yml
+  href: https://artifacts.apis.io/ultraleap/conformance/ultraleap-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ultraleap-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/conformance/ultraleap-conformance.yml
+  href: https://artifacts.apis.io/ultraleap/conformance/ultraleap-conformance.yml
   title: ''
   type: Compliance
   url: conformance/ultraleap-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/lifecycle/ultraleap-lifecycle.yml
+  href: https://artifacts.apis.io/ultraleap/lifecycle/ultraleap-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ultraleap-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/llms/ultraleap-llms.txt
+  href: https://artifacts.apis.io/ultraleap/llms/ultraleap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ultraleap-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/security/ultraleap-domain-security.yml
+  href: https://artifacts.apis.io/ultraleap/security/ultraleap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ultraleap-domain-security.yml
@@ -176,12 +189,12 @@ overview: 'Ultraleap is listed with 4 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Ultraleap''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, and 22 more developer resources.'
-random_paper: 2
+random_paper: 10
 score:
   band: thin
   composite: 30.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -204,14 +217,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/screenshots/ultraleap-2026-10-11T131400.png
+screenshot: https://apis.io/screenshots/ultraleap/ultraleap-2026-10-11T131400.png
 security:
 - kind: domain-security
   name: Ultraleap Domain Security

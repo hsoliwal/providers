@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
-  trial: false
-  try_now: false
+  trial: true
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -58,9 +64,6 @@ apis:
 artifact_total: 13
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: PromptArmor Analyze API
   slug: open-prompt-armor-analyze-api
 - collection_type: open
@@ -75,27 +78,27 @@ common:
   type: Pricing
   url: https://www.promptarmor.com/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/capabilities/prompt-armor-capability-edges.yml
+  href: https://artifacts.apis.io/prompt-armor/capabilities/prompt-armor-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/prompt-armor-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/agentic-access/prompt-armor-agentic-access.yml
+  href: https://artifacts.apis.io/prompt-armor/agentic-access/prompt-armor-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/prompt-armor-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/security/prompt-armor-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/prompt-armor/security/prompt-armor-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/prompt-armor-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/security/prompt-armor-domain-security.yml
+  href: https://artifacts.apis.io/prompt-armor/security/prompt-armor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prompt-armor-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/authentication/prompt-armor-authentication.yml
+  href: https://artifacts.apis.io/prompt-armor/authentication/prompt-armor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prompt-armor-authentication.yml
@@ -112,17 +115,17 @@ common:
   type: Documentation
   url: https://promptarmor.readme.io/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/plans/prompt-armor-plans-pricing.yml
+  href: https://artifacts.apis.io/prompt-armor/plans/prompt-armor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/prompt-armor-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/rate-limits/prompt-armor-rate-limits.yml
+  href: https://artifacts.apis.io/prompt-armor/rate-limits/prompt-armor-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/prompt-armor-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/finops/prompt-armor-finops.yml
+  href: https://artifacts.apis.io/prompt-armor/finops/prompt-armor-finops.yml
   title: ''
   type: FinOps
   url: finops/prompt-armor-finops.yml
@@ -145,35 +148,51 @@ network: true
 overview: 'PromptArmor publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Analyze API and Content Check API. Tagged areas include Artificial Intelligence, LLM, Security, Prompt Injection, and Threat Detection.
 
 
+  The PromptArmor catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   PromptArmor''s developer surface includes pricing, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Prompt Armor Plans Pricing
   plan_count: 2
   slug: prompt-armor-plans-pricing
-random_paper: 10
+random_paper: 16
 rate_limits:
 - limit_count: 2
   name: Prompt Armor Rate Limits
   slug: prompt-armor-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: PromptArmor API Rules
+  rule_count: 54
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 1
+  slug: prompt-armor-rules
 score:
   band: thin
-  composite: 29.9
+  composite: 31.9
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 47.0
+    artifact_dirs: 14
+    catalog_earned: 51.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 68.0
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.8
+  delta: -1.0
   facets:
-    access_clarity: 31.6
-    contract_governance: 0.0
+    access_clarity: 26.3
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 21.4
     discoverability: 66.1
-    operational_transparency: 5.3
-  previous_composite: 30.7
+    operational_transparency: 15.8
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     contracts:
@@ -187,13 +206,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/screenshots/prompt-armor-2026-06-20T192253.png
+screenshot: https://apis.io/screenshots/prompt-armor/prompt-armor-2026-06-20T192253.png
 security:
 - kind: authentication
   name: Prompt Armor Authentication

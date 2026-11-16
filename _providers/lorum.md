@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.8
-  scored_at: '2026-10-17'
+  score: 46.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.fuse.me
@@ -86,15 +91,12 @@ apis:
   description: The Oauth API from Lorum — 1 operation(s) for oauth.
   name: Lorum OAUTH API
   slug: lorum-oauth-api
-artifact_total: 24
+artifact_total: 28
 asyncapis:
 - description: Real-time webhook events emitted by Lorum for payments, transfers, currency exchanges, account changes, and customer onboarding. Generated from the provider's published webhook catalogue (docs.lorum.c
   name: Lorum (Fuse) Webhooks
   slug: lorum-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fuse Accounts API
   slug: open-lorum-accounts-api
@@ -127,12 +129,12 @@ collections:
   slug: open-lorum-transactions-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/capabilities/lorum-capability-edges.yml
+  href: https://artifacts.apis.io/lorum/capabilities/lorum-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lorum-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/overlays/lorum-openapi-overlay.yaml
+  href: https://artifacts.apis.io/lorum/overlays/lorum-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lorum-openapi-overlay.yaml
@@ -153,27 +155,27 @@ common:
   type: GettingStarted
   url: https://docs.lorum.com/docs/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/authentication/lorum-authentication.yml
+  href: https://artifacts.apis.io/lorum/authentication/lorum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lorum-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/conventions/lorum-conventions.yml
+  href: https://artifacts.apis.io/lorum/conventions/lorum-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lorum-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/conventions/lorum-conventions.yml
+  href: https://artifacts.apis.io/lorum/conventions/lorum-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/lorum-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/errors/lorum-problem-types.yml
+  href: https://artifacts.apis.io/lorum/errors/lorum-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lorum-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/lifecycle/lorum-lifecycle.yml
+  href: https://artifacts.apis.io/lorum/lifecycle/lorum-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lorum-lifecycle.yml
@@ -182,52 +184,52 @@ common:
   type: StatusPage
   url: https://status.lorum.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/conformance/lorum-conformance.yml
+  href: https://artifacts.apis.io/lorum/conformance/lorum-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lorum-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/sandbox/lorum-sandbox.yml
+  href: https://artifacts.apis.io/lorum/sandbox/lorum-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lorum-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/data-model/lorum-data-model.yml
+  href: https://artifacts.apis.io/lorum/data-model/lorum-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lorum-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/mcp/lorum-mcp.yml
+  href: https://artifacts.apis.io/lorum/mcp/lorum-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/lorum-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/well-known/lorum-well-known.yml
+  href: https://artifacts.apis.io/lorum/well-known/lorum-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lorum-well-known.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/asyncapi/lorum-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/lorum/asyncapi/lorum-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/lorum-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/asyncapi/lorum-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/lorum/asyncapi/lorum-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/lorum-webhooks-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lorum/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/llms/lorum-llms.txt
+  href: https://artifacts.apis.io/lorum/llms/lorum-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lorum-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/security/lorum-domain-security.yml
+  href: https://artifacts.apis.io/lorum/security/lorum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lorum-domain-security.yml
@@ -262,30 +264,43 @@ network: true
 overview: 'Lorum publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Customers API, Customers V2 API, and 7 more. Tagged areas include Company, Fintech, Payments, Banking, and Clearing.
 
 
-  The Lorum catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Lorum catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Lorum''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, engineering blog, support, and 20 more developer resources.'
-random_paper: 9
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Lorum API Rules
+  rule_count: 64
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 3
+    warn: 8
+  slug: lorum-rules
 score:
   band: developing
-  composite: 39.3
+  composite: 44.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.8
   facets:
     access_clarity: 17.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 56.1
-    developer_ergonomics: 47.0
+    developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 39.2
+  previous_composite: 40.9
   provenance:
     conformance: derived
     contracts:
@@ -301,13 +316,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 16.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/lorum/refs/heads/main/screenshots/lorum-2026-07-25T225554.png
+screenshot: https://apis.io/screenshots/lorum/lorum-2026-07-25T225554.png
 security:
 - kind: authentication
   name: Lorum Authentication
@@ -317,6 +332,16 @@ security:
   name: Lorum Domain Security
   slug: lorum-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 4
+skills:
+- name: Estimate and create an outbound payment
+  slug: lorum-create-outbound-payment
+- name: Quote and execute a currency exchange or internal transfer
+  slug: lorum-currency-exchange-and-transfer
+- name: Onboard a customer and open an account
+  slug: lorum-onboard-customer-and-open-account
+- name: Simulate payment scheme actions in the sandbox
+  slug: lorum-simulate-payments-in-sandbox
 slug: lorum
 tags:
 - Company

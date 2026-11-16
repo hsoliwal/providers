@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,32 +38,32 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/security/hill-house-domain-security.yml
+  href: https://artifacts.apis.io/hill-house/security/hill-house-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hill-house-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/mcp/hill-house-mcp.yml
+  href: https://artifacts.apis.io/hill-house/mcp/hill-house-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hill-house-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/well-known/hill-house-well-known.yml
+  href: https://artifacts.apis.io/hill-house/well-known/hill-house-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hill-house-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/authentication/hill-house-authentication.yml
+  href: https://artifacts.apis.io/hill-house/authentication/hill-house-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hill-house-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/scopes/hill-house-scopes.yml
+  href: https://artifacts.apis.io/hill-house/scopes/hill-house-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/hill-house-scopes.yml
@@ -102,7 +107,7 @@ overview: 'Hill House is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   Hill House''s developer surface includes authentication, support, engineering blog, and 8 more developer resources.'
-random_paper: 6
+random_paper: 10
 scopes:
 - name: Hill House Scopes
   scope_count: 4
@@ -135,14 +140,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/screenshots/hill-house-2026-08-07T170218.png
+screenshot: https://apis.io/screenshots/hill-house/hill-house-2026-08-07T170218.png
 security:
 - kind: authentication
   name: Hill House Authentication

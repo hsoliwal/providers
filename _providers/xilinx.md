@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -41,7 +46,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/amd/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/security/xilinx-domain-security.yml
+  href: https://artifacts.apis.io/xilinx/security/xilinx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xilinx-domain-security.yml
@@ -58,82 +63,82 @@ common:
   type: Website
   url: https://www.xilinx.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/grpc/xilinx-pynq-remote-device.proto
+  href: https://artifacts.apis.io/xilinx/grpc/xilinx-pynq-remote-device.proto
   title: ''
   type: Protobuf
   url: grpc/xilinx-pynq-remote-device.proto
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/grpc/xilinx-pynq-mmio.proto
+  href: https://artifacts.apis.io/xilinx/grpc/xilinx-pynq-mmio.proto
   title: ''
   type: Protobuf
   url: grpc/xilinx-pynq-mmio.proto
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/grpc/xilinx-pynq-gpio.proto
+  href: https://artifacts.apis.io/xilinx/grpc/xilinx-pynq-gpio.proto
   title: ''
   type: Protobuf
   url: grpc/xilinx-pynq-gpio.proto
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/grpc/xilinx-pynq-buffer.proto
+  href: https://artifacts.apis.io/xilinx/grpc/xilinx-pynq-buffer.proto
   title: ''
   type: Protobuf
   url: grpc/xilinx-pynq-buffer.proto
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/grpc/xilinx-pynq-xrfdc.proto
+  href: https://artifacts.apis.io/xilinx/grpc/xilinx-pynq-xrfdc.proto
   title: ''
   type: Protobuf
   url: grpc/xilinx-pynq-xrfdc.proto
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/grpc/xilinx-pynq-xrfclk.proto
+  href: https://artifacts.apis.io/xilinx/grpc/xilinx-pynq-xrfclk.proto
   title: ''
   type: Protobuf
   url: grpc/xilinx-pynq-xrfclk.proto
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/packages/xilinx-packages.yml
+  href: https://artifacts.apis.io/xilinx/packages/xilinx-packages.yml
   title: ''
   type: Packages
   url: packages/xilinx-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/packages/xilinx-packages.yml
+  href: https://artifacts.apis.io/xilinx/packages/xilinx-packages.yml
   title: ''
   type: SDKs
   url: packages/xilinx-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/cli/xilinx-cli.yml
+  href: https://artifacts.apis.io/xilinx/cli/xilinx-cli.yml
   title: ''
   type: CLI
   url: cli/xilinx-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/changelog/xilinx-changelog.yml
+  href: https://artifacts.apis.io/xilinx/changelog/xilinx-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/xilinx-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/lifecycle/xilinx-lifecycle.yml
+  href: https://artifacts.apis.io/xilinx/lifecycle/xilinx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/xilinx-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/conventions/xilinx-conventions.yml
+  href: https://artifacts.apis.io/xilinx/conventions/xilinx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/xilinx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/conformance/xilinx-conformance.yml
+  href: https://artifacts.apis.io/xilinx/conformance/xilinx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/xilinx-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/llms/xilinx-llms.txt
+  href: https://artifacts.apis.io/xilinx/llms/xilinx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/xilinx-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/plans/xilinx-plans-pricing.yml
+  href: https://artifacts.apis.io/xilinx/plans/xilinx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/xilinx-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/rate-limits/xilinx-rate-limits.yml
+  href: https://artifacts.apis.io/xilinx/rate-limits/xilinx-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/xilinx-rate-limits.yml
@@ -193,7 +198,7 @@ press:
 - date: ''
   title: AI Engine Technology
   url: https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/ai-engine.html
-random_paper: 8
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Xilinx Rate Limits
@@ -202,7 +207,7 @@ score:
   band: thin
   composite: 26.3
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -231,14 +236,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/xilinx/refs/heads/main/screenshots/xilinx-2026-06-20T201706.png
+screenshot: https://apis.io/screenshots/xilinx/xilinx-2026-06-20T201706.png
 security:
 - kind: domain-security
   name: Xilinx Domain Security

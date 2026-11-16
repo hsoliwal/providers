@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.5
-  scored_at: '2026-10-17'
+  score: 44.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -130,15 +133,12 @@ apis:
   description: Use workflows to perform repetitive tasks automatically.
   name: lemon.markets Workflows API
   slug: lemonmarkets-workflows-api
-artifact_total: 39
+artifact_total: 48
 asyncapis:
 - description: ''
   name: Lemonmarkets Brokerage Webhooks
   slug: lemonmarkets-brokerage-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: 'lemon.markets Brokerage API 🍋 Accounts: General API'
   slug: open-lemonmarkets-accounts-general-api
@@ -192,42 +192,42 @@ collections:
   slug: open-lemonmarkets-workflows-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/capabilities/lemonmarkets-capability-edges.yml
+  href: https://artifacts.apis.io/lemonmarkets/capabilities/lemonmarkets-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lemonmarkets-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/agentic-access/lemonmarkets-agentic-access.yml
+  href: https://artifacts.apis.io/lemonmarkets/agentic-access/lemonmarkets-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lemonmarkets-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/security/lemonmarkets-domain-security.yml
+  href: https://artifacts.apis.io/lemonmarkets/security/lemonmarkets-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lemonmarkets-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/authentication/lemonmarkets-authentication.yml
+  href: https://artifacts.apis.io/lemonmarkets/authentication/lemonmarkets-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lemonmarkets-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/conventions/lemonmarkets-conventions.yml
+  href: https://artifacts.apis.io/lemonmarkets/conventions/lemonmarkets-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lemonmarkets-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/conventions/lemonmarkets-conventions.yml
+  href: https://artifacts.apis.io/lemonmarkets/conventions/lemonmarkets-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/lemonmarkets-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/errors/lemonmarkets-problem-types.yml
+  href: https://artifacts.apis.io/lemonmarkets/errors/lemonmarkets-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lemonmarkets-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/lifecycle/lemonmarkets-lifecycle.yml
+  href: https://artifacts.apis.io/lemonmarkets/lifecycle/lemonmarkets-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lemonmarkets-lifecycle.yml
@@ -236,52 +236,52 @@ common:
   type: Deprecation
   url: https://developer.lemon.markets/changelog
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/conformance/lemonmarkets-conformance.yml
+  href: https://artifacts.apis.io/lemonmarkets/conformance/lemonmarkets-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lemonmarkets-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/data-model/lemonmarkets-data-model.yml
+  href: https://artifacts.apis.io/lemonmarkets/data-model/lemonmarkets-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lemonmarkets-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/packages/lemonmarkets-packages.yml
+  href: https://artifacts.apis.io/lemonmarkets/packages/lemonmarkets-packages.yml
   title: ''
   type: Packages
   url: packages/lemonmarkets-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/well-known/lemonmarkets-well-known.yml
+  href: https://artifacts.apis.io/lemonmarkets/well-known/lemonmarkets-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lemonmarkets-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/mcp/lemonmarkets-mcp.yml
+  href: https://artifacts.apis.io/lemonmarkets/mcp/lemonmarkets-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/lemonmarkets-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/llms/lemonmarkets-llms.txt
+  href: https://artifacts.apis.io/lemonmarkets/llms/lemonmarkets-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lemonmarkets-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lemonmarkets/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/asyncapi/lemonmarkets-brokerage-webhooks.yml
+  href: https://artifacts.apis.io/lemonmarkets/asyncapi/lemonmarkets-brokerage-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/lemonmarkets-brokerage-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/sandbox/lemonmarkets-sandbox.yml
+  href: https://artifacts.apis.io/lemonmarkets/sandbox/lemonmarkets-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lemonmarkets-sandbox.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/overlays/lemonmarkets-brokerage-overlay.yaml
+  href: https://artifacts.apis.io/lemonmarkets/overlays/lemonmarkets-brokerage-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lemonmarkets-brokerage-overlay.yaml
@@ -310,7 +310,7 @@ common:
   type: ChangeLog
   url: https://developer.lemon.markets/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/changelog/lemonmarkets-changelog.yml
+  href: https://artifacts.apis.io/lemonmarkets/changelog/lemonmarkets-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/lemonmarkets-changelog.yml
@@ -357,29 +357,42 @@ network: true
 overview: 'lemon.markets publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts: General API, Accounts: ID+V API, Batch Orders API, and 14 more. Tagged areas include Company, Fintech, Brokerage, Investing, and Trading.
 
 
-  The lemon.markets catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The lemon.markets catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   lemon.markets'' developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, changelog, support, and 27 more developer resources.'
-random_paper: 0
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: lemon.markets API Rules
+  rule_count: 53
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 2
+    warn: 10
+  slug: lemonmarkets-rules
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 45.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 5.3
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.0
-    developer_ergonomics: 47.0
+    developer_ergonomics: 66.1
     discoverability: 73.2
-    operational_transparency: 30.3
+    operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -388,7 +401,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 38.8
+  previous_composite: 40.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -405,13 +418,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lemonmarkets/refs/heads/main/screenshots/lemonmarkets-2026-07-25T224849.png
+screenshot: https://apis.io/screenshots/lemonmarkets/lemonmarkets-2026-07-25T224849.png
 security:
 - kind: authentication
   name: Lemonmarkets Authentication
@@ -421,6 +434,26 @@ security:
   name: Lemonmarkets Domain Security
   slug: lemonmarkets-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 9
+skills:
+- name: Consume webhook events and mirror lemon.markets state
+  slug: lemonmarkets-consume-events
+- name: Consume lemon.markets webhook events
+  slug: lemonmarkets-consume-webhook-events
+- name: Onboard a customer and open a securities account
+  slug: lemonmarkets-onboard-account
+- name: Onboard a business account on lemon.markets
+  slug: lemonmarkets-onboard-business-account
+- name: Onboard a retail investor on lemon.markets
+  slug: lemonmarkets-onboard-retail-investor
+- name: Place and track an order on lemon.markets
+  slug: lemonmarkets-place-and-track-an-order
+- name: Place, confirm and reconcile an order
+  slug: lemonmarkets-place-order
+- name: Run savings plans with lemon.markets workflows
+  slug: lemonmarkets-recurring-investment-workflows
+- name: Set up a recurring savings plan
+  slug: lemonmarkets-savings-plan
 slug: lemonmarkets
 tags:
 - Company

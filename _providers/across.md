@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-10-17'
+  score: 12.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The unified REST entry point for all crosschain operations on Across — request swap/bridge quotes and approval data, execute embedded crosschain actions on the destination chain, run gasless flows, en
@@ -43,7 +46,7 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/security/across-domain-security.yml
+  href: https://artifacts.apis.io/across/security/across-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/across-domain-security.yml
@@ -76,47 +79,47 @@ common:
   type: SignUp
   url: https://docs.across.to/introduction/api-keys
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/mcp/across-mcp.yml
+  href: https://artifacts.apis.io/across/mcp/across-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/across-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/packages/across-packages.yml
+  href: https://artifacts.apis.io/across/packages/across-packages.yml
   title: ''
   type: SDKs
   url: packages/across-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/packages/across-packages.yml
+  href: https://artifacts.apis.io/across/packages/across-packages.yml
   title: ''
   type: Packages
   url: packages/across-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/llms/across-llms.txt
+  href: https://artifacts.apis.io/across/llms/across-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/across-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/authentication/across-authentication.yml
+  href: https://artifacts.apis.io/across/authentication/across-authentication.yml
   title: ''
   type: Authentication
   url: authentication/across-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/conventions/across-conventions.yml
+  href: https://artifacts.apis.io/across/conventions/across-conventions.yml
   title: ''
   type: Conventions
   url: conventions/across-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/security/across-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/across/security/across-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/across-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/security/across-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/across/security/across-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/across-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/security/across-trust-center.yml
+  href: https://artifacts.apis.io/across/security/across-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/across-trust-center.yml
@@ -136,12 +139,12 @@ overview: 'Across is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Across'' developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 11 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: emerging
   composite: 23.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -164,14 +167,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/across/refs/heads/main/screenshots/across-2026-07-25T181521.png
+screenshot: https://apis.io/screenshots/across/across-2026-07-25T181521.png
 security:
 - kind: authentication
   name: Across Authentication

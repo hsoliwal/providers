@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -21,7 +21,7 @@ modified: '2026-07-17'
 name: D1 Capital Partners
 nav: Providers
 network: true
-random_paper: 4
+random_paper: 16
 slug: d1-capital
 tags:
 - Venture Capital

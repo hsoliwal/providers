@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Refitter is a .NET source generator and CLI tool that produces Refit HTTP client interfaces from OpenAPI 2.0 and 3.x specifications. Supports compile-time code generation via MSBuild source generators
@@ -42,20 +46,20 @@ apis:
 - description: The type-safe REST library for .NET that Refitter generates interfaces for. Refit turns REST APIs into live interfaces by decorating C# interfaces with attributes describing the HTTP endpoints, then g
   name: Refit
   slug: refit
-artifact_total: 12
+artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/plans/refitter-plans-pricing.yml
+  href: https://artifacts.apis.io/refitter/plans/refitter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/refitter-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/rate-limits/refitter-rate-limits.yml
+  href: https://artifacts.apis.io/refitter/rate-limits/refitter-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/refitter-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/finops/refitter-finops.yml
+  href: https://artifacts.apis.io/refitter/finops/refitter-finops.yml
   title: ''
   type: FinOps
   url: finops/refitter-finops.yml
@@ -100,27 +104,27 @@ common:
   type: Support
   url: https://github.com/christianhelle/refitter/discussions
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/packages/refitter-packages.yml
+  href: https://artifacts.apis.io/refitter/packages/refitter-packages.yml
   title: ''
   type: Packages
   url: packages/refitter-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/packages/refitter-packages.yml
+  href: https://artifacts.apis.io/refitter/packages/refitter-packages.yml
   title: ''
   type: SDKs
   url: packages/refitter-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/cli/refitter-cli.yml
+  href: https://artifacts.apis.io/refitter/cli/refitter-cli.yml
   title: ''
   type: CLI
   url: cli/refitter-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/changelog/refitter-changelog.yml
+  href: https://artifacts.apis.io/refitter/changelog/refitter-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/refitter-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/lifecycle/refitter-lifecycle.yml
+  href: https://artifacts.apis.io/refitter/lifecycle/refitter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/refitter-lifecycle.yml
@@ -129,7 +133,7 @@ common:
   type: Deprecation
   url: https://refitter.github.io/articles/breaking-changes-v2-0-0.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/security/refitter-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/refitter/security/refitter-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/refitter-vulnerability-disclosure.yml
@@ -138,47 +142,47 @@ common:
   type: Security
   url: https://github.com/christianhelle/refitter/security/policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/conformance/refitter-conformance.yml
+  href: https://artifacts.apis.io/refitter/conformance/refitter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/refitter-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/refitter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/llms/refitter-llms.txt
+  href: https://artifacts.apis.io/refitter/llms/refitter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/refitter-llms.txt
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/json-schema/refitter-refitter-file-schema.json
+  href: https://artifacts.apis.io/refitter/json-schema/refitter-refitter-file-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/refitter-refitter-file-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/json-schema/refitter-format-mappings-schema.json
+  href: https://artifacts.apis.io/refitter/json-schema/refitter-format-mappings-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/refitter-format-mappings-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/json-schema/refitter-settings-schema.json
+  href: https://artifacts.apis.io/refitter/json-schema/refitter-settings-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/refitter-settings-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/json-structure/refitter-output-structure.json
+  href: https://artifacts.apis.io/refitter/json-structure/refitter-output-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/refitter-output-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/json-ld/refitter-context.jsonld
+  href: https://artifacts.apis.io/refitter/json-ld/refitter-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/refitter-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/vocabulary/refitter-vocabulary.yml
+  href: https://artifacts.apis.io/refitter/vocabulary/refitter-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/refitter-vocabulary.yml
@@ -188,7 +192,7 @@ finops:
 - has_sources: false
   method: generated
   name: Refitter Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: refitter-finops
   template: true
@@ -228,7 +232,7 @@ plans:
 - name: Refitter Plans Pricing
   plan_count: 3
   slug: refitter-plans-pricing
-random_paper: 11
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Refitter Rate Limits
@@ -255,7 +259,7 @@ score:
     catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 41.7
@@ -266,7 +270,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 35.5
+  previous_composite: 34.1
   provenance:
     conformance: first-party
     skills: first-party
@@ -276,19 +280,23 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/screenshots/refitter-2026-06-20T192745.png
+screenshot: https://apis.io/screenshots/refitter/refitter-2026-06-20T192745.png
 security:
 - kind: vulnerability-disclosure
   name: Refitter Vulnerability Disclosure
   slug: refitter-vulnerability-disclosure
   summary_line: disclosure policy published
+skill_count: 1
+skills:
+- name: Generate a Refit client from an OpenAPI specification
+  slug: refitter-generate-refit-client
 slug: refitter
 tags:
 - .NET

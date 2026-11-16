@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -53,9 +59,6 @@ apis:
 artifact_total: 29
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: CBRE API
   slug: open-cbre-cbre-api
 - collection_type: open
@@ -63,32 +66,32 @@ collections:
   slug: open-cbre-real-estate-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/plans/cbre-plans-pricing.yml
+  href: https://artifacts.apis.io/cbre/plans/cbre-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cbre-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/rate-limits/cbre-rate-limits.yml
+  href: https://artifacts.apis.io/cbre/rate-limits/cbre-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cbre-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/finops/cbre-finops.yml
+  href: https://artifacts.apis.io/cbre/finops/cbre-finops.yml
   title: ''
   type: FinOps
   url: finops/cbre-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/agentic-access/cbre-agentic-access.yml
+  href: https://artifacts.apis.io/cbre/agentic-access/cbre-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cbre-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/security/cbre-domain-security.yml
+  href: https://artifacts.apis.io/cbre/security/cbre-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cbre-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/authentication/cbre-authentication.yml
+  href: https://artifacts.apis.io/cbre/authentication/cbre-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cbre-authentication.yml
@@ -180,6 +183,9 @@ network: true
 overview: 'CBRE publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Real Estate API. Tagged areas include Analytics, Commercial Real Estate, Facilities Management, Fortune 500, and Investment Management.
 
 
+  The CBRE catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CBRE''s developer surface includes authentication, developer portal, and 18 more developer resources.'
 plans:
 - name: Cbre Plans Pricing
@@ -201,30 +207,43 @@ press:
 - date: ''
   title: Companies Add Artificial Intelligence Expertise with ...
   url: https://www.cbre.com/press-releases/companies-add-artificial-intelligence-expertise-with-specialized-jobs-skills-amid-slower-tech-talent
-random_paper: 16
+random_paper: 4
 rate_limits:
 - limit_count: 1
   name: Cbre Rate Limits
   slug: cbre-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: CBRE API Rules
+  rule_count: 41
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cbre-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 33.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 41.0
+    artifact_dirs: 17
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.4
     developer_ergonomics: 26.2
     discoverability: 67.0
     operational_transparency: 7.9
-  previous_composite: 33.3
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
@@ -238,14 +257,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/cbre/refs/heads/main/screenshots/cbre-2026-06-20T174059.png
+screenshot: https://apis.io/screenshots/cbre/cbre-2026-06-20T174059.png
 security:
 - kind: authentication
   name: Cbre Authentication

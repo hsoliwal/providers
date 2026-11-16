@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -71,9 +74,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Pika Labs via fal.ai Queue Cancel API
   slug: open-pika-labs-cancel-api
 - collection_type: open
@@ -102,27 +102,27 @@ common:
   type: X
   url: https://x.com/pika_labs
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/vocabulary/pika-labs-vocabulary.yml
+  href: https://artifacts.apis.io/pika-labs/vocabulary/pika-labs-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pika-labs-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/json-ld/pika-labs-context.jsonld
+  href: https://artifacts.apis.io/pika-labs/json-ld/pika-labs-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/pika-labs-context.jsonld
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/agentic-access/pika-labs-agentic-access.yml
+  href: https://artifacts.apis.io/pika-labs/agentic-access/pika-labs-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pika-labs-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/security/pika-labs-domain-security.yml
+  href: https://artifacts.apis.io/pika-labs/security/pika-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pika-labs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/authentication/pika-labs-authentication.yml
+  href: https://artifacts.apis.io/pika-labs/authentication/pika-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pika-labs-authentication.yml
@@ -143,17 +143,17 @@ common:
   type: Documentation
   url: https://fal.ai/models?keywords=pika
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/plans/pika-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/pika-labs/plans/pika-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pika-labs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/rate-limits/pika-labs-rate-limits.yml
+  href: https://artifacts.apis.io/pika-labs/rate-limits/pika-labs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pika-labs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/finops/pika-labs-finops.yml
+  href: https://artifacts.apis.io/pika-labs/finops/pika-labs-finops.yml
   title: ''
   type: FinOps
   url: finops/pika-labs-finops.yml
@@ -181,7 +181,7 @@ network: true
 overview: 'Pika Labs publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cancel API, Result API, Status API, and 2 more. Tagged areas include Artificial Intelligence, Video Generation, Multi-Modal, and Generative.
 
 
-  The Pika Labs catalog on APIs.io includes 1 JSON-LD context.
+  The Pika Labs catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Pika Labs'' developer surface includes engineering blog, pricing, authentication, documentation, and 11 more developer resources.'
@@ -189,30 +189,43 @@ plans:
 - name: Pika Labs Plans Pricing
   plan_count: 2
   slug: pika-labs-plans-pricing
-random_paper: 4
+random_paper: 20
 rate_limits:
 - limit_count: 1
   name: Pika Labs Rate Limits
   slug: pika-labs-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Pika Labs API Rules
+  rule_count: 58
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 2
+    warn: 1
+  slug: pika-labs-rules
 score:
   band: thin
-  composite: 29.1
+  composite: 30.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 51.5
+    artifact_dirs: 17
+    catalog_earned: 56.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.5
+    catalog_gap: 59.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.8
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 13.6
+    contract_governance: 27.3
     contract_quality: 55.5
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 31.9
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     contracts:
@@ -226,13 +239,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pika-labs/refs/heads/main/screenshots/pika-labs-2026-06-20T191707.png
+screenshot: https://apis.io/screenshots/pika-labs/pika-labs-2026-06-20T191707.png
 security:
 - kind: authentication
   name: Pika Labs Authentication

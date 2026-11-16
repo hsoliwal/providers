@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 27.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Hummingbot API is a FastAPI backend service (default port 8000) that orchestrates multiple trading bots and exposes REST routers for accounts and exchange credentials, trading (orders, positions, '
@@ -121,11 +124,8 @@ apis:
   description: Wallet management endpoints
   name: Hummingbot /wallet API
   slug: hummingbot-wallet-api
-artifact_total: 38
+artifact_total: 39
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hummingbot Gateway /chain/ethereum /chain/ethereum /chain/ethereum API
   slug: open-hummingbot-chain-ethereum-api
@@ -176,12 +176,12 @@ collections:
   slug: open-hummingbot-wallet-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/overlays/hummingbot-gateway-overlay.yaml
+  href: https://artifacts.apis.io/hummingbot/overlays/hummingbot-gateway-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hummingbot-gateway-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/security/hummingbot-domain-security.yml
+  href: https://artifacts.apis.io/hummingbot/security/hummingbot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hummingbot-domain-security.yml
@@ -226,67 +226,67 @@ common:
   type: ChangeLog
   url: https://hummingbot.org/release-notes/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/changelog/hummingbot-changelog.yml
+  href: https://artifacts.apis.io/hummingbot/changelog/hummingbot-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hummingbot-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/packages/hummingbot-packages.yml
+  href: https://artifacts.apis.io/hummingbot/packages/hummingbot-packages.yml
   title: ''
   type: Packages
   url: packages/hummingbot-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/packages/hummingbot-packages.yml
+  href: https://artifacts.apis.io/hummingbot/packages/hummingbot-packages.yml
   title: ''
   type: SDKs
   url: packages/hummingbot-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/mcp/hummingbot-mcp.yml
+  href: https://artifacts.apis.io/hummingbot/mcp/hummingbot-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hummingbot-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hummingbot/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/llms/hummingbot-llms.txt
+  href: https://artifacts.apis.io/hummingbot/llms/hummingbot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hummingbot-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/authentication/hummingbot-authentication.yml
+  href: https://artifacts.apis.io/hummingbot/authentication/hummingbot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hummingbot-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/conventions/hummingbot-conventions.yml
+  href: https://artifacts.apis.io/hummingbot/conventions/hummingbot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hummingbot-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/rate-limits/hummingbot-rate-limits.yml
+  href: https://artifacts.apis.io/hummingbot/rate-limits/hummingbot-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hummingbot-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/errors/hummingbot-problem-types.yml
+  href: https://artifacts.apis.io/hummingbot/errors/hummingbot-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hummingbot-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/lifecycle/hummingbot-lifecycle.yml
+  href: https://artifacts.apis.io/hummingbot/lifecycle/hummingbot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hummingbot-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/cli/hummingbot-cli.yml
+  href: https://artifacts.apis.io/hummingbot/cli/hummingbot-cli.yml
   title: ''
   type: CLI
   url: cli/hummingbot-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/conformance/hummingbot-conformance.yml
+  href: https://artifacts.apis.io/hummingbot/conformance/hummingbot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hummingbot-conformance.yml
@@ -305,31 +305,47 @@ network: true
 overview: 'Hummingbot publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including /chain/ethereum API, /chain/solana API, /config API, and 14 more. Tagged areas include Company, Cryptocurrency, Trading, Blockchain, and DeFi.
 
 
+  The Hummingbot catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Hummingbot''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 18 more developer resources.'
-random_paper: 4
+random_paper: 2
 rate_limits:
 - limit_count: 1
   name: Hummingbot Rate Limits
   slug: hummingbot-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Hummingbot API Rules
+  rule_count: 42
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 7
+  slug: hummingbot-rules
 score:
   band: thin
-  composite: 35.9
+  composite: 37.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 38.2
     developer_ergonomics: 78.6
     discoverability: 64.3
     operational_transparency: 39.5
-  previous_composite: 35.9
+  previous_composite: 37.6
   provenance:
     conformance: derived
     contracts:
@@ -345,13 +361,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hummingbot/refs/heads/main/screenshots/hummingbot-2026-07-25T221727.png
+screenshot: https://apis.io/screenshots/hummingbot/hummingbot-2026-07-25T221727.png
 security:
 - kind: authentication
   name: Hummingbot Authentication
@@ -361,6 +377,10 @@ security:
   name: Hummingbot Domain Security
   slug: hummingbot-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 1
+skills:
+- name: Swap tokens on a DEX via Gateway
+  slug: hummingbot-swap-on-dex
 slug: hummingbot
 tags:
 - Company

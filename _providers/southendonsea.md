@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
+  pricing: unknown
+  public: true
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,65 +30,68 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.2
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 26.0
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://southendonsea.city/
   baseurl_source: spec
   description: Current and archived source-linked city observations
   name: SouthendOnSea.city Southend Now API
   slug: southendonsea-southend-now-api
-artifact_total: 7
+artifact_total: 10
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://southendonsea.city/feed.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/well-known/southendonsea-well-known.yml
+  href: https://artifacts.apis.io/southendonsea/well-known/southendonsea-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/southendonsea-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/conformance/southendonsea-conformance.yml
+  href: https://artifacts.apis.io/southendonsea/conformance/southendonsea-conformance.yml
   title: ''
   type: Conformance
   url: conformance/southendonsea-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/lifecycle/southendonsea-lifecycle.yml
+  href: https://artifacts.apis.io/southendonsea/lifecycle/southendonsea-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/southendonsea-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/authentication/southendonsea-authentication.yml
+  href: https://artifacts.apis.io/southendonsea/authentication/southendonsea-authentication.yml
   title: ''
   type: Authentication
   url: authentication/southendonsea-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/conventions/southendonsea-conventions.yml
+  href: https://artifacts.apis.io/southendonsea/conventions/southendonsea-conventions.yml
   title: ''
   type: Conventions
   url: conventions/southendonsea-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/plans/southendonsea-plans-pricing.yml
+  href: https://artifacts.apis.io/southendonsea/plans/southendonsea-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/southendonsea-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/rate-limits/southendonsea-rate-limits.yml
+  href: https://artifacts.apis.io/southendonsea/rate-limits/southendonsea-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/southendonsea-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/southendonsea/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -82,7 +100,7 @@ common:
   type: Support
   url: https://southendonsea.city/contact
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/security/southendonsea-domain-security.yml
+  href: https://artifacts.apis.io/southendonsea/security/southendonsea-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/southendonsea-domain-security.yml
@@ -91,7 +109,7 @@ common:
   type: APIsJSON
   url: https://southendonsea.city/.well-known/apis.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/llms/southendonsea-llms.txt
+  href: https://artifacts.apis.io/southendonsea/llms/southendonsea-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/southendonsea-llms.txt
@@ -130,41 +148,57 @@ network: true
 overview: 'SouthendOnSea.city publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Southend Now API. Tagged areas include Open Data, Southend-on-Sea, Weather, Environment, and local data.
 
 
+  The SouthendOnSea.city catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   SouthendOnSea.city''s developer surface includes authentication, support, documentation, and 14 more developer resources.'
 plans:
 - name: Southendonsea Plans Pricing
   plan_count: 0
   slug: southendonsea-plans-pricing
-random_paper: 0
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Southendonsea Rate Limits
   slug: southendonsea-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: SouthendOnSea.city API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: southendonsea-rules
 score:
   band: thin
-  composite: 30.7
+  composite: 33.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 32.0
+    artifact_dirs: 22
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.1
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 43.1
+    contract_governance: 18.2
+    contract_quality: 47.6
     developer_ergonomics: 35.1
     discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 30.7
+  previous_composite: 32.3
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: derived
     skills: derived
@@ -174,14 +208,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/screenshots/southendonsea-2026-09-02T160255.png
+screenshot: https://apis.io/screenshots/southendonsea/southendonsea-2026-09-02T160255.png
 security:
 - kind: authentication
   name: Southendonsea Authentication
@@ -191,6 +225,12 @@ security:
   name: Southendonsea Domain Security
   slug: southendonsea-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 2
+skills:
+- name: southend-current-conditions
+  slug: southendonsea-current-conditions
+- name: southend-history-archive
+  slug: southendonsea-history-archive
 slug: southendonsea
 tags:
 - Open Data

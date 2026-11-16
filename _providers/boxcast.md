@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: BoxCast provides streaming video APIs for custom viewer experiences.
@@ -32,47 +47,47 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/plans/boxcast-plans-pricing.yml
+  href: https://artifacts.apis.io/boxcast/plans/boxcast-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/boxcast-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/authentication/boxcast-authentication.yml
+  href: https://artifacts.apis.io/boxcast/authentication/boxcast-authentication.yml
   title: ''
   type: Authentication
   url: authentication/boxcast-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/llms/boxcast-llms.txt
+  href: https://artifacts.apis.io/boxcast/llms/boxcast-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/boxcast-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/well-known/boxcast-support-security.txt
+  href: https://artifacts.apis.io/boxcast/well-known/boxcast-support-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/boxcast-support-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/well-known/boxcast-well-known.yml
+  href: https://artifacts.apis.io/boxcast/well-known/boxcast-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/boxcast-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/hosts/boxcast-hosts.yml
+  href: https://artifacts.apis.io/boxcast/hosts/boxcast-hosts.yml
   title: ''
   type: Hosts
   url: hosts/boxcast-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/vendors/boxcast-vendors.yml
+  href: https://artifacts.apis.io/boxcast/vendors/boxcast-vendors.yml
   title: ''
   type: Vendors
   url: vendors/boxcast-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/packages/boxcast-packages.yml
+  href: https://artifacts.apis.io/boxcast/packages/boxcast-packages.yml
   title: ''
   type: SDKs
   url: packages/boxcast-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/packages/boxcast-packages.yml
+  href: https://artifacts.apis.io/boxcast/packages/boxcast-packages.yml
   title: ''
   type: Packages
   url: packages/boxcast-packages.yml
@@ -97,7 +112,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/boxcast
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boxcast/refs/heads/main/security/boxcast-domain-security.yml
+  href: https://artifacts.apis.io/boxcast/security/boxcast-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/boxcast-domain-security.yml
@@ -149,26 +164,26 @@ plans:
 - name: Boxcast Plans Pricing
   plan_count: 2
   slug: boxcast-plans-pricing
-random_paper: 8
+random_paper: 12
 score:
-  band: thin
-  composite: 32.4
+  band: emerging
+  composite: 24.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 12
     catalog_earned: 40.0
     catalog_earned_first_party: 8.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: -9.2
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 57.1
+    developer_ergonomics: 38.1
     discoverability: 64.3
-    operational_transparency: 5.3
-  previous_composite: 31.9
+    operational_transparency: 13.2
+  previous_composite: 33.7
   provenance:
     mcp: unknown
   regulatory:
@@ -176,14 +191,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/boxcast/boxcast-2026-11-03T122409.png
 security:
 - kind: authentication
   name: Boxcast Authentication

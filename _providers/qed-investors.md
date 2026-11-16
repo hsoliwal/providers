@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -21,7 +21,7 @@ modified: '2026-10-06'
 name: QED Investors
 nav: Providers
 network: true
-random_paper: 0
+random_paper: 20
 slug: qed-investors
 tags:
 - Venture Capital

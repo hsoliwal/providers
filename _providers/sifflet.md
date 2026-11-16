@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.7
-  scored_at: '2026-10-17'
+  score: 35.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 1
@@ -119,39 +123,49 @@ apis:
   description: The Workspace API from Sifflet — 1 operation(s) for workspace.
   name: Sifflet Workspace API
   slug: sifflet-workspace-api
-artifact_total: 30
+artifact_total: 32
 asyncapis:
 - description: ''
   name: Sifflet Webhooks
   slug: sifflet-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/sifflet/capabilities/sifflet-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sifflet-capability-edges.yml
+- group: commercial
+  href: https://artifacts.apis.io/sifflet/plans/sifflet-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/sifflet-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/agentic-access/sifflet-agentic-access.yml
+  href: https://artifacts.apis.io/sifflet/agentic-access/sifflet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sifflet-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/rules/sifflet-rules.yml
+  href: https://artifacts.apis.io/sifflet/rules/sifflet-rules.yml
   title: ''
   type: Spectral
   url: rules/sifflet-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/json-ld/sifflet-context.jsonld
+  href: https://artifacts.apis.io/sifflet/json-ld/sifflet-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sifflet-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/vocabulary/sifflet-vocabulary.yml
+  href: https://artifacts.apis.io/sifflet/vocabulary/sifflet-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sifflet-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/hosts/sifflet-hosts.yml
+  href: https://artifacts.apis.io/sifflet/hosts/sifflet-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sifflet-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/vendors/sifflet-vendors.yml
+  href: https://artifacts.apis.io/sifflet/vendors/sifflet-vendors.yml
   title: ''
   type: Vendors
   url: vendors/sifflet-vendors.yml
@@ -220,7 +234,7 @@ common:
   type: ChangeLog
   url: https://docs.siffletdata.com/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/security/sifflet-trust-center.yml
+  href: https://artifacts.apis.io/sifflet/security/sifflet-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/sifflet-trust-center.yml
@@ -233,87 +247,95 @@ common:
   type: Security
   url: https://docs.siffletdata.com/docs/how-to-report-a-security-incident
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/llms/sifflet-llms.txt
+  href: https://artifacts.apis.io/sifflet/llms/sifflet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sifflet-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/mcp/sifflet-mcp.yml
+  href: https://artifacts.apis.io/sifflet/mcp/sifflet-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/sifflet-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/authentication/sifflet-authentication.yml
+  href: https://artifacts.apis.io/sifflet/authentication/sifflet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sifflet-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/packages/sifflet-packages.yml
+  href: https://artifacts.apis.io/sifflet/packages/sifflet-packages.yml
   title: ''
   type: Packages
   url: packages/sifflet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/packages/sifflet-packages.yml
+  href: https://artifacts.apis.io/sifflet/packages/sifflet-packages.yml
   title: ''
   type: SDKs
   url: packages/sifflet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/cli/sifflet-cli.yml
+  href: https://artifacts.apis.io/sifflet/cli/sifflet-cli.yml
   title: ''
   type: CLI
   url: cli/sifflet-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/asyncapi/sifflet-webhooks.yml
+  href: https://artifacts.apis.io/sifflet/asyncapi/sifflet-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/sifflet-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/changelog/sifflet-changelog.yml
+  href: https://artifacts.apis.io/sifflet/changelog/sifflet-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/sifflet-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/lifecycle/sifflet-lifecycle.yml
+  href: https://artifacts.apis.io/sifflet/lifecycle/sifflet-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sifflet-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/lifecycle/sifflet-lifecycle.yml
+  href: https://artifacts.apis.io/sifflet/lifecycle/sifflet-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/sifflet-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/conventions/sifflet-conventions.yml
+  href: https://artifacts.apis.io/sifflet/conventions/sifflet-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sifflet-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/errors/sifflet-problem-types.yml
+  href: https://artifacts.apis.io/sifflet/errors/sifflet-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sifflet-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/data-model/sifflet-data-model.yml
+  href: https://artifacts.apis.io/sifflet/data-model/sifflet-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sifflet-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/conformance/sifflet-conformance.yml
+  href: https://artifacts.apis.io/sifflet/conformance/sifflet-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sifflet-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/security/sifflet-domain-security.yml
+  href: https://artifacts.apis.io/sifflet/security/sifflet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sifflet-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/security/sifflet-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sifflet/security/sifflet-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sifflet-vulnerability-disclosure.yml
 created: '2026-07-17'
 description: Sifflet is a data observability platform positioned as the control plane for Data and AI. It catches data issues before they reach the business, traces them to their root cause, and helps teams fix them fast. The platform unifies a data catalog, data quality monitoring, end-to-end data lineage (including field-level lineage), built-in security and access control, and AI-powered agents (Sentinel auto-monitoring, Sage root-cause analysis, and an AI chat/assistant) into one product. It integrates with major data platforms and tools including Snowflake, Databricks, BigQuery, Amazon Redshift, dbt, Apache Airflow, Fivetran, Tableau, Looker, and Power BI. Developers automate Sifflet through a public REST API (Bearer Access Token auth), a Python CLI, a Terraform provider, Airflow operators, outbound webhooks, and an official MCP server. Sifflet is a portfolio company of EQT Ventures.
+finops:
+- has_sources: true
+  method: derived
+  name: Sifflet Finops
+  primary_unit: ''
+  service_category: ''
+  slug: sifflet-finops
+  template: true
 image: https://cdn.prod.website-files.com/6745ca418d70ad1c8e2b8442/67915a6a3d805d3e9c024aff_sifflet-logo-color.svg
 json_schemas:
 - name: AsCodeMonitorDto
@@ -354,8 +376,12 @@ overview: 'Sifflet publishes 15 API contracts indexed on the [APIs.io](https://a
   The Sifflet catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Sifflet''s developer surface includes support, signup flow, documentation, API reference, getting-started guide, engineering blog, pricing, and 34 more developer resources.'
-random_paper: 1
+  Sifflet''s developer surface includes support, signup flow, documentation, API reference, getting-started guide, engineering blog, pricing, and 36 more developer resources.'
+plans:
+- name: Sifflet Plans Pricing
+  plan_count: 3
+  slug: sifflet-plans-pricing
+random_paper: 5
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -370,24 +396,24 @@ rules:
     warn: 1
   slug: sifflet-rules
 score:
-  band: strong
-  composite: 60.0
+  band: exemplar
+  composite: 70.1
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 62.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 52.3
+    artifact_dirs: 31
+    catalog_earned: 74.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 40.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 12.8
+  delta: 3.8
   facets:
-    access_clarity: 60.5
+    access_clarity: 85.5
     contract_governance: 35.6
-    contract_quality: 68.9
-    developer_ergonomics: 57.1
-    discoverability: 75.0
-    operational_transparency: 39.5
-  previous_composite: 47.2
+    contract_quality: 73.8
+    developer_ergonomics: 69.0
+    discoverability: 73.3
+    operational_transparency: 52.6
+  previous_composite: 66.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -409,13 +435,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sifflet/refs/heads/main/screenshots/sifflet-2026-08-17T081845.png
+screenshot: https://apis.io/screenshots/sifflet/sifflet-2026-08-17T081845.png
 security:
 - kind: authentication
   name: Sifflet Authentication

@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 14.2
-  scored_at: '2026-10-17'
+  score: 17.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'Jargonic automatic speech recognition. Batch file transcription over HTTP (POST /api/speech-to-text/file, 50 MB maximum file size) and real-time streaming transcription over a Socket.IO connection at '
@@ -54,7 +70,7 @@ common:
   type: GettingStarted
   url: https://docs.aiola.ai/get-started/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/authentication/aiola-authentication.yml
+  href: https://artifacts.apis.io/aiola/authentication/aiola-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aiola-authentication.yml
@@ -87,62 +103,62 @@ common:
   type: TrustCenter
   url: https://trust.aiola.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/security/aiola-trust-center.yml
+  href: https://artifacts.apis.io/aiola/security/aiola-trust-center.yml
   title: ''
   type: Compliance
   url: security/aiola-trust-center.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/packages/aiola-packages.yml
+  href: https://artifacts.apis.io/aiola/packages/aiola-packages.yml
   title: ''
   type: Packages
   url: packages/aiola-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/packages/aiola-packages.yml
+  href: https://artifacts.apis.io/aiola/packages/aiola-packages.yml
   title: ''
   type: SDKs
   url: packages/aiola-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/mcp/aiola-mcp.yml
+  href: https://artifacts.apis.io/aiola/mcp/aiola-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/aiola-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/llms/aiola-llms.txt
+  href: https://artifacts.apis.io/aiola/llms/aiola-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aiola-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/lifecycle/aiola-lifecycle.yml
+  href: https://artifacts.apis.io/aiola/lifecycle/aiola-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/aiola-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/conventions/aiola-conventions.yml
+  href: https://artifacts.apis.io/aiola/conventions/aiola-conventions.yml
   title: ''
   type: Conventions
   url: conventions/aiola-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/errors/aiola-error-codes.yml
+  href: https://artifacts.apis.io/aiola/errors/aiola-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/aiola-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/conformance/aiola-conformance.yml
+  href: https://artifacts.apis.io/aiola/conformance/aiola-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aiola-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/rate-limits/aiola-rate-limits.yml
+  href: https://artifacts.apis.io/aiola/rate-limits/aiola-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aiola-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/plans/aiola-plans-pricing.yml
+  href: https://artifacts.apis.io/aiola/plans/aiola-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aiola-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/security/aiola-domain-security.yml
+  href: https://artifacts.apis.io/aiola/security/aiola-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aiola-domain-security.yml
@@ -166,7 +182,7 @@ plans:
 - name: Aiola Plans Pricing
   plan_count: 0
   slug: aiola-plans-pricing
-random_paper: 12
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Aiola Rate Limits
@@ -175,13 +191,13 @@ score:
   band: thin
   composite: 30.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
@@ -189,7 +205,7 @@ score:
     developer_ergonomics: 64.3
     discoverability: 80.0
     operational_transparency: 18.4
-  previous_composite: 30.6
+  previous_composite: 30.3
   provenance:
     conformance: derived
     mcp: first-party
@@ -199,14 +215,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aiola/refs/heads/main/screenshots/aiola-2026-10-11T093333.png
+screenshot: https://apis.io/screenshots/aiola/aiola-2026-10-11T093333.png
 security:
 - kind: authentication
   name: Aiola Authentication

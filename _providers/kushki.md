@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 23.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -103,11 +106,8 @@ apis:
   description: Void or refund a previously captured charge
   name: Kushki Voids and Refunds API
   slug: kushki-voids-and-refunds-api
-artifact_total: 97
+artifact_total: 96
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Kushki Card Payments Branches API
   slug: open-kushki-branches-api
@@ -157,8 +157,12 @@ collections:
   name: Kushki Card Payments Branches Voids and Refunds API
   slug: open-kushki-voids-and-refunds-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/kushki/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/capabilities/kushki-capability-edges.yml
+  href: https://artifacts.apis.io/kushki/capabilities/kushki-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kushki-capability-edges.yml
@@ -167,17 +171,17 @@ common:
   type: Website
   url: https://www.kushkipagos.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/agentic-access/kushki-agentic-access.yml
+  href: https://artifacts.apis.io/kushki/agentic-access/kushki-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kushki-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/security/kushki-domain-security.yml
+  href: https://artifacts.apis.io/kushki/security/kushki-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kushki-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/authentication/kushki-authentication.yml
+  href: https://artifacts.apis.io/kushki/authentication/kushki-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kushki-authentication.yml
@@ -286,27 +290,27 @@ common:
   type: Regions
   url: ''
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/plans/kushki-plans-pricing.yml
+  href: https://artifacts.apis.io/kushki/plans/kushki-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kushki-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/rate-limits/kushki-rate-limits.yml
+  href: https://artifacts.apis.io/kushki/rate-limits/kushki-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kushki-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/finops/kushki-finops.yml
+  href: https://artifacts.apis.io/kushki/finops/kushki-finops.yml
   title: ''
   type: FinOps
   url: finops/kushki-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/vocabulary/kushki-vocabulary.yml
+  href: https://artifacts.apis.io/kushki/vocabulary/kushki-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/kushki-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/rules/kushki-rules.yml
+  href: https://artifacts.apis.io/kushki/rules/kushki-rules.yml
   title: ''
   type: SpectralRules
   url: rules/kushki-rules.yml
@@ -414,12 +418,12 @@ overview: 'Kushki publishes 12 API contracts indexed on the [APIs.io](https://ap
   The Kushki catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Kushki''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, support, code examples, and 28 more developer resources.'
+  Kushki''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, support, code examples, and 29 more developer resources.'
 plans:
 - name: Kushki Plans Pricing
   plan_count: 6
   slug: kushki-plans-pricing
-random_paper: 17
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Kushki Rate Limits
@@ -450,20 +454,20 @@ rules:
   slug: kushki-rules
 score:
   band: developing
-  composite: 44.6
+  composite: 44.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 64.0
     catalog_earned_first_party: 0.0
     catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.0
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 27.3
     contract_quality: 64.3
-    developer_ergonomics: 73.8
+    developer_ergonomics: 75.0
     discoverability: 62.5
     operational_transparency: 18.4
   jurisdiction:
@@ -472,12 +476,13 @@ score:
     - brazil
     - chile
     - colombia
+    - ecuador
     - mexico
     - peru
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 48.6
+  previous_composite: 44.8
   provenance:
     agentic_access: derived
     contracts:
@@ -491,13 +496,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kushki/refs/heads/main/screenshots/kushki-2026-06-20T184217.png
+screenshot: https://apis.io/screenshots/kushki/kushki-2026-06-20T184217.png
 security:
 - kind: authentication
   name: Kushki Authentication

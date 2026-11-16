@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -77,9 +84,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Smartrr Vendor Bills API
   slug: open-smartrr-bills-api
 - collection_type: open
@@ -106,22 +110,22 @@ common:
   type: Blog
   url: https://smartrr.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/capabilities/smartrr-capability-edges.yml
+  href: https://artifacts.apis.io/smartrr/capabilities/smartrr-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/smartrr-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/agentic-access/smartrr-agentic-access.yml
+  href: https://artifacts.apis.io/smartrr/agentic-access/smartrr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/smartrr-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/security/smartrr-domain-security.yml
+  href: https://artifacts.apis.io/smartrr/security/smartrr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/smartrr-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/authentication/smartrr-authentication.yml
+  href: https://artifacts.apis.io/smartrr/authentication/smartrr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/smartrr-authentication.yml
@@ -142,17 +146,17 @@ common:
   type: APIReference
   url: https://api.smartrr.com/docs/redoc/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/plans/smartrr-plans-pricing.yml
+  href: https://artifacts.apis.io/smartrr/plans/smartrr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/smartrr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/rate-limits/smartrr-rate-limits.yml
+  href: https://artifacts.apis.io/smartrr/rate-limits/smartrr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/smartrr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/finops/smartrr-finops.yml
+  href: https://artifacts.apis.io/smartrr/finops/smartrr-finops.yml
   title: ''
   type: FinOps
   url: finops/smartrr-finops.yml
@@ -175,35 +179,51 @@ network: true
 overview: 'Smartrr publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bills API, Orders API, Plans API, and 3 more. Tagged areas include Subscription, Loyalty, Shopify, E-Commerce, and Direct to Consumer.
 
 
+  The Smartrr catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Smartrr''s developer surface includes engineering blog, authentication, documentation, API reference, and 8 more developer resources.'
 plans:
 - name: Smartrr Plans Pricing
   plan_count: 4
   slug: smartrr-plans-pricing
-random_paper: 9
+random_paper: 11
 rate_limits:
 - limit_count: 4
   name: Smartrr Rate Limits
   slug: smartrr-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Smartrr API Rules
+  rule_count: 53
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 4
+  slug: smartrr-rules
 score:
   band: thin
-  composite: 26.3
+  composite: 27.9
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.5
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 34.1
+  previous_composite: 27.9
   provenance:
     agentic_access: derived
     contracts:
@@ -217,13 +237,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/smartrr/refs/heads/main/screenshots/smartrr-2026-09-02T155932.png
+screenshot: https://apis.io/screenshots/smartrr/smartrr-2026-09-02T155932.png
 security:
 - kind: authentication
   name: Smartrr Authentication

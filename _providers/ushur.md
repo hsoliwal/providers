@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API for the Ushur customer experience automation platform. Documented operations (per the official UshurNodeSDK) include logging in to a tenant instance, initiating campaign engagements with end '
@@ -42,7 +46,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/security/ushur-domain-security.yml
+  href: https://artifacts.apis.io/ushur/security/ushur-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ushur-domain-security.yml
@@ -71,7 +75,7 @@ common:
   type: PrivacyPolicy
   url: https://ushur.ai/legal
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/security/ushur-trust-center.yml
+  href: https://artifacts.apis.io/ushur/security/ushur-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ushur-trust-center.yml
@@ -84,27 +88,27 @@ common:
   type: Partners
   url: https://ushur.ai/partners
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/packages/ushur-packages.yml
+  href: https://artifacts.apis.io/ushur/packages/ushur-packages.yml
   title: ''
   type: Packages
   url: packages/ushur-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/packages/ushur-packages.yml
+  href: https://artifacts.apis.io/ushur/packages/ushur-packages.yml
   title: ''
   type: SDKs
   url: packages/ushur-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/llms/ushur-llms.txt
+  href: https://artifacts.apis.io/ushur/llms/ushur-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ushur-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/conformance/ushur-conformance.yml
+  href: https://artifacts.apis.io/ushur/conformance/ushur-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ushur-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/authentication/ushur-authentication.yml
+  href: https://artifacts.apis.io/ushur/authentication/ushur-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ushur-authentication.yml
@@ -120,12 +124,12 @@ overview: 'Ushur is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   Ushur''s developer surface includes engineering blog, documentation, support, authentication, and 11 more developer resources.'
-random_paper: 17
+random_paper: 15
 score:
   band: emerging
   composite: 21.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -158,14 +162,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ushur/refs/heads/main/screenshots/ushur-2026-09-02T165242.png
+screenshot: https://apis.io/screenshots/ushur/ushur-2026-09-02T165242.png
 security:
 - kind: authentication
   name: Ushur Authentication

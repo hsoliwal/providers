@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brim-financial/refs/heads/main/security/brim-financial-domain-security.yml
+  href: https://artifacts.apis.io/brim-financial/security/brim-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brim-financial-domain-security.yml
@@ -79,7 +82,7 @@ common:
   type: Login
   url: https://webportal.brimfinancial.com/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brim-financial/refs/heads/main/security/brim-financial-domain-security.yml
+  href: https://artifacts.apis.io/brim-financial/security/brim-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brim-financial-domain-security.yml
@@ -104,25 +107,25 @@ overview: 'Brim Financial is profiled on the [APIs.io](https://apis.io/) network
 
 
   Brim Financial''s developer surface includes support, engineering blog, and 11 more developer resources.'
-random_paper: 18
+random_paper: 12
 score:
-  band: minimal
-  composite: 4.0
+  band: emerging
+  composite: 12.1
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 8.1
   facets:
-    access_clarity: 6.6
+    access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
+    developer_ergonomics: 7.1
     discoverability: 48.2
-    operational_transparency: 0.0
+    operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -136,15 +139,15 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 5.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 12.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/brim-financial/refs/heads/main/screenshots/brim-financial-2026-07-25T203902.png
+screenshot: https://apis.io/screenshots/brim-financial/brim-financial-2026-07-25T203902.png
 security:
 - kind: domain-security
   name: Brim Financial Domain Security

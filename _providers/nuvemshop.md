@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -97,9 +104,6 @@ apis:
 artifact_total: 28
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Nuvemshop / Tiendanube Admin Categories API
   slug: open-nuvemshop-categories-api
 - collection_type: open
@@ -138,22 +142,22 @@ common:
   type: Blog
   url: https://www.tiendanube.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/capabilities/nuvemshop-capability-edges.yml
+  href: https://artifacts.apis.io/nuvemshop/capabilities/nuvemshop-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nuvemshop-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/agentic-access/nuvemshop-agentic-access.yml
+  href: https://artifacts.apis.io/nuvemshop/agentic-access/nuvemshop-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nuvemshop-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/security/nuvemshop-domain-security.yml
+  href: https://artifacts.apis.io/nuvemshop/security/nuvemshop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nuvemshop-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/authentication/nuvemshop-authentication.yml
+  href: https://artifacts.apis.io/nuvemshop/authentication/nuvemshop-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nuvemshop-authentication.yml
@@ -174,17 +178,17 @@ common:
   type: Documentation
   url: https://tiendanube.github.io/api-documentation/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/plans/nuvemshop-plans-pricing.yml
+  href: https://artifacts.apis.io/nuvemshop/plans/nuvemshop-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nuvemshop-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/rate-limits/nuvemshop-rate-limits.yml
+  href: https://artifacts.apis.io/nuvemshop/rate-limits/nuvemshop-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nuvemshop-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/finops/nuvemshop-finops.yml
+  href: https://artifacts.apis.io/nuvemshop/finops/nuvemshop-finops.yml
   title: ''
   type: FinOps
   url: finops/nuvemshop-finops.yml
@@ -207,30 +211,46 @@ network: true
 overview: 'Nuvemshop / Tiendanube publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Coupons API, Customers API, and 7 more. Tagged areas include E-Commerce, Online Store, Latin America, Brazil, and Argentina.
 
 
+  The Nuvemshop / Tiendanube catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Nuvemshop / Tiendanube''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Nuvemshop Plans Pricing
   plan_count: 6
   slug: nuvemshop-plans-pricing
-random_paper: 7
+random_paper: 13
 rate_limits:
 - limit_count: 4
   name: Nuvemshop Rate Limits
   slug: nuvemshop-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Nuvemshop / Tiendanube API Rules
+  rule_count: 69
+  severity_counts:
+    error: 64
+    hint: 0
+    info: 2
+    warn: 3
+  slug: nuvemshop-rules
 score:
   band: thin
-  composite: 27.4
+  composite: 29.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.9
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 54.0
     developer_ergonomics: 32.1
     discoverability: 66.1
@@ -243,7 +263,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 35.3
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     contracts:
@@ -257,13 +277,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nuvemshop/refs/heads/main/screenshots/nuvemshop-2026-08-07T185802.png
+screenshot: https://apis.io/screenshots/nuvemshop/nuvemshop-2026-08-07T185802.png
 security:
 - kind: authentication
   name: Nuvemshop Authentication

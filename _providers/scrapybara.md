@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 2
@@ -87,9 +94,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Scrapybara Auth States API
   slug: open-scrapybara-auth-states-api
 - collection_type: open
@@ -118,22 +122,22 @@ collections:
   slug: open-scrapybara
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/capabilities/scrapybara-capability-edges.yml
+  href: https://artifacts.apis.io/scrapybara/capabilities/scrapybara-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/scrapybara-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/agentic-access/scrapybara-agentic-access.yml
+  href: https://artifacts.apis.io/scrapybara/agentic-access/scrapybara-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/scrapybara-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/security/scrapybara-domain-security.yml
+  href: https://artifacts.apis.io/scrapybara/security/scrapybara-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/scrapybara-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/authentication/scrapybara-authentication.yml
+  href: https://artifacts.apis.io/scrapybara/authentication/scrapybara-authentication.yml
   title: ''
   type: Authentication
   url: authentication/scrapybara-authentication.yml
@@ -154,17 +158,17 @@ common:
   type: Documentation
   url: https://docs.scrapybara.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/plans/scrapybara-plans-pricing.yml
+  href: https://artifacts.apis.io/scrapybara/plans/scrapybara-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/scrapybara-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/rate-limits/scrapybara-rate-limits.yml
+  href: https://artifacts.apis.io/scrapybara/rate-limits/scrapybara-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/scrapybara-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/finops/scrapybara-finops.yml
+  href: https://artifacts.apis.io/scrapybara/finops/scrapybara-finops.yml
   title: ''
   type: FinOps
   url: finops/scrapybara-finops.yml
@@ -191,6 +195,9 @@ network: true
 overview: 'Scrapybara publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth States API, Browser API, Code Execution API, and 5 more. Tagged areas include AI Agents, Virtual Desktops, Computer Use, Browser Automation, and Code Execution.
 
 
+  The Scrapybara catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Scrapybara''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Scrapybara Plans Pricing
@@ -201,25 +208,38 @@ rate_limits:
 - limit_count: 4
   name: Scrapybara Rate Limits
   slug: scrapybara-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Scrapybara API Rules
+  rule_count: 61
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 2
+  slug: scrapybara-rules
 score:
-  band: emerging
-  composite: 25.9
+  band: thin
+  composite: 27.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.5
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 34.2
+  previous_composite: 27.6
   provenance:
     agentic_access: derived
     contracts:
@@ -233,13 +253,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/scrapybara/refs/heads/main/screenshots/scrapybara-2026-09-02T154602.png
+screenshot: https://apis.io/screenshots/scrapybara/scrapybara-2026-09-02T154602.png
 security:
 - kind: authentication
   name: Scrapybara Authentication

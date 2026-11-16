@@ -22,19 +22,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-10-17'
+  score: 28.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -49,14 +52,11 @@ apis:
   slug: rest-api
 - baseURL: https://www.dnscheck.co/api
   baseurl_source: declared
-  description: The DNS Record Monitoring API from DNS Check — 1 operation(s) for dns record monitoring.
-  name: DNS Check DNS Record Monitoring API
-  slug: dns-check-dns-record-monitoring-api
+  description: The Groups API from DNS Check — 4 operation(s) for groups.
+  name: DNS Check Groups API
+  slug: dns-check-groups-api
 artifact_total: 8
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: DNS Check DNS Record Monitoring API
   slug: open-dns-check-dns-record-monitoring-api
@@ -73,22 +73,22 @@ common:
   type: BlogRSS
   url: https://www.dnscheck.co/blog/feed.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/capabilities/dns-check-capability-edges.yml
+  href: https://artifacts.apis.io/dns-check/capabilities/dns-check-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dns-check-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/agentic-access/dns-check-agentic-access.yml
+  href: https://artifacts.apis.io/dns-check/agentic-access/dns-check-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dns-check-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/security/dns-check-domain-security.yml
+  href: https://artifacts.apis.io/dns-check/security/dns-check-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dns-check-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/authentication/dns-check-authentication.yml
+  href: https://artifacts.apis.io/dns-check/authentication/dns-check-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dns-check-authentication.yml
@@ -124,51 +124,67 @@ modified: '2026-10-06'
 name: DNS Check
 nav: Providers
 network: true
-overview: 'DNS Check publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including DNS Record Monitoring API, and 1 more. Tagged areas include DNS, DNS Monitoring, Domain Monitoring, DNS Records, and Infrastructure Monitoring.
+overview: 'DNS Check publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Groups API, and 1 more. Tagged areas include DNS, DNS Monitoring, Domain Monitoring, DNS Records, and Infrastructure Monitoring.
+
+
+  The DNS Check catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   DNS Check''s developer surface includes engineering blog, authentication, documentation, pricing, signup flow, and 7 more developer resources.'
-random_paper: 0
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: DNS Check API Rules
+  rule_count: 44
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 1
+  slug: dns-check-rules
 score:
   band: thin
-  composite: 28.2
+  composite: 30.6
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 12
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.4
   facets:
     access_clarity: 23.7
-    contract_governance: 0.0
-    contract_quality: 44.7
+    contract_governance: 13.6
+    contract_quality: 47.6
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 27.7
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 33.3
+      total: 3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/screenshots/dns-check-2026-06-20T180058.png
+screenshot: https://apis.io/screenshots/dns-check/dns-check-2026-06-20T180058.png
 security:
 - kind: authentication
   name: Dns Check Authentication

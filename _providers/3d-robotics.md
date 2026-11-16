@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/plans/3d-robotics-plans-pricing.yml
+  href: https://artifacts.apis.io/3d-robotics/plans/3d-robotics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/3d-robotics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/rate-limits/3d-robotics-rate-limits.yml
+  href: https://artifacts.apis.io/3d-robotics/rate-limits/3d-robotics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/3d-robotics-rate-limits.yml
@@ -70,32 +84,32 @@ common:
   type: X-SecondaryMarket
   url: https://forgeglobal.com/3d-robotics_stock/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/packages/3d-robotics-packages.yml
+  href: https://artifacts.apis.io/3d-robotics/packages/3d-robotics-packages.yml
   title: ''
   type: Packages
   url: packages/3d-robotics-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/lifecycle/3d-robotics-lifecycle.yml
+  href: https://artifacts.apis.io/3d-robotics/lifecycle/3d-robotics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/3d-robotics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/conformance/3d-robotics-conformance.yml
+  href: https://artifacts.apis.io/3d-robotics/conformance/3d-robotics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/3d-robotics-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/conformance/3d-robotics-conformance.yml
+  href: https://artifacts.apis.io/3d-robotics/conformance/3d-robotics-conformance.yml
   title: ''
   type: Compliance
   url: conformance/3d-robotics-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/security/3d-robotics-domain-security.yml
+  href: https://artifacts.apis.io/3d-robotics/security/3d-robotics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/3d-robotics-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/llms/3d-robotics-llms.txt
+  href: https://artifacts.apis.io/3d-robotics/llms/3d-robotics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/3d-robotics-llms.txt
@@ -146,7 +160,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
@@ -161,7 +175,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.1
+  previous_composite: 14.2
   provenance:
     conformance: first-party
   regulatory:
@@ -170,14 +184,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/3d-robotics/refs/heads/main/screenshots/3d-robotics-2026-10-11T092048.png
+screenshot: https://apis.io/screenshots/3d-robotics/3d-robotics-2026-10-11T092048.png
 security:
 - kind: domain-security
   name: 3D Robotics Domain Security

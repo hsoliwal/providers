@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/finaeo/refs/heads/main/security/finaeo-domain-security.yml
+  href: https://artifacts.apis.io/finaeo/security/finaeo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/finaeo-domain-security.yml
@@ -115,22 +118,22 @@ common:
   type: Videos
   url: https://www.finaeo.com/videos/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/finaeo/refs/heads/main/llms/finaeo-llms.txt
+  href: https://artifacts.apis.io/finaeo/llms/finaeo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/finaeo-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/finaeo/refs/heads/main/packages/finaeo-packages.yml
+  href: https://artifacts.apis.io/finaeo/packages/finaeo-packages.yml
   title: ''
   type: Packages
   url: packages/finaeo-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finaeo/refs/heads/main/conformance/finaeo-conformance.yml
+  href: https://artifacts.apis.io/finaeo/conformance/finaeo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/finaeo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finaeo/refs/heads/main/lifecycle/finaeo-lifecycle.yml
+  href: https://artifacts.apis.io/finaeo/lifecycle/finaeo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/finaeo-lifecycle.yml
@@ -163,12 +166,12 @@ overview: 'Finaeo is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Finaeo''s developer surface includes signup flow, pricing, engineering blog, support, YouTube channel, and 22 more developer resources.'
-random_paper: 10
+random_paper: 2
 score:
   band: emerging
   composite: 19.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -198,8 +201,8 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

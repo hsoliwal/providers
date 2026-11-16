@@ -1,15 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 29.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 0
@@ -164,11 +172,8 @@ apis:
   description: Health check and project resource summaries.
   name: Onecli Utility API
   slug: onecli-utility-api
-artifact_total: 55
+artifact_total: 59
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OneCLI Agent Setup API
   slug: open-onecli-agent-setup-api
@@ -243,7 +248,7 @@ collections:
   slug: open-onecli-utility-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/rate-limits/onecli-rate-limits.yml
+  href: https://artifacts.apis.io/onecli/rate-limits/onecli-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/onecli-rate-limits.yml
@@ -252,7 +257,7 @@ common:
   type: Pricing
   url: https://onecli.sh/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/plans/onecli-plans-pricing.yml
+  href: https://artifacts.apis.io/onecli/plans/onecli-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/onecli-plans-pricing.yml
@@ -261,27 +266,27 @@ common:
   type: Website
   url: https://www.onecli.sh/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/capabilities/onecli-capability-edges.yml
+  href: https://artifacts.apis.io/onecli/capabilities/onecli-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/onecli-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/overlays/onecli-openapi-overlay.yaml
+  href: https://artifacts.apis.io/onecli/overlays/onecli-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/onecli-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/security/onecli-domain-security.yml
+  href: https://artifacts.apis.io/onecli/security/onecli-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onecli-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/agentic-access/onecli-agentic-access.yml
+  href: https://artifacts.apis.io/onecli/agentic-access/onecli-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/onecli-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/authentication/onecli-authentication.yml
+  href: https://artifacts.apis.io/onecli/authentication/onecli-authentication.yml
   title: ''
   type: Authentication
   url: authentication/onecli-authentication.yml
@@ -330,67 +335,75 @@ common:
   type: Support
   url: https://discord.gg/PSztzsQB3g
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/packages/onecli-packages.yml
+  href: https://artifacts.apis.io/onecli/packages/onecli-packages.yml
   title: ''
   type: Packages
   url: packages/onecli-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/packages/onecli-packages.yml
+  href: https://artifacts.apis.io/onecli/packages/onecli-packages.yml
   title: ''
   type: SDKs
   url: packages/onecli-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/cli/onecli-cli.yml
+  href: https://artifacts.apis.io/onecli/cli/onecli-cli.yml
   title: ''
   type: CLI
   url: cli/onecli-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/mcp/onecli-mcp.yml
+  href: https://artifacts.apis.io/onecli/mcp/onecli-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/onecli-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/llms/onecli-llms.txt
+  href: https://artifacts.apis.io/onecli/llms/onecli-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/onecli-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/conventions/onecli-conventions.yml
+  href: https://artifacts.apis.io/onecli/conventions/onecli-conventions.yml
   title: ''
   type: Conventions
   url: conventions/onecli-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/errors/onecli-error-codes.yml
+  href: https://artifacts.apis.io/onecli/errors/onecli-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/onecli-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/lifecycle/onecli-lifecycle.yml
+  href: https://artifacts.apis.io/onecli/lifecycle/onecli-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/onecli-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/changelog/onecli-changelog.yml
+  href: https://artifacts.apis.io/onecli/changelog/onecli-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/onecli-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/conformance/onecli-conformance.yml
+  href: https://artifacts.apis.io/onecli/conformance/onecli-conformance.yml
   title: ''
   type: Conformance
   url: conformance/onecli-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/data-model/onecli-data-model.yml
+  href: https://artifacts.apis.io/onecli/data-model/onecli-data-model.yml
   title: ''
   type: DataModel
   url: data-model/onecli-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/onecli/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: OneCLI is an open-source credential gateway and identity layer for AI agents. Agents connect to Gmail, GitHub, Slack, AWS, Jira and 50+ other services through a network-layer proxy that injects real API keys and OAuth tokens at request time, so the agent only ever sees placeholder credential stubs and a compromised or misbehaving agent can never leak secrets. Teams get per-agent access control, policy rules (allow, block, rate-limit, manual approval), a built-in encrypted secrets vault, and full audit logs. The REST API manages agents, secrets, policy rules, and app connections programmatically; OneCLI runs as hosted Cloud or as a self-hosted (Docker) community edition. Founded by ex-Argon Security / Aqua Security engineers and backed by Y Combinator; licensed Apache-2.0.
+finops:
+- has_sources: true
+  method: derived
+  name: Onecli Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: onecli-finops
+  template: false
 image: https://onecli.sh/og.png
 layout: provider
 modified: '2026-07-20'
@@ -398,6 +411,9 @@ name: Onecli
 nav: Providers
 network: true
 overview: 'Onecli publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Setup API, Agents API, Approvals API, and 21 more. Tagged areas include Company, Security, Identity, AI Agents, and Secrets Management.
+
+
+  The Onecli catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Onecli''s developer surface includes pricing, authentication, documentation, API reference, getting-started guide, signup flow, engineering blog, and 25 more developer resources.'
@@ -408,30 +424,43 @@ plans:
 - name: Onecli Price Estimates
   plan_count: 0
   slug: onecli-price-estimates
-random_paper: 18
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Onecli Rate Limits
   slug: onecli-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Onecli API Rules
+  rule_count: 53
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 2
+    warn: 12
+  slug: onecli-rules
 score:
-  band: developing
-  composite: 53.8
+  band: strong
+  composite: 56.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 30
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.1
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
+    access_clarity: 78.9
+    contract_governance: 18.2
     contract_quality: 50.5
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 53.8
+  previous_composite: 57.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -448,13 +477,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/onecli/refs/heads/main/screenshots/onecli-2026-08-07T190306.png
+screenshot: https://apis.io/screenshots/onecli/onecli-2026-08-07T190306.png
 security:
 - kind: authentication
   name: Onecli Authentication
@@ -464,6 +493,14 @@ security:
   name: Onecli Domain Security
   slug: onecli-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Connect an app and enforce a policy rule
+  slug: onecli-connect-app-and-govern
+- name: Handle manual-approval requests
+  slug: onecli-handle-approvals
+- name: Provision a OneCLI agent with scoped credentials
+  slug: onecli-provision-agent
 slug: onecli
 tags:
 - Company
@@ -473,9 +510,10 @@ tags:
 - Secrets Management
 - Credentials
 - Gateways
-- Authentication
+- OAuth
 - Developer Tools
 - MCP
 - Vault
+- Authentication
 website: https://www.onecli.sh/
 ---

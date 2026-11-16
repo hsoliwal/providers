@@ -1,20 +1,23 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - scopes
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-ready
-  band_gated_from: agent-native
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,19 +28,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: derived
+    error_semantics: verified
     event_surface_described: true
-    idempotency: false
+    idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 59.8
-  scored_at: '2026-10-17'
+  score: 71.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 95
   human_in_the_loop: 1
@@ -45,7 +51,7 @@ agentic_access:
   operation_count: 142
   slug: didit-agentic-access
   summary_line: 142 operations · 95 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://verification.didit.me
   baseurl_source: declared
@@ -132,15 +138,62 @@ apis:
   description: The Workflows API from Didit — 2 operation(s) for workflows.
   name: Didit Workflows API
   slug: didit-workflows-api
-artifact_total: 41
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The AML Ongoing Monitoring API from Didit — 3 operation(s) for aml ongoing monitoring.
+  name: Didit AML Ongoing Monitoring API
+  slug: didit-aml-ongoing-monitoring-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The Biometric Templates API from Didit — 4 operation(s) for biometric templates.
+  name: Didit Biometric Templates API
+  slug: didit-biometric-templates-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The Case Assignment API from Didit — 6 operation(s) for case assignment.
+  name: Didit Case Assignment API
+  slug: didit-case-assignment-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The Case Management API from Didit — 15 operation(s) for case management.
+  name: Didit Case Management API
+  slug: didit-case-management-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The Digital ID wallets API from Didit — 29 operation(s) for digital id wallets.
+  name: Didit Digital ID wallets API
+  slug: didit-digital-id-wallets-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The draft API from Didit — 1 operation(s) for draft.
+  name: Didit Draft API
+  slug: didit-draft-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The Fraud Check API from Didit — 3 operation(s) for fraud check.
+  name: Didit Fraud Check API
+  slug: didit-fraud-check-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The history API from Didit — 1 operation(s) for history.
+  name: Didit History API
+  slug: didit-history-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The Networks API from Didit — 16 operation(s) for networks.
+  name: Didit Networks API
+  slug: didit-networks-api
+- baseURL: https://verification.didit.me
+  baseurl_source: declared
+  description: The publish API from Didit — 1 operation(s) for publish.
+  name: Didit Publish API
+  slug: didit-publish-api
+artifact_total: 57
 asyncapis:
 - description: ''
   name: Didit Webhooks
   slug: didit-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Didit Verification Billing API
   slug: open-didit-billing-api
@@ -193,6 +246,11 @@ collections:
   name: Didit Verification Billing Workflows API
   slug: open-didit-workflows-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/didit/plans/didit-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/didit-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -246,57 +304,57 @@ common:
   type: StatusPage
   url: https://status.didit.me
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/openapi/_original/didit-openapi-original.json
+  href: https://artifacts.apis.io/didit/openapi/_original/didit-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/didit-openapi-original.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/authentication/didit-authentication.yml
+  href: https://artifacts.apis.io/didit/authentication/didit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/didit-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/scopes/didit-scopes.yml
+  href: https://artifacts.apis.io/didit/scopes/didit-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/didit-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/packages/didit-packages.yml
+  href: https://artifacts.apis.io/didit/packages/didit-packages.yml
   title: ''
   type: Packages
   url: packages/didit-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/packages/didit-packages.yml
+  href: https://artifacts.apis.io/didit/packages/didit-packages.yml
   title: ''
   type: SDKs
   url: packages/didit-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/mcp/didit-mcp.yml
+  href: https://artifacts.apis.io/didit/mcp/didit-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/didit-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/didit/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/llms/didit-llms.txt
+  href: https://artifacts.apis.io/didit/llms/didit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/didit-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/well-known/didit-well-known.yml
+  href: https://artifacts.apis.io/didit/well-known/didit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/didit-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/overlays/didit-openapi-overlay.yaml
+  href: https://artifacts.apis.io/didit/overlays/didit-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/didit-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/conformance/didit-conformance.yml
+  href: https://artifacts.apis.io/didit/conformance/didit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/didit-conformance.yml
@@ -305,57 +363,65 @@ common:
   type: Compliance
   url: https://docs.didit.me/getting-started/security-compliance
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/errors/didit-problem-types.yml
+  href: https://artifacts.apis.io/didit/errors/didit-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/didit-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/lifecycle/didit-lifecycle.yml
+  href: https://artifacts.apis.io/didit/lifecycle/didit-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/didit-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/changelog/didit-changelog.yml
+  href: https://artifacts.apis.io/didit/changelog/didit-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/didit-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/conventions/didit-conventions.yml
+  href: https://artifacts.apis.io/didit/conventions/didit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/didit-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/sandbox/didit-sandbox.yml
+  href: https://artifacts.apis.io/didit/sandbox/didit-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/didit-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/components/didit-components.yml
+  href: https://artifacts.apis.io/didit/components/didit-components.yml
   title: ''
   type: Components
   url: components/didit-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/data-model/didit-data-model.yml
+  href: https://artifacts.apis.io/didit/data-model/didit-data-model.yml
   title: ''
   type: DataModel
   url: data-model/didit-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/asyncapi/didit-webhooks.yml
+  href: https://artifacts.apis.io/didit/asyncapi/didit-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/didit-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/agentic-access/didit-agentic-access.yml
+  href: https://artifacts.apis.io/didit/agentic-access/didit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/didit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/security/didit-domain-security.yml
+  href: https://artifacts.apis.io/didit/security/didit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/didit-domain-security.yml
 created: '2026-07-17'
 description: Didit is a developer-first identity verification and fraud-prevention platform that exposes one unified API for KYC (ID verification, passive/active liveness, face match and search, age estimation, proof of address, NFC), KYB business verification (registry, UBO/ownership, officers, entity AML), AML sanctions/PEP screening, transaction monitoring (KYT), crypto wallet screening, and FATF/EU Travel Rule. It spans 220+ countries, 14,000+ document types and 50+ languages with sub-two-second inference, pay-per-call pricing from $0.30 and a 500-verification monthly free tier. The v3 REST API authenticates with an x-api-key header, ships Web/iOS/Android/React Native/Flutter SDKs, HMAC-signed webhooks, a live hosted MCP server, and Agent Skills. Backed by Y Combinator and Robinhood Ventures.
+finops:
+- has_sources: true
+  method: derived
+  name: Didit Finops
+  primary_unit: workspace
+  service_category: ''
+  slug: didit-finops
+  template: false
 image: https://avatars.githubusercontent.com/u/131235139?v=4
 layout: provider
 mcp_servers:
@@ -366,46 +432,71 @@ modified: '2026-07-18'
 name: Didit
 nav: Providers
 network: true
-overview: 'Didit publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Businesses API, Case Blueprints API, and 14 more. Tagged areas include Identity, Identity Verification, KYC, KYB, and AML.
+overview: 'Didit publishes 27 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Businesses API, Case Blueprints API, and 24 more. Tagged areas include Identity, Identity Verification, KYC, KYB, and AML.
 
 
-  The Didit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Didit catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Didit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
-random_paper: 20
+  Didit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
+plans:
+- name: Didit Plans Pricing
+  plan_count: 3
+  slug: didit-plans-pricing
+- name: Didit Price Estimates
+  plan_count: 0
+  slug: didit-price-estimates
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Didit API Rules
+  rule_count: 55
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 7
+    warn: 12
+  slug: didit-rules
 scopes:
 - name: Didit Scopes
   scope_count: 5
   slug: didit-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: strong
-  composite: 62.6
+  band: exemplar
+  composite: 71.2
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 31
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
-    access_clarity: 52.6
-    contract_governance: 18.2
-    contract_quality: 55.4
+    access_clarity: 92.1
+    contract_governance: 31.8
+    contract_quality: 51.6
     developer_ergonomics: 73.2
     discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 62.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 71.2
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 100.0
-      derived: 1
-      marker_coverage: 5.9
-      total: 17
+      callable: 0.0
+      derived: 3
+      marker_coverage: 6.7
+      total: 45
     mcp: first-party
     skills: derived
   regulatory:
@@ -422,13 +513,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 45.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/didit/refs/heads/main/screenshots/didit-2026-07-25T211951.png
+screenshot: https://apis.io/screenshots/didit/didit-2026-07-25T211951.png
 security:
 - kind: authentication
   name: Didit Authentication
@@ -438,6 +529,14 @@ security:
   name: Didit Domain Security
   slug: didit-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Run a hosted KYC verification session
+  slug: didit-hosted-kyc-session
+- name: Business verification (KYB) lookup
+  slug: didit-kyb-business-lookup
+- name: Standalone ID verification + face match
+  slug: didit-standalone-id-facematch
 slug: didit
 tags:
 - Identity

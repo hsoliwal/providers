@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - scopes
   - rate-limits
@@ -30,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.5
-  scored_at: '2026-10-17'
+  score: 39.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 76
   human_in_the_loop: 0
@@ -168,7 +172,7 @@ apis:
   description: The Webhook API from Fixflo — 4 operation(s) for webhook.
   name: Fixflo Webhook API
   slug: fixflo-webhook-api
-artifact_total: 31
+artifact_total: 40
 asyncapis:
 - description: ''
   name: Fixflo Webhooks
@@ -178,67 +182,76 @@ collections:
   name: Fixflo
   slug: open-fixflo-api-v2
 common:
+- group: commercial
+  href: https://artifacts.apis.io/fixflo/plans/fixflo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/fixflo-plans-pricing.yml
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/fixflo/overview
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.fixflo.com/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/capabilities/fixflo-capability-edges.yml
+  href: https://artifacts.apis.io/fixflo/capabilities/fixflo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fixflo-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/security/fixflo-domain-security.yml
+  href: https://artifacts.apis.io/fixflo/security/fixflo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fixflo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/agentic-access/fixflo-agentic-access.yml
+  href: https://artifacts.apis.io/fixflo/agentic-access/fixflo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fixflo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/authentication/fixflo-authentication.yml
+  href: https://artifacts.apis.io/fixflo/authentication/fixflo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fixflo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/scopes/fixflo-scopes.yml
+  href: https://artifacts.apis.io/fixflo/scopes/fixflo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/fixflo-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/well-known/fixflo-well-known.yml
+  href: https://artifacts.apis.io/fixflo/well-known/fixflo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fixflo-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/packages/fixflo-packages.yml
+  href: https://artifacts.apis.io/fixflo/packages/fixflo-packages.yml
   title: ''
   type: Packages
   url: packages/fixflo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/packages/fixflo-packages.yml
+  href: https://artifacts.apis.io/fixflo/packages/fixflo-packages.yml
   title: ''
   type: SDKs
   url: packages/fixflo-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/conventions/fixflo-conventions.yml
+  href: https://artifacts.apis.io/fixflo/conventions/fixflo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/fixflo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/conventions/fixflo-conventions.yml
+  href: https://artifacts.apis.io/fixflo/conventions/fixflo-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/fixflo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/errors/fixflo-problem-types.yml
+  href: https://artifacts.apis.io/fixflo/errors/fixflo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/fixflo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/lifecycle/fixflo-lifecycle.yml
+  href: https://artifacts.apis.io/fixflo/lifecycle/fixflo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fixflo-lifecycle.yml
@@ -247,47 +260,47 @@ common:
   type: Deprecation
   url: https://api-docs.fixflo.com/72b66de24898e-welcome-to-fixflo
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/conformance/fixflo-conformance.yml
+  href: https://artifacts.apis.io/fixflo/conformance/fixflo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fixflo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/data-model/fixflo-data-model.yml
+  href: https://artifacts.apis.io/fixflo/data-model/fixflo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fixflo-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/sandbox/fixflo-sandbox.yml
+  href: https://artifacts.apis.io/fixflo/sandbox/fixflo-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/fixflo-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/rate-limits/fixflo-rate-limits.yml
+  href: https://artifacts.apis.io/fixflo/rate-limits/fixflo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fixflo-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/asyncapi/fixflo-webhooks.yml
+  href: https://artifacts.apis.io/fixflo/asyncapi/fixflo-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/fixflo-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/mcp/fixflo-mcp.yml
+  href: https://artifacts.apis.io/fixflo/mcp/fixflo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/fixflo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/fixflo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/llms/fixflo-llms.txt
+  href: https://artifacts.apis.io/fixflo/llms/fixflo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fixflo-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/overlays/fixflo-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/fixflo/overlays/fixflo-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/fixflo-api-v2-overlay.yaml
@@ -362,6 +375,14 @@ common:
 created: '2026-07-26'
 description: Fixflo (a trading name of Tactile Limited, London, United Kingdom, acquired by Aareon in 2021) is a UK repairs, maintenance and compliance management platform for lettings agents, block managers and commercial property managers. Occupiers report issues through a guided fault tree, and Fixflo routes the work to contractors, tracks jobs, service programmes, warranties and invoices, and syncs the resulting records back into the agency CRM. It sits in the post-tenancy operations layer of the UK property value chain rather than the listings layer — the UK has no MLS and no RESO, so there is no industry-mandated machine-readable listing contract here and Fixflo makes no RESO claim. Its API posture is unusually open for the sector in one respect and closed in another. A genuinely public Stoplight developer portal at api-docs.fixflo.com publishes a complete OpenAPI 3.0 description of the v2 API (135 paths, 164 operations, 25 resource tags) that anyone can read and download without logging
   in, but actually calling it is licensed. Every use of the API is subject to the signed Fixflo Application Developer and API Licence Agreement, keys are issued by support after a review of the use case, and the runtime base URL is the customer's own per-tenant subdomain. Read the contract freely; sign an agreement to use it.
+finops:
+- has_sources: true
+  method: derived
+  name: Fixflo Finops
+  primary_unit: unit
+  service_category: ''
+  slug: fixflo-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fixflo.png
 layout: provider
 modified: '2026-10-06'
@@ -371,15 +392,35 @@ network: true
 overview: 'Fixflo publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agency API, Agent API, Asset API, and 21 more. Tagged areas include Real Estate, United Kingdom, Property Management, PropTech, and Repairs and Maintenance.
 
 
-  The Fixflo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Fixflo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Fixflo''s developer surface includes authentication, sandbox, documentation, getting-started guide, API reference, engineering blog, support, and 33 more developer resources.'
-random_paper: 10
+  Fixflo''s developer surface includes authentication, sandbox, documentation, getting-started guide, API reference, engineering blog, support, and 35 more developer resources.'
+plans:
+- name: Fixflo Plans Pricing
+  plan_count: 5
+  slug: fixflo-plans-pricing
+- name: Fixflo Price Estimates
+  plan_count: 0
+  slug: fixflo-price-estimates
+random_paper: 0
 rate_limits:
 - limit_count: 1
   name: Fixflo Rate Limits
   slug: fixflo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Fixflo API Rules
+  rule_count: 60
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 10
+  slug: fixflo-rules
 scopes:
 - name: Fixflo Scopes
   scope_count: 4
@@ -387,18 +428,18 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 43.1
+  composite: 52.7
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 45.0
-    catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    artifact_dirs: 31
+    catalog_earned: 64.5
+    catalog_earned_first_party: 20.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 38.2
-    contract_governance: 4.5
+    access_clarity: 77.6
+    contract_governance: 18.2
     contract_quality: 53.6
     developer_ergonomics: 32.7
     discoverability: 66.1
@@ -411,7 +452,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 43.1
+  previous_composite: 52.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -428,13 +469,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/screenshots/fixflo-2026-08-07T165332.png
+screenshot: https://apis.io/screenshots/fixflo/fixflo-2026-08-07T165332.png
 security:
 - kind: authentication
   name: Fixflo Authentication
@@ -444,6 +485,18 @@ security:
   name: Fixflo Domain Security
   slug: fixflo-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: Run planned maintenance and compliance programmes in Fixflo
+  slug: fixflo-planned-maintenance-compliance
+- name: Report a repair issue through the Fixflo fault tree
+  slug: fixflo-report-an-issue
+- name: Subscribe to Fixflo webhooks and verify their signatures
+  slug: fixflo-subscribe-to-webhooks
+- name: Sync a property portfolio from a CRM into Fixflo
+  slug: fixflo-sync-property-portfolio
+- name: Track a Fixflo repair from quote to completed job and invoice
+  slug: fixflo-track-jobs-to-invoice
 slug: fixflo
 tags:
 - Real Estate

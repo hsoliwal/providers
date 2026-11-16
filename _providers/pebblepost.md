@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The PebblePost JavaScript tag is the provider's public client-side integration surface. Brands drop a script on their site that populates a window._pp array with a Brand ID (brid) and Brand Customer I
@@ -48,7 +51,7 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/security/pebblepost-domain-security.yml
+  href: https://artifacts.apis.io/pebblepost/security/pebblepost-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pebblepost-domain-security.yml
@@ -93,27 +96,27 @@ common:
   type: PrivacyPolicy
   url: https://www.pebblepost.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/llms/pebblepost-llms.txt
+  href: https://artifacts.apis.io/pebblepost/llms/pebblepost-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pebblepost-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/components/pebblepost-components.yml
+  href: https://artifacts.apis.io/pebblepost/components/pebblepost-components.yml
   title: ''
   type: Components
   url: components/pebblepost-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/authentication/pebblepost-authentication.yml
+  href: https://artifacts.apis.io/pebblepost/authentication/pebblepost-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pebblepost-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/errors/pebblepost-problem-types.yml
+  href: https://artifacts.apis.io/pebblepost/errors/pebblepost-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pebblepost-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/conformance/pebblepost-conformance.yml
+  href: https://artifacts.apis.io/pebblepost/conformance/pebblepost-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pebblepost-conformance.yml
@@ -122,37 +125,37 @@ common:
   type: Compliance
   url: https://trust.pebblepost.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/security/pebblepost-trust-center.yml
+  href: https://artifacts.apis.io/pebblepost/security/pebblepost-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/pebblepost-trust-center.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/packages/pebblepost-packages.yml
+  href: https://artifacts.apis.io/pebblepost/packages/pebblepost-packages.yml
   title: ''
   type: Packages
   url: packages/pebblepost-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/plans/pebblepost-plans-pricing.yml
+  href: https://artifacts.apis.io/pebblepost/plans/pebblepost-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pebblepost-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/rate-limits/pebblepost-rate-limits.yml
+  href: https://artifacts.apis.io/pebblepost/rate-limits/pebblepost-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pebblepost-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/lifecycle/pebblepost-lifecycle.yml
+  href: https://artifacts.apis.io/pebblepost/lifecycle/pebblepost-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pebblepost-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/conventions/pebblepost-conventions.yml
+  href: https://artifacts.apis.io/pebblepost/conventions/pebblepost-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pebblepost-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/vocabulary/pebblepost-metrics-vocabulary.yml
+  href: https://artifacts.apis.io/pebblepost/vocabulary/pebblepost-metrics-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pebblepost-metrics-vocabulary.yml
@@ -203,13 +206,13 @@ score:
   band: thin
   composite: 30.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 42.0
     catalog_earned_first_party: 5.0
     catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 33.3
@@ -224,7 +227,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.5
+  previous_composite: 30.6
   provenance:
     conformance: first-party
   regulatory:
@@ -237,14 +240,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pebblepost/refs/heads/main/screenshots/pebblepost-2026-09-02T150929.png
+screenshot: https://apis.io/screenshots/pebblepost/pebblepost-2026-09-02T150929.png
 security:
 - kind: authentication
   name: Pebblepost Authentication

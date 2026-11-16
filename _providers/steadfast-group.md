@@ -1,11 +1,11 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:Partner Gated
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -31,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.3
-  scored_at: '2026-10-17'
+  score: 40.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,34 +65,34 @@ apis:
   description: Natural-catastrophe flood risk layers for a resolved address.
   name: Steadfast Group Risk API
   slug: steadfast-group-risk-api
-artifact_total: 8
+artifact_total: 10
 collections:
 - collection_type: open
   name: Steadfast Flood Risk Tracker API
   slug: open-steadfast-group-flood-risk-tracker
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/overlays/steadfast-group-flood-risk-tracker-overlay.yaml
+  href: https://artifacts.apis.io/steadfast-group/overlays/steadfast-group-flood-risk-tracker-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/steadfast-group-flood-risk-tracker-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/mcp/steadfast-group-mcp.yml
+  href: https://artifacts.apis.io/steadfast-group/mcp/steadfast-group-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/steadfast-group-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/skills/steadfast-group-flood-risk-lookup.md
+  href: https://artifacts.apis.io/steadfast-group/skills/steadfast-group-flood-risk-lookup.md
   title: ''
   type: AgentSkill
   url: skills/steadfast-group-flood-risk-lookup.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/agentic-access/steadfast-group-agentic-access.yml
+  href: https://artifacts.apis.io/steadfast-group/agentic-access/steadfast-group-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/steadfast-group-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/security/steadfast-group-domain-security.yml
+  href: https://artifacts.apis.io/steadfast-group/security/steadfast-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/steadfast-group-domain-security.yml
@@ -174,62 +177,62 @@ common:
   type: FindABroker
   url: https://www.steadfast.com.au/find-an-insurance-broker
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/well-known/steadfast-group-well-known.yml
+  href: https://artifacts.apis.io/steadfast-group/well-known/steadfast-group-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/steadfast-group-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/well-known/steadfast-group-openid-configuration.json
+  href: https://artifacts.apis.io/steadfast-group/well-known/steadfast-group-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/steadfast-group-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/authentication/steadfast-group-authentication.yml
+  href: https://artifacts.apis.io/steadfast-group/authentication/steadfast-group-authentication.yml
   title: ''
   type: Authentication
   url: authentication/steadfast-group-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/scopes/steadfast-group-scopes.yml
+  href: https://artifacts.apis.io/steadfast-group/scopes/steadfast-group-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/steadfast-group-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/conventions/steadfast-group-conventions.yml
+  href: https://artifacts.apis.io/steadfast-group/conventions/steadfast-group-conventions.yml
   title: ''
   type: Conventions
   url: conventions/steadfast-group-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/conformance/steadfast-group-conformance.yml
+  href: https://artifacts.apis.io/steadfast-group/conformance/steadfast-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/steadfast-group-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/lifecycle/steadfast-group-lifecycle.yml
+  href: https://artifacts.apis.io/steadfast-group/lifecycle/steadfast-group-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/steadfast-group-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/errors/steadfast-group-problem-types.yml
+  href: https://artifacts.apis.io/steadfast-group/errors/steadfast-group-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/steadfast-group-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/data-model/steadfast-group-data-model.yml
+  href: https://artifacts.apis.io/steadfast-group/data-model/steadfast-group-data-model.yml
   title: ''
   type: DataModel
   url: data-model/steadfast-group-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/packages/steadfast-group-packages.yml
+  href: https://artifacts.apis.io/steadfast-group/packages/steadfast-group-packages.yml
   title: ''
   type: Packages
   url: packages/steadfast-group-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/llms/steadfast-group-llms.txt
+  href: https://artifacts.apis.io/steadfast-group/llms/steadfast-group-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/steadfast-group-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/steadfast-group/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -246,8 +249,24 @@ network: true
 overview: 'Steadfast Group publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Address API, Risk API, and 1 more. Tagged areas include Insurance, Australia, Brokerage, Insurance Broker Network, and General Insurance.
 
 
+  The Steadfast Group catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Steadfast Group''s developer surface includes engineering blog, legal docs, tooling, support, authentication, and 32 more developer resources.'
-random_paper: 21
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Steadfast Group API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: steadfast-group-rules
 scopes:
 - name: Steadfast Group Scopes
   scope_count: 7
@@ -255,18 +274,18 @@ scopes:
   summary_line: 7 scopes · authorizationCode/implicit/deviceCode/password
 score:
   band: thin
-  composite: 29.9
+  composite: 31.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 57.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 16.5
     developer_ergonomics: 20.8
     discoverability: 66.1
@@ -279,7 +298,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 29.9
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -296,14 +315,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 36.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/steadfast-group/refs/heads/main/screenshots/steadfast-group-2026-09-02T160824.png
+screenshot: https://apis.io/screenshots/steadfast-group/steadfast-group-2026-09-02T160824.png
 security:
 - kind: authentication
   name: Steadfast Group Authentication
@@ -313,6 +332,10 @@ security:
   name: Steadfast Group Domain Security
   slug: steadfast-group-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 1
+skills:
+- name: steadfast-flood-risk-lookup
+  slug: steadfast-group-flood-risk-lookup
 slug: steadfast-group
 tags:
 - Insurance

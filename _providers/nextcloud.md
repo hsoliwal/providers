@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -73,9 +76,6 @@ apis:
 artifact_total: 17
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Nextcloud OCS Autocomplete API
   slug: open-nextcloud-autocomplete-api
 - collection_type: open
@@ -92,27 +92,27 @@ collections:
   slug: open-nextcloud
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/agentic-access/nextcloud-agentic-access.yml
+  href: https://artifacts.apis.io/nextcloud/agentic-access/nextcloud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nextcloud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/security/nextcloud-trust-center.yml
+  href: https://artifacts.apis.io/nextcloud/security/nextcloud-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/nextcloud-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/security/nextcloud-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nextcloud/security/nextcloud-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nextcloud-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/security/nextcloud-domain-security.yml
+  href: https://artifacts.apis.io/nextcloud/security/nextcloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nextcloud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/authentication/nextcloud-authentication.yml
+  href: https://artifacts.apis.io/nextcloud/authentication/nextcloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nextcloud-authentication.yml
@@ -171,27 +171,43 @@ network: true
 overview: 'Nextcloud publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Autocomplete API, Capabilities API, DAV API, and 3 more. Tagged areas include File Sync, File Sharing, Collaboration, Self-Hosted, and Open Source.
 
 
+  The Nextcloud catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Nextcloud''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 10 more developer resources.'
-random_paper: 14
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Nextcloud API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: nextcloud-rules
 score:
   band: thin
-  composite: 29.9
+  composite: 33.0
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 12
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.2
     developer_ergonomics: 28.6
     discoverability: 66.1
-    operational_transparency: 2.6
-  previous_composite: 29.9
+    operational_transparency: 13.2
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -205,13 +221,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nextcloud/refs/heads/main/screenshots/nextcloud-2026-06-20T190256.png
+screenshot: https://apis.io/screenshots/nextcloud/nextcloud-2026-06-20T190256.png
 security:
 - kind: authentication
   name: Nextcloud Authentication

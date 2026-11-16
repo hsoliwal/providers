@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Palm HR REST API surface (api.palm.hr). Customers create API keys with granular permissions to push HR, attendance, and payroll data to ERPs and external tools. No public OpenAPI specification or deve
@@ -41,7 +45,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/palmhr/refs/heads/main/security/palmhr-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/palmhr/security/palmhr-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/palmhr-vulnerability-disclosure.yml
@@ -50,7 +54,7 @@ common:
   type: Security
   url: https://palmhr.net/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/palmhr/refs/heads/main/security/palmhr-domain-security.yml
+  href: https://artifacts.apis.io/palmhr/security/palmhr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/palmhr-domain-security.yml
@@ -79,12 +83,12 @@ common:
   type: HelpCenter
   url: https://palmhr.crisp.help/en/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/palmhr/refs/heads/main/well-known/palmhr-security.txt
+  href: https://artifacts.apis.io/palmhr/well-known/palmhr-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/palmhr-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/palmhr/refs/heads/main/well-known/palmhr-well-known.yml
+  href: https://artifacts.apis.io/palmhr/well-known/palmhr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/palmhr-well-known.yml
@@ -101,7 +105,7 @@ overview: 'Palm HR is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Palm HR''s developer surface includes pricing and 10 more developer resources.'
-random_paper: 6
+random_paper: 20
 score:
   band: emerging
   composite: 16.0
@@ -135,14 +139,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/palmhr/refs/heads/main/screenshots/palmhr-2026-08-07T191324.png
+screenshot: https://apis.io/screenshots/palmhr/palmhr-2026-08-07T191324.png
 security:
 - kind: domain-security
   name: Palmhr Domain Security

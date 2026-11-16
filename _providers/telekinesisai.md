@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/telekinesisai/refs/heads/main/security/telekinesisai-domain-security.yml
+  href: https://artifacts.apis.io/telekinesisai/security/telekinesisai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/telekinesisai-domain-security.yml
@@ -84,22 +87,22 @@ common:
   type: PrivacyPolicy
   url: https://docs.telekinesis.ai/legal/privacy.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/telekinesisai/refs/heads/main/packages/telekinesisai-packages.yml
+  href: https://artifacts.apis.io/telekinesisai/packages/telekinesisai-packages.yml
   title: ''
   type: Packages
   url: packages/telekinesisai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/telekinesisai/refs/heads/main/packages/telekinesisai-packages.yml
+  href: https://artifacts.apis.io/telekinesisai/packages/telekinesisai-packages.yml
   title: ''
   type: SDKs
   url: packages/telekinesisai-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/telekinesisai/refs/heads/main/authentication/telekinesisai-authentication.yml
+  href: https://artifacts.apis.io/telekinesisai/authentication/telekinesisai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/telekinesisai-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/telekinesisai/refs/heads/main/llms/telekinesisai-llms.txt
+  href: https://artifacts.apis.io/telekinesisai/llms/telekinesisai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/telekinesisai-llms.txt
@@ -115,12 +118,12 @@ overview: 'Telekinesis.ai is profiled on the [APIs.io](https://apis.io/) network
 
 
   Telekinesis.ai''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 9 more developer resources.'
-random_paper: 0
+random_paper: 18
 score:
   band: emerging
   composite: 22.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -141,14 +144,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/telekinesisai/refs/heads/main/screenshots/telekinesisai-2026-09-02T162738.png
+screenshot: https://apis.io/screenshots/telekinesisai/telekinesisai-2026-09-02T162738.png
 security:
 - kind: authentication
   name: Telekinesisai Authentication

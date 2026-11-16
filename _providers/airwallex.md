@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,10 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +33,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 61.6
-  scored_at: '2026-10-17'
+  score: 62.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -172,7 +182,7 @@ apis:
     question: Has a transfer I sent arrived yet?
   phrasing_ops: 2
   slug: airwallex-transfers-api
-artifact_total: 74
+artifact_total: 85
 asyncapis:
 - description: ''
   name: Airwallex Webhooks
@@ -203,9 +213,6 @@ collections:
   name: Airwallex Open Authentication Transfers API
   slug: postman-airwallex-transfers-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Airwallex Open Authentication API
   slug: open-airwallex-authentication-api
 - collection_type: open
@@ -234,7 +241,7 @@ collections:
   slug: open-airwallex
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/finops/airwallex-finops.yml
+  href: https://artifacts.apis.io/airwallex/finops/airwallex-finops.yml
   title: ''
   type: FinOps
   url: finops/airwallex-finops.yml
@@ -247,27 +254,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/airwallex/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/agentic-access/airwallex-agentic-access.yml
+  href: https://artifacts.apis.io/airwallex/agentic-access/airwallex-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/airwallex-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/security/airwallex-trust-center.yml
+  href: https://artifacts.apis.io/airwallex/security/airwallex-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/airwallex-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/security/airwallex-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/airwallex/security/airwallex-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/airwallex-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/security/airwallex-domain-security.yml
+  href: https://artifacts.apis.io/airwallex/security/airwallex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airwallex-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/authentication/airwallex-authentication.yml
+  href: https://artifacts.apis.io/airwallex/authentication/airwallex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/airwallex-authentication.yml
@@ -332,22 +339,22 @@ common:
   type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/vocabulary/airwallex-vocabulary.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/packages/airwallex-packages.yml
+  href: https://artifacts.apis.io/airwallex/packages/airwallex-packages.yml
   title: ''
   type: Packages
   url: packages/airwallex-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/packages/airwallex-packages.yml
+  href: https://artifacts.apis.io/airwallex/packages/airwallex-packages.yml
   title: Airwallex first-party SDKs
   type: SDKs
   url: packages/airwallex-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/well-known/airwallex-well-known.yml
+  href: https://artifacts.apis.io/airwallex/well-known/airwallex-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/airwallex-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/well-known/airwallex-security.txt
+  href: https://artifacts.apis.io/airwallex/well-known/airwallex-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/airwallex-security.txt
@@ -360,42 +367,42 @@ common:
   type: Compliance
   url: https://security.airwallex.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/mcp/airwallex-mcp.yml
+  href: https://artifacts.apis.io/airwallex/mcp/airwallex-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/airwallex-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/mcp/airwallex-tool-crosswalk.yml
+  href: https://artifacts.apis.io/airwallex/mcp/airwallex-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/airwallex-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/llms/airwallex-llms.txt
+  href: https://artifacts.apis.io/airwallex/llms/airwallex-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/airwallex-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/airwallex/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/conformance/airwallex-conformance.yml
+  href: https://artifacts.apis.io/airwallex/conformance/airwallex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/airwallex-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/errors/airwallex-problem-types.yml
+  href: https://artifacts.apis.io/airwallex/errors/airwallex-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/airwallex-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/errors/airwallex-decline-codes.yml
+  href: https://artifacts.apis.io/airwallex/errors/airwallex-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/airwallex-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/lifecycle/airwallex-lifecycle.yml
+  href: https://artifacts.apis.io/airwallex/lifecycle/airwallex-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/airwallex-lifecycle.yml
@@ -408,57 +415,57 @@ common:
   type: Deprecation
   url: https://www.airwallex.com/docs/api/versioning
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/changelog/airwallex-changelog.yml
+  href: https://artifacts.apis.io/airwallex/changelog/airwallex-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/airwallex-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/scopes/airwallex-scopes.yml
+  href: https://artifacts.apis.io/airwallex/scopes/airwallex-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/airwallex-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/conventions/airwallex-conventions.yml
+  href: https://artifacts.apis.io/airwallex/conventions/airwallex-conventions.yml
   title: ''
   type: Conventions
   url: conventions/airwallex-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/conventions/airwallex-conventions.yml
+  href: https://artifacts.apis.io/airwallex/conventions/airwallex-conventions.yml
   title: request_id idempotency contract
   type: Idempotency
   url: conventions/airwallex-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/sandbox/airwallex-sandbox.yml
+  href: https://artifacts.apis.io/airwallex/sandbox/airwallex-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/airwallex-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/components/airwallex-components.yml
+  href: https://artifacts.apis.io/airwallex/components/airwallex-components.yml
   title: ''
   type: Components
   url: components/airwallex-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/data-model/airwallex-data-model.yml
+  href: https://artifacts.apis.io/airwallex/data-model/airwallex-data-model.yml
   title: ''
   type: DataModel
   url: data-model/airwallex-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/asyncapi/airwallex-webhooks.yml
+  href: https://artifacts.apis.io/airwallex/asyncapi/airwallex-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/airwallex-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/rate-limits/airwallex-rate-limits.yml
+  href: https://artifacts.apis.io/airwallex/rate-limits/airwallex-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/airwallex-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/plans/airwallex-plans-pricing.yml
+  href: https://artifacts.apis.io/airwallex/plans/airwallex-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/airwallex-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/examples/
+  href: https://artifacts.apis.io/airwallex/examples/
   title: ''
   type: Examples
   url: examples/
@@ -521,13 +528,13 @@ features:
 - description: Built-in fraud detection and risk scoring via the Airwallex Risk SDK.
   name: Risk Management
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Airwallex Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: transaction
+  service_category: ''
   slug: airwallex-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airwallex.png
 json_schemas:
 - name: Account
@@ -578,9 +585,12 @@ overview: 'Airwallex publishes 14 API contracts indexed on the [APIs.io](https:/
   Airwallex''s developer surface includes authentication, developer portal, getting-started guide, documentation, pricing, engineering blog, CLI, and 49 more developer resources.'
 plans:
 - name: Airwallex Plans Pricing
-  plan_count: 4
+  plan_count: 11
   slug: airwallex-plans-pricing
-random_paper: 1
+- name: Airwallex Price Estimates
+  plan_count: 0
+  slug: airwallex-price-estimates
+random_paper: 9
 rate_limits:
 - limit_count: 8
   name: Airwallex Rate Limits
@@ -616,17 +626,17 @@ scopes:
   summary_line: 180 scopes
 score:
   band: exemplar
-  composite: 83.8
+  composite: 85.3
   coverage:
-    artifact_dirs: 36
-    catalog_earned: 81.0
+    artifact_dirs: 38
+    catalog_earned: 84.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 34.0
+    catalog_gap: 31.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 92.1
+    access_clarity: 100.0
     contract_governance: 45.5
     contract_quality: 63.9
     developer_ergonomics: 95.8
@@ -660,13 +670,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 57.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/airwallex/refs/heads/main/screenshots/airwallex-2026-06-20T171444.png
+screenshot: https://apis.io/screenshots/airwallex/airwallex-2026-06-20T171444.png
 security:
 - kind: authentication
   name: Airwallex Authentication
@@ -684,6 +694,30 @@ security:
   name: Airwallex Trust Center
   slug: airwallex-trust-center
   summary_line: SOC 2, ISO 27001, PCI DSS, GDPR
+skill_count: 11
+skills:
+- name: awx-best-practices
+  slug: airwallex-agentos-awx-best-practices
+- name: beneficiary-creation
+  slug: airwallex-agentos-beneficiary-creation
+- name: card-provisioning
+  slug: airwallex-agentos-card-provisioning
+- name: contract-to-billing
+  slug: airwallex-agentos-contract-to-billing
+- name: manage-cashflow
+  slug: airwallex-agentos-manage-cashflow
+- name: airwallex-ai-provider-card-mit
+  slug: airwallex-dev-ai-provider-card-mit
+- name: airwallex-billing-checkout
+  slug: airwallex-dev-billing-checkout
+- name: airwallex-dropin
+  slug: airwallex-dev-dropin
+- name: airwallex-hpp
+  slug: airwallex-dev-hpp
+- name: airwallex-kyc
+  slug: airwallex-dev-kyc
+- name: airwallex-split-card
+  slug: airwallex-dev-split-card
 slug: airwallex
 tags:
 - Cross-Border Payments

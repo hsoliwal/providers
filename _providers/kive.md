@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,9 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,13 +43,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Kive MCP server is Kive''s programmable interface: an OAuth 2.1 protected Model Context Protocol endpoint that lets an authorized agent browse Kive workspaces, saved products, trained models, studi'
   name: Kive MCP Server
   slug: mcp
-artifact_total: 9
+artifact_total: 11
 common:
 - group: company
   title: ''
@@ -67,7 +76,7 @@ common:
   type: Blog
   url: https://kive.ai/news
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/changelog/kive-changelog.yml
+  href: https://artifacts.apis.io/kive/changelog/kive-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kive-changelog.yml
@@ -92,37 +101,37 @@ common:
   type: PrivacyPolicy
   url: https://kive.ai/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/mcp/kive-mcp.yml
+  href: https://artifacts.apis.io/kive/mcp/kive-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kive-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/authentication/kive-authentication.yml
+  href: https://artifacts.apis.io/kive/authentication/kive-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kive-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/scopes/kive-scopes.yml
+  href: https://artifacts.apis.io/kive/scopes/kive-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/kive-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/llms/kive-llms.txt
+  href: https://artifacts.apis.io/kive/llms/kive-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kive-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/well-known/kive-well-known.yml
+  href: https://artifacts.apis.io/kive/well-known/kive-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kive-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/conventions/kive-conventions.yml
+  href: https://artifacts.apis.io/kive/conventions/kive-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kive-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/conformance/kive-conformance.yml
+  href: https://artifacts.apis.io/kive/conformance/kive-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kive-conformance.yml
@@ -131,7 +140,7 @@ common:
   type: Compliance
   url: https://trust.kive.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/security/kive-trust-center.yml
+  href: https://artifacts.apis.io/kive/security/kive-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kive-trust-center.yml
@@ -140,7 +149,7 @@ common:
   type: Trust
   url: https://trust.kive.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/security/kive-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kive/security/kive-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kive-vulnerability-disclosure.yml
@@ -149,17 +158,17 @@ common:
   type: Security
   url: https://trust.kive.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/security/kive-domain-security.yml
+  href: https://artifacts.apis.io/kive/security/kive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kive-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/plans/kive-plans.yml
+  href: https://artifacts.apis.io/kive/plans/kive-plans.yml
   title: ''
   type: Plans
   url: plans/kive-plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/rate-limits/kive-rate-limits.yml
+  href: https://artifacts.apis.io/kive/rate-limits/kive-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kive-rate-limits.yml
@@ -193,6 +202,14 @@ common:
   url: https://facebook.com/kiveai
 created: '2026-07-17'
 description: Kive is an AI product photography and campaign content platform for e-commerce brands, built by TO LABS AB and used by more than 10,000 brands. It generates accurate product shots, lifestyle scenes, campaign imagery and product videos from a brand's own assets, using a large catalogue of professionally curated visual presets ("studios") tuned to categories such as fashion, cosmetics, skincare, jewellery and footwear. The platform pairs generation with a creative asset library, AI-powered search, boards, custom-trained subject models, bulk catalogue generation and editing tools (background removal and replacement, canvas extension, upscaling). Kive publishes no public REST API; its programmable surface is an OAuth-protected Model Context Protocol server at mcp.kive.ai that lets agents browse workspaces and products and create images and videos on the user's credits.
+finops:
+- has_sources: true
+  method: derived
+  name: Kive Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: kive-finops
+  template: false
 image: https://mcp.kive.ai/kive_logo_192.png
 layout: provider
 mcp_servers:
@@ -209,9 +226,12 @@ overview: 'Kive is listed with 1 API on the [APIs.io](https://apis.io/) network.
   Kive''s developer surface includes documentation, getting-started guide, support, engineering blog, changelog, pricing, signup flow, and 27 more developer resources.'
 plans:
 - name: Kive Plans
-  plan_count: 4
+  plan_count: 14
   slug: kive-plans
-random_paper: 13
+- name: Kive Price Estimates
+  plan_count: 0
+  slug: kive-price-estimates
+random_paper: 23
 rate_limits:
 - limit_count: 3
   name: Kive Rate Limits
@@ -223,23 +243,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.6
+  composite: 49.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 61.0
+    artifact_dirs: 17
+    catalog_earned: 64.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 5.3
   facets:
-    access_clarity: 64.5
+    access_clarity: 93.4
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
     discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 42.9
+  previous_composite: 44.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -248,15 +268,15 @@ score:
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
-    score: 34.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 41.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kive/refs/heads/main/screenshots/kive-2026-07-25T223918.png
+screenshot: https://apis.io/screenshots/kive/kive-2026-07-25T223918.png
 security:
 - kind: authentication
   name: Kive Authentication

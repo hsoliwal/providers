@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The WorldFirst Enterprise Solution (World Account) API — a RESTful, JSON, signed-request interface covering customer onboarding, account and beneficiary management, statements, foreign exchange, trans
@@ -54,7 +60,7 @@ asyncapis:
   slug: worldfirst-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/security/worldfirst-domain-security.yml
+  href: https://artifacts.apis.io/worldfirst/security/worldfirst-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/worldfirst-domain-security.yml
@@ -111,42 +117,42 @@ common:
   type: HelpCenter
   url: https://www.worldfirst.com/help-center/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/llms/worldfirst-llms.txt
+  href: https://artifacts.apis.io/worldfirst/llms/worldfirst-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/worldfirst-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/authentication/worldfirst-authentication.yml
+  href: https://artifacts.apis.io/worldfirst/authentication/worldfirst-authentication.yml
   title: ''
   type: Authentication
   url: authentication/worldfirst-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/conventions/worldfirst-conventions.yml
+  href: https://artifacts.apis.io/worldfirst/conventions/worldfirst-conventions.yml
   title: ''
   type: Conventions
   url: conventions/worldfirst-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/errors/worldfirst-problem-types.yml
+  href: https://artifacts.apis.io/worldfirst/errors/worldfirst-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/worldfirst-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/asyncapi/worldfirst-webhooks.yml
+  href: https://artifacts.apis.io/worldfirst/asyncapi/worldfirst-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/worldfirst-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/sandbox/worldfirst-sandbox.yml
+  href: https://artifacts.apis.io/worldfirst/sandbox/worldfirst-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/worldfirst-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/lifecycle/worldfirst-lifecycle.yml
+  href: https://artifacts.apis.io/worldfirst/lifecycle/worldfirst-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/worldfirst-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/conformance/worldfirst-conformance.yml
+  href: https://artifacts.apis.io/worldfirst/conformance/worldfirst-conformance.yml
   title: ''
   type: Conformance
   url: conformance/worldfirst-conformance.yml
@@ -166,12 +172,12 @@ overview: 'WorldFirst is listed with 3 APIs on the [APIs.io](https://apis.io/) n
 
 
   WorldFirst''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, authentication, and 15 more developer resources.'
-random_paper: 4
+random_paper: 0
 score:
   band: thin
   composite: 39.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -202,14 +208,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/worldfirst/refs/heads/main/screenshots/worldfirst-2026-08-17T083002.png
+screenshot: https://apis.io/screenshots/worldfirst/worldfirst-2026-08-17T083002.png
 security:
 - kind: authentication
   name: Worldfirst Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.3
-  scored_at: '2026-10-17'
+  score: 47.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -75,15 +82,12 @@ apis:
   description: InstaML transaction writes.
   name: InstantDB Transactions API
   slug: instantdb-transactions-api
-artifact_total: 22
+artifact_total: 21
 asyncapis:
 - description: 'AsyncAPI 2.6 description of InstantDB''s **realtime sync** surface. Unlike a request/response REST API, InstantDB is a sync engine. The client SDK''s **Reactor** opens a persistent WebSocket connection '
   name: InstantDB Realtime Sync (WebSocket)
   slug: instantdb-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: InstantDB Admin HTTP Auth API
   slug: open-instantdb-auth-api
@@ -104,22 +108,22 @@ collections:
   slug: open-instantdb
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/capabilities/instantdb-capability-edges.yml
+  href: https://artifacts.apis.io/instantdb/capabilities/instantdb-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/instantdb-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/agentic-access/instantdb-agentic-access.yml
+  href: https://artifacts.apis.io/instantdb/agentic-access/instantdb-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/instantdb-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/security/instantdb-domain-security.yml
+  href: https://artifacts.apis.io/instantdb/security/instantdb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/instantdb-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/authentication/instantdb-authentication.yml
+  href: https://artifacts.apis.io/instantdb/authentication/instantdb-authentication.yml
   title: ''
   type: Authentication
   url: authentication/instantdb-authentication.yml
@@ -140,17 +144,17 @@ common:
   type: Documentation
   url: https://www.instantdb.com/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/plans/instantdb-plans-pricing.yml
+  href: https://artifacts.apis.io/instantdb/plans/instantdb-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/instantdb-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/rate-limits/instantdb-rate-limits.yml
+  href: https://artifacts.apis.io/instantdb/rate-limits/instantdb-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/instantdb-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/finops/instantdb-finops.yml
+  href: https://artifacts.apis.io/instantdb/finops/instantdb-finops.yml
   title: ''
   type: FinOps
   url: finops/instantdb-finops.yml
@@ -189,7 +193,7 @@ plans:
 - name: Instantdb Plans Pricing
   plan_count: 4
   slug: instantdb-plans-pricing
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 5
   name: Instantdb Rate Limits
@@ -211,13 +215,13 @@ score:
   band: thin
   composite: 31.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 47.5
     catalog_earned_first_party: 0.0
     catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -225,7 +229,7 @@ score:
     developer_ergonomics: 32.1
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 39.4
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -240,13 +244,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/instantdb/refs/heads/main/screenshots/instantdb-2026-06-20T183415.png
+screenshot: https://apis.io/screenshots/instantdb/instantdb-2026-06-20T183415.png
 security:
 - kind: authentication
   name: Instantdb Authentication

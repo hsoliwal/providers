@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -65,11 +68,8 @@ apis:
   description: Isolate and un-isolate users from the Stealth network
   name: Unisys User Isolation API
   slug: unisys-user-isolation-api
-artifact_total: 30
+artifact_total: 29
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Unisys Stealth Eco Combined Isolation API
   slug: open-unisys-combined-isolation-api
@@ -84,17 +84,17 @@ collections:
   slug: open-unisys-user-isolation-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/plans/unisys-plans-pricing.yml
+  href: https://artifacts.apis.io/unisys/plans/unisys-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/unisys-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/rate-limits/unisys-rate-limits.yml
+  href: https://artifacts.apis.io/unisys/rate-limits/unisys-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/unisys-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/finops/unisys-finops.yml
+  href: https://artifacts.apis.io/unisys/finops/unisys-finops.yml
   title: ''
   type: FinOps
   url: finops/unisys-finops.yml
@@ -103,22 +103,22 @@ common:
   type: Website
   url: https://unisys.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/agentic-access/unisys-agentic-access.yml
+  href: https://artifacts.apis.io/unisys/agentic-access/unisys-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/unisys-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/security/unisys-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/unisys/security/unisys-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/unisys-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/security/unisys-domain-security.yml
+  href: https://artifacts.apis.io/unisys/security/unisys-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unisys-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unisys/refs/heads/main/authentication/unisys-authentication.yml
+  href: https://artifacts.apis.io/unisys/authentication/unisys-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unisys-authentication.yml
@@ -207,7 +207,7 @@ press:
 - date: ''
   title: Earnings Releases
   url: https://www.unisys.com/investor-relations/earnings-releases/
-random_paper: 1
+random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Unisys Rate Limits
@@ -249,23 +249,23 @@ rules:
   slug: unisys-stealth-spectral-rules
 score:
   band: emerging
-  composite: 22.4
+  composite: 23.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 70.0
     catalog_earned_first_party: 0.0
     catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
     contract_quality: 27.9
     developer_ergonomics: 14.3
     discoverability: 71.4
-    operational_transparency: 5.3
-  previous_composite: 23.9
+    operational_transparency: 15.8
+  previous_composite: 23.8
   provenance:
     agentic_access: derived
     contracts:
@@ -279,8 +279,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true

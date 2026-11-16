@@ -1,12 +1,18 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.5
-  scored_at: '2026-10-17'
+  score: 47.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 61
   human_in_the_loop: 3
@@ -258,15 +267,12 @@ apis:
   description: The TravelRulePublic API from Paxos — 2 operation(s) for travelrulepublic.
   name: Paxos TravelRulePublic API
   slug: paxos-travelrulepublic-api
-artifact_total: 92
+artifact_total: 96
 asyncapis:
 - description: ''
   name: Paxos Webhooks
   slug: paxos-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Paxos Account Members API
   slug: open-paxos-account-members-api
@@ -398,7 +404,7 @@ collections:
   slug: open-paxos-travelrulepublic-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/capabilities/paxos-capability-edges.yml
+  href: https://artifacts.apis.io/paxos/capabilities/paxos-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/paxos-capability-edges.yml
@@ -455,92 +461,92 @@ common:
   type: PrivacyPolicy
   url: https://paxos.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/authentication/paxos-authentication.yml
+  href: https://artifacts.apis.io/paxos/authentication/paxos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/paxos-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/scopes/paxos-scopes.yml
+  href: https://artifacts.apis.io/paxos/scopes/paxos-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/paxos-scopes.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/well-known/paxos-openid-configuration.json
+  href: https://artifacts.apis.io/paxos/well-known/paxos-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/paxos-openid-configuration.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/well-known/paxos-well-known.yml
+  href: https://artifacts.apis.io/paxos/well-known/paxos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/paxos-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/mcp/paxos-mcp.yml
+  href: https://artifacts.apis.io/paxos/mcp/paxos-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/paxos-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/conventions/paxos-conventions.yml
+  href: https://artifacts.apis.io/paxos/conventions/paxos-conventions.yml
   title: ''
   type: Conventions
   url: conventions/paxos-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/conventions/paxos-conventions.yml
+  href: https://artifacts.apis.io/paxos/conventions/paxos-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/paxos-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/errors/paxos-problem-types.yml
+  href: https://artifacts.apis.io/paxos/errors/paxos-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/paxos-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/lifecycle/paxos-lifecycle.yml
+  href: https://artifacts.apis.io/paxos/lifecycle/paxos-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/paxos-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/sandbox/paxos-sandbox.yml
+  href: https://artifacts.apis.io/paxos/sandbox/paxos-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/paxos-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/data-model/paxos-data-model.yml
+  href: https://artifacts.apis.io/paxos/data-model/paxos-data-model.yml
   title: ''
   type: DataModel
   url: data-model/paxos-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/conformance/paxos-conformance.yml
+  href: https://artifacts.apis.io/paxos/conformance/paxos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/paxos-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/asyncapi/paxos-webhooks.yml
+  href: https://artifacts.apis.io/paxos/asyncapi/paxos-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/paxos-webhooks.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/overlays/paxos-v2-overlay.yaml
+  href: https://artifacts.apis.io/paxos/overlays/paxos-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/paxos-v2-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/agentic-access/paxos-agentic-access.yml
+  href: https://artifacts.apis.io/paxos/agentic-access/paxos-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/paxos-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/security/paxos-domain-security.yml
+  href: https://artifacts.apis.io/paxos/security/paxos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paxos-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/paxos/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/changelog/paxos-changelog.yml
+  href: https://artifacts.apis.io/paxos/changelog/paxos-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/paxos-changelog.yml
@@ -559,11 +565,24 @@ network: true
 overview: 'Paxos publishes 43 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Members API, Accounts API, Address Verification API, and 40 more. Tagged areas include Company, Stablecoins, Cryptocurrency, Payments, and Crypto Brokerage.
 
 
-  The Paxos catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Paxos catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Paxos'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 26 more developer resources.'
-random_paper: 5
+random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Paxos API Rules
+  rule_count: 59
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 13
+  slug: paxos-rules
 scopes:
 - name: Paxos Scopes
   scope_count: 66
@@ -571,23 +590,23 @@ scopes:
   summary_line: 66 scopes · clientCredentials
 score:
   band: developing
-  composite: 47.2
+  composite: 48.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 57.3
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 47.2
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -604,13 +623,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/paxos/refs/heads/main/screenshots/paxos-2026-08-07T191628.png
+screenshot: https://apis.io/screenshots/paxos/paxos-2026-08-07T191628.png
 security:
 - kind: authentication
   name: Paxos Authentication
@@ -620,6 +639,16 @@ security:
   name: Paxos Domain Security
   slug: paxos-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Buy crypto with a held-rate quote
+  slug: paxos-buy-crypto-with-quote
+- name: Convert to a stablecoin and withdraw on-chain
+  slug: paxos-convert-and-withdraw-stablecoin
+- name: Onboard an identity and open an account
+  slug: paxos-onboard-identity-and-account
+- name: Place and manage an exchange order
+  slug: paxos-trade-on-exchange
 slug: paxos
 tags:
 - Company

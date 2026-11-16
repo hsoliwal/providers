@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -13,6 +16,7 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: unknown
@@ -21,21 +25,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: na
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: derived
-    idempotency: false
+    idempotency: na
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: full
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: documented
+    reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-10-17'
+  score: 47.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 3
@@ -50,43 +57,15 @@ apis:
   slug: gas-station
 - baseURL: https://api.circle.com/v1/w3s
   baseurl_source: declared
-  description: The Signing API from Circle — 4 operation(s) for signing.
-  name: Circle Signing API
-  slug: circle-signing-api
-- baseURL: https://api.circle.com/v1/w3s
-  baseurl_source: declared
-  description: The Tokens API from Circle — 1 operation(s) for tokens.
-  name: Circle Tokens API
-  slug: circle-tokens-api
-- baseURL: https://api.circle.com/v1/w3s
-  baseurl_source: declared
-  description: The Transactions API from Circle — 12 operation(s) for transactions.
-  name: Circle Transactions API
-  slug: circle-transactions-api
-- baseURL: https://api.circle.com/v1/w3s
-  baseurl_source: declared
-  description: The Wallet Sets API from Circle — 4 operation(s) for wallet sets.
-  name: Circle Wallet Sets API
-  slug: circle-wallet-sets-api
-- baseURL: https://api.circle.com/v1/w3s
-  baseurl_source: declared
-  description: The Wallets API from Circle — 7 operation(s) for wallets.
-  name: Circle Wallets API
-  slug: circle-wallets-api
-- baseURL: https://api.circle.com/v1/w3s
-  baseurl_source: declared
-  description: The NFTs API from Circle — 1 operation(s) for nfts.
-  name: Circle NF Ts API
-  slug: circle-nfts-api
-artifact_total: 30
+  description: Retrieve a log of actions taken in your Circle account.
+  name: Circle Audit Logs API
+  slug: circle-audit-logs-api
+artifact_total: 24
 asyncapis:
 - description: AsyncAPI description of Circle's outbound webhook (notification) surfaces. Circle delivers event notifications by POSTing a JSON body to a subscriber endpoint that is registered via product-specific n
   name: Circle Webhook Notifications
   slug: circle-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Circle Web3 Services (W3S) — Developer-Controlled Wallets NFTs API
   slug: open-circle-nfts-api
@@ -109,18 +88,22 @@ collections:
   name: Circle Web3 Services (W3S) — Developer-Controlled Wallets API
   slug: open-circle
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/circle/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/plans/circle-plans-pricing.yml
+  href: https://artifacts.apis.io/circle/plans/circle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/circle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/rate-limits/circle-rate-limits.yml
+  href: https://artifacts.apis.io/circle/rate-limits/circle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/circle-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/finops/circle-finops.yml
+  href: https://artifacts.apis.io/circle/finops/circle-finops.yml
   title: ''
   type: FinOps
   url: finops/circle-finops.yml
@@ -137,17 +120,17 @@ common:
   type: MCPServer
   url: https://developers.circle.com/ai/mcp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/agentic-access/circle-agentic-access.yml
+  href: https://artifacts.apis.io/circle/agentic-access/circle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/circle-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/security/circle-domain-security.yml
+  href: https://artifacts.apis.io/circle/security/circle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/circle-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/authentication/circle-authentication.yml
+  href: https://artifacts.apis.io/circle/authentication/circle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/circle-authentication.yml
@@ -204,27 +187,27 @@ common:
   type: TermsOfService
   url: https://www.circle.com/legal/terms-of-service
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/json-ld/circle-context.jsonld
+  href: https://artifacts.apis.io/circle/json-ld/circle-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/circle-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/json-schema/circle-wallet-schema.json
+  href: https://artifacts.apis.io/circle/json-schema/circle-wallet-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/circle-wallet-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/json-schema/circle-transaction-schema.json
+  href: https://artifacts.apis.io/circle/json-schema/circle-transaction-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/circle-transaction-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/asyncapi/circle-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/circle/asyncapi/circle-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/circle-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/rules/circle-rules.yml
+  href: https://artifacts.apis.io/circle/rules/circle-rules.yml
   title: ''
   type: Spectral
   url: rules/circle-rules.yml
@@ -238,7 +221,7 @@ finops:
 - has_sources: false
   method: generated
   name: Circle Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: circle-finops
   template: true
@@ -267,18 +250,18 @@ modified: '2026-05-30'
 name: Circle
 nav: Providers
 network: true
-overview: 'Circle publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Signing API, Tokens API, Transactions API, and 4 more. Tagged areas include Blockchain, Compliance, Cross-Chain, Currency, and Money.
+overview: 'Circle publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit Logs API, and 1 more. Tagged areas include Blockchain, Compliance, Cross-Chain, Currency, and Money.
 
 
   The Circle catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Circle''s developer surface includes API reference, authentication, developer portal, developer console, getting-started guide, support, engineering blog, and 21 more developer resources.'
+  Circle''s developer surface includes API reference, authentication, developer portal, developer console, getting-started guide, support, engineering blog, and 22 more developer resources.'
 plans:
 - name: Circle Plans Pricing
   plan_count: 3
   slug: circle-plans-pricing
-random_paper: 10
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Circle Rate Limits
@@ -320,31 +303,31 @@ rules:
     warn: 4
   slug: circle-rules
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 41.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 52.5
     catalog_earned_first_party: 0.0
     catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.1
   facets:
     access_clarity: 18.4
     contract_governance: 13.6
-    contract_quality: 56.1
-    developer_ergonomics: 46.9
+    contract_quality: 61.6
+    developer_ergonomics: 48.1
     discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 40.4
+  previous_composite: 41.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 6
+      marker_coverage: 12.5
+      total: 8
     mcp: first-party
   regulatory:
     applies: true
@@ -352,13 +335,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
-    applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/screenshots/circle-2026-06-20T174349.png
+    applies: false
+    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
+    reason: read_only
+screenshot: https://apis.io/screenshots/circle/circle-2026-06-20T174349.png
 security:
 - kind: authentication
   name: Circle Authentication

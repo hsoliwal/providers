@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/old-republic-international/refs/heads/main/security/old-republic-international-domain-security.yml
+  href: https://artifacts.apis.io/old-republic-international/security/old-republic-international-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/old-republic-international-domain-security.yml
@@ -106,12 +110,12 @@ press:
 - date: ''
   title: OLD REPUBLIC REPORTS RESULTS FOR THE FIRST ...
   url: https://www.prnewswire.com/news-releases/old-republic-reports-results-for-the-first-quarter-2026-302751056.html
-random_paper: 1
+random_paper: 23
 score:
   band: minimal
   composite: 3.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -132,14 +136,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 5.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/old-republic-international/refs/heads/main/screenshots/old-republic-international-2026-06-20T190657.png
+screenshot: https://apis.io/screenshots/old-republic-international/old-republic-international-2026-06-20T190657.png
 security:
 - kind: domain-security
   name: Old Republic International Domain Security

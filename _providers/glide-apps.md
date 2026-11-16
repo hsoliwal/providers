@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -47,16 +53,6 @@ api_count: 1
 apis:
 - baseURL: https://api.glideapps.com
   baseurl_source: declared
-  description: Query a Big Table with SQL.
-  name: Glide Queries API
-  slug: glide-apps-queries-api
-- baseURL: https://api.glideapps.com
-  baseurl_source: declared
-  description: List, read, add, update, and delete rows in a Big Table.
-  name: Glide Rows API
-  slug: glide-apps-rows-api
-- baseURL: https://api.glideapps.com
-  baseurl_source: declared
   description: Stage large data payloads in serial chunks for bulk loads.
   name: Glide Stashes API
   slug: glide-apps-stashes-api
@@ -65,11 +61,23 @@ apis:
   description: Create, overwrite, and list Big Tables.
   name: Glide Tables API
   slug: glide-apps-tables-api
-artifact_total: 17
+- baseURL: https://api.glideapps.com
+  baseurl_source: declared
+  description: The Apps API from Glide — 8 operation(s) for apps.
+  name: Glide Apps API
+  slug: glide-apps-apps-api
+- baseURL: https://api.glideapps.com
+  baseurl_source: declared
+  description: The Jobs API from Glide — 1 operation(s) for jobs.
+  name: Glide Jobs API
+  slug: glide-apps-jobs-api
+- baseURL: https://api.glideapps.com
+  baseurl_source: declared
+  description: The Me API from Glide — 1 operation(s) for me.
+  name: Glide Me API
+  slug: glide-apps-me-api
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Glide Queries API
   slug: open-glide-apps-queries-api
@@ -91,22 +99,22 @@ common:
   type: Pricing
   url: https://www.glideapps.com/pricing
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/agentic-access/glide-apps-agentic-access.yml
+  href: https://artifacts.apis.io/glide-apps/agentic-access/glide-apps-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/glide-apps-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/security/glide-apps-trust-center.yml
+  href: https://artifacts.apis.io/glide-apps/security/glide-apps-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/glide-apps-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/security/glide-apps-domain-security.yml
+  href: https://artifacts.apis.io/glide-apps/security/glide-apps-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/glide-apps-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/authentication/glide-apps-authentication.yml
+  href: https://artifacts.apis.io/glide-apps/authentication/glide-apps-authentication.yml
   title: ''
   type: Authentication
   url: authentication/glide-apps-authentication.yml
@@ -127,17 +135,17 @@ common:
   type: Documentation
   url: https://www.glideapps.com/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/plans/glide-apps-plans-pricing.yml
+  href: https://artifacts.apis.io/glide-apps/plans/glide-apps-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/glide-apps-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/rate-limits/glide-apps-rate-limits.yml
+  href: https://artifacts.apis.io/glide-apps/rate-limits/glide-apps-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/glide-apps-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/finops/glide-apps-finops.yml
+  href: https://artifacts.apis.io/glide-apps/finops/glide-apps-finops.yml
   title: ''
   type: FinOps
   url: finops/glide-apps-finops.yml
@@ -161,7 +169,10 @@ modified: '2026-06-20'
 name: Glide
 nav: Providers
 network: true
-overview: 'Glide publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Queries API, Rows API, Stashes API, and 1 more. Tagged areas include No-Code, App Builder, Tables, Big Tables, and Data.
+overview: 'Glide publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Stashes API, Tables API, Apps API, and 2 more. Tagged areas include No-Code, App Builder, Tables, Big Tables, and Data.
+
+
+  The Glide catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Glide''s developer surface includes pricing, authentication, documentation, engineering blog, and 9 more developer resources.'
@@ -169,50 +180,63 @@ plans:
 - name: Glide Apps Plans Pricing
   plan_count: 5
   slug: glide-apps-plans-pricing
-random_paper: 8
+random_paper: 14
 rate_limits:
 - limit_count: 4
   name: Glide Apps Rate Limits
   slug: glide-apps-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Glide API Rules
+  rule_count: 49
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 3
+    warn: 3
+  slug: glide-apps-rules
 score:
   band: thin
-  composite: 36.5
+  composite: 36.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 52.0
+    artifact_dirs: 16
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -0.5
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
-    contract_quality: 51.1
+    access_clarity: 44.7
+    contract_governance: 13.6
+    contract_quality: 49.7
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 38.0
+  previous_composite: 37.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 4
+      marker_coverage: 50.0
+      total: 10
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/glide-apps/refs/heads/main/screenshots/glide-apps-2026-06-20T181910.png
+screenshot: https://apis.io/screenshots/glide-apps/glide-apps-2026-06-20T181910.png
 security:
 - kind: authentication
   name: Glide Apps Authentication

@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
-  pricing: freemium
+  gated: private
+  gated_source:
+  - apis
+  label: Paid · Requires approval
+  onboarding: approval
+  pricing: paid
   public: false
   source:
-  - plans
+  - finops
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Argus Research Company''s coverage and ratings surface: analyst BUY/HOLD/SELL recommendations and target prices on 500+ US equities across 60+ industries, A6 quantitative ratings on 1,100+ companies, a'
@@ -43,22 +51,22 @@ apis:
 artifact_total: 24
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/argus-investor/refs/heads/main/plans/argus-investor-plans-pricing.yml
+  href: https://artifacts.apis.io/argus-investor/plans/argus-investor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/argus-investor-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/argus-investor/refs/heads/main/rate-limits/argus-investor-rate-limits.yml
+  href: https://artifacts.apis.io/argus-investor/rate-limits/argus-investor-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/argus-investor-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/argus-investor/refs/heads/main/finops/argus-investor-finops.yml
+  href: https://artifacts.apis.io/argus-investor/finops/argus-investor-finops.yml
   title: ''
   type: FinOps
   url: finops/argus-investor-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/argus-investor/refs/heads/main/security/argus-investor-domain-security.yml
+  href: https://artifacts.apis.io/argus-investor/security/argus-investor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/argus-investor-domain-security.yml
@@ -83,7 +91,7 @@ common:
   type: PrivacyPolicy
   url: https://www.argusresearch.com/privacy.aspx
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/argus-investor/refs/heads/main/llms/argus-investor-llms.txt
+  href: https://artifacts.apis.io/argus-investor/llms/argus-investor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/argus-investor-llms.txt
@@ -130,7 +138,7 @@ finops:
 - has_sources: false
   method: generated
   name: Argus Investor Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: argus-investor-finops
   template: true
@@ -161,7 +169,7 @@ plans:
 - name: Argus Investor Plans Pricing
   plan_count: 0
   slug: argus-investor-plans-pricing
-random_paper: 7
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Argus Investor Rate Limits
@@ -170,13 +178,13 @@ score:
   band: emerging
   composite: 12.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
@@ -184,7 +192,7 @@ score:
     developer_ergonomics: 7.1
     discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 13.9
+  previous_composite: 12.4
   provenance:
     mcp: first-party
   regulatory:
@@ -193,14 +201,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/argus-investor/refs/heads/main/screenshots/argus-investor-2026-06-20T172426.png
+screenshot: https://apis.io/screenshots/argus-investor/argus-investor-2026-06-20T172426.png
 security:
 - kind: domain-security
   name: Argus Investor Domain Security

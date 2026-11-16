@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Enterprise · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -22,19 +23,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.6
-  scored_at: '2026-10-17'
+  score: 37.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -92,11 +96,8 @@ apis:
   description: Device event subscriptions.
   name: Samsung Subscriptions API
   slug: samsung-subscriptions-api
-artifact_total: 50
+artifact_total: 54
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Samsung SmartThings Apps API
   slug: open-samsung-apps-api
@@ -119,38 +120,93 @@ collections:
   name: Samsung SmartThings Apps Subscriptions API
   slug: open-samsung-subscriptions-api
 common:
+- group: design
+  href: https://artifacts.apis.io/samsung/rules/samsung-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/samsung-rules.yml
+- group: design
+  href: https://artifacts.apis.io/samsung/rules/samsung-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/samsung-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/samsung/json-ld/samsung-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/samsung-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/samsung/data-model/samsung-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/samsung-data-model.yml
+- group: design
+  href: https://artifacts.apis.io/samsung/errors/samsung-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/samsung-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/samsung/conformance/samsung-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/samsung-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/samsung/mcp/samsung-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/samsung-mcp.yml
+- group: agent
+  href: https://artifacts.apis.io/samsung/well-known/samsung-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/samsung-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/samsung/hosts/samsung-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/samsung-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/samsung/integrations/samsung-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/samsung-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/samsung/vendors/samsung-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/samsung-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/plans/samsung-plans-pricing.yml
+  href: https://artifacts.apis.io/samsung/plans/samsung-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/samsung-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/rate-limits/samsung-rate-limits.yml
+  href: https://artifacts.apis.io/samsung/rate-limits/samsung-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/samsung-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/finops/samsung-finops.yml
+  href: https://artifacts.apis.io/samsung/finops/samsung-finops.yml
   title: ''
   type: FinOps
   url: finops/samsung-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/capabilities/samsung-capability-edges.yml
+  href: https://artifacts.apis.io/samsung/capabilities/samsung-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/samsung-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/agentic-access/samsung-agentic-access.yml
+  href: https://artifacts.apis.io/samsung/agentic-access/samsung-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/samsung-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/security/samsung-domain-security.yml
+  href: https://artifacts.apis.io/samsung/security/samsung-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/samsung-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/authentication/samsung-authentication.yml
+  href: https://artifacts.apis.io/samsung/authentication/samsung-authentication.yml
   title: ''
   type: Authentication
   url: authentication/samsung-authentication.yml
@@ -183,37 +239,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/samsung
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/rules/samsung-rules.yml
+  href: https://artifacts.apis.io/samsung/rules/samsung-rules.yml
   title: Samsung API Spectral Rules
   type: SpectralRules
   url: rules/samsung-rules.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/json-schema/samsung-smartthings-device-schema.json
+  href: https://artifacts.apis.io/samsung/json-schema/samsung-smartthings-device-schema.json
   title: Samsung SmartThings Device Schema
   type: JSONSchema
   url: json-schema/samsung-smartthings-device-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/json-structure/samsung-smartthings-device-structure.json
+  href: https://artifacts.apis.io/samsung/json-structure/samsung-smartthings-device-structure.json
   title: Samsung SmartThings Device Structure
   type: JSONStructure
   url: json-structure/samsung-smartthings-device-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/json-ld/samsung-context.jsonld
+  href: https://artifacts.apis.io/samsung/json-ld/samsung-context.jsonld
   title: Samsung JSON-LD Context
   type: JSONLDContext
   url: json-ld/samsung-context.jsonld
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/examples/samsung-list-devices-example.json
+  href: https://artifacts.apis.io/samsung/examples/samsung-list-devices-example.json
   title: Samsung SmartThings List Devices Example
   type: Examples
   url: examples/samsung-list-devices-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/examples/samsung-execute-device-command-example.json
+  href: https://artifacts.apis.io/samsung/examples/samsung-execute-device-command-example.json
   title: Samsung SmartThings Execute Device Command Example
   type: Examples
   url: examples/samsung-execute-device-command-example.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/vocabulary/samsung-vocabulary.yml
+  href: https://artifacts.apis.io/samsung/vocabulary/samsung-vocabulary.yml
   title: Samsung Developer Vocabulary
   type: Vocabulary
   url: vocabulary/samsung-vocabulary.yml
@@ -244,6 +300,15 @@ json_schemas:
   slug: samsung-app
 - name: CreateLocationRequest
   property_count: 8
+  slug: samsung-create-location-request
+- name: CreateRuleRequest
+  property_count: 3
+  slug: samsung-create-rule-request
+- name: CreateSubscriptionRequest
+  property_count: 2
+  slug: samsung-create-subscription-request
+- name: CreateLocationRequest
+  property_count: 8
   slug: samsung-createlocationrequest
 - name: CreateRuleRequest
   property_count: 3
@@ -251,9 +316,15 @@ json_schemas:
 - name: CreateSubscriptionRequest
   property_count: 2
   slug: samsung-createsubscriptionrequest
+- name: DeviceCommandRequest
+  property_count: 1
+  slug: samsung-device-command-request
 - name: Device
   property_count: 10
   slug: samsung-device
+- name: DeviceStatus
+  property_count: 1
+  slug: samsung-device-status
 - name: DeviceCommandRequest
   property_count: 1
   slug: samsung-devicecommandrequest
@@ -311,12 +382,12 @@ overview: 'Samsung publishes 12 API contracts indexed on the [APIs.io](https://a
   The Samsung catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Samsung''s developer surface includes authentication, engineering blog, documentation, code examples, and 17 more developer resources.'
+  Samsung''s developer surface includes authentication, engineering blog, documentation, code examples, and 28 more developer resources.'
 plans:
 - name: Samsung Plans Pricing
   plan_count: 1
   slug: samsung-plans-pricing
-random_paper: 18
+random_paper: 22
 rate_limits:
 - limit_count: 1
   name: Samsung Rate Limits
@@ -347,19 +418,19 @@ rules:
   slug: samsung-rules
 score:
   band: thin
-  composite: 32.0
+  composite: 34.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 53.0
+    artifact_dirs: 28
+    catalog_earned: 62.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 62.0
+    catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 2.1
   facets:
     access_clarity: 5.3
-    contract_governance: 27.3
-    contract_quality: 62.7
+    contract_governance: 31.8
+    contract_quality: 68.8
     developer_ergonomics: 23.8
     discoverability: 66.7
     operational_transparency: 7.9
@@ -368,9 +439,10 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 33.5
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
@@ -383,13 +455,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/screenshots/samsung-2026-06-20T193400.png
+screenshot: https://apis.io/screenshots/samsung/samsung-2026-06-20T193400.png
 security:
 - kind: authentication
   name: Samsung Authentication

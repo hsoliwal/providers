@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 1
   slug: quadrant-api-agentic-access
   summary_line: 1 operation
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.qis.io
   baseurl_source: declared
@@ -53,9 +59,6 @@ apis:
 artifact_total: 10
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Quadrant v2 alerts API
   slug: open-quadrant-api-v2-alerts-api
 - collection_type: open
@@ -63,37 +66,37 @@ collections:
   slug: open-quadrant-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/plans/quadrant-api-plans-pricing.yml
+  href: https://artifacts.apis.io/quadrant-api/plans/quadrant-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quadrant-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/rate-limits/quadrant-api-rate-limits.yml
+  href: https://artifacts.apis.io/quadrant-api/rate-limits/quadrant-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/quadrant-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/finops/quadrant-api-finops.yml
+  href: https://artifacts.apis.io/quadrant-api/finops/quadrant-api-finops.yml
   title: ''
   type: FinOps
   url: finops/quadrant-api-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/capabilities/quadrant-api-capability-edges.yml
+  href: https://artifacts.apis.io/quadrant-api/capabilities/quadrant-api-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/quadrant-api-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/agentic-access/quadrant-api-agentic-access.yml
+  href: https://artifacts.apis.io/quadrant-api/agentic-access/quadrant-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/quadrant-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/security/quadrant-api-domain-security.yml
+  href: https://artifacts.apis.io/quadrant-api/security/quadrant-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quadrant-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/authentication/quadrant-api-authentication.yml
+  href: https://artifacts.apis.io/quadrant-api/authentication/quadrant-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/quadrant-api-authentication.yml
@@ -107,7 +110,7 @@ finops:
 - has_sources: false
   method: generated
   name: Quadrant Api Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: quadrant-api-finops
   template: true
@@ -120,41 +123,57 @@ network: true
 overview: 'Quadrant API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: v2 alerts API. Tagged areas include Alerts, Security, and Threat Intelligence.
 
 
+  The Quadrant API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Quadrant API''s developer surface includes authentication and 7 more developer resources.'
 plans:
 - name: Quadrant Api Plans Pricing
   plan_count: 3
   slug: quadrant-api-plans-pricing
-random_paper: 13
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Quadrant Api Rate Limits
   slug: quadrant-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Quadrant API API Rules
+  rule_count: 47
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 2
+    warn: 1
+  slug: quadrant-api-rules
 score:
   band: emerging
-  composite: 22.4
+  composite: 25.3
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 33.0
+    artifact_dirs: 13
+    catalog_earned: 37.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 82.0
+    catalog_gap: 77.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.3
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 44.7
+    contract_governance: 13.6
+    contract_quality: 49.7
     developer_ergonomics: 21.4
     discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 23.9
+  previous_composite: 24.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
   regulatory:
     applies: true
@@ -162,14 +181,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/screenshots/quadrant-api-2026-06-20T192357.png
+screenshot: https://apis.io/screenshots/quadrant-api/quadrant-api-2026-06-20T192357.png
 security:
 - kind: authentication
   name: Quadrant Api Authentication

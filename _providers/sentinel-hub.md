@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-10-17'
+  score: 27.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 2
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 95
   slug: sentinel-hub-agentic-access
   summary_line: 95 operations · 34 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: OGC-standard web services (WMS, WCS, WFS, WMTS) for integrating Sentinel Hub satellite imagery into GIS applications such as QGIS, ArcGIS, OpenLayers, and Google Earth. Authentication uses a configura
   name: Sentinel Hub OGC Services
@@ -172,11 +179,8 @@ apis:
   description: The zarr_collection API from Sentinel Hub — 3 operation(s) for zarr_collection.
   name: Sentinel Hub Zarr Collection API
   slug: sentinel-hub-zarr-collection-api
-artifact_total: 343
+artifact_total: 342
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: API Reference async_process API
   slug: open-sentinel-hub-async-process-api
@@ -254,22 +258,22 @@ collections:
   slug: open-sentinel-hub-zarr-collection-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/agentic-access/sentinel-hub-agentic-access.yml
+  href: https://artifacts.apis.io/sentinel-hub/agentic-access/sentinel-hub-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sentinel-hub-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/security/sentinel-hub-domain-security.yml
+  href: https://artifacts.apis.io/sentinel-hub/security/sentinel-hub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sentinel-hub-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/authentication/sentinel-hub-authentication.yml
+  href: https://artifacts.apis.io/sentinel-hub/authentication/sentinel-hub-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sentinel-hub-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/scopes/sentinel-hub-scopes.yml
+  href: https://artifacts.apis.io/sentinel-hub/scopes/sentinel-hub-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sentinel-hub-scopes.yml
@@ -310,17 +314,17 @@ common:
   type: Dashboard
   url: https://apps.sentinel-hub.com/dashboard/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/plans/sentinel-hub-plans-pricing.yml
+  href: https://artifacts.apis.io/sentinel-hub/plans/sentinel-hub-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sentinel-hub-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/rate-limits/sentinel-hub-rate-limits.yml
+  href: https://artifacts.apis.io/sentinel-hub/rate-limits/sentinel-hub-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sentinel-hub-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/finops/sentinel-hub-finops.yml
+  href: https://artifacts.apis.io/sentinel-hub/finops/sentinel-hub-finops.yml
   title: ''
   type: FinOps
   url: finops/sentinel-hub-finops.yml
@@ -353,7 +357,7 @@ json_schemas:
   property_count: 3
   slug: AnalysisReadyPlanetScopeDataSpec
 - name: ArrayOverride
-  property_count: 0
+  property_count: 1
   slug: ArrayOverride
 - name: ArrayOverrides
   property_count: 0
@@ -401,7 +405,7 @@ json_schemas:
   property_count: 2
   slug: BYOCCollectionsResponse
 - name: BYOC / BATCH / ZARR
-  property_count: 0
+  property_count: 3
   slug: BYOCDataset
 - name: BYOCFiltering
   property_count: 2
@@ -458,10 +462,10 @@ json_schemas:
   property_count: 4
   slug: BatchStatisticalRequest
 - name: BatchStatisticalRequestAggregation
-  property_count: 0
+  property_count: 2
   slug: BatchStatisticalRequestAggregation
 - name: BatchStatisticsTaskDto
-  property_count: 0
+  property_count: 6
   slug: BatchStatisticsTaskDto
 - name: BatchStatisticsTaskStatusDto
   property_count: 8
@@ -470,7 +474,7 @@ json_schemas:
   property_count: 3
   slug: BatchTileOrigin
 - name: BatchV2ArrayOverride
-  property_count: 0
+  property_count: 1
   slug: BatchV2ArrayOverride
 - name: BatchV2CogParameters
   property_count: 6
@@ -566,7 +570,7 @@ json_schemas:
   property_count: 3
   slug: CatalogFeatureGeoJSON
 - name: featureCollectionGeoJSON
-  property_count: 0
+  property_count: 4
   slug: CatalogFeaturesFeatureCollectionGeoJSON
 - name: numberReturned
   property_count: 0
@@ -734,13 +738,13 @@ json_schemas:
   property_count: 0
   slug: CustomDatasetType
 - name: dem
-  property_count: 0
+  property_count: 3
   slug: DEMDataset
 - name: DEMFiltering
   property_count: 1
   slug: DEMFiltering
 - name: DEMProcessing
-  property_count: 0
+  property_count: 2
   slug: DEMProcessing
 - name: DatasetType
   property_count: 0
@@ -776,7 +780,7 @@ json_schemas:
   property_count: 3
   slug: Group
 - name: hls
-  property_count: 0
+  property_count: 3
   slug: HLSDataset
 - name: HLSFiltering
   property_count: 4
@@ -788,28 +792,28 @@ json_schemas:
   property_count: 0
   slug: Interpolator
 - name: landsat-ot-l1
-  property_count: 0
+  property_count: 2
   slug: L8L1Dataset
 - name: landsat-ot-l2
-  property_count: 0
+  property_count: 2
   slug: L8L2Dataset
 - name: landsat-etm-l1
-  property_count: 0
+  property_count: 2
   slug: LETML1Dataset
 - name: landsat-etm-l2
-  property_count: 0
+  property_count: 2
   slug: LETML2Dataset
 - name: landsat-mss-l1
-  property_count: 0
+  property_count: 2
   slug: LMSSL1Dataset
 - name: landsat-tm-l1
-  property_count: 0
+  property_count: 2
   slug: LTML1Dataset
 - name: landsat-tm-l2
-  property_count: 0
+  property_count: 2
   slug: LTML2Dataset
 - name: LandsatDataset
-  property_count: 0
+  property_count: 2
   slug: LandsatDataset
 - name: LandsatFiltering
   property_count: 3
@@ -824,7 +828,7 @@ json_schemas:
   property_count: 6
   slug: Location
 - name: landsat-8-l1c
-  property_count: 0
+  property_count: 2
   slug: Ls8Dataset
 - name: MaxCloudCoverage
   property_count: 0
@@ -848,13 +852,13 @@ json_schemas:
   property_count: 0
   slug: MaxarNativeSearchQuery
 - name: MaxarOrderRequest
-  property_count: 0
+  property_count: 1
   slug: MaxarOrderRequest
 - name: MaxarRequestBase
   property_count: 1
   slug: MaxarRequestBase
 - name: MaxarSearchQuery
-  property_count: 0
+  property_count: 1
   slug: MaxarSearchQuery
 - name: MaxarSearchResults
   property_count: 1
@@ -863,7 +867,7 @@ json_schemas:
   property_count: 0
   slug: MaxarSensor
 - name: modis
-  property_count: 0
+  property_count: 3
   slug: ModisDataset
 - name: ModisFiltering
   property_count: 2
@@ -908,10 +912,10 @@ json_schemas:
   property_count: 4
   slug: OrderDeliveryBase
 - name: OrderMaxarDelivery
-  property_count: 0
+  property_count: 1
   slug: OrderMaxarDelivery
 - name: OrderPlanetDelivery
-  property_count: 0
+  property_count: 1
   slug: OrderPlanetDelivery
 - name: OrderRequest
   property_count: 0
@@ -929,19 +933,19 @@ json_schemas:
   property_count: 0
   slug: PlanetNativeSearchQuery
 - name: PlanetOrderRequest
-  property_count: 0
+  property_count: 1
   slug: PlanetOrderRequest
 - name: PlanetOrderRequestBase
   property_count: 2
   slug: PlanetOrderRequestBase
 - name: PlanetSearchQuery
-  property_count: 0
+  property_count: 1
   slug: PlanetSearchQuery
 - name: PlanetSearchRequestBase
   property_count: 2
   slug: PlanetSearchRequestBase
 - name: PlanetSearchResults
-  property_count: 0
+  property_count: 2
   slug: PlanetSearchResults
 - name: PlanetSubscriptionDataFilterBase
   property_count: 1
@@ -950,7 +954,7 @@ json_schemas:
   property_count: 0
   slug: PlanetSubscriptionDataSpec
 - name: PlanetSubscriptionRequest
-  property_count: 0
+  property_count: 1
   slug: PlanetSubscriptionRequest
 - name: PlanetaryVariableDataSpec
   property_count: 3
@@ -1004,19 +1008,19 @@ json_schemas:
   property_count: 1
   slug: ProcessRequestOutputFormat
 - name: image/jpeg
-  property_count: 0
+  property_count: 2
   slug: ProcessRequestOutputFormatJpeg
 - name: application/json
-  property_count: 0
+  property_count: 1
   slug: ProcessRequestOutputFormatJson
 - name: image/png
-  property_count: 0
+  property_count: 1
   slug: ProcessRequestOutputFormatPng
 - name: image/tiff
-  property_count: 0
+  property_count: 1
   slug: ProcessRequestOutputFormatTiff
 - name: zarr/array
-  property_count: 0
+  property_count: 1
   slug: ProcessRequestOutputFormatZarr
 - name: ProcessRequestOutputResponse
   property_count: 2
@@ -1025,7 +1029,7 @@ json_schemas:
   property_count: 3
   slug: Quota
 - name: QuotaExceededError
-  property_count: 0
+  property_count: 1
   slug: QuotaExceededError
 - name: QuotaTpdiCollectionId
   property_count: 0
@@ -1037,13 +1041,13 @@ json_schemas:
   property_count: 1
   slug: RestErrorWrapper
 - name: sentinel-1-grd
-  property_count: 0
+  property_count: 3
   slug: S1Dataset
 - name: S1Filtering
   property_count: 7
   slug: S1Filtering
 - name: S1Processing
-  property_count: 0
+  property_count: 5
   slug: S1Processing
 - name: S1ProcessingSpeckleFilterLEE
   property_count: 3
@@ -1052,19 +1056,19 @@ json_schemas:
   property_count: 1
   slug: S1ProcessingSpeckleFilterNONE
 - name: sentinel-2-l1c
-  property_count: 0
+  property_count: 3
   slug: S2L1CDataset
 - name: S2L1CFiltering
   property_count: 0
   slug: S2L1CFiltering
 - name: sentinel-2-l2a
-  property_count: 0
+  property_count: 3
   slug: S2L2ADataset
 - name: S2L2AFiltering
   property_count: 3
   slug: S2L2AFiltering
 - name: S2Processing
-  property_count: 0
+  property_count: 1
   slug: S2Processing
 - name: S3BucketInfo
   property_count: 5
@@ -1073,10 +1077,10 @@ json_schemas:
   property_count: 5
   slug: S3BucketInfoTemplated
 - name: S3SlstrProcessing
-  property_count: 0
+  property_count: 1
   slug: S3SlstrProcessing
 - name: S5PProcessing
-  property_count: 0
+  property_count: 1
   slug: S5PProcessing
 - name: SearchQuery
   property_count: 0
@@ -1097,7 +1101,7 @@ json_schemas:
   property_count: 3
   slug: StatisticalRequest
 - name: StatisticalRequestAggregation
-  property_count: 0
+  property_count: 1
   slug: StatisticalRequestAggregation
 - name: StatisticalRequestAggregationWithoutEvalscript
   property_count: 6
@@ -1121,7 +1125,7 @@ json_schemas:
   property_count: 3
   slug: SubscriptionDeliveryBase
 - name: SubscriptionPlanetDelivery
-  property_count: 0
+  property_count: 1
   slug: SubscriptionPlanetDelivery
 - name: SubscriptionRequest
   property_count: 0
@@ -1205,7 +1209,7 @@ plans:
 - name: Sentinel Hub Plans Pricing
   plan_count: 2
   slug: sentinel-hub-plans-pricing
-random_paper: 20
+random_paper: 6
 rate_limits:
 - limit_count: 4
   name: Sentinel Hub Rate Limits
@@ -1229,29 +1233,29 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 34.2
+  composite: 35.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 53.3
     catalog_earned_first_party: 0.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 1.4
   facets:
     access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 59.6
+    contract_quality: 65.1
     developer_ergonomics: 33.3
     discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 41.1
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 25
   regulatory:
     applies: true
@@ -1259,13 +1263,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/sentinel-hub/refs/heads/main/screenshots/sentinel-hub-2026-06-20T193707.png
+screenshot: https://apis.io/screenshots/sentinel-hub/sentinel-hub-2026-06-20T193707.png
 security:
 - kind: authentication
   name: Sentinel Hub Authentication

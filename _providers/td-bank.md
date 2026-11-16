@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 2
@@ -122,11 +126,8 @@ apis:
   description: The Tokens API from TD Bank — 3 operation(s) for tokens.
   name: TD Bank Tokens API
   slug: td-bank-tokens-api
-artifact_total: 61
+artifact_total: 60
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: TD Bank Account Basic API
   slug: open-td-bank-account-basic-api
@@ -197,32 +198,36 @@ collections:
   name: TD Bank Account Basic Accounts Transactions API
   slug: open-td-bank-transactions-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/td-bank/overview
 - group: company
   title: ''
   type: Website
   url: https://www.td.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/capabilities/td-bank-capability-edges.yml
+  href: https://artifacts.apis.io/td-bank/capabilities/td-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/td-bank-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/agentic-access/td-bank-agentic-access.yml
+  href: https://artifacts.apis.io/td-bank/agentic-access/td-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/td-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/security/td-bank-domain-security.yml
+  href: https://artifacts.apis.io/td-bank/security/td-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/td-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/authentication/td-bank-authentication.yml
+  href: https://artifacts.apis.io/td-bank/authentication/td-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/td-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/scopes/td-bank-scopes.yml
+  href: https://artifacts.apis.io/td-bank/scopes/td-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/td-bank-scopes.yml
@@ -303,32 +308,32 @@ common:
   type: SecurityPolicy
   url: https://www.td.com/us/en/personal-banking/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/vocabulary/td-bank-vocabulary.yml
+  href: https://artifacts.apis.io/td-bank/vocabulary/td-bank-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/td-bank-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/json-ld/td-bank-context.jsonld
+  href: https://artifacts.apis.io/td-bank/json-ld/td-bank-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/td-bank-context.jsonld
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/plans/td-bank-plans-pricing.yml
+  href: https://artifacts.apis.io/td-bank/plans/td-bank-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/td-bank-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/rate-limits/td-bank-rate-limits.yml
+  href: https://artifacts.apis.io/td-bank/rate-limits/td-bank-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/td-bank-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/finops/td-bank-finops.yml
+  href: https://artifacts.apis.io/td-bank/finops/td-bank-finops.yml
   title: ''
   type: FinOps
   url: finops/td-bank-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/rules/td-bank-rules.yml
+  href: https://artifacts.apis.io/td-bank/rules/td-bank-rules.yml
   title: ''
   type: SpectralRuleset
   url: rules/td-bank-rules.yml
@@ -395,12 +400,12 @@ overview: 'TD Bank publishes 16 API contracts indexed on the [APIs.io](https://a
   The TD Bank catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  TD Bank''s developer surface includes authentication, developer portal, documentation, GitHub presence, and 27 more developer resources.'
+  TD Bank''s developer surface includes authentication, developer portal, documentation, GitHub presence, and 28 more developer resources.'
 plans:
 - name: Td Bank Plans Pricing
   plan_count: 3
   slug: td-bank-plans-pricing
-random_paper: 13
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Td Bank Rate Limits
@@ -436,23 +441,23 @@ scopes:
   summary_line: 9 scopes · authorizationCode
 score:
   band: thin
-  composite: 35.4
+  composite: 35.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
     contract_quality: 45.1
-    developer_ergonomics: 31.0
+    developer_ergonomics: 32.1
     discoverability: 71.4
     operational_transparency: 23.7
-  previous_composite: 43.7
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -466,13 +471,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 29.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/td-bank/refs/heads/main/screenshots/td-bank-2026-08-17T082254.png
+screenshot: https://apis.io/screenshots/td-bank/td-bank-2026-08-17T082254.png
 security:
 - kind: authentication
   name: Td Bank Authentication

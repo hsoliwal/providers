@@ -1,39 +1,43 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
+  confidence: low
+  label: Paid
   onboarding: unknown
-  pricing: freemium
+  pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: false
+    auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
-    idempotency: false
+    idempotency: verified
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 38.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -68,7 +72,97 @@ apis:
   description: Operations for running commands on managed instances.
   name: Amazon Systems Manager Run Command API
   slug: amazon-systems-manager-run-command-api
-artifact_total: 33
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Activation API from Amazon Systems Manager — 3 operation(s) for systems manager activation.
+  name: Amazon Systems Manager Systems Manager Activation API
+  slug: amazon-systems-manager-activation-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Association API from Amazon Systems Manager — 5 operation(s) for systems manager association.
+  name: Amazon Systems Manager Systems Manager Association API
+  slug: amazon-systems-manager-association-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Automation Execution API from Amazon Systems Manager — 3 operation(s) for systems manager automation execution.
+  name: Amazon Systems Manager Systems Manager Automation Execution API
+  slug: amazon-systems-manager-automation-execution-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Cloud Connector API from Amazon Systems Manager — 6 operation(s) for systems manager cloud connector.
+  name: Amazon Systems Manager Systems Manager Cloud Connector API
+  slug: amazon-systems-manager-cloud-connector-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Inventory API from Amazon Systems Manager — 3 operation(s) for systems manager inventory.
+  name: Amazon Systems Manager Systems Manager Inventory API
+  slug: amazon-systems-manager-inventory-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Maintenance Window API from Amazon Systems Manager — 6 operation(s) for systems manager maintenance window.
+  name: Amazon Systems Manager Systems Manager Maintenance Window API
+  slug: amazon-systems-manager-maintenance-window-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Maintenance Window Execution API from Amazon Systems Manager — 3 operation(s) for systems manager maintenance window execution.
+  name: Amazon Systems Manager Systems Manager Maintenance Window Execution API
+  slug: amazon-systems-manager-maintenance-window-execution-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Maintenance Window Task API from Amazon Systems Manager — 3 operation(s) for systems manager maintenance window task.
+  name: Amazon Systems Manager Systems Manager Maintenance Window Task API
+  slug: amazon-systems-manager-maintenance-window-task-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Operations API from Amazon Systems Manager — 68 operation(s) for systems manager operations.
+  name: Amazon Systems Manager Systems Manager Operations API
+  slug: amazon-systems-manager-operations-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Ops Item API from Amazon Systems Manager — 5 operation(s) for systems manager ops item.
+  name: Amazon Systems Manager Systems Manager Ops Item API
+  slug: amazon-systems-manager-ops-item-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Ops Item Related Item API from Amazon Systems Manager — 3 operation(s) for systems manager ops item related item.
+  name: Amazon Systems Manager Systems Manager Ops Item Related Item API
+  slug: amazon-systems-manager-ops-item-related-item-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Ops Metadata API from Amazon Systems Manager — 5 operation(s) for systems manager ops metadata.
+  name: Amazon Systems Manager Systems Manager Ops Metadata API
+  slug: amazon-systems-manager-ops-metadata-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Parameter API from Amazon Systems Manager — 5 operation(s) for systems manager parameter.
+  name: Amazon Systems Manager Systems Manager Parameter API
+  slug: amazon-systems-manager-parameter-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Patch Baseline API from Amazon Systems Manager — 8 operation(s) for systems manager patch baseline.
+  name: Amazon Systems Manager Systems Manager Patch Baseline API
+  slug: amazon-systems-manager-patch-baseline-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Resource Data Sync API from Amazon Systems Manager — 4 operation(s) for systems manager resource data sync.
+  name: Amazon Systems Manager Systems Manager Resource Data Sync API
+  slug: amazon-systems-manager-resource-data-sync-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Resource Policy API from Amazon Systems Manager — 3 operation(s) for systems manager resource policy.
+  name: Amazon Systems Manager Systems Manager Resource Policy API
+  slug: amazon-systems-manager-resource-policy-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Service Setting API from Amazon Systems Manager — 3 operation(s) for systems manager service setting.
+  name: Amazon Systems Manager Systems Manager Service Setting API
+  slug: amazon-systems-manager-service-setting-api
+- baseURL: https://ssm.amazonaws.com
+  baseurl_source: declared
+  description: The Systems Manager Tag API from Amazon Systems Manager — 3 operation(s) for systems manager tag.
+  name: Amazon Systems Manager Systems Manager Tag API
+  slug: amazon-systems-manager-tag-api
+artifact_total: 51
 collections:
 - collection_type: postman
   name: Amazon Systems Manager Automation API
@@ -85,9 +179,6 @@ collections:
 - collection_type: postman
   name: Amazon Systems Manager Automation Run Command API
   slug: postman-amazon-systems-manager-run-command-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon Systems Manager Automation API
   slug: open-amazon-systems-manager-automation-api
@@ -108,22 +199,22 @@ collections:
   slug: open-amazon-systems-manager
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/plans/amazon-systems-manager-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/plans/amazon-systems-manager-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-systems-manager-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/rate-limits/amazon-systems-manager-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/rate-limits/amazon-systems-manager-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-systems-manager-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/finops/amazon-systems-manager-finops.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/finops/amazon-systems-manager-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-systems-manager-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/capabilities/amazon-systems-manager-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/capabilities/amazon-systems-manager-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-systems-manager-capability-edges.yml
@@ -132,22 +223,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-systems-manager/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/agentic-access/amazon-systems-manager-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/agentic-access/amazon-systems-manager-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-systems-manager-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/security/amazon-systems-manager-trust-center.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/security/amazon-systems-manager-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-systems-manager-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/security/amazon-systems-manager-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/security/amazon-systems-manager-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-systems-manager-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/security/amazon-systems-manager-domain-security.yml
+  href: https://artifacts.apis.io/amazon-systems-manager/security/amazon-systems-manager-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-systems-manager-domain-security.yml
@@ -219,13 +310,13 @@ features:
 - description: Programmatic access to Amazon Systems Manager resources.
   name: API Access
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Amazon Systems Manager Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: node per hour
+  service_category: ''
   slug: amazon-systems-manager-finops
-  template: true
+  template: false
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 json_schemas:
 - name: Parameter
@@ -245,7 +336,7 @@ modified: '2026-05-19'
 name: Amazon Systems Manager
 nav: Providers
 network: true
-overview: 'Amazon Systems Manager publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Automation API, Documents API, Managed Instances API, and 2 more. Tagged areas include Automation and Management.
+overview: 'Amazon Systems Manager publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Automation API, Documents API, Managed Instances API, and 20 more. Tagged areas include Automation, Amazon Web Services, and Management.
 
 
   The Amazon Systems Manager catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -254,9 +345,12 @@ overview: 'Amazon Systems Manager publishes 5 API contracts indexed on the [APIs
   Amazon Systems Manager''s developer surface includes developer portal, documentation, support, developer console, signup flow, and 18 more developer resources.'
 plans:
 - name: Amazon Systems Manager Plans Pricing
-  plan_count: 3
+  plan_count: 16
   slug: amazon-systems-manager-plans-pricing
-random_paper: 15
+- name: Amazon Systems Manager Price Estimates
+  plan_count: 0
+  slug: amazon-systems-manager-price-estimates
+random_paper: 3
 rate_limits:
 - limit_count: 5
   name: Amazon Systems Manager Rate Limits
@@ -286,44 +380,44 @@ rules:
     warn: 8
   slug: amazon-systems-manager-spectral-rules
 score:
-  band: developing
-  composite: 46.2
+  band: strong
+  composite: 57.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 52.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    artifact_dirs: 21
+    catalog_earned: 64.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.8
   facets:
-    access_clarity: 53.9
+    access_clarity: 85.5
     contract_governance: 27.3
-    contract_quality: 43.8
+    contract_quality: 58.6
     developer_ergonomics: 44.0
     discoverability: 64.3
-    operational_transparency: 26.3
-  previous_composite: 47.7
+    operational_transparency: 36.8
+  previous_composite: 56.8
   provenance:
     agentic_access: derived
     contracts:
-      callable: 0.0
+      callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 78.3
+      total: 23
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/screenshots/amazon-systems-manager-2026-06-20T171837.png
+screenshot: https://apis.io/screenshots/amazon-systems-manager/amazon-systems-manager-2026-06-20T171837.png
 security:
 - kind: domain-security
   name: Amazon Systems Manager Domain Security
@@ -340,6 +434,7 @@ security:
 slug: amazon-systems-manager
 tags:
 - Automation
+- Amazon Web Services
 - Management
 use_cases:
 - description: Use Amazon Systems Manager to manage and automate cloud operations.

@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Model Context Protocol endpoint served on Botrista's Wix-hosted content site (botrista.info). It is a platform-provided site MCP — supplied by the Wix website builder rather than authored by Botri
@@ -42,22 +45,22 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/botrista/refs/heads/main/security/botrista-domain-security.yml
+  href: https://artifacts.apis.io/botrista/security/botrista-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/botrista-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botrista/refs/heads/main/mcp/botrista-mcp.yml
+  href: https://artifacts.apis.io/botrista/mcp/botrista-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/botrista-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botrista/refs/heads/main/llms/botrista-llms.txt
+  href: https://artifacts.apis.io/botrista/llms/botrista-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/botrista-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botrista/refs/heads/main/conformance/botrista-conformance.yml
+  href: https://artifacts.apis.io/botrista/conformance/botrista-conformance.yml
   title: ''
   type: Conformance
   url: conformance/botrista-conformance.yml
@@ -126,7 +129,7 @@ overview: 'Botrista is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Botrista''s developer surface includes engineering blog, support, and 14 more developer resources.'
-random_paper: 14
+random_paper: 8
 score:
   band: minimal
   composite: 10.8
@@ -155,14 +158,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/botrista/refs/heads/main/screenshots/botrista-2026-08-07T162727.png
+screenshot: https://apis.io/screenshots/botrista/botrista-2026-08-07T162727.png
 security:
 - kind: domain-security
   name: Botrista Domain Security

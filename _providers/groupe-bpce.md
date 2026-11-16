@@ -1,6 +1,25 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,15 +34,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.1
-  scored_at: '2026-10-17'
+  score: 39.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -31,7 +53,7 @@ agentic_access:
   operation_count: 49
   slug: groupe-bpce-agentic-access
   summary_line: 49 operations · 16 acting
-api_count: 17
+api_count: 10
 apis:
 - baseURL: https://www.{etab}.oba-bad-me-live-api.banquepopulaire.fr/stet/psd2/v1.6.2
   baseurl_source: declared
@@ -68,80 +90,80 @@ apis:
   description: Creating and validating transfers.
   name: Groupe BPCE Transfers API
   slug: groupe-bpce-transfers-api
-artifact_total: 37
+artifact_total: 43
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/capabilities/groupe-bpce-capability-edges.yml
+  href: https://artifacts.apis.io/groupe-bpce/capabilities/groupe-bpce-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/groupe-bpce-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/agentic-access/groupe-bpce-agentic-access.yml
+  href: https://artifacts.apis.io/groupe-bpce/agentic-access/groupe-bpce-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/groupe-bpce-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/rate-limits/groupe-bpce-rate-limits.yml
+  href: https://artifacts.apis.io/groupe-bpce/rate-limits/groupe-bpce-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/groupe-bpce-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/plans/groupe-bpce-plans-pricing.yml
+  href: https://artifacts.apis.io/groupe-bpce/plans/groupe-bpce-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/groupe-bpce-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/rules/groupe-bpce-rules.yml
+  href: https://artifacts.apis.io/groupe-bpce/rules/groupe-bpce-rules.yml
   title: ''
   type: Spectral
   url: rules/groupe-bpce-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/rules/groupe-bpce-bpce-api-guidelines-rulesets-spectral-rules.yml
+  href: https://artifacts.apis.io/groupe-bpce/rules/groupe-bpce-bpce-api-guidelines-rulesets-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/groupe-bpce-bpce-api-guidelines-rulesets-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/json-ld/groupe-bpce-context.jsonld
+  href: https://artifacts.apis.io/groupe-bpce/json-ld/groupe-bpce-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/groupe-bpce-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/vocabulary/groupe-bpce-vocabulary.yml
+  href: https://artifacts.apis.io/groupe-bpce/vocabulary/groupe-bpce-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/groupe-bpce-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/groupe-bpce/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/data-model/groupe-bpce-data-model.yml
+  href: https://artifacts.apis.io/groupe-bpce/data-model/groupe-bpce-data-model.yml
   title: ''
   type: DataModel
   url: data-model/groupe-bpce-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/changelog/groupe-bpce-changelog.yml
+  href: https://artifacts.apis.io/groupe-bpce/changelog/groupe-bpce-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/groupe-bpce-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/conventions/groupe-bpce-conventions.yml
+  href: https://artifacts.apis.io/groupe-bpce/conventions/groupe-bpce-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/groupe-bpce-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/conventions/groupe-bpce-conventions.yml
+  href: https://artifacts.apis.io/groupe-bpce/conventions/groupe-bpce-conventions.yml
   title: ''
   type: Conventions
   url: conventions/groupe-bpce-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/sandbox/groupe-bpce-sandbox.yml
+  href: https://artifacts.apis.io/groupe-bpce/sandbox/groupe-bpce-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/groupe-bpce-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/security/groupe-bpce-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/groupe-bpce/security/groupe-bpce-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/groupe-bpce-vulnerability-disclosure.yml
@@ -150,67 +172,67 @@ common:
   type: Deprecation
   url: https://apistore.groupebpce.com/api/account-information-services-3
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/lifecycle/groupe-bpce-lifecycle.yml
+  href: https://artifacts.apis.io/groupe-bpce/lifecycle/groupe-bpce-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/groupe-bpce-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/errors/groupe-bpce-problem-types.yml
+  href: https://artifacts.apis.io/groupe-bpce/errors/groupe-bpce-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/groupe-bpce-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/conformance/groupe-bpce-conformance.yml
+  href: https://artifacts.apis.io/groupe-bpce/conformance/groupe-bpce-conformance.yml
   title: ''
   type: Conformance
   url: conformance/groupe-bpce-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/overlays/groupe-bpce-natixis-psd2-accounts-overlay.yaml
+  href: https://artifacts.apis.io/groupe-bpce/overlays/groupe-bpce-natixis-psd2-accounts-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/groupe-bpce-natixis-psd2-accounts-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/well-known/groupe-bpce-security.txt
+  href: https://artifacts.apis.io/groupe-bpce/well-known/groupe-bpce-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/groupe-bpce-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/well-known/groupe-bpce-groupebpce-security.txt
+  href: https://artifacts.apis.io/groupe-bpce/well-known/groupe-bpce-groupebpce-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/groupe-bpce-groupebpce-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/well-known/groupe-bpce-well-known.yml
+  href: https://artifacts.apis.io/groupe-bpce/well-known/groupe-bpce-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/groupe-bpce-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/hosts/groupe-bpce-hosts.yml
+  href: https://artifacts.apis.io/groupe-bpce/hosts/groupe-bpce-hosts.yml
   title: ''
   type: Hosts
   url: hosts/groupe-bpce-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/vendors/groupe-bpce-vendors.yml
+  href: https://artifacts.apis.io/groupe-bpce/vendors/groupe-bpce-vendors.yml
   title: ''
   type: Vendors
   url: vendors/groupe-bpce-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/scopes/groupe-bpce-scopes.yml
+  href: https://artifacts.apis.io/groupe-bpce/scopes/groupe-bpce-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/groupe-bpce-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/authentication/groupe-bpce-authentication.yml
+  href: https://artifacts.apis.io/groupe-bpce/authentication/groupe-bpce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/groupe-bpce-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/security/groupe-bpce-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/groupe-bpce/security/groupe-bpce-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/groupe-bpce-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/security/groupe-bpce-domain-security.yml
+  href: https://artifacts.apis.io/groupe-bpce/security/groupe-bpce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/groupe-bpce-domain-security.yml
@@ -280,6 +302,14 @@ common:
   url: https://www.linkedin.com/company/bpce
 created: '2026-10-09'
 description: Groupe BPCE is the second-largest banking group in France, operating retail banking and insurance through its main brands Banque Populaire, Caisse d'Epargne and Natixis (per groupebpce.com). Through its Group BPCE API STORE (apistore.groupebpce.com) it publishes an API product catalog and developer center covering payment and collection services and PSD2 (DSP2) regulatory APIs for account information, payment initiation and funds confirmation for authorized payment service providers, with technical and sales support. It also publishes its API design guidelines and Spectral rulesets on GitHub (github.com/BPCE).
+finops:
+- has_sources: true
+  method: derived
+  name: Groupe Bpce Finops
+  primary_unit: ''
+  service_category: ''
+  slug: groupe-bpce-finops
+  template: true
 image: https://avatars.githubusercontent.com/u/105843508?v=4
 json_schemas:
 - name: Access
@@ -292,7 +322,7 @@ json_schemas:
   property_count: 3
   slug: groupe-bpce-error
 - name: ExternalAccount
-  property_count: 0
+  property_count: 10
   slug: groupe-bpce-external-account
 - name: HalAccounts
   property_count: 2
@@ -322,7 +352,7 @@ json_schemas:
   property_count: 2
   slug: groupe-bpce-hal-transactions
 - name: InternalAccount
-  property_count: 0
+  property_count: 9
   slug: groupe-bpce-internal-account
 - name: PaymentCoverageRequestResource
   property_count: 4
@@ -334,7 +364,7 @@ json_schemas:
   property_count: 19
   slug: groupe-bpce-registration-request
 - name: TransferRequestLine
-  property_count: 0
+  property_count: 20
   slug: groupe-bpce-transfer-request-line
 - name: TransferRequestLineSummary
   property_count: 11
@@ -363,7 +393,7 @@ plans:
 - name: Groupe Bpce Plans Pricing
   plan_count: 1
   slug: groupe-bpce-plans-pricing
-random_paper: 13
+random_paper: 9
 rate_limits:
 - limit_count: 2
   name: Groupe Bpce Rate Limits
@@ -399,23 +429,23 @@ scopes:
   slug: groupe-bpce-scopes
   summary_line: 12 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 62.5
+  band: developing
+  composite: 53.3
   coverage:
-    artifact_dirs: 30
+    artifact_dirs: 33
     catalog_earned: 81.8
     catalog_earned_first_party: 16.0
     catalog_gap: 33.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.0
+  delta: -9.1
   facets:
-    access_clarity: 55.3
+    access_clarity: 38.2
     contract_governance: 35.6
-    contract_quality: 67.6
-    developer_ergonomics: 66.1
-    discoverability: 73.2
-    operational_transparency: 60.5
+    contract_quality: 68.0
+    developer_ergonomics: 43.5
+    discoverability: 72.3
+    operational_transparency: 53.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -424,14 +454,14 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 67.5
+  previous_composite: 62.4
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 100.0
+      callable: 85.7
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 14.3
       total: 7
     mcp: derived
     skills: derived
@@ -444,14 +474,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 37.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 34.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/groupe-bpce/refs/heads/main/screenshots/groupe-bpce-2026-10-11T105034.png
+screenshot: https://apis.io/screenshots/groupe-bpce/groupe-bpce-2026-10-11T105034.png
 security:
 - kind: authentication
   name: Groupe Bpce Authentication
@@ -465,6 +495,18 @@ security:
   name: Groupe Bpce Vulnerability Disclosure
   slug: groupe-bpce-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 5
+skills:
+- name: groupe-bpce-open-finance-transfer
+  slug: groupe-bpce-open-finance-transfer
+- name: groupe-bpce-psd2-account-information
+  slug: groupe-bpce-psd2-account-information
+- name: groupe-bpce-psd2-funds-confirmation
+  slug: groupe-bpce-psd2-funds-confirmation
+- name: groupe-bpce-psd2-payment-initiation
+  slug: groupe-bpce-psd2-payment-initiation
+- name: groupe-bpce-psd2-tpp-registration
+  slug: groupe-bpce-psd2-tpp-registration
 slug: groupe-bpce
 tags:
 - Company

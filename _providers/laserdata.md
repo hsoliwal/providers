@@ -1,18 +1,22 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: true
@@ -27,16 +31,19 @@ agent_readiness:
     event_surface_described: derived
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-10-17'
-api_count: 6
+  score: 28.9
+  scored_at: '2026-11-06'
+api_count: 3
 apis:
 - baseURL: https://api.laserdata.cloud
   baseurl_source: declared
@@ -128,15 +135,12 @@ apis:
   description: Tenant CRUD, config, structure
   name: LaserData Tenants API
   slug: laserdata-tenants-api
-artifact_total: 41
+artifact_total: 57
 asyncapis:
 - description: ''
   name: Laserdata Notifications Webhooks
   slug: laserdata-notifications-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: LaserData Cloud Audit Account API
   slug: open-laserdata-account-api
@@ -192,13 +196,22 @@ collections:
   name: LaserData Cloud Audit Account Tenants API
   slug: open-laserdata-tenants-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/laserdata/plans/laserdata-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/laserdata-plans-pricing.yml
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/laserdata/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/capabilities/laserdata-capability-edges.yml
+  href: https://artifacts.apis.io/laserdata/capabilities/laserdata-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/laserdata-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/overlays/laserdata-audit-overlay.yaml
+  href: https://artifacts.apis.io/laserdata/overlays/laserdata-audit-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/laserdata-audit-overlay.yaml
@@ -251,82 +264,82 @@ common:
   type: StatusPage
   url: https://status.laserdata.cloud
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/llms/laserdata-llms.txt
+  href: https://artifacts.apis.io/laserdata/llms/laserdata-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/laserdata-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/packages/laserdata-packages.yml
+  href: https://artifacts.apis.io/laserdata/packages/laserdata-packages.yml
   title: ''
   type: Packages
   url: packages/laserdata-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/packages/laserdata-packages.yml
+  href: https://artifacts.apis.io/laserdata/packages/laserdata-packages.yml
   title: ''
   type: SDKs
   url: packages/laserdata-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/cli/laserdata-cli.yml
+  href: https://artifacts.apis.io/laserdata/cli/laserdata-cli.yml
   title: ''
   type: CLI
   url: cli/laserdata-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/authentication/laserdata-authentication.yml
+  href: https://artifacts.apis.io/laserdata/authentication/laserdata-authentication.yml
   title: ''
   type: Authentication
   url: authentication/laserdata-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/conventions/laserdata-conventions.yml
+  href: https://artifacts.apis.io/laserdata/conventions/laserdata-conventions.yml
   title: ''
   type: Conventions
   url: conventions/laserdata-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/conventions/laserdata-conventions.yml
+  href: https://artifacts.apis.io/laserdata/conventions/laserdata-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/laserdata-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/errors/laserdata-problem-types.yml
+  href: https://artifacts.apis.io/laserdata/errors/laserdata-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/laserdata-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/lifecycle/laserdata-lifecycle.yml
+  href: https://artifacts.apis.io/laserdata/lifecycle/laserdata-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/laserdata-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/conformance/laserdata-conformance.yml
+  href: https://artifacts.apis.io/laserdata/conformance/laserdata-conformance.yml
   title: ''
   type: Conformance
   url: conformance/laserdata-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/data-model/laserdata-data-model.yml
+  href: https://artifacts.apis.io/laserdata/data-model/laserdata-data-model.yml
   title: ''
   type: DataModel
   url: data-model/laserdata-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/sandbox/laserdata-sandbox.yml
+  href: https://artifacts.apis.io/laserdata/sandbox/laserdata-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/laserdata-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/changelog/laserdata-changelog.yml
+  href: https://artifacts.apis.io/laserdata/changelog/laserdata-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/laserdata-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/asyncapi/laserdata-notifications-webhooks.yml
+  href: https://artifacts.apis.io/laserdata/asyncapi/laserdata-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/laserdata-notifications-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/well-known/laserdata-well-known.yml
+  href: https://artifacts.apis.io/laserdata/well-known/laserdata-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/laserdata-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/mcp/laserdata-mcp.yml
+  href: https://artifacts.apis.io/laserdata/mcp/laserdata-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/laserdata-mcp.yml
@@ -335,22 +348,30 @@ common:
   type: Security
   url: https://github.com/laserdata/laser-sdk/blob/main/SECURITY.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/security/laserdata-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/laserdata/security/laserdata-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/laserdata-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/security/laserdata-domain-security.yml
+  href: https://artifacts.apis.io/laserdata/security/laserdata-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/laserdata-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/laserdata/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: LaserData is a hyper-efficient data streaming platform built in Rust for AI-native, real-time, and latency-sensitive workloads. Founded by the creators of Apache Iggy, LaserData packages the Iggy message-streaming engine — io_uring, thread-per-core, zero-copy deserialization, no garbage collection — as a managed cloud, BYOC, and on-premise product with sub-millisecond p99 latency and millions of messages per second per node. LaserData Cloud exposes a public REST control plane across three OpenAPI 3.1 services (Core, Audit, Notifier) covering tenants, divisions, environments, deployments, connectors, networking, API keys, roles and permissions, billing, notifications, and an immutable audit log, plus a per-deployment Supervisor API for configs, metrics, logs, diagnostic snapshots, and backups. The platform ships a first-party Rust SDK, a single-binary CLI with an interactive TUI, and an official Claude Code Agent Skill pack.
+finops:
+- has_sources: true
+  method: derived
+  name: Laserdata Finops
+  primary_unit: shared infrastructure deployment
+  service_category: ''
+  slug: laserdata-finops
+  template: false
 image: https://assets.laserdata.com/laserdata_dark.png
 layout: provider
 modified: '2026-07-19'
@@ -360,36 +381,53 @@ network: true
 overview: 'LaserData publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, API Keys API, Audit API, and 15 more. Tagged areas include Streaming, Message Streaming, Event Streaming, Data Infrastructure, and Real-Time.
 
 
-  The LaserData catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The LaserData catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  LaserData''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, CLI, and 27 more developer resources.'
-random_paper: 21
+  LaserData''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, CLI, and 29 more developer resources.'
+plans:
+- name: Laserdata Plans Pricing
+  plan_count: 5
+  slug: laserdata-plans-pricing
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: LaserData API Rules
+  rule_count: 73
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 4
+    warn: 9
+  slug: laserdata-rules
 score:
-  band: strong
-  composite: 58.1
+  band: exemplar
+  composite: 69.3
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    artifact_dirs: 30
+    catalog_earned: 59.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
-    access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 62.1
-    developer_ergonomics: 85.7
+    access_clarity: 73.7
+    contract_governance: 18.2
+    contract_quality: 68.0
+    developer_ergonomics: 86.9
     discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 58.0
+  previous_composite: 67.9
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 18
     mcp: derived
     skills: first-party
@@ -399,13 +437,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/screenshots/laserdata-2026-07-25T224540.png
+screenshot: https://apis.io/screenshots/laserdata/laserdata-2026-07-25T224540.png
 security:
 - kind: authentication
   name: Laserdata Authentication
@@ -419,6 +457,36 @@ security:
   name: Laserdata Vulnerability Disclosure
   slug: laserdata-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 14
+skills:
+- name: laser-access
+  slug: laserdata-access
+- name: laser-audit
+  slug: laserdata-audit
+- name: laser-backup
+  slug: laserdata-backup
+- name: laser-billing
+  slug: laserdata-billing
+- name: laser-channel
+  slug: laserdata-channel
+- name: laser-config
+  slug: laserdata-config
+- name: laser-context
+  slug: laserdata-context
+- name: laser-credentials
+  slug: laserdata-credentials
+- name: laser-debug
+  slug: laserdata-debug
+- name: laser-deploy
+  slug: laserdata-deploy
+- name: laser-iam
+  slug: laserdata-iam
+- name: laser-onboard
+  slug: laserdata-onboard
+- name: laser-snapshot
+  slug: laserdata-snapshot
+- name: laser-troubleshoot
+  slug: laserdata-troubleshoot
 slug: laserdata
 tags:
 - Streaming

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.1
-  scored_at: '2026-10-17'
+  score: 16.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://department.mark43.com/partnerships/api
@@ -112,11 +115,8 @@ apis:
   description: The Warrants API from Mark43 — 5 operation(s) for warrants.
   name: Mark43 Warrants API
   slug: mark43-warrants-api
-artifact_total: 34
+artifact_total: 38
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Mark43 Partnerships Associated Records API
   slug: open-mark43-associated-records-api
@@ -168,7 +168,7 @@ common:
   type: Blog
   url: https://mark43.com/platform/data-platform/insights/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/security/mark43-trust-center.yml
+  href: https://artifacts.apis.io/mark43/security/mark43-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mark43-trust-center.yml
@@ -185,7 +185,7 @@ common:
   type: APIReference
   url: https://developers.mark43.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/authentication/mark43-authentication.yml
+  href: https://artifacts.apis.io/mark43/authentication/mark43-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mark43-authentication.yml
@@ -202,32 +202,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/mark43
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/conventions/mark43-conventions.yml
+  href: https://artifacts.apis.io/mark43/conventions/mark43-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mark43-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/errors/mark43-problem-types.yml
+  href: https://artifacts.apis.io/mark43/errors/mark43-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mark43-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/data-model/mark43-data-model.yml
+  href: https://artifacts.apis.io/mark43/data-model/mark43-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mark43-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/conformance/mark43-conformance.yml
+  href: https://artifacts.apis.io/mark43/conformance/mark43-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mark43-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/mcp/mark43-mcp.yml
+  href: https://artifacts.apis.io/mark43/mcp/mark43-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/mark43-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/llms/mark43-llms.txt
+  href: https://artifacts.apis.io/mark43/llms/mark43-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mark43-llms.txt
@@ -236,12 +236,12 @@ common:
   type: Compliance
   url: https://trust.mark43.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/security/mark43-domain-security.yml
+  href: https://artifacts.apis.io/mark43/security/mark43-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mark43-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mark43/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -256,27 +256,43 @@ network: true
 overview: 'Mark43 publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Associated Records API, Attachments API, CAD Configuration API, and 12 more. Tagged areas include Company, Public Safety, Law Enforcement, Records Management, and Computer-Aided Dispatch.
 
 
+  The Mark43 catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Mark43''s developer surface includes engineering blog, documentation, API reference, authentication, and 14 more developer resources.'
 random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Mark43 API Rules
+  rule_count: 47
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 1
+  slug: mark43-rules
 score:
   band: thin
-  composite: 28.7
+  composite: 30.3
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 37.0
+    artifact_dirs: 19
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.4
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 12.6
     developer_ergonomics: 42.3
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.3
+  previous_composite: 30.3
   provenance:
     conformance: first-party
     contracts:
@@ -292,13 +308,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/screenshots/mark43-2026-07-25T230313.png
+screenshot: https://apis.io/screenshots/mark43/mark43-2026-07-25T230313.png
 security:
 - kind: authentication
   name: Mark43 Authentication
@@ -312,6 +328,16 @@ security:
   name: Mark43 Trust Center
   slug: mark43-trust-center
   summary_line: SOC 2, ISO 27001, FedRAMP, GDPR, CSA STAR, FIPS 140
+skill_count: 4
+skills:
+- name: Ingest a CAD event into Mark43
+  slug: mark43-ingest-cad-event
+- name: Search and retrieve a person in Mark43
+  slug: mark43-search-and-retrieve-person
+- name: Submit an arrest report to Mark43
+  slug: mark43-submit-arrest-report
+- name: Track evidence chain of custody in Mark43
+  slug: mark43-track-evidence-chain-of-custody
 slug: mark43
 tags:
 - Company

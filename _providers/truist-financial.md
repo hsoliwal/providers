@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: partner
+  gated_source:
+  - x-api-posture
   label: Enterprise · Requires approval
   onboarding: approval
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -76,11 +83,8 @@ apis:
   description: Personal and small business transaction operations
   name: Truist Financial Transactions API
   slug: truist-financial-transactions-api
-artifact_total: 39
+artifact_total: 38
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Truist Commercial Account Transactions API
   slug: open-truist-commercial-account-transactions
@@ -106,18 +110,23 @@ collections:
   name: Truist Personal and Small Business Transactions API
   slug: open-truist-personal-small-business-transactions
 common:
+- group: other
+  href: https://artifacts.apis.io/truist-financial/capabilities/truist-financial-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/truist-financial-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/plans/truist-financial-plans-pricing.yml
+  href: https://artifacts.apis.io/truist-financial/plans/truist-financial-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/truist-financial-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/rate-limits/truist-financial-rate-limits.yml
+  href: https://artifacts.apis.io/truist-financial/rate-limits/truist-financial-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/truist-financial-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/finops/truist-financial-finops.yml
+  href: https://artifacts.apis.io/truist-financial/finops/truist-financial-finops.yml
   title: ''
   type: FinOps
   url: finops/truist-financial-finops.yml
@@ -146,32 +155,32 @@ common:
   type: Support
   url: https://www.truist.com/support
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/llms/truist-financial-llms.txt
+  href: https://artifacts.apis.io/truist-financial/llms/truist-financial-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/truist-financial-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/conformance/truist-financial-conformance.yml
+  href: https://artifacts.apis.io/truist-financial/conformance/truist-financial-conformance.yml
   title: ''
   type: Conformance
   url: conformance/truist-financial-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/agentic-access/truist-financial-agentic-access.yml
+  href: https://artifacts.apis.io/truist-financial/agentic-access/truist-financial-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/truist-financial-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/security/truist-financial-domain-security.yml
+  href: https://artifacts.apis.io/truist-financial/security/truist-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/truist-financial-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/authentication/truist-financial-authentication.yml
+  href: https://artifacts.apis.io/truist-financial/authentication/truist-financial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/truist-financial-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/scopes/truist-financial-scopes.yml
+  href: https://artifacts.apis.io/truist-financial/scopes/truist-financial-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/truist-financial-scopes.yml
@@ -296,12 +305,12 @@ overview: 'Truist Financial publishes 8 API contracts indexed on the [APIs.io](h
   The Truist Financial catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Truist Financial''s developer surface includes documentation, API reference, signup flow, support, authentication, developer portal, getting-started guide, and 23 more developer resources.'
+  Truist Financial''s developer surface includes documentation, API reference, signup flow, support, authentication, developer portal, getting-started guide, and 24 more developer resources.'
 plans:
 - name: Truist Financial Plans Pricing
   plan_count: 1
   slug: truist-financial-plans-pricing
-random_paper: 11
+random_paper: 5
 rate_limits:
 - limit_count: 1
   name: Truist Financial Rate Limits
@@ -339,13 +348,13 @@ score:
   band: developing
   composite: 40.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 24
     catalog_earned: 59.5
     catalog_earned_first_party: 0.0
     catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 32.9
     contract_governance: 31.8
@@ -360,7 +369,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 42.2
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -375,14 +384,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 39.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/truist-financial/refs/heads/main/screenshots/truist-financial-2026-06-20T195759.png
+screenshot: https://apis.io/screenshots/truist-financial/truist-financial-2026-06-20T195759.png
 security:
 - kind: authentication
   name: Truist Financial Authentication

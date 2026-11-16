@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The SuperPenguin platform tracks and attributes AI spend per request, per customer, per feature, and per prompt version across 14+ LLM, speech, and gateway providers. Access is via first-party Python '
@@ -43,7 +50,7 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/plans/carrot-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/carrot-labs/plans/carrot-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/carrot-labs-plans-pricing.yml
@@ -104,37 +111,37 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/carrot-labs-ai
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/llms/carrot-labs-llms.txt
+  href: https://artifacts.apis.io/carrot-labs/llms/carrot-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/carrot-labs-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/packages/carrot-labs-packages.yml
+  href: https://artifacts.apis.io/carrot-labs/packages/carrot-labs-packages.yml
   title: ''
   type: Packages
   url: packages/carrot-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/packages/carrot-labs-packages.yml
+  href: https://artifacts.apis.io/carrot-labs/packages/carrot-labs-packages.yml
   title: ''
   type: SDKs
   url: packages/carrot-labs-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/authentication/carrot-labs-authentication.yml
+  href: https://artifacts.apis.io/carrot-labs/authentication/carrot-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/carrot-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/conventions/carrot-labs-conventions.yml
+  href: https://artifacts.apis.io/carrot-labs/conventions/carrot-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/carrot-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/conventions/carrot-labs-conventions.yml
+  href: https://artifacts.apis.io/carrot-labs/conventions/carrot-labs-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/carrot-labs-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/security/carrot-labs-domain-security.yml
+  href: https://artifacts.apis.io/carrot-labs/security/carrot-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carrot-labs-domain-security.yml
@@ -154,18 +161,18 @@ plans:
 - name: Carrot Labs Plans Pricing
   plan_count: 4
   slug: carrot-labs-plans-pricing
-random_paper: 14
+random_paper: 10
 score:
   band: thin
   composite: 33.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 71.1
     contract_governance: 0.0
@@ -180,21 +187,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.5
+  previous_composite: 33.9
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/carrot-labs/refs/heads/main/screenshots/carrot-labs-2026-07-25T204642.png
+screenshot: https://apis.io/screenshots/carrot-labs/carrot-labs-2026-07-25T204642.png
 security:
 - kind: authentication
   name: Carrot Labs Authentication

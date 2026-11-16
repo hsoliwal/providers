@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-10-17'
+  score: 25.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -60,11 +63,8 @@ apis:
 - description: Tsinghua runs its own GitLab instance at git.tsinghua.edu.cn, on its own registrable domain and behind its own identity service — the sign-in page's only form posts to /users/auth/thuid. GitLab expose
   name: Tsinghua University GitLab
   slug: gitlab
-artifact_total: 19
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: TUNA Mirror Sync Status Mirror Status API
   slug: open-tsinghua-mirror-status-api
@@ -74,7 +74,7 @@ common:
   type: License
   url: https://github.com/tuna/tunasync/blob/master/LICENSE
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/capabilities/tsinghua-capability-edges.yml
+  href: https://artifacts.apis.io/tsinghua/capabilities/tsinghua-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tsinghua-capability-edges.yml
@@ -127,52 +127,52 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/school/tsinghua-university/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/conformance/tsinghua-conformance.yml
+  href: https://artifacts.apis.io/tsinghua/conformance/tsinghua-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tsinghua-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/authentication/tsinghua-authentication.yml
+  href: https://artifacts.apis.io/tsinghua/authentication/tsinghua-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tsinghua-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/errors/tsinghua-errors.yml
+  href: https://artifacts.apis.io/tsinghua/errors/tsinghua-errors.yml
   title: ''
   type: Errors
   url: errors/tsinghua-errors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/lifecycle/tsinghua-lifecycle.yml
+  href: https://artifacts.apis.io/tsinghua/lifecycle/tsinghua-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tsinghua-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/agentic-access/tsinghua-agentic-access.yml
+  href: https://artifacts.apis.io/tsinghua/agentic-access/tsinghua-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tsinghua-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/security/tsinghua-domain-security.yml
+  href: https://artifacts.apis.io/tsinghua/security/tsinghua-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tsinghua-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/plans/tsinghua-plans-pricing.yml
+  href: https://artifacts.apis.io/tsinghua/plans/tsinghua-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tsinghua-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/rate-limits/tsinghua-rate-limits.yml
+  href: https://artifacts.apis.io/tsinghua/rate-limits/tsinghua-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tsinghua-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/finops/tsinghua-finops.yml
+  href: https://artifacts.apis.io/tsinghua/finops/tsinghua-finops.yml
   title: ''
   type: FinOps
   url: finops/tsinghua-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/tsinghua/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -225,7 +225,7 @@ plans:
 - name: Tsinghua Plans Pricing
   plan_count: 2
   slug: tsinghua-plans-pricing
-random_paper: 9
+random_paper: 3
 rate_limits:
 - limit_count: 1
   name: Tsinghua Rate Limits
@@ -258,13 +258,13 @@ score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 73.8
     catalog_earned_first_party: 16.0
     catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.7
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 17.4
@@ -279,7 +279,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 37.7
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -294,14 +294,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/tsinghua/refs/heads/main/screenshots/tsinghua-2026-06-20T195921.png
+screenshot: https://apis.io/screenshots/tsinghua/tsinghua-2026-06-20T195921.png
 security:
 - kind: authentication
   name: Tsinghua Authentication

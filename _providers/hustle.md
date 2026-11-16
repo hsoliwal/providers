@@ -1,16 +1,22 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.5
-  scored_at: '2026-10-17'
+  score: 40.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -41,7 +50,7 @@ agentic_access:
   operation_count: 23
   slug: hustle-agentic-access
   summary_line: 23 operations · 14 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.hustle.com/v3
   baseurl_source: declared
@@ -93,15 +102,12 @@ apis:
   description: The Webhooks API from Hustle — 3 operation(s) for webhooks.
   name: Hustle Webhooks API
   slug: hustle-webhooks-api
-artifact_total: 29
+artifact_total: 34
 asyncapis:
 - description: ''
   name: Hustle Webhooks
   slug: hustle-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hustle Public Access Token API
   slug: open-hustle-access-token-api
@@ -130,23 +136,28 @@ collections:
   name: Hustle Public Access Token Webhooks API
   slug: open-hustle-webhooks-api
 common:
+- group: other
+  href: https://artifacts.apis.io/hustle/capabilities/hustle-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hustle-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/skills/hustle-register-webhook.md
+  href: https://artifacts.apis.io/hustle/skills/hustle-register-webhook.md
   title: ''
   type: AgentSkill
   url: skills/hustle-register-webhook.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/mcp/hustle-mcp.yml
+  href: https://artifacts.apis.io/hustle/mcp/hustle-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/hustle-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/overlays/hustle-public-api-overlay.yaml
+  href: https://artifacts.apis.io/hustle/overlays/hustle-public-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hustle-public-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/agentic-access/hustle-agentic-access.yml
+  href: https://artifacts.apis.io/hustle/agentic-access/hustle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hustle-agentic-access.yml
@@ -195,7 +206,7 @@ common:
   type: StatusPage
   url: https://status.hustle.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/security/hustle-trust-center.yml
+  href: https://artifacts.apis.io/hustle/security/hustle-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hustle-trust-center.yml
@@ -204,47 +215,47 @@ common:
   type: Compliance
   url: https://hustle.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/security/hustle-domain-security.yml
+  href: https://artifacts.apis.io/hustle/security/hustle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hustle-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/lifecycle/hustle-lifecycle.yml
+  href: https://artifacts.apis.io/hustle/lifecycle/hustle-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hustle-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/skills/hustle-upsert-and-tag-lead.md
+  href: https://artifacts.apis.io/hustle/skills/hustle-upsert-and-tag-lead.md
   title: ''
   type: AgentSkill
   url: skills/hustle-upsert-and-tag-lead.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/skills/hustle-track-message-delivery.md
+  href: https://artifacts.apis.io/hustle/skills/hustle-track-message-delivery.md
   title: ''
   type: AgentSkill
   url: skills/hustle-track-message-delivery.md
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/packages/hustle-packages.yml
+  href: https://artifacts.apis.io/hustle/packages/hustle-packages.yml
   title: ''
   type: Packages
   url: packages/hustle-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/packages/hustle-packages.yml
+  href: https://artifacts.apis.io/hustle/packages/hustle-packages.yml
   title: ''
   type: SDKs
   url: packages/hustle-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/plans/hustle-plans-pricing.yml
+  href: https://artifacts.apis.io/hustle/plans/hustle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hustle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/rate-limits/hustle-rate-limits.yml
+  href: https://artifacts.apis.io/hustle/rate-limits/hustle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hustle-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/changelog/hustle-changelog.yml
+  href: https://artifacts.apis.io/hustle/changelog/hustle-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hustle-changelog.yml
@@ -278,6 +289,14 @@ common:
   url: https://hustle.com/acceptable-use-policy/
 created: '2026-07-17'
 description: Hustle is an employee-owned text, video, and voice communications platform that lets organizations engage audiences at scale from a single interface. It combines broadcast texting, peer-to-peer 1:1 conversational texting, video messaging (Hustle Clips, Personalized Clips, and Hustle Stories), and an outbound dialer, and is used by nonprofits, educational institutions, commercial businesses, political campaigns, government agencies, and labor unions to reach people over the channels they already use. The Hustle Public API (v3) exposes a RESTful, OAuth2 client-credentials interface for managing agents, groups, leads, custom fields, tags, organizations, CRM integrations, message delivery status, and webhook registrations. Hustle was added to the API Evangelist network as a portfolio company of GV and Insight Partners and enriched from its public developer surface.
+finops:
+- has_sources: true
+  method: derived
+  name: Hustle Finops
+  primary_unit: platform fee
+  service_category: ''
+  slug: hustle-finops
+  template: false
 image: https://hustle.com/wp-content/uploads/2026/05/cropped-ko-Hustle-10-logo-1200px-wide-1.png
 layout: provider
 modified: '2026-08-13'
@@ -287,50 +306,66 @@ network: true
 overview: 'Hustle publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Token API, Agents API, Custom Fields API, and 7 more. Tagged areas include Company, Enterprise, Messaging, SMS, and Peer-to-Peer Texting.
 
 
-  The Hustle catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Hustle catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Hustle''s developer surface includes documentation, API reference, signup flow, pricing, changelog, getting-started guide, engineering blog, and 26 more developer resources.'
+  Hustle''s developer surface includes documentation, API reference, signup flow, pricing, changelog, getting-started guide, engineering blog, and 27 more developer resources.'
 plans:
 - name: Hustle Plans Pricing
   plan_count: 2
   slug: hustle-plans-pricing
-random_paper: 1
+- name: Hustle Price Estimates
+  plan_count: 0
+  slug: hustle-price-estimates
+random_paper: 13
 rate_limits:
 - limit_count: 3
   name: Hustle Rate Limits
   slug: hustle-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Hustle API Rules
+  rule_count: 53
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 12
+  slug: hustle-rules
 scopes:
 - name: Hustle Scopes
   scope_count: 0
   slug: hustle-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 62.9
+  band: exemplar
+  composite: 67.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 57.0
+    artifact_dirs: 31
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
-    access_clarity: 75.0
-    contract_governance: 18.2
-    contract_quality: 51.9
+    access_clarity: 82.9
+    contract_governance: 31.8
+    contract_quality: 56.6
     developer_ergonomics: 66.1
     discoverability: 66.1
     operational_transparency: 65.8
-  previous_composite: 62.9
+  previous_composite: 66.1
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 10
     mcp: derived
     skills: derived
@@ -340,13 +375,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/hustle/refs/heads/main/screenshots/hustle-2026-07-25T221742.png
+screenshot: https://apis.io/screenshots/hustle/hustle-2026-07-25T221742.png
 security:
 - kind: authentication
   name: Hustle Authentication
@@ -364,6 +399,14 @@ security:
   name: Hustle Trust Center
   slug: hustle-trust-center
   summary_line: SOC 2, CSA STAR
+skill_count: 3
+skills:
+- name: Register and verify a Hustle webhook
+  slug: hustle-register-webhook
+- name: Track Hustle message delivery status
+  slug: hustle-track-message-delivery
+- name: Upsert a Hustle lead and tag them
+  slug: hustle-upsert-and-tag-lead
 slug: hustle
 tags:
 - Company
@@ -375,6 +418,7 @@ tags:
 - Marketing
 - Civic Engagement
 - Webhook
+- OAuth
 - Authentication
 website: https://hustle.com
 ---

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -46,30 +53,45 @@ api_count: 1
 apis:
 - baseURL: https://api.climate.com
   baseurl_source: declared
-  description: As-applied agrochemical data
-  name: Climate FieldView Application API
-  slug: climate-fieldview-application-api
-- baseURL: https://api.climate.com
-  baseurl_source: declared
   description: Agricultural field boundaries and metadata
   name: Climate FieldView Fields API
   slug: climate-fieldview-fields-api
 - baseURL: https://api.climate.com
   baseurl_source: declared
-  description: As-harvested yield data and maps
-  name: Climate FieldView Harvest API
-  slug: climate-fieldview-harvest-api
+  description: Field Boundary data endpoints.
+  name: Climate FieldView Boundaries API
+  slug: climate-fieldview-boundaries-api
 - baseURL: https://api.climate.com
   baseurl_source: declared
-  description: As-planted activity data and maps
-  name: Climate FieldView Planting API
-  slug: climate-fieldview-planting-api
+  description: General data export endpoints.
+  name: Climate FieldView Exports API
+  slug: climate-fieldview-exports-api
 - baseURL: https://api.climate.com
   baseurl_source: declared
-  description: Soil sample results and layers
-  name: Climate FieldView Soil Sampling API
-  slug: climate-fieldview-soil-sampling-api
-artifact_total: 28
+  description: Farm organization data endpoints.
+  name: Climate FieldView Farm Organizations API
+  slug: climate-fieldview-farmorganizations-api
+- baseURL: https://api.climate.com
+  baseurl_source: declared
+  description: General data retrieval endpoints.
+  name: Climate FieldView Layers API
+  slug: climate-fieldview-layers-api
+- baseURL: https://api.climate.com
+  baseurl_source: declared
+  description: Operation data endpoints.
+  name: Climate FieldView Operations API
+  slug: climate-fieldview-operations-api
+- baseURL: https://api.climate.com
+  baseurl_source: declared
+  description: Resource Owner data endpoints.
+  name: Climate FieldView Resource Owners API
+  slug: climate-fieldview-resourceowners-api
+- baseURL: https://api.climate.com
+  baseurl_source: declared
+  description: General data upload endpoints.
+  name: Climate FieldView Uploads API
+  slug: climate-fieldview-uploads-api
+artifact_total: 30
 collections:
 - collection_type: postman
   name: Climate FieldView Platform Application API
@@ -86,9 +108,6 @@ collections:
 - collection_type: postman
   name: Climate FieldView Platform Application Soil Sampling API
   slug: postman-climate-fieldview-soil-sampling-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Climate FieldView Platform Application API
   slug: open-climate-fieldview-application-api
@@ -109,22 +128,22 @@ collections:
   slug: open-climate-fieldview-soil-sampling-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/plans/climate-fieldview-plans-pricing.yml
+  href: https://artifacts.apis.io/climate-fieldview/plans/climate-fieldview-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/climate-fieldview-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/rate-limits/climate-fieldview-rate-limits.yml
+  href: https://artifacts.apis.io/climate-fieldview/rate-limits/climate-fieldview-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/climate-fieldview-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/finops/climate-fieldview-finops.yml
+  href: https://artifacts.apis.io/climate-fieldview/finops/climate-fieldview-finops.yml
   title: ''
   type: FinOps
   url: finops/climate-fieldview-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/capabilities/climate-fieldview-capability-edges.yml
+  href: https://artifacts.apis.io/climate-fieldview/capabilities/climate-fieldview-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/climate-fieldview-capability-edges.yml
@@ -133,22 +152,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/climate-fieldview/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/agentic-access/climate-fieldview-agentic-access.yml
+  href: https://artifacts.apis.io/climate-fieldview/agentic-access/climate-fieldview-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/climate-fieldview-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/security/climate-fieldview-domain-security.yml
+  href: https://artifacts.apis.io/climate-fieldview/security/climate-fieldview-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/climate-fieldview-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/authentication/climate-fieldview-authentication.yml
+  href: https://artifacts.apis.io/climate-fieldview/authentication/climate-fieldview-authentication.yml
   title: ''
   type: Authentication
   url: authentication/climate-fieldview-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/scopes/climate-fieldview-scopes.yml
+  href: https://artifacts.apis.io/climate-fieldview/scopes/climate-fieldview-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/climate-fieldview-scopes.yml
@@ -193,22 +212,22 @@ common:
   type: Partners
   url: https://climate.com/partners
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/openapi/_original/climate-fieldview-platform-openapi.yml
+  href: https://artifacts.apis.io/climate-fieldview/openapi/_original/climate-fieldview-platform-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/climate-fieldview-platform-openapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/json-schema/climate-fieldview-field-schema.json
+  href: https://artifacts.apis.io/climate-fieldview/json-schema/climate-fieldview-field-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/climate-fieldview-field-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/json-ld/climate-fieldview-context.jsonld
+  href: https://artifacts.apis.io/climate-fieldview/json-ld/climate-fieldview-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/climate-fieldview-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/rules/climate-fieldview-rules.yml
+  href: https://artifacts.apis.io/climate-fieldview/rules/climate-fieldview-rules.yml
   title: ''
   type: Spectral
   url: rules/climate-fieldview-rules.yml
@@ -222,7 +241,7 @@ finops:
 - has_sources: false
   method: generated
   name: Climate Fieldview Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: climate-fieldview-finops
   template: true
@@ -241,7 +260,7 @@ modified: '2026-05-19'
 name: Climate FieldView
 nav: Providers
 network: true
-overview: 'Climate FieldView publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Application API, Fields API, Harvest API, and 2 more. Tagged areas include Agriculture, Bayer, Crop Data, Field Boundaries, and Harvest.
+overview: 'Climate FieldView publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Fields API, Boundaries API, Exports API, and 5 more. Tagged areas include Agriculture, Bayer, Crop Data, Field Boundaries, and Harvest.
 
 
   The Climate FieldView catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -252,7 +271,7 @@ plans:
 - name: Climate Fieldview Plans Pricing
   plan_count: 3
   slug: climate-fieldview-plans-pricing
-random_paper: 1
+random_paper: 11
 rate_limits:
 - limit_count: 5
   name: Climate Fieldview Rate Limits
@@ -288,43 +307,43 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 44.5
+  composite: 45.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 55.5
     catalog_earned_first_party: 0.0
     catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.8
   facets:
     access_clarity: 28.9
     contract_governance: 13.6
-    contract_quality: 55.3
+    contract_quality: 60.1
     developer_ergonomics: 53.6
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 46.0
+  previous_composite: 44.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 57.1
+      total: 14
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/climate-fieldview/refs/heads/main/screenshots/climate-fieldview-2026-06-20T174520.png
+screenshot: https://apis.io/screenshots/climate-fieldview/climate-fieldview-2026-06-20T174520.png
 security:
 - kind: authentication
   name: Climate Fieldview Authentication
@@ -341,9 +360,10 @@ tags:
 - Crop Data
 - Field Boundaries
 - Harvest
-- Authentication
+- OAuth
 - Planting
 - Precision Agriculture
 - AgTech
+- Authentication
 website: https://climate.com/
 ---

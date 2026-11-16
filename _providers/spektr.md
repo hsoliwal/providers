@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.7
-  scored_at: '2026-10-17'
+  score: 39.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 24
@@ -90,15 +93,12 @@ apis:
   description: The Workspace Fields API API from Spektr — 2 operation(s) for workspace fields api.
   name: Spektr Workspace Fields API
   slug: spektr-workspace-fields-api-api
-artifact_total: 24
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Spektr Webhooks
   slug: spektr-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Spektr Action API API
   slug: open-spektr-action-api-api
@@ -128,7 +128,7 @@ collections:
   slug: open-spektr-workspace-fields-api-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/capabilities/spektr-capability-edges.yml
+  href: https://artifacts.apis.io/spektr/capabilities/spektr-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/spektr-capability-edges.yml
@@ -173,102 +173,102 @@ common:
   type: StatusPage
   url: https://spektr.statuspage.io
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/lifecycle/spektr-lifecycle.yml
+  href: https://artifacts.apis.io/spektr/lifecycle/spektr-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/spektr-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/changelog/spektr-changelog.yml
+  href: https://artifacts.apis.io/spektr/changelog/spektr-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/spektr-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/authentication/spektr-authentication.yml
+  href: https://artifacts.apis.io/spektr/authentication/spektr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spektr-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/conventions/spektr-conventions.yml
+  href: https://artifacts.apis.io/spektr/conventions/spektr-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/spektr-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/conventions/spektr-conventions.yml
+  href: https://artifacts.apis.io/spektr/conventions/spektr-conventions.yml
   title: ''
   type: Conventions
   url: conventions/spektr-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/errors/spektr-problem-types.yml
+  href: https://artifacts.apis.io/spektr/errors/spektr-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/spektr-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/lifecycle/spektr-lifecycle.yml
+  href: https://artifacts.apis.io/spektr/lifecycle/spektr-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/spektr-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/sandbox/spektr-sandbox.yml
+  href: https://artifacts.apis.io/spektr/sandbox/spektr-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/spektr-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/conformance/spektr-conformance.yml
+  href: https://artifacts.apis.io/spektr/conformance/spektr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/spektr-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/data-model/spektr-data-model.yml
+  href: https://artifacts.apis.io/spektr/data-model/spektr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/spektr-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/asyncapi/spektr-webhooks.yml
+  href: https://artifacts.apis.io/spektr/asyncapi/spektr-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/spektr-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/mcp/spektr-mcp.yml
+  href: https://artifacts.apis.io/spektr/mcp/spektr-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/spektr-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/llms/spektr-llms.txt
+  href: https://artifacts.apis.io/spektr/llms/spektr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/spektr-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/overlays/spektr-openapi-overlay.yaml
+  href: https://artifacts.apis.io/spektr/overlays/spektr-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/spektr-openapi-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/packages/spektr-packages.yml
+  href: https://artifacts.apis.io/spektr/packages/spektr-packages.yml
   title: ''
   type: Packages
   url: packages/spektr-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/packages/spektr-packages.yml
+  href: https://artifacts.apis.io/spektr/packages/spektr-packages.yml
   title: ''
   type: SDKs
   url: packages/spektr-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/spektr/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/agentic-access/spektr-agentic-access.yml
+  href: https://artifacts.apis.io/spektr/agentic-access/spektr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spektr-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/security/spektr-domain-security.yml
+  href: https://artifacts.apis.io/spektr/security/spektr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spektr-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/security/spektr-trust-center.yml
+  href: https://artifacts.apis.io/spektr/security/spektr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/spektr-trust-center.yml
@@ -287,30 +287,43 @@ network: true
 overview: 'Spektr publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Action API, Events API, Execution API, and 6 more. Tagged areas include Company, Compliance, RegTech, KYB, and KYC.
 
 
-  The Spektr catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Spektr catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Spektr''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 25 more developer resources.'
-random_paper: 5
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Spektr API Rules
+  rule_count: 57
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 3
+    warn: 7
+  slug: spektr-rules
 score:
-  band: developing
-  composite: 50.8
+  band: strong
+  composite: 56.2
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.8
   facets:
     access_clarity: 36.8
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 58.7
-    developer_ergonomics: 54.2
+    developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 50.7
+  previous_composite: 52.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -331,13 +344,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/spektr/refs/heads/main/screenshots/spektr-2026-08-17T082229.png
+screenshot: https://apis.io/screenshots/spektr/spektr-2026-08-17T082229.png
 security:
 - kind: authentication
   name: Spektr Authentication
@@ -351,6 +364,12 @@ security:
   name: Spektr Trust Center
   slug: spektr-trust-center
   summary_line: SOC 2, ISO 27001, GDPR
+skill_count: 2
+skills:
+- name: Execute a process and monitor via webhooks
+  slug: spektr-execute-and-monitor
+- name: Import a customer and start onboarding
+  slug: spektr-import-and-onboard
 slug: spektr
 tags:
 - Company

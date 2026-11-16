@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.8
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public API providing free access to civic election data.
@@ -277,47 +291,47 @@ apis:
 artifact_total: 56
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/rules/election-org-rules.yml
+  href: https://artifacts.apis.io/election-org/rules/election-org-rules.yml
   title: ''
   type: Spectral
   url: rules/election-org-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/json-ld/election-org-context.jsonld
+  href: https://artifacts.apis.io/election-org/json-ld/election-org-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/election-org-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/vocabulary/election-org-vocabulary.yml
+  href: https://artifacts.apis.io/election-org/vocabulary/election-org-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/election-org-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/conformance/election-org-conformance.yml
+  href: https://artifacts.apis.io/election-org/conformance/election-org-conformance.yml
   title: ''
   type: Conformance
   url: conformance/election-org-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/data-model/election-org-data-model.yml
+  href: https://artifacts.apis.io/election-org/data-model/election-org-data-model.yml
   title: ''
   type: DataModel
   url: data-model/election-org-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/authentication/election-org-authentication.yml
+  href: https://artifacts.apis.io/election-org/authentication/election-org-authentication.yml
   title: ''
   type: Authentication
   url: authentication/election-org-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/errors/election-org-problem-types.yml
+  href: https://artifacts.apis.io/election-org/errors/election-org-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/election-org-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/hosts/election-org-hosts.yml
+  href: https://artifacts.apis.io/election-org/hosts/election-org-hosts.yml
   title: ''
   type: Hosts
   url: hosts/election-org-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/vendors/election-org-vendors.yml
+  href: https://artifacts.apis.io/election-org/vendors/election-org-vendors.yml
   title: ''
   type: Vendors
   url: vendors/election-org-vendors.yml
@@ -326,7 +340,7 @@ common:
   type: ChangeLog
   url: https://election.org/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/election-org/refs/heads/main/security/election-org-domain-security.yml
+  href: https://artifacts.apis.io/election-org/security/election-org-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/election-org-domain-security.yml
@@ -382,7 +396,7 @@ overview: 'Election.org Public Data API publishes 50 API contracts indexed on th
 
 
   Election.org Public Data API''s developer surface includes authentication, changelog, documentation, support, and 11 more developer resources.'
-random_paper: 14
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -398,21 +412,23 @@ rules:
   slug: election-org-rules
 score:
   band: thin
-  composite: 37.3
+  composite: 31.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 59.8
     catalog_earned_first_party: 0.0
     catalog_gap: 40.3
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.7
   facets:
-    access_clarity: 28.6
+    access_clarity: 14.3
     contract_governance: 22.0
     contract_quality: 55.6
-    developer_ergonomics: 26.2
+    developer_ergonomics: 19.0
     discoverability: 66.1
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 37.3
   provenance:
     conformance: derived
     contracts:
@@ -426,13 +442,15 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/election-org/election-org-2026-11-03T131354.png
 security:
 - kind: authentication
   name: Election Org Authentication

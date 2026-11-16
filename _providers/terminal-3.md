@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.9
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -80,11 +83,8 @@ apis:
   description: Verifiable Credential issuer operations.
   name: Terminal 3 VC V1 API
   slug: terminal-3-vc-v1-api
-artifact_total: 20
+artifact_total: 24
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Terminal 3 DID V1 API
   slug: open-terminal-3-did-v1-api
@@ -112,22 +112,22 @@ common:
   type: BlogRSS
   url: https://blog.terminal3.io/rss/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/overlays/terminal-3-openapi-overlay.yaml
+  href: https://artifacts.apis.io/terminal-3/overlays/terminal-3-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/terminal-3-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/agentic-access/terminal-3-agentic-access.yml
+  href: https://artifacts.apis.io/terminal-3/agentic-access/terminal-3-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/terminal-3-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/security/terminal-3-trust-center.yml
+  href: https://artifacts.apis.io/terminal-3/security/terminal-3-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/terminal-3-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/security/terminal-3-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/terminal-3/security/terminal-3-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/terminal-3-vulnerability-disclosure.yml
@@ -140,47 +140,47 @@ common:
   type: Compliance
   url: https://terminal3.io/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/security/terminal-3-domain-security.yml
+  href: https://artifacts.apis.io/terminal-3/security/terminal-3-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/terminal-3-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/authentication/terminal-3-authentication.yml
+  href: https://artifacts.apis.io/terminal-3/authentication/terminal-3-authentication.yml
   title: ''
   type: Authentication
   url: authentication/terminal-3-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/packages/terminal-3-packages.yml
+  href: https://artifacts.apis.io/terminal-3/packages/terminal-3-packages.yml
   title: ''
   type: Packages
   url: packages/terminal-3-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/packages/terminal-3-packages.yml
+  href: https://artifacts.apis.io/terminal-3/packages/terminal-3-packages.yml
   title: ''
   type: SDKs
   url: packages/terminal-3-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/mcp/terminal-3-mcp.yml
+  href: https://artifacts.apis.io/terminal-3/mcp/terminal-3-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/terminal-3-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/llms/terminal-3-llms.txt
+  href: https://artifacts.apis.io/terminal-3/llms/terminal-3-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/terminal-3-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/conformance/terminal-3-conformance.yml
+  href: https://artifacts.apis.io/terminal-3/conformance/terminal-3-conformance.yml
   title: ''
   type: Conformance
   url: conformance/terminal-3-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/errors/terminal-3-problem-types.yml
+  href: https://artifacts.apis.io/terminal-3/errors/terminal-3-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/terminal-3-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/lifecycle/terminal-3-lifecycle.yml
+  href: https://artifacts.apis.io/terminal-3/lifecycle/terminal-3-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/terminal-3-lifecycle.yml
@@ -189,27 +189,27 @@ common:
   type: StatusPage
   url: https://status.terminal3.io
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/conventions/terminal-3-conventions.yml
+  href: https://artifacts.apis.io/terminal-3/conventions/terminal-3-conventions.yml
   title: ''
   type: Conventions
   url: conventions/terminal-3-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/changelog/terminal-3-changelog.yml
+  href: https://artifacts.apis.io/terminal-3/changelog/terminal-3-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/terminal-3-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/sandbox/terminal-3-sandbox.yml
+  href: https://artifacts.apis.io/terminal-3/sandbox/terminal-3-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/terminal-3-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/data-model/terminal-3-data-model.yml
+  href: https://artifacts.apis.io/terminal-3/data-model/terminal-3-data-model.yml
   title: ''
   type: DataModel
   url: data-model/terminal-3-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/terminal-3/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -265,27 +265,43 @@ network: true
 overview: 'Terminal 3 publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including DID V1 API, OpenID Connect V1 API, OpenID Connect V2 API, and 4 more. Tagged areas include Company, Identity, Decentralized Identity, Verifiable Credentials, and OpenID Connect.
 
 
+  The Terminal 3 catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Terminal 3''s developer surface includes authentication, changelog, sandbox, documentation, getting-started guide, support, engineering blog, and 25 more developer resources.'
-random_paper: 10
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Terminal 3 API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: terminal-3-rules
 score:
   band: developing
-  composite: 42.5
+  composite: 44.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 13.3
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 42.5
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -306,13 +322,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/terminal-3/refs/heads/main/screenshots/terminal-3-2026-09-02T163133.png
+screenshot: https://apis.io/screenshots/terminal-3/terminal-3-2026-09-02T163133.png
 security:
 - kind: authentication
   name: Terminal 3 Authentication
@@ -330,6 +346,16 @@ security:
   name: Terminal 3 Trust Center
   slug: terminal-3-trust-center
   summary_line: SOC 2, SOC 2 Type 1, ISO 27001
+skill_count: 4
+skills:
+- name: Issue and store a verifiable credential
+  slug: terminal-3-issue-verifiable-credential
+- name: Onboard a user and read their identity data
+  slug: terminal-3-onboard-user-and-read-identity
+- name: Authenticate a user with OpenID Connect
+  slug: terminal-3-openid-connect-login
+- name: t3n-adk-quickstart
+  slug: terminal-3-t3n-adk-quickstart
 slug: terminal-3
 tags:
 - Company

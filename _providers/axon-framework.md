@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 16.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -88,11 +92,8 @@ apis:
   description: The Users API from Axon Framework — 2 operation(s) for users.
   name: Axon Framework Users API
   slug: axon-framework-users-api
-artifact_total: 76
+artifact_total: 75
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Axon Server REST Applications API
   slug: open-axon-framework-applications-api
@@ -124,18 +125,22 @@ collections:
   name: Axon Server REST API
   slug: open-axon-server-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/axon-framework/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/plans/axon-framework-plans-pricing.yml
+  href: https://artifacts.apis.io/axon-framework/plans/axon-framework-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/axon-framework-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/rate-limits/axon-framework-rate-limits.yml
+  href: https://artifacts.apis.io/axon-framework/rate-limits/axon-framework-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/axon-framework-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/finops/axon-framework-finops.yml
+  href: https://artifacts.apis.io/axon-framework/finops/axon-framework-finops.yml
   title: ''
   type: FinOps
   url: finops/axon-framework-finops.yml
@@ -156,12 +161,12 @@ common:
   type: License
   url: https://github.com/AxonFramework/AxonFramework/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/agentic-access/axon-framework-agentic-access.yml
+  href: https://artifacts.apis.io/axon-framework/agentic-access/axon-framework-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/axon-framework-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/security/axon-framework-domain-security.yml
+  href: https://artifacts.apis.io/axon-framework/security/axon-framework-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axon-framework-domain-security.yml
@@ -202,12 +207,12 @@ common:
   type: StatusPage
   url: https://status.axoniq.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/rules/axon-framework-spectral-rules.yml
+  href: https://artifacts.apis.io/axon-framework/rules/axon-framework-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/axon-framework-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/vocabulary/axon-framework-vocabulary.yaml
+  href: https://artifacts.apis.io/axon-framework/vocabulary/axon-framework-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/axon-framework-vocabulary.yaml
@@ -265,7 +270,7 @@ finops:
 - has_sources: false
   method: generated
   name: Axon Framework Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: axon-framework-finops
   template: true
@@ -359,12 +364,12 @@ overview: 'Axon Framework publishes 9 API contracts indexed on the [APIs.io](htt
   The Axon Framework catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Axon Framework''s developer surface includes documentation, getting-started guide, engineering blog, pricing, and 16 more developer resources.'
+  Axon Framework''s developer surface includes documentation, getting-started guide, engineering blog, pricing, and 17 more developer resources.'
 plans:
 - name: Axon Framework Plans Pricing
   plan_count: 3
   slug: axon-framework-plans-pricing
-random_paper: 5
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Axon Framework Rate Limits
@@ -395,26 +400,26 @@ rules:
   slug: axon-framework-spectral-rules
 score:
   band: thin
-  composite: 32.9
+  composite: 33.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
     contract_quality: 47.1
-    developer_ergonomics: 11.9
+    developer_ergonomics: 13.1
     discoverability: 66.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 34.3
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -428,13 +433,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/axon-framework/refs/heads/main/screenshots/axon-framework-2026-06-20T172816.png
+screenshot: https://apis.io/screenshots/axon-framework/axon-framework-2026-06-20T172816.png
 security:
 - kind: domain-security
   name: Axon Framework Domain Security

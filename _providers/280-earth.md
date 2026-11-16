@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -74,12 +77,12 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/280-earth_stock/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/280-earth/refs/heads/main/security/280-earth-domain-security.yml
+  href: https://artifacts.apis.io/280-earth/security/280-earth-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/280-earth-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/280-earth/refs/heads/main/llms/280-earth-llms.txt
+  href: https://artifacts.apis.io/280-earth/llms/280-earth-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/280-earth-llms.txt
@@ -95,7 +98,7 @@ overview: '280 Earth is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   280 Earth''s developer surface includes product news and 10 more developer resources.'
-random_paper: 5
+random_paper: 11
 score:
   band: minimal
   composite: 7.3
@@ -121,14 +124,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 8.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/280-earth/refs/heads/main/screenshots/280-earth-2026-08-07T160657.png
+screenshot: https://apis.io/screenshots/280-earth/280-earth-2026-08-07T160657.png
 security:
 - kind: domain-security
   name: 280 Earth Domain Security

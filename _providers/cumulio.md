@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: The Authorize API from Cumulio — 1 operation(s) for authorize.
@@ -45,22 +60,22 @@ asyncapis:
   slug: cumulio-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/rate-limits/cumulio-rate-limits.yml
+  href: https://artifacts.apis.io/cumulio/rate-limits/cumulio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cumulio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/plans/cumulio-plans-pricing.yml
+  href: https://artifacts.apis.io/cumulio/plans/cumulio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cumulio-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/rules/cumulio-rules.yml
+  href: https://artifacts.apis.io/cumulio/rules/cumulio-rules.yml
   title: ''
   type: Spectral
   url: rules/cumulio-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/asyncapi/cumulio-webhooks.yml
+  href: https://artifacts.apis.io/cumulio/asyncapi/cumulio-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cumulio-webhooks.yml
@@ -69,37 +84,37 @@ common:
   type: Compliance
   url: https://trust.luzmo.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/conformance/cumulio-conformance.yml
+  href: https://artifacts.apis.io/cumulio/conformance/cumulio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cumulio-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/llms/cumulio-llms.txt
+  href: https://artifacts.apis.io/cumulio/llms/cumulio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cumulio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/well-known/cumulio-well-known.yml
+  href: https://artifacts.apis.io/cumulio/well-known/cumulio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cumulio-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/hosts/cumulio-hosts.yml
+  href: https://artifacts.apis.io/cumulio/hosts/cumulio-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cumulio-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/vendors/cumulio-vendors.yml
+  href: https://artifacts.apis.io/cumulio/vendors/cumulio-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cumulio-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/packages/cumulio-packages.yml
+  href: https://artifacts.apis.io/cumulio/packages/cumulio-packages.yml
   title: ''
   type: SDKs
   url: packages/cumulio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/packages/cumulio-packages.yml
+  href: https://artifacts.apis.io/cumulio/packages/cumulio-packages.yml
   title: ''
   type: Packages
   url: packages/cumulio-packages.yml
@@ -136,12 +151,12 @@ common:
   type: Documentation
   url: https://developer.luzmo.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/security/cumulio-trust-center.yml
+  href: https://artifacts.apis.io/cumulio/security/cumulio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cumulio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumulio/refs/heads/main/security/cumulio-domain-security.yml
+  href: https://artifacts.apis.io/cumulio/security/cumulio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cumulio-domain-security.yml
@@ -176,7 +191,7 @@ plans:
 - name: Cumulio Plans Pricing
   plan_count: 1
   slug: cumulio-plans-pricing
-random_paper: 18
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Cumulio Rate Limits
@@ -196,21 +211,23 @@ rules:
   slug: cumulio-rules
 score:
   band: thin
-  composite: 39.1
+  composite: 30.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 18
     catalog_earned: 45.5
     catalog_earned_first_party: 16.0
     catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.5
   facets:
-    access_clarity: 81.6
+    access_clarity: 55.3
     contract_governance: 18.2
     contract_quality: 17.3
-    developer_ergonomics: 19.0
+    developer_ergonomics: 13.1
     discoverability: 51.8
-    operational_transparency: 44.7
+    operational_transparency: 36.8
+  previous_composite: 39.1
   provenance:
     conformance: derived
     contracts:
@@ -224,12 +241,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cumulio/cumulio-2026-11-03T125806.png
 security:
 - kind: domain-security
   name: Cumulio Domain Security

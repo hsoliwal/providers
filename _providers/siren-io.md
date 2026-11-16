@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.2
-  scored_at: '2026-10-17'
+  score: 18.3
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - baseURL: https://{siren-investigate-host}
@@ -59,37 +72,37 @@ apis:
 artifact_total: 13
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/rules/siren-io-rules.yml
+  href: https://artifacts.apis.io/siren-io/rules/siren-io-rules.yml
   title: ''
   type: Spectral
   url: rules/siren-io-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/json-ld/siren-io-context.jsonld
+  href: https://artifacts.apis.io/siren-io/json-ld/siren-io-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/siren-io-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/vocabulary/siren-io-vocabulary.yml
+  href: https://artifacts.apis.io/siren-io/vocabulary/siren-io-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/siren-io-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/data-model/siren-io-data-model.yml
+  href: https://artifacts.apis.io/siren-io/data-model/siren-io-data-model.yml
   title: ''
   type: DataModel
   url: data-model/siren-io-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/conformance/siren-io-conformance.yml
+  href: https://artifacts.apis.io/siren-io/conformance/siren-io-conformance.yml
   title: ''
   type: Conformance
   url: conformance/siren-io-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/llms/siren-io-llms.txt
+  href: https://artifacts.apis.io/siren-io/llms/siren-io-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/siren-io-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/hosts/siren-io-hosts.yml
+  href: https://artifacts.apis.io/siren-io/hosts/siren-io-hosts.yml
   title: ''
   type: Hosts
   url: hosts/siren-io-hosts.yml
@@ -98,7 +111,7 @@ common:
   type: Newsroom
   url: https://siren.io/newsroom/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/siren-io/refs/heads/main/security/siren-io-domain-security.yml
+  href: https://artifacts.apis.io/siren-io/security/siren-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/siren-io-domain-security.yml
@@ -196,21 +209,23 @@ rules:
   slug: siren-io-rules
 score:
   band: emerging
-  composite: 25.8
+  composite: 20.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.4
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 23.7
-    developer_ergonomics: 35.7
-    discoverability: 80.4
-    operational_transparency: 5.3
+    developer_ergonomics: 17.9
+    discoverability: 79.5
+    operational_transparency: 2.6
+  previous_composite: 25.8
   provenance:
     conformance: derived
     contracts:
@@ -224,12 +239,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/siren-io/siren-io-2026-11-03T143240.png
 security:
 - kind: domain-security
   name: Siren Io Domain Security

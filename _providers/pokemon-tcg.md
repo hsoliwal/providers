@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-10-17'
+  score: 24.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,9 +69,6 @@ apis:
 artifact_total: 14
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Pokémon TCG Cards API
   slug: open-pokemon-tcg-cards-api
 - collection_type: open
@@ -78,17 +82,17 @@ collections:
   slug: open-pokemon-tcg
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/agentic-access/pokemon-tcg-agentic-access.yml
+  href: https://artifacts.apis.io/pokemon-tcg/agentic-access/pokemon-tcg-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pokemon-tcg-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/security/pokemon-tcg-domain-security.yml
+  href: https://artifacts.apis.io/pokemon-tcg/security/pokemon-tcg-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pokemon-tcg-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/authentication/pokemon-tcg-authentication.yml
+  href: https://artifacts.apis.io/pokemon-tcg/authentication/pokemon-tcg-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pokemon-tcg-authentication.yml
@@ -125,17 +129,17 @@ common:
   type: Errors
   url: https://docs.pokemontcg.io/getting-started/errors
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/plans/pokemon-tcg-plans-pricing.yml
+  href: https://artifacts.apis.io/pokemon-tcg/plans/pokemon-tcg-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pokemon-tcg-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/rate-limits/pokemon-tcg-rate-limits.yml
+  href: https://artifacts.apis.io/pokemon-tcg/rate-limits/pokemon-tcg-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pokemon-tcg-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/finops/pokemon-tcg-finops.yml
+  href: https://artifacts.apis.io/pokemon-tcg/finops/pokemon-tcg-finops.yml
   title: ''
   type: FinOps
   url: finops/pokemon-tcg-finops.yml
@@ -158,35 +162,51 @@ network: true
 overview: 'Pokémon TCG API publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Cards API, Metadata API, and Sets API. Tagged areas include Pokemon, Trading Cards, TCG, Gaming, and Card Games.
 
 
+  The Pokémon TCG API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pokémon TCG API''s developer surface includes authentication, documentation, and 12 more developer resources.'
 plans:
 - name: Pokemon Tcg Plans Pricing
   plan_count: 3
   slug: pokemon-tcg-plans-pricing
-random_paper: 2
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: Pokemon Tcg Rate Limits
   slug: pokemon-tcg-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Pokémon TCG API API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: pokemon-tcg-rules
 score:
   band: thin
-  composite: 28.3
+  composite: 29.9
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 43.0
+    artifact_dirs: 14
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.6
     developer_ergonomics: 35.7
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 36.6
+  previous_composite: 29.9
   provenance:
     agentic_access: derived
     contracts:
@@ -200,14 +220,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/pokemon-tcg/refs/heads/main/screenshots/pokemon-tcg-2026-09-02T151635.png
+screenshot: https://apis.io/screenshots/pokemon-tcg/pokemon-tcg-2026-09-02T151635.png
 security:
 - kind: authentication
   name: Pokemon Tcg Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,9 +36,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: operate
   title: ''
@@ -45,7 +49,7 @@ common:
   type: License
   url: https://github.com/ReviewStage/stage-cli/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stage/refs/heads/main/security/stage-domain-security.yml
+  href: https://artifacts.apis.io/stage/security/stage-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stage-domain-security.yml
@@ -82,17 +86,17 @@ common:
   type: Twitter
   url: https://x.com/StageReviewApp
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/stage/refs/heads/main/cli/stage-cli.yml
+  href: https://artifacts.apis.io/stage/cli/stage-cli.yml
   title: ''
   type: CLI
   url: cli/stage-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/stage/refs/heads/main/packages/stage-packages.yml
+  href: https://artifacts.apis.io/stage/packages/stage-packages.yml
   title: ''
   type: Packages
   url: packages/stage-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/stage/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/stage/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -113,7 +117,7 @@ score:
   band: minimal
   composite: 9.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -139,19 +143,23 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/stage/refs/heads/main/screenshots/stage-2026-09-02T160717.png
+screenshot: https://apis.io/screenshots/stage/stage-2026-09-02T160717.png
 security:
 - kind: domain-security
   name: Stage Domain Security
   slug: stage-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: stage-chapters
+  slug: stage-chapters
 slug: stage
 tags:
 - Company
@@ -160,7 +168,7 @@ tags:
 - CLI
 - AI Coding Agents
 - Pull Requests
-- Git
+- Version Control
 - Software Development
 website: https://stagereview.app/
 ---

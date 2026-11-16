@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -94,11 +101,8 @@ apis:
   description: Subjects that usage is metered against.
   name: OpenMeter Subjects API
   slug: openmeter-subjects-api
-artifact_total: 30
+artifact_total: 29
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OpenMeter Billing API
   slug: open-openmeter-billing-api
@@ -142,27 +146,27 @@ common:
   type: BlogRSS
   url: https://openmeter.io/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/capabilities/openmeter-capability-edges.yml
+  href: https://artifacts.apis.io/openmeter/capabilities/openmeter-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/openmeter-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/agentic-access/openmeter-agentic-access.yml
+  href: https://artifacts.apis.io/openmeter/agentic-access/openmeter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/openmeter-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/security/openmeter-trust-center.yml
+  href: https://artifacts.apis.io/openmeter/security/openmeter-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/openmeter-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/security/openmeter-domain-security.yml
+  href: https://artifacts.apis.io/openmeter/security/openmeter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openmeter-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/authentication/openmeter-authentication.yml
+  href: https://artifacts.apis.io/openmeter/authentication/openmeter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/openmeter-authentication.yml
@@ -183,17 +187,17 @@ common:
   type: Documentation
   url: https://openmeter.io/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/plans/openmeter-plans-pricing.yml
+  href: https://artifacts.apis.io/openmeter/plans/openmeter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/openmeter-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/rate-limits/openmeter-rate-limits.yml
+  href: https://artifacts.apis.io/openmeter/rate-limits/openmeter-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/openmeter-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/finops/openmeter-finops.yml
+  href: https://artifacts.apis.io/openmeter/finops/openmeter-finops.yml
   title: ''
   type: FinOps
   url: finops/openmeter-finops.yml
@@ -228,7 +232,7 @@ plans:
 - name: Openmeter Plans Pricing
   plan_count: 4
   slug: openmeter-plans-pricing
-random_paper: 7
+random_paper: 15
 rate_limits:
 - limit_count: 3
   name: Openmeter Rate Limits
@@ -250,13 +254,13 @@ score:
   band: thin
   composite: 31.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 48.0
     catalog_earned_first_party: 5.0
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 15.2
@@ -264,7 +268,7 @@ score:
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.7
+  previous_composite: 31.7
   provenance:
     agentic_access: derived
     contracts:
@@ -278,13 +282,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/screenshots/openmeter-2026-08-07T190632.png
+screenshot: https://apis.io/screenshots/openmeter/openmeter-2026-08-07T190632.png
 security:
 - kind: authentication
   name: Openmeter Authentication

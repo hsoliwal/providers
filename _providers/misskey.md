@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-10-17'
+  score: 28.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 408
   human_in_the_loop: 6
@@ -205,11 +211,8 @@ apis:
   description: The webhooks API from Misskey — 7 operation(s) for webhooks.
   name: Misskey Webhooks API
   slug: misskey-webhooks-api
-artifact_total: 195
+artifact_total: 194
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Misskey account API
   slug: open-misskey-account-api
@@ -308,17 +311,17 @@ collections:
   slug: open-misskey-webhooks-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/plans/misskey-plans-pricing.yml
+  href: https://artifacts.apis.io/misskey/plans/misskey-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/misskey-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/rate-limits/misskey-rate-limits.yml
+  href: https://artifacts.apis.io/misskey/rate-limits/misskey-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/misskey-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/finops/misskey-finops.yml
+  href: https://artifacts.apis.io/misskey/finops/misskey-finops.yml
   title: ''
   type: FinOps
   url: finops/misskey-finops.yml
@@ -327,7 +330,7 @@ common:
   type: Blog
   url: https://misskey-hub.net/en/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/capabilities/misskey-capability-edges.yml
+  href: https://artifacts.apis.io/misskey/capabilities/misskey-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/misskey-capability-edges.yml
@@ -356,17 +359,17 @@ common:
   type: License
   url: https://github.com/misskey-dev/misskey/blob/develop/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/agentic-access/misskey-agentic-access.yml
+  href: https://artifacts.apis.io/misskey/agentic-access/misskey-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/misskey-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/security/misskey-domain-security.yml
+  href: https://artifacts.apis.io/misskey/security/misskey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/misskey-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/authentication/misskey-authentication.yml
+  href: https://artifacts.apis.io/misskey/authentication/misskey-authentication.yml
   title: ''
   type: Authentication
   url: authentication/misskey-authentication.yml
@@ -571,7 +574,7 @@ finops:
 - has_sources: false
   method: generated
   name: Misskey Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: misskey-finops
   template: true
@@ -728,7 +731,7 @@ json_schemas:
   property_count: 21
   slug: misskey-reversigamelite
 - name: Role
-  property_count: 0
+  property_count: 12
   slug: misskey-role
 - name: RoleCondFormulaFollowersOrFollowingOrNotes
   property_count: 3
@@ -815,7 +818,7 @@ plans:
 - name: Misskey Plans Pricing
   plan_count: 3
   slug: misskey-plans-pricing
-random_paper: 3
+random_paper: 5
 rate_limits:
 - limit_count: 6
   name: Misskey Rate Limits
@@ -836,13 +839,13 @@ score:
   band: developing
   composite: 44.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 53.8
     catalog_earned_first_party: 0.0
     catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.0
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
@@ -853,7 +856,7 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 51.4
+  previous_composite: 44.4
   provenance:
     agentic_access: derived
     contracts:
@@ -867,13 +870,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/screenshots/misskey-2026-06-20T185633.png
+screenshot: https://apis.io/screenshots/misskey/misskey-2026-06-20T185633.png
 security:
 - kind: authentication
   name: Misskey Authentication

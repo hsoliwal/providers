@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 10
 apis:
 - description: REST APIs for MSCI index data including index levels and performance, constituents, security master, dividends, and corporate events for MSCI indexes across supported variants and currencies.
@@ -105,47 +109,47 @@ common:
   type: PrivacyPolicy
   url: https://www.msci.com/privacy-pledge
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/packages/msci-packages.yml
+  href: https://artifacts.apis.io/msci/packages/msci-packages.yml
   title: ''
   type: Packages
   url: packages/msci-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/packages/msci-packages.yml
+  href: https://artifacts.apis.io/msci/packages/msci-packages.yml
   title: ''
   type: SDKs
   url: packages/msci-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/well-known/msci-well-known.yml
+  href: https://artifacts.apis.io/msci/well-known/msci-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/msci-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/mcp/msci-mcp.yml
+  href: https://artifacts.apis.io/msci/mcp/msci-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/msci-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/llms/msci-llms.txt
+  href: https://artifacts.apis.io/msci/llms/msci-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/msci-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/conformance/msci-conformance.yml
+  href: https://artifacts.apis.io/msci/conformance/msci-conformance.yml
   title: ''
   type: Conformance
   url: conformance/msci-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/authentication/msci-authentication.yml
+  href: https://artifacts.apis.io/msci/authentication/msci-authentication.yml
   title: ''
   type: Authentication
   url: authentication/msci-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/lifecycle/msci-lifecycle.yml
+  href: https://artifacts.apis.io/msci/lifecycle/msci-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/msci-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/security/msci-domain-security.yml
+  href: https://artifacts.apis.io/msci/security/msci-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/msci-domain-security.yml
@@ -165,7 +169,7 @@ overview: 'MSCI is listed with 10 APIs on the [APIs.io](https://apis.io/) networ
 
 
   MSCI''s developer surface includes documentation, API reference, support, authentication, and 14 more developer resources.'
-random_paper: 10
+random_paper: 20
 score:
   band: emerging
   composite: 21.7
@@ -194,14 +198,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/screenshots/msci-2026-06-20T185849.png
+screenshot: https://apis.io/screenshots/msci/msci-2026-06-20T185849.png
 security:
 - kind: authentication
   name: Msci Authentication

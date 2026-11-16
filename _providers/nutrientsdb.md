@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -34,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -42,7 +48,7 @@ agentic_access:
   operation_count: 1
   slug: nutrientsdb-agentic-access
   summary_line: 1 operation
-api_count: 4
+api_count: 1
 apis:
 - baseURL: https://www.nutrientsdb.com/api
   baseurl_source: declared
@@ -53,11 +59,8 @@ arazzos:
 - description: 'Two-step flow over the free, keyless NutrientsDB Sample API: search the public 1,000-food sample by name fragment, then re-fetch the chosen record by its stable public_id. Both steps use the single pu'
   name: Resolve a food name to a NutrientsDB record and read its nutrient profile
   slug: nutrientsdb-search-then-lookup
-artifact_total: 13
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: NutrientsDB Sample Foods API
   slug: open-nutrientsdb-foods-api
@@ -67,57 +70,57 @@ common:
   type: Website
   url: https://www.nutrientsdb.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/mcp/nutrientsdb-mcp.yml
+  href: https://artifacts.apis.io/nutrientsdb/mcp/nutrientsdb-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nutrientsdb-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/overlays/nutrientsdb-sample-api-overlay.yaml
+  href: https://artifacts.apis.io/nutrientsdb/overlays/nutrientsdb-sample-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nutrientsdb-sample-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/agentic-access/nutrientsdb-agentic-access.yml
+  href: https://artifacts.apis.io/nutrientsdb/agentic-access/nutrientsdb-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nutrientsdb-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/security/nutrientsdb-domain-security.yml
+  href: https://artifacts.apis.io/nutrientsdb/security/nutrientsdb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nutrientsdb-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/authentication/nutrientsdb-authentication.yml
+  href: https://artifacts.apis.io/nutrientsdb/authentication/nutrientsdb-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nutrientsdb-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/conventions/nutrientsdb-conventions.yml
+  href: https://artifacts.apis.io/nutrientsdb/conventions/nutrientsdb-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nutrientsdb-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/lifecycle/nutrientsdb-lifecycle.yml
+  href: https://artifacts.apis.io/nutrientsdb/lifecycle/nutrientsdb-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nutrientsdb-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/conformance/nutrientsdb-conformance.yml
+  href: https://artifacts.apis.io/nutrientsdb/conformance/nutrientsdb-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nutrientsdb-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/vocabulary/nutrientsdb-nutrient-schema.yml
+  href: https://artifacts.apis.io/nutrientsdb/vocabulary/nutrientsdb-nutrient-schema.yml
   title: ''
   type: Vocabulary
   url: vocabulary/nutrientsdb-nutrient-schema.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/llms/nutrientsdb-llms.txt
+  href: https://artifacts.apis.io/nutrientsdb/llms/nutrientsdb-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nutrientsdb-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/nutrientsdb/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -188,34 +191,50 @@ network: true
 overview: 'NutrientsDB publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Foods API. Tagged areas include Nutrition, Food, Nutrients, food-composition, and Data.
 
 
+  The NutrientsDB catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   NutrientsDB''s developer surface includes authentication, documentation, API reference, engineering blog, support, pricing, and 15 more developer resources.'
-random_paper: 14
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: NutrientsDB API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: nutrientsdb-rules
 score:
   band: thin
-  composite: 30.8
+  composite: 33.3
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 47.4
+    artifact_dirs: 26
+    catalog_earned: 48.9
     catalog_earned_first_party: 5.0
-    catalog_gap: 67.6
+    catalog_gap: 66.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.4
   facets:
     access_clarity: 0.0
-    contract_governance: 19.7
-    contract_quality: 56.0
+    contract_governance: 33.3
+    contract_quality: 61.5
     developer_ergonomics: 35.1
-    discoverability: 66.1
+    discoverability: 60.7
     operational_transparency: 2.6
-  previous_composite: 30.3
+  previous_composite: 31.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: derived
     skills: derived
@@ -225,14 +244,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/nutrientsdb/refs/heads/main/screenshots/nutrientsdb-2026-09-02T150826.png
+screenshot: https://apis.io/screenshots/nutrientsdb/nutrientsdb-2026-09-02T150826.png
 security:
 - kind: authentication
   name: Nutrientsdb Authentication
@@ -242,6 +261,12 @@ security:
   name: Nutrientsdb Domain Security
   slug: nutrientsdb-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Evaluate whether the NutrientsDB dataset fits a project
+  slug: nutrientsdb-evaluate-dataset-fit
+- name: Look up a food's nutrition facts in NutrientsDB
+  slug: nutrientsdb-look-up-nutrition
 slug: nutrientsdb
 tags:
 - Nutrition

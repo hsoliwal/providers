@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/rate-limits/jirav-rate-limits.yml
+  href: https://artifacts.apis.io/jirav/rate-limits/jirav-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jirav-rate-limits.yml
@@ -49,7 +52,7 @@ common:
   type: BlogRSS
   url: https://www.jirav.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/security/jirav-domain-security.yml
+  href: https://artifacts.apis.io/jirav/security/jirav-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jirav-domain-security.yml
@@ -86,22 +89,22 @@ common:
   type: ReleaseNotes
   url: https://help.jirav.com/release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/changelog/jirav-changelog.yml
+  href: https://artifacts.apis.io/jirav/changelog/jirav-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/jirav-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/plans/jirav-plans-pricing.yml
+  href: https://artifacts.apis.io/jirav/plans/jirav-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jirav-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/lifecycle/jirav-lifecycle.yml
+  href: https://artifacts.apis.io/jirav/lifecycle/jirav-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/jirav-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/llms/jirav-llms.txt
+  href: https://artifacts.apis.io/jirav/llms/jirav-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/jirav-llms.txt
@@ -146,7 +149,7 @@ score:
   band: emerging
   composite: 22.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -169,14 +172,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/jirav/refs/heads/main/screenshots/jirav-2026-09-02T145943.png
+screenshot: https://apis.io/screenshots/jirav/jirav-2026-09-02T145943.png
 security:
 - kind: domain-security
   name: Jirav Domain Security

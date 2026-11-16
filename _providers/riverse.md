@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/rate-limits/riverse-rate-limits.yml
+  href: https://artifacts.apis.io/riverse/rate-limits/riverse-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/riverse-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/security/riverse-domain-security.yml
+  href: https://artifacts.apis.io/riverse/security/riverse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/riverse-domain-security.yml
@@ -77,7 +80,7 @@ common:
   type: Pricing
   url: https://docs.rainbowstandard.io/other/terms-and-contracts/rainbow-standard-and-registry-fees
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/plans/riverse-plans-pricing.yml
+  href: https://artifacts.apis.io/riverse/plans/riverse-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/riverse-plans-pricing.yml
@@ -90,7 +93,7 @@ common:
   type: PrivacyPolicy
   url: https://docs.rainbowstandard.io/other/terms-and-contracts/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/llms/riverse-llms.txt
+  href: https://artifacts.apis.io/riverse/llms/riverse-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/riverse-llms.txt
@@ -99,12 +102,12 @@ common:
   type: ContentSignal
   url: https://docs.rainbowstandard.io/robots.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/vocabulary/riverse-vocabulary.yml
+  href: https://artifacts.apis.io/riverse/vocabulary/riverse-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/riverse-vocabulary.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/changelog/riverse-changelog.yml
+  href: https://artifacts.apis.io/riverse/changelog/riverse-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/riverse-changelog.yml
@@ -113,7 +116,7 @@ common:
   type: ChangeLog
   url: https://docs.rainbowstandard.io/rainbow-standard-documents/rainbow-standard-rules/version-history
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/lifecycle/riverse-lifecycle.yml
+  href: https://artifacts.apis.io/riverse/lifecycle/riverse-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/riverse-lifecycle.yml
@@ -122,7 +125,7 @@ common:
   type: Deprecation
   url: https://docs.rainbowstandard.io/rainbow-standard-documents/procedures-manual/standard-and-methodologies
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/conformance/riverse-conformance.yml
+  href: https://artifacts.apis.io/riverse/conformance/riverse-conformance.yml
   title: ''
   type: Conformance
   url: conformance/riverse-conformance.yml
@@ -131,7 +134,7 @@ common:
   type: Compliance
   url: https://docs.rainbowstandard.io/other/governance-and-integrity
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/security/riverse-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/riverse/security/riverse-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/riverse-vulnerability-disclosure.yml
@@ -140,7 +143,7 @@ common:
   type: Security
   url: https://docs.rainbowstandard.io/rainbow-standard-documents/procedures-manual/registry-requirements
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/security/riverse-trust-center.yml
+  href: https://artifacts.apis.io/riverse/security/riverse-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/riverse-trust-center.yml
@@ -181,7 +184,7 @@ plans:
 - name: Riverse Plans Pricing
   plan_count: 4
   slug: riverse-plans-pricing
-random_paper: 20
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Riverse Rate Limits
@@ -190,13 +193,13 @@ score:
   band: thin
   composite: 36.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 40.3
     catalog_earned_first_party: 12.0
     catalog_gap: 74.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 78.9
     contract_governance: 22.0
@@ -204,7 +207,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 55.4
     operational_transparency: 34.2
-  previous_composite: 36.2
+  previous_composite: 36.3
   provenance:
     conformance: first-party
   regulatory:
@@ -213,14 +216,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/riverse/refs/heads/main/screenshots/riverse-2026-09-02T153933.png
+screenshot: https://apis.io/screenshots/riverse/riverse-2026-09-02T153933.png
 security:
 - kind: domain-security
   name: Riverse Domain Security

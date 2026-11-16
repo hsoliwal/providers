@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -72,9 +75,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Kpler Direct Access Aggregations API
   slug: open-kpler-aggregations-api
 - collection_type: open
@@ -85,17 +85,17 @@ collections:
   slug: open-kpler-facts-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/agentic-access/kpler-agentic-access.yml
+  href: https://artifacts.apis.io/kpler/agentic-access/kpler-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kpler-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/security/kpler-domain-security.yml
+  href: https://artifacts.apis.io/kpler/security/kpler-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kpler-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/authentication/kpler-authentication.yml
+  href: https://artifacts.apis.io/kpler/authentication/kpler-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kpler-authentication.yml
@@ -120,17 +120,17 @@ common:
   type: PostmanPublicWorkspace
   url: https://www.postman.com/kplerdev
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/plans/kpler-plans-pricing.yml
+  href: https://artifacts.apis.io/kpler/plans/kpler-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kpler-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/rate-limits/kpler-rate-limits.yml
+  href: https://artifacts.apis.io/kpler/rate-limits/kpler-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kpler-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/finops/kpler-finops.yml
+  href: https://artifacts.apis.io/kpler/finops/kpler-finops.yml
   title: ''
   type: FinOps
   url: finops/kpler-finops.yml
@@ -153,6 +153,9 @@ network: true
 overview: 'Kpler publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aggregations API, Authentication API, Facts API, and 3 more. Tagged areas include Vessel Tracking, Maritime, Commodities, Supply Chain, and AIS.
 
 
+  The Kpler catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Kpler''s developer surface includes authentication, documentation, SDKs, and 8 more developer resources.'
 plans:
 - name: Kpler Plans Pricing
@@ -163,25 +166,38 @@ rate_limits:
 - limit_count: 4
   name: Kpler Rate Limits
   slug: kpler-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Kpler API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: kpler-rules
 score:
   band: thin
-  composite: 28.2
+  composite: 29.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 14
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 38.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 36.5
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     contracts:
@@ -195,13 +211,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kpler/refs/heads/main/screenshots/kpler-2026-07-25T224256.png
+screenshot: https://apis.io/screenshots/kpler/kpler-2026-07-25T224256.png
 security:
 - kind: authentication
   name: Kpler Authentication

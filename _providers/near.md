@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 149
   slug: near-agentic-access
   summary_line: 149 operations · 37 acting
-api_count: 7
+api_count: 4
 apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -347,9 +354,6 @@ apis:
 artifact_total: 131
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: FastNEAR accounts API
   slug: open-near-accounts-api
 - collection_type: open
@@ -531,17 +535,17 @@ collections:
   slug: open-near-validators-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/plans/fastnear-api.yml
+  href: https://artifacts.apis.io/near/plans/fastnear-api.yml
   title: ''
   type: Plans
   url: plans/fastnear-api.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/rate-limits/fastnear-api.yml
+  href: https://artifacts.apis.io/near/rate-limits/fastnear-api.yml
   title: ''
   type: RateLimits
   url: rate-limits/fastnear-api.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/finops/nearblocks-api.yml
+  href: https://artifacts.apis.io/near/finops/nearblocks-api.yml
   title: ''
   type: FinOps
   url: finops/nearblocks-api.yml
@@ -554,17 +558,17 @@ common:
   type: Website
   url: https://near.org
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/agentic-access/near-agentic-access.yml
+  href: https://artifacts.apis.io/near/agentic-access/near-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/near-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/security/near-domain-security.yml
+  href: https://artifacts.apis.io/near/security/near-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/near-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/authentication/near-authentication.yml
+  href: https://artifacts.apis.io/near/authentication/near-authentication.yml
   title: ''
   type: Authentication
   url: authentication/near-authentication.yml
@@ -587,6 +591,9 @@ network: true
 overview: 'NEAR Protocol publishes 60 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Block API, Block Effects API, and 57 more. Tagged areas include Blockchain, Web3, NEAR, NFT, and Tokens.
 
 
+  The NEAR Protocol catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   NEAR Protocol''s developer surface includes engineering blog, authentication, and 6 more developer resources.'
 plans:
 - name: Fastnear Api
@@ -598,7 +605,7 @@ plans:
 - name: Nearblocks Api
   plan_count: 5
   slug: nearblocks-api
-random_paper: 4
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Fastnear Api
@@ -609,31 +616,44 @@ rate_limits:
 - limit_count: 0
   name: Nearblocks Api
   slug: nearblocks-api
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: NEAR Protocol API Rules
+  rule_count: 46
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 7
+  slug: near-rules
 score:
   band: emerging
-  composite: 21.7
+  composite: 24.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 16
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.7
+  delta: 0.8
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 39.6
+    contract_governance: 13.6
+    contract_quality: 42.8
     developer_ergonomics: 23.8
     discoverability: 71.4
     operational_transparency: 0.0
-  previous_composite: 25.4
+  previous_composite: 23.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 36.7
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 73.3
       total: 60
   regulatory:
     applies: true
@@ -641,13 +661,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/screenshots/near-2026-06-20T190119.png
+screenshot: https://apis.io/screenshots/near/near-2026-06-20T190119.png
 security:
 - kind: authentication
   name: Near Authentication

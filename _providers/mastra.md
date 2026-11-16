@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -101,9 +107,6 @@ apis:
 artifact_total: 29
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Mastra Server REST Agents API
   slug: open-mastra-agents-api
 - collection_type: open
@@ -138,37 +141,37 @@ collections:
   slug: open-mastra
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/rate-limits/mastra-rate-limits.yml
+  href: https://artifacts.apis.io/mastra/rate-limits/mastra-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mastra-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/finops/mastra-finops.yml
+  href: https://artifacts.apis.io/mastra/finops/mastra-finops.yml
   title: ''
   type: FinOps
   url: finops/mastra-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/plans/mastra-plans-pricing.yml
+  href: https://artifacts.apis.io/mastra/plans/mastra-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mastra-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/capabilities/mastra-capability-edges.yml
+  href: https://artifacts.apis.io/mastra/capabilities/mastra-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/mastra-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/agentic-access/mastra-agentic-access.yml
+  href: https://artifacts.apis.io/mastra/agentic-access/mastra-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mastra-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/security/mastra-domain-security.yml
+  href: https://artifacts.apis.io/mastra/security/mastra-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mastra-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/authentication/mastra-authentication.yml
+  href: https://artifacts.apis.io/mastra/authentication/mastra-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mastra-authentication.yml
@@ -266,7 +269,7 @@ finops:
 - has_sources: false
   method: generated
   name: Mastra Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: mastra-finops
   template: true
@@ -279,35 +282,51 @@ network: true
 overview: 'Mastra publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Conversations API, Logs API, and 8 more. Tagged areas include Agents, Artificial Intelligence, JavaScript, RAG, and TypeScript.
 
 
+  The Mastra catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Mastra''s developer surface includes authentication, documentation, engineering blog, GitHub presence, changelog, pricing, code examples, and 22 more developer resources.'
 plans:
 - name: Mastra Plans Pricing
   plan_count: 5
   slug: mastra-plans-pricing
-random_paper: 10
+random_paper: 0
 rate_limits:
 - limit_count: 5
   name: Mastra Rate Limits
   slug: mastra-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Mastra API Rules
+  rule_count: 47
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 1
+  slug: mastra-rules
 score:
-  band: thin
-  composite: 37.7
+  band: developing
+  composite: 39.3
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 47.0
+    artifact_dirs: 18
+    catalog_earned: 51.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 68.0
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 3.2
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.7
     developer_ergonomics: 38.1
     discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 34.5
+  previous_composite: 39.3
   provenance:
     agentic_access: derived
     contracts:
@@ -321,13 +340,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/screenshots/mastra-2026-06-20T185031.png
+screenshot: https://apis.io/screenshots/mastra/mastra-2026-06-20T185031.png
 security:
 - kind: authentication
   name: Mastra Authentication

@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 32.5
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.ubble.ai
   baseurl_source: declared
@@ -94,15 +97,12 @@ apis:
   description: The Website verifications (Coming soon) API from Ubble — 4 operation(s) for website verifications (coming soon).
   name: Ubble Website verifications (Coming soon) API
   slug: ubble-website-verifications-coming-soon-api
-artifact_total: 27
+artifact_total: 30
 asyncapis:
 - description: ''
   name: Ubble Webhooks
   slug: ubble-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Checkout.com - Identity Verification Address document verifications (Coming soon) Address document verifications (Coming soon) Address document verifications (Coming soon) API
   slug: open-ubble-address-document-verifications-coming-soon-api
@@ -194,87 +194,87 @@ common:
   type: Compliance
   url: https://www.checkout.com/products/identity-verification
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/security/ubble-trust-center.yml
+  href: https://artifacts.apis.io/ubble/security/ubble-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ubble-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/security/ubble-domain-security.yml
+  href: https://artifacts.apis.io/ubble/security/ubble-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ubble-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/authentication/ubble-authentication.yml
+  href: https://artifacts.apis.io/ubble/authentication/ubble-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ubble-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/conventions/ubble-conventions.yml
+  href: https://artifacts.apis.io/ubble/conventions/ubble-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ubble-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/errors/ubble-problem-types.yml
+  href: https://artifacts.apis.io/ubble/errors/ubble-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ubble-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/errors/ubble-response-codes.yml
+  href: https://artifacts.apis.io/ubble/errors/ubble-response-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/ubble-response-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/lifecycle/ubble-lifecycle.yml
+  href: https://artifacts.apis.io/ubble/lifecycle/ubble-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ubble-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/changelog/ubble-changelog.yml
+  href: https://artifacts.apis.io/ubble/changelog/ubble-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ubble-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/sandbox/ubble-sandbox.yml
+  href: https://artifacts.apis.io/ubble/sandbox/ubble-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/ubble-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/components/ubble-components.yml
+  href: https://artifacts.apis.io/ubble/components/ubble-components.yml
   title: ''
   type: Components
   url: components/ubble-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/data-model/ubble-data-model.yml
+  href: https://artifacts.apis.io/ubble/data-model/ubble-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ubble-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/asyncapi/ubble-webhooks.yml
+  href: https://artifacts.apis.io/ubble/asyncapi/ubble-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/ubble-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/mcp/ubble-mcp.yml
+  href: https://artifacts.apis.io/ubble/mcp/ubble-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ubble-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/llms/ubble-llms.txt
+  href: https://artifacts.apis.io/ubble/llms/ubble-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ubble-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/overlays/ubble-identity-verification-overlay.yaml
+  href: https://artifacts.apis.io/ubble/overlays/ubble-identity-verification-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ubble-identity-verification-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/conformance/ubble-conformance.yml
+  href: https://artifacts.apis.io/ubble/conformance/ubble-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ubble-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ubble/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -289,36 +289,49 @@ network: true
 overview: 'Ubble publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Address document verifications (Coming soon) API, AML verifications API, Applicants API, and 8 more. Tagged areas include Company, Identity Verification, KYC, AML, and Biometrics.
 
 
-  The Ubble catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Ubble catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Ubble''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 24 more developer resources.'
-random_paper: 16
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Ubble API Rules
+  rule_count: 45
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 1
+    warn: 13
+  slug: ubble-rules
 score:
   band: developing
-  composite: 40.5
+  composite: 49.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.5
+  delta: 7.0
   facets:
     access_clarity: 36.8
-    contract_governance: 4.5
-    contract_quality: 53.4
-    developer_ergonomics: 28.0
+    contract_governance: 18.2
+    contract_quality: 58.4
+    developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 41.0
+  previous_composite: 42.1
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 11
     mcp: derived
     skills: derived
@@ -332,13 +345,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 28.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ubble/refs/heads/main/screenshots/ubble-2026-08-17T082623.png
+screenshot: https://apis.io/screenshots/ubble/ubble-2026-08-17T082623.png
 security:
 - kind: authentication
   name: Ubble Authentication
@@ -352,6 +365,14 @@ security:
   name: Ubble Trust Center
   slug: ubble-trust-center
   summary_line: GDPR
+skill_count: 3
+skills:
+- name: Screen an applicant for AML risk with Ubble
+  slug: ubble-aml-screening
+- name: Re-authenticate a returning user with Ubble face authentication
+  slug: ubble-face-authentication
+- name: Verify a person's identity with Ubble (Checkout.com Identities API)
+  slug: ubble-verify-identity
 slug: ubble
 tags:
 - Company

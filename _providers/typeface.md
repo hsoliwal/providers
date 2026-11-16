@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.0
-  scored_at: '2026-10-17'
+  score: 51.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -119,15 +125,12 @@ apis:
   description: The Tag Library API from Typeface — 3 operation(s) for tag library.
   name: Typeface Tag Library API
   slug: typeface-tag-library-api
-artifact_total: 41
+artifact_total: 46
 asyncapis:
 - description: ''
   name: Typeface Webhooks
   slug: typeface-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Typeface Audiences API
   slug: open-typeface-audiences-api
@@ -175,12 +178,12 @@ collections:
   slug: open-typeface-tag-library-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/capabilities/typeface-capability-edges.yml
+  href: https://artifacts.apis.io/typeface/capabilities/typeface-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/typeface-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/overlays/typeface-api-overlay.yaml
+  href: https://artifacts.apis.io/typeface/overlays/typeface-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/typeface-api-overlay.yaml
@@ -205,77 +208,77 @@ common:
   type: GettingStarted
   url: https://developers.typeface.ai/docs/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/authentication/typeface-authentication.yml
+  href: https://artifacts.apis.io/typeface/authentication/typeface-authentication.yml
   title: ''
   type: Authentication
   url: authentication/typeface-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/scopes/typeface-scopes.yml
+  href: https://artifacts.apis.io/typeface/scopes/typeface-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/typeface-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/mcp/typeface-mcp.yml
+  href: https://artifacts.apis.io/typeface/mcp/typeface-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/typeface-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/mcp/typeface-tool-crosswalk.yml
+  href: https://artifacts.apis.io/typeface/mcp/typeface-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/typeface-tool-crosswalk.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/rate-limits/typeface-rate-limits.yml
+  href: https://artifacts.apis.io/typeface/rate-limits/typeface-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/typeface-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/plans/typeface-plans-pricing.yml
+  href: https://artifacts.apis.io/typeface/plans/typeface-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/typeface-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/typeface/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/agentic-access/typeface-agentic-access.yml
+  href: https://artifacts.apis.io/typeface/agentic-access/typeface-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/typeface-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/asyncapi/typeface-webhooks.yml
+  href: https://artifacts.apis.io/typeface/asyncapi/typeface-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/typeface-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/well-known/typeface-well-known.yml
+  href: https://artifacts.apis.io/typeface/well-known/typeface-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/typeface-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/llms/typeface-llms.txt
+  href: https://artifacts.apis.io/typeface/llms/typeface-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/typeface-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/packages/typeface-packages.yml
+  href: https://artifacts.apis.io/typeface/packages/typeface-packages.yml
   title: ''
   type: Packages
   url: packages/typeface-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/packages/typeface-packages.yml
+  href: https://artifacts.apis.io/typeface/packages/typeface-packages.yml
   title: ''
   type: SDKs
   url: packages/typeface-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/components/typeface-components.yml
+  href: https://artifacts.apis.io/typeface/components/typeface-components.yml
   title: ''
   type: Components
   url: components/typeface-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/conformance/typeface-conformance.yml
+  href: https://artifacts.apis.io/typeface/conformance/typeface-conformance.yml
   title: ''
   type: Conformance
   url: conformance/typeface-conformance.yml
@@ -284,12 +287,12 @@ common:
   type: Compliance
   url: https://trust.typeface.ai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/security/typeface-trust-center.yml
+  href: https://artifacts.apis.io/typeface/security/typeface-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/typeface-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/security/typeface-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/typeface/security/typeface-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/typeface-vulnerability-disclosure.yml
@@ -298,17 +301,17 @@ common:
   type: Security
   url: https://www.typeface.ai/security-and-governance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/security/typeface-domain-security.yml
+  href: https://artifacts.apis.io/typeface/security/typeface-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/typeface-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/errors/typeface-problem-types.yml
+  href: https://artifacts.apis.io/typeface/errors/typeface-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/typeface-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/lifecycle/typeface-lifecycle.yml
+  href: https://artifacts.apis.io/typeface/lifecycle/typeface-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/typeface-lifecycle.yml
@@ -317,12 +320,12 @@ common:
   type: StatusPage
   url: https://status.typeface.ai
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/conventions/typeface-conventions.yml
+  href: https://artifacts.apis.io/typeface/conventions/typeface-conventions.yml
   title: ''
   type: Conventions
   url: conventions/typeface-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/data-model/typeface-data-model.yml
+  href: https://artifacts.apis.io/typeface/data-model/typeface-data-model.yml
   title: ''
   type: DataModel
   url: data-model/typeface-data-model.yml
@@ -348,6 +351,14 @@ common:
   url: https://www.typeface.ai/privacy
 created: '2026-07-17'
 description: Typeface is an enterprise marketing AI platform that orchestrates AI agents, brand intelligence, and workflows to create personalized, on-brand campaigns at scale. Its developer platform exposes REST APIs (bearer JWT via application credentials) for identity discovery, teams, projects, brand kits, audiences, layouts, assets, tags, content workflows, document search, and asynchronous batch content generation, plus outbound/inbound webhooks, a hosted MCP server with OAuth 2.1, an A2A agent surface, SCIM 2.0 provisioning, and 30+ marketing-stack connectors.
+finops:
+- has_sources: true
+  method: derived
+  name: Typeface Finops
+  primary_unit: ''
+  service_category: ''
+  slug: typeface-finops
+  template: true
 image: https://images.ctfassets.net/x690ow8339ug/g36Rl9hYe43Kx6buA0HBv/752c90259d7655c7accbb0ce0697a67e/Agentic-AI.png
 layout: provider
 mcp_servers:
@@ -361,7 +372,7 @@ network: true
 overview: 'Typeface publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audiences API, Authentication API, Basic Services API, and 12 more. Tagged areas include Company, Artificial Intelligence, Content Generation, Marketing, and Agents.
 
 
-  The Typeface catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Typeface catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Typeface''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 31 more developer resources.'
@@ -369,35 +380,48 @@ plans:
 - name: Typeface Plans Pricing
   plan_count: 0
   slug: typeface-plans-pricing
-random_paper: 13
+random_paper: 9
 rate_limits:
 - limit_count: 4
   name: Typeface Rate Limits
   slug: typeface-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Typeface API Rules
+  rule_count: 50
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 3
+    warn: 11
+  slug: typeface-rules
 scopes:
 - name: Typeface Scopes
   scope_count: 4
   slug: typeface-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: developing
-  composite: 50.9
+  band: strong
+  composite: 55.4
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 52.0
+    artifact_dirs: 30
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 2.8
   facets:
     access_clarity: 35.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 54.0
-    developer_ergonomics: 47.0
+    developer_ergonomics: 61.3
     discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 51.3
+  previous_composite: 52.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -414,13 +438,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 37.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/screenshots/typeface-2026-08-17T082511.png
+screenshot: https://apis.io/screenshots/typeface/typeface-2026-08-17T082511.png
 security:
 - kind: authentication
   name: Typeface Authentication
@@ -438,6 +462,16 @@ security:
   name: Typeface Trust Center
   slug: typeface-trust-center
   summary_line: SOC 2 Type II, ISO 27001
+skill_count: 4
+skills:
+- name: Run Typeface content approval workflows
+  slug: typeface-document-workflow
+- name: Generate on-brand content with Typeface
+  slug: typeface-generate-content
+- name: Manage Typeface assets and tag taxonomy
+  slug: typeface-manage-assets-and-tags
+- name: Manage Typeface brand kits and styles
+  slug: typeface-manage-brand-kits
 slug: typeface
 tags:
 - Company

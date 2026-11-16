@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
+  score: 33.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -70,11 +76,8 @@ apis:
   description: Current Fortnite in-game store rotation.
   name: Fortnite Tracker Store API
   slug: fortnite-store-api
-artifact_total: 50
+artifact_total: 49
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fortnite Tracker Challenges API
   slug: open-fortnite-challenges-api
@@ -92,17 +95,17 @@ collections:
   slug: open-fortnite-store-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/agentic-access/fortnite-agentic-access.yml
+  href: https://artifacts.apis.io/fortnite/agentic-access/fortnite-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fortnite-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/security/fortnite-domain-security.yml
+  href: https://artifacts.apis.io/fortnite/security/fortnite-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fortnite-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/authentication/fortnite-authentication.yml
+  href: https://artifacts.apis.io/fortnite/authentication/fortnite-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fortnite-authentication.yml
@@ -123,32 +126,32 @@ common:
   type: DeveloperPortal
   url: https://tracker.gg/developers
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/plans/fortnite-plans-pricing.yml
+  href: https://artifacts.apis.io/fortnite/plans/fortnite-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fortnite-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/rate-limits/fortnite-rate-limits.yml
+  href: https://artifacts.apis.io/fortnite/rate-limits/fortnite-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fortnite-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/finops/fortnite-finops.yml
+  href: https://artifacts.apis.io/fortnite/finops/fortnite-finops.yml
   title: ''
   type: FinOps
   url: finops/fortnite-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/rules/fortnite-spectral-rules.yml
+  href: https://artifacts.apis.io/fortnite/rules/fortnite-spectral-rules.yml
   title: ''
   type: Rules
   url: rules/fortnite-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/vocabulary/fortnite-vocabulary.yaml
+  href: https://artifacts.apis.io/fortnite/vocabulary/fortnite-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/fortnite-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/json-ld/fortnite-tracker-context.jsonld
+  href: https://artifacts.apis.io/fortnite/json-ld/fortnite-tracker-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/fortnite-tracker-context.jsonld
@@ -208,7 +211,7 @@ json_schemas:
   property_count: 8
   slug: fortnite-tracker-player-profile
 - name: PowerRankingDetail
-  property_count: 0
+  property_count: 9
   slug: fortnite-tracker-power-ranking-detail
 - name: PowerRankingEntry
   property_count: 8
@@ -277,7 +280,7 @@ plans:
 - name: Fortnite Plans Pricing
   plan_count: 2
   slug: fortnite-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Fortnite Rate Limits
@@ -310,13 +313,13 @@ score:
   band: thin
   composite: 27.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 64.0
     catalog_earned_first_party: 0.0
     catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
@@ -324,7 +327,7 @@ score:
     developer_ergonomics: 31.0
     discoverability: 78.6
     operational_transparency: 7.9
-  previous_composite: 33.7
+  previous_composite: 27.7
   provenance:
     agentic_access: derived
     contracts:
@@ -338,14 +341,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/fortnite/refs/heads/main/screenshots/fortnite-2026-10-11T185633.png
+screenshot: https://apis.io/screenshots/fortnite/fortnite-2026-10-11T185633.png
 security:
 - kind: authentication
   name: Fortnite Authentication

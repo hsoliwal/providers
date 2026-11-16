@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -61,11 +67,8 @@ apis:
   description: Operations for producing and consuming messages from queues and topics.
   name: Apache ActiveMQ Messages API
   slug: apache-activemq-messages-api
-artifact_total: 46
+artifact_total: 45
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Apache ActiveMQ REST Management API
   slug: open-apache-activemq-management-api
@@ -74,17 +77,17 @@ collections:
   slug: open-apache-activemq-messages-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/plans/apache-activemq-plans-pricing.yml
+  href: https://artifacts.apis.io/apache-activemq/plans/apache-activemq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apache-activemq-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/rate-limits/apache-activemq-rate-limits.yml
+  href: https://artifacts.apis.io/apache-activemq/rate-limits/apache-activemq-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apache-activemq-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/finops/apache-activemq-finops.yml
+  href: https://artifacts.apis.io/apache-activemq/finops/apache-activemq-finops.yml
   title: ''
   type: FinOps
   url: finops/apache-activemq-finops.yml
@@ -113,22 +116,22 @@ common:
   type: License
   url: https://github.com/apache/activemq/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/agentic-access/apache-activemq-agentic-access.yml
+  href: https://artifacts.apis.io/apache-activemq/agentic-access/apache-activemq-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apache-activemq-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/security/apache-activemq-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apache-activemq/security/apache-activemq-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apache-activemq-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/security/apache-activemq-domain-security.yml
+  href: https://artifacts.apis.io/apache-activemq/security/apache-activemq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apache-activemq-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/authentication/apache-activemq-authentication.yml
+  href: https://artifacts.apis.io/apache-activemq/authentication/apache-activemq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apache-activemq-authentication.yml
@@ -165,27 +168,27 @@ common:
   type: ChangeLog
   url: https://activemq.apache.org/components/classic/download
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/rules/apache-activemq-spectral-rules.yml
+  href: https://artifacts.apis.io/apache-activemq/rules/apache-activemq-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/apache-activemq-spectral-rules.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/json-schema/rest-jolokia-response-schema.json
+  href: https://artifacts.apis.io/apache-activemq/json-schema/rest-jolokia-response-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/rest-jolokia-response-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/json-schema/rest-jolokia-error-schema.json
+  href: https://artifacts.apis.io/apache-activemq/json-schema/rest-jolokia-error-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/rest-jolokia-error-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/json-ld/apache-activemq-rest-context.jsonld
+  href: https://artifacts.apis.io/apache-activemq/json-ld/apache-activemq-rest-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/apache-activemq-rest-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/vocabulary/apache-activemq-vocabulary.yaml
+  href: https://artifacts.apis.io/apache-activemq/vocabulary/apache-activemq-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/apache-activemq-vocabulary.yaml
@@ -223,7 +226,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apache Activemq Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apache-activemq-finops
   template: true
@@ -278,7 +281,7 @@ plans:
 - name: Apache Activemq Plans Pricing
   plan_count: 3
   slug: apache-activemq-plans-pricing
-random_paper: 17
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Apache Activemq Rate Limits
@@ -311,13 +314,13 @@ score:
   band: thin
   composite: 35.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 55.0
     catalog_earned_first_party: 0.0
     catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
@@ -328,7 +331,7 @@ score:
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 36.7
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -342,13 +345,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apache-activemq/refs/heads/main/screenshots/apache-activemq-2026-06-20T172037.png
+screenshot: https://apis.io/screenshots/apache-activemq/apache-activemq-2026-06-20T172037.png
 security:
 - kind: authentication
   name: Apache Activemq Authentication

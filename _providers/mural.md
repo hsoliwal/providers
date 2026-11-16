@@ -1,12 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Mural Public API supports OAuth 2.0 with scopes, image and file uploads to murals, and CRUD on workspaces, rooms, murals, widgets, and members. Includes published rate limits, pagination, and erro
@@ -45,12 +49,12 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mural/refs/heads/main/security/mural-trust-center.yml
+  href: https://artifacts.apis.io/mural/security/mural-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mural-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mural/refs/heads/main/security/mural-domain-security.yml
+  href: https://artifacts.apis.io/mural/security/mural-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mural-domain-security.yml
@@ -75,17 +79,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/muralco
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mural/refs/heads/main/plans/mural-plans-pricing.yml
+  href: https://artifacts.apis.io/mural/plans/mural-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mural-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mural/refs/heads/main/rate-limits/mural-rate-limits.yml
+  href: https://artifacts.apis.io/mural/rate-limits/mural-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mural-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mural/refs/heads/main/finops/mural-finops.yml
+  href: https://artifacts.apis.io/mural/finops/mural-finops.yml
   title: ''
   type: FinOps
   url: finops/mural-finops.yml
@@ -113,7 +117,7 @@ modified: '2026-05-08'
 name: Mural
 nav: Providers
 network: true
-overview: 'Mural is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Public API, and 1 more. Tagged areas include Collaboration, Whiteboard, Workshops, Enterprise, and Authentication.
+overview: 'Mural is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Public API, and 1 more. Tagged areas include Collaboration, Whiteboard, Workshops, Enterprise, and OAuth.
 
 
   Mural''s developer surface includes developer portal, pricing, engineering blog, and 9 more developer resources.'
@@ -128,37 +132,37 @@ rate_limits:
   slug: mural-rate-limits
 score:
   band: emerging
-  composite: 17.1
+  composite: 22.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 5.7
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
+    developer_ergonomics: 47.6
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 18.6
+  previous_composite: 17.1
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mural/refs/heads/main/screenshots/mural-2026-06-20T185858.png
+screenshot: https://apis.io/screenshots/mural/mural-2026-06-20T185858.png
 security:
 - kind: domain-security
   name: Mural Domain Security
@@ -174,6 +178,7 @@ tags:
 - Whiteboard
 - Workshops
 - Enterprise
+- OAuth
 - Authentication
 website: https://www.mural.co/
 ---

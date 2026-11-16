@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: Network-based verification that the mobile number a user declares is the number of the SIM the request is actually coming from, used to replace or reinforce SMS OTP. Singtel documents this as the CAMA
@@ -63,12 +66,12 @@ apis:
 artifact_total: 9
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/security/singtel-domain-security.yml
+  href: https://artifacts.apis.io/singtel/security/singtel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/singtel-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/security/singtel-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/singtel/security/singtel-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/singtel-vulnerability-disclosure.yml
@@ -77,22 +80,22 @@ common:
   type: Security
   url: https://vdp.singtel.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/llms/singtel-llms.txt
+  href: https://artifacts.apis.io/singtel/llms/singtel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/singtel-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/packages/singtel-packages.yml
+  href: https://artifacts.apis.io/singtel/packages/singtel-packages.yml
   title: ''
   type: Packages
   url: packages/singtel-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/conformance/singtel-conformance.yml
+  href: https://artifacts.apis.io/singtel/conformance/singtel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/singtel-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/lifecycle/singtel-lifecycle.yml
+  href: https://artifacts.apis.io/singtel/lifecycle/singtel-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/singtel-lifecycle.yml
@@ -174,7 +177,7 @@ overview: 'Singtel is listed with 7 APIs on the [APIs.io](https://apis.io/) netw
 
 
   Singtel''s developer surface includes engineering blog, support, documentation, and 20 more developer resources.'
-random_paper: 10
+random_paper: 14
 score:
   band: emerging
   composite: 18.6
@@ -209,14 +212,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 23.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/singtel/refs/heads/main/screenshots/singtel-2026-09-02T155612.png
+screenshot: https://apis.io/screenshots/singtel/singtel-2026-09-02T155612.png
 security:
 - kind: domain-security
   name: Singtel Domain Security

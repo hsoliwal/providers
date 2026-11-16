@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Enterprise · Self-serve signup
   onboarding: self-serve
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -95,11 +102,8 @@ apis:
   description: Account transaction history
   name: TIAA Transactions API
   slug: tiaa-transactions-api
-artifact_total: 40
+artifact_total: 39
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: TIAA Financial Data Exchange Accounts API
   slug: open-tiaa-accounts-api
@@ -134,38 +138,42 @@ collections:
   name: TIAA Financial Data Exchange Accounts Transactions API
   slug: open-tiaa-transactions-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/tiaa/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/plans/tiaa-plans-pricing.yml
+  href: https://artifacts.apis.io/tiaa/plans/tiaa-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tiaa-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/rate-limits/tiaa-rate-limits.yml
+  href: https://artifacts.apis.io/tiaa/rate-limits/tiaa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tiaa-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/finops/tiaa-finops.yml
+  href: https://artifacts.apis.io/tiaa/finops/tiaa-finops.yml
   title: ''
   type: FinOps
   url: finops/tiaa-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/agentic-access/tiaa-agentic-access.yml
+  href: https://artifacts.apis.io/tiaa/agentic-access/tiaa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tiaa-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/security/tiaa-domain-security.yml
+  href: https://artifacts.apis.io/tiaa/security/tiaa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tiaa-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/authentication/tiaa-authentication.yml
+  href: https://artifacts.apis.io/tiaa/authentication/tiaa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tiaa-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/scopes/tiaa-scopes.yml
+  href: https://artifacts.apis.io/tiaa/scopes/tiaa-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/tiaa-scopes.yml
@@ -202,17 +210,17 @@ common:
   type: TermsOfService
   url: https://www.tiaa.org/public/pdf/t/tiaa_website_terms_of_use.pdf
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/json-ld/tiaa-context.jsonld
+  href: https://artifacts.apis.io/tiaa/json-ld/tiaa-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/tiaa-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/json-schema/tiaa-account-schema.json
+  href: https://artifacts.apis.io/tiaa/json-schema/tiaa-account-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/tiaa-account-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/json-schema/tiaa-participant-schema.json
+  href: https://artifacts.apis.io/tiaa/json-schema/tiaa-participant-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/tiaa-participant-schema.json
@@ -267,12 +275,12 @@ overview: 'TIAA publishes 11 API contracts indexed on the [APIs.io](https://apis
   The TIAA catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  TIAA''s developer surface includes authentication, developer portal, documentation, engineering blog, and 14 more developer resources.'
+  TIAA''s developer surface includes authentication, developer portal, documentation, engineering blog, and 15 more developer resources.'
 plans:
 - name: Tiaa Plans Pricing
   plan_count: 1
   slug: tiaa-plans-pricing
-random_paper: 19
+random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Tiaa Rate Limits
@@ -308,27 +316,27 @@ scopes:
   summary_line: 8 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 32.2
+  composite: 31.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 56.5
     catalog_earned_first_party: 0.0
     catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 56.3
-    developer_ergonomics: 21.4
+    contract_quality: 53.3
+    developer_ergonomics: 22.6
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 33.8
+  previous_composite: 31.7
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 9
@@ -338,13 +346,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 33.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tiaa/refs/heads/main/screenshots/tiaa-2026-06-20T195329.png
+screenshot: https://apis.io/screenshots/tiaa/tiaa-2026-06-20T195329.png
 security:
 - kind: authentication
   name: Tiaa Authentication

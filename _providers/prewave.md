@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 46
   human_in_the_loop: 2
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 117
   slug: prewave-agentic-access
   summary_line: 117 operations · 46 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.prewave.com
   baseurl_source: declared
@@ -176,11 +179,8 @@ arazzos:
 - description: Create a supplier site, run validation and screening, then read its risk alerts.
   name: Onboard and monitor a supplier
   slug: prewave-onboard-and-monitor-supplier
-artifact_total: 57
+artifact_total: 60
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Public Prewave Actions API
   slug: open-prewave-actions-api
@@ -258,12 +258,12 @@ collections:
   slug: open-prewave-users-roles-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/capabilities/prewave-capability-edges.yml
+  href: https://artifacts.apis.io/prewave/capabilities/prewave-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/prewave-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/overlays/prewave-openapi-overlay.yaml
+  href: https://artifacts.apis.io/prewave/overlays/prewave-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/prewave-openapi-overlay.yaml
@@ -308,77 +308,77 @@ common:
   type: TrustCenter
   url: https://trust.prewave.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/changelog/prewave-changelog.yml
+  href: https://artifacts.apis.io/prewave/changelog/prewave-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/prewave-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/lifecycle/prewave-lifecycle.yml
+  href: https://artifacts.apis.io/prewave/lifecycle/prewave-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/prewave-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/lifecycle/prewave-lifecycle.yml
+  href: https://artifacts.apis.io/prewave/lifecycle/prewave-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/prewave-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/authentication/prewave-authentication.yml
+  href: https://artifacts.apis.io/prewave/authentication/prewave-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prewave-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/conventions/prewave-conventions.yml
+  href: https://artifacts.apis.io/prewave/conventions/prewave-conventions.yml
   title: ''
   type: Conventions
   url: conventions/prewave-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/errors/prewave-error-codes.yml
+  href: https://artifacts.apis.io/prewave/errors/prewave-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/prewave-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/data-model/prewave-data-model.yml
+  href: https://artifacts.apis.io/prewave/data-model/prewave-data-model.yml
   title: ''
   type: DataModel
   url: data-model/prewave-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/conformance/prewave-conformance.yml
+  href: https://artifacts.apis.io/prewave/conformance/prewave-conformance.yml
   title: ''
   type: Conformance
   url: conformance/prewave-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/mcp/prewave-mcp.yml
+  href: https://artifacts.apis.io/prewave/mcp/prewave-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/prewave-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/prewave/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/arazzo/prewave-onboard-and-monitor-supplier.yml
+  href: https://artifacts.apis.io/prewave/arazzo/prewave-onboard-and-monitor-supplier.yml
   title: ''
   type: Arazzo
   url: arazzo/prewave-onboard-and-monitor-supplier.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/arazzo/prewave-eudr-dds-submission.yml
+  href: https://artifacts.apis.io/prewave/arazzo/prewave-eudr-dds-submission.yml
   title: ''
   type: Arazzo
   url: arazzo/prewave-eudr-dds-submission.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/llms/prewave-llms.txt
+  href: https://artifacts.apis.io/prewave/llms/prewave-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prewave-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/agentic-access/prewave-agentic-access.yml
+  href: https://artifacts.apis.io/prewave/agentic-access/prewave-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/prewave-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/security/prewave-domain-security.yml
+  href: https://artifacts.apis.io/prewave/security/prewave-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prewave-domain-security.yml
@@ -393,23 +393,39 @@ network: true
 overview: 'Prewave publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, Alerts API, Collections - Management API, and 22 more. Tagged areas include Company, Software-as-a-Service, Supply Chain, Risk Intelligence, and Sustainability.
 
 
+  The Prewave catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Prewave''s developer surface includes documentation, API reference, engineering blog, changelog, authentication, and 22 more developer resources.'
-random_paper: 14
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Prewave API Rules
+  rule_count: 69
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 3
+    warn: 17
+  slug: prewave-rules
 score:
   band: developing
-  composite: 44.5
+  composite: 47.6
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.5
   facets:
     access_clarity: 28.9
-    contract_governance: 4.5
-    contract_quality: 52.7
+    contract_governance: 18.2
+    contract_quality: 58.5
     developer_ergonomics: 42.3
     discoverability: 73.2
     operational_transparency: 34.2
@@ -421,14 +437,14 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 44.4
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 25
     mcp: derived
     skills: derived
@@ -438,13 +454,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/prewave/refs/heads/main/screenshots/prewave-2026-08-17T081335.png
+screenshot: https://apis.io/screenshots/prewave/prewave-2026-08-17T081335.png
 security:
 - kind: authentication
   name: Prewave Authentication
@@ -458,6 +474,14 @@ security:
   name: Prewave Trust Center
   slug: prewave-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: File EUDR due-diligence statements
+  slug: prewave-eudr-due-diligence
+- name: Monitor supplier risk alerts and scores
+  slug: prewave-monitor-risk
+- name: Onboard and screen suppliers
+  slug: prewave-onboard-suppliers
 slug: prewave
 tags:
 - Company

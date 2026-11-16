@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -73,7 +77,7 @@ common:
   type: ChangeLog
   url: https://developer.onekey.so/en/changelog/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/changelog/onekey-changelog.yml
+  href: https://artifacts.apis.io/onekey/changelog/onekey-changelog.yml
   title: ''
   type: Changelog
   url: changelog/onekey-changelog.yml
@@ -98,32 +102,32 @@ common:
   type: PrivacyPolicy
   url: https://help.onekey.so/articles/11461298
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/well-known/onekey-security.txt
+  href: https://artifacts.apis.io/onekey/well-known/onekey-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/onekey-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/well-known/onekey-well-known.yml
+  href: https://artifacts.apis.io/onekey/well-known/onekey-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/onekey-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/packages/onekey-packages.yml
+  href: https://artifacts.apis.io/onekey/packages/onekey-packages.yml
   title: ''
   type: Packages
   url: packages/onekey-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/packages/onekey-packages.yml
+  href: https://artifacts.apis.io/onekey/packages/onekey-packages.yml
   title: ''
   type: SDKs
   url: packages/onekey-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/lifecycle/onekey-lifecycle.yml
+  href: https://artifacts.apis.io/onekey/lifecycle/onekey-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/onekey-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/conformance/onekey-conformance.yml
+  href: https://artifacts.apis.io/onekey/conformance/onekey-conformance.yml
   title: ''
   type: Conformance
   url: conformance/onekey-conformance.yml
@@ -132,12 +136,12 @@ common:
   type: Compliance
   url: https://onekey.so/blog/updates/one-key-iso-iec-27001/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/security/onekey-domain-security.yml
+  href: https://artifacts.apis.io/onekey/security/onekey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onekey-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/security/onekey-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/onekey/security/onekey-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/onekey-vulnerability-disclosure.yml
@@ -146,7 +150,7 @@ common:
   type: Security
   url: https://onekey.so/.well-known/security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/llms/onekey-llms.txt
+  href: https://artifacts.apis.io/onekey/llms/onekey-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/onekey-llms.txt
@@ -162,12 +166,12 @@ overview: 'OneKey is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   OneKey''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 19 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: thin
   composite: 26.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -190,14 +194,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/onekey/refs/heads/main/screenshots/onekey-2026-08-07T190334.png
+screenshot: https://apis.io/screenshots/onekey/onekey-2026-08-07T190334.png
 security:
 - kind: domain-security
   name: Onekey Domain Security

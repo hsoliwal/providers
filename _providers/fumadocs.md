@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.1
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -56,11 +60,8 @@ apis:
   description: Search endpoints for querying documentation content. Results include pages, headings, and text segments ranked by relevance.
   name: Fumadocs Search API
   slug: fumadocs-search-api
-artifact_total: 19
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fumadocs OpenAPI Proxy API
   slug: open-fumadocs-openapi-proxy
@@ -75,27 +76,27 @@ collections:
   slug: open-fumadocs-search
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/plans/fumadocs-plans-pricing.yml
+  href: https://artifacts.apis.io/fumadocs/plans/fumadocs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fumadocs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/rate-limits/fumadocs-rate-limits.yml
+  href: https://artifacts.apis.io/fumadocs/rate-limits/fumadocs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fumadocs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/finops/fumadocs-finops.yml
+  href: https://artifacts.apis.io/fumadocs/finops/fumadocs-finops.yml
   title: ''
   type: FinOps
   url: finops/fumadocs-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/agentic-access/fumadocs-agentic-access.yml
+  href: https://artifacts.apis.io/fumadocs/agentic-access/fumadocs-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fumadocs-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/security/fumadocs-domain-security.yml
+  href: https://artifacts.apis.io/fumadocs/security/fumadocs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fumadocs-domain-security.yml
@@ -140,22 +141,22 @@ common:
   type: License
   url: https://github.com/fuma-nama/fumadocs/blob/main/LICENSE
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/json-schema/fumadocs-page-tree-schema.json
+  href: https://artifacts.apis.io/fumadocs/json-schema/fumadocs-page-tree-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/fumadocs-page-tree-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/json-schema/fumadocs-page-schema.json
+  href: https://artifacts.apis.io/fumadocs/json-schema/fumadocs-page-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/fumadocs-page-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/json-schema/fumadocs-meta-schema.json
+  href: https://artifacts.apis.io/fumadocs/json-schema/fumadocs-meta-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/fumadocs-meta-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/json-ld/fumadocs-context.jsonld
+  href: https://artifacts.apis.io/fumadocs/json-ld/fumadocs-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/fumadocs-context.jsonld
@@ -182,7 +183,7 @@ json_schemas:
   property_count: 5
   slug: fumadocs-page
 - name: Fumadocs Page Tree
-  property_count: 0
+  property_count: 4
   slug: fumadocs-page-tree
 - name: Fumadocs Search Result
   property_count: 5
@@ -208,7 +209,7 @@ plans:
 - name: Fumadocs Plans Pricing
   plan_count: 1
   slug: fumadocs-plans-pricing
-random_paper: 14
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Fumadocs Rate Limits
@@ -229,13 +230,13 @@ score:
   band: emerging
   composite: 22.8
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 44.7
     catalog_earned_first_party: 0.0
     catalog_gap: 70.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 9.8
@@ -243,7 +244,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 24.3
+  previous_composite: 22.8
   provenance:
     agentic_access: derived
     contracts:
@@ -257,13 +258,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fumadocs/refs/heads/main/screenshots/fumadocs-2026-06-20T181650.png
+screenshot: https://apis.io/screenshots/fumadocs/fumadocs-2026-06-20T181650.png
 security:
 - kind: domain-security
   name: Fumadocs Domain Security

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Developer portal for Westlaw APIs and integration resources.
@@ -32,7 +46,7 @@ apis:
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/westlaw/refs/heads/main/plans/westlaw-plans-pricing.yml
+  href: https://artifacts.apis.io/westlaw/plans/westlaw-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/westlaw-plans-pricing.yml
@@ -41,12 +55,12 @@ common:
   type: BlogRSS
   url: https://legal.thomsonreuters.com/blog/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/westlaw/refs/heads/main/hosts/westlaw-hosts.yml
+  href: https://artifacts.apis.io/westlaw/hosts/westlaw-hosts.yml
   title: ''
   type: Hosts
   url: hosts/westlaw-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/westlaw/refs/heads/main/vendors/westlaw-vendors.yml
+  href: https://artifacts.apis.io/westlaw/vendors/westlaw-vendors.yml
   title: ''
   type: Vendors
   url: vendors/westlaw-vendors.yml
@@ -95,7 +109,7 @@ common:
   type: Documentation
   url: https://developers.thomsonreuters.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/westlaw/refs/heads/main/security/westlaw-domain-security.yml
+  href: https://artifacts.apis.io/westlaw/security/westlaw-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/westlaw-domain-security.yml
@@ -127,10 +141,10 @@ plans:
 - name: Westlaw Plans Pricing
   plan_count: 3
   slug: westlaw-plans-pricing
-random_paper: 5
+random_paper: 7
 score:
-  band: thin
-  composite: 30.0
+  band: emerging
+  composite: 20.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -138,29 +152,29 @@ score:
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: -10.0
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 35.7
-    discoverability: 58.9
-    operational_transparency: 15.8
-  previous_composite: 23.6
+    developer_ergonomics: 16.7
+    discoverability: 58.0
+    operational_transparency: 7.9
+  previous_composite: 30.0
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 9.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/westlaw/refs/heads/main/screenshots/westlaw-2026-10-11T194331.png
+screenshot: https://apis.io/screenshots/westlaw/westlaw-2026-10-11T194331.png
 security:
 - kind: domain-security
   name: Westlaw Domain Security

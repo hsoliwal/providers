@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 21.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -53,9 +59,6 @@ apis:
 artifact_total: 10
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Food Data Central FDC API
   slug: open-national-agricultural-library-fdc-api
 - collection_type: open
@@ -63,32 +66,32 @@ collections:
   slug: open-national-agricultural-library
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/plans/national-agricultural-library-plans-pricing.yml
+  href: https://artifacts.apis.io/national-agricultural-library/plans/national-agricultural-library-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/national-agricultural-library-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/rate-limits/national-agricultural-library-rate-limits.yml
+  href: https://artifacts.apis.io/national-agricultural-library/rate-limits/national-agricultural-library-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/national-agricultural-library-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/finops/national-agricultural-library-finops.yml
+  href: https://artifacts.apis.io/national-agricultural-library/finops/national-agricultural-library-finops.yml
   title: ''
   type: FinOps
   url: finops/national-agricultural-library-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/agentic-access/national-agricultural-library-agentic-access.yml
+  href: https://artifacts.apis.io/national-agricultural-library/agentic-access/national-agricultural-library-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/national-agricultural-library-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/security/national-agricultural-library-domain-security.yml
+  href: https://artifacts.apis.io/national-agricultural-library/security/national-agricultural-library-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/national-agricultural-library-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/authentication/national-agricultural-library-authentication.yml
+  href: https://artifacts.apis.io/national-agricultural-library/authentication/national-agricultural-library-authentication.yml
   title: ''
   type: Authentication
   url: authentication/national-agricultural-library-authentication.yml
@@ -110,7 +113,7 @@ finops:
 - has_sources: false
   method: generated
   name: National Agricultural Library Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: national-agricultural-library-finops
   template: true
@@ -123,30 +126,46 @@ network: true
 overview: 'National Agricultural Library publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: FDC API. Tagged areas include Agriculture, Federal Government, Library, Food, and Nutrition.
 
 
+  The National Agricultural Library catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   National Agricultural Library''s developer surface includes authentication, developer portal, and 7 more developer resources.'
 plans:
 - name: National Agricultural Library Plans Pricing
   plan_count: 3
   slug: national-agricultural-library-plans-pricing
-random_paper: 4
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: National Agricultural Library Rate Limits
   slug: national-agricultural-library-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: National Agricultural Library API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: national-agricultural-library-rules
 score:
   band: thin
-  composite: 29.0
+  composite: 30.6
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 43.0
+    artifact_dirs: 14
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.7
     developer_ergonomics: 31.0
     discoverability: 73.2
@@ -156,7 +175,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.5
+  previous_composite: 30.6
   provenance:
     agentic_access: derived
     contracts:
@@ -170,13 +189,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/national-agricultural-library/refs/heads/main/screenshots/national-agricultural-library-2026-06-20T185959.png
+screenshot: https://apis.io/screenshots/national-agricultural-library/national-agricultural-library-2026-06-20T185959.png
 security:
 - kind: authentication
   name: National Agricultural Library Authentication

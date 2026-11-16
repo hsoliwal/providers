@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 229
   human_in_the_loop: 4
@@ -155,11 +161,8 @@ apis:
   description: The webhooks API from Cloudsmith — 2 operation(s) for webhooks.
   name: Cloudsmith Webhooks API
   slug: cloudsmith-webhooks-api
-artifact_total: 54
+artifact_total: 53
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cloudsmith API (v1) audit-log API
   slug: open-cloudsmith-audit-log-api
@@ -231,17 +234,17 @@ collections:
   slug: open-cloudsmith
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/plans/cloudsmith-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudsmith/plans/cloudsmith-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudsmith-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/rate-limits/cloudsmith-rate-limits.yml
+  href: https://artifacts.apis.io/cloudsmith/rate-limits/cloudsmith-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudsmith-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/finops/cloudsmith-finops.yml
+  href: https://artifacts.apis.io/cloudsmith/finops/cloudsmith-finops.yml
   title: ''
   type: FinOps
   url: finops/cloudsmith-finops.yml
@@ -254,22 +257,22 @@ common:
   type: BlogRSS
   url: https://cloudsmith.com/rss/blog.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/capabilities/cloudsmith-capability-edges.yml
+  href: https://artifacts.apis.io/cloudsmith/capabilities/cloudsmith-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cloudsmith-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/agentic-access/cloudsmith-agentic-access.yml
+  href: https://artifacts.apis.io/cloudsmith/agentic-access/cloudsmith-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudsmith-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/security/cloudsmith-domain-security.yml
+  href: https://artifacts.apis.io/cloudsmith/security/cloudsmith-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudsmith-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/authentication/cloudsmith-authentication.yml
+  href: https://artifacts.apis.io/cloudsmith/authentication/cloudsmith-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudsmith-authentication.yml
@@ -306,17 +309,17 @@ common:
   type: GitHub
   url: https://github.com/cloudsmith-io
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/openapi/_original/cloudsmith-openapi.json
+  href: https://artifacts.apis.io/cloudsmith/openapi/_original/cloudsmith-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/cloudsmith-openapi.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/json-ld/cloudsmith-context.jsonld
+  href: https://artifacts.apis.io/cloudsmith/json-ld/cloudsmith-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloudsmith-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/rules/cloudsmith-rules.yml
+  href: https://artifacts.apis.io/cloudsmith/rules/cloudsmith-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudsmith-rules.yml
@@ -352,7 +355,7 @@ plans:
 - name: Cloudsmith Plans Pricing
   plan_count: 1
   slug: cloudsmith-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 2
   name: Cloudsmith Rate Limits
@@ -374,13 +377,13 @@ score:
   band: thin
   composite: 32.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 50.5
     catalog_earned_first_party: 0.0
     catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -9.8
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 13.6
@@ -388,7 +391,7 @@ score:
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 42.1
+  previous_composite: 32.3
   provenance:
     agentic_access: derived
     contracts:
@@ -402,13 +405,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/screenshots/cloudsmith-2026-06-20T174624.png
+screenshot: https://apis.io/screenshots/cloudsmith/cloudsmith-2026-06-20T174624.png
 security:
 - kind: authentication
   name: Cloudsmith Authentication

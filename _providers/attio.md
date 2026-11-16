@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.2
-  scored_at: '2026-10-17'
+  score: 45.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -134,9 +140,6 @@ apis:
 artifact_total: 45
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Attio REST Attributes API
   slug: open-attio-attributes-api
 - collection_type: open
@@ -199,32 +202,32 @@ common:
   type: Blog
   url: https://attio.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/capabilities/attio-capability-edges.yml
+  href: https://artifacts.apis.io/attio/capabilities/attio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/attio-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/a2a/attio-a2a.yml
+  href: https://artifacts.apis.io/attio/a2a/attio-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/attio-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/agentic-access/attio-agentic-access.yml
+  href: https://artifacts.apis.io/attio/agentic-access/attio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/attio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/security/attio-domain-security.yml
+  href: https://artifacts.apis.io/attio/security/attio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/attio-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/authentication/attio-authentication.yml
+  href: https://artifacts.apis.io/attio/authentication/attio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/attio-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/scopes/attio-scopes.yml
+  href: https://artifacts.apis.io/attio/scopes/attio-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/attio-scopes.yml
@@ -257,17 +260,17 @@ common:
   type: LlmsText
   url: https://docs.attio.com/llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/plans/attio-plans-pricing.yml
+  href: https://artifacts.apis.io/attio/plans/attio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/attio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/rate-limits/attio-rate-limits.yml
+  href: https://artifacts.apis.io/attio/rate-limits/attio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/attio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/finops/attio-finops.yml
+  href: https://artifacts.apis.io/attio/finops/attio-finops.yml
   title: ''
   type: FinOps
   url: finops/attio-finops.yml
@@ -294,6 +297,9 @@ network: true
 overview: 'Attio publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attributes API, Call Recordings API, Comments API, and 14 more. Tagged areas include CRM, Sales, Contacts, Companies, and Pipelines.
 
 
+  The Attio catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Attio''s developer surface includes engineering blog, authentication, documentation, pricing, signup flow, and 12 more developer resources.'
 plans:
 - name: Attio Plans Pricing
@@ -304,6 +310,19 @@ rate_limits:
 - limit_count: 3
   name: Attio Rate Limits
   slug: attio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Attio API Rules
+  rule_count: 50
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 1
+  slug: attio-rules
 scopes:
 - name: Attio Scopes
   scope_count: 7
@@ -311,23 +330,23 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.3
+  composite: 21.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 43.0
+    artifact_dirs: 22
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 1.0
     developer_ergonomics: 11.9
     discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 28.1
+  previous_composite: 21.9
   provenance:
     agentic_access: derived
     contracts:
@@ -342,13 +361,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/attio/refs/heads/main/screenshots/attio-2026-07-25T201641.png
+screenshot: https://apis.io/screenshots/attio/attio-2026-07-25T201641.png
 security:
 - kind: authentication
   name: Attio Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-10-17'
+  score: 36.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -219,7 +226,7 @@ apis:
   description: Process cash withdrawals from investment accounts.
   name: Upvest Withdrawals API
   slug: upvest-withdrawals-api
-artifact_total: 313
+artifact_total: 312
 asyncapis:
 - description: The Upvest Investment API uses an asynchronous, event-driven architecture where events represent state changes within the system. Webhook subscriptions allow your application to receive real-time noti
   name: Upvest Investment Events
@@ -331,9 +338,6 @@ collections:
   name: Upvest Investment Account Transfers Withdrawals API
   slug: postman-upvest-withdrawals-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Upvest Investment Account Transfers API
   slug: open-upvest-account-transfers-api
 - collection_type: open
@@ -443,22 +447,22 @@ collections:
   slug: open-upvest-withdrawals-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/plans/upvest-plans-pricing.yml
+  href: https://artifacts.apis.io/upvest/plans/upvest-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/upvest-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/rate-limits/upvest-rate-limits.yml
+  href: https://artifacts.apis.io/upvest/rate-limits/upvest-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/upvest-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/finops/upvest-finops.yml
+  href: https://artifacts.apis.io/upvest/finops/upvest-finops.yml
   title: ''
   type: FinOps
   url: finops/upvest-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/capabilities/upvest-capability-edges.yml
+  href: https://artifacts.apis.io/upvest/capabilities/upvest-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/upvest-capability-edges.yml
@@ -479,27 +483,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/upvest/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/agentic-access/upvest-agentic-access.yml
+  href: https://artifacts.apis.io/upvest/agentic-access/upvest-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/upvest-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/security/upvest-trust-center.yml
+  href: https://artifacts.apis.io/upvest/security/upvest-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/upvest-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/security/upvest-domain-security.yml
+  href: https://artifacts.apis.io/upvest/security/upvest-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/upvest-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/authentication/upvest-authentication.yml
+  href: https://artifacts.apis.io/upvest/authentication/upvest-authentication.yml
   title: ''
   type: Authentication
   url: authentication/upvest-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/scopes/upvest-scopes.yml
+  href: https://artifacts.apis.io/upvest/scopes/upvest-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/upvest-scopes.yml
@@ -556,17 +560,17 @@ common:
   type: GitHubRepository
   url: https://github.com/upvestco/documentation_assets
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/json-ld/upvest-context.jsonld
+  href: https://artifacts.apis.io/upvest/json-ld/upvest-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/upvest-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/rules/upvest-spectral-rules.yml
+  href: https://artifacts.apis.io/upvest/rules/upvest-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/upvest-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/vocabulary/upvest-vocabulary.yaml
+  href: https://artifacts.apis.io/upvest/vocabulary/upvest-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/upvest-vocabulary.yaml
@@ -776,7 +780,7 @@ finops:
 - has_sources: false
   method: generated
   name: Upvest Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: upvest-finops
   template: true
@@ -1161,7 +1165,7 @@ plans:
 - name: Upvest Plans Pricing
   plan_count: 3
   slug: upvest-plans-pricing
-random_paper: 19
+random_paper: 7
 rate_limits:
 - limit_count: 5
   name: Upvest Rate Limits
@@ -1211,13 +1215,13 @@ score:
   band: developing
   composite: 50.1
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 72.0
     catalog_earned_first_party: 0.0
     catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 39.5
     contract_governance: 27.3
@@ -1236,7 +1240,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 51.5
+  previous_composite: 50.1
   provenance:
     agentic_access: derived
     contracts:
@@ -1250,13 +1254,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 38.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/upvest/refs/heads/main/screenshots/upvest-2026-06-20T200511.png
+screenshot: https://apis.io/screenshots/upvest/upvest-2026-06-20T200511.png
 security:
 - kind: authentication
   name: Upvest Authentication

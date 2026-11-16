@@ -1,17 +1,21 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 28.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -110,9 +117,6 @@ apis:
 artifact_total: 34
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Schoology REST API v1 Assignments API
   slug: open-schoology-assignments-api
 - collection_type: open
@@ -153,27 +157,27 @@ collections:
   slug: open-schoology
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/capabilities/schoology-capability-edges.yml
+  href: https://artifacts.apis.io/schoology/capabilities/schoology-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/schoology-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/agentic-access/schoology-agentic-access.yml
+  href: https://artifacts.apis.io/schoology/agentic-access/schoology-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/schoology-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/security/schoology-domain-security.yml
+  href: https://artifacts.apis.io/schoology/security/schoology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/schoology-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/authentication/schoology-authentication.yml
+  href: https://artifacts.apis.io/schoology/authentication/schoology-authentication.yml
   title: ''
   type: Authentication
   url: authentication/schoology-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/scopes/schoology-scopes.yml
+  href: https://artifacts.apis.io/schoology/scopes/schoology-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/schoology-scopes.yml
@@ -194,17 +198,17 @@ common:
   type: Developer
   url: https://developers.schoology.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/plans/schoology-plans-pricing.yml
+  href: https://artifacts.apis.io/schoology/plans/schoology-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/schoology-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/rate-limits/schoology-rate-limits.yml
+  href: https://artifacts.apis.io/schoology/rate-limits/schoology-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/schoology-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/finops/schoology-finops.yml
+  href: https://artifacts.apis.io/schoology/finops/schoology-finops.yml
   title: ''
   type: FinOps
   url: finops/schoology-finops.yml
@@ -227,16 +231,32 @@ network: true
 overview: 'Schoology publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assignments API, Courses API, Enrollments API, and 10 more. Tagged areas include EdTech, LMS, and K-12.
 
 
+  The Schoology catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Schoology''s developer surface includes authentication and 11 more developer resources.'
 plans:
 - name: Schoology Plans Pricing
   plan_count: 1
   slug: schoology-plans-pricing
-random_paper: 15
+random_paper: 23
 rate_limits:
 - limit_count: 1
   name: Schoology Rate Limits
   slug: schoology-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Schoology API Rules
+  rule_count: 55
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 2
+  slug: schoology-rules
 scopes:
 - name: Schoology Scopes
   scope_count: 0
@@ -244,23 +264,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 22.8
+  composite: 24.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 36.0
+    artifact_dirs: 15
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 43.6
+    contract_governance: 13.6
+    contract_quality: 44.6
     developer_ergonomics: 21.4
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 24.3
+  previous_composite: 24.6
   provenance:
     agentic_access: derived
     contracts:
@@ -274,13 +294,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/screenshots/schoology-2026-10-11T125546.png
+screenshot: https://apis.io/screenshots/schoology/schoology-2026-10-11T125546.png
 security:
 - kind: authentication
   name: Schoology Authentication

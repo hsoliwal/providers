@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 23.0
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://chorus.ai/api/v1
   baseurl_source: declared
@@ -148,7 +151,7 @@ apis:
   description: The Webhook API from Chorus.ai — 1 operation(s) for webhook.
   name: Chorus.ai Webhook API
   slug: chorus-ai-webhook-api
-artifact_total: 31
+artifact_total: 36
 asyncapis:
 - description: ''
   name: Chorus Ai Webhooks
@@ -163,17 +166,17 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/zoominfo/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/capabilities/chorus-ai-capability-edges.yml
+  href: https://artifacts.apis.io/chorus-ai/capabilities/chorus-ai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/chorus-ai-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/authentication/chorus-ai-authentication.yml
+  href: https://artifacts.apis.io/chorus-ai/authentication/chorus-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chorus-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/security/chorus-ai-domain-security.yml
+  href: https://artifacts.apis.io/chorus-ai/security/chorus-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chorus-ai-domain-security.yml
@@ -182,22 +185,22 @@ common:
   type: Website
   url: https://www.chorus.ai/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/plans/chorus-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/chorus-ai/plans/chorus-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chorus-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/rate-limits/chorus-ai-rate-limits.yml
+  href: https://artifacts.apis.io/chorus-ai/rate-limits/chorus-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chorus-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/finops/chorus-ai-finops.yml
+  href: https://artifacts.apis.io/chorus-ai/finops/chorus-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/chorus-ai-finops.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/openapi/_original/chorus-ai-openapi.yml
+  href: https://artifacts.apis.io/chorus-ai/openapi/_original/chorus-ai-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/chorus-ai-openapi.yml
@@ -214,32 +217,32 @@ common:
   type: Postman
   url: https://api-docs.chorus.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/conventions/chorus-ai-conventions.yml
+  href: https://artifacts.apis.io/chorus-ai/conventions/chorus-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chorus-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/errors/chorus-ai-problem-types.yml
+  href: https://artifacts.apis.io/chorus-ai/errors/chorus-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/chorus-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/data-model/chorus-ai-data-model.yml
+  href: https://artifacts.apis.io/chorus-ai/data-model/chorus-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chorus-ai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/conformance/chorus-ai-conformance.yml
+  href: https://artifacts.apis.io/chorus-ai/conformance/chorus-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chorus-ai-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/conformance/chorus-ai-conformance.yml
+  href: https://artifacts.apis.io/chorus-ai/conformance/chorus-ai-conformance.yml
   title: ''
   type: Compliance
   url: conformance/chorus-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/lifecycle/chorus-ai-lifecycle.yml
+  href: https://artifacts.apis.io/chorus-ai/lifecycle/chorus-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/chorus-ai-lifecycle.yml
@@ -248,42 +251,42 @@ common:
   type: StatusPage
   url: https://status.zoominfo.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/asyncapi/chorus-ai-webhooks.yml
+  href: https://artifacts.apis.io/chorus-ai/asyncapi/chorus-ai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/chorus-ai-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/chorus-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/llms/chorus-ai-llms.txt
+  href: https://artifacts.apis.io/chorus-ai/llms/chorus-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chorus-ai-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/overlays/chorus-ai-openapi-overlay.yaml
+  href: https://artifacts.apis.io/chorus-ai/overlays/chorus-ai-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/chorus-ai-openapi-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/packages/chorus-ai-packages.yml
+  href: https://artifacts.apis.io/chorus-ai/packages/chorus-ai-packages.yml
   title: ''
   type: Packages
   url: packages/chorus-ai-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/security/chorus-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chorus-ai/security/chorus-ai-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/chorus-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/security/chorus-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chorus-ai/security/chorus-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/chorus-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/security/chorus-ai-trust-center.yml
+  href: https://artifacts.apis.io/chorus-ai/security/chorus-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/chorus-ai-trust-center.yml
@@ -307,12 +310,12 @@ created: '2026-05-08'
 description: Chorus.ai is a conversation intelligence platform, acquired by ZoomInfo in 2021 and sold as "Chorus by ZoomInfo", that records, transcribes and analyzes customer-facing calls, meetings and emails to surface deal insights and coach sales reps. It publishes a single public REST contract — the Chorus API, an OpenAPI 3.0.3 document with 81 operations served unauthenticated at https://chorus.ai/api/openapi.json — covering engagement search, recording upload and media retrieval, coaching moments and playlists, scorecards, AI sales-qualification analysis with CRM writeback, and webhook registration. The API is JSON:API shaped on its /api/v1 surface with an older flat /v3 surface alongside it. Notably, the chorus.ai marketing site has been retired to a redirect shell pointing at zoominfo.com, but the API and both of its documentation surfaces remain live on the original domain.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Chorus Ai Finops
   primary_unit: ''
-  service_category: Sales
+  service_category: ''
   slug: chorus-ai-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/chorus-ai.png
 layout: provider
 modified: '2026-09-16'
@@ -322,7 +325,7 @@ network: true
 overview: 'Chorus.ai publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Conversations API, Emails API, and 19 more. Tagged areas include Sales, Revenue Intelligence, Conversations, Analytics, and ZoomInfo.
 
 
-  The Chorus.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Chorus.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Chorus.ai''s developer surface includes authentication, documentation, API reference, support, pricing, and 26 more developer resources.'
@@ -330,36 +333,49 @@ plans:
 - name: Chorus Ai Plans Pricing
   plan_count: 0
   slug: chorus-ai-plans-pricing
-random_paper: 5
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Chorus Ai Rate Limits
   slug: chorus-ai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Chorus.ai API Rules
+  rule_count: 55
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 3
+    warn: 12
+  slug: chorus-ai-rules
 score:
-  band: developing
-  composite: 53.6
+  band: strong
+  composite: 56.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 1.4
   facets:
     access_clarity: 47.4
-    contract_governance: 18.2
-    contract_quality: 58.3
+    contract_governance: 31.8
+    contract_quality: 63.7
     developer_ergonomics: 33.9
-    discoverability: 71.4
+    discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 54.6
+  previous_composite: 54.7
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 22
     mcp: derived
     skills: derived
@@ -369,13 +385,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 66.7
-screenshot: https://raw.githubusercontent.com/api-evangelist/chorus-ai/refs/heads/main/screenshots/chorus-ai-2026-08-17T082957.png
+screenshot: https://apis.io/screenshots/chorus-ai/chorus-ai-2026-08-17T082957.png
 security:
 - kind: authentication
   name: Chorus Ai Authentication
@@ -393,6 +409,16 @@ security:
   name: Chorus Ai Trust Center
   slug: chorus-ai-trust-center
   summary_line: source, source_status, verified, quote, held, frameworks, explicitly_not_held
+skill_count: 4
+skills:
+- name: chorus-ai-coaching-moments-playlists
+  slug: chorus-ai-coaching-moments-playlists
+- name: chorus-ai-retrieve-conversations
+  slug: chorus-ai-retrieve-conversations
+- name: chorus-ai-sales-qualification-crm-writeback
+  slug: chorus-ai-sales-qualification-crm-writeback
+- name: chorus-ai-upload-recording
+  slug: chorus-ai-upload-recording
 slug: chorus-ai
 tags:
 - Sales

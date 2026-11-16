@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-10-17'
+  score: 33.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -42,82 +57,82 @@ apis:
 artifact_total: 21
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/agentic-access/galaxy-com-agentic-access.yml
+  href: https://artifacts.apis.io/galaxy-com/agentic-access/galaxy-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/galaxy-com-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/rules/galaxy-com-rules.yml
+  href: https://artifacts.apis.io/galaxy-com/rules/galaxy-com-rules.yml
   title: ''
   type: Spectral
   url: rules/galaxy-com-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/json-ld/galaxy-com-context.jsonld
+  href: https://artifacts.apis.io/galaxy-com/json-ld/galaxy-com-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/galaxy-com-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/vocabulary/galaxy-com-vocabulary.yml
+  href: https://artifacts.apis.io/galaxy-com/vocabulary/galaxy-com-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/galaxy-com-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/data-model/galaxy-com-data-model.yml
+  href: https://artifacts.apis.io/galaxy-com/data-model/galaxy-com-data-model.yml
   title: ''
   type: DataModel
   url: data-model/galaxy-com-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/conventions/galaxy-com-conventions.yml
+  href: https://artifacts.apis.io/galaxy-com/conventions/galaxy-com-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/galaxy-com-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/conventions/galaxy-com-conventions.yml
+  href: https://artifacts.apis.io/galaxy-com/conventions/galaxy-com-conventions.yml
   title: ''
   type: Conventions
   url: conventions/galaxy-com-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/sandbox/galaxy-com-sandbox.yml
+  href: https://artifacts.apis.io/galaxy-com/sandbox/galaxy-com-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/galaxy-com-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/errors/galaxy-com-error-codes.yml
+  href: https://artifacts.apis.io/galaxy-com/errors/galaxy-com-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/galaxy-com-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/errors/galaxy-com-problem-types.yml
+  href: https://artifacts.apis.io/galaxy-com/errors/galaxy-com-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/galaxy-com-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/conformance/galaxy-com-conformance.yml
+  href: https://artifacts.apis.io/galaxy-com/conformance/galaxy-com-conformance.yml
   title: ''
   type: Conformance
   url: conformance/galaxy-com-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/well-known/galaxy-com-well-known.yml
+  href: https://artifacts.apis.io/galaxy-com/well-known/galaxy-com-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/galaxy-com-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/hosts/galaxy-com-hosts.yml
+  href: https://artifacts.apis.io/galaxy-com/hosts/galaxy-com-hosts.yml
   title: ''
   type: Hosts
   url: hosts/galaxy-com-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/vendors/galaxy-com-vendors.yml
+  href: https://artifacts.apis.io/galaxy-com/vendors/galaxy-com-vendors.yml
   title: ''
   type: Vendors
   url: vendors/galaxy-com-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/authentication/galaxy-com-authentication.yml
+  href: https://artifacts.apis.io/galaxy-com/authentication/galaxy-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/galaxy-com-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/security/galaxy-com-domain-security.yml
+  href: https://artifacts.apis.io/galaxy-com/security/galaxy-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/galaxy-com-domain-security.yml
@@ -134,7 +149,7 @@ common:
   type: Documentation
   url: https://docs.staking.galaxy.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/galaxy-com/refs/heads/main/llms/galaxy-com-llms.txt
+  href: https://artifacts.apis.io/galaxy-com/llms/galaxy-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/galaxy-com-llms.txt
@@ -231,7 +246,7 @@ plans:
 - name: Galaxy Com Plans Pricing
   plan_count: 0
   slug: galaxy-com-plans-pricing
-random_paper: 20
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Galaxy Com Rate Limits
@@ -250,22 +265,24 @@ rules:
     warn: 0
   slug: galaxy-com-rules
 score:
-  band: developing
-  composite: 42.1
+  band: thin
+  composite: 33.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 24
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.7
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 19.7
     contract_quality: 58.3
-    developer_ergonomics: 52.4
-    discoverability: 73.2
+    developer_ergonomics: 29.8
+    discoverability: 71.4
     operational_transparency: 0.0
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -280,12 +297,14 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/galaxy-com/galaxy-com-2026-11-03T132455.png
 security:
 - kind: authentication
   name: Galaxy Com Authentication

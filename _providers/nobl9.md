@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: REST API for retrieving service level objective status, error budget consumption, and reliability metrics programmatically. Authentication uses a Nobl9 access token.
@@ -52,7 +56,7 @@ common:
   type: BlogRSS
   url: https://www.nobl9.com/resources/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nobl9/refs/heads/main/security/nobl9-domain-security.yml
+  href: https://artifacts.apis.io/nobl9/security/nobl9-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nobl9-domain-security.yml
@@ -108,18 +112,18 @@ overview: 'Nobl9 is listed with 2 APIs on the [APIs.io](https://apis.io/) networ
 
 
   Nobl9''s developer surface includes engineering blog, documentation, pricing, signup flow, and 8 more developer resources.'
-random_paper: 0
+random_paper: 4
 score:
   band: emerging
   composite: 18.3
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
@@ -127,7 +131,7 @@ score:
     developer_ergonomics: 31.0
     discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 17.7
+  previous_composite: 18.3
   provenance:
     mcp: first-party
   regulatory:
@@ -136,14 +140,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nobl9/refs/heads/main/screenshots/nobl9-2026-06-20T190350.png
+screenshot: https://apis.io/screenshots/nobl9/nobl9-2026-06-20T190350.png
 security:
 - kind: domain-security
   name: Nobl9 Domain Security

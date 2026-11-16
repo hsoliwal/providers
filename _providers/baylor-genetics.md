@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -32,17 +45,17 @@ common:
   type: BlogRSS
   url: https://www.baylorgenetics.com/feed/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/baylor-genetics/refs/heads/main/conformance/baylor-genetics-conformance.yml
+  href: https://artifacts.apis.io/baylor-genetics/conformance/baylor-genetics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/baylor-genetics-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/baylor-genetics/refs/heads/main/hosts/baylor-genetics-hosts.yml
+  href: https://artifacts.apis.io/baylor-genetics/hosts/baylor-genetics-hosts.yml
   title: ''
   type: Hosts
   url: hosts/baylor-genetics-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/baylor-genetics/refs/heads/main/vendors/baylor-genetics-vendors.yml
+  href: https://artifacts.apis.io/baylor-genetics/vendors/baylor-genetics-vendors.yml
   title: ''
   type: Vendors
   url: vendors/baylor-genetics-vendors.yml
@@ -63,7 +76,7 @@ common:
   type: Newsroom
   url: https://www.baylorgenetics.com/news/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/baylor-genetics/refs/heads/main/security/baylor-genetics-domain-security.yml
+  href: https://artifacts.apis.io/baylor-genetics/security/baylor-genetics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/baylor-genetics-domain-security.yml
@@ -98,24 +111,24 @@ overview: 'Baylor Genetics is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Baylor Genetics'' developer surface includes pricing, engineering blog, and 10 more developer resources.'
-random_paper: 4
+random_paper: 8
 score:
-  band: emerging
-  composite: 13.1
+  band: minimal
+  composite: 9.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 20.0
     catalog_earned_first_party: 0.0
     catalog_gap: 95.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.9
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 2.4
-    discoverability: 37.5
+    developer_ergonomics: 1.2
+    discoverability: 36.6
     operational_transparency: 0.0
   previous_composite: 13.1
   provenance:
@@ -130,15 +143,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 11.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/baylor-genetics/refs/heads/main/screenshots/baylor-genetics-2026-10-11T101630.png
+screenshot: https://apis.io/screenshots/baylor-genetics/baylor-genetics-2026-10-11T101630.png
 security:
 - kind: domain-security
   name: Baylor Genetics Domain Security

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 24.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -108,9 +111,6 @@ collections:
   name: Copper Developer Activities Webhooks API
   slug: postman-copper-webhooks-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Copper Developer Activities API
   slug: open-copper-activities-api
 - collection_type: open
@@ -136,17 +136,17 @@ collections:
   slug: open-copper-webhooks-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/plans/copper-plans-pricing.yml
+  href: https://artifacts.apis.io/copper/plans/copper-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/copper-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/finops/copper-finops.yml
+  href: https://artifacts.apis.io/copper/finops/copper-finops.yml
   title: ''
   type: FinOps
   url: finops/copper-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/capabilities/copper-capability-edges.yml
+  href: https://artifacts.apis.io/copper/capabilities/copper-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/copper-capability-edges.yml
@@ -155,22 +155,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/copper/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/agentic-access/copper-agentic-access.yml
+  href: https://artifacts.apis.io/copper/agentic-access/copper-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/copper-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/security/copper-trust-center.yml
+  href: https://artifacts.apis.io/copper/security/copper-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/copper-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/security/copper-domain-security.yml
+  href: https://artifacts.apis.io/copper/security/copper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/copper-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/authentication/copper-authentication.yml
+  href: https://artifacts.apis.io/copper/authentication/copper-authentication.yml
   title: ''
   type: Authentication
   url: authentication/copper-authentication.yml
@@ -259,10 +259,10 @@ features:
 - Mobile apps (iOS + Android)
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Copper Finops
-  primary_unit: ''
-  service_category: CRM
+  primary_unit: seat
+  service_category: ''
   slug: copper-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/copper.png
@@ -329,9 +329,12 @@ overview: 'Copper publishes 7 API contracts indexed on the [APIs.io](https://api
   Copper''s developer surface includes authentication, documentation, getting-started guide, pricing, engineering blog, YouTube channel, and 18 more developer resources.'
 plans:
 - name: Copper Plans Pricing
-  plan_count: 4
+  plan_count: 6
   slug: copper-plans-pricing
-random_paper: 11
+- name: Copper Price Estimates
+  plan_count: 0
+  slug: copper-price-estimates
+random_paper: 1
 rate_limits:
 - limit_count: 2
   name: Copper Rate Limits
@@ -374,23 +377,23 @@ rules:
   slug: copper-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 41.4
+  composite: 47.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 59.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    artifact_dirs: 23
+    catalog_earned: 71.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 44.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 26.3
+    access_clarity: 57.9
     contract_governance: 27.3
     contract_quality: 61.0
     developer_ergonomics: 38.1
     discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 42.9
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     contracts:
@@ -404,13 +407,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/screenshots/copper-2026-06-20T175018.png
+screenshot: https://apis.io/screenshots/copper/copper-2026-06-20T175018.png
 security:
 - kind: authentication
   name: Copper Authentication

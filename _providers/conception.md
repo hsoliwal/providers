@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -62,27 +65,27 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/conception_stock/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/security/conception-domain-security.yml
+  href: https://artifacts.apis.io/conception/security/conception-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/conception-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/well-known/conception-well-known.yml
+  href: https://artifacts.apis.io/conception/well-known/conception-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/conception-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/packages/conception-packages.yml
+  href: https://artifacts.apis.io/conception/packages/conception-packages.yml
   title: ''
   type: Packages
   url: packages/conception-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/conformance/conception-conformance.yml
+  href: https://artifacts.apis.io/conception/conformance/conception-conformance.yml
   title: ''
   type: Conformance
   url: conformance/conception-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/llms/conception-llms.txt
+  href: https://artifacts.apis.io/conception/llms/conception-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/conception-llms.txt
@@ -150,14 +153,14 @@ score:
     regime: Health
     regime_id: health
     score: 8.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/conception/refs/heads/main/screenshots/conception-2026-09-02T145128.png
+screenshot: https://apis.io/screenshots/conception/conception-2026-09-02T145128.png
 security:
 - kind: domain-security
   name: Conception Domain Security

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -31,7 +45,7 @@ agentic_access:
   operation_count: 19
   slug: internet2-agentic-access
   summary_line: 19 operations · 12 acting
-api_count: 3
+api_count: 2
 apis:
 - baseURL: https://localhost/registry
   baseurl_source: declared
@@ -73,65 +87,65 @@ apis:
   description: The Email Addresses.json API from Internet2 — 1 operation(s) for email addresses.json.
   name: Internet2 Email Addresses.json API
   slug: internet2-email-addresses-json-api
-artifact_total: 21
+artifact_total: 22
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/agentic-access/internet2-agentic-access.yml
+  href: https://artifacts.apis.io/internet2/agentic-access/internet2-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/internet2-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/rules/internet2-rules.yml
+  href: https://artifacts.apis.io/internet2/rules/internet2-rules.yml
   title: ''
   type: Spectral
   url: rules/internet2-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/json-ld/internet2-context.jsonld
+  href: https://artifacts.apis.io/internet2/json-ld/internet2-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/internet2-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/vocabulary/internet2-vocabulary.yml
+  href: https://artifacts.apis.io/internet2/vocabulary/internet2-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/internet2-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/internet2/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/data-model/internet2-data-model.yml
+  href: https://artifacts.apis.io/internet2/data-model/internet2-data-model.yml
   title: ''
   type: DataModel
   url: data-model/internet2-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/errors/internet2-problem-types.yml
+  href: https://artifacts.apis.io/internet2/errors/internet2-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/internet2-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/conformance/internet2-conformance.yml
+  href: https://artifacts.apis.io/internet2/conformance/internet2-conformance.yml
   title: ''
   type: Conformance
   url: conformance/internet2-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/llms/internet2-llms.txt
+  href: https://artifacts.apis.io/internet2/llms/internet2-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/internet2-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/hosts/internet2-hosts.yml
+  href: https://artifacts.apis.io/internet2/hosts/internet2-hosts.yml
   title: ''
   type: Hosts
   url: hosts/internet2-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/packages/internet2-packages.yml
+  href: https://artifacts.apis.io/internet2/packages/internet2-packages.yml
   title: ''
   type: SDKs
   url: packages/internet2-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/packages/internet2-packages.yml
+  href: https://artifacts.apis.io/internet2/packages/internet2-packages.yml
   title: ''
   type: Packages
   url: packages/internet2-packages.yml
@@ -164,12 +178,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/Internet2
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/authentication/internet2-authentication.yml
+  href: https://artifacts.apis.io/internet2/authentication/internet2-authentication.yml
   title: ''
   type: Authentication
   url: authentication/internet2-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/internet2/refs/heads/main/security/internet2-domain-security.yml
+  href: https://artifacts.apis.io/internet2/security/internet2-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/internet2-domain-security.yml
@@ -222,7 +236,7 @@ overview: 'Internet2 publishes 8 API contracts indexed on the [APIs.io](https://
 
 
   Internet2''s developer surface includes signup flow, authentication, and 20 more developer resources.'
-random_paper: 21
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -237,22 +251,24 @@ rules:
     warn: 0
   slug: internet2-rules
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 33.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 60.0
+    artifact_dirs: 20
+    catalog_earned: 57.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.4
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 19.7
     contract_quality: 64.4
     developer_ergonomics: 20.8
-    discoverability: 71.4
-    operational_transparency: 21.1
+    discoverability: 65.2
+    operational_transparency: 10.5
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -268,12 +284,14 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/internet2/internet2-2026-11-03T133940.png
 security:
 - kind: authentication
   name: Internet2 Authentication
@@ -283,6 +301,10 @@ security:
   name: Internet2 Domain Security
   slug: internet2-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 1
+skills:
+- name: internet2-add-person-to-group
+  slug: internet2-add-person-to-group
 slug: internet2
 tags:
 - Company

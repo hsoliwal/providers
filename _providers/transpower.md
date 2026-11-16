@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Developer resources for landowners and developers provided by Transpower New Zealand.
@@ -36,12 +49,12 @@ common:
   type: BlogRSS
   url: https://www.transpower.co.nz/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/transpower/refs/heads/main/hosts/transpower-hosts.yml
+  href: https://artifacts.apis.io/transpower/hosts/transpower-hosts.yml
   title: ''
   type: Hosts
   url: hosts/transpower-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/transpower/refs/heads/main/vendors/transpower-vendors.yml
+  href: https://artifacts.apis.io/transpower/vendors/transpower-vendors.yml
   title: ''
   type: Vendors
   url: vendors/transpower-vendors.yml
@@ -58,7 +71,7 @@ common:
   type: DeveloperPortal
   url: https://www.transpower.co.nz/our-work/landowners-and-developers/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/transpower/refs/heads/main/security/transpower-domain-security.yml
+  href: https://artifacts.apis.io/transpower/security/transpower-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/transpower-domain-security.yml
@@ -89,24 +102,24 @@ overview: 'Transpower New Zealand is listed with 1 API on the [APIs.io](https://
 
 
   Transpower New Zealand''s developer surface includes signup flow, support, and 9 more developer resources.'
-random_paper: 9
+random_paper: 5
 score:
-  band: emerging
-  composite: 15.0
+  band: minimal
+  composite: 9.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 30.0
     catalog_earned_first_party: 0.0
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 14.3
-    discoverability: 55.4
+    developer_ergonomics: 7.1
+    discoverability: 54.5
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -123,15 +136,15 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 8.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/transpower/refs/heads/main/screenshots/transpower-2026-10-11T131139.png
+screenshot: https://apis.io/screenshots/transpower/transpower-2026-10-11T131139.png
 security:
 - kind: domain-security
   name: Transpower Domain Security

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-10-17'
+  score: 37.6
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API de consulta de CNPJ a partir dos dados abertos da Receita Federal.
@@ -62,47 +76,47 @@ apis:
 artifact_total: 9
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/rules/apipj-rules.yml
+  href: https://artifacts.apis.io/apipj/rules/apipj-rules.yml
   title: ''
   type: Spectral
   url: rules/apipj-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/vocabulary/apipj-vocabulary.yml
+  href: https://artifacts.apis.io/apipj/vocabulary/apipj-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/apipj-vocabulary.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/sandbox/apipj-sandbox.yml
+  href: https://artifacts.apis.io/apipj/sandbox/apipj-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/apipj-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/conformance/apipj-conformance.yml
+  href: https://artifacts.apis.io/apipj/conformance/apipj-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apipj-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/llms/apipj-llms.txt
+  href: https://artifacts.apis.io/apipj/llms/apipj-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apipj-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/well-known/apipj-well-known.yml
+  href: https://artifacts.apis.io/apipj/well-known/apipj-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/apipj-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/hosts/apipj-hosts.yml
+  href: https://artifacts.apis.io/apipj/hosts/apipj-hosts.yml
   title: ''
   type: Hosts
   url: hosts/apipj-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/packages/apipj-packages.yml
+  href: https://artifacts.apis.io/apipj/packages/apipj-packages.yml
   title: ''
   type: SDKs
   url: packages/apipj-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/packages/apipj-packages.yml
+  href: https://artifacts.apis.io/apipj/packages/apipj-packages.yml
   title: ''
   type: Packages
   url: packages/apipj-packages.yml
@@ -111,7 +125,7 @@ common:
   type: Sandbox
   url: https://apipj.com.br/sandbox
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apipj/refs/heads/main/security/apipj-domain-security.yml
+  href: https://artifacts.apis.io/apipj/security/apipj-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apipj-domain-security.yml
@@ -174,21 +188,30 @@ rules:
   slug: apipj-rules
 score:
   band: thin
-  composite: 37.2
+  composite: 29.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.8
     catalog_earned_first_party: 0.0
     catalog_gap: 77.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.6
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 47.8
-    developer_ergonomics: 35.7
+    developer_ergonomics: 21.4
     discoverability: 64.3
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - brazil
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - latin-america
+  previous_composite: 37.2
   provenance:
     conformance: derived
     contracts:
@@ -201,12 +224,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/apipj/apipj-2026-11-03T120959.png
 security:
 - kind: domain-security
   name: Apipj Domain Security

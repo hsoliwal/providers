@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST booking API for searching experiences, retrieving options and availability, and assembling and confirming booking orders. Authenticated with an X-API-Key header; versioned in the URI path (/v2).
@@ -83,42 +86,42 @@ common:
   type: Login
   url: https://app.turneo.co
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/authentication/turneo-authentication.yml
+  href: https://artifacts.apis.io/turneo/authentication/turneo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/turneo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/conventions/turneo-conventions.yml
+  href: https://artifacts.apis.io/turneo/conventions/turneo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/turneo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/components/turneo-components.yml
+  href: https://artifacts.apis.io/turneo/components/turneo-components.yml
   title: ''
   type: Components
   url: components/turneo-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/mcp/turneo-mcp.yml
+  href: https://artifacts.apis.io/turneo/mcp/turneo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/turneo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/llms/turneo-llms.txt
+  href: https://artifacts.apis.io/turneo/llms/turneo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/turneo-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/lifecycle/turneo-lifecycle.yml
+  href: https://artifacts.apis.io/turneo/lifecycle/turneo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/turneo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/data-model/turneo-data-model.yml
+  href: https://artifacts.apis.io/turneo/data-model/turneo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/turneo-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/security/turneo-domain-security.yml
+  href: https://artifacts.apis.io/turneo/security/turneo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/turneo-domain-security.yml
@@ -134,12 +137,12 @@ overview: 'Turneo is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Turneo''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, and 13 more developer resources.'
-random_paper: 9
+random_paper: 21
 score:
   band: emerging
   composite: 24.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -162,14 +165,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/turneo/refs/heads/main/screenshots/turneo-2026-09-02T164536.png
+screenshot: https://apis.io/screenshots/turneo/turneo-2026-09-02T164536.png
 security:
 - kind: authentication
   name: Turneo Authentication

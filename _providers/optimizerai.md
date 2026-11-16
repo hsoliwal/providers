@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Commercial sound-effects generation API exposing the OptimizerAI text-to-sfx v2 model. Access is contract-based (annual pre-payment) across Ultra-Fast/Fast (dedicated) and Slow (shared) tiers, each wi
@@ -43,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/plans/optimizerai-plans-pricing.yml
+  href: https://artifacts.apis.io/optimizerai/plans/optimizerai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/optimizerai-plans-pricing.yml
@@ -76,27 +80,27 @@ common:
   type: PrivacyPolicy
   url: https://app.termly.io/document/privacy-policy/3b0fd428-814d-4aee-8b38-5e96a3024dad
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/authentication/optimizerai-authentication.yml
+  href: https://artifacts.apis.io/optimizerai/authentication/optimizerai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/optimizerai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/lifecycle/optimizerai-lifecycle.yml
+  href: https://artifacts.apis.io/optimizerai/lifecycle/optimizerai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/optimizerai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/conventions/optimizerai-conventions.yml
+  href: https://artifacts.apis.io/optimizerai/conventions/optimizerai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/optimizerai-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/security/optimizerai-domain-security.yml
+  href: https://artifacts.apis.io/optimizerai/security/optimizerai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/optimizerai-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/llms/optimizerai-llms.txt
+  href: https://artifacts.apis.io/optimizerai/llms/optimizerai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/optimizerai-llms.txt
@@ -116,18 +120,18 @@ plans:
 - name: Optimizerai Plans Pricing
   plan_count: 3
   slug: optimizerai-plans-pricing
-random_paper: 9
+random_paper: 21
 score:
   band: emerging
   composite: 23.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.0
+  delta: 0.0
   facets:
     access_clarity: 63.2
     contract_governance: 0.0
@@ -135,21 +139,21 @@ score:
     developer_ergonomics: 23.8
     discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 17.9
+  previous_composite: 23.9
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/optimizerai/refs/heads/main/screenshots/optimizerai-2026-08-07T190813.png
+screenshot: https://apis.io/screenshots/optimizerai/optimizerai-2026-08-07T190813.png
 security:
 - kind: authentication
   name: Optimizerai Authentication

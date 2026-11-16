@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -73,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: VivaLNK Biometrics Data Platform API (Modeled) Devices API
   slug: open-vivalink-devices-api
 - collection_type: open
@@ -95,22 +98,22 @@ collections:
   slug: open-vivalink
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/capabilities/vivalink-capability-edges.yml
+  href: https://artifacts.apis.io/vivalink/capabilities/vivalink-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/vivalink-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/agentic-access/vivalink-agentic-access.yml
+  href: https://artifacts.apis.io/vivalink/agentic-access/vivalink-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/vivalink-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/security/vivalink-domain-security.yml
+  href: https://artifacts.apis.io/vivalink/security/vivalink-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vivalink-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/authentication/vivalink-authentication.yml
+  href: https://artifacts.apis.io/vivalink/authentication/vivalink-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vivalink-authentication.yml
@@ -135,17 +138,17 @@ common:
   type: SignUp
   url: https://www.vivalink.com/contact
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/plans/vivalink-plans-pricing.yml
+  href: https://artifacts.apis.io/vivalink/plans/vivalink-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vivalink-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/rate-limits/vivalink-rate-limits.yml
+  href: https://artifacts.apis.io/vivalink/rate-limits/vivalink-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vivalink-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/finops/vivalink-finops.yml
+  href: https://artifacts.apis.io/vivalink/finops/vivalink-finops.yml
   title: ''
   type: FinOps
   url: finops/vivalink-finops.yml
@@ -173,35 +176,51 @@ network: true
 overview: 'VivaLNK publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Devices API, FHIR API, Subjects API, and 2 more. Tagged areas include Connected Health, Remote Patient Monitoring, RPM, Wearables, and Biosensors.
 
 
+  The VivaLNK catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   VivaLNK''s developer surface includes authentication, documentation, signup flow, engineering blog, and 9 more developer resources.'
 plans:
 - name: Vivalink Plans Pricing
   plan_count: 3
   slug: vivalink-plans-pricing
-random_paper: 10
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Vivalink Rate Limits
   slug: vivalink-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: VivaLNK API Rules
+  rule_count: 58
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 2
+    warn: 1
+  slug: vivalink-rules
 score:
   band: thin
-  composite: 31.4
+  composite: 33.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.4
     developer_ergonomics: 25.0
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 39.8
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -215,13 +234,13 @@ score:
     regime: Health
     regime_id: health
     score: 9.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/vivalink/refs/heads/main/screenshots/vivalink-2026-09-02T170130.png
+screenshot: https://apis.io/screenshots/vivalink/vivalink-2026-09-02T170130.png
 security:
 - kind: authentication
   name: Vivalink Authentication

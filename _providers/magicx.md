@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Framework-agnostic HTTP API behind the AI Autocomplete SDKs. A single POST /api/suggest endpoint drives keystroke-by-keystroke guided autocomplete over a placeholder-based query model, with a POST /ap
@@ -43,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/plans/magicx-plans-pricing.yml
+  href: https://artifacts.apis.io/magicx/plans/magicx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/magicx-plans-pricing.yml
@@ -92,52 +96,52 @@ common:
   type: Compliance
   url: https://ai-autocomplete.com/other/enterprise
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/llms/magicx-llms.txt
+  href: https://artifacts.apis.io/magicx/llms/magicx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/magicx-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/packages/magicx-packages.yml
+  href: https://artifacts.apis.io/magicx/packages/magicx-packages.yml
   title: ''
   type: Packages
   url: packages/magicx-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/packages/magicx-packages.yml
+  href: https://artifacts.apis.io/magicx/packages/magicx-packages.yml
   title: ''
   type: SDKs
   url: packages/magicx-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/authentication/magicx-authentication.yml
+  href: https://artifacts.apis.io/magicx/authentication/magicx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/magicx-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/conventions/magicx-conventions.yml
+  href: https://artifacts.apis.io/magicx/conventions/magicx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/magicx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/errors/magicx-problem-types.yml
+  href: https://artifacts.apis.io/magicx/errors/magicx-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/magicx-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/mcp/magicx-mcp.yml
+  href: https://artifacts.apis.io/magicx/mcp/magicx-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/magicx-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/conformance/magicx-conformance.yml
+  href: https://artifacts.apis.io/magicx/conformance/magicx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/magicx-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/security/magicx-domain-security.yml
+  href: https://artifacts.apis.io/magicx/security/magicx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/magicx-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/magicx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -157,7 +161,7 @@ plans:
 - name: Magicx Plans Pricing
   plan_count: 2
   slug: magicx-plans-pricing
-random_paper: 17
+random_paper: 9
 score:
   band: thin
   composite: 38.6
@@ -168,7 +172,7 @@ score:
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: 0.0
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
@@ -176,7 +180,7 @@ score:
     developer_ergonomics: 69.0
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 34.3
+  previous_composite: 38.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -187,14 +191,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/magicx/refs/heads/main/screenshots/magicx-2026-07-25T225856.png
+screenshot: https://apis.io/screenshots/magicx/magicx-2026-07-25T225856.png
 security:
 - kind: authentication
   name: Magicx Authentication

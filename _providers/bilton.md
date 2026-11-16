@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bilton/refs/heads/main/llms/bilton-llms.txt
+  href: https://artifacts.apis.io/bilton/llms/bilton-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bilton-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bilton/refs/heads/main/hosts/bilton-hosts.yml
+  href: https://artifacts.apis.io/bilton/hosts/bilton-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bilton-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bilton/refs/heads/main/vendors/bilton-vendors.yml
+  href: https://artifacts.apis.io/bilton/vendors/bilton-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bilton-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bilton/refs/heads/main/security/bilton-domain-security.yml
+  href: https://artifacts.apis.io/bilton/security/bilton-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bilton-domain-security.yml
@@ -107,10 +120,10 @@ overview: 'BiltOn is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   BiltOn''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, and 8 more developer resources.'
-random_paper: 10
+random_paper: 0
 score:
   band: emerging
-  composite: 20.5
+  composite: 12.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -118,12 +131,12 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.2
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 45.2
+    developer_ergonomics: 22.6
     discoverability: 55.4
     operational_transparency: 0.0
   previous_composite: 20.5
@@ -134,15 +147,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 9.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bilton/refs/heads/main/screenshots/bilton-2026-10-11T102218.png
+screenshot: https://apis.io/screenshots/bilton/bilton-2026-10-11T102218.png
 security:
 - kind: domain-security
   name: Bilton Domain Security

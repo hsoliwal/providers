@@ -1,8 +1,9 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  gated_conflict: 'x-api-posture: private but 3 published API entries'
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'Amwell''s Converge platform REST APIs, which Amwell states leverage HL7 FHIR and single sign-on, let partners embed and orchestrate virtual care — urgent, scheduled, behavioral, and specialty visits — '
@@ -50,7 +54,7 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/security/amwell-domain-security.yml
+  href: https://artifacts.apis.io/amwell/security/amwell-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amwell-domain-security.yml
@@ -71,7 +75,7 @@ common:
   type: StatusPage
   url: https://status.amwell.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/lifecycle/amwell-lifecycle.yml
+  href: https://artifacts.apis.io/amwell/lifecycle/amwell-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/amwell-lifecycle.yml
@@ -92,12 +96,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/amwell
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/authentication/amwell-authentication.yml
+  href: https://artifacts.apis.io/amwell/authentication/amwell-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amwell-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/conformance/amwell-conformance.yml
+  href: https://artifacts.apis.io/amwell/conformance/amwell-conformance.yml
   title: ''
   type: Conformance
   url: conformance/amwell-conformance.yml
@@ -106,22 +110,22 @@ common:
   type: Compliance
   url: https://business.amwell.com/who-we-serve/government
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/packages/amwell-packages.yml
+  href: https://artifacts.apis.io/amwell/packages/amwell-packages.yml
   title: ''
   type: Packages
   url: packages/amwell-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/plans/amwell-plans-pricing.yml
+  href: https://artifacts.apis.io/amwell/plans/amwell-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amwell-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/rate-limits/amwell-rate-limits.yml
+  href: https://artifacts.apis.io/amwell/rate-limits/amwell-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amwell-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/llms/amwell-llms.txt
+  href: https://artifacts.apis.io/amwell/llms/amwell-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/amwell-llms.txt
@@ -156,7 +160,7 @@ plans:
 - name: Amwell Plans Pricing
   plan_count: 0
   slug: amwell-plans-pricing
-random_paper: 4
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Amwell Rate Limits
@@ -165,7 +169,7 @@ score:
   band: emerging
   composite: 25.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -199,14 +203,14 @@ score:
     regime: Health
     regime_id: health
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/amwell/refs/heads/main/screenshots/amwell-2026-07-25T200143.png
+screenshot: https://apis.io/screenshots/amwell/amwell-2026-07-25T200143.png
 security:
 - kind: authentication
   name: Amwell Authentication

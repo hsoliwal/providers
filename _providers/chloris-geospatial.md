@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-10-17'
+  score: 29.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -85,57 +99,57 @@ asyncapis:
   slug: chloris-geospatial-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/agentic-access/chloris-geospatial-agentic-access.yml
+  href: https://artifacts.apis.io/chloris-geospatial/agentic-access/chloris-geospatial-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/chloris-geospatial-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/rules/chloris-geospatial-rules.yml
+  href: https://artifacts.apis.io/chloris-geospatial/rules/chloris-geospatial-rules.yml
   title: ''
   type: Spectral
   url: rules/chloris-geospatial-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/json-ld/chloris-geospatial-context.jsonld
+  href: https://artifacts.apis.io/chloris-geospatial/json-ld/chloris-geospatial-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chloris-geospatial-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/vocabulary/chloris-geospatial-vocabulary.yml
+  href: https://artifacts.apis.io/chloris-geospatial/vocabulary/chloris-geospatial-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/chloris-geospatial-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/asyncapi/chloris-geospatial-webhooks.yml
+  href: https://artifacts.apis.io/chloris-geospatial/asyncapi/chloris-geospatial-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/chloris-geospatial-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/data-model/chloris-geospatial-data-model.yml
+  href: https://artifacts.apis.io/chloris-geospatial/data-model/chloris-geospatial-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chloris-geospatial-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/conventions/chloris-geospatial-conventions.yml
+  href: https://artifacts.apis.io/chloris-geospatial/conventions/chloris-geospatial-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chloris-geospatial-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/errors/chloris-geospatial-problem-types.yml
+  href: https://artifacts.apis.io/chloris-geospatial/errors/chloris-geospatial-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/chloris-geospatial-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/conformance/chloris-geospatial-conformance.yml
+  href: https://artifacts.apis.io/chloris-geospatial/conformance/chloris-geospatial-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chloris-geospatial-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/hosts/chloris-geospatial-hosts.yml
+  href: https://artifacts.apis.io/chloris-geospatial/hosts/chloris-geospatial-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chloris-geospatial-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/vendors/chloris-geospatial-vendors.yml
+  href: https://artifacts.apis.io/chloris-geospatial/vendors/chloris-geospatial-vendors.yml
   title: ''
   type: Vendors
   url: vendors/chloris-geospatial-vendors.yml
@@ -156,12 +170,12 @@ common:
   type: APIReference
   url: https://app.chloris.earth/docs/1.12.0/api-reference.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/authentication/chloris-geospatial-authentication.yml
+  href: https://artifacts.apis.io/chloris-geospatial/authentication/chloris-geospatial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chloris-geospatial-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chloris-geospatial/refs/heads/main/security/chloris-geospatial-domain-security.yml
+  href: https://artifacts.apis.io/chloris-geospatial/security/chloris-geospatial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chloris-geospatial-domain-security.yml
@@ -223,22 +237,24 @@ rules:
     warn: 1
   slug: chloris-geospatial-rules
 score:
-  band: developing
-  composite: 39.9
+  band: thin
+  composite: 35.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.2
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 68.2
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 66.1
     operational_transparency: 7.9
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -253,12 +269,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/chloris-geospatial/chloris-geospatial-2026-11-03T124058.png
 security:
 - kind: authentication
   name: Chloris Geospatial Authentication

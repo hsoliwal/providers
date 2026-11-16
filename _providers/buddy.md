@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The fastest continuous integration and continuous delivery platform
@@ -42,17 +45,17 @@ apis:
 artifact_total: 4
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/buddy/refs/heads/main/a2a/buddy-a2a.yml
+  href: https://artifacts.apis.io/buddy/a2a/buddy-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/buddy-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buddy/refs/heads/main/security/buddy-trust-center.yml
+  href: https://artifacts.apis.io/buddy/security/buddy-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/buddy-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buddy/refs/heads/main/security/buddy-domain-security.yml
+  href: https://artifacts.apis.io/buddy/security/buddy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/buddy-domain-security.yml
@@ -92,7 +95,7 @@ score:
   band: minimal
   composite: 8.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 20.0
     catalog_earned_first_party: 0.0
     catalog_gap: 95.0
@@ -115,14 +118,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/buddy/refs/heads/main/screenshots/buddy-2026-06-20T173742.png
+screenshot: https://apis.io/screenshots/buddy/buddy-2026-06-20T173742.png
 security:
 - kind: domain-security
   name: Buddy Domain Security

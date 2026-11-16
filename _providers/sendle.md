@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 32.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -71,7 +74,7 @@ apis:
   description: Connectivity and credential testing
   name: Sendle Utility API
   slug: sendle-utility-api
-artifact_total: 32
+artifact_total: 31
 asyncapis:
 - description: Sendle pushes parcel tracking events to a callback URL configured in the account Settings -> API page. Subscriptions are created per parcel via the Tracking API. Sendle expects 2xx responses; failed d
   name: Sendle Tracking Webhooks
@@ -93,9 +96,6 @@ collections:
   name: Sendle Shipping Manifests Utility API
   slug: postman-sendle-utility-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Sendle Shipping Manifests API
   slug: open-sendle-manifests-api
 - collection_type: open
@@ -115,7 +115,7 @@ collections:
   slug: open-sendle-utility-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/capabilities/sendle-capability-edges.yml
+  href: https://artifacts.apis.io/sendle/capabilities/sendle-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sendle-capability-edges.yml
@@ -124,17 +124,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/sendle/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/agentic-access/sendle-agentic-access.yml
+  href: https://artifacts.apis.io/sendle/agentic-access/sendle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sendle-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/security/sendle-domain-security.yml
+  href: https://artifacts.apis.io/sendle/security/sendle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sendle-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/authentication/sendle-authentication.yml
+  href: https://artifacts.apis.io/sendle/authentication/sendle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sendle-authentication.yml
@@ -151,22 +151,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/sendle
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/plans/sendle-plans-pricing.yml
+  href: https://artifacts.apis.io/sendle/plans/sendle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sendle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/rate-limits/sendle-rate-limits.yml
+  href: https://artifacts.apis.io/sendle/rate-limits/sendle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sendle-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/finops/sendle-finops.yml
+  href: https://artifacts.apis.io/sendle/finops/sendle-finops.yml
   title: ''
   type: FinOps
   url: finops/sendle-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/vocabulary/sendle-vocabulary.yml
+  href: https://artifacts.apis.io/sendle/vocabulary/sendle-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sendle-vocabulary.yml
@@ -175,42 +175,42 @@ common:
   type: Support
   url: mailto:api@sendle.com
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/packages/sendle-packages.yml
+  href: https://artifacts.apis.io/sendle/packages/sendle-packages.yml
   title: ''
   type: Packages
   url: packages/sendle-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/llms/sendle-llms.txt
+  href: https://artifacts.apis.io/sendle/llms/sendle-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sendle-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/conventions/sendle-conventions.yml
+  href: https://artifacts.apis.io/sendle/conventions/sendle-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sendle-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/conventions/sendle-conventions.yml
+  href: https://artifacts.apis.io/sendle/conventions/sendle-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/sendle-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/data-model/sendle-data-model.yml
+  href: https://artifacts.apis.io/sendle/data-model/sendle-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sendle-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/errors/sendle-problem-types.yml
+  href: https://artifacts.apis.io/sendle/errors/sendle-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sendle-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/lifecycle/sendle-lifecycle.yml
+  href: https://artifacts.apis.io/sendle/lifecycle/sendle-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sendle-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/conformance/sendle-conformance.yml
+  href: https://artifacts.apis.io/sendle/conformance/sendle-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sendle-conformance.yml
@@ -244,8 +244,8 @@ examples:
   name: Sendle Tracking Webhook Example
   slug: sendle-tracking-webhook-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Sendle Finops
   primary_unit: ''
   service_category: ''
@@ -280,7 +280,7 @@ plans:
 - name: Sendle Plans Pricing
   plan_count: 3
   slug: sendle-plans-pricing
-random_paper: 19
+random_paper: 11
 rate_limits:
 - limit_count: 3
   name: Sendle Rate Limits
@@ -313,13 +313,13 @@ score:
   band: developing
   composite: 43.1
   coverage:
-    artifact_dirs: 31
+    artifact_dirs: 33
     catalog_earned: 86.4
     catalog_earned_first_party: 24.0
     catalog_gap: 28.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 31.8
@@ -337,7 +337,7 @@ score:
     regions:
     - anz
     - north-america
-  previous_composite: 44.6
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -353,13 +353,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sendle/refs/heads/main/screenshots/sendle-2026-06-20T193655.png
+screenshot: https://apis.io/screenshots/sendle/sendle-2026-06-20T193655.png
 security:
 - kind: authentication
   name: Sendle Authentication

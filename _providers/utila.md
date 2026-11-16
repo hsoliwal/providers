@@ -1,17 +1,18 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -20,21 +21,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.3
-  scored_at: '2026-10-17'
+  score: 29.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.utila.io
@@ -72,7 +76,7 @@ apis:
   description: The Wallets API from Utila — 10 operation(s) for wallets.
   name: Utila Wallets API
   slug: utila-wallets-api
-artifact_total: 26
+artifact_total: 32
 asyncapis:
 - description: ''
   name: Utila Webhooks
@@ -100,9 +104,6 @@ collections:
   name: Utila Address Book Wallets API
   slug: postman-utila-wallets-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Utila Address Book API
   slug: open-utila-address-book-api
 - collection_type: open
@@ -125,7 +126,17 @@ collections:
   slug: open-utila-wallets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/overlays/utila-v2-overlay.yaml
+  href: https://artifacts.apis.io/utila/capabilities/utila-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/utila-capability-edges.yml
+- group: commercial
+  href: https://artifacts.apis.io/utila/plans/utila-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/utila-plans-pricing.yml
+- group: other
+  href: https://artifacts.apis.io/utila/overlays/utila-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/utila-v2-overlay.yaml
@@ -190,7 +201,7 @@ common:
   type: StatusPage
   url: https://status.utila.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/security/utila-trust-center.yml
+  href: https://artifacts.apis.io/utila/security/utila-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/utila-trust-center.yml
@@ -199,92 +210,100 @@ common:
   type: Compliance
   url: https://trust.utila.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/security/utila-domain-security.yml
+  href: https://artifacts.apis.io/utila/security/utila-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/utila-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/authentication/utila-authentication.yml
+  href: https://artifacts.apis.io/utila/authentication/utila-authentication.yml
   title: ''
   type: Authentication
   url: authentication/utila-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/errors/utila-problem-types.yml
+  href: https://artifacts.apis.io/utila/errors/utila-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/utila-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/lifecycle/utila-lifecycle.yml
+  href: https://artifacts.apis.io/utila/lifecycle/utila-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/utila-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/lifecycle/utila-lifecycle.yml
+  href: https://artifacts.apis.io/utila/lifecycle/utila-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/utila-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/changelog/utila-changelog.yml
+  href: https://artifacts.apis.io/utila/changelog/utila-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/utila-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/conventions/utila-conventions.yml
+  href: https://artifacts.apis.io/utila/conventions/utila-conventions.yml
   title: ''
   type: Conventions
   url: conventions/utila-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/conformance/utila-conformance.yml
+  href: https://artifacts.apis.io/utila/conformance/utila-conformance.yml
   title: ''
   type: Conformance
   url: conformance/utila-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/cli/utila-cli.yml
+  href: https://artifacts.apis.io/utila/cli/utila-cli.yml
   title: ''
   type: CLI
   url: cli/utila-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/asyncapi/utila-webhooks.yml
+  href: https://artifacts.apis.io/utila/asyncapi/utila-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/utila-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/mcp/utila-mcp.yml
+  href: https://artifacts.apis.io/utila/mcp/utila-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/utila-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/llms/utila-llms.txt
+  href: https://artifacts.apis.io/utila/llms/utila-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/utila-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/well-known/utila-well-known.yml
+  href: https://artifacts.apis.io/utila/well-known/utila-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/utila-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/packages/utila-packages.yml
+  href: https://artifacts.apis.io/utila/packages/utila-packages.yml
   title: ''
   type: Packages
   url: packages/utila-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/packages/utila-packages.yml
+  href: https://artifacts.apis.io/utila/packages/utila-packages.yml
   title: ''
   type: SDKs
   url: packages/utila-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/utila/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/data-model/utila-data-model.yml
+  href: https://artifacts.apis.io/utila/data-model/utila-data-model.yml
   title: ''
   type: DataModel
   url: data-model/utila-data-model.yml
 created: '2026-07-17'
 description: Utila is an institutional digital asset wallet and stablecoin infrastructure platform for fintechs and enterprises. Built on MPC (multi-party computation) key management, it provides secure custody with policy-driven governance, embedded compliance and AML screening, and a resource-oriented REST API for programmatically managing vaults, MPC wallets, addresses, balances, and transactions across many blockchains — including sponsored (gas-abstracted) transfers, transaction simulation, an automated Co-Signer for signing workflows, webhooks, and a first-party CLI.
+finops:
+- has_sources: true
+  method: derived
+  name: Utila Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: utila-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/utila.png
 layout: provider
 modified: '2026-07-21'
@@ -294,30 +313,50 @@ network: true
 overview: 'Utila publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Address Book API, Assets API, Balances API, and 4 more. Tagged areas include Company, Web3, Digital Assets, Stablecoins, and Custody.
 
 
-  The Utila catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Utila catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Utila''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, authentication, and 28 more developer resources.'
+  Utila''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, authentication, and 30 more developer resources.'
+plans:
+- name: Utila Plans Pricing
+  plan_count: 2
+  slug: utila-plans-pricing
+- name: Utila Price Estimates
+  plan_count: 0
+  slug: utila-price-estimates
 random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Utila API Rules
+  rule_count: 50
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 2
+    warn: 9
+  slug: utila-rules
 score:
-  band: developing
-  composite: 53.0
+  band: strong
+  composite: 62.3
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 29
+    catalog_earned: 52.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.9
   facets:
-    access_clarity: 53.9
-    contract_governance: 4.5
+    access_clarity: 82.9
+    contract_governance: 18.2
     contract_quality: 54.3
-    developer_ergonomics: 55.4
+    developer_ergonomics: 64.9
     discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 52.9
+  previous_composite: 60.4
   provenance:
     conformance: derived
     contracts:
@@ -333,13 +372,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/utila/refs/heads/main/screenshots/utila-2026-08-17T082701.png
+screenshot: https://apis.io/screenshots/utila/utila-2026-08-17T082701.png
 security:
 - kind: authentication
   name: Utila Authentication
@@ -353,6 +392,14 @@ security:
   name: Utila Trust Center
   slug: utila-trust-center
   summary_line: SOC 2 Type II
+skill_count: 3
+skills:
+- name: Initiate and monitor a transfer with Utila
+  slug: utila-initiate-and-monitor-transfer
+- name: Provision a wallet and deposit address with Utila
+  slug: utila-provision-wallet
+- name: Sweep token balances to treasury with Utila
+  slug: utila-sweep-to-treasury
 slug: utila
 tags:
 - Company

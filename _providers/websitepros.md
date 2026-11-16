@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-10-17'
+  score: 25.9
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - baseURL: https://api.nts.web.com
@@ -62,10 +65,10 @@ apis:
   description: Generate a single-sign-on URL for a customer owned by your tenant.
   name: WebsitePros SSO API
   slug: websitepros-sso-api
-artifact_total: 9
+artifact_total: 12
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/security/websitepros-domain-security.yml
+  href: https://artifacts.apis.io/websitepros/security/websitepros-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/websitepros-domain-security.yml
@@ -98,77 +101,77 @@ common:
   type: Postman
   url: https://api-docs.intl.web.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/collections/websitepros-international-platform.postman_collection.json
+  href: https://artifacts.apis.io/websitepros/collections/websitepros-international-platform.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/websitepros-international-platform.postman_collection.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/authentication/websitepros-authentication.yml
+  href: https://artifacts.apis.io/websitepros/authentication/websitepros-authentication.yml
   title: ''
   type: Authentication
   url: authentication/websitepros-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/conventions/websitepros-conventions.yml
+  href: https://artifacts.apis.io/websitepros/conventions/websitepros-conventions.yml
   title: ''
   type: Conventions
   url: conventions/websitepros-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/errors/websitepros-problem-types.yml
+  href: https://artifacts.apis.io/websitepros/errors/websitepros-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/websitepros-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/lifecycle/websitepros-lifecycle.yml
+  href: https://artifacts.apis.io/websitepros/lifecycle/websitepros-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/websitepros-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/conformance/websitepros-conformance.yml
+  href: https://artifacts.apis.io/websitepros/conformance/websitepros-conformance.yml
   title: ''
   type: Conformance
   url: conformance/websitepros-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/data-model/websitepros-data-model.yml
+  href: https://artifacts.apis.io/websitepros/data-model/websitepros-data-model.yml
   title: ''
   type: DataModel
   url: data-model/websitepros-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/sandbox/websitepros-sandbox.yml
+  href: https://artifacts.apis.io/websitepros/sandbox/websitepros-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/websitepros-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/plans/websitepros-plans-pricing.yml
+  href: https://artifacts.apis.io/websitepros/plans/websitepros-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/websitepros-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/rate-limits/websitepros-rate-limits.yml
+  href: https://artifacts.apis.io/websitepros/rate-limits/websitepros-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/websitepros-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/packages/websitepros-packages.yml
+  href: https://artifacts.apis.io/websitepros/packages/websitepros-packages.yml
   title: ''
   type: Packages
   url: packages/websitepros-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/mcp/websitepros-mcp.yml
+  href: https://artifacts.apis.io/websitepros/mcp/websitepros-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/websitepros-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/websitepros/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/llms/websitepros-llms.txt
+  href: https://artifacts.apis.io/websitepros/llms/websitepros-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/websitepros-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/overlays/websitepros-international-platform-overlay.yaml
+  href: https://artifacts.apis.io/websitepros/overlays/websitepros-international-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/websitepros-international-platform-overlay.yaml
@@ -184,31 +187,47 @@ network: true
 overview: 'WebsitePros is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Domains API, Health API, Sales Orders API, and 2 more. Tagged areas include Company, Website Builder, Web Hosting, Domains, and Small Business.
 
 
+  The WebsitePros catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   WebsitePros'' developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, sandbox, and 17 more developer resources.'
 plans:
 - name: Websitepros Plans Pricing
   plan_count: 0
   slug: websitepros-plans-pricing
-random_paper: 19
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Websitepros Rate Limits
   slug: websitepros-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: WebsitePros API Rules
+  rule_count: 68
+  severity_counts:
+    error: 66
+    hint: 0
+    info: 1
+    warn: 1
+  slug: websitepros-rules
 score:
-  band: emerging
-  composite: 25.6
+  band: thin
+  composite: 27.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 4.5
-    contract_quality: 16.7
+    contract_governance: 18.2
+    contract_quality: 15.9
     developer_ergonomics: 57.7
     discoverability: 71.4
     operational_transparency: 0.0
@@ -219,11 +238,11 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.5
+  previous_composite: 27.0
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 6
       marker_coverage: 100.0
       total: 6
@@ -235,13 +254,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/websitepros/refs/heads/main/screenshots/websitepros-2026-09-02T170535.png
+screenshot: https://apis.io/screenshots/websitepros/websitepros-2026-09-02T170535.png
 security:
 - kind: authentication
   name: Websitepros Authentication
@@ -251,6 +270,12 @@ security:
   name: Websitepros Domain Security
   slug: websitepros-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: websitepros-domain-availability
+  slug: websitepros-domain-availability
+- name: websitepros-sales-order-lifecycle
+  slug: websitepros-sales-order-lifecycle
 slug: websitepros
 tags:
 - Company

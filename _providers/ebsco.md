@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-10-17'
+  score: 36.4
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: API for EBSCOhost services, providing access to search, retrieve, and AI insights for library resources.
@@ -42,77 +57,77 @@ apis:
 artifact_total: 10
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/rate-limits/ebsco-rate-limits.yml
+  href: https://artifacts.apis.io/ebsco/rate-limits/ebsco-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ebsco-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/rules/ebsco-rules.yml
+  href: https://artifacts.apis.io/ebsco/rules/ebsco-rules.yml
   title: ''
   type: Spectral
   url: rules/ebsco-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/json-ld/ebsco-context.jsonld
+  href: https://artifacts.apis.io/ebsco/json-ld/ebsco-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/ebsco-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/vocabulary/ebsco-vocabulary.yml
+  href: https://artifacts.apis.io/ebsco/vocabulary/ebsco-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/ebsco-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/data-model/ebsco-data-model.yml
+  href: https://artifacts.apis.io/ebsco/data-model/ebsco-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ebsco-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/changelog/ebsco-changelog.yml
+  href: https://artifacts.apis.io/ebsco/changelog/ebsco-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ebsco-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/authentication/ebsco-authentication.yml
+  href: https://artifacts.apis.io/ebsco/authentication/ebsco-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ebsco-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/conformance/ebsco-conformance.yml
+  href: https://artifacts.apis.io/ebsco/conformance/ebsco-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ebsco-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/llms/ebsco-llms.txt
+  href: https://artifacts.apis.io/ebsco/llms/ebsco-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ebsco-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/well-known/ebsco-status-security.txt
+  href: https://artifacts.apis.io/ebsco/well-known/ebsco-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ebsco-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/well-known/ebsco-well-known.yml
+  href: https://artifacts.apis.io/ebsco/well-known/ebsco-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ebsco-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/hosts/ebsco-hosts.yml
+  href: https://artifacts.apis.io/ebsco/hosts/ebsco-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ebsco-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/vendors/ebsco-vendors.yml
+  href: https://artifacts.apis.io/ebsco/vendors/ebsco-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ebsco-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/packages/ebsco-packages.yml
+  href: https://artifacts.apis.io/ebsco/packages/ebsco-packages.yml
   title: ''
   type: SDKs
   url: packages/ebsco-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/packages/ebsco-packages.yml
+  href: https://artifacts.apis.io/ebsco/packages/ebsco-packages.yml
   title: ''
   type: Packages
   url: packages/ebsco-packages.yml
@@ -145,7 +160,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/ebsco
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ebsco/refs/heads/main/security/ebsco-domain-security.yml
+  href: https://artifacts.apis.io/ebsco/security/ebsco-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ebsco-domain-security.yml
@@ -192,7 +207,7 @@ overview: 'EBSCO is listed with 3 APIs on the [APIs.io](https://apis.io/) networ
 
 
   EBSCO''s developer surface includes changelog, authentication, getting-started guide, documentation, and 21 more developer resources.'
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 6
   name: Ebsco Rate Limits
@@ -211,22 +226,24 @@ rules:
     warn: 1
   slug: ebsco-rules
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 33.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 66.8
     catalog_earned_first_party: 12.0
     catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.3
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 22.4
-    developer_ergonomics: 50.0
-    discoverability: 71.4
+    developer_ergonomics: 34.5
+    discoverability: 70.5
     operational_transparency: 68.4
+  previous_composite: 40.8
   provenance:
     conformance: derived
     contracts:
@@ -240,13 +257,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/ebsco/ebsco-2026-11-03T131250.png
 security:
 - kind: authentication
   name: Ebsco Authentication

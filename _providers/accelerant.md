@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The member-facing Accelerant Risk Exchange platform and its supporting API surface. Accelerant states that its risk indices plug directly into Member underwriting and policy administration systems via
@@ -48,7 +51,7 @@ common:
   type: BlogRSS
   url: https://accelerant.ai/resources/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/security/accelerant-domain-security.yml
+  href: https://artifacts.apis.io/accelerant/security/accelerant-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/accelerant-domain-security.yml
@@ -121,22 +124,22 @@ common:
   type: RegulatoryPublications
   url: https://accelerant.ai/regulatory-publications/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/well-known/accelerant-well-known.yml
+  href: https://artifacts.apis.io/accelerant/well-known/accelerant-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/accelerant-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/authentication/accelerant-authentication.yml
+  href: https://artifacts.apis.io/accelerant/authentication/accelerant-authentication.yml
   title: ''
   type: Authentication
   url: authentication/accelerant-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/scopes/accelerant-scopes.yml
+  href: https://artifacts.apis.io/accelerant/scopes/accelerant-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/accelerant-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/conformance/accelerant-conformance.yml
+  href: https://artifacts.apis.io/accelerant/conformance/accelerant-conformance.yml
   title: ''
   type: Conformance
   url: conformance/accelerant-conformance.yml
@@ -145,12 +148,12 @@ common:
   type: Compliance
   url: https://accelerant.ai/resources/built-on-trust-and-transparency-accelerant-earns-iso-27001-certification/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/packages/accelerant-packages.yml
+  href: https://artifacts.apis.io/accelerant/packages/accelerant-packages.yml
   title: ''
   type: Packages
   url: packages/accelerant-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/llms/accelerant-llms.txt
+  href: https://artifacts.apis.io/accelerant/llms/accelerant-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/accelerant-llms.txt
@@ -171,7 +174,7 @@ overview: 'Accelerant is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Accelerant''s developer surface includes documentation, support, engineering blog, product news, authentication, and 21 more developer resources.'
-random_paper: 8
+random_paper: 10
 scopes:
 - name: Accelerant Scopes
   scope_count: 4
@@ -181,7 +184,7 @@ score:
   band: emerging
   composite: 24.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -205,14 +208,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 38.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/screenshots/accelerant-2026-08-07T160750.png
+screenshot: https://apis.io/screenshots/accelerant/accelerant-2026-08-07T160750.png
 security:
 - kind: authentication
   name: Accelerant Authentication

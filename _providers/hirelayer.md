@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.7
-  scored_at: '2026-10-17'
+  score: 38.0
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: The HireLayer API API from HireLayer — 1 operation(s) for hirelayer api.
@@ -41,70 +59,70 @@ apis:
 - description: The Skills API from HireLayer — 1 operation(s) for skills.
   name: HireLayer Skills API
   slug: hirelayer-skills-api
-artifact_total: 16
+artifact_total: 18
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/plans/hirelayer-plans-pricing.yml
+  href: https://artifacts.apis.io/hirelayer/plans/hirelayer-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hirelayer-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/rules/hirelayer-rules.yml
+  href: https://artifacts.apis.io/hirelayer/rules/hirelayer-rules.yml
   title: ''
   type: Spectral
   url: rules/hirelayer-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/json-ld/hirelayer-context.jsonld
+  href: https://artifacts.apis.io/hirelayer/json-ld/hirelayer-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hirelayer-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/vocabulary/hirelayer-vocabulary.yml
+  href: https://artifacts.apis.io/hirelayer/vocabulary/hirelayer-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/hirelayer-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/data-model/hirelayer-data-model.yml
+  href: https://artifacts.apis.io/hirelayer/data-model/hirelayer-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hirelayer-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/authentication/hirelayer-authentication.yml
+  href: https://artifacts.apis.io/hirelayer/authentication/hirelayer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hirelayer-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/conformance/hirelayer-conformance.yml
+  href: https://artifacts.apis.io/hirelayer/conformance/hirelayer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hirelayer-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/llms/hirelayer-llms.txt
+  href: https://artifacts.apis.io/hirelayer/llms/hirelayer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hirelayer-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/well-known/hirelayer-well-known.yml
+  href: https://artifacts.apis.io/hirelayer/well-known/hirelayer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hirelayer-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/hosts/hirelayer-hosts.yml
+  href: https://artifacts.apis.io/hirelayer/hosts/hirelayer-hosts.yml
   title: ''
   type: Hosts
   url: hosts/hirelayer-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/vendors/hirelayer-vendors.yml
+  href: https://artifacts.apis.io/hirelayer/vendors/hirelayer-vendors.yml
   title: ''
   type: Vendors
   url: vendors/hirelayer-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/packages/hirelayer-packages.yml
+  href: https://artifacts.apis.io/hirelayer/packages/hirelayer-packages.yml
   title: ''
   type: SDKs
   url: packages/hirelayer-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/packages/hirelayer-packages.yml
+  href: https://artifacts.apis.io/hirelayer/packages/hirelayer-packages.yml
   title: ''
   type: Packages
   url: packages/hirelayer-packages.yml
@@ -137,7 +155,7 @@ common:
   type: GettingStarted
   url: https://hirelayer.co/api-docs/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hirelayer/refs/heads/main/security/hirelayer-domain-security.yml
+  href: https://artifacts.apis.io/hirelayer/security/hirelayer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hirelayer-domain-security.yml
@@ -162,6 +180,14 @@ coverage:
   state: gated
 created: '2026-10-12'
 description: HireLayer provides a suite of recruiting APIs that enable developers to parse resumes, extract structured data, and match candidates to job descriptions. Their platform offers five core APIs covering resume parsing, job parsing, candidate‑job matching, candidate ranking, and skills matching. Users can access these services via a single API key and credit‑based billing, with documentation, pricing, and a free trial available online. The company targets ATS integrations, HR tech solutions, and staffing agencies, positioning itself as a flexible, cloud‑based recruiting API provider.
+finops:
+- has_sources: true
+  method: derived
+  name: Hirelayer Finops
+  primary_unit: seat
+  service_category: ''
+  slug: hirelayer-finops
+  template: false
 image: https://hirelayer.co/images/blog/og-image.png
 json_schemas:
 - name: PostApiV1JobsExtractCriteriaResponse
@@ -192,7 +218,7 @@ modified: '2026-10-12'
 name: HireLayer
 nav: Providers
 network: true
-overview: 'HireLayer is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including HireLayer API, Jobs API, Matching API, and 2 more. Tagged areas include Company, Recruiting, ResumeParsing, and CandidateMatching.
+overview: 'HireLayer is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including HireLayer API, Jobs API, Matching API, and 2 more. Tagged areas include Company, Recruiting, Resume Parsing, and CandidateMatching.
 
 
   The HireLayer catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -203,7 +229,10 @@ plans:
 - name: Hirelayer Plans Pricing
   plan_count: 7
   slug: hirelayer-plans-pricing
-random_paper: 19
+- name: Hirelayer Price Estimates
+  plan_count: 0
+  slug: hirelayer-price-estimates
+random_paper: 5
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -218,22 +247,24 @@ rules:
     warn: 1
   slug: hirelayer-rules
 score:
-  band: developing
-  composite: 40.1
+  band: thin
+  composite: 33.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 67.8
+    artifact_dirs: 23
+    catalog_earned: 70.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 47.3
+    catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.8
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 24.6
-    developer_ergonomics: 42.9
+    developer_ergonomics: 31.0
     discoverability: 60.7
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 41.7
   provenance:
     conformance: derived
     contracts:
@@ -247,12 +278,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/hirelayer/hirelayer-2026-11-03T133400.png
 security:
 - kind: authentication
   name: Hirelayer Authentication
@@ -266,7 +299,7 @@ slug: hirelayer
 tags:
 - Company
 - Recruiting
-- ResumeParsing
+- Resume Parsing
 - CandidateMatching
 website: https://hirelayer.co
 ---

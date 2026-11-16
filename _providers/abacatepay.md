@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 52.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -46,7 +49,9 @@ agentic_access:
   summary_line: 12 operations · 6 acting
 api_count: 1
 apis:
-- description: Outbound webhook event notifications (billing.created, billing.paid, billing.refunded, billing.failed, subscription.created, subscription.canceled) delivered with a webhookSecret query string and HMAC
+- baseURL: https://api.abacatepay.com/v1
+  baseurl_source: declared
+  description: Outbound webhook event notifications (billing.created, billing.paid, billing.refunded, billing.failed, subscription.created, subscription.canceled) delivered with a webhookSecret query string and HMAC
   name: AbacatePay Webhooks
   slug: abacatepay-webhooks-api
 - baseURL: https://api.abacatepay.com/v1
@@ -77,9 +82,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: AbacatePay Billing API
   slug: open-abacatepay-billing-api
 - collection_type: open
@@ -103,22 +105,22 @@ common:
   type: Blog
   url: https://www.abacatepay.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/capabilities/abacatepay-capability-edges.yml
+  href: https://artifacts.apis.io/abacatepay/capabilities/abacatepay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/abacatepay-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/agentic-access/abacatepay-agentic-access.yml
+  href: https://artifacts.apis.io/abacatepay/agentic-access/abacatepay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/abacatepay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/security/abacatepay-domain-security.yml
+  href: https://artifacts.apis.io/abacatepay/security/abacatepay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/abacatepay-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/authentication/abacatepay-authentication.yml
+  href: https://artifacts.apis.io/abacatepay/authentication/abacatepay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/abacatepay-authentication.yml
@@ -139,17 +141,17 @@ common:
   type: Documentation
   url: https://docs.abacatepay.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/plans/abacatepay-plans-pricing.yml
+  href: https://artifacts.apis.io/abacatepay/plans/abacatepay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/abacatepay-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/rate-limits/abacatepay-rate-limits.yml
+  href: https://artifacts.apis.io/abacatepay/rate-limits/abacatepay-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/abacatepay-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/finops/abacatepay-finops.yml
+  href: https://artifacts.apis.io/abacatepay/finops/abacatepay-finops.yml
   title: ''
   type: FinOps
   url: finops/abacatepay-finops.yml
@@ -173,7 +175,10 @@ modified: '2026-10-06'
 name: AbacatePay
 nav: Providers
 network: true
-overview: 'AbacatePay publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Coupon API, Customer API, and 3 more. Tagged areas include Payments, Pix, Brazil, Fintech, and Developers.
+overview: 'AbacatePay publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks, Billing API, Coupon API, and 3 more. Tagged areas include Payments, Pix, Brazil, Fintech, and Developers.
+
+
+  The AbacatePay catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   AbacatePay''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
@@ -181,26 +186,39 @@ plans:
 - name: Abacatepay Plans Pricing
   plan_count: 2
   slug: abacatepay-plans-pricing
-random_paper: 1
+random_paper: 3
 rate_limits:
 - limit_count: 2
   name: Abacatepay Rate Limits
   slug: abacatepay-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: AbacatePay API Rules
+  rule_count: 66
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 3
+    warn: 7
+  slug: abacatepay-rules
 score:
   band: thin
-  composite: 29.1
+  composite: 30.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 41.0
+    artifact_dirs: 19
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.2
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 52.0
+    contract_governance: 13.6
+    contract_quality: 51.3
     developer_ergonomics: 32.1
     discoverability: 68.3
     operational_transparency: 7.9
@@ -211,14 +229,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 34.7
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 20.0
+      total: 25
     mcp: first-party
   regulatory:
     applies: true
@@ -226,13 +244,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/abacatepay/refs/heads/main/screenshots/abacatepay-2026-07-25T181328.png
+screenshot: https://apis.io/screenshots/abacatepay/abacatepay-2026-07-25T181328.png
 security:
 - kind: authentication
   name: Abacatepay Authentication

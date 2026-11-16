@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-10-17'
+  score: 34.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 55
   human_in_the_loop: 1
@@ -45,7 +48,7 @@ agentic_access:
   operation_count: 99
   slug: galatea-bio-agentic-access
   summary_line: 99 operations · 55 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.galatea.bio/api/v1
   baseurl_source: declared
@@ -97,14 +100,14 @@ apis:
   description: The users API from Galatea Bio — 8 operation(s) for users.
   name: Galatea Bio Users API
   slug: galatea-bio-users-api
-artifact_total: 16
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Galatea Bio Octopod Webhooks
   slug: galatea-bio-octopod-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/agentic-access/galatea-bio-agentic-access.yml
+  href: https://artifacts.apis.io/galatea-bio/agentic-access/galatea-bio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/galatea-bio-agentic-access.yml
@@ -141,87 +144,87 @@ common:
   type: Compliance
   url: https://galatea.bio/life-sciences
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/authentication/galatea-bio-authentication.yml
+  href: https://artifacts.apis.io/galatea-bio/authentication/galatea-bio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/galatea-bio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/conventions/galatea-bio-conventions.yml
+  href: https://artifacts.apis.io/galatea-bio/conventions/galatea-bio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/galatea-bio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/errors/galatea-bio-problem-types.yml
+  href: https://artifacts.apis.io/galatea-bio/errors/galatea-bio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/galatea-bio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/data-model/galatea-bio-data-model.yml
+  href: https://artifacts.apis.io/galatea-bio/data-model/galatea-bio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/galatea-bio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/lifecycle/galatea-bio-lifecycle.yml
+  href: https://artifacts.apis.io/galatea-bio/lifecycle/galatea-bio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/galatea-bio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/conformance/galatea-bio-conformance.yml
+  href: https://artifacts.apis.io/galatea-bio/conformance/galatea-bio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/galatea-bio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/asyncapi/galatea-bio-octopod-webhooks.yml
+  href: https://artifacts.apis.io/galatea-bio/asyncapi/galatea-bio-octopod-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/galatea-bio-octopod-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/sandbox/galatea-bio-sandbox.yml
+  href: https://artifacts.apis.io/galatea-bio/sandbox/galatea-bio-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/galatea-bio-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/packages/galatea-bio-packages.yml
+  href: https://artifacts.apis.io/galatea-bio/packages/galatea-bio-packages.yml
   title: ''
   type: Packages
   url: packages/galatea-bio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/packages/galatea-bio-packages.yml
+  href: https://artifacts.apis.io/galatea-bio/packages/galatea-bio-packages.yml
   title: ''
   type: SDKs
   url: packages/galatea-bio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/cli/galatea-bio-cli.yml
+  href: https://artifacts.apis.io/galatea-bio/cli/galatea-bio-cli.yml
   title: ''
   type: CLI
   url: cli/galatea-bio-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/galatea-bio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/llms/galatea-bio-llms.txt
+  href: https://artifacts.apis.io/galatea-bio/llms/galatea-bio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/galatea-bio-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/overlays/galatea-bio-octopod-overlay.yaml
+  href: https://artifacts.apis.io/galatea-bio/overlays/galatea-bio-octopod-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/galatea-bio-octopod-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/rate-limits/galatea-bio-rate-limits.yml
+  href: https://artifacts.apis.io/galatea-bio/rate-limits/galatea-bio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/galatea-bio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/plans/galatea-bio-plans-pricing.yml
+  href: https://artifacts.apis.io/galatea-bio/plans/galatea-bio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/galatea-bio-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/security/galatea-bio-domain-security.yml
+  href: https://artifacts.apis.io/galatea-bio/security/galatea-bio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/galatea-bio-domain-security.yml
@@ -236,7 +239,7 @@ network: true
 overview: 'Galatea Bio publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Credit API, Dashboard API, and 7 more. Tagged areas include Genomics, Bioinformatics, Ancestry, Precision Medicine, and polygenic-risk-score.
 
 
-  The Galatea Bio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Galatea Bio catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Galatea Bio''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, CLI, and 20 more developer resources.'
@@ -244,30 +247,43 @@ plans:
 - name: Galatea Bio Plans Pricing
   plan_count: 0
   slug: galatea-bio-plans-pricing
-random_paper: 0
+random_paper: 22
 rate_limits:
 - limit_count: 0
   name: Galatea Bio Rate Limits
   slug: galatea-bio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Galatea Bio API Rules
+  rule_count: 48
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 5
+    warn: 5
+  slug: galatea-bio-rules
 score:
   band: thin
-  composite: 32.2
+  composite: 33.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 6.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 54.5
     developer_ergonomics: 35.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.1
+  previous_composite: 33.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -284,13 +300,13 @@ score:
     regime: Health
     regime_id: health
     score: 17.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/galatea-bio/refs/heads/main/screenshots/galatea-bio-2026-08-17T080949.png
+screenshot: https://apis.io/screenshots/galatea-bio/galatea-bio-2026-08-17T080949.png
 security:
 - kind: authentication
   name: Galatea Bio Authentication
@@ -300,6 +316,18 @@ security:
   name: Galatea Bio Domain Security
   slug: galatea-bio-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 5
+skills:
+- name: Authenticate against the Galatea Bio Octopod Ancestry API
+  slug: galatea-bio-authenticate
+- name: Configure and verify Octopod webhook deliveries
+  slug: galatea-bio-configure-webhooks
+- name: Request and download PRS and ancestry PDF reports
+  slug: galatea-bio-request-pdf-reports
+- name: Retrieve ancestry and PRS results for a completed order
+  slug: galatea-bio-retrieve-results
+- name: Upload a genomic file and submit an analysis order
+  slug: galatea-bio-upload-and-submit-order
 slug: galatea-bio
 tags:
 - Genomics

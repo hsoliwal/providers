@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/security/floy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/floy/security/floy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/floy-vulnerability-disclosure.yml
@@ -46,7 +50,7 @@ common:
   type: Security
   url: https://www.floy.com/vrp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/security/floy-domain-security.yml
+  href: https://artifacts.apis.io/floy/security/floy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/floy-domain-security.yml
@@ -67,17 +71,17 @@ common:
   type: Support
   url: https://www.floy.com/kontakt-floy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/well-known/floy-well-known.yml
+  href: https://artifacts.apis.io/floy/well-known/floy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/floy-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/well-known/floy-security.txt
+  href: https://artifacts.apis.io/floy/well-known/floy-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/floy-security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/conformance/floy-conformance.yml
+  href: https://artifacts.apis.io/floy/conformance/floy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/floy-conformance.yml
@@ -86,7 +90,7 @@ common:
   type: Compliance
   url: https://www.floy.com/ueber-floy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/llms/floy-llms.txt
+  href: https://artifacts.apis.io/floy/llms/floy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/floy-llms.txt
@@ -102,12 +106,12 @@ overview: 'Floy is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Floy''s developer surface includes engineering blog, support, and 10 more developer resources.'
-random_paper: 2
+random_paper: 10
 score:
   band: emerging
   composite: 15.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -138,14 +142,14 @@ score:
     regime: Health
     regime_id: health
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/floy/refs/heads/main/screenshots/floy-2026-07-25T214842.png
+screenshot: https://apis.io/screenshots/floy/floy-2026-07-25T214842.png
 security:
 - kind: domain-security
   name: Floy Domain Security

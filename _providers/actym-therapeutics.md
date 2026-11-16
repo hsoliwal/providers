@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/security/actym-therapeutics-domain-security.yml
+  href: https://artifacts.apis.io/actym-therapeutics/security/actym-therapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/actym-therapeutics-domain-security.yml
@@ -53,37 +68,37 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/actym-therapeutics-inc
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/llms/actym-therapeutics-llms.txt
+  href: https://artifacts.apis.io/actym-therapeutics/llms/actym-therapeutics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/actym-therapeutics-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/mcp/actym-therapeutics-mcp.yml
+  href: https://artifacts.apis.io/actym-therapeutics/mcp/actym-therapeutics-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/actym-therapeutics-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/authentication/actym-therapeutics-authentication.yml
+  href: https://artifacts.apis.io/actym-therapeutics/authentication/actym-therapeutics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/actym-therapeutics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/conventions/actym-therapeutics-conventions.yml
+  href: https://artifacts.apis.io/actym-therapeutics/conventions/actym-therapeutics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/actym-therapeutics-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/conformance/actym-therapeutics-conformance.yml
+  href: https://artifacts.apis.io/actym-therapeutics/conformance/actym-therapeutics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/actym-therapeutics-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/plans/actym-therapeutics-plans-pricing.yml
+  href: https://artifacts.apis.io/actym-therapeutics/plans/actym-therapeutics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/actym-therapeutics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/rate-limits/actym-therapeutics-rate-limits.yml
+  href: https://artifacts.apis.io/actym-therapeutics/rate-limits/actym-therapeutics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/actym-therapeutics-rate-limits.yml
@@ -107,7 +122,7 @@ plans:
 - name: Actym Therapeutics Plans Pricing
   plan_count: 0
   slug: actym-therapeutics-plans-pricing
-random_paper: 14
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Actym Therapeutics Rate Limits
@@ -116,7 +131,7 @@ score:
   band: emerging
   composite: 14.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -140,14 +155,14 @@ score:
     regime: Health
     regime_id: health
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/actym-therapeutics/refs/heads/main/screenshots/actym-therapeutics-2026-10-11T092738.png
+screenshot: https://apis.io/screenshots/actym-therapeutics/actym-therapeutics-2026-10-11T092738.png
 security:
 - kind: authentication
   name: Actym Therapeutics Authentication

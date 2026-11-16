@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airvet/refs/heads/main/security/airvet-domain-security.yml
+  href: https://artifacts.apis.io/airvet/security/airvet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airvet-domain-security.yml
@@ -73,7 +86,7 @@ common:
   type: GooglePlay
   url: https://play.google.com/store/apps/details?id=com.myairvet.android.parent
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/airvet/refs/heads/main/regulatory/airvet-regulatory-posture.yml
+  href: https://artifacts.apis.io/airvet/regulatory/airvet-regulatory-posture.yml
   title: ''
   type: RegulatoryPosture
   url: regulatory/airvet-regulatory-posture.yml
@@ -107,7 +120,7 @@ overview: 'Airvet is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Airvet''s developer surface includes engineering blog, support, and 10 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: minimal
   composite: 9.1
@@ -140,14 +153,14 @@ score:
     regime: Health
     regime_id: health
     score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/airvet/refs/heads/main/screenshots/airvet-2026-10-11T140454.png
+screenshot: https://apis.io/screenshots/airvet/airvet-2026-10-11T140454.png
 security:
 - kind: domain-security
   name: Airvet Domain Security

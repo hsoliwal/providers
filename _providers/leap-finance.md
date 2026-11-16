@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/security/leap-finance-domain-security.yml
+  href: https://artifacts.apis.io/leap-finance/security/leap-finance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/leap-finance-domain-security.yml
@@ -78,57 +81,57 @@ common:
   type: Blog
   url: https://leapscholar.com/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/llms/leap-finance-llms.txt
+  href: https://artifacts.apis.io/leap-finance/llms/leap-finance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/leap-finance-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/well-known/leap-finance-well-known.yml
+  href: https://artifacts.apis.io/leap-finance/well-known/leap-finance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/leap-finance-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/packages/leap-finance-packages.yml
+  href: https://artifacts.apis.io/leap-finance/packages/leap-finance-packages.yml
   title: ''
   type: Packages
   url: packages/leap-finance-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/authentication/leap-finance-authentication.yml
+  href: https://artifacts.apis.io/leap-finance/authentication/leap-finance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/leap-finance-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/scopes/leap-finance-scopes.yml
+  href: https://artifacts.apis.io/leap-finance/scopes/leap-finance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/leap-finance-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/conformance/leap-finance-conformance.yml
+  href: https://artifacts.apis.io/leap-finance/conformance/leap-finance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/leap-finance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/errors/leap-finance-problem-types.yml
+  href: https://artifacts.apis.io/leap-finance/errors/leap-finance-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/leap-finance-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/conventions/leap-finance-conventions.yml
+  href: https://artifacts.apis.io/leap-finance/conventions/leap-finance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/leap-finance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/lifecycle/leap-finance-lifecycle.yml
+  href: https://artifacts.apis.io/leap-finance/lifecycle/leap-finance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/leap-finance-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/plans/leap-finance-plans-pricing.yml
+  href: https://artifacts.apis.io/leap-finance/plans/leap-finance-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/leap-finance-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/rate-limits/leap-finance-rate-limits.yml
+  href: https://artifacts.apis.io/leap-finance/rate-limits/leap-finance-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/leap-finance-rate-limits.yml
@@ -164,7 +167,7 @@ plans:
 - name: Leap Finance Plans Pricing
   plan_count: 0
   slug: leap-finance-plans-pricing
-random_paper: 21
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Leap Finance Rate Limits
@@ -178,7 +181,7 @@ score:
   band: emerging
   composite: 21.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -208,14 +211,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/leap-finance/refs/heads/main/screenshots/leap-finance-2026-09-02T150245.png
+screenshot: https://apis.io/screenshots/leap-finance/leap-finance-2026-09-02T150245.png
 security:
 - kind: authentication
   name: Leap Finance Authentication

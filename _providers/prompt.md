@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/security/prompt-domain-security.yml
+  href: https://artifacts.apis.io/prompt/security/prompt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prompt-domain-security.yml
@@ -86,62 +89,62 @@ common:
   type: FAQ
   url: https://www.prompthealth.com/faq
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/llms/prompt-llms.txt
+  href: https://artifacts.apis.io/prompt/llms/prompt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prompt-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/well-known/prompt-well-known.yml
+  href: https://artifacts.apis.io/prompt/well-known/prompt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/prompt-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/well-known/prompt-openid-configuration.json
+  href: https://artifacts.apis.io/prompt/well-known/prompt-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/prompt-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/authentication/prompt-authentication.yml
+  href: https://artifacts.apis.io/prompt/authentication/prompt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prompt-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/scopes/prompt-scopes.yml
+  href: https://artifacts.apis.io/prompt/scopes/prompt-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/prompt-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/conformance/prompt-conformance.yml
+  href: https://artifacts.apis.io/prompt/conformance/prompt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/prompt-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/lifecycle/prompt-lifecycle.yml
+  href: https://artifacts.apis.io/prompt/lifecycle/prompt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/prompt-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/changelog/prompt-changelog.yml
+  href: https://artifacts.apis.io/prompt/changelog/prompt-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/prompt-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/conventions/prompt-conventions.yml
+  href: https://artifacts.apis.io/prompt/conventions/prompt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/prompt-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/plans/prompt-plans-pricing.yml
+  href: https://artifacts.apis.io/prompt/plans/prompt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/prompt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/rate-limits/prompt-rate-limits.yml
+  href: https://artifacts.apis.io/prompt/rate-limits/prompt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/prompt-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/packages/prompt-packages.yml
+  href: https://artifacts.apis.io/prompt/packages/prompt-packages.yml
   title: ''
   type: Packages
   url: packages/prompt-packages.yml
@@ -176,7 +179,7 @@ plans:
 - name: Prompt Plans Pricing
   plan_count: 0
   slug: prompt-plans-pricing
-random_paper: 14
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Prompt Rate Limits
@@ -190,7 +193,7 @@ score:
   band: emerging
   composite: 24.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -213,14 +216,14 @@ score:
     regime: Health
     regime_id: health
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/prompt/refs/heads/main/screenshots/prompt-2026-09-02T152148.png
+screenshot: https://apis.io/screenshots/prompt/prompt-2026-09-02T152148.png
 security:
 - kind: authentication
   name: Prompt Authentication

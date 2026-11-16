@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 37.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 0
@@ -41,7 +47,7 @@ agentic_access:
   operation_count: 102
   slug: pax8-agentic-access
   summary_line: 102 operations · 49 acting
-api_count: 9
+api_count: 6
 apis:
 - baseURL: https://api.pax8.com/v1
   baseurl_source: declared
@@ -173,15 +179,12 @@ apis:
   description: The Webhooks API from Pax8 — 8 operation(s) for webhooks.
   name: Pax8 Webhooks API
   slug: pax8-webhooks-api
-artifact_total: 60
+artifact_total: 63
 asyncapis:
 - description: ''
   name: Pax8 Webhooks
   slug: pax8-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Authentication Access Token API
   slug: open-pax8-access-token-api
@@ -274,7 +277,7 @@ common:
   type: Website
   url: https://www.pax8.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/capabilities/pax8-capability-edges.yml
+  href: https://artifacts.apis.io/pax8/capabilities/pax8-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pax8-capability-edges.yml
@@ -295,22 +298,22 @@ common:
   type: GettingStarted
   url: https://devx.pax8.com/docs/public-api-details
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/authentication/pax8-authentication.yml
+  href: https://artifacts.apis.io/pax8/authentication/pax8-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pax8-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/scopes/pax8-scopes.yml
+  href: https://artifacts.apis.io/pax8/scopes/pax8-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pax8-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/security/pax8-domain-security.yml
+  href: https://artifacts.apis.io/pax8/security/pax8-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pax8-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/security/pax8-trust-center.yml
+  href: https://artifacts.apis.io/pax8/security/pax8-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/pax8-trust-center.yml
@@ -319,7 +322,7 @@ common:
   type: Compliance
   url: https://trust.pax8.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/changelog/pax8-changelog.yml
+  href: https://artifacts.apis.io/pax8/changelog/pax8-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/pax8-changelog.yml
@@ -328,62 +331,62 @@ common:
   type: StatusPage
   url: https://status.pax8.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/lifecycle/pax8-lifecycle.yml
+  href: https://artifacts.apis.io/pax8/lifecycle/pax8-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pax8-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/llms/pax8-llms.txt
+  href: https://artifacts.apis.io/pax8/llms/pax8-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pax8-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/mcp/pax8-mcp.yml
+  href: https://artifacts.apis.io/pax8/mcp/pax8-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pax8-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/errors/pax8-problem-types.yml
+  href: https://artifacts.apis.io/pax8/errors/pax8-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pax8-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/conventions/pax8-conventions.yml
+  href: https://artifacts.apis.io/pax8/conventions/pax8-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pax8-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/conformance/pax8-conformance.yml
+  href: https://artifacts.apis.io/pax8/conformance/pax8-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pax8-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/data-model/pax8-data-model.yml
+  href: https://artifacts.apis.io/pax8/data-model/pax8-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pax8-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/sandbox/pax8-sandbox.yml
+  href: https://artifacts.apis.io/pax8/sandbox/pax8-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pax8-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/agentic-access/pax8-agentic-access.yml
+  href: https://artifacts.apis.io/pax8/agentic-access/pax8-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pax8-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/asyncapi/pax8-webhooks.yml
+  href: https://artifacts.apis.io/pax8/asyncapi/pax8-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/pax8-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pax8/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/overlays/pax8-partner-endpoints-overlay.yaml
+  href: https://artifacts.apis.io/pax8/overlays/pax8-partner-endpoints-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pax8-partner-endpoints-overlay.yaml
@@ -418,11 +421,24 @@ network: true
 overview: 'Pax8 publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Token API, Companies API, Contacts API, and 23 more. Tagged areas include Company, Enterprise, Cloud Marketplace, MSP, and Distribution.
 
 
-  The Pax8 catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Pax8 catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Pax8''s developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, changelog, sandbox, and 24 more developer resources.'
-random_paper: 11
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Pax8 API Rules
+  rule_count: 54
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 3
+    warn: 15
+  slug: pax8-rules
 scopes:
 - name: Pax8 Scopes
   scope_count: 4
@@ -430,30 +446,30 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: developing
-  composite: 48.1
+  composite: 50.7
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
+    artifact_dirs: 26
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.0
   facets:
     access_clarity: 28.9
-    contract_governance: 4.5
-    contract_quality: 59.3
+    contract_governance: 18.2
+    contract_quality: 63.1
     developer_ergonomics: 47.0
     discoverability: 78.6
     operational_transparency: 39.5
-  previous_composite: 48.0
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 69.2
       total: 26
     mcp: first-party
     skills: derived
@@ -463,13 +479,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/pax8/refs/heads/main/screenshots/pax8-2026-08-07T191618.png
+screenshot: https://apis.io/screenshots/pax8/pax8-2026-08-07T191618.png
 security:
 - kind: authentication
   name: Pax8 Authentication
@@ -483,6 +499,14 @@ security:
   name: Pax8 Trust Center
   slug: pax8-trust-center
   summary_line: SOC 2 Type 2, ISO/IEC 27001, PCI DSS, Cyber Essentials, HIPAA, GDPR
+skill_count: 3
+skills:
+- name: Manage a subscription
+  slug: pax8-manage-subscription
+- name: Order a product for a company
+  slug: pax8-order-a-product
+- name: Subscribe to Pax8 events
+  slug: pax8-subscribe-to-events
 slug: pax8
 tags:
 - Company

@@ -1,30 +1,42 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: conformant
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: false
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
-    protected_resource_metadata: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
+    protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: true
+    well_known_catalog: false
   schema_version: '0.2'
-  score: 50.6
-  scored_at: '2026-10-17'
+  score: 29.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -41,18 +53,23 @@ apis:
   slug: quietstance-inquiries-api
 artifact_total: 6
 common:
+- group: build
+  href: https://artifacts.apis.io/quietstance/integrations/quietstance-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/quietstance-integration-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/agentic-access/quietstance-agentic-access.yml
+  href: https://artifacts.apis.io/quietstance/agentic-access/quietstance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/quietstance-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/rules/quietstance-rules.yml
+  href: https://artifacts.apis.io/quietstance/rules/quietstance-rules.yml
   title: ''
   type: Spectral
   url: rules/quietstance-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/vocabulary/quietstance-vocabulary.yml
+  href: https://artifacts.apis.io/quietstance/vocabulary/quietstance-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/quietstance-vocabulary.yml
@@ -61,57 +78,57 @@ common:
   type: Security
   url: https://quietstance.com/terms
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/conformance/quietstance-conformance.yml
+  href: https://artifacts.apis.io/quietstance/conformance/quietstance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/quietstance-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/overlays/quietstance-openapi-overlay.yaml
+  href: https://artifacts.apis.io/quietstance/overlays/quietstance-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/quietstance-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/llms/quietstance-llms.txt
+  href: https://artifacts.apis.io/quietstance/llms/quietstance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/quietstance-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/a2a/quietstance-a2a.yml
+  href: https://artifacts.apis.io/quietstance/a2a/quietstance-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/quietstance-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/mcp/quietstance-mcp.yml
+  href: https://artifacts.apis.io/quietstance/mcp/quietstance-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/quietstance-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/well-known/quietstance-security.txt
+  href: https://artifacts.apis.io/quietstance/well-known/quietstance-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/quietstance-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/well-known/quietstance-well-known.yml
+  href: https://artifacts.apis.io/quietstance/well-known/quietstance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/quietstance-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/hosts/quietstance-hosts.yml
+  href: https://artifacts.apis.io/quietstance/hosts/quietstance-hosts.yml
   title: ''
   type: Hosts
   url: hosts/quietstance-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/vendors/quietstance-vendors.yml
+  href: https://artifacts.apis.io/quietstance/vendors/quietstance-vendors.yml
   title: ''
   type: Vendors
   url: vendors/quietstance-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/security/quietstance-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/quietstance/security/quietstance-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/quietstance-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quietstance/refs/heads/main/security/quietstance-domain-security.yml
+  href: https://artifacts.apis.io/quietstance/security/quietstance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quietstance-domain-security.yml
@@ -157,38 +174,40 @@ overview: 'Quiet Stance publishes 1 API contract indexed on the [APIs.io](https:
   The Quiet Stance catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Quiet Stance''s developer surface includes documentation, API reference, getting-started guide, and 18 more developer resources.'
-random_paper: 2
+  Quiet Stance''s developer surface includes documentation, API reference, getting-started guide, and 19 more developer resources.'
+random_paper: 14
 rules:
 - authorship: generated
-  effective_rule_count: 54
+  effective_rule_count: 82
   extends:
   - spectral:oas
   name: Quiet Stance API Rules
-  rule_count: 13
+  rule_count: 41
   severity_counts:
-    error: 11
+    error: 39
     hint: 0
     info: 1
     warn: 1
   slug: quietstance-rules
 score:
-  band: thin
-  composite: 33.1
+  band: emerging
+  composite: 26.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 32.8
     catalog_earned_first_party: 0.0
     catalog_gap: 82.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.1
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 47.1
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 58.3
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -203,9 +222,10 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

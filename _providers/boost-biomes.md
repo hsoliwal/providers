@@ -1,4 +1,13 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source: []
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +35,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/boost-biomes/refs/heads/main/hosts/boost-biomes-hosts.yml
+  href: https://artifacts.apis.io/boost-biomes/hosts/boost-biomes-hosts.yml
   title: ''
   type: Hosts
   url: hosts/boost-biomes-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/boost-biomes/refs/heads/main/vendors/boost-biomes-vendors.yml
+  href: https://artifacts.apis.io/boost-biomes/vendors/boost-biomes-vendors.yml
   title: ''
   type: Vendors
   url: vendors/boost-biomes-vendors.yml
@@ -49,12 +61,12 @@ name: Boost Biomes
 nav: Providers
 network: true
 overview: Boost Biomes is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Microbiome, Sustainable Agriculture, and Health.
-random_paper: 3
+random_paper: 11
 score:
   band: minimal
   composite: 2.6
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
@@ -77,13 +89,14 @@ score:
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/boost-biomes/boost-biomes-2026-11-03T122242.png
 slug: boost-biomes
 tags:
 - Company

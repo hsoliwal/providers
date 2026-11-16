@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -87,9 +93,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Xerox Public Print EULA API
   slug: open-xerox-eula-api
 - collection_type: open
@@ -112,17 +115,17 @@ collections:
   slug: open-xerox-status-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/plans/xerox-plans-pricing.yml
+  href: https://artifacts.apis.io/xerox/plans/xerox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/xerox-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/rate-limits/xerox-rate-limits.yml
+  href: https://artifacts.apis.io/xerox/rate-limits/xerox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/xerox-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/finops/xerox-finops.yml
+  href: https://artifacts.apis.io/xerox/finops/xerox-finops.yml
   title: ''
   type: FinOps
   url: finops/xerox-finops.yml
@@ -131,17 +134,17 @@ common:
   type: BlogRSS
   url: https://www.news.xerox.com/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/agentic-access/xerox-agentic-access.yml
+  href: https://artifacts.apis.io/xerox/agentic-access/xerox-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/xerox-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/security/xerox-domain-security.yml
+  href: https://artifacts.apis.io/xerox/security/xerox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xerox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/authentication/xerox-authentication.yml
+  href: https://artifacts.apis.io/xerox/authentication/xerox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/xerox-authentication.yml
@@ -200,6 +203,9 @@ network: true
 overview: 'Xerox publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including EULA API, Jobs API, Provider Types API, and 6 more. Tagged areas include Document Management, Enterprise, Fortune 500, Managed Print Services, and Print Services.
 
 
+  The Xerox catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Xerox''s developer surface includes authentication and 15 more developer resources.'
 plans:
 - name: Xerox Plans Pricing
@@ -221,30 +227,43 @@ press:
 - date: ''
   title: Xerox AI – the future's almost here!
   url: https://www.perfectcolours.com/blog/2018/11/22/xerox-ai-the-futures-almost-here/?srsltid=AfmBOoqAEnZunThO-KFMQdJFUucWJHvzFvh7hZCDOCpuORD4prbBzVA3
-random_paper: 16
+random_paper: 14
 rate_limits:
 - limit_count: 2
   name: Xerox Rate Limits
   slug: xerox-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Xerox API Rules
+  rule_count: 73
+  severity_counts:
+    error: 66
+    hint: 0
+    info: 3
+    warn: 4
+  slug: xerox-rules
 score:
   band: thin
-  composite: 28.0
+  composite: 29.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 36.0
+    artifact_dirs: 23
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 53.3
     developer_ergonomics: 31.0
     discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 29.5
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
@@ -258,13 +277,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/xerox/refs/heads/main/screenshots/xerox-2026-06-20T201703.png
+screenshot: https://apis.io/screenshots/xerox/xerox-2026-06-20T201703.png
 security:
 - kind: authentication
   name: Xerox Authentication

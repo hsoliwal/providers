@@ -1,12 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
-  - plans
+  - finops
   - authentication
   - security
   trial: false
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-10-17'
+  score: 32.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 377
   human_in_the_loop: 15
@@ -348,9 +351,6 @@ apis:
 artifact_total: 128
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Kibana APIs Actions API
   slug: open-kibana-actions-api
 - collection_type: open
@@ -532,42 +532,42 @@ collections:
   slug: open-kibana-workflows-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/rate-limits/kibana-rate-limits.yml
+  href: https://artifacts.apis.io/kibana/rate-limits/kibana-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kibana-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/finops/kibana-finops.yml
+  href: https://artifacts.apis.io/kibana/finops/kibana-finops.yml
   title: ''
   type: FinOps
   url: finops/kibana-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/plans/kibana-plans-pricing.yml
+  href: https://artifacts.apis.io/kibana/plans/kibana-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kibana-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/capabilities/kibana-capability-edges.yml
+  href: https://artifacts.apis.io/kibana/capabilities/kibana-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kibana-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/agentic-access/kibana-agentic-access.yml
+  href: https://artifacts.apis.io/kibana/agentic-access/kibana-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kibana-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/security/kibana-trust-center.yml
+  href: https://artifacts.apis.io/kibana/security/kibana-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kibana-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/security/kibana-domain-security.yml
+  href: https://artifacts.apis.io/kibana/security/kibana-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kibana-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/authentication/kibana-authentication.yml
+  href: https://artifacts.apis.io/kibana/authentication/kibana-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kibana-authentication.yml
@@ -621,7 +621,7 @@ finops:
 - has_sources: false
   method: generated
   name: Kibana Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: kibana-finops
   template: true
@@ -634,35 +634,51 @@ network: true
 overview: 'Kibana publishes 60 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, agent builder API, Alerting API, and 57 more. Tagged areas include Alerting, Analytics, Dashboards, Elastic Stack, and Logging.
 
 
+  The Kibana catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Kibana''s developer surface includes authentication, documentation, GitHub presence, engineering blog, pricing, support, and 13 more developer resources.'
 plans:
 - name: Kibana Plans Pricing
   plan_count: 0
   slug: kibana-plans-pricing
-random_paper: 20
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Kibana Rate Limits
   slug: kibana-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Kibana API Rules
+  rule_count: 58
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 7
+    warn: 18
+  slug: kibana-rules
 score:
   band: thin
-  composite: 33.1
+  composite: 34.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 35.0
+    artifact_dirs: 14
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 28.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.5
     developer_ergonomics: 21.4
     discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 34.6
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     contracts:
@@ -676,13 +692,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/kibana/refs/heads/main/screenshots/kibana-2026-06-20T184031.png
+screenshot: https://apis.io/screenshots/kibana/kibana-2026-06-20T184031.png
 security:
 - kind: authentication
   name: Kibana Authentication

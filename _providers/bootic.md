@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.4
-  scored_at: '2026-10-17'
+  score: 29.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.onbolder.com/v2
@@ -121,59 +138,59 @@ apis:
   description: Event webhooks. Subscribe to events such as `orders.created`, `products.updated`, etc. Inactive subscriptions can be reactivated and their delivery history inspected.
   name: Bootic Webhooks API
   slug: bootic-webhooks-api
-artifact_total: 22
+artifact_total: 23
 asyncapis:
 - description: ''
   name: Bootic Webhooks
   slug: bootic-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/asyncapi/bootic-webhooks.yml
+  href: https://artifacts.apis.io/bootic/asyncapi/bootic-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bootic-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/data-model/bootic-data-model.yml
+  href: https://artifacts.apis.io/bootic/data-model/bootic-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bootic-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/conventions/bootic-conventions.yml
+  href: https://artifacts.apis.io/bootic/conventions/bootic-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bootic-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/authentication/bootic-authentication.yml
+  href: https://artifacts.apis.io/bootic/authentication/bootic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bootic-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/errors/bootic-problem-types.yml
+  href: https://artifacts.apis.io/bootic/errors/bootic-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bootic-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/llms/bootic-llms.txt
+  href: https://artifacts.apis.io/bootic/llms/bootic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bootic-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/hosts/bootic-hosts.yml
+  href: https://artifacts.apis.io/bootic/hosts/bootic-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bootic-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/vendors/bootic-vendors.yml
+  href: https://artifacts.apis.io/bootic/vendors/bootic-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bootic-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/packages/bootic-packages.yml
+  href: https://artifacts.apis.io/bootic/packages/bootic-packages.yml
   title: ''
   type: SDKs
   url: packages/bootic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/packages/bootic-packages.yml
+  href: https://artifacts.apis.io/bootic/packages/bootic-packages.yml
   title: ''
   type: Packages
   url: packages/bootic-packages.yml
@@ -202,7 +219,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/bootic
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bootic/refs/heads/main/security/bootic-domain-security.yml
+  href: https://artifacts.apis.io/bootic/security/bootic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bootic-domain-security.yml
@@ -221,29 +238,42 @@ network: true
 overview: 'Bootic publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Collections API, Content API, and 16 more. Tagged areas include E-Commerce, Marketplace, Chile, Platform, and Retail.
 
 
-  The Bootic catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Bootic catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Bootic''s developer surface includes authentication, engineering blog, getting-started guide, documentation, API reference, and 13 more developer resources.'
-random_paper: 2
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Bootic API Rules
+  rule_count: 60
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 3
+    warn: 6
+  slug: bootic-rules
 score:
-  band: developing
-  composite: 41.1
+  band: thin
+  composite: 38.3
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.3
+  delta: -4.4
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 60.9
-    developer_ergonomics: 59.5
+    developer_ergonomics: 39.3
     discoverability: 73.2
-    operational_transparency: 13.2
+    operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -251,7 +281,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 39.8
+  previous_composite: 42.7
   provenance:
     conformance: unknown
     contracts:
@@ -266,12 +296,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
+screenshot: https://apis.io/screenshots/bootic/bootic-2026-11-03T122250.png
 security:
 - kind: authentication
   name: Bootic Authentication

@@ -1,0 +1,221 @@
+---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
+agent_readiness:
+  band: agent-aware
+  dimensions:
+    agent_card: false
+    agent_skills: false
+    agentic_access: false
+    agentic_commerce: false
+    auth_clarity: false
+    consent_identity: false
+    delegated_identity: false
+    dry_run_mode: false
+    dynamic_client_registration: false
+    error_semantics: derived
+    event_surface_described: false
+    idempotency: false
+    mcp_server: documented
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
+    protected_resource_metadata: false
+    rate_limit_signal: false
+    reversibility_documented: false
+    spec_presence: true
+    well_known_catalog: false
+  schema_version: '0.2'
+  score: 18.9
+  scored_at: '2026-11-06'
+api_count: 2
+apis:
+- baseURL: https://crossandcovenant.co
+  baseurl_source: declared
+  description: Programmatic catalog, recommendation, devotional, and one‑tap cart API for Cross + Covenant.
+  name: Cross + Covenant Agent API
+  slug: agent-api
+artifact_total: 5
+common:
+- group: design
+  href: https://artifacts.apis.io/crossandcovenant-co/rules/crossandcovenant-co-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/crossandcovenant-co-rules.yml
+- group: auth
+  href: https://artifacts.apis.io/crossandcovenant-co/security/crossandcovenant-co-vulnerability-disclosure.yml
+  title: ''
+  type: Security
+  url: security/crossandcovenant-co-vulnerability-disclosure.yml
+- group: design
+  href: https://artifacts.apis.io/crossandcovenant-co/errors/crossandcovenant-co-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/crossandcovenant-co-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/crossandcovenant-co/conformance/crossandcovenant-co-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/crossandcovenant-co-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/crossandcovenant-co/llms/crossandcovenant-co-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/crossandcovenant-co-llms.txt
+- group: build
+  href: https://artifacts.apis.io/crossandcovenant-co/mcp/crossandcovenant-co-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/crossandcovenant-co-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/crossandcovenant-co/mcp/crossandcovenant-co-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/crossandcovenant-co-mcp.yml
+- group: auth
+  href: https://artifacts.apis.io/crossandcovenant-co/well-known/crossandcovenant-co-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/crossandcovenant-co-security.txt
+- group: agent
+  href: https://artifacts.apis.io/crossandcovenant-co/well-known/crossandcovenant-co-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/crossandcovenant-co-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/crossandcovenant-co/hosts/crossandcovenant-co-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/crossandcovenant-co-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/crossandcovenant-co/vendors/crossandcovenant-co-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/crossandcovenant-co-vendors.yml
+- group: commercial
+  title: ''
+  type: TermsOfService
+  url: https://crossandcovenant.co/terms
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://crossandcovenant.co/privacy
+- group: auth
+  href: https://artifacts.apis.io/crossandcovenant-co/security/crossandcovenant-co-vulnerability-disclosure.yml
+  title: ''
+  type: VulnerabilityDisclosure
+  url: security/crossandcovenant-co-vulnerability-disclosure.yml
+- group: auth
+  href: https://artifacts.apis.io/crossandcovenant-co/security/crossandcovenant-co-domain-security.yml
+  title: ''
+  type: DomainSecurity
+  url: security/crossandcovenant-co-domain-security.yml
+- group: company
+  title: ''
+  type: Website
+  url: https://crossandcovenant.co/
+created: '2026-10-29'
+description: Cross + Covenant is a faith‑focused apparel brand offering Christian‑themed t‑shirts, hoodies, and streetwear that spark conversations about Jesus. Their products feature scripture‑inspired designs and each purchase supports mission work, with 10 % of sales funding a monthly charity. The online store also provides a free Bible and daily devotional content, aiming to spread the gospel through fashion and digital resources. Founded in 2025 and based in Kalispell, Montana, the company serves customers across the United States.
+image: https://crossandcovenant.co/logo.png
+layout: provider
+mcp_servers:
+- description: Remote MCP server at crossandcovenant.co.
+  name: crossandcovenant-co MCP Server
+  slug: crossandcovenant-co-mcp-yml
+modified: '2026-10-29'
+name: crossandcovenant-co
+nav: Providers
+network: true
+overview: 'crossandcovenant-co publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Cross + Covenant Agent API. Tagged areas include Apparel, Christian, E-Commerce, Faith, and Charity.
+
+
+  The crossandcovenant-co catalog on APIs.io includes 1 Spectral governance ruleset.'
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 54
+  extends:
+  - spectral:oas
+  name: crossandcovenant-co API Rules
+  rule_count: 13
+  severity_counts:
+    error: 12
+    hint: 0
+    info: 1
+    warn: 0
+  slug: crossandcovenant-co-rules
+score:
+  band: emerging
+  composite: 23.8
+  coverage:
+    artifact_dirs: 14
+    catalog_earned: 40.8
+    catalog_earned_first_party: 0.0
+    catalog_gap: 74.3
+    catalog_max: 115.0
+    note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.6
+  facets:
+    access_clarity: 10.5
+    contract_governance: 15.9
+    contract_quality: 39.2
+    developer_ergonomics: 4.8
+    discoverability: 75.0
+    operational_transparency: 10.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  needs_work:
+    note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
+    owner: catalog
+    reasons:
+    - owner: catalog
+      reason: not_a_repo
+  previous_composite: 27.4
+  provenance:
+    conformance: derived
+    mcp: first-party
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
+  upsert:
+    applies: true
+    score: 0.0
+screenshot: https://apis.io/screenshots/crossandcovenant-co/crossandcovenant-co-2026-11-03T125636.png
+security:
+- kind: domain-security
+  name: Crossandcovenant Co Domain Security
+  slug: crossandcovenant-co-domain-security
+  summary_line: TLSv1.3 · HSTS · DMARC
+- kind: vulnerability-disclosure
+  name: Crossandcovenant Co Vulnerability Disclosure
+  slug: crossandcovenant-co-vulnerability-disclosure
+  summary_line: security.txt · contact published
+slug: crossandcovenant-co
+tags:
+- Apparel
+- Christian
+- E-Commerce
+- Faith
+- Charity
+website: https://crossandcovenant.co/
+---

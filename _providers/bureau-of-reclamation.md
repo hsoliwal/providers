@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-10-17'
+  score: 19.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -76,9 +80,6 @@ apis:
 artifact_total: 19
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Reclamation Information Sharing Environment (RISE) Catalog API
   slug: open-bureau-of-reclamation-catalog-api
 - collection_type: open
@@ -101,17 +102,17 @@ collections:
   slug: open-bureau-of-reclamation
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-reclamation/refs/heads/main/plans/bureau-of-reclamation-plans-pricing.yml
+  href: https://artifacts.apis.io/bureau-of-reclamation/plans/bureau-of-reclamation-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bureau-of-reclamation-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-reclamation/refs/heads/main/rate-limits/bureau-of-reclamation-rate-limits.yml
+  href: https://artifacts.apis.io/bureau-of-reclamation/rate-limits/bureau-of-reclamation-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bureau-of-reclamation-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-reclamation/refs/heads/main/finops/bureau-of-reclamation-finops.yml
+  href: https://artifacts.apis.io/bureau-of-reclamation/finops/bureau-of-reclamation-finops.yml
   title: ''
   type: FinOps
   url: finops/bureau-of-reclamation-finops.yml
@@ -120,12 +121,12 @@ common:
   type: Blog
   url: https://www.usbr.gov/newsroom/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-reclamation/refs/heads/main/agentic-access/bureau-of-reclamation-agentic-access.yml
+  href: https://artifacts.apis.io/bureau-of-reclamation/agentic-access/bureau-of-reclamation-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bureau-of-reclamation-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-reclamation/refs/heads/main/security/bureau-of-reclamation-domain-security.yml
+  href: https://artifacts.apis.io/bureau-of-reclamation/security/bureau-of-reclamation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bureau-of-reclamation-domain-security.yml
@@ -159,7 +160,7 @@ finops:
 - has_sources: false
   method: generated
   name: Bureau Of Reclamation Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: bureau-of-reclamation-finops
   template: true
@@ -172,6 +173,9 @@ network: true
 overview: 'Bureau of Reclamation is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Locations API, Model Runs API, and 3 more. Tagged areas include Energy, Federal Government, Infrastructure, Water, and Hydrology.
 
 
+  The Bureau of Reclamation catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bureau of Reclamation''s developer surface includes engineering blog, developer portal, and 10 more developer resources.'
 plans:
 - name: Bureau Of Reclamation Plans Pricing
@@ -182,20 +186,33 @@ rate_limits:
 - limit_count: 5
   name: Bureau Of Reclamation Rate Limits
   slug: bureau-of-reclamation-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 76
+  extends:
+  - spectral:oas
+  name: Bureau of Reclamation API Rules
+  rule_count: 35
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 1
+    warn: 1
+  slug: bureau-of-reclamation-rules
 score:
   band: emerging
-  composite: 22.8
+  composite: 24.4
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 46.0
+    artifact_dirs: 14
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 38.6
     developer_ergonomics: 21.4
     discoverability: 71.4
@@ -205,7 +222,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.7
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
@@ -219,14 +236,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/bureau-of-reclamation/refs/heads/main/screenshots/bureau-of-reclamation-2026-06-20T173820.png
+screenshot: https://apis.io/screenshots/bureau-of-reclamation/bureau-of-reclamation-2026-06-20T173820.png
 security:
 - kind: domain-security
   name: Bureau Of Reclamation Domain Security

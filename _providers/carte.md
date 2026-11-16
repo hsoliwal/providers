@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 32.0
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: API platform for private capital markets, providing endpoints for equity data, valuations, and workflow automation.
@@ -35,27 +53,27 @@ apis:
 artifact_total: 9
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/rate-limits/carte-rate-limits.yml
+  href: https://artifacts.apis.io/carte/rate-limits/carte-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/carte-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/rules/carte-rules.yml
+  href: https://artifacts.apis.io/carte/rules/carte-rules.yml
   title: ''
   type: Spectral
   url: rules/carte-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/json-ld/carte-context.jsonld
+  href: https://artifacts.apis.io/carte/json-ld/carte-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/carte-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/vocabulary/carte-vocabulary.yml
+  href: https://artifacts.apis.io/carte/vocabulary/carte-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/carte-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/data-model/carte-data-model.yml
+  href: https://artifacts.apis.io/carte/data-model/carte-data-model.yml
   title: ''
   type: DataModel
   url: data-model/carte-data-model.yml
@@ -64,37 +82,37 @@ common:
   type: Compliance
   url: https://trust.carta.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/authentication/carte-authentication.yml
+  href: https://artifacts.apis.io/carte/authentication/carte-authentication.yml
   title: ''
   type: Authentication
   url: authentication/carte-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/conformance/carte-conformance.yml
+  href: https://artifacts.apis.io/carte/conformance/carte-conformance.yml
   title: ''
   type: Conformance
   url: conformance/carte-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/llms/carte-llms.txt
+  href: https://artifacts.apis.io/carte/llms/carte-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/carte-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/well-known/carte-status-security.txt
+  href: https://artifacts.apis.io/carte/well-known/carte-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/carte-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/well-known/carte-well-known.yml
+  href: https://artifacts.apis.io/carte/well-known/carte-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/carte-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/hosts/carte-hosts.yml
+  href: https://artifacts.apis.io/carte/hosts/carte-hosts.yml
   title: ''
   type: Hosts
   url: hosts/carte-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/vendors/carte-vendors.yml
+  href: https://artifacts.apis.io/carte/vendors/carte-vendors.yml
   title: ''
   type: Vendors
   url: vendors/carte-vendors.yml
@@ -143,12 +161,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/carta
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/security/carte-trust-center.yml
+  href: https://artifacts.apis.io/carte/security/carte-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/carte-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carte/refs/heads/main/security/carte-domain-security.yml
+  href: https://artifacts.apis.io/carte/security/carte-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carte-domain-security.yml
@@ -181,14 +199,14 @@ modified: '2026-10-07'
 name: Carte
 nav: Providers
 network: true
-overview: 'Carte is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including V1Alpha1 API, and 1 more. Tagged areas include Company, Finance, Equity, and FundManagement.
+overview: 'Carte is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including V1Alpha1 API, and 1 more. Tagged areas include Company, Finance, Equity, and Fund Management.
 
 
   The Carte catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Carte''s developer surface includes authentication, engineering blog, API reference, getting-started guide, documentation, and 22 more developer resources.'
-random_paper: 21
+random_paper: 23
 rate_limits:
 - limit_count: 2
   name: Carte Rate Limits
@@ -208,21 +226,23 @@ rules:
   slug: carte-rules
 score:
   band: thin
-  composite: 37.1
+  composite: 28.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 51.2
     catalog_earned_first_party: 8.0
     catalog_gap: 63.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.9
   facets:
-    access_clarity: 39.5
+    access_clarity: 23.7
     contract_governance: 22.0
     contract_quality: 17.6
-    developer_ergonomics: 42.9
-    discoverability: 58.9
-    operational_transparency: 52.6
+    developer_ergonomics: 28.6
+    discoverability: 57.1
+    operational_transparency: 36.8
+  previous_composite: 37.1
   provenance:
     conformance: derived
     contracts:
@@ -236,12 +256,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/carte/carte-2026-11-03T123425.png
 security:
 - kind: authentication
   name: Carte Authentication
@@ -260,6 +282,6 @@ tags:
 - Company
 - Finance
 - Equity
-- FundManagement
+- Fund Management
 website: https://carta.com
 ---

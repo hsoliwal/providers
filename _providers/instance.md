@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 23.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -182,11 +186,8 @@ apis:
   description: The Verify Frames API from Instance — 1 operation(s) for verify frames.
   name: Instance Verify Frames API
   slug: instance-verify-frames-api
-artifact_total: 59
+artifact_total: 61
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Robot rollout verifier Archive API
   slug: open-instance-archive-api
@@ -273,12 +274,12 @@ collections:
   slug: open-instance-verify-frames-api
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/security/instance-domain-security.yml
+  href: https://artifacts.apis.io/instance/security/instance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/instance-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/agentic-access/instance-agentic-access.yml
+  href: https://artifacts.apis.io/instance/agentic-access/instance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/instance-agentic-access.yml
@@ -303,52 +304,52 @@ common:
   type: Support
   url: mailto:founders@instancelabs.ai
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/errors/instance-problem-types.yml
+  href: https://artifacts.apis.io/instance/errors/instance-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/instance-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/data-model/instance-data-model.yml
+  href: https://artifacts.apis.io/instance/data-model/instance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/instance-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/conventions/instance-conventions.yml
+  href: https://artifacts.apis.io/instance/conventions/instance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/instance-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/mcp/instance-mcp.yml
+  href: https://artifacts.apis.io/instance/mcp/instance-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/instance-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/overlays/instance-verifier-overlay.yaml
+  href: https://artifacts.apis.io/instance/overlays/instance-verifier-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/instance-verifier-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/llms/instance-llms.txt
+  href: https://artifacts.apis.io/instance/llms/instance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/instance-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/conformance/instance-conformance.yml
+  href: https://artifacts.apis.io/instance/conformance/instance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/instance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/lifecycle/instance-lifecycle.yml
+  href: https://artifacts.apis.io/instance/lifecycle/instance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/instance-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/skills/instance-verify-rollout.md
+  href: https://artifacts.apis.io/instance/skills/instance-verify-rollout.md
   title: ''
   type: AgentSkill
   url: skills/instance-verify-rollout.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/skills/instance-batch-verify.md
+  href: https://artifacts.apis.io/instance/skills/instance-batch-verify.md
   title: ''
   type: AgentSkill
   url: skills/instance-batch-verify.md
@@ -363,27 +364,43 @@ network: true
 overview: 'Instance publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Archive API, Audit API, Batch API, and 25 more. Tagged areas include Company, Robotics, Machine Learning, Verification, and Evaluation.
 
 
+  The Instance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Instance''s developer surface includes support and 16 more developer resources.'
-random_paper: 17
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: Instance API Rules
+  rule_count: 39
+  severity_counts:
+    error: 32
+    hint: 0
+    info: 2
+    warn: 5
+  slug: instance-rules
 score:
   band: emerging
-  composite: 17.2
+  composite: 18.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 17
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 38.1
     developer_ergonomics: 6.5
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 17.1
+  previous_composite: 18.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -400,18 +417,24 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/instance/refs/heads/main/screenshots/instance-2026-07-25T222605.png
+screenshot: https://apis.io/screenshots/instance/instance-2026-07-25T222605.png
 security:
 - kind: domain-security
   name: Instance Domain Security
   slug: instance-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 2
+skills:
+- name: Batch-verify robot rollouts
+  slug: instance-batch-verify
+- name: Verify a robot rollout
+  slug: instance-verify-rollout
 slug: instance
 tags:
 - Company

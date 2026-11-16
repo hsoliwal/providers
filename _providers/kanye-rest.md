@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -47,11 +51,8 @@ apis:
   description: Endpoints that return random or bulk Kanye West quotes.
   name: kanye.rest Quotes API
   slug: kanye-rest-quotes-api
-artifact_total: 15
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Kanye REST Quotes API
   slug: open-kanye-rest-quotes-api
@@ -68,12 +69,12 @@ common:
   type: IssueTracker
   url: https://github.com/ajzbc/kanye.rest/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/agentic-access/kanye-rest-agentic-access.yml
+  href: https://artifacts.apis.io/kanye-rest/agentic-access/kanye-rest-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kanye-rest-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/security/kanye-rest-domain-security.yml
+  href: https://artifacts.apis.io/kanye-rest/security/kanye-rest-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kanye-rest-domain-security.yml
@@ -98,52 +99,52 @@ common:
   type: PublicAPIsListing
   url: https://github.com/public-apis/public-apis
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/rules/kanye-rest-spectral-rules.yml
+  href: https://artifacts.apis.io/kanye-rest/rules/kanye-rest-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/kanye-rest-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/vocabulary/kanye-rest-vocabulary.yml
+  href: https://artifacts.apis.io/kanye-rest/vocabulary/kanye-rest-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/kanye-rest-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/json-ld/kanye-rest-context.jsonld
+  href: https://artifacts.apis.io/kanye-rest/json-ld/kanye-rest-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/kanye-rest-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/json-schema/kanye-rest-quote-schema.json
+  href: https://artifacts.apis.io/kanye-rest/json-schema/kanye-rest-quote-schema.json
   title: Quote
   type: JSONSchema
   url: json-schema/kanye-rest-quote-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/json-schema/kanye-rest-quote-list-schema.json
+  href: https://artifacts.apis.io/kanye-rest/json-schema/kanye-rest-quote-list-schema.json
   title: QuoteList
   type: JSONSchema
   url: json-schema/kanye-rest-quote-list-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/json-structure/kanye-rest-quote-structure.json
+  href: https://artifacts.apis.io/kanye-rest/json-structure/kanye-rest-quote-structure.json
   title: Quote
   type: JSONStructure
   url: json-structure/kanye-rest-quote-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/json-structure/kanye-rest-quote-list-structure.json
+  href: https://artifacts.apis.io/kanye-rest/json-structure/kanye-rest-quote-list-structure.json
   title: QuoteList
   type: JSONStructure
   url: json-structure/kanye-rest-quote-list-structure.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/examples/kanye-rest-quote-example.json
+  href: https://artifacts.apis.io/kanye-rest/examples/kanye-rest-quote-example.json
   title: Quote Example
   type: Examples
   url: examples/kanye-rest-quote-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/examples/kanye-rest-quote-list-example.json
+  href: https://artifacts.apis.io/kanye-rest/examples/kanye-rest-quote-list-example.json
   title: QuoteList Example
   type: Examples
   url: examples/kanye-rest-quote-list-example.json
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/rate-limits/kanye-rest-rate-limits.yml
+  href: https://artifacts.apis.io/kanye-rest/rate-limits/kanye-rest-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kanye-rest-rate-limits.yml
@@ -185,7 +186,7 @@ overview: 'kanye.rest is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   kanye.rest''s developer surface includes engineering blog, CLI, code examples, and 16 more developer resources.'
-random_paper: 15
+random_paper: 19
 rate_limits:
 - limit_count: 3
   name: Kanye Rest Rate Limits
@@ -224,7 +225,7 @@ score:
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 27.3
@@ -232,7 +233,7 @@ score:
     developer_ergonomics: 9.5
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 21.0
+  previous_composite: 18.9
   provenance:
     agentic_access: derived
     contracts:
@@ -246,14 +247,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/kanye-rest/refs/heads/main/screenshots/kanye-rest-2026-06-20T183915.png
+screenshot: https://apis.io/screenshots/kanye-rest/kanye-rest-2026-06-20T183915.png
 security:
 - kind: domain-security
   name: Kanye Rest Domain Security

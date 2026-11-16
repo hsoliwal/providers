@@ -1,14 +1,20 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
-  onboarding: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
   pricing: freemium
   public: false
   source:
   - plans
+  - authentication
+  - rate-limits
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -25,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,13 +42,13 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 11.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Artillery Cloud is the hosted platform behind the open source Artillery CLI: it runs distributed load and Playwright E2E tests at scale across AWS Lambda, AWS Fargate and Azure ACI, stores and retains'
   name: Artillery Cloud API
   slug: artillery-cloud-api
-artifact_total: 22
+artifact_total: 26
 common:
 - group: company
   title: ''
@@ -70,7 +79,7 @@ common:
   type: License
   url: https://github.com/artilleryio/artillery/blob/main/LICENSE.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/security/artillery-domain-security.yml
+  href: https://artifacts.apis.io/artillery/security/artillery-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/artillery-domain-security.yml
@@ -143,77 +152,77 @@ common:
   type: Deprecation
   url: https://github.com/artilleryio/artillery/blob/main/SECURITY.md
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/packages/artillery-packages.yml
+  href: https://artifacts.apis.io/artillery/packages/artillery-packages.yml
   title: First-party packages
   type: Packages
   url: packages/artillery-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/packages/artillery-packages.yml
+  href: https://artifacts.apis.io/artillery/packages/artillery-packages.yml
   title: Artillery client libraries
   type: SDKs
   url: packages/artillery-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/cli/artillery-cli.yml
+  href: https://artifacts.apis.io/artillery/cli/artillery-cli.yml
   title: Artillery CLI surface
   type: CLI
   url: cli/artillery-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/llms/artillery-llms.txt
+  href: https://artifacts.apis.io/artillery/llms/artillery-llms.txt
   title: llms.txt
   type: LLMsTxt
   url: llms/artillery-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/artillery/skills/_index.yml
   title: Artillery official agent skills
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/authentication/artillery-authentication.yml
+  href: https://artifacts.apis.io/artillery/authentication/artillery-authentication.yml
   title: Authentication profile
   type: Authentication
   url: authentication/artillery-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/conventions/artillery-conventions.yml
+  href: https://artifacts.apis.io/artillery/conventions/artillery-conventions.yml
   title: API conventions and reversibility
   type: Conventions
   url: conventions/artillery-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/lifecycle/artillery-lifecycle.yml
+  href: https://artifacts.apis.io/artillery/lifecycle/artillery-lifecycle.yml
   title: Lifecycle, versioning and support policy
   type: Lifecycle
   url: lifecycle/artillery-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/changelog/artillery-changelog.yml
+  href: https://artifacts.apis.io/artillery/changelog/artillery-changelog.yml
   title: Structured changelog
   type: ChangeLog
   url: changelog/artillery-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/conformance/artillery-conformance.yml
+  href: https://artifacts.apis.io/artillery/conformance/artillery-conformance.yml
   title: Standards conformance
   type: Conformance
   url: conformance/artillery-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/security/artillery-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/artillery/security/artillery-vulnerability-disclosure.yml
   title: Vulnerability disclosure
   type: VulnerabilityDisclosure
   url: security/artillery-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/security/artillery-trust-center.yml
+  href: https://artifacts.apis.io/artillery/security/artillery-trust-center.yml
   title: Security posture
   type: TrustCenter
   url: security/artillery-trust-center.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/plans/artillery-plans-pricing.yml
+  href: https://artifacts.apis.io/artillery/plans/artillery-plans-pricing.yml
   title: Plans and pricing
   type: Plans
   url: plans/artillery-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/rate-limits/artillery-rate-limits.yml
+  href: https://artifacts.apis.io/artillery/rate-limits/artillery-rate-limits.yml
   title: Published usage limits
   type: RateLimits
   url: rate-limits/artillery-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/finops/artillery-finops.yml
+  href: https://artifacts.apis.io/artillery/finops/artillery-finops.yml
   title: FinOps profile
   type: FinOps
   url: finops/artillery-finops.yml
@@ -233,13 +242,13 @@ features:
 - description: Human-readable YAML test scenario definitions supporting think time, loops, conditional logic, data CSV files, and custom JavaScript functions.
   name: YAML Test Scenarios
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Artillery Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: subscription
+  service_category: ''
   slug: artillery-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/artillery.png
 integrations:
 - description: Official Artillery GitHub Action for running load tests in CI/CD pipelines with automatic reporting and performance gate enforcement.
@@ -263,24 +272,27 @@ plans:
 - name: Artillery Plans Pricing
   plan_count: 4
   slug: artillery-plans-pricing
-random_paper: 16
+- name: Artillery Price Estimates
+  plan_count: 0
+  slug: artillery-price-estimates
+random_paper: 0
 rate_limits:
 - limit_count: 12
   name: Artillery Rate Limits
   slug: artillery-rate-limits
 score:
   band: strong
-  composite: 56.1
+  composite: 57.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 61.0
+    artifact_dirs: 20
+    catalog_earned: 64.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
-    access_clarity: 71.1
+    access_clarity: 78.9
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 76.2
@@ -289,7 +301,7 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 57.4
+  previous_composite: 57.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -300,14 +312,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/artillery/refs/heads/main/screenshots/artillery-2026-06-20T172444.png
+screenshot: https://apis.io/screenshots/artillery/artillery-2026-06-20T172444.png
 security:
 - kind: authentication
   name: Artillery Authentication
@@ -325,6 +337,14 @@ security:
   name: Artillery Trust Center
   slug: artillery-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: convert-artillery-yaml-to-ts
+  slug: artillery-convert-artillery-yaml-to-ts
+- name: setup-artillery-cli-for-load-testing
+  slug: artillery-setup-artillery-cli-for-load-testing
+- name: setup-artillery-playwright-reporter
+  slug: artillery-setup-artillery-playwright-reporter
 slug: artillery
 tags:
 - Load Testing

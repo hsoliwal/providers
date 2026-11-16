@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,8 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.2
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -42,7 +50,7 @@ agentic_access:
   operation_count: 51
   slug: clever-agentic-access
   summary_line: 51 operations · 4 acting
-api_count: 2
+api_count: 3
 apis:
 - description: OAuth 2.0, OIDC, and SAML-based single sign-on integration that enables application partners to authenticate students, teachers, and staff through the Clever portal. Issues bearer access tokens scoped
   name: Clever Single Sign-On API
@@ -97,11 +105,33 @@ apis:
   description: The Users API from Clever — 9 operation(s) for users.
   name: Clever Users API
   slug: clever-users-api
-artifact_total: 42
+- baseURL: https://api.clever.com/v1.2
+  baseurl_source: declared
+  description: The Contacts API from Clever — 4 operation(s) for contacts.
+  name: Clever Contacts API
+  slug: clever-contacts-api
+- baseURL: https://api.clever.com/v1.2
+  baseurl_source: declared
+  description: The District Admins API from Clever — 2 operation(s) for district admins.
+  name: Clever District Admins API
+  slug: clever-district-admins-api
+- baseURL: https://api.clever.com/v1.2
+  baseurl_source: declared
+  description: The School Admins API from Clever — 3 operation(s) for school admins.
+  name: Clever School Admins API
+  slug: clever-school-admins-api
+- baseURL: https://api.clever.com/v1.2
+  baseurl_source: declared
+  description: The Students API from Clever — 7 operation(s) for students.
+  name: Clever Students API
+  slug: clever-students-api
+- baseURL: https://api.clever.com/v1.2
+  baseurl_source: declared
+  description: The Teachers API from Clever — 7 operation(s) for teachers.
+  name: Clever Teachers API
+  slug: clever-teachers-api
+artifact_total: 46
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Data Assignments API
   slug: open-clever-assignments-api
@@ -134,37 +164,37 @@ collections:
   slug: open-clever-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/capabilities/clever-capability-edges.yml
+  href: https://artifacts.apis.io/clever/capabilities/clever-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/clever-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/agentic-access/clever-agentic-access.yml
+  href: https://artifacts.apis.io/clever/agentic-access/clever-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/clever-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/security/clever-trust-center.yml
+  href: https://artifacts.apis.io/clever/security/clever-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/clever-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/security/clever-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/clever/security/clever-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/clever-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/security/clever-domain-security.yml
+  href: https://artifacts.apis.io/clever/security/clever-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clever-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/authentication/clever-authentication.yml
+  href: https://artifacts.apis.io/clever/authentication/clever-authentication.yml
   title: ''
   type: Authentication
   url: authentication/clever-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/scopes/clever-scopes.yml
+  href: https://artifacts.apis.io/clever/scopes/clever-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/clever-scopes.yml
@@ -201,67 +231,67 @@ common:
   type: X
   url: https://twitter.com/clever
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/plans/clever-plans-pricing.yml
+  href: https://artifacts.apis.io/clever/plans/clever-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/clever-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/rate-limits/clever-rate-limits.yml
+  href: https://artifacts.apis.io/clever/rate-limits/clever-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/clever-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/finops/clever-finops.yml
+  href: https://artifacts.apis.io/clever/finops/clever-finops.yml
   title: ''
   type: FinOps
   url: finops/clever-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/vocabulary/clever-vocabulary.yml
+  href: https://artifacts.apis.io/clever/vocabulary/clever-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/clever-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/json-ld/clever-context.jsonld
+  href: https://artifacts.apis.io/clever/json-ld/clever-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/clever-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/json-schema/clever-user.json
+  href: https://artifacts.apis.io/clever/json-schema/clever-user.json
   title: ''
   type: JSONSchema
   url: json-schema/clever-user.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/json-schema/clever-student.json
+  href: https://artifacts.apis.io/clever/json-schema/clever-student.json
   title: ''
   type: JSONSchema
   url: json-schema/clever-student.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/json-schema/clever-school.json
+  href: https://artifacts.apis.io/clever/json-schema/clever-school.json
   title: ''
   type: JSONSchema
   url: json-schema/clever-school.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/json-schema/clever-section.json
+  href: https://artifacts.apis.io/clever/json-schema/clever-section.json
   title: ''
   type: JSONSchema
   url: json-schema/clever-section.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/examples/clever-user-example.json
+  href: https://artifacts.apis.io/clever/examples/clever-user-example.json
   title: ''
   type: Examples
   url: examples/clever-user-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/examples/clever-student-example.json
+  href: https://artifacts.apis.io/clever/examples/clever-student-example.json
   title: ''
   type: Examples
   url: examples/clever-student-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/examples/clever-district-example.json
+  href: https://artifacts.apis.io/clever/examples/clever-district-example.json
   title: ''
   type: Examples
   url: examples/clever-district-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/examples/clever-section-example.json
+  href: https://artifacts.apis.io/clever/examples/clever-section-example.json
   title: ''
   type: Examples
   url: examples/clever-section-example.json
@@ -316,7 +346,7 @@ modified: '2026-09-16'
 name: Clever
 nav: Providers
 network: true
-overview: 'Clever publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Assignments API, Courses API, and 8 more. Tagged areas include Education, K-12, EdTech, SSO, and Rostering.
+overview: 'Clever publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Assignments API, Courses API, and 13 more. Tagged areas include Education, K-12, EdTech, SSO, and Rostering.
 
 
   The Clever catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -327,7 +357,7 @@ plans:
 - name: Clever Plans Pricing
   plan_count: 3
   slug: clever-plans-pricing
-random_paper: 3
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Clever Rate Limits
@@ -350,44 +380,44 @@ scopes:
   slug: clever-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: thin
-  composite: 39.1
+  band: developing
+  composite: 41.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 58.8
+    artifact_dirs: 22
+    catalog_earned: 61.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.3
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.9
   facets:
     access_clarity: 26.3
     contract_governance: 23.5
     contract_quality: 62.8
-    developer_ergonomics: 19.0
-    discoverability: 66.1
-    operational_transparency: 21.1
-  previous_composite: 44.7
+    developer_ergonomics: 23.8
+    discoverability: 71.4
+    operational_transparency: 31.6
+  previous_composite: 41.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 10
+      total: 23
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
     score: 37.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/clever/refs/heads/main/screenshots/clever-2026-06-20T174509.png
+screenshot: https://apis.io/screenshots/clever/clever-2026-06-20T174509.png
 security:
 - kind: authentication
   name: Clever Authentication

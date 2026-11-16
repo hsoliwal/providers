@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/celestialai/refs/heads/main/plans/celestialai-plans-pricing.yml
+  href: https://artifacts.apis.io/celestialai/plans/celestialai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/celestialai-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/celestialai/refs/heads/main/hosts/celestialai-hosts.yml
+  href: https://artifacts.apis.io/celestialai/hosts/celestialai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/celestialai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/celestialai/refs/heads/main/vendors/celestialai-vendors.yml
+  href: https://artifacts.apis.io/celestialai/vendors/celestialai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/celestialai-vendors.yml
@@ -63,7 +77,7 @@ common:
   type: Blog
   url: https://celestiai.co/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/celestialai/refs/heads/main/security/celestialai-domain-security.yml
+  href: https://artifacts.apis.io/celestialai/security/celestialai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/celestialai-domain-security.yml
@@ -95,24 +109,26 @@ plans:
 - name: Celestialai Plans Pricing
   plan_count: 6
   slug: celestialai-plans-pricing
-random_paper: 8
+random_paper: 0
 score:
   band: emerging
-  composite: 19.0
+  composite: 13.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 34.0
     catalog_earned_first_party: 12.0
     catalog_gap: 81.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.3
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
+    developer_ergonomics: 1.2
     discoverability: 39.3
     operational_transparency: 0.0
+  previous_composite: 19.0
   provenance:
     mcp: unknown
   regulatory:
@@ -120,13 +136,15 @@ score:
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
-    score: 13.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/celestialai/celestialai-2026-11-03T123608.png
 security:
 - kind: domain-security
   name: Celestialai Domain Security

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -99,11 +102,8 @@ apis:
   description: The ValueSet API from NHS API — 2 operation(s) for valueset.
   name: NHS API ValueSet API
   slug: nhs-api-valueset-api
-artifact_total: 33
+artifact_total: 32
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: e-Referrals Service CodeSystem API
   slug: open-nhs-api-codesystem-api
@@ -134,27 +134,27 @@ common:
   type: Website
   url: https://www.nhs.uk/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/capabilities/nhs-api-capability-edges.yml
+  href: https://artifacts.apis.io/nhs-api/capabilities/nhs-api-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nhs-api-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/agentic-access/nhs-api-agentic-access.yml
+  href: https://artifacts.apis.io/nhs-api/agentic-access/nhs-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nhs-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/security/nhs-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nhs-api/security/nhs-api-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nhs-api-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/security/nhs-api-domain-security.yml
+  href: https://artifacts.apis.io/nhs-api/security/nhs-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nhs-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/authentication/nhs-api-authentication.yml
+  href: https://artifacts.apis.io/nhs-api/authentication/nhs-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nhs-api-authentication.yml
@@ -239,7 +239,7 @@ overview: 'NHS API publishes 13 API contracts indexed on the [APIs.io](https://a
 
 
   NHS API''s developer surface includes authentication, developer portal, documentation, getting-started guide, status page, and 12 more developer resources.'
-random_paper: 6
+random_paper: 16
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -254,9 +254,9 @@ rules:
   slug: nhs-api-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 33.7
+  composite: 35.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 48.3
     catalog_earned_first_party: 0.0
     catalog_gap: 66.8
@@ -269,7 +269,7 @@ score:
     contract_quality: 48.9
     developer_ergonomics: 48.8
     discoverability: 71.4
-    operational_transparency: 5.3
+    operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -278,7 +278,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.7
+  previous_composite: 35.1
   provenance:
     agentic_access: derived
     contracts:
@@ -292,13 +292,13 @@ score:
     regime: Health
     regime_id: health
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/screenshots/nhs-api-2026-08-07T185236.png
+screenshot: https://apis.io/screenshots/nhs-api/nhs-api-2026-08-07T185236.png
 security:
 - kind: authentication
   name: Nhs Api Authentication

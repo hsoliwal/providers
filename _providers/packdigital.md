@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,16 +37,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL API to programmatically manage Shopify Hydrogen storefront content — pages, product pages, collection pages, blogs, articles, sections, templates, site settings, schedules, and revisions — wit
   name: Pack Content Management API
   slug: pack-content-management-api
-artifact_total: 4
+artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/security/packdigital-domain-security.yml
+  href: https://artifacts.apis.io/packdigital/security/packdigital-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/packdigital-domain-security.yml
@@ -100,57 +103,57 @@ common:
   type: PrivacyPolicy
   url: https://packdigital.com/pages/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/mcp/packdigital-mcp.yml
+  href: https://artifacts.apis.io/packdigital/mcp/packdigital-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/packdigital-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/llms/packdigital-llms.txt
+  href: https://artifacts.apis.io/packdigital/llms/packdigital-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/packdigital-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/packages/packdigital-packages.yml
+  href: https://artifacts.apis.io/packdigital/packages/packdigital-packages.yml
   title: ''
   type: Packages
   url: packages/packdigital-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/packages/packdigital-packages.yml
+  href: https://artifacts.apis.io/packdigital/packages/packdigital-packages.yml
   title: ''
   type: SDKs
   url: packages/packdigital-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/authentication/packdigital-authentication.yml
+  href: https://artifacts.apis.io/packdigital/authentication/packdigital-authentication.yml
   title: ''
   type: Authentication
   url: authentication/packdigital-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/conventions/packdigital-conventions.yml
+  href: https://artifacts.apis.io/packdigital/conventions/packdigital-conventions.yml
   title: ''
   type: Conventions
   url: conventions/packdigital-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/data-model/packdigital-data-model.yml
+  href: https://artifacts.apis.io/packdigital/data-model/packdigital-data-model.yml
   title: ''
   type: DataModel
   url: data-model/packdigital-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/conformance/packdigital-conformance.yml
+  href: https://artifacts.apis.io/packdigital/conformance/packdigital-conformance.yml
   title: ''
   type: Conformance
   url: conformance/packdigital-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/errors/packdigital-problem-types.yml
+  href: https://artifacts.apis.io/packdigital/errors/packdigital-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/packdigital-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/components/packdigital-components.yml
+  href: https://artifacts.apis.io/packdigital/components/packdigital-components.yml
   title: ''
   type: Components
   url: components/packdigital-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/packdigital/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -170,12 +173,12 @@ overview: 'Packdigital is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Packdigital''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 18 more developer resources.'
-random_paper: 5
+random_paper: 21
 score:
   band: thin
   composite: 30.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -200,14 +203,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/packdigital/refs/heads/main/screenshots/packdigital-2026-08-07T191242.png
+screenshot: https://apis.io/screenshots/packdigital/packdigital-2026-08-07T191242.png
 security:
 - kind: authentication
   name: Packdigital Authentication
@@ -217,6 +220,14 @@ security:
   name: Packdigital Domain Security
   slug: packdigital-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Create, review, and publish a storefront page
+  slug: packdigital-publish-a-page
+- name: Run and manage an A/B test via the Pack MCP server
+  slug: packdigital-run-ab-test
+- name: Schedule content to go live
+  slug: packdigital-schedule-content
 slug: packdigital
 tags:
 - Company

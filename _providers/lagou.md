@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -61,17 +65,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/Lagou-Frontend
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lagou/refs/heads/main/packages/lagou-packages.yml
+  href: https://artifacts.apis.io/lagou/packages/lagou-packages.yml
   title: ''
   type: Packages
   url: packages/lagou-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lagou/refs/heads/main/security/lagou-domain-security.yml
+  href: https://artifacts.apis.io/lagou/security/lagou-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lagou-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lagou/refs/heads/main/llms/lagou-llms.txt
+  href: https://artifacts.apis.io/lagou/llms/lagou-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lagou-llms.txt
@@ -92,7 +96,7 @@ score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -120,14 +124,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lagou/refs/heads/main/screenshots/lagou-2026-07-25T224503.png
+screenshot: https://apis.io/screenshots/lagou/lagou-2026-07-25T224503.png
 security:
 - kind: domain-security
   name: Lagou Domain Security

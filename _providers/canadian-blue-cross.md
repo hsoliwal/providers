@@ -1,12 +1,12 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:No Public API
   - description
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -31,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -39,12 +42,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/security/canadian-blue-cross-domain-security.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/security/canadian-blue-cross-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canadian-blue-cross-domain-security.yml
@@ -101,42 +104,42 @@ common:
   type: Login
   url: https://www.bluecross.ca/memberweb/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/well-known/canadian-blue-cross-well-known.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/well-known/canadian-blue-cross-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/canadian-blue-cross-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/authentication/canadian-blue-cross-authentication.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/authentication/canadian-blue-cross-authentication.yml
   title: ''
   type: Authentication
   url: authentication/canadian-blue-cross-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/scopes/canadian-blue-cross-scopes.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/scopes/canadian-blue-cross-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/canadian-blue-cross-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/errors/canadian-blue-cross-problem-types.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/errors/canadian-blue-cross-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/canadian-blue-cross-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/conformance/canadian-blue-cross-conformance.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/conformance/canadian-blue-cross-conformance.yml
   title: ''
   type: Conformance
   url: conformance/canadian-blue-cross-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/conventions/canadian-blue-cross-conventions.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/conventions/canadian-blue-cross-conventions.yml
   title: ''
   type: Conventions
   url: conventions/canadian-blue-cross-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/llms/canadian-blue-cross-llms.txt
+  href: https://artifacts.apis.io/canadian-blue-cross/llms/canadian-blue-cross-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/canadian-blue-cross-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/canadian-blue-cross/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -153,7 +156,7 @@ overview: 'Blue Cross Canada is profiled on the [APIs.io](https://apis.io/) netw
 
 
   Blue Cross Canada''s developer surface includes product news, engineering blog, support, authentication, and 18 more developer resources.'
-random_paper: 13
+random_paper: 11
 scopes:
 - name: Canadian Blue Cross Scopes
   scope_count: 2
@@ -163,7 +166,7 @@ score:
   band: emerging
   composite: 19.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -193,14 +196,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 36.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/canadian-blue-cross/refs/heads/main/screenshots/canadian-blue-cross-2026-10-11T183811.png
+screenshot: https://apis.io/screenshots/canadian-blue-cross/canadian-blue-cross-2026-10-11T183811.png
 security:
 - kind: authentication
   name: Canadian Blue Cross Authentication

@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.1
-  scored_at: '2026-10-17'
+  score: 54.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,11 +74,8 @@ apis:
   description: Clustered workflow analysis, friction, recommendations, and tool verdicts.
   name: Larridin Workflow Intelligence API
   slug: larridin-workflow-intelligence-api
-artifact_total: 19
+artifact_total: 24
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Larridin Scout Adoption API
   slug: open-larridin-adoption-api
@@ -94,22 +97,22 @@ common:
   type: Pricing
   url: https://larridin.com/router/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/plans/larridin-plans-pricing.yml
+  href: https://artifacts.apis.io/larridin/plans/larridin-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/larridin-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/capabilities/larridin-capability-edges.yml
+  href: https://artifacts.apis.io/larridin/capabilities/larridin-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/larridin-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/agentic-access/larridin-agentic-access.yml
+  href: https://artifacts.apis.io/larridin/agentic-access/larridin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/larridin-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/security/larridin-trust-center.yml
+  href: https://artifacts.apis.io/larridin/security/larridin-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/larridin-trust-center.yml
@@ -174,77 +177,85 @@ common:
   type: Security
   url: https://trust.larridin.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/mcp/larridin-mcp.yml
+  href: https://artifacts.apis.io/larridin/mcp/larridin-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/larridin-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/llms/larridin-llms.txt
+  href: https://artifacts.apis.io/larridin/llms/larridin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/larridin-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/well-known/larridin-well-known.yml
+  href: https://artifacts.apis.io/larridin/well-known/larridin-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/larridin-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/authentication/larridin-authentication.yml
+  href: https://artifacts.apis.io/larridin/authentication/larridin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/larridin-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/scopes/larridin-scopes.yml
+  href: https://artifacts.apis.io/larridin/scopes/larridin-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/larridin-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/conventions/larridin-conventions.yml
+  href: https://artifacts.apis.io/larridin/conventions/larridin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/larridin-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/conformance/larridin-conformance.yml
+  href: https://artifacts.apis.io/larridin/conformance/larridin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/larridin-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/lifecycle/larridin-lifecycle.yml
+  href: https://artifacts.apis.io/larridin/lifecycle/larridin-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/larridin-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/errors/larridin-problem-types.yml
+  href: https://artifacts.apis.io/larridin/errors/larridin-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/larridin-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/data-model/larridin-data-model.yml
+  href: https://artifacts.apis.io/larridin/data-model/larridin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/larridin-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/security/larridin-domain-security.yml
+  href: https://artifacts.apis.io/larridin/security/larridin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/larridin-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/security/larridin-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/larridin/security/larridin-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/larridin-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/larridin/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/overlays/larridin-scout-overlay.yaml
+  href: https://artifacts.apis.io/larridin/overlays/larridin-scout-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/larridin-scout-overlay.yaml
 created: '2026-07-17'
 description: Larridin is an enterprise AI intelligence platform that measures whether an organization's investment in AI is actually paying off across both its human and agent workforce. Its Scout product instruments AI usage through a managed browser extension and desktop agent, then joins that telemetry with source control, coding-assistant, incident, and work-tracking systems to report on AI adoption, AI fluency (proficiency), AI governance and shadow-tool risk, token spend, workflow intelligence, and Developer Intelligence — covering AI code share, velocity, quality, CI/CD delivery, reliability, agent effectiveness, agent readiness, and developer sentiment. Larridin exposes this data through the read-only Scout API v1 and a beta Model Context Protocol server for agents.
+finops:
+- has_sources: true
+  method: derived
+  name: Larridin Finops
+  primary_unit: ''
+  service_category: ''
+  slug: larridin-finops
+  template: true
 image: https://larridin.com/assets/img/logo-header.webp
 layout: provider
 mcp_servers:
@@ -258,12 +269,28 @@ network: true
 overview: 'Larridin publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Adoption API, Proficiency API, Surveys API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Adoption, AI Governance, and Analytics.
 
 
+  The Larridin catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Larridin''s developer surface includes pricing, documentation, API reference, getting-started guide, quickstart, support, engineering blog, and 27 more developer resources.'
 plans:
 - name: Larridin Plans Pricing
   plan_count: 1
   slug: larridin-plans-pricing
-random_paper: 17
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Larridin API Rules
+  rule_count: 65
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 2
+    warn: 2
+  slug: larridin-rules
 scopes:
 - name: Larridin Scopes
   scope_count: 4
@@ -271,23 +298,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
   band: strong
-  composite: 54.7
+  composite: 55.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 27
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: -1.0
   facets:
-    access_clarity: 75.0
-    contract_governance: 18.2
+    access_clarity: 69.7
+    contract_governance: 31.8
     contract_quality: 50.0
     developer_ergonomics: 58.9
     discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 48.3
+  previous_composite: 56.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -304,14 +331,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/screenshots/larridin-2026-07-25T224539.png
+screenshot: https://apis.io/screenshots/larridin/larridin-2026-07-25T224539.png
 security:
 - kind: authentication
   name: Larridin Authentication
@@ -329,6 +356,16 @@ security:
   name: Larridin Trust Center
   slug: larridin-trust-center
   summary_line: SOC 2, HIPAA, GDPR
+skill_count: 4
+skills:
+- name: Report AI adoption across the organization
+  slug: larridin-ai-adoption-report
+- name: Measure AI fluency and pair it with survey sentiment
+  slug: larridin-ai-fluency-and-sentiment
+- name: Audit shadow AI and policy enforcement
+  slug: larridin-shadow-ai-governance-audit
+- name: Review workflow friction and tool impact
+  slug: larridin-workflow-friction-review
 slug: larridin
 tags:
 - Company

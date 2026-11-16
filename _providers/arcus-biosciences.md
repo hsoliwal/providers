@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -49,12 +53,12 @@ common:
   type: PrivacyPolicy
   url: https://arcusbio.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcus-biosciences/refs/heads/main/llms/arcus-biosciences-llms.txt
+  href: https://artifacts.apis.io/arcus-biosciences/llms/arcus-biosciences-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arcus-biosciences-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcus-biosciences/refs/heads/main/security/arcus-biosciences-domain-security.yml
+  href: https://artifacts.apis.io/arcus-biosciences/security/arcus-biosciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arcus-biosciences-domain-security.yml
@@ -67,12 +71,12 @@ name: Arcus Biosciences
 nav: Providers
 network: true
 overview: Arcus Biosciences is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Biotechnology, Pharmaceuticals, and Oncology.
-random_paper: 8
+random_paper: 18
 score:
   band: minimal
   composite: 7.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -98,14 +102,14 @@ score:
     regime: Health
     regime_id: health
     score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/arcus-biosciences/refs/heads/main/screenshots/arcus-biosciences-2026-07-25T201108.png
+screenshot: https://apis.io/screenshots/arcus-biosciences/arcus-biosciences-2026-07-25T201108.png
 security:
 - kind: domain-security
   name: Arcus Biosciences Domain Security

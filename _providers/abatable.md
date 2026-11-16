@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A hosted Model Context Protocol endpoint operated by Abatable at mcp.abatable.com, fronted by Cloudflare Access. It advertises itself as an OAuth protected resource under RFC 9728 and publishes RFC 84
@@ -72,62 +88,62 @@ common:
   type: StatusPage
   url: https://status.abatable.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/llms/abatable-llms.txt
+  href: https://artifacts.apis.io/abatable/llms/abatable-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/abatable-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/well-known/abatable-well-known.yml
+  href: https://artifacts.apis.io/abatable/well-known/abatable-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/abatable-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/mcp/abatable-mcp.yml
+  href: https://artifacts.apis.io/abatable/mcp/abatable-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/abatable-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/authentication/abatable-authentication.yml
+  href: https://artifacts.apis.io/abatable/authentication/abatable-authentication.yml
   title: ''
   type: Authentication
   url: authentication/abatable-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/scopes/abatable-scopes.yml
+  href: https://artifacts.apis.io/abatable/scopes/abatable-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/abatable-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/conformance/abatable-conformance.yml
+  href: https://artifacts.apis.io/abatable/conformance/abatable-conformance.yml
   title: ''
   type: Conformance
   url: conformance/abatable-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/conventions/abatable-conventions.yml
+  href: https://artifacts.apis.io/abatable/conventions/abatable-conventions.yml
   title: ''
   type: Conventions
   url: conventions/abatable-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/lifecycle/abatable-lifecycle.yml
+  href: https://artifacts.apis.io/abatable/lifecycle/abatable-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/abatable-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/plans/abatable-plans-pricing.yml
+  href: https://artifacts.apis.io/abatable/plans/abatable-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/abatable-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/rate-limits/abatable-rate-limits.yml
+  href: https://artifacts.apis.io/abatable/rate-limits/abatable-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/abatable-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/packages/abatable-packages.yml
+  href: https://artifacts.apis.io/abatable/packages/abatable-packages.yml
   title: ''
   type: Packages
   url: packages/abatable-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/security/abatable-domain-security.yml
+  href: https://artifacts.apis.io/abatable/security/abatable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/abatable-domain-security.yml
@@ -165,7 +181,7 @@ score:
   band: emerging
   composite: 23.2
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -189,14 +205,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/abatable/refs/heads/main/screenshots/abatable-2026-10-11T092400.png
+screenshot: https://apis.io/screenshots/abatable/abatable-2026-10-11T092400.png
 security:
 - kind: authentication
   name: Abatable Authentication

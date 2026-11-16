@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -29,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Remote Model Context Protocol server operated by Wayground at https://wayground.com/_quizizzmcp/main/mcp. Its existence is declared by Wayground's own /.well-known/oauth-protected-resource document, w
@@ -86,52 +92,52 @@ common:
   type: PrivacyPolicy
   url: https://wayground.com/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/well-known/quizizz-well-known.yml
+  href: https://artifacts.apis.io/quizizz/well-known/quizizz-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/quizizz-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/llms/quizizz-llms.txt
+  href: https://artifacts.apis.io/quizizz/llms/quizizz-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/quizizz-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/plans/quizizz-plans-pricing.yml
+  href: https://artifacts.apis.io/quizizz/plans/quizizz-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quizizz-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/rate-limits/quizizz-rate-limits.yml
+  href: https://artifacts.apis.io/quizizz/rate-limits/quizizz-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/quizizz-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/conformance/quizizz-conformance.yml
+  href: https://artifacts.apis.io/quizizz/conformance/quizizz-conformance.yml
   title: ''
   type: Conformance
   url: conformance/quizizz-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/conformance/quizizz-conformance.yml
+  href: https://artifacts.apis.io/quizizz/conformance/quizizz-conformance.yml
   title: ''
   type: Compliance
   url: conformance/quizizz-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/conventions/quizizz-conventions.yml
+  href: https://artifacts.apis.io/quizizz/conventions/quizizz-conventions.yml
   title: ''
   type: Conventions
   url: conventions/quizizz-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/lifecycle/quizizz-lifecycle.yml
+  href: https://artifacts.apis.io/quizizz/lifecycle/quizizz-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/quizizz-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/packages/quizizz-packages.yml
+  href: https://artifacts.apis.io/quizizz/packages/quizizz-packages.yml
   title: ''
   type: Packages
   url: packages/quizizz-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/security/quizizz-domain-security.yml
+  href: https://artifacts.apis.io/quizizz/security/quizizz-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quizizz-domain-security.yml
@@ -169,13 +175,13 @@ score:
   band: thin
   composite: 31.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
@@ -183,7 +189,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 31.2
+  previous_composite: 31.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -193,14 +199,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/quizizz/refs/heads/main/screenshots/quizizz-2026-09-02T152710.png
+screenshot: https://apis.io/screenshots/quizizz/quizizz-2026-09-02T152710.png
 security:
 - kind: authentication
   name: Quizizz Authentication

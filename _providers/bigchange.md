@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 34.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 28
   slug: bigchange-agentic-access
   summary_line: 28 operations · 12 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.bigchange.com
   baseurl_source: declared
@@ -100,11 +106,113 @@ apis:
   description: The Webhooks API from BigChange — 2 operation(s) for webhooks.
   name: BigChange Webhooks API
   slug: bigchange-webhooks-api
-artifact_total: 31
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Absences API from BigChange — 3 operation(s) for absences.
+  name: BigChange Absences API
+  slug: bigchange-absences-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Attachments API from BigChange — 2 operation(s) for attachments.
+  name: BigChange Attachments API
+  slug: bigchange-attachments-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Custom Fields API from BigChange — 2 operation(s) for custom fields.
+  name: BigChange Custom Fields API
+  slug: bigchange-custom-fields-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Customers API from BigChange — 1 operation(s) for customers.
+  name: BigChange Customers API
+  slug: bigchange-customers-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Invoices API from BigChange — 12 operation(s) for invoices.
+  name: BigChange Invoices API
+  slug: bigchange-invoices-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The JobGroups API from BigChange — 13 operation(s) for jobgroups.
+  name: BigChange Job Groups API
+  slug: bigchange-jobgroups-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The JobRecurrences API from BigChange — 2 operation(s) for jobrecurrences.
+  name: BigChange Job Recurrences API
+  slug: bigchange-jobrecurrences-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The JobTypes API from BigChange — 2 operation(s) for jobtypes.
+  name: BigChange Job Types API
+  slug: bigchange-jobtypes-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Messages API from BigChange — 1 operation(s) for messages.
+  name: BigChange Messages API
+  slug: bigchange-messages-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Notes API from BigChange — 8 operation(s) for notes.
+  name: BigChange Notes API
+  slug: bigchange-notes-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The NoteTypes API from BigChange — 2 operation(s) for notetypes.
+  name: BigChange Note Types API
+  slug: bigchange-notetypes-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Prices API from BigChange — 1 operation(s) for prices.
+  name: BigChange Prices API
+  slug: bigchange-prices-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Quotes API from BigChange — 10 operation(s) for quotes.
+  name: BigChange Quotes API
+  slug: bigchange-quotes-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Routes API from BigChange — 1 operation(s) for routes.
+  name: BigChange Routes API
+  slug: bigchange-routes-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The SalesOpportunities API from BigChange — 11 operation(s) for salesopportunities.
+  name: BigChange Sales Opportunities API
+  slug: bigchange-salesopportunities-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Timesheets API from BigChange — 2 operation(s) for timesheets.
+  name: BigChange Timesheets API
+  slug: bigchange-timesheets-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The WorksheetGroups API from BigChange — 2 operation(s) for worksheetgroups.
+  name: BigChange Worksheet Groups API
+  slug: bigchange-worksheetgroups-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Worksheets API from BigChange — 6 operation(s) for worksheets.
+  name: BigChange Worksheets API
+  slug: bigchange-worksheets-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Contact Groups API from BigChange — 2 operation(s) for contact groups.
+  name: BigChange Contact Groups API
+  slug: bigchange-contact-groups-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Purchase Orders API from BigChange — 12 operation(s) for purchase orders.
+  name: BigChange Purchase Orders API
+  slug: bigchange-purchase-orders-api
+- baseURL: https://api.bigchange.com
+  baseurl_source: declared
+  description: The Resource Groups API from BigChange — 2 operation(s) for resource groups.
+  name: BigChange Resource Groups API
+  slug: bigchange-resource-groups-api
+artifact_total: 51
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: BigChange DX REST Assets API
   slug: open-bigchange-assets-api
@@ -143,22 +251,22 @@ collections:
   slug: open-bigchange
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/capabilities/bigchange-capability-edges.yml
+  href: https://artifacts.apis.io/bigchange/capabilities/bigchange-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bigchange-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/agentic-access/bigchange-agentic-access.yml
+  href: https://artifacts.apis.io/bigchange/agentic-access/bigchange-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bigchange-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/security/bigchange-domain-security.yml
+  href: https://artifacts.apis.io/bigchange/security/bigchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bigchange-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/authentication/bigchange-authentication.yml
+  href: https://artifacts.apis.io/bigchange/authentication/bigchange-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bigchange-authentication.yml
@@ -175,17 +283,17 @@ common:
   type: Documentation
   url: https://developers.bigchange.com/docs/rest/api-reference
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/plans/bigchange-plans-pricing.yml
+  href: https://artifacts.apis.io/bigchange/plans/bigchange-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bigchange-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/rate-limits/bigchange-rate-limits.yml
+  href: https://artifacts.apis.io/bigchange/rate-limits/bigchange-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bigchange-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/finops/bigchange-finops.yml
+  href: https://artifacts.apis.io/bigchange/finops/bigchange-finops.yml
   title: ''
   type: FinOps
   url: finops/bigchange-finops.yml
@@ -213,7 +321,7 @@ modified: '2026-07-12'
 name: BigChange
 nav: Providers
 network: true
-overview: 'BigChange publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Contacts API, Finance API, and 8 more. Tagged areas include Field Service, Job Management, Scheduling, Workforce Management, and Fleet.
+overview: 'BigChange publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Contacts API, Finance API, and 29 more. Tagged areas include Field Service Management, Job Management, Scheduling, Workforce Management, and Fleet Management.
 
 
   The BigChange catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -224,7 +332,7 @@ plans:
 - name: Bigchange Plans Pricing
   plan_count: 3
   slug: bigchange-plans-pricing
-random_paper: 18
+random_paper: 8
 rate_limits:
 - limit_count: 3
   name: Bigchange Rate Limits
@@ -244,43 +352,43 @@ rules:
   slug: bigchange-openapi-linting-spectral-rules
 score:
   band: thin
-  composite: 26.6
+  composite: 29.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 58.0
     catalog_earned_first_party: 15.0
     catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.8
+  delta: 1.6
   facets:
     access_clarity: 7.9
     contract_governance: 45.5
-    contract_quality: 40.1
+    contract_quality: 50.7
     developer_ergonomics: 15.5
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 29.4
+  previous_composite: 27.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 11
+      total: 44
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bigchange/refs/heads/main/screenshots/bigchange-2026-07-25T202925.png
+screenshot: https://apis.io/screenshots/bigchange/bigchange-2026-07-25T202925.png
 security:
 - kind: authentication
   name: Bigchange Authentication
@@ -292,11 +400,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: bigchange
 tags:
-- Field Service
+- Field Service Management
 - Job Management
 - Scheduling
 - Workforce Management
-- Fleet
+- Fleet Management
 - CRM
 - Software-as-a-Service
 website: https://www.bigchange.com

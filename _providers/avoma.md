@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: documented
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.4
-  scored_at: '2026-10-17'
+  score: 44.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -32,7 +47,7 @@ agentic_access:
   operation_count: 59
   slug: avoma-agentic-access
   summary_line: 59 operations · 23 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.avoma.com
   baseurl_source: declared
@@ -124,34 +139,34 @@ apis:
   description: '**Webhooks** Avoma Webhooks notify users about the successful occurrence of events within the Avoma application. Instead of polling or calling APIs to detect events, Avoma sends webhook events as HTTP'
   name: Avoma Webhooks API
   slug: avoma-webhooks-api
-artifact_total: 25
+artifact_total: 27
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.avoma.com/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/capabilities/avoma-capability-edges.yml
+  href: https://artifacts.apis.io/avoma/capabilities/avoma-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/avoma-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/agentic-access/avoma-agentic-access.yml
+  href: https://artifacts.apis.io/avoma/agentic-access/avoma-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/avoma-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/plans/avoma-plans-pricing.yml
+  href: https://artifacts.apis.io/avoma/plans/avoma-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/avoma-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/rules/avoma-rules.yml
+  href: https://artifacts.apis.io/avoma/rules/avoma-rules.yml
   title: ''
   type: Spectral
   url: rules/avoma-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/vocabulary/avoma-vocabulary.yml
+  href: https://artifacts.apis.io/avoma/vocabulary/avoma-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/avoma-vocabulary.yml
@@ -160,32 +175,32 @@ common:
   type: Compliance
   url: https://trust.avoma.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/errors/avoma-problem-types.yml
+  href: https://artifacts.apis.io/avoma/errors/avoma-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/avoma-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/conformance/avoma-conformance.yml
+  href: https://artifacts.apis.io/avoma/conformance/avoma-conformance.yml
   title: ''
   type: Conformance
   url: conformance/avoma-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/llms/avoma-llms.txt
+  href: https://artifacts.apis.io/avoma/llms/avoma-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/avoma-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/well-known/avoma-well-known.yml
+  href: https://artifacts.apis.io/avoma/well-known/avoma-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/avoma-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/hosts/avoma-hosts.yml
+  href: https://artifacts.apis.io/avoma/hosts/avoma-hosts.yml
   title: ''
   type: Hosts
   url: hosts/avoma-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/vendors/avoma-vendors.yml
+  href: https://artifacts.apis.io/avoma/vendors/avoma-vendors.yml
   title: ''
   type: Vendors
   url: vendors/avoma-vendors.yml
@@ -218,22 +233,22 @@ common:
   type: ChangeLog
   url: https://www.avoma.com/release-notes
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/authentication/avoma-authentication.yml
+  href: https://artifacts.apis.io/avoma/authentication/avoma-authentication.yml
   title: ''
   type: Authentication
   url: authentication/avoma-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/security/avoma-trust-center.yml
+  href: https://artifacts.apis.io/avoma/security/avoma-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/avoma-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/security/avoma-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/avoma/security/avoma-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/avoma-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/security/avoma-domain-security.yml
+  href: https://artifacts.apis.io/avoma/security/avoma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/avoma-domain-security.yml
@@ -266,6 +281,14 @@ coverage:
   state: unreadable
 created: '2026-09-27'
 description: Avoma is an AI-powered meeting assistant platform that automates note‑taking, scheduling, and coaching for sales and revenue teams. It records and transcribes meetings in real time, generates structured summaries, pushes data to CRMs, and provides AI‑driven sales coaching and guidance. The platform also offers lead routing, meeting reminders, and revenue intelligence tools to help organizations improve productivity and close deals faster.
+finops:
+- has_sources: true
+  method: derived
+  name: Avoma Finops
+  primary_unit: seat
+  service_category: ''
+  slug: avoma-finops
+  template: false
 image: https://cdn.prod.website-files.com/5de236b4d41434460ade73ac/675b1cc5e923eddc26d5aa07_Og%20Image.webp
 layout: provider
 modified: '2026-10-06'
@@ -283,6 +306,9 @@ plans:
 - name: Avoma Plans Pricing
   plan_count: 5
   slug: avoma-plans-pricing
+- name: Avoma Price Estimates
+  plan_count: 0
+  slug: avoma-price-estimates
 random_paper: 4
 rules:
 - authorship: generated
@@ -298,31 +324,31 @@ rules:
     warn: 3
   slug: avoma-rules
 score:
-  band: strong
-  composite: 56.0
+  band: developing
+  composite: 49.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 54.8
+    artifact_dirs: 22
+    catalog_earned: 57.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 60.3
+    catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -8.5
   facets:
-    access_clarity: 78.9
+    access_clarity: 67.1
     contract_governance: 22.0
-    contract_quality: 51.7
-    developer_ergonomics: 45.2
-    discoverability: 75.0
-    operational_transparency: 26.3
-  previous_composite: 55.9
+    contract_quality: 57.3
+    developer_ergonomics: 28.6
+    discoverability: 74.1
+    operational_transparency: 13.2
+  previous_composite: 57.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 18
     mcp: derived
   regulatory:
@@ -330,14 +356,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 26.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/avoma/refs/heads/main/screenshots/avoma-2026-10-11T101202.png
+screenshot: https://apis.io/screenshots/avoma/avoma-2026-10-11T101202.png
 security:
 - kind: authentication
   name: Avoma Authentication

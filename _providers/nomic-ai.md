@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 22.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -90,9 +96,6 @@ apis:
 artifact_total: 25
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Nomic Atlas Embeddings API
   slug: open-nomic-ai-embeddings-api
 - collection_type: open
@@ -122,27 +125,27 @@ common:
   type: Releases
   url: https://github.com/nomic-ai/nomic/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/agentic-access/nomic-ai-agentic-access.yml
+  href: https://artifacts.apis.io/nomic-ai/agentic-access/nomic-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nomic-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/security/nomic-ai-trust-center.yml
+  href: https://artifacts.apis.io/nomic-ai/security/nomic-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/nomic-ai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/security/nomic-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nomic-ai/security/nomic-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nomic-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/security/nomic-ai-domain-security.yml
+  href: https://artifacts.apis.io/nomic-ai/security/nomic-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nomic-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/authentication/nomic-ai-authentication.yml
+  href: https://artifacts.apis.io/nomic-ai/authentication/nomic-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nomic-ai-authentication.yml
@@ -167,17 +170,17 @@ common:
   type: HuggingFace
   url: https://huggingface.co/nomic-ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/plans/nomic-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/nomic-ai/plans/nomic-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nomic-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/rate-limits/nomic-ai-rate-limits.yml
+  href: https://artifacts.apis.io/nomic-ai/rate-limits/nomic-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nomic-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/finops/nomic-ai-finops.yml
+  href: https://artifacts.apis.io/nomic-ai/finops/nomic-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/nomic-ai-finops.yml
@@ -200,35 +203,51 @@ network: true
 overview: 'Nomic AI publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Embeddings API, Files API, Tasks API, and 9 more. Tagged areas include Embeddings, Data Exploration, LLM, Open Source, and RAG.
 
 
+  The Nomic AI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Nomic AI''s developer surface includes engineering blog, authentication, documentation, GitHub presence, and 13 more developer resources.'
 plans:
 - name: Nomic Ai Plans Pricing
   plan_count: 1
   slug: nomic-ai-plans-pricing
-random_paper: 11
+random_paper: 13
 rate_limits:
 - limit_count: 2
   name: Nomic Ai Rate Limits
   slug: nomic-ai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Nomic AI API Rules
+  rule_count: 50
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 1
+  slug: nomic-ai-rules
 score:
   band: thin
-  composite: 30.6
+  composite: 33.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 52.2
     developer_ergonomics: 23.8
     discoverability: 66.1
-    operational_transparency: 26.3
-  previous_composite: 36.2
+    operational_transparency: 36.8
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
@@ -242,13 +261,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nomic-ai/refs/heads/main/screenshots/nomic-ai-2026-06-20T190456.png
+screenshot: https://apis.io/screenshots/nomic-ai/nomic-ai-2026-06-20T190456.png
 security:
 - kind: authentication
   name: Nomic Ai Authentication

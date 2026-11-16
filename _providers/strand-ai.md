@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-10-17'
+  score: 32.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -64,11 +67,8 @@ apis:
   description: The Uploads API from Strand AI — 2 operation(s) for uploads.
   name: Strand AI Uploads API
   slug: strand-ai-uploads-api
-artifact_total: 13
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Strand AI Platform Jobs API
   slug: open-strand-ai-jobs-api
@@ -83,7 +83,7 @@ collections:
   slug: open-strand-ai-uploads-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/plans/strand-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/strand-ai/plans/strand-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/strand-ai-plans-pricing.yml
@@ -124,82 +124,82 @@ common:
   type: Website
   url: https://strandai.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/llms/strand-ai-llms.txt
+  href: https://artifacts.apis.io/strand-ai/llms/strand-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/strand-ai-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/authentication/strand-ai-authentication.yml
+  href: https://artifacts.apis.io/strand-ai/authentication/strand-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/strand-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/security/strand-ai-domain-security.yml
+  href: https://artifacts.apis.io/strand-ai/security/strand-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/strand-ai-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/agentic-access/strand-ai-agentic-access.yml
+  href: https://artifacts.apis.io/strand-ai/agentic-access/strand-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/strand-ai-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/packages/strand-ai-packages.yml
+  href: https://artifacts.apis.io/strand-ai/packages/strand-ai-packages.yml
   title: ''
   type: Packages
   url: packages/strand-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/packages/strand-ai-packages.yml
+  href: https://artifacts.apis.io/strand-ai/packages/strand-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/strand-ai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/mcp/strand-ai-mcp.yml
+  href: https://artifacts.apis.io/strand-ai/mcp/strand-ai-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/strand-ai-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/overlays/strand-ai-platform-overlay.yaml
+  href: https://artifacts.apis.io/strand-ai/overlays/strand-ai-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/strand-ai-platform-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/conformance/strand-ai-conformance.yml
+  href: https://artifacts.apis.io/strand-ai/conformance/strand-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/strand-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/errors/strand-ai-problem-types.yml
+  href: https://artifacts.apis.io/strand-ai/errors/strand-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/strand-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/lifecycle/strand-ai-lifecycle.yml
+  href: https://artifacts.apis.io/strand-ai/lifecycle/strand-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/strand-ai-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/lifecycle/strand-ai-lifecycle.yml
+  href: https://artifacts.apis.io/strand-ai/lifecycle/strand-ai-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/strand-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/conventions/strand-ai-conventions.yml
+  href: https://artifacts.apis.io/strand-ai/conventions/strand-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/strand-ai-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/changelog/strand-ai-changelog.yml
+  href: https://artifacts.apis.io/strand-ai/changelog/strand-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/strand-ai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/data-model/strand-ai-data-model.yml
+  href: https://artifacts.apis.io/strand-ai/data-model/strand-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/strand-ai-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/strand-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -214,31 +214,47 @@ network: true
 overview: 'Strand AI publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Jobs API, Predict API, Samples API, and 1 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Life Sciences, and Spatial Biology.
 
 
+  The Strand AI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Strand AI''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, authentication, changelog, and 19 more developer resources.'
 plans:
 - name: Strand Ai Plans Pricing
   plan_count: 0
   slug: strand-ai-plans-pricing
-random_paper: 19
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Strand AI API Rules
+  rule_count: 52
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 3
+  slug: strand-ai-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 37.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.2
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 36.0
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -255,13 +271,13 @@ score:
     regime: Health
     regime_id: health
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/strand-ai/refs/heads/main/screenshots/strand-ai-2026-09-02T160944.png
+screenshot: https://apis.io/screenshots/strand-ai/strand-ai-2026-09-02T160944.png
 security:
 - kind: authentication
   name: Strand Ai Authentication
@@ -271,6 +287,12 @@ security:
   name: Strand Ai Domain Security
   slug: strand-ai-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Manage sample retention and recovery
+  slug: strand-ai-manage-retention
+- name: Predict protein markers from an H&E slide
+  slug: strand-ai-predict-markers
 slug: strand-ai
 tags:
 - Company

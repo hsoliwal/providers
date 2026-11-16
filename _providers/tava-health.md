@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/security/tava-health-domain-security.yml
+  href: https://artifacts.apis.io/tava-health/security/tava-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tava-health-domain-security.yml
@@ -84,37 +87,37 @@ common:
   type: StatusPage
   url: https://tavahealth.statuspage.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/lifecycle/tava-health-lifecycle.yml
+  href: https://artifacts.apis.io/tava-health/lifecycle/tava-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tava-health-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/conformance/tava-health-conformance.yml
+  href: https://artifacts.apis.io/tava-health/conformance/tava-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tava-health-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/conformance/tava-health-conformance.yml
+  href: https://artifacts.apis.io/tava-health/conformance/tava-health-conformance.yml
   title: ''
   type: Compliance
   url: conformance/tava-health-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/packages/tava-health-packages.yml
+  href: https://artifacts.apis.io/tava-health/packages/tava-health-packages.yml
   title: ''
   type: Packages
   url: packages/tava-health-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/plans/tava-health-plans-pricing.yml
+  href: https://artifacts.apis.io/tava-health/plans/tava-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tava-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/rate-limits/tava-health-rate-limits.yml
+  href: https://artifacts.apis.io/tava-health/rate-limits/tava-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tava-health-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/llms/tava-health-llms.txt
+  href: https://artifacts.apis.io/tava-health/llms/tava-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tava-health-llms.txt
@@ -151,7 +154,7 @@ plans:
 - name: Tava Health Plans Pricing
   plan_count: 0
   slug: tava-health-plans-pricing
-random_paper: 3
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Tava Health Rate Limits
@@ -160,7 +163,7 @@ score:
   band: emerging
   composite: 16.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -188,14 +191,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tava-health/refs/heads/main/screenshots/tava-health-2026-09-02T162617.png
+screenshot: https://apis.io/screenshots/tava-health/tava-health-2026-09-02T162617.png
 security:
 - kind: domain-security
   name: Tava Health Domain Security

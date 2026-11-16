@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-western-bank/refs/heads/main/security/canadian-western-bank-domain-security.yml
+  href: https://artifacts.apis.io/canadian-western-bank/security/canadian-western-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canadian-western-bank-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-western-bank/refs/heads/main/llms/canadian-western-bank-llms.txt
+  href: https://artifacts.apis.io/canadian-western-bank/llms/canadian-western-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/canadian-western-bank-llms.txt
@@ -74,7 +77,7 @@ name: Canadian Western Bank
 nav: Providers
 network: true
 overview: Canadian Western Bank is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Canada, Schedule I Bank, and Business Banking.
-random_paper: 3
+random_paper: 5
 score:
   band: minimal
   composite: 3.2
@@ -107,14 +110,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/canadian-western-bank/refs/heads/main/screenshots/canadian-western-bank-2026-07-25T204330.png
+screenshot: https://apis.io/screenshots/canadian-western-bank/canadian-western-bank-2026-07-25T204330.png
 security:
 - kind: domain-security
   name: Canadian Western Bank Domain Security

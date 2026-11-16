@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,9 +38,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -62,42 +67,42 @@ common:
   type: PrivacyPolicy
   url: https://babymori.com/pages/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/well-known/mori-well-known.yml
+  href: https://artifacts.apis.io/mori/well-known/mori-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mori-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/security/mori-domain-security.yml
+  href: https://artifacts.apis.io/mori/security/mori-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mori-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/mcp/mori-mcp.yml
+  href: https://artifacts.apis.io/mori/mcp/mori-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/mori-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/llms/mori-llms.txt
+  href: https://artifacts.apis.io/mori/llms/mori-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mori-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/authentication/mori-authentication.yml
+  href: https://artifacts.apis.io/mori/authentication/mori-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mori-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/scopes/mori-scopes.yml
+  href: https://artifacts.apis.io/mori/scopes/mori-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/mori-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/conformance/mori-conformance.yml
+  href: https://artifacts.apis.io/mori/conformance/mori-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mori-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mori/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -117,7 +122,7 @@ overview: 'MORI is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   MORI''s developer surface includes engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 21
+random_paper: 7
 scopes:
 - name: Mori Scopes
   scope_count: 4
@@ -127,13 +132,13 @@ score:
   band: emerging
   composite: 19.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -146,7 +151,7 @@ score:
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 19.2
+  previous_composite: 19.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -157,14 +162,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mori/refs/heads/main/screenshots/mori-2026-08-07T184304.png
+screenshot: https://apis.io/screenshots/mori/mori-2026-08-07T184304.png
 security:
 - kind: authentication
   name: Mori Authentication
@@ -174,6 +179,10 @@ security:
   name: Mori Domain Security
   slug: mori-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: mori-shop-catalog
+  slug: mori-shop-catalog
 slug: mori
 tags:
 - Company

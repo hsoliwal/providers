@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
-  onboarding: unknown
+  label: Requires approval
+  onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/security/enersys-domain-security.yml
+  href: https://artifacts.apis.io/enersys/security/enersys-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/enersys-domain-security.yml
@@ -62,27 +67,27 @@ common:
   type: Tools
   url: https://mptools.enersys.com/carb/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/security/enersys-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/enersys/security/enersys-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/enersys-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/security/enersys-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/enersys/security/enersys-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/enersys-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/llms/enersys-llms.txt
+  href: https://artifacts.apis.io/enersys/llms/enersys-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/enersys-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/plans/enersys-plans-pricing.yml
+  href: https://artifacts.apis.io/enersys/plans/enersys-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/enersys-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/rate-limits/enersys-rate-limits.yml
+  href: https://artifacts.apis.io/enersys/rate-limits/enersys-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/enersys-rate-limits.yml
@@ -148,7 +153,7 @@ press:
 - date: ''
   title: 'EnerSys: The Battery Company Sitting Right In The Middle ...'
   url: https://seekingalpha.com/article/4898339-enersysthe-battery-company-sitting-right-in-the-middle-of-the-ai-boom
-random_paper: 7
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Enersys Rate Limits
@@ -157,7 +162,7 @@ score:
   band: emerging
   composite: 12.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -178,14 +183,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/enersys/refs/heads/main/screenshots/enersys-2026-06-20T180710.png
+screenshot: https://apis.io/screenshots/enersys/enersys-2026-06-20T180710.png
 security:
 - kind: domain-security
   name: Enersys Domain Security

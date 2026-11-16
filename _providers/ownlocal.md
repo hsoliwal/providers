@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Partner / contact required
+  confidence: low
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
-  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.7
-  scored_at: '2026-10-17'
-api_count: 6
+  score: 33.5
+  scored_at: '2026-11-06'
+api_count: 5
 apis:
 - baseURL: https://admin.austin.ownlocal.com
   baseurl_source: declared
@@ -57,7 +61,7 @@ apis:
   description: Performance reporting for ads and businesses — impressions, interaction breakdowns, leads, digital lift and search-rank history.
   name: OwnLocal Reports Data API
   slug: ownlocal-reports-data-api-api
-artifact_total: 12
+artifact_total: 16
 collections:
 - collection_type: open
   name: OwnLocal API — Ads
@@ -73,32 +77,32 @@ collections:
   slug: open-ownlocal-reports-data-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/capabilities/ownlocal-capability-edges.yml
+  href: https://artifacts.apis.io/ownlocal/capabilities/ownlocal-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ownlocal-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/overlays/ownlocal-ads-overlay.yaml
+  href: https://artifacts.apis.io/ownlocal/overlays/ownlocal-ads-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ownlocal-ads-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/overlays/ownlocal-businesses-overlay.yaml
+  href: https://artifacts.apis.io/ownlocal/overlays/ownlocal-businesses-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ownlocal-businesses-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/overlays/ownlocal-categories-overlay.yaml
+  href: https://artifacts.apis.io/ownlocal/overlays/ownlocal-categories-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ownlocal-categories-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/overlays/ownlocal-reports-data-api-overlay.yaml
+  href: https://artifacts.apis.io/ownlocal/overlays/ownlocal-reports-data-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ownlocal-reports-data-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/mcp/ownlocal-mcp.yml
+  href: https://artifacts.apis.io/ownlocal/mcp/ownlocal-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ownlocal-mcp.yml
@@ -135,62 +139,62 @@ common:
   type: StatusPage
   url: https://status.ownlocal.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/authentication/ownlocal-authentication.yml
+  href: https://artifacts.apis.io/ownlocal/authentication/ownlocal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ownlocal-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/conventions/ownlocal-conventions.yml
+  href: https://artifacts.apis.io/ownlocal/conventions/ownlocal-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ownlocal-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/data-model/ownlocal-data-model.yml
+  href: https://artifacts.apis.io/ownlocal/data-model/ownlocal-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ownlocal-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/errors/ownlocal-problem-types.yml
+  href: https://artifacts.apis.io/ownlocal/errors/ownlocal-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ownlocal-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/lifecycle/ownlocal-lifecycle.yml
+  href: https://artifacts.apis.io/ownlocal/lifecycle/ownlocal-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ownlocal-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/conformance/ownlocal-conformance.yml
+  href: https://artifacts.apis.io/ownlocal/conformance/ownlocal-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ownlocal-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/rate-limits/ownlocal-rate-limits.yml
+  href: https://artifacts.apis.io/ownlocal/rate-limits/ownlocal-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ownlocal-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/plans/ownlocal-plans-pricing.yml
+  href: https://artifacts.apis.io/ownlocal/plans/ownlocal-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ownlocal-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/packages/ownlocal-packages.yml
+  href: https://artifacts.apis.io/ownlocal/packages/ownlocal-packages.yml
   title: ''
   type: Packages
   url: packages/ownlocal-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/llms/ownlocal-llms.txt
+  href: https://artifacts.apis.io/ownlocal/llms/ownlocal-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ownlocal-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ownlocal/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/security/ownlocal-domain-security.yml
+  href: https://artifacts.apis.io/ownlocal/security/ownlocal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ownlocal-domain-security.yml
@@ -206,41 +210,57 @@ network: true
 overview: 'OwnLocal publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ads API, Businesses API, Categories API, and 1 more. Tagged areas include Company, Advertising, Local Media, Digital Advertising, and Marketing.
 
 
+  The OwnLocal catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   OwnLocal''s developer surface includes documentation, API reference, support, authentication, and 22 more developer resources.'
 plans:
 - name: Ownlocal Plans Pricing
   plan_count: 0
   slug: ownlocal-plans-pricing
-random_paper: 5
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Ownlocal Rate Limits
   slug: ownlocal-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: OwnLocal API Rules
+  rule_count: 43
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 2
+    warn: 1
+  slug: ownlocal-rules
 score:
   band: thin
-  composite: 30.4
+  composite: 33.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
-    contract_quality: 41.6
+    contract_governance: 18.2
+    contract_quality: 46.3
     developer_ergonomics: 35.1
     discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 30.4
+  previous_composite: 32.1
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: derived
     skills: derived
@@ -250,13 +270,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/screenshots/ownlocal-2026-08-07T191206.png
+screenshot: https://apis.io/screenshots/ownlocal/ownlocal-2026-08-07T191206.png
 security:
 - kind: authentication
   name: Ownlocal Authentication
@@ -266,6 +286,14 @@ security:
   name: Ownlocal Domain Security
   slug: ownlocal-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 3
+skills:
+- name: ownlocal-onboard-local-business
+  slug: ownlocal-onboard-local-business
+- name: ownlocal-report-ad-performance
+  slug: ownlocal-report-ad-performance
+- name: ownlocal-submit-print-ad
+  slug: ownlocal-submit-print-ad
 slug: ownlocal
 tags:
 - Company

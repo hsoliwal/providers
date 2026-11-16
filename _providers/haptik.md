@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
-- description: Conversational AI platform API documented at Haptik Docs
+- baseURL: https://staging-messenger.haptikapi.com
+  baseurl_source: spec
+  description: Conversational AI platform API documented at Haptik Docs
   name: Haptik API
-  slug: haptik-api-2
+  slug: haptik-api
 - baseURL: https://staging-messenger.haptikapi.com
   baseurl_source: declared
   description: The Gccs Ws API from Haptik — 1 operation(s) for gccs ws.
@@ -66,37 +81,37 @@ asyncapis:
   slug: haptik-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/well-known/haptik-well-known.yml
+  href: https://artifacts.apis.io/haptik/well-known/haptik-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/haptik-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/rules/haptik-rules.yml
+  href: https://artifacts.apis.io/haptik/rules/haptik-rules.yml
   title: ''
   type: Spectral
   url: rules/haptik-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/json-ld/haptik-context.jsonld
+  href: https://artifacts.apis.io/haptik/json-ld/haptik-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/haptik-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/vocabulary/haptik-vocabulary.yml
+  href: https://artifacts.apis.io/haptik/vocabulary/haptik-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/haptik-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/asyncapi/haptik-webhooks.yml
+  href: https://artifacts.apis.io/haptik/asyncapi/haptik-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/haptik-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/data-model/haptik-data-model.yml
+  href: https://artifacts.apis.io/haptik/data-model/haptik-data-model.yml
   title: ''
   type: DataModel
   url: data-model/haptik-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/changelog/haptik-changelog.yml
+  href: https://artifacts.apis.io/haptik/changelog/haptik-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/haptik-changelog.yml
@@ -105,17 +120,17 @@ common:
   type: Compliance
   url: https://trust.haptik.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/conformance/haptik-conformance.yml
+  href: https://artifacts.apis.io/haptik/conformance/haptik-conformance.yml
   title: ''
   type: Conformance
   url: conformance/haptik-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/hosts/haptik-hosts.yml
+  href: https://artifacts.apis.io/haptik/hosts/haptik-hosts.yml
   title: ''
   type: Hosts
   url: hosts/haptik-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/vendors/haptik-vendors.yml
+  href: https://artifacts.apis.io/haptik/vendors/haptik-vendors.yml
   title: ''
   type: Vendors
   url: vendors/haptik-vendors.yml
@@ -148,12 +163,12 @@ common:
   type: Documentation
   url: https://docs.haptik.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/security/haptik-trust-center.yml
+  href: https://artifacts.apis.io/haptik/security/haptik-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/haptik-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/haptik/refs/heads/main/security/haptik-domain-security.yml
+  href: https://artifacts.apis.io/haptik/security/haptik-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/haptik-domain-security.yml
@@ -200,14 +215,14 @@ modified: '2026-10-13'
 name: Haptik
 nav: Providers
 network: true
-overview: 'Haptik is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Gccs Ws API, Haptik API, Integration API, and 4 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, Messaging, and Enterprise.
+overview: 'Haptik is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Gccs Ws API, Haptik API, and 5 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, Messaging, and Enterprise.
 
 
   The Haptik catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
   Haptik''s developer surface includes changelog, support, engineering blog, getting-started guide, documentation, and 16 more developer resources.'
-random_paper: 3
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -223,21 +238,23 @@ rules:
   slug: haptik-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 29.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 58.8
     catalog_earned_first_party: 0.0
     catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.6
   facets:
-    access_clarity: 36.8
+    access_clarity: 22.4
     contract_governance: 35.6
     contract_quality: 33.3
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 58.9
-    operational_transparency: 23.7
+    operational_transparency: 15.8
+  previous_composite: 36.7
   provenance:
     conformance: first-party
     contracts:
@@ -255,12 +272,14 @@ score:
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
-    score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/haptik/haptik-2026-11-03T133153.png
 security:
 - kind: domain-security
   name: Haptik Domain Security

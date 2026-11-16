@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The JuliaHub cloud platform for scientific and technical computing - hosted Julia compute, batch/job execution, datasets, and the Julia package registry. Accessed programmatically through the first-pa
@@ -42,7 +47,7 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/plans/julia-computing-plans-pricing.yml
+  href: https://artifacts.apis.io/julia-computing/plans/julia-computing-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/julia-computing-plans-pricing.yml
@@ -91,47 +96,47 @@ common:
   type: TrustCenter
   url: https://trust.juliahub.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/security/julia-computing-trust-center.yml
+  href: https://artifacts.apis.io/julia-computing/security/julia-computing-trust-center.yml
   title: ''
   type: Compliance
   url: security/julia-computing-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/authentication/julia-computing-authentication.yml
+  href: https://artifacts.apis.io/julia-computing/authentication/julia-computing-authentication.yml
   title: ''
   type: Authentication
   url: authentication/julia-computing-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/scopes/julia-computing-scopes.yml
+  href: https://artifacts.apis.io/julia-computing/scopes/julia-computing-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/julia-computing-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/well-known/julia-computing-well-known.yml
+  href: https://artifacts.apis.io/julia-computing/well-known/julia-computing-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/julia-computing-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/packages/julia-computing-packages.yml
+  href: https://artifacts.apis.io/julia-computing/packages/julia-computing-packages.yml
   title: ''
   type: Packages
   url: packages/julia-computing-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/packages/julia-computing-packages.yml
+  href: https://artifacts.apis.io/julia-computing/packages/julia-computing-packages.yml
   title: ''
   type: SDKs
   url: packages/julia-computing-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/conformance/julia-computing-conformance.yml
+  href: https://artifacts.apis.io/julia-computing/conformance/julia-computing-conformance.yml
   title: ''
   type: Conformance
   url: conformance/julia-computing-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/security/julia-computing-domain-security.yml
+  href: https://artifacts.apis.io/julia-computing/security/julia-computing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/julia-computing-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/llms/julia-computing-llms.txt
+  href: https://artifacts.apis.io/julia-computing/llms/julia-computing-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/julia-computing-llms.txt
@@ -151,7 +156,7 @@ plans:
 - name: Julia Computing Plans Pricing
   plan_count: 0
   slug: julia-computing-plans-pricing
-random_paper: 20
+random_paper: 0
 scopes:
 - name: Julia Computing Scopes
   scope_count: 5
@@ -161,7 +166,7 @@ score:
   band: thin
   composite: 31.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -190,14 +195,14 @@ score:
     regime: Health
     regime_id: health
     score: 31.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/julia-computing/refs/heads/main/screenshots/julia-computing-2026-07-25T223305.png
+screenshot: https://apis.io/screenshots/julia-computing/julia-computing-2026-07-25T223305.png
 security:
 - kind: authentication
   name: Julia Computing Authentication

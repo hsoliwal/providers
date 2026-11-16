@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitwiseassetmanagement/refs/heads/main/hosts/bitwiseassetmanagement-hosts.yml
+  href: https://artifacts.apis.io/bitwiseassetmanagement/hosts/bitwiseassetmanagement-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bitwiseassetmanagement-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitwiseassetmanagement/refs/heads/main/vendors/bitwiseassetmanagement-vendors.yml
+  href: https://artifacts.apis.io/bitwiseassetmanagement/vendors/bitwiseassetmanagement-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bitwiseassetmanagement-vendors.yml
@@ -50,7 +63,7 @@ common:
   type: Documentation
   url: https://developers.bitwiseinvestments.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitwiseassetmanagement/refs/heads/main/security/bitwiseassetmanagement-domain-security.yml
+  href: https://artifacts.apis.io/bitwiseassetmanagement/security/bitwiseassetmanagement-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitwiseassetmanagement-domain-security.yml
@@ -90,24 +103,24 @@ overview: 'Bitwiseassetmanagement is profiled on the [APIs.io](https://apis.io/)
 
 
   Bitwiseassetmanagement''s developer surface includes signup flow, documentation, and 8 more developer resources.'
-random_paper: 2
+random_paper: 4
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   previous_composite: 12.6
   provenance:
@@ -118,8 +131,8 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 13.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

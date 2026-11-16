@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: REST Web3 data API on the Ronin blockchain — query accounts, NFTs, tokens, collections, blocks, smart contracts and transactions. Authenticated with an X-API-KEY issued from the Ronin Developer Consol
@@ -45,7 +51,7 @@ apis:
 - description: OAuth2 / OpenID Connect account service and keyless wallet for onboarding players into Ronin games. Discovery is published at the athena.skymavis.com issuer; supports authorization_code, client_creden
   name: Ronin Waypoint Account Service
   slug: ronin-waypoint-account-service
-artifact_total: 6
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -92,77 +98,77 @@ common:
   type: SignUp
   url: https://developers.roninchain.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/packages/sky-mavis-packages.yml
+  href: https://artifacts.apis.io/sky-mavis/packages/sky-mavis-packages.yml
   title: ''
   type: Packages
   url: packages/sky-mavis-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/packages/sky-mavis-packages.yml
+  href: https://artifacts.apis.io/sky-mavis/packages/sky-mavis-packages.yml
   title: ''
   type: SDKs
   url: packages/sky-mavis-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/well-known/sky-mavis-well-known.yml
+  href: https://artifacts.apis.io/sky-mavis/well-known/sky-mavis-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sky-mavis-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/authentication/sky-mavis-authentication.yml
+  href: https://artifacts.apis.io/sky-mavis/authentication/sky-mavis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sky-mavis-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/scopes/sky-mavis-scopes.yml
+  href: https://artifacts.apis.io/sky-mavis/scopes/sky-mavis-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sky-mavis-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/conventions/sky-mavis-conventions.yml
+  href: https://artifacts.apis.io/sky-mavis/conventions/sky-mavis-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sky-mavis-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/conformance/sky-mavis-conformance.yml
+  href: https://artifacts.apis.io/sky-mavis/conformance/sky-mavis-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sky-mavis-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/errors/sky-mavis-problem-types.yml
+  href: https://artifacts.apis.io/sky-mavis/errors/sky-mavis-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sky-mavis-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/lifecycle/sky-mavis-lifecycle.yml
+  href: https://artifacts.apis.io/sky-mavis/lifecycle/sky-mavis-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sky-mavis-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/sandbox/sky-mavis-sandbox.yml
+  href: https://artifacts.apis.io/sky-mavis/sandbox/sky-mavis-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/sky-mavis-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/components/sky-mavis-components.yml
+  href: https://artifacts.apis.io/sky-mavis/components/sky-mavis-components.yml
   title: ''
   type: Components
   url: components/sky-mavis-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/mcp/sky-mavis-mcp.yml
+  href: https://artifacts.apis.io/sky-mavis/mcp/sky-mavis-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/sky-mavis-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/llms/sky-mavis-llms.txt
+  href: https://artifacts.apis.io/sky-mavis/llms/sky-mavis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sky-mavis-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sky-mavis/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/security/sky-mavis-domain-security.yml
+  href: https://artifacts.apis.io/sky-mavis/security/sky-mavis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sky-mavis-domain-security.yml
@@ -178,7 +184,7 @@ overview: 'Sky Mavis is listed with 3 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Sky Mavis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, sandbox, and 19 more developer resources.'
-random_paper: 8
+random_paper: 20
 scopes:
 - name: Sky Mavis Scopes
   scope_count: 3
@@ -188,7 +194,7 @@ score:
   band: thin
   composite: 33.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -213,14 +219,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sky-mavis/refs/heads/main/screenshots/sky-mavis-2026-09-02T155750.png
+screenshot: https://apis.io/screenshots/sky-mavis/sky-mavis-2026-09-02T155750.png
 security:
 - kind: authentication
   name: Sky Mavis Authentication
@@ -230,6 +236,10 @@ security:
   name: Sky Mavis Domain Security
   slug: sky-mavis-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Read Ronin chain data via JSON-RPC
+  slug: sky-mavis-read-ronin-chain
 slug: sky-mavis
 tags:
 - Company

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -65,7 +69,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/unmind
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unmind/refs/heads/main/security/unmind-trust-center.yml
+  href: https://artifacts.apis.io/unmind/security/unmind-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/unmind-trust-center.yml
@@ -74,12 +78,12 @@ common:
   type: Compliance
   url: https://trust.unmind.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unmind/refs/heads/main/security/unmind-domain-security.yml
+  href: https://artifacts.apis.io/unmind/security/unmind-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unmind-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unmind/refs/heads/main/llms/unmind-llms.txt
+  href: https://artifacts.apis.io/unmind/llms/unmind-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unmind-llms.txt
@@ -95,18 +99,18 @@ overview: 'Unmind is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Unmind''s developer surface includes engineering blog, support, and 9 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: emerging
   composite: 15.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 0.0
@@ -114,21 +118,21 @@ score:
     developer_ergonomics: 7.1
     discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 15.6
+  previous_composite: 15.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unmind/refs/heads/main/screenshots/unmind-2026-09-02T164955.png
+screenshot: https://apis.io/screenshots/unmind/unmind-2026-09-02T164955.png
 security:
 - kind: domain-security
   name: Unmind Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -41,7 +45,7 @@ common:
   type: BlogRSS
   url: https://www.cmtelematics.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cambridge-mobile-telematics/refs/heads/main/security/cambridge-mobile-telematics-domain-security.yml
+  href: https://artifacts.apis.io/cambridge-mobile-telematics/security/cambridge-mobile-telematics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cambridge-mobile-telematics-domain-security.yml
@@ -82,17 +86,17 @@ common:
   type: TermsOfService
   url: https://www.cmtelematics.com/mobilelicense/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cambridge-mobile-telematics/refs/heads/main/conformance/cambridge-mobile-telematics-conformance.yml
+  href: https://artifacts.apis.io/cambridge-mobile-telematics/conformance/cambridge-mobile-telematics-conformance.yml
   title: ''
   type: Compliance
   url: conformance/cambridge-mobile-telematics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cambridge-mobile-telematics/refs/heads/main/conformance/cambridge-mobile-telematics-conformance.yml
+  href: https://artifacts.apis.io/cambridge-mobile-telematics/conformance/cambridge-mobile-telematics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cambridge-mobile-telematics-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cambridge-mobile-telematics/refs/heads/main/llms/cambridge-mobile-telematics-llms.txt
+  href: https://artifacts.apis.io/cambridge-mobile-telematics/llms/cambridge-mobile-telematics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cambridge-mobile-telematics-llms.txt
@@ -108,12 +112,12 @@ overview: 'Cambridge Mobile Telematics is profiled on the [APIs.io](https://apis
 
 
   Cambridge Mobile Telematics'' developer surface includes developer portal, documentation, engineering blog, support, and 10 more developer resources.'
-random_paper: 9
+random_paper: 3
 score:
   band: emerging
   composite: 20.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -140,14 +144,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 27.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cambridge-mobile-telematics/refs/heads/main/screenshots/cambridge-mobile-telematics-2026-07-25T204305.png
+screenshot: https://apis.io/screenshots/cambridge-mobile-telematics/cambridge-mobile-telematics-2026-07-25T204305.png
 security:
 - kind: domain-security
   name: Cambridge Mobile Telematics Domain Security

@@ -20,21 +20,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.8
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 144
   human_in_the_loop: 2
@@ -394,11 +397,8 @@ apis:
   description: The zzz-webhook API from CrunchDAO — 1 operation(s) for zzz-webhook.
   name: CrunchDAO Zzz Webhook API
   slug: crunchdao-zzz-webhook-api
-artifact_total: 144
+artifact_total: 146
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Tournament activity API
   slug: open-crunchdao-activity-api
@@ -611,57 +611,57 @@ collections:
   slug: open-crunchdao-zzz-webhook-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/capabilities/crunchdao-capability-edges.yml
+  href: https://artifacts.apis.io/crunchdao/capabilities/crunchdao-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/crunchdao-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/overlays/crunchdao-tournament-overlay.yaml
+  href: https://artifacts.apis.io/crunchdao/overlays/crunchdao-tournament-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/crunchdao-tournament-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/security/crunchdao-domain-security.yml
+  href: https://artifacts.apis.io/crunchdao/security/crunchdao-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/crunchdao-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/agentic-access/crunchdao-agentic-access.yml
+  href: https://artifacts.apis.io/crunchdao/agentic-access/crunchdao-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/crunchdao-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/authentication/crunchdao-authentication.yml
+  href: https://artifacts.apis.io/crunchdao/authentication/crunchdao-authentication.yml
   title: ''
   type: Authentication
   url: authentication/crunchdao-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/mcp/crunchdao-mcp.yml
+  href: https://artifacts.apis.io/crunchdao/mcp/crunchdao-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/crunchdao-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/packages/crunchdao-packages.yml
+  href: https://artifacts.apis.io/crunchdao/packages/crunchdao-packages.yml
   title: ''
   type: Packages
   url: packages/crunchdao-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/packages/crunchdao-packages.yml
+  href: https://artifacts.apis.io/crunchdao/packages/crunchdao-packages.yml
   title: ''
   type: SDKs
   url: packages/crunchdao-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/cli/crunchdao-cli.yml
+  href: https://artifacts.apis.io/crunchdao/cli/crunchdao-cli.yml
   title: ''
   type: CLI
   url: cli/crunchdao-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/crunchdao/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/llms/crunchdao-llms.txt
+  href: https://artifacts.apis.io/crunchdao/llms/crunchdao-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/crunchdao-llms.txt
@@ -724,27 +724,43 @@ network: true
 overview: 'CrunchDAO publishes 70 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activity API, auth:api-key API, Auth API, and 67 more. Tagged areas include Company, Web3, Machine Learning, Data Science, and Competitions.
 
 
+  The CrunchDAO catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CrunchDAO''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, support, and 16 more developer resources.'
-random_paper: 5
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: CrunchDAO API Rules
+  rule_count: 53
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 2
+    warn: 13
+  slug: crunchdao-rules
 score:
   band: developing
-  composite: 42.0
+  composite: 43.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 41.4
     developer_ergonomics: 70.8
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 42.0
+  previous_composite: 43.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -761,13 +777,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/crunchdao/refs/heads/main/screenshots/crunchdao-2026-07-25T210819.png
+screenshot: https://apis.io/screenshots/crunchdao/crunchdao-2026-07-25T210819.png
 security:
 - kind: authentication
   name: Crunchdao Authentication
@@ -777,6 +793,12 @@ security:
   name: Crunchdao Domain Security
   slug: crunchdao-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Export a CrunchDAO competition leaderboard
+  slug: crunchdao-export-leaderboard
+- name: Submit a model to a CrunchDAO competition
+  slug: crunchdao-submit-model
 slug: crunchdao
 tags:
 - Company

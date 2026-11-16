@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.9
-  scored_at: '2026-10-17'
+  score: 43.1
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.idrivee2.com/api
@@ -37,25 +53,30 @@ apis:
   description: The Subusers API from IDrive — 9 operation(s) for subusers.
   name: IDrive Subusers API
   slug: idrive-subusers-api
-artifact_total: 16
+artifact_total: 18
 common:
+- group: commercial
+  href: https://artifacts.apis.io/idrive/plans/idrive-plans.yml
+  title: ''
+  type: Plans
+  url: plans/idrive-plans.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/rules/idrive-rules.yml
+  href: https://artifacts.apis.io/idrive/rules/idrive-rules.yml
   title: ''
   type: Spectral
   url: rules/idrive-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/json-ld/idrive-context.jsonld
+  href: https://artifacts.apis.io/idrive/json-ld/idrive-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/idrive-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/vocabulary/idrive-vocabulary.yml
+  href: https://artifacts.apis.io/idrive/vocabulary/idrive-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/idrive-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/data-model/idrive-data-model.yml
+  href: https://artifacts.apis.io/idrive/data-model/idrive-data-model.yml
   title: ''
   type: DataModel
   url: data-model/idrive-data-model.yml
@@ -64,37 +85,37 @@ common:
   type: Compliance
   url: https://security.idrive.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/authentication/idrive-authentication.yml
+  href: https://artifacts.apis.io/idrive/authentication/idrive-authentication.yml
   title: ''
   type: Authentication
   url: authentication/idrive-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/scopes/idrive-scopes.yml
+  href: https://artifacts.apis.io/idrive/scopes/idrive-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/idrive-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/conformance/idrive-conformance.yml
+  href: https://artifacts.apis.io/idrive/conformance/idrive-conformance.yml
   title: ''
   type: Conformance
   url: conformance/idrive-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/mcp/idrive-mcp.yml
+  href: https://artifacts.apis.io/idrive/mcp/idrive-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/idrive-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/well-known/idrive-well-known.yml
+  href: https://artifacts.apis.io/idrive/well-known/idrive-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/idrive-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/hosts/idrive-hosts.yml
+  href: https://artifacts.apis.io/idrive/hosts/idrive-hosts.yml
   title: ''
   type: Hosts
   url: hosts/idrive-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/vendors/idrive-vendors.yml
+  href: https://artifacts.apis.io/idrive/vendors/idrive-vendors.yml
   title: ''
   type: Vendors
   url: vendors/idrive-vendors.yml
@@ -111,12 +132,12 @@ common:
   type: Newsroom
   url: https://www.idrive.com/s3-storage-e2/media
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/security/idrive-trust-center.yml
+  href: https://artifacts.apis.io/idrive/security/idrive-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/idrive-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/idrive/refs/heads/main/security/idrive-domain-security.yml
+  href: https://artifacts.apis.io/idrive/security/idrive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/idrive-domain-security.yml
@@ -166,6 +187,14 @@ common:
   url: https://blog.idrive.com/
 created: '2026-10-13'
 description: IDrive Inc. provides cloud backup and IDrive e2, an S3-compatible object storage service. For developers it publishes the IDrive e2 Reseller API (a REST/JSON API at api.idrivee2.com for managing users, regions, access keys, CNAME whitelabeling and subusers, authenticated with an API key sent in a token header), the S3-compatible storage endpoints themselves, and IDrive e2 MCP, an OAuth-protected hosted Model Context Protocol server at mcp.idrivee2.com/s3 (with a self-hosted option) exposing 65 bucket and object tools to AI clients.
+finops:
+- has_sources: true
+  method: derived
+  name: Idrive Finops
+  primary_unit: 1 tb
+  service_category: ''
+  slug: idrive-finops
+  template: false
 image: https://static.idriveonlinebackup.com/include/images/idrive-image.png
 json_schemas:
 - name: PostApiResellerV1EditUserResponse
@@ -206,12 +235,15 @@ overview: 'IDrive is listed with 2 APIs on the [APIs.io](https://apis.io/) netwo
   The IDrive catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  IDrive''s developer surface includes authentication, documentation, API reference, support, FAQ, pricing, signup flow, and 21 more developer resources.'
+  IDrive''s developer surface includes authentication, documentation, API reference, support, FAQ, pricing, signup flow, and 22 more developer resources.'
 plans:
 - name: Idrive Plans
-  plan_count: 11
+  plan_count: 5
   slug: idrive-plans
-random_paper: 5
+- name: Idrive Price Estimates
+  plan_count: 0
+  slug: idrive-price-estimates
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -232,21 +264,23 @@ scopes:
   summary_line: 3 scopes
 score:
   band: developing
-  composite: 48.0
+  composite: 39.3
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 74.8
+    artifact_dirs: 21
+    catalog_earned: 77.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.3
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 22.0
     contract_quality: 26.5
-    developer_ergonomics: 45.2
-    discoverability: 70.0
-    operational_transparency: 10.5
+    developer_ergonomics: 28.6
+    discoverability: 69.2
+    operational_transparency: 5.3
+  previous_composite: 49.6
   provenance:
     conformance: derived
     contracts:
@@ -260,12 +294,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 32.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/idrive/idrive-2026-11-03T133629.png
 security:
 - kind: authentication
   name: Idrive Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -132,9 +139,6 @@ apis:
 artifact_total: 45
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: F5 Load Balancer F5 BIG-IP Application Services 3 Extension (AS3) API
   slug: open-f5-load-balancer-as3
 - collection_type: open
@@ -196,42 +200,42 @@ collections:
   slug: open-f5-load-balancer-virtual-servers-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/plans/f5-load-balancer-plans-pricing.yml
+  href: https://artifacts.apis.io/f5-load-balancer/plans/f5-load-balancer-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/f5-load-balancer-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/rate-limits/f5-load-balancer-rate-limits.yml
+  href: https://artifacts.apis.io/f5-load-balancer/rate-limits/f5-load-balancer-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/f5-load-balancer-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/finops/f5-load-balancer-finops.yml
+  href: https://artifacts.apis.io/f5-load-balancer/finops/f5-load-balancer-finops.yml
   title: ''
   type: FinOps
   url: finops/f5-load-balancer-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/capabilities/f5-load-balancer-capability-edges.yml
+  href: https://artifacts.apis.io/f5-load-balancer/capabilities/f5-load-balancer-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/f5-load-balancer-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/agentic-access/f5-load-balancer-agentic-access.yml
+  href: https://artifacts.apis.io/f5-load-balancer/agentic-access/f5-load-balancer-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/f5-load-balancer-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/security/f5-load-balancer-trust-center.yml
+  href: https://artifacts.apis.io/f5-load-balancer/security/f5-load-balancer-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/f5-load-balancer-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/security/f5-load-balancer-domain-security.yml
+  href: https://artifacts.apis.io/f5-load-balancer/security/f5-load-balancer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/f5-load-balancer-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/authentication/f5-load-balancer-authentication.yml
+  href: https://artifacts.apis.io/f5-load-balancer/authentication/f5-load-balancer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/f5-load-balancer-authentication.yml
@@ -273,7 +277,7 @@ finops:
 - has_sources: true
   method: generated
   name: F5 Load Balancer Finops
-  primary_unit: ''
+  primary_unit: instance
   service_category: Application Delivery / Networking
   slug: f5-load-balancer-finops
   template: false
@@ -286,35 +290,51 @@ network: true
 overview: 'F5 Load Balancer publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Config API, Data Groups API, Declarations API, and 14 more. Tagged areas include Application Delivery, BIG-IP, Load Balancer, Networking, and Traffic Management.
 
 
+  The F5 Load Balancer catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   F5 Load Balancer''s developer surface includes authentication, developer portal, documentation, support, engineering blog, and 11 more developer resources.'
 plans:
 - name: F5 Load Balancer Plans Pricing
   plan_count: 4
   slug: f5-load-balancer-plans-pricing
-random_paper: 11
+random_paper: 21
 rate_limits:
 - limit_count: 3
   name: F5 Load Balancer Rate Limits
   slug: f5-load-balancer-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 111
+  extends:
+  - spectral:oas
+  name: F5 Load Balancer API Rules
+  rule_count: 70
+  severity_counts:
+    error: 65
+    hint: 0
+    info: 2
+    warn: 3
+  slug: f5-load-balancer-rules
 score:
   band: thin
-  composite: 35.5
+  composite: 38.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 46.0
+    artifact_dirs: 15
+    catalog_earned: 53.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 36.8
-    contract_governance: 0.0
+    access_clarity: 44.7
+    contract_governance: 13.6
     contract_quality: 51.9
     developer_ergonomics: 26.2
     discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 37.0
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     contracts:
@@ -328,13 +348,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/f5-load-balancer/refs/heads/main/screenshots/f5-load-balancer-2026-06-20T180957.png
+screenshot: https://apis.io/screenshots/f5-load-balancer/f5-load-balancer-2026-06-20T180957.png
 security:
 - kind: authentication
   name: F5 Load Balancer Authentication

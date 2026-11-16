@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,33 +11,37 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: negotiable
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: documented
+    delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-10-17'
+  score: 33.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -73,49 +80,11 @@ apis:
   slug: oauth2
 - baseURL: https://www.formstack.com/api/v2
   baseurl_source: declared
-  description: The Confirmations API from Formstack — 2 operation(s) for confirmations.
-  name: Formstack Confirmations API
-  slug: formstack-confirmations-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Fields API from Formstack — 2 operation(s) for fields.
-  name: Formstack Fields API
-  slug: formstack-fields-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Folders API from Formstack — 2 operation(s) for folders.
-  name: Formstack Folders API
-  slug: formstack-folders-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Forms API from Formstack — 5 operation(s) for forms.
-  name: Formstack Forms API
-  slug: formstack-forms-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Notifications API from Formstack — 2 operation(s) for notifications.
-  name: Formstack Notifications API
-  slug: formstack-notifications-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Subaccounts API from Formstack — 1 operation(s) for subaccounts.
-  name: Formstack Subaccounts API
-  slug: formstack-subaccounts-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Submissions API from Formstack — 2 operation(s) for submissions.
-  name: Formstack Submissions API
-  slug: formstack-submissions-api
-- baseURL: https://www.formstack.com/api/v2
-  baseurl_source: declared
-  description: The Webhooks API from Formstack — 2 operation(s) for webhooks.
-  name: Formstack Webhooks API
-  slug: formstack-webhooks-api
-artifact_total: 37
+  description: PartnerApi
+  name: Formstack Partner API
+  slug: formstack-partnerapi-api
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Formstack Webhooks
   slug: open-formstack-asyncapi
@@ -148,47 +117,47 @@ collections:
   slug: open-formstack
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/plans/formstack-plans-pricing.yml
+  href: https://artifacts.apis.io/formstack/plans/formstack-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/formstack-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/rate-limits/formstack-rate-limits.yml
+  href: https://artifacts.apis.io/formstack/rate-limits/formstack-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/formstack-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/finops/formstack-finops.yml
+  href: https://artifacts.apis.io/formstack/finops/formstack-finops.yml
   title: ''
   type: FinOps
   url: finops/formstack-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/agentic-access/formstack-agentic-access.yml
+  href: https://artifacts.apis.io/formstack/agentic-access/formstack-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/formstack-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/security/formstack-trust-center.yml
+  href: https://artifacts.apis.io/formstack/security/formstack-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/formstack-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/security/formstack-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/formstack/security/formstack-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/formstack-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/security/formstack-domain-security.yml
+  href: https://artifacts.apis.io/formstack/security/formstack-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/formstack-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/authentication/formstack-authentication.yml
+  href: https://artifacts.apis.io/formstack/authentication/formstack-authentication.yml
   title: ''
   type: Authentication
   url: authentication/formstack-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/scopes/formstack-scopes.yml
+  href: https://artifacts.apis.io/formstack/scopes/formstack-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/formstack-scopes.yml
@@ -240,7 +209,10 @@ modified: '2026-05-30'
 name: Formstack
 nav: Providers
 network: true
-overview: 'Formstack publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks API, Confirmations API, Fields API, and 14 more. Tagged areas include Forms, Documents, E-Signature, Workflow Automation, and No-Code.
+overview: 'Formstack publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks API, Partner API, and 8 more. Tagged areas include Forms, Documents, E-Signature, Workflow Automation, and No-Code.
+
+
+  The Formstack catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Formstack''s developer surface includes authentication, documentation, changelog, GitHub presence, engineering blog, and 12 more developer resources.'
@@ -248,11 +220,24 @@ plans:
 - name: Formstack Plans Pricing
   plan_count: 1
   slug: formstack-plans-pricing
-random_paper: 2
+random_paper: 10
 rate_limits:
 - limit_count: 2
   name: Formstack Rate Limits
   slug: formstack-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Formstack API Rules
+  rule_count: 58
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 3
+  slug: formstack-rules
 scopes:
 - name: Formstack Scopes
   scope_count: 4
@@ -260,43 +245,43 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.1
+  composite: 24.4
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 41.0
+    artifact_dirs: 18
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 0.0
-    contract_quality: 12.5
+    contract_governance: 13.6
+    contract_quality: 9.5
     developer_ergonomics: 23.8
     discoverability: 73.2
-    operational_transparency: 18.4
-  previous_composite: 28.1
+    operational_transparency: 28.9
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 9
+      marker_coverage: 9.1
+      total: 11
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/formstack/refs/heads/main/screenshots/formstack-2026-06-20T181438.png
+screenshot: https://apis.io/screenshots/formstack/formstack-2026-06-20T181438.png
 security:
 - kind: authentication
   name: Formstack Authentication
@@ -321,6 +306,7 @@ tags:
 - E-Signature
 - Workflow Automation
 - No-Code
+- OAuth
 - Authentication
 website: https://www.formstack.com/
 ---

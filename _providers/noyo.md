@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://fulfillment.noyo.com
@@ -356,15 +361,12 @@ apis:
   description: The Volleys API from Noyo — 5 operation(s) for volleys.
   name: Noyo Volleys API
   slug: noyo-volleys-api
-artifact_total: 132
+artifact_total: 135
 asyncapis:
 - description: ''
   name: Noyo Webhooks
   slug: noyo-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Noyo Carrier Carrier Mapped Field API
   slug: open-noyo-carrier-mapped-field-api
@@ -559,12 +561,12 @@ collections:
   slug: open-noyo-volleys-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/capabilities/noyo-capability-edges.yml
+  href: https://artifacts.apis.io/noyo/capabilities/noyo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/noyo-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/overlays/noyo-carrier-overlay.yaml
+  href: https://artifacts.apis.io/noyo/overlays/noyo-carrier-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/noyo-carrier-overlay.yaml
@@ -613,57 +615,57 @@ common:
   type: Webhooks
   url: https://docs.noyo.com/docs/introduction/webhooks
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/llms/noyo-llms.txt
+  href: https://artifacts.apis.io/noyo/llms/noyo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/noyo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/authentication/noyo-authentication.yml
+  href: https://artifacts.apis.io/noyo/authentication/noyo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/noyo-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/mcp/noyo-mcp.yml
+  href: https://artifacts.apis.io/noyo/mcp/noyo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/noyo-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/conformance/noyo-conformance.yml
+  href: https://artifacts.apis.io/noyo/conformance/noyo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/noyo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/errors/noyo-problem-types.yml
+  href: https://artifacts.apis.io/noyo/errors/noyo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/noyo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/lifecycle/noyo-lifecycle.yml
+  href: https://artifacts.apis.io/noyo/lifecycle/noyo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/noyo-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/sandbox/noyo-sandbox.yml
+  href: https://artifacts.apis.io/noyo/sandbox/noyo-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/noyo-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/conventions/noyo-conventions.yml
+  href: https://artifacts.apis.io/noyo/conventions/noyo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/noyo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/data-model/noyo-data-model.yml
+  href: https://artifacts.apis.io/noyo/data-model/noyo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/noyo-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/security/noyo-domain-security.yml
+  href: https://artifacts.apis.io/noyo/security/noyo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/noyo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/noyo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -678,30 +680,43 @@ network: true
 overview: 'Noyo publishes 64 API contracts indexed on the [APIs.io](https://apis.io/) network, including Carrier Mapped Field API, Carrier Sync API, Carriers API, and 61 more. Tagged areas include Company, Healthcare, Insurance, Employee Benefits, and Enrollment.
 
 
-  The Noyo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Noyo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Noyo''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, sandbox, and 18 more developer resources.'
-random_paper: 13
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Noyo API Rules
+  rule_count: 52
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 1
+    warn: 18
+  slug: noyo-rules
 score:
   band: developing
-  composite: 41.0
+  composite: 42.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 54.8
     developer_ergonomics: 61.3
     discoverability: 78.6
     operational_transparency: 7.9
-  previous_composite: 41.0
+  previous_composite: 42.6
   provenance:
     conformance: derived
     contracts:
@@ -717,13 +732,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/noyo/refs/heads/main/screenshots/noyo-2026-08-07T185645.png
+screenshot: https://apis.io/screenshots/noyo/noyo-2026-08-07T185645.png
 security:
 - kind: authentication
   name: Noyo Authentication
@@ -733,6 +748,14 @@ security:
   name: Noyo Domain Security
   slug: noyo-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Connect a group to a carrier
+  slug: noyo-connect-group
+- name: Enroll a new hire in coverage
+  slug: noyo-enroll-new-hire
+- name: Track member changes and resolve discrepancies
+  slug: noyo-track-changes
 slug: noyo
 tags:
 - Company

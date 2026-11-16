@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.1
-  scored_at: '2026-10-17'
+  score: 38.4
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - baseURL: https://app.endpointblank.com/api/v1
@@ -81,70 +99,70 @@ apis:
   description: The .well Known API from Bengal Technologies — 1 operation(s) for .well known.
   name: Bengal Technologies .well Known API
   slug: endpointblank-well-known-api
-artifact_total: 23
+artifact_total: 25
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/plans/endpointblank-plans-pricing.yml
+  href: https://artifacts.apis.io/endpointblank/plans/endpointblank-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/endpointblank-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/rules/endpointblank-rules.yml
+  href: https://artifacts.apis.io/endpointblank/rules/endpointblank-rules.yml
   title: ''
   type: Spectral
   url: rules/endpointblank-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/json-ld/endpointblank-context.jsonld
+  href: https://artifacts.apis.io/endpointblank/json-ld/endpointblank-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/endpointblank-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/vocabulary/endpointblank-vocabulary.yml
+  href: https://artifacts.apis.io/endpointblank/vocabulary/endpointblank-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/endpointblank-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/data-model/endpointblank-data-model.yml
+  href: https://artifacts.apis.io/endpointblank/data-model/endpointblank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/endpointblank-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/conventions/endpointblank-conventions.yml
+  href: https://artifacts.apis.io/endpointblank/conventions/endpointblank-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/endpointblank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/conventions/endpointblank-conventions.yml
+  href: https://artifacts.apis.io/endpointblank/conventions/endpointblank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/endpointblank-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/authentication/endpointblank-authentication.yml
+  href: https://artifacts.apis.io/endpointblank/authentication/endpointblank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/endpointblank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/conformance/endpointblank-conformance.yml
+  href: https://artifacts.apis.io/endpointblank/conformance/endpointblank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/endpointblank-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/well-known/endpointblank-well-known.yml
+  href: https://artifacts.apis.io/endpointblank/well-known/endpointblank-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/endpointblank-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/hosts/endpointblank-hosts.yml
+  href: https://artifacts.apis.io/endpointblank/hosts/endpointblank-hosts.yml
   title: ''
   type: Hosts
   url: hosts/endpointblank-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/packages/endpointblank-packages.yml
+  href: https://artifacts.apis.io/endpointblank/packages/endpointblank-packages.yml
   title: ''
   type: SDKs
   url: packages/endpointblank-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/packages/endpointblank-packages.yml
+  href: https://artifacts.apis.io/endpointblank/packages/endpointblank-packages.yml
   title: ''
   type: Packages
   url: packages/endpointblank-packages.yml
@@ -153,12 +171,12 @@ common:
   type: GettingStarted
   url: https://endpointblank.com/docs/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/scopes/endpointblank-scopes.yml
+  href: https://artifacts.apis.io/endpointblank/scopes/endpointblank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/endpointblank-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/endpointblank/refs/heads/main/security/endpointblank-domain-security.yml
+  href: https://artifacts.apis.io/endpointblank/security/endpointblank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/endpointblank-domain-security.yml
@@ -195,6 +213,14 @@ coverage:
   state: none
 created: '2026-10-16'
 description: Bengal Technologies provides a platform for API lifecycle management, enabling versioning, deprecation scheduling, and machine‑to‑machine authentication. Their portal lets developers register applications, obtain scoped credentials, and monitor usage across multiple API versions, with built‑in logging, alerts, and SDKs for popular languages. The service aims to simplify API governance without breaking existing clients.
+finops:
+- has_sources: true
+  method: derived
+  name: Endpointblank Finops
+  primary_unit: seat
+  service_category: ''
+  slug: endpointblank-finops
+  template: false
 image: https://endpointblank.com/images/og-default.png
 json_schemas:
 - name: DeleteClientsClientidEnvironmentsIdResponse
@@ -236,7 +262,10 @@ plans:
 - name: Endpointblank Plans Pricing
   plan_count: 5
   slug: endpointblank-plans-pricing
-random_paper: 21
+- name: Endpointblank Price Estimates
+  plan_count: 0
+  slug: endpointblank-price-estimates
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -256,22 +285,24 @@ scopes:
   slug: endpointblank-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 42.4
+  band: thin
+  composite: 36.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 77.8
+    artifact_dirs: 22
+    catalog_earned: 80.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 37.3
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.2
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 28.5
-    developer_ergonomics: 40.5
+    developer_ergonomics: 29.8
     discoverability: 71.4
     operational_transparency: 0.0
+  previous_composite: 44.0
   provenance:
     conformance: derived
     contracts:
@@ -285,12 +316,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 30.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/endpointblank/endpointblank-2026-11-03T131510.png
 security:
 - kind: authentication
   name: Endpointblank Authentication

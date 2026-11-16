@@ -5,7 +5,11 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Data-as-a-Service access to Onclusive's media intelligence corpus — 28M+ daily media content items across print, online, broadcast and social media, 300K+ verified journalist contacts, and 250K+ globa
@@ -61,7 +68,7 @@ common:
   type: Support
   url: https://onclusive.com/our-company/contact-us/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/security/airpr-trust-center.yml
+  href: https://artifacts.apis.io/airpr/security/airpr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/airpr-trust-center.yml
@@ -70,7 +77,7 @@ common:
   type: Compliance
   url: https://trust.onclusive.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/security/airpr-domain-security.yml
+  href: https://artifacts.apis.io/airpr/security/airpr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airpr-domain-security.yml
@@ -83,37 +90,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/AirPR
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/authentication/airpr-authentication.yml
+  href: https://artifacts.apis.io/airpr/authentication/airpr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/airpr-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/scopes/airpr-scopes.yml
+  href: https://artifacts.apis.io/airpr/scopes/airpr-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/airpr-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/lifecycle/airpr-lifecycle.yml
+  href: https://artifacts.apis.io/airpr/lifecycle/airpr-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/airpr-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/conformance/airpr-conformance.yml
+  href: https://artifacts.apis.io/airpr/conformance/airpr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/airpr-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/plans/airpr-plans-pricing.yml
+  href: https://artifacts.apis.io/airpr/plans/airpr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/airpr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/rate-limits/airpr-rate-limits.yml
+  href: https://artifacts.apis.io/airpr/rate-limits/airpr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/airpr-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/llms/airpr-llms.txt
+  href: https://artifacts.apis.io/airpr/llms/airpr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/airpr-llms.txt
@@ -163,7 +170,7 @@ score:
   band: emerging
   composite: 25.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -186,14 +193,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/airpr/refs/heads/main/screenshots/airpr-2026-07-25T195431.png
+screenshot: https://apis.io/screenshots/airpr/airpr-2026-07-25T195431.png
 security:
 - kind: authentication
   name: Airpr Authentication

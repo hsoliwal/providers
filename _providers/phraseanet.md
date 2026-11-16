@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -92,9 +99,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Phraseanet API (v1) Account API
   slug: open-phraseanet-account-api
 - collection_type: open
@@ -130,7 +134,7 @@ common:
   type: Blog
   url: https://www.phraseanet.com/en/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/capabilities/phraseanet-capability-edges.yml
+  href: https://artifacts.apis.io/phraseanet/capabilities/phraseanet-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/phraseanet-capability-edges.yml
@@ -143,22 +147,22 @@ common:
   type: Releases
   url: https://github.com/alchemy-fr/Phraseanet/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/agentic-access/phraseanet-agentic-access.yml
+  href: https://artifacts.apis.io/phraseanet/agentic-access/phraseanet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/phraseanet-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/security/phraseanet-domain-security.yml
+  href: https://artifacts.apis.io/phraseanet/security/phraseanet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/phraseanet-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/authentication/phraseanet-authentication.yml
+  href: https://artifacts.apis.io/phraseanet/authentication/phraseanet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/phraseanet-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/scopes/phraseanet-scopes.yml
+  href: https://artifacts.apis.io/phraseanet/scopes/phraseanet-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/phraseanet-scopes.yml
@@ -183,17 +187,17 @@ common:
   type: SourceCode
   url: https://github.com/alchemy-fr/Phraseanet
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/plans/phraseanet-plans-pricing.yml
+  href: https://artifacts.apis.io/phraseanet/plans/phraseanet-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/phraseanet-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/rate-limits/phraseanet-rate-limits.yml
+  href: https://artifacts.apis.io/phraseanet/rate-limits/phraseanet-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/phraseanet-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/finops/phraseanet-finops.yml
+  href: https://artifacts.apis.io/phraseanet/finops/phraseanet-finops.yml
   title: ''
   type: FinOps
   url: finops/phraseanet-finops.yml
@@ -216,6 +220,9 @@ network: true
 overview: 'Phraseanet publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Baskets API, Databoxes API, and 6 more. Tagged areas include Digital Asset Management, Media, Metadata, Open Source, and Search.
 
 
+  The Phraseanet catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Phraseanet''s developer surface includes engineering blog, authentication, documentation, and 13 more developer resources.'
 plans:
 - name: Phraseanet Plans Pricing
@@ -226,6 +233,19 @@ rate_limits:
 - limit_count: 4
   name: Phraseanet Rate Limits
   slug: phraseanet-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Phraseanet API Rules
+  rule_count: 73
+  severity_counts:
+    error: 69
+    hint: 0
+    info: 1
+    warn: 3
+  slug: phraseanet-rules
 scopes:
 - name: Phraseanet Scopes
   scope_count: 0
@@ -233,23 +253,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 28.5
+  composite: 30.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.9
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 41.0
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 36.4
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     contracts:
@@ -263,13 +283,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/phraseanet/refs/heads/main/screenshots/phraseanet-2026-09-02T151203.png
+screenshot: https://apis.io/screenshots/phraseanet/phraseanet-2026-09-02T151203.png
 security:
 - kind: authentication
   name: Phraseanet Authentication

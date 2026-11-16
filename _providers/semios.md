@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The authenticated service behind the Semios Hub grower application at hub.semios.com. The host is live and answers on HTTPS, but every anonymous path returns an application-level "Path not Found" and '
@@ -43,7 +46,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/semios/refs/heads/main/security/semios-domain-security.yml
+  href: https://artifacts.apis.io/semios/security/semios-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/semios-domain-security.yml
@@ -68,22 +71,22 @@ common:
   type: Login
   url: https://hub.semios.com/login
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/semios/refs/heads/main/llms/semios-llms.txt
+  href: https://artifacts.apis.io/semios/llms/semios-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/semios-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/semios/refs/heads/main/plans/semios-plans-pricing.yml
+  href: https://artifacts.apis.io/semios/plans/semios-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/semios-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/semios/refs/heads/main/rate-limits/semios-rate-limits.yml
+  href: https://artifacts.apis.io/semios/rate-limits/semios-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/semios-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/semios/refs/heads/main/lifecycle/semios-lifecycle.yml
+  href: https://artifacts.apis.io/semios/lifecycle/semios-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/semios-lifecycle.yml
@@ -110,7 +113,7 @@ modified: '2026-08-26'
 name: Semios
 nav: Providers
 network: true
-overview: 'Semios is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Agriculture, AgTech, Precision Agriculture, Crop Management, and Pest Management.
+overview: 'Semios is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Agriculture, AgTech, Precision Agriculture, Crop-Management, and Pest Management.
 
 
   Semios'' developer surface includes engineering blog, support, and 8 more developer resources.'
@@ -118,7 +121,7 @@ plans:
 - name: Semios Plans Pricing
   plan_count: 0
   slug: semios-plans-pricing
-random_paper: 18
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Semios Rate Limits
@@ -127,13 +130,13 @@ score:
   band: minimal
   composite: 7.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -148,7 +151,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 7.6
+  previous_composite: 7.7
   provenance:
     mcp: derived
   regulatory:
@@ -157,14 +160,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/semios/refs/heads/main/screenshots/semios-2026-09-02T154824.png
+screenshot: https://apis.io/screenshots/semios/semios-2026-09-02T154824.png
 security:
 - kind: domain-security
   name: Semios Domain Security
@@ -175,7 +178,7 @@ tags:
 - Agriculture
 - AgTech
 - Precision Agriculture
-- Crop Management
+- Crop-Management
 - Pest Management
 - IoT
 - Sensors

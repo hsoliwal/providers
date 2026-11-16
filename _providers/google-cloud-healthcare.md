@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -20,21 +24,24 @@ agent_readiness:
     auth_clarity: negotiable
     consent_identity: false
     delegated_identity: documented
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-10-17'
+  score: 28.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 91
   human_in_the_loop: 2
@@ -70,19 +77,16 @@ collections:
   name: Cloud Healthcare projects API
   slug: postman-google-cloud-healthcare-projects-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Cloud Healthcare projects API
   slug: open-google-cloud-healthcare-projects-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/plans/google-cloud-healthcare-plans-pricing.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/plans/google-cloud-healthcare-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/google-cloud-healthcare-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/finops/google-cloud-healthcare-finops.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/finops/google-cloud-healthcare-finops.yml
   title: ''
   type: FinOps
   url: finops/google-cloud-healthcare-finops.yml
@@ -91,7 +95,7 @@ common:
   type: Website
   url: https://www.google.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/capabilities/google-cloud-healthcare-capability-edges.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/capabilities/google-cloud-healthcare-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/google-cloud-healthcare-capability-edges.yml
@@ -100,27 +104,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/google-cloud-healthcare/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/agentic-access/google-cloud-healthcare-agentic-access.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/agentic-access/google-cloud-healthcare-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/google-cloud-healthcare-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/security/google-cloud-healthcare-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/security/google-cloud-healthcare-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-cloud-healthcare-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/security/google-cloud-healthcare-domain-security.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/security/google-cloud-healthcare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-cloud-healthcare-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/authentication/google-cloud-healthcare-authentication.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/authentication/google-cloud-healthcare-authentication.yml
   title: ''
   type: Authentication
   url: authentication/google-cloud-healthcare-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/scopes/google-cloud-healthcare-scopes.yml
+  href: https://artifacts.apis.io/google-cloud-healthcare/scopes/google-cloud-healthcare-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/google-cloud-healthcare-scopes.yml
@@ -195,10 +199,10 @@ examples:
   slug: Message-example
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Google Cloud Healthcare Finops
-  primary_unit: ''
-  service_category: Healthcare Data Platform
+  primary_unit: gibibyte
+  service_category: ''
   slug: google-cloud-healthcare-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-healthcare.png
@@ -658,9 +662,12 @@ overview: 'Google Cloud Healthcare publishes 6 API contracts indexed on the [API
   Google Cloud Healthcare''s developer surface includes authentication, getting-started guide, pricing, developer console, CLI, support, release notes, and 15 more developer resources.'
 plans:
 - name: Google Cloud Healthcare Plans Pricing
-  plan_count: 6
+  plan_count: 27
   slug: google-cloud-healthcare-plans-pricing
-random_paper: 15
+- name: Google Cloud Healthcare Price Estimates
+  plan_count: 0
+  slug: google-cloud-healthcare-price-estimates
+random_paper: 23
 rate_limits:
 - limit_count: 13
   name: Google Cloud Healthcare Rate Limits
@@ -684,23 +691,23 @@ scopes:
   summary_line: 2 scopes · implicit/authorizationCode
 score:
   band: developing
-  composite: 42.1
+  composite: 49.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 46.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 68.8
+    artifact_dirs: 19
+    catalog_earned: 58.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 56.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
-    access_clarity: 18.4
+    access_clarity: 50.0
     contract_governance: 9.8
     contract_quality: 47.1
     developer_ergonomics: 53.6
     discoverability: 66.1
-    operational_transparency: 42.1
-  previous_composite: 50.4
+    operational_transparency: 52.6
+  previous_composite: 49.8
   provenance:
     agentic_access: derived
     contracts:
@@ -714,13 +721,13 @@ score:
     regime: Health
     regime_id: health
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/google-cloud-healthcare/refs/heads/main/screenshots/google-cloud-healthcare-2026-06-20T182114.png
+screenshot: https://apis.io/screenshots/google-cloud-healthcare/google-cloud-healthcare-2026-06-20T182114.png
 security:
 - kind: authentication
   name: Google Cloud Healthcare Authentication

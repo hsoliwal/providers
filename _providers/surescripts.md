@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - description: 'Publicly documented HL7 FHIR Release 4 API for retrieving medication history panels and near-real-time Prescription Notifications for enrolled patient populations. Panels and notifications are pulled '
@@ -123,72 +126,72 @@ common:
   type: Compliance
   url: https://surescripts.com/why-surescripts/certifications-and-accreditations
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/security/surescripts-trust-center.yml
+  href: https://artifacts.apis.io/surescripts/security/surescripts-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/surescripts-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/security/surescripts-domain-security.yml
+  href: https://artifacts.apis.io/surescripts/security/surescripts-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/surescripts-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/authentication/surescripts-authentication.yml
+  href: https://artifacts.apis.io/surescripts/authentication/surescripts-authentication.yml
   title: ''
   type: Authentication
   url: authentication/surescripts-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/conventions/surescripts-conventions.yml
+  href: https://artifacts.apis.io/surescripts/conventions/surescripts-conventions.yml
   title: ''
   type: Conventions
   url: conventions/surescripts-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/errors/surescripts-problem-types.yml
+  href: https://artifacts.apis.io/surescripts/errors/surescripts-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/surescripts-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/lifecycle/surescripts-lifecycle.yml
+  href: https://artifacts.apis.io/surescripts/lifecycle/surescripts-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/surescripts-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/conformance/surescripts-conformance.yml
+  href: https://artifacts.apis.io/surescripts/conformance/surescripts-conformance.yml
   title: ''
   type: Conformance
   url: conformance/surescripts-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/changelog/surescripts-changelog.yml
+  href: https://artifacts.apis.io/surescripts/changelog/surescripts-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/surescripts-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/rate-limits/surescripts-rate-limits.yml
+  href: https://artifacts.apis.io/surescripts/rate-limits/surescripts-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/surescripts-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/plans/surescripts-plans-pricing.yml
+  href: https://artifacts.apis.io/surescripts/plans/surescripts-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/surescripts-plans-pricing.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/sandbox/surescripts-sandbox.yml
+  href: https://artifacts.apis.io/surescripts/sandbox/surescripts-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/surescripts-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/data-model/surescripts-data-model.yml
+  href: https://artifacts.apis.io/surescripts/data-model/surescripts-data-model.yml
   title: ''
   type: DataModel
   url: data-model/surescripts-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/packages/surescripts-packages.yml
+  href: https://artifacts.apis.io/surescripts/packages/surescripts-packages.yml
   title: ''
   type: Packages
   url: packages/surescripts-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/llms/surescripts-llms.txt
+  href: https://artifacts.apis.io/surescripts/llms/surescripts-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/surescripts-llms.txt
@@ -209,7 +212,7 @@ plans:
 - name: Surescripts Plans Pricing
   plan_count: 0
   slug: surescripts-plans-pricing
-random_paper: 13
+random_paper: 23
 rate_limits:
 - limit_count: 6
   name: Surescripts Rate Limits
@@ -218,7 +221,7 @@ score:
   band: thin
   composite: 39.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 47.0
     catalog_earned_first_party: 12.0
     catalog_gap: 68.0
@@ -242,14 +245,14 @@ score:
     regime: Health
     regime_id: health
     score: 28.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/surescripts/refs/heads/main/screenshots/surescripts-2026-09-02T161313.png
+screenshot: https://apis.io/screenshots/surescripts/surescripts-2026-09-02T161313.png
 security:
 - kind: authentication
   name: Surescripts Authentication

@@ -1,4 +1,13 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source: []
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,16 +24,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 37.8
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - description: Hosted MCP server over Streamable HTTP exposing nine tools — get_config, list_jurisdictions, verify_business, search_entities, check_job_status, get_entity, get_entity_history, get_account and purchas
   name: BizVerify MCP Server
@@ -77,9 +89,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: BizVerify Account API
   slug: open-bizverify-account-api
 - collection_type: open
@@ -111,7 +120,7 @@ collections:
   slug: open-bizverify
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bizverify/refs/heads/main/capabilities/bizverify-capability-edges.yml
+  href: https://artifacts.apis.io/bizverify/capabilities/bizverify-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bizverify-capability-edges.yml
@@ -132,7 +141,7 @@ common:
   type: Documentation
   url: https://docs.bizverify.co
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bizverify/refs/heads/main/llms/bizverify-llms.txt
+  href: https://artifacts.apis.io/bizverify/llms/bizverify-llms.txt
   title: ''
   type: LLMSTxt
   url: llms/bizverify-llms.txt
@@ -141,7 +150,7 @@ common:
   type: LLMSTxt
   url: https://bizverify.co/llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bizverify/refs/heads/main/well-known/bizverify-api-catalog.json
+  href: https://artifacts.apis.io/bizverify/well-known/bizverify-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/bizverify-api-catalog.json
@@ -179,32 +188,48 @@ network: true
 overview: 'BizVerify publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Auth API, Billing API, and 7 more. Tagged areas include Business Verification, KYB, Entity Verification, Compliance, and MCP.
 
 
+  The BizVerify catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   BizVerify''s developer surface includes documentation and 12 more developer resources.'
-random_paper: 18
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: BizVerify API Rules
+  rule_count: 48
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 6
+  slug: bizverify-rules
 score:
   band: thin
-  composite: 26.9
+  composite: 29.7
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 32.0
+    artifact_dirs: 11
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.1
   facets:
     access_clarity: 34.2
-    contract_governance: 0.0
-    contract_quality: 41.4
+    contract_governance: 13.6
+    contract_quality: 46.0
     developer_ergonomics: 16.0
     discoverability: 76.7
     operational_transparency: 5.3
-  previous_composite: 26.9
+  previous_composite: 28.6
   provenance:
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 9
     mcp: first-party
   regulatory:
@@ -213,13 +238,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bizverify/refs/heads/main/screenshots/bizverify-2026-08-07T162603.png
+screenshot: https://apis.io/screenshots/bizverify/bizverify-2026-08-07T162603.png
 slug: bizverify
 tags:
 - Business Verification

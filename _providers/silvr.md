@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/plans/silvr-plans-pricing.yml
+  href: https://artifacts.apis.io/silvr/plans/silvr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/silvr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/rate-limits/silvr-rate-limits.yml
+  href: https://artifacts.apis.io/silvr/rate-limits/silvr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/silvr-rate-limits.yml
@@ -89,12 +92,12 @@ common:
   type: Partners
   url: https://www.silvr.co/partners
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/security/silvr-domain-security.yml
+  href: https://artifacts.apis.io/silvr/security/silvr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/silvr-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/llms/silvr-llms.txt
+  href: https://artifacts.apis.io/silvr/llms/silvr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/silvr-llms.txt
@@ -131,7 +134,7 @@ plans:
 - name: Silvr Plans Pricing
   plan_count: 0
   slug: silvr-plans-pricing
-random_paper: 10
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Silvr Rate Limits
@@ -140,7 +143,7 @@ score:
   band: minimal
   composite: 9.7
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -169,14 +172,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/silvr/refs/heads/main/screenshots/silvr-2026-09-02T155519.png
+screenshot: https://apis.io/screenshots/silvr/silvr-2026-09-02T155519.png
 security:
 - kind: domain-security
   name: Silvr Domain Security

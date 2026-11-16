@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -29,16 +32,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 69.2
-  scored_at: '2026-10-17'
-api_count: 8
+  score: 69.1
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://taskfolk.ai/api
   baseurl_source: declared
@@ -200,14 +206,14 @@ apis:
   description: The Workspaces API from Taskfolk — 3 operation(s) for workspaces.
   name: Taskfolk Workspaces API
   slug: taskfolk-workspaces-api
-artifact_total: 39
+artifact_total: 46
 asyncapis:
 - description: ''
   name: Taskfolk Webhooks
   slug: taskfolk-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/capabilities/taskfolk-capability-edges.yml
+  href: https://artifacts.apis.io/taskfolk/capabilities/taskfolk-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/taskfolk-capability-edges.yml
@@ -216,17 +222,17 @@ common:
   type: MCPServer
   url: https://taskfolk.ai/api/mcp/v1
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/mcp/taskfolk-mcp.yml
+  href: https://artifacts.apis.io/taskfolk/mcp/taskfolk-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/taskfolk-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/security/taskfolk-domain-security.yml
+  href: https://artifacts.apis.io/taskfolk/security/taskfolk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/taskfolk-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/authentication/taskfolk-authentication.yml
+  href: https://artifacts.apis.io/taskfolk/authentication/taskfolk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/taskfolk-authentication.yml
@@ -291,17 +297,17 @@ common:
   type: ChangeLog
   url: https://taskfolk.ai/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/changelog/taskfolk-changelog.yml
+  href: https://artifacts.apis.io/taskfolk/changelog/taskfolk-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/taskfolk-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/llms/taskfolk-llms.txt
+  href: https://artifacts.apis.io/taskfolk/llms/taskfolk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/taskfolk-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/well-known/taskfolk-well-known.yml
+  href: https://artifacts.apis.io/taskfolk/well-known/taskfolk-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/taskfolk-well-known.yml
@@ -310,83 +316,91 @@ common:
   type: APICatalog
   url: https://taskfolk.ai/.well-known/api-catalog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/a2a/taskfolk-a2a.yml
+  href: https://artifacts.apis.io/taskfolk/a2a/taskfolk-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/taskfolk-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/scopes/taskfolk-scopes.yml
+  href: https://artifacts.apis.io/taskfolk/scopes/taskfolk-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/taskfolk-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/conventions/taskfolk-conventions.yml
+  href: https://artifacts.apis.io/taskfolk/conventions/taskfolk-conventions.yml
   title: ''
   type: Conventions
   url: conventions/taskfolk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/conventions/taskfolk-conventions.yml
+  href: https://artifacts.apis.io/taskfolk/conventions/taskfolk-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/taskfolk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/errors/taskfolk-problem-types.yml
+  href: https://artifacts.apis.io/taskfolk/errors/taskfolk-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/taskfolk-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/lifecycle/taskfolk-lifecycle.yml
+  href: https://artifacts.apis.io/taskfolk/lifecycle/taskfolk-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/taskfolk-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/conformance/taskfolk-conformance.yml
+  href: https://artifacts.apis.io/taskfolk/conformance/taskfolk-conformance.yml
   title: ''
   type: Conformance
   url: conformance/taskfolk-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/data-model/taskfolk-data-model.yml
+  href: https://artifacts.apis.io/taskfolk/data-model/taskfolk-data-model.yml
   title: ''
   type: DataModel
   url: data-model/taskfolk-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/packages/taskfolk-packages.yml
+  href: https://artifacts.apis.io/taskfolk/packages/taskfolk-packages.yml
   title: ''
   type: Packages
   url: packages/taskfolk-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/asyncapi/taskfolk-webhooks.yml
+  href: https://artifacts.apis.io/taskfolk/asyncapi/taskfolk-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/taskfolk-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/rate-limits/taskfolk-rate-limits.yml
+  href: https://artifacts.apis.io/taskfolk/rate-limits/taskfolk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/taskfolk-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/plans/taskfolk-plans-pricing.yml
+  href: https://artifacts.apis.io/taskfolk/plans/taskfolk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/taskfolk-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/taskfolk/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/overlays/taskfolk-product-api-overlay.yaml
+  href: https://artifacts.apis.io/taskfolk/overlays/taskfolk-product-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/taskfolk-product-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/overlays/taskfolk-agent-commerce-overlay.yaml
+  href: https://artifacts.apis.io/taskfolk/overlays/taskfolk-agent-commerce-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/taskfolk-agent-commerce-overlay.yaml
 created: '2026-08-20'
 description: 'Taskfolk is a project-management and issue-tracking platform built for teams and their AI agents working side by side, operated by UTTER L.L.C-FZ of Dubai, UAE. Workspaces contain projects; projects contain issues moved across board, backlog, list, calendar and timeline views, with sprints, milestones, releases, portfolios, OKR goals, docs, chat, time tracking, custom fields, automations, visual workflows and public intake forms. Every human action has a programmatic twin: a public OpenAPI 3.1 REST API of 187 operations, a first-party hosted MCP server generated one-to-one from the same OpenAPI registry, installable agent skills served as live markdown endpoints, signed webhooks, and an OAuth 2.0 authorization server with 47 scopes, PKCE and anonymous dynamic client registration. AI agents join as named workspace members that are assignable like people and are never billed as seats. Taskfolk also publishes an RFC 9727 API catalog enumerating six agent surfaces including four
   machine-payment protocols (MPP, ACP, UCP and x402) for buying AI credits without a human in the loop.'
+finops:
+- has_sources: true
+  method: derived
+  name: Taskfolk Finops
+  primary_unit: builder
+  service_category: ''
+  slug: taskfolk-finops
+  template: false
 image: https://taskfolk.ai/images/brand/taskfolk-icon.png
 layout: provider
 mcp_servers:
@@ -400,7 +414,7 @@ network: true
 overview: 'Taskfolk publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activity API, Agents API, Attachments API, and 29 more. Tagged areas include Project Management, Issue Tracking, Task Management, Productivity, and Collaboration.
 
 
-  The Taskfolk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Taskfolk catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Taskfolk''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 32 more developer resources.'
@@ -408,41 +422,54 @@ plans:
 - name: Taskfolk Plans Pricing
   plan_count: 3
   slug: taskfolk-plans-pricing
-random_paper: 5
+random_paper: 23
 rate_limits:
 - limit_count: 2
   name: Taskfolk Rate Limits
   slug: taskfolk-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Taskfolk API Rules
+  rule_count: 59
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 12
+  slug: taskfolk-rules
 scopes:
 - name: Taskfolk Scopes
   scope_count: 47
   slug: taskfolk-scopes
   summary_line: 47 scopes · authorizationCode
 score:
-  band: strong
-  composite: 65.3
+  band: exemplar
+  composite: 69.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 60.0
+    artifact_dirs: 30
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.3
   facets:
-    access_clarity: 84.2
-    contract_governance: 18.2
-    contract_quality: 54.0
+    access_clarity: 92.1
+    contract_governance: 31.8
+    contract_quality: 59.1
     developer_ergonomics: 58.9
-    discoverability: 90.0
+    discoverability: 85.0
     operational_transparency: 52.6
-  previous_composite: 65.2
+  previous_composite: 68.0
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 32
     mcp: first-party
     skills: derived
@@ -452,13 +479,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/taskfolk/refs/heads/main/screenshots/taskfolk-2026-09-02T162549.png
+screenshot: https://apis.io/screenshots/taskfolk/taskfolk-2026-09-02T162549.png
 security:
 - kind: authentication
   name: Taskfolk Authentication
@@ -468,6 +495,18 @@ security:
   name: Taskfolk Domain Security
   slug: taskfolk-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 5
+skills:
+- name: taskfolk-agent-session-lifecycle
+  slug: taskfolk-agent-session-lifecycle
+- name: taskfolk-product
+  slug: taskfolk-product.skill
+- name: taskfolk-safe-writes-and-restore
+  slug: taskfolk-safe-writes-and-restore
+- name: taskfolk-triage-and-plan
+  slug: taskfolk-triage-and-plan
+- name: taskfolk-webhook-consumer
+  slug: taskfolk-webhook-consumer
 slug: taskfolk
 tags:
 - Project Management
@@ -483,10 +522,11 @@ tags:
 - REST API
 - OpenAPI
 - Webhook
-- Authentication
+- OAuth
 - Agile
 - Sprints
 - OKRs
 - Developer Tools
+- Authentication
 website: https://taskfolk.ai
 ---

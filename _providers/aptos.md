@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
+  confidence: low
+  label: Paid
   onboarding: unknown
-  pricing: freemium
+  pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -41,7 +45,7 @@ agentic_access:
   operation_count: 29
   slug: aptos-agentic-access
   summary_line: 29 operations · 5 acting
-api_count: 2
+api_count: 1
 apis:
 - description: 'High-level GraphQL API backed by the Aptos Indexer, providing opinionated access to processed blockchain data. Optimized for querying NFTs, Aptos Objects, token balances, fungible assets, custom Move '
   name: Aptos Indexer GraphQL API
@@ -111,9 +115,6 @@ collections:
   name: Aptos Node Accounts View API
   slug: postman-aptos-view-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Aptos Node Accounts API
   slug: open-aptos-accounts-api
 - collection_type: open
@@ -144,12 +145,12 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/aptos/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aptos/refs/heads/main/agentic-access/aptos-agentic-access.yml
+  href: https://artifacts.apis.io/aptos/agentic-access/aptos-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/aptos-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aptos/refs/heads/main/security/aptos-domain-security.yml
+  href: https://artifacts.apis.io/aptos/security/aptos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aptos-domain-security.yml
@@ -222,17 +223,17 @@ common:
   type: SDKs
   url: https://github.com/aptos-labs/aptos-core/tree/main/sdk
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aptos/refs/heads/main/plans/aptos-plans-pricing.yml
+  href: https://artifacts.apis.io/aptos/plans/aptos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aptos-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aptos/refs/heads/main/rate-limits/aptos-rate-limits.yml
+  href: https://artifacts.apis.io/aptos/rate-limits/aptos-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aptos-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aptos/refs/heads/main/finops/aptos-finops.yml
+  href: https://artifacts.apis.io/aptos/finops/aptos-finops.yml
   title: ''
   type: FinOps
   url: finops/aptos-finops.yml
@@ -339,10 +340,10 @@ features:
   name: Usage-based API access via Geomi
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Aptos Finops
-  primary_unit: ''
-  service_category: Blockchain
+  primary_unit: credit
+  service_category: ''
   slug: aptos-finops
   template: false
 graphqls:
@@ -361,22 +362,22 @@ json_schemas:
   property_count: 0
   slug: AccountSignature
 - name: AccountSignature_AbstractSignature
-  property_count: 0
+  property_count: 1
   slug: AccountSignature_AbstractSignature
 - name: AccountSignature_Ed25519Signature
-  property_count: 0
+  property_count: 1
   slug: AccountSignature_Ed25519Signature
 - name: AccountSignature_MultiEd25519Signature
-  property_count: 0
+  property_count: 1
   slug: AccountSignature_MultiEd25519Signature
 - name: AccountSignature_MultiKeySignature
-  property_count: 0
+  property_count: 1
   slug: AccountSignature_MultiKeySignature
 - name: AccountSignature_NoAccountSignature
-  property_count: 0
+  property_count: 1
   slug: AccountSignature_NoAccountSignature
 - name: AccountSignature_SingleKeySignature
-  property_count: 0
+  property_count: 1
   slug: AccountSignature_SingleKeySignature
 - name: Address
   property_count: 0
@@ -412,13 +413,13 @@ json_schemas:
   property_count: 2
   slug: BlockMetadataExtensionRandomnessAndDecKey
 - name: BlockMetadataExtension_BlockMetadataExtensionEmpty
-  property_count: 0
+  property_count: 1
   slug: BlockMetadataExtension_BlockMetadataExtensionEmpty
 - name: BlockMetadataExtension_BlockMetadataExtensionRandomness
-  property_count: 0
+  property_count: 1
   slug: BlockMetadataExtension_BlockMetadataExtensionRandomness
 - name: BlockMetadataExtension_BlockMetadataExtensionRandomnessAndDecKey
-  property_count: 0
+  property_count: 1
   slug: BlockMetadataExtension_BlockMetadataExtensionRandomnessAndDecKey
 - name: BlockMetadataTransaction
   property_count: 19
@@ -478,25 +479,25 @@ json_schemas:
   property_count: 0
   slug: EncryptedTransactionInnerPayload
 - name: EncryptedTransactionInnerPayload_EntryFunctionPayload
-  property_count: 0
+  property_count: 1
   slug: EncryptedTransactionInnerPayload_EntryFunctionPayload
 - name: EncryptedTransactionInnerPayload_MultisigPayload
-  property_count: 0
+  property_count: 1
   slug: EncryptedTransactionInnerPayload_MultisigPayload
 - name: EncryptedTransactionInnerPayload_ScriptPayload
-  property_count: 0
+  property_count: 1
   slug: EncryptedTransactionInnerPayload_ScriptPayload
 - name: EncryptedTransactionPayload
   property_count: 0
   slug: EncryptedTransactionPayload
 - name: EncryptedTransactionPayload_DecryptedPayload
-  property_count: 0
+  property_count: 1
   slug: EncryptedTransactionPayload_DecryptedPayload
 - name: EncryptedTransactionPayload_EncryptedPayload
-  property_count: 0
+  property_count: 1
   slug: EncryptedTransactionPayload_EncryptedPayload
 - name: EncryptedTransactionPayload_FailedDecryptionPayload
-  property_count: 0
+  property_count: 1
   slug: EncryptedTransactionPayload_FailedDecryptionPayload
 - name: EntryFunctionId
   property_count: 0
@@ -541,7 +542,7 @@ json_schemas:
   property_count: 0
   slug: GenesisPayload
 - name: GenesisPayload_WriteSetPayload
-  property_count: 0
+  property_count: 1
   slug: GenesisPayload_WriteSetPayload
 - name: GenesisTransaction
   property_count: 12
@@ -649,10 +650,10 @@ json_schemas:
   property_count: 0
   slug: MultisigTransactionPayload
 - name: MultisigTransactionPayload_EntryFunctionPayload
-  property_count: 0
+  property_count: 1
   slug: MultisigTransactionPayload_EntryFunctionPayload
 - name: MultisigTransactionPayload_ScriptPayload
-  property_count: 0
+  property_count: 1
   slug: MultisigTransactionPayload_ScriptPayload
 - name: NoAccountSignature
   property_count: 0
@@ -667,22 +668,22 @@ json_schemas:
   property_count: 0
   slug: PublicKey
 - name: PublicKey_Ed25519
-  property_count: 0
+  property_count: 1
   slug: PublicKey_Ed25519
 - name: PublicKey_FederatedKeyless
-  property_count: 0
+  property_count: 1
   slug: PublicKey_FederatedKeyless
 - name: PublicKey_Keyless
-  property_count: 0
+  property_count: 1
   slug: PublicKey_Keyless
 - name: PublicKey_Secp256k1Ecdsa
-  property_count: 0
+  property_count: 1
   slug: PublicKey_Secp256k1Ecdsa
 - name: PublicKey_Secp256r1Ecdsa
-  property_count: 0
+  property_count: 1
   slug: PublicKey_Secp256r1Ecdsa
 - name: PublicKey_SlhDsa_Sha2_128s
-  property_count: 0
+  property_count: 1
   slug: PublicKey_SlhDsa_Sha2_128s
 - name: RSA_JWK
   property_count: 5
@@ -694,7 +695,7 @@ json_schemas:
   property_count: 0
   slug: ReplayProtector
 - name: ReplayProtector_string(U64)
-  property_count: 0
+  property_count: 1
   slug: ReplayProtector_string(U64)
 - name: RequestedMultipliers
   property_count: 2
@@ -718,19 +719,19 @@ json_schemas:
   property_count: 0
   slug: Signature
 - name: Signature_Ed25519
-  property_count: 0
+  property_count: 1
   slug: Signature_Ed25519
 - name: Signature_Keyless
-  property_count: 0
+  property_count: 1
   slug: Signature_Keyless
 - name: Signature_Secp256k1Ecdsa
-  property_count: 0
+  property_count: 1
   slug: Signature_Secp256k1Ecdsa
 - name: Signature_SlhDsa_Sha2_128s
-  property_count: 0
+  property_count: 1
   slug: Signature_SlhDsa_Sha2_128s
 - name: Signature_WebAuthn
-  property_count: 0
+  property_count: 1
   slug: Signature_WebAuthn
 - name: SingleKeySignature
   property_count: 2
@@ -760,64 +761,64 @@ json_schemas:
   property_count: 0
   slug: TransactionPayload
 - name: TransactionPayload_DeprecatedModuleBundlePayload
-  property_count: 0
+  property_count: 1
   slug: TransactionPayload_DeprecatedModuleBundlePayload
 - name: TransactionPayload_EncryptedTransactionPayload
-  property_count: 0
+  property_count: 1
   slug: TransactionPayload_EncryptedTransactionPayload
 - name: TransactionPayload_EntryFunctionPayload
-  property_count: 0
+  property_count: 1
   slug: TransactionPayload_EntryFunctionPayload
 - name: TransactionPayload_MultisigPayload
-  property_count: 0
+  property_count: 1
   slug: TransactionPayload_MultisigPayload
 - name: TransactionPayload_ScriptPayload
-  property_count: 0
+  property_count: 1
   slug: TransactionPayload_ScriptPayload
 - name: TransactionSignature
   property_count: 0
   slug: TransactionSignature
 - name: TransactionSignature_AccountSignature
-  property_count: 0
+  property_count: 1
   slug: TransactionSignature_AccountSignature
 - name: TransactionSignature_Ed25519Signature
-  property_count: 0
+  property_count: 1
   slug: TransactionSignature_Ed25519Signature
 - name: TransactionSignature_FeePayerSignature
-  property_count: 0
+  property_count: 1
   slug: TransactionSignature_FeePayerSignature
 - name: TransactionSignature_MultiAgentSignature
-  property_count: 0
+  property_count: 1
   slug: TransactionSignature_MultiAgentSignature
 - name: TransactionSignature_MultiEd25519Signature
-  property_count: 0
+  property_count: 1
   slug: TransactionSignature_MultiEd25519Signature
 - name: TransactionSignature_NoAccountSignature
-  property_count: 0
+  property_count: 1
   slug: TransactionSignature_NoAccountSignature
 - name: TransactionSummary
   property_count: 4
   slug: TransactionSummary
 - name: Transaction_BlockEpilogueTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_BlockEpilogueTransaction
 - name: Transaction_BlockMetadataTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_BlockMetadataTransaction
 - name: Transaction_GenesisTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_GenesisTransaction
 - name: Transaction_PendingTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_PendingTransaction
 - name: Transaction_StateCheckpointTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_StateCheckpointTransaction
 - name: Transaction_UserTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_UserTransaction
 - name: Transaction_ValidatorTransaction
-  property_count: 0
+  property_count: 1
   slug: Transaction_ValidatorTransaction
 - name: TransactionsBatchSingleSubmissionFailure
   property_count: 2
@@ -844,25 +845,25 @@ json_schemas:
   property_count: 0
   slug: UserTxnLimitsRequest
 - name: UserTxnLimitsRequest_DelegatedVoterLimitsRequest
-  property_count: 0
+  property_count: 1
   slug: UserTxnLimitsRequest_DelegatedVoterLimitsRequest
 - name: UserTxnLimitsRequest_DelegationPoolDelegatorLimitsRequest
-  property_count: 0
+  property_count: 1
   slug: UserTxnLimitsRequest_DelegationPoolDelegatorLimitsRequest
 - name: UserTxnLimitsRequest_StakePoolOwnerLimitsRequest
-  property_count: 0
+  property_count: 1
   slug: UserTxnLimitsRequest_StakePoolOwnerLimitsRequest
 - name: ValidatorTransaction
   property_count: 0
   slug: ValidatorTransaction
 - name: ValidatorTransaction_ChunkyDKGResultTransaction
-  property_count: 0
+  property_count: 1
   slug: ValidatorTransaction_ChunkyDKGResultTransaction
 - name: ValidatorTransaction_DKGResultTransaction
-  property_count: 0
+  property_count: 1
   slug: ValidatorTransaction_DKGResultTransaction
 - name: ValidatorTransaction_JWKUpdateTransaction
-  property_count: 0
+  property_count: 1
   slug: ValidatorTransaction_JWKUpdateTransaction
 - name: VersionedEvent
   property_count: 5
@@ -886,31 +887,31 @@ json_schemas:
   property_count: 0
   slug: WriteSetChange
 - name: WriteSetChange_DeleteModule
-  property_count: 0
+  property_count: 1
   slug: WriteSetChange_DeleteModule
 - name: WriteSetChange_DeleteResource
-  property_count: 0
+  property_count: 1
   slug: WriteSetChange_DeleteResource
 - name: WriteSetChange_DeleteTableItem
-  property_count: 0
+  property_count: 1
   slug: WriteSetChange_DeleteTableItem
 - name: WriteSetChange_WriteModule
-  property_count: 0
+  property_count: 1
   slug: WriteSetChange_WriteModule
 - name: WriteSetChange_WriteResource
-  property_count: 0
+  property_count: 1
   slug: WriteSetChange_WriteResource
 - name: WriteSetChange_WriteTableItem
-  property_count: 0
+  property_count: 1
   slug: WriteSetChange_WriteTableItem
 - name: WriteSetPayload
   property_count: 1
   slug: WriteSetPayload
 - name: WriteSet_DirectWriteSet
-  property_count: 0
+  property_count: 1
   slug: WriteSet_DirectWriteSet
 - name: WriteSet_ScriptWriteSet
-  property_count: 0
+  property_count: 1
   slug: WriteSet_ScriptWriteSet
 - name: WriteTableItem
   property_count: 5
@@ -938,9 +939,12 @@ overview: 'Aptos publishes 10 API contracts indexed on the [APIs.io](https://api
   Aptos'' developer surface includes developer portal, documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, and 17 more developer resources.'
 plans:
 - name: Aptos Plans Pricing
-  plan_count: 3
+  plan_count: 8
   slug: aptos-plans-pricing
-random_paper: 1
+- name: Aptos Price Estimates
+  plan_count: 0
+  slug: aptos-price-estimates
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Aptos Rate Limits
@@ -958,30 +962,30 @@ rules:
     warn: 4
   slug: aptos-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 49.5
+  band: strong
+  composite: 56.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 57.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 57.8
+    artifact_dirs: 21
+    catalog_earned: 69.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 45.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 1.1
   facets:
-    access_clarity: 52.6
+    access_clarity: 84.2
     contract_governance: 9.8
-    contract_quality: 54.5
+    contract_quality: 58.8
     developer_ergonomics: 77.4
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 57.8
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
   regulatory:
     applies: true
@@ -989,13 +993,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/aptos/refs/heads/main/screenshots/aptos-2026-06-20T172345.png
+screenshot: https://apis.io/screenshots/aptos/aptos-2026-06-20T172345.png
 security:
 - kind: domain-security
   name: Aptos Domain Security

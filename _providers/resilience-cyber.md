@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The only publicly documented, machine-readable surface Resilience operates. portal.cyberresilience.com — the gated client and broker application — redirects through /v2/api/auth/login to an Auth0 tena
@@ -44,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/security/resilience-cyber-domain-security.yml
+  href: https://artifacts.apis.io/resilience-cyber/security/resilience-cyber-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/resilience-cyber-domain-security.yml
@@ -65,7 +68,7 @@ common:
   type: TrustCenter
   url: https://trust.cyberresilience.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/security/resilience-cyber-trust-center.yml
+  href: https://artifacts.apis.io/resilience-cyber/security/resilience-cyber-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/resilience-cyber-trust-center.yml
@@ -82,27 +85,27 @@ common:
   type: Authentication
   url: https://auth.cyberresilience.com/.well-known/openid-configuration
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/authentication/resilience-cyber-authentication.yml
+  href: https://artifacts.apis.io/resilience-cyber/authentication/resilience-cyber-authentication.yml
   title: ''
   type: Authentication
   url: authentication/resilience-cyber-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/scopes/resilience-cyber-scopes.yml
+  href: https://artifacts.apis.io/resilience-cyber/scopes/resilience-cyber-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/resilience-cyber-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/well-known/resilience-cyber-well-known.yml
+  href: https://artifacts.apis.io/resilience-cyber/well-known/resilience-cyber-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/resilience-cyber-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/conformance/resilience-cyber-conformance.yml
+  href: https://artifacts.apis.io/resilience-cyber/conformance/resilience-cyber-conformance.yml
   title: ''
   type: Conformance
   url: conformance/resilience-cyber-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/llms/resilience-cyber-llms.txt
+  href: https://artifacts.apis.io/resilience-cyber/llms/resilience-cyber-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/resilience-cyber-llms.txt
@@ -179,7 +182,7 @@ overview: 'Resilience is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Resilience''s developer surface includes engineering blog, signup flow, authentication, support, YouTube channel, and 24 more developer resources.'
-random_paper: 9
+random_paper: 5
 scopes:
 - name: Resilience Cyber Scopes
   scope_count: 14
@@ -189,7 +192,7 @@ score:
   band: emerging
   composite: 19.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -219,14 +222,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 34.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/resilience-cyber/refs/heads/main/screenshots/resilience-cyber-2026-09-02T153535.png
+screenshot: https://apis.io/screenshots/resilience-cyber/resilience-cyber-2026-09-02T153535.png
 security:
 - kind: authentication
   name: Resilience Cyber Authentication

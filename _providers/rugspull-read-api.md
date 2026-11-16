@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-10-17'
+  score: 31.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 9
   slug: rugspull-read-api-agentic-access
   summary_line: 9 operations
-api_count: 4
+api_count: 1
 apis:
 - baseURL: https://rugspull.com
   baseurl_source: spec
@@ -70,7 +76,7 @@ apis:
   description: Liveness and public configuration.
   name: Rugspull Read API Service API
   slug: rugspull-read-api-service-api
-artifact_total: 12
+artifact_total: 16
 collections:
 - collection_type: open
   name: Rugspull Read API
@@ -85,17 +91,17 @@ common:
   type: Website
   url: https://rugspull.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/agentic-access/rugspull-read-api-agentic-access.yml
+  href: https://artifacts.apis.io/rugspull-read-api/agentic-access/rugspull-read-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rugspull-read-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/security/rugspull-read-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rugspull-read-api/security/rugspull-read-api-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rugspull-read-api-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/security/rugspull-read-api-domain-security.yml
+  href: https://artifacts.apis.io/rugspull-read-api/security/rugspull-read-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rugspull-read-api-domain-security.yml
@@ -124,102 +130,102 @@ common:
   type: Support
   url: https://github.com/pqchase/rugspull/issues
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/collections/rugspull-read-api.postman_collection.json
+  href: https://artifacts.apis.io/rugspull-read-api/collections/rugspull-read-api.postman_collection.json
   title: ''
   type: Postman
   url: collections/rugspull-read-api.postman_collection.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/llms/rugspull-read-api-llms.txt
+  href: https://artifacts.apis.io/rugspull-read-api/llms/rugspull-read-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rugspull-read-api-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/well-known/rugspull-read-api-well-known.yml
+  href: https://artifacts.apis.io/rugspull-read-api/well-known/rugspull-read-api-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rugspull-read-api-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/well-known/rugspull-read-api-api-catalog.json
+  href: https://artifacts.apis.io/rugspull-read-api/well-known/rugspull-read-api-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/rugspull-read-api-api-catalog.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/well-known/rugspull-read-api-security.txt
+  href: https://artifacts.apis.io/rugspull-read-api/well-known/rugspull-read-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/rugspull-read-api-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/security/rugspull-read-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rugspull-read-api/security/rugspull-read-api-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/rugspull-read-api-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/authentication/rugspull-read-api-authentication.yml
+  href: https://artifacts.apis.io/rugspull-read-api/authentication/rugspull-read-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rugspull-read-api-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/conventions/rugspull-read-api-conventions.yml
+  href: https://artifacts.apis.io/rugspull-read-api/conventions/rugspull-read-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rugspull-read-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/conventions/rugspull-read-api-conventions.yml
+  href: https://artifacts.apis.io/rugspull-read-api/conventions/rugspull-read-api-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/rugspull-read-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/errors/rugspull-read-api-problem-types.yml
+  href: https://artifacts.apis.io/rugspull-read-api/errors/rugspull-read-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rugspull-read-api-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/lifecycle/rugspull-read-api-lifecycle.yml
+  href: https://artifacts.apis.io/rugspull-read-api/lifecycle/rugspull-read-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rugspull-read-api-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/changelog/rugspull-read-api-changelog.yml
+  href: https://artifacts.apis.io/rugspull-read-api/changelog/rugspull-read-api-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rugspull-read-api-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/conformance/rugspull-read-api-conformance.yml
+  href: https://artifacts.apis.io/rugspull-read-api/conformance/rugspull-read-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rugspull-read-api-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/packages/rugspull-read-api-packages.yml
+  href: https://artifacts.apis.io/rugspull-read-api/packages/rugspull-read-api-packages.yml
   title: ''
   type: Packages
   url: packages/rugspull-read-api-packages.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/rate-limits/rugspull-read-api-rate-limits.yml
+  href: https://artifacts.apis.io/rugspull-read-api/rate-limits/rugspull-read-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rugspull-read-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/plans/rugspull-read-api-plans-pricing.yml
+  href: https://artifacts.apis.io/rugspull-read-api/plans/rugspull-read-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rugspull-read-api-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/data-model/rugspull-read-api-data-model.yml
+  href: https://artifacts.apis.io/rugspull-read-api/data-model/rugspull-read-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rugspull-read-api-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/examples/rugspull-read-api-examples.yml
+  href: https://artifacts.apis.io/rugspull-read-api/examples/rugspull-read-api-examples.yml
   title: ''
   type: Examples
   url: examples/rugspull-read-api-examples.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/overlays/rugspull-read-api-read-api-overlay.yaml
+  href: https://artifacts.apis.io/rugspull-read-api/overlays/rugspull-read-api-read-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rugspull-read-api-read-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rugspull-read-api/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -234,42 +240,58 @@ network: true
 overview: 'Rugspull Read API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Indexer API, Market API, Objects API, and 2 more. Tagged areas include BNB Smart Chain, BSC, wbnb, Read Only, and OpenAPI.
 
 
+  The Rugspull Read API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Rugspull Read API''s developer surface includes documentation, API reference, getting-started guide, support, authentication, changelog, code examples, and 24 more developer resources.'
 plans:
 - name: Rugspull Read Api Plans Pricing
   plan_count: 0
   slug: rugspull-read-api-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Rugspull Read Api Rate Limits
   slug: rugspull-read-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Rugspull Read API API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: rugspull-read-api-rules
 score:
-  band: thin
-  composite: 37.7
+  band: developing
+  composite: 40.0
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 35.0
+    artifact_dirs: 26
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.2
   facets:
     access_clarity: 0.0
-    contract_governance: 18.2
-    contract_quality: 45.8
+    contract_governance: 31.8
+    contract_quality: 50.6
     developer_ergonomics: 61.3
-    discoverability: 69.6
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 37.1
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 5
     mcp: derived
     skills: derived
@@ -279,14 +301,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/rugspull-read-api/refs/heads/main/screenshots/rugspull-read-api-2026-09-02T154200.png
+screenshot: https://apis.io/screenshots/rugspull-read-api/rugspull-read-api-2026-09-02T154200.png
 security:
 - kind: authentication
   name: Rugspull Read Api Authentication
@@ -300,6 +322,14 @@ security:
   name: Rugspull Read Api Vulnerability Disclosure
   slug: rugspull-read-api-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: Discover and inspect a Rug
+  slug: rugspull-read-api-discover-and-inspect-a-rug
+- name: Reconstruct market data correctly
+  slug: rugspull-read-api-reconstruct-market-data
+- name: Verify before you integrate or list
+  slug: rugspull-read-api-verify-before-you-integrate
 slug: rugspull-read-api
 tags:
 - BNB Smart Chain

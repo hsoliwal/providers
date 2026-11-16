@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,13 +39,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the 4th & Heart online store, implemented by Shopify's native Universal Commerce Protocol support on the merchant's own domain. A remote MCP server at https://four
   name: 4th & Heart Agentic Commerce (UCP / MCP)
   slug: 4th-heart-commerce
-artifact_total: 7
+artifact_total: 8
 common:
 - group: company
   title: ''
@@ -40,47 +56,47 @@ common:
   type: Documentation
   url: https://fourthandheart.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/llms/4th-heart-llms.txt
+  href: https://artifacts.apis.io/4th-heart/llms/4th-heart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/4th-heart-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/well-known/4th-heart-well-known.yml
+  href: https://artifacts.apis.io/4th-heart/well-known/4th-heart-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/4th-heart-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/mcp/4th-heart-mcp.yml
+  href: https://artifacts.apis.io/4th-heart/mcp/4th-heart-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/4th-heart-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/conformance/4th-heart-conformance.yml
+  href: https://artifacts.apis.io/4th-heart/conformance/4th-heart-conformance.yml
   title: ''
   type: Conformance
   url: conformance/4th-heart-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/lifecycle/4th-heart-lifecycle.yml
+  href: https://artifacts.apis.io/4th-heart/lifecycle/4th-heart-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/4th-heart-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/security/4th-heart-domain-security.yml
+  href: https://artifacts.apis.io/4th-heart/security/4th-heart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/4th-heart-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/plans/4th-heart-plans-pricing.yml
+  href: https://artifacts.apis.io/4th-heart/plans/4th-heart-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/4th-heart-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/rate-limits/4th-heart-rate-limits.yml
+  href: https://artifacts.apis.io/4th-heart/rate-limits/4th-heart-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/4th-heart-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/4th-heart/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -124,7 +140,7 @@ plans:
 - name: 4Th Heart Plans Pricing
   plan_count: 0
   slug: 4th-heart-plans-pricing
-random_paper: 13
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: 4Th Heart Rate Limits
@@ -138,13 +154,13 @@ score:
   band: emerging
   composite: 25.5
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
@@ -159,7 +175,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.4
+  previous_composite: 25.5
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -170,14 +186,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/4th-heart/refs/heads/main/screenshots/4th-heart-2026-10-11T092129.png
+screenshot: https://apis.io/screenshots/4th-heart/4th-heart-2026-10-11T092129.png
 security:
 - kind: authentication
   name: 4Th Heart Authentication
@@ -187,6 +203,10 @@ security:
   name: 4Th Heart Domain Security
   slug: 4th-heart-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Buy from the 4th & Heart store as an agent
+  slug: 4th-heart-agent-purchase
 slug: 4th-heart
 tags:
 - Company

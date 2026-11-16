@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,17 +73,17 @@ common:
   type: Compliance
   url: https://us.caddi.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caddi/refs/heads/main/security/caddi-domain-security.yml
+  href: https://artifacts.apis.io/caddi/security/caddi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/caddi-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caddi/refs/heads/main/security/caddi-trust-center.yml
+  href: https://artifacts.apis.io/caddi/security/caddi-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/caddi-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/caddi/refs/heads/main/llms/caddi-llms.txt
+  href: https://artifacts.apis.io/caddi/llms/caddi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/caddi-llms.txt
@@ -95,7 +99,7 @@ overview: 'CADDi is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   CADDi''s developer surface includes engineering blog, support, and 9 more developer resources.'
-random_paper: 17
+random_paper: 21
 score:
   band: emerging
   composite: 13.4
@@ -106,7 +110,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
@@ -121,21 +125,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 13.3
+  previous_composite: 13.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/caddi/refs/heads/main/screenshots/caddi-2026-07-25T204209.png
+screenshot: https://apis.io/screenshots/caddi/caddi-2026-07-25T204209.png
 security:
 - kind: domain-security
   name: Caddi Domain Security

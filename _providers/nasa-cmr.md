@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,11 +82,8 @@ apis:
   description: Extension to WFS3 Core to support STAC metadata model and search API
   name: NASA CMR STAC API
   slug: nasa-cmr-stac-api
-artifact_total: 33
+artifact_total: 32
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CMR Search Capabilities API
   slug: open-nasa-cmr-capabilities-api
@@ -105,12 +106,12 @@ common:
   type: Releases
   url: https://github.com/nasa/cmr-stac/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nasa-cmr/refs/heads/main/agentic-access/nasa-cmr-agentic-access.yml
+  href: https://artifacts.apis.io/nasa-cmr/agentic-access/nasa-cmr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nasa-cmr-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nasa-cmr/refs/heads/main/security/nasa-cmr-domain-security.yml
+  href: https://artifacts.apis.io/nasa-cmr/security/nasa-cmr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nasa-cmr-domain-security.yml
@@ -147,17 +148,17 @@ common:
   type: Blog
   url: https://www.earthdata.nasa.gov/news
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nasa-cmr/refs/heads/main/plans/nasa-cmr-plans-pricing.yml
+  href: https://artifacts.apis.io/nasa-cmr/plans/nasa-cmr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nasa-cmr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nasa-cmr/refs/heads/main/rate-limits/nasa-cmr-rate-limits.yml
+  href: https://artifacts.apis.io/nasa-cmr/rate-limits/nasa-cmr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nasa-cmr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nasa-cmr/refs/heads/main/finops/nasa-cmr-finops.yml
+  href: https://artifacts.apis.io/nasa-cmr/finops/nasa-cmr-finops.yml
   title: ''
   type: FinOps
   url: finops/nasa-cmr-finops.yml
@@ -206,7 +207,7 @@ json_schemas:
   property_count: 6
   slug: nasa-cmr-stac-link
 - name: NASA CMR STAC Searchbody
-  property_count: 0
+  property_count: 1
   slug: nasa-cmr-stac-searchBody
 jsonld:
 - class_count: 0
@@ -233,7 +234,7 @@ plans:
 - name: Nasa Cmr Plans Pricing
   plan_count: 3
   slug: nasa-cmr-plans-pricing
-random_paper: 16
+random_paper: 18
 rate_limits:
 - limit_count: 6
   name: Nasa Cmr Rate Limits
@@ -254,13 +255,13 @@ score:
   band: thin
   composite: 33.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 54.3
     catalog_earned_first_party: 0.0
     catalog_gap: 60.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.0
   facets:
     access_clarity: 14.5
     contract_governance: 9.8
@@ -268,7 +269,7 @@ score:
     developer_ergonomics: 16.7
     discoverability: 66.1
     operational_transparency: 44.7
-  previous_composite: 41.8
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
@@ -282,14 +283,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/nasa-cmr/refs/heads/main/screenshots/nasa-cmr-2026-06-20T185946.png
+screenshot: https://apis.io/screenshots/nasa-cmr/nasa-cmr-2026-06-20T185946.png
 security:
 - kind: domain-security
   name: Nasa Cmr Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -24,17 +28,20 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: false
+    idempotency: verified
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
-    reversibility_documented: documented
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-10-17'
+  score: 35.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -49,34 +56,11 @@ apis:
   slug: firstrade-account-data-api-via-plaid
 - baseURL: https://production.plaid.com
   baseurl_source: declared
-  description: Account list, balances, positions, and history
-  name: Firstrade Account API
-  slug: firstrade-account-api
-- baseURL: https://production.plaid.com
-  baseurl_source: declared
-  description: Session login and MFA flows
-  name: Firstrade Authentication API
-  slug: firstrade-authentication-api
-- baseURL: https://production.plaid.com
-  baseurl_source: declared
-  description: Stock quotes, OHLC chart data, and option chains
-  name: Firstrade Market Data API
-  slug: firstrade-market-data-api
-- baseURL: https://production.plaid.com
-  baseurl_source: declared
-  description: Equity and option order placement, listing, and cancellation
-  name: Firstrade Orders API
-  slug: firstrade-orders-api
-- baseURL: https://production.plaid.com
-  baseurl_source: declared
-  description: Watchlist CRUD operations
-  name: Firstrade Watchlist API
-  slug: firstrade-watchlist-api
-artifact_total: 18
+  description: The Plaid API
+  name: Firstrade Plaid API
+  slug: firstrade-plaid-api
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Firstrade Unofficial Account API
   slug: open-firstrade-account-api
@@ -94,37 +78,37 @@ collections:
   slug: open-firstrade-watchlist-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/firstrade/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/firstrade/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/firstrade/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/capabilities/firstrade-capability-edges.yml
+  href: https://artifacts.apis.io/firstrade/capabilities/firstrade-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/firstrade-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/agentic-access/firstrade-agentic-access.yml
+  href: https://artifacts.apis.io/firstrade/agentic-access/firstrade-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/firstrade-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/security/firstrade-domain-security.yml
+  href: https://artifacts.apis.io/firstrade/security/firstrade-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/firstrade-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/authentication/firstrade-authentication.yml
+  href: https://artifacts.apis.io/firstrade/authentication/firstrade-authentication.yml
   title: ''
   type: Authentication
   url: authentication/firstrade-authentication.yml
@@ -184,7 +168,10 @@ modified: '2026-06-13'
 name: Firstrade
 nav: Providers
 network: true
-overview: 'Firstrade publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Authentication API, Market Data API, and 3 more. Tagged areas include Brokerage, Commission-Free Trading, Stocks, ETFs, and Options.
+overview: 'Firstrade publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Plaid API, and 1 more. Tagged areas include Brokerage, Commission-Free Trading, Stocks, ETFs, and Options.
+
+
+  The Firstrade catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Firstrade''s developer surface includes authentication, pricing, and 15 more developer resources.'
@@ -192,50 +179,63 @@ plans:
 - name: Plans
   plan_count: 2
   slug: plans
-random_paper: 18
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Rate Limits
   slug: rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Firstrade API Rules
+  rule_count: 68
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 13
+  slug: firstrade-rules
 score:
   band: thin
-  composite: 30.1
+  composite: 37.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 39.0
+    artifact_dirs: 17
+    catalog_earned: 43.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 76.0
+    catalog_gap: 71.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.2
   facets:
     access_clarity: 36.8
-    contract_governance: 0.0
-    contract_quality: 47.4
+    contract_governance: 13.6
+    contract_quality: 52.8
     developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 34.4
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 14.3
+      total: 7
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/firstrade/refs/heads/main/screenshots/firstrade-2026-06-20T181243.png
+    score: 38.9
+screenshot: https://apis.io/screenshots/firstrade/firstrade-2026-06-20T181243.png
 security:
 - kind: authentication
   name: Firstrade Authentication

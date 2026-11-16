@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 36.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Shopify Storefront GraphQL API for the Slingshot Bio online store, declared by the company in its own /.well-known/api-catalog. Serves products, collections, cart and checkout operations for the c
@@ -47,7 +50,7 @@ apis:
 - description: 'A live Model Context Protocol server for the Slingshot Bio store, answering anonymous tools/list over HTTP JSON-RPC with five tools: search_catalog, get_product_details, get_cart, update_cart and sear'
   name: Slingshot Bio Storefront MCP Server
   slug: slingshot-bio-storefront-mcp-server
-artifact_total: 7
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -78,62 +81,62 @@ common:
   type: PrivacyPolicy
   url: https://www.slingshotbio.com/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/well-known/slingshot-biosciences-well-known.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/well-known/slingshot-biosciences-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/slingshot-biosciences-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/well-known/slingshot-biosciences-api-catalog.json
+  href: https://artifacts.apis.io/slingshot-biosciences/well-known/slingshot-biosciences-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/slingshot-biosciences-api-catalog.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/llms/slingshot-biosciences-llms.txt
+  href: https://artifacts.apis.io/slingshot-biosciences/llms/slingshot-biosciences-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/slingshot-biosciences-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/authentication/slingshot-biosciences-authentication.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/authentication/slingshot-biosciences-authentication.yml
   title: ''
   type: Authentication
   url: authentication/slingshot-biosciences-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/scopes/slingshot-biosciences-scopes.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/scopes/slingshot-biosciences-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/slingshot-biosciences-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/conventions/slingshot-biosciences-conventions.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/conventions/slingshot-biosciences-conventions.yml
   title: ''
   type: Conventions
   url: conventions/slingshot-biosciences-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/data-model/slingshot-biosciences-data-model.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/data-model/slingshot-biosciences-data-model.yml
   title: ''
   type: DataModel
   url: data-model/slingshot-biosciences-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/lifecycle/slingshot-biosciences-lifecycle.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/lifecycle/slingshot-biosciences-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/slingshot-biosciences-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/conformance/slingshot-biosciences-conformance.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/conformance/slingshot-biosciences-conformance.yml
   title: ''
   type: Conformance
   url: conformance/slingshot-biosciences-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/errors/slingshot-biosciences-problem-types.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/errors/slingshot-biosciences-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/slingshot-biosciences-problem-types.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/security/slingshot-biosciences-domain-security.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/security/slingshot-biosciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/slingshot-biosciences-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/slingshot-biosciences/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -154,7 +157,7 @@ overview: 'Slingshot Biosciences is listed with 3 APIs on the [APIs.io](https://
 
 
   Slingshot Biosciences'' developer surface includes engineering blog, support, pricing, signup flow, authentication, and 14 more developer resources.'
-random_paper: 13
+random_paper: 7
 scopes:
 - name: Slingshot Biosciences Scopes
   scope_count: 4
@@ -189,14 +192,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/slingshot-biosciences/refs/heads/main/screenshots/slingshot-biosciences-2026-09-02T155853.png
+screenshot: https://apis.io/screenshots/slingshot-biosciences/slingshot-biosciences-2026-09-02T155853.png
 security:
 - kind: authentication
   name: Slingshot Biosciences Authentication
@@ -206,6 +209,14 @@ security:
   name: Slingshot Biosciences Domain Security
   slug: slingshot-biosciences-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Build a Slingshot Bio cart and hand off to checkout
+  slug: slingshot-biosciences-build-and-checkout-cart
+- name: Find Slingshot Bio cell mimic controls
+  slug: slingshot-biosciences-find-cell-mimic-controls
+- name: Read slingshotbio.com as markdown
+  slug: slingshot-biosciences-read-site-as-markdown
 slug: slingshot-biosciences
 tags:
 - Company

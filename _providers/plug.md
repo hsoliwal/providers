@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.2
-  scored_at: '2026-10-17'
+  score: 39.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 46
   human_in_the_loop: 0
@@ -138,15 +141,12 @@ apis:
   description: A Malga utiliza o serviço de webhooks para notificar o seu sistema sobre os eventos ocorridos na nossa plataforma. Através de webhooks você consegue atualizar seu sistema sempre que um evento importan
   name: Malga Webhooks API
   slug: plug-webhooks-api
-artifact_total: 42
+artifact_total: 44
 asyncapis:
 - description: ''
   name: Plug Webhooks
   slug: plug-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Documentação Malga 3DS2 Malga API
   slug: open-plug-3ds2-malga-api
@@ -203,7 +203,7 @@ collections:
   slug: open-plug-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/capabilities/plug-capability-edges.yml
+  href: https://artifacts.apis.io/plug/capabilities/plug-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/plug-capability-edges.yml
@@ -252,127 +252,127 @@ common:
   type: GitHubOrganization
   url: https://github.com/plughacker
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/openapi/_original/plug-openapi-original.yml
+  href: https://artifacts.apis.io/plug/openapi/_original/plug-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/plug-openapi-original.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/authentication/plug-authentication.yml
+  href: https://artifacts.apis.io/plug/authentication/plug-authentication.yml
   title: ''
   type: Authentication
   url: authentication/plug-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/agentic-access/plug-agentic-access.yml
+  href: https://artifacts.apis.io/plug/agentic-access/plug-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/plug-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/security/plug-domain-security.yml
+  href: https://artifacts.apis.io/plug/security/plug-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/plug-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/packages/plug-packages.yml
+  href: https://artifacts.apis.io/plug/packages/plug-packages.yml
   title: ''
   type: Packages
   url: packages/plug-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/packages/plug-packages.yml
+  href: https://artifacts.apis.io/plug/packages/plug-packages.yml
   title: ''
   type: SDKs
   url: packages/plug-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/cli/plug-cli.yml
+  href: https://artifacts.apis.io/plug/cli/plug-cli.yml
   title: ''
   type: CLI
   url: cli/plug-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/components/plug-components.yml
+  href: https://artifacts.apis.io/plug/components/plug-components.yml
   title: ''
   type: Components
   url: components/plug-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/sandbox/plug-sandbox.yml
+  href: https://artifacts.apis.io/plug/sandbox/plug-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/plug-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/conventions/plug-conventions.yml
+  href: https://artifacts.apis.io/plug/conventions/plug-conventions.yml
   title: ''
   type: Conventions
   url: conventions/plug-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/conventions/plug-conventions.yml
+  href: https://artifacts.apis.io/plug/conventions/plug-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/plug-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/errors/plug-problem-types.yml
+  href: https://artifacts.apis.io/plug/errors/plug-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/plug-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/errors/plug-decline-codes.yml
+  href: https://artifacts.apis.io/plug/errors/plug-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/plug-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/lifecycle/plug-lifecycle.yml
+  href: https://artifacts.apis.io/plug/lifecycle/plug-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/plug-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/lifecycle/plug-lifecycle.yml
+  href: https://artifacts.apis.io/plug/lifecycle/plug-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/plug-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/conformance/plug-conformance.yml
+  href: https://artifacts.apis.io/plug/conformance/plug-conformance.yml
   title: ''
   type: Conformance
   url: conformance/plug-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/conformance/plug-conformance.yml
+  href: https://artifacts.apis.io/plug/conformance/plug-conformance.yml
   title: ''
   type: Compliance
   url: conformance/plug-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/asyncapi/plug-webhooks.yml
+  href: https://artifacts.apis.io/plug/asyncapi/plug-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/plug-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/well-known/plug-well-known.yml
+  href: https://artifacts.apis.io/plug/well-known/plug-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/plug-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/mcp/plug-mcp.yml
+  href: https://artifacts.apis.io/plug/mcp/plug-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/plug-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/data-model/plug-data-model.yml
+  href: https://artifacts.apis.io/plug/data-model/plug-data-model.yml
   title: ''
   type: DataModel
   url: data-model/plug-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/overlays/plug-openapi-overlay.yaml
+  href: https://artifacts.apis.io/plug/overlays/plug-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/plug-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/llms/plug-llms.txt
+  href: https://artifacts.apis.io/plug/llms/plug-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/plug-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/plug/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/changelog/plug-changelog.yml
+  href: https://artifacts.apis.io/plug/changelog/plug-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/plug-changelog.yml
@@ -387,25 +387,38 @@ network: true
 overview: 'Malga publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including 3DS2 Malga API, Cards API, Charges API, and 16 more. Tagged areas include Company, Payments, Payment Orchestration, Payment Gateway, and Fintech.
 
 
-  The Malga catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Malga catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Malga''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, changelog, authentication, and 30 more developer resources.'
-random_paper: 0
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Malga API Rules
+  rule_count: 57
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 4
+    warn: 15
+  slug: plug-rules
 score:
   band: developing
-  composite: 47.2
+  composite: 48.8
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 37.0
+    artifact_dirs: 28
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 59.4
     developer_ergonomics: 73.2
     discoverability: 73.2
@@ -417,7 +430,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 47.2
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -434,13 +447,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/screenshots/plug-2026-08-17T081311.png
+screenshot: https://apis.io/screenshots/plug/plug-2026-08-17T081311.png
 security:
 - kind: authentication
   name: Plug Authentication
@@ -450,6 +463,12 @@ security:
   name: Plug Domain Security
   slug: plug-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create a customer and charge a card with Malga
+  slug: plug-create-and-charge
+- name: Set up recurring billing with Malga subscriptions
+  slug: plug-subscription-billing
 slug: plug
 tags:
 - Company

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 22.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 58
   human_in_the_loop: 2
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 116
   slug: 1nce-agentic-access
   summary_line: 116 operations · 58 acting · 2 human-in-the-loop
-api_count: 15
+api_count: 7
 apis:
 - baseURL: https://api.1nce.com/management-api
   baseurl_source: spec
@@ -224,9 +227,6 @@ collections:
   name: Authorization Administration Logs Volume Top Up API
   slug: postman-1nce-volume-top-up-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Authorization Administration Logs API
   slug: open-1nce-administration-logs-api
 - collection_type: open
@@ -322,7 +322,7 @@ common:
   type: Website
   url: https://www.1nce.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/capabilities/1nce-capability-edges.yml
+  href: https://artifacts.apis.io/1nce/capabilities/1nce-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/1nce-capability-edges.yml
@@ -331,22 +331,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/1nce/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/agentic-access/1nce-agentic-access.yml
+  href: https://artifacts.apis.io/1nce/agentic-access/1nce-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/1nce-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/security/1nce-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/1nce/security/1nce-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/1nce-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/security/1nce-domain-security.yml
+  href: https://artifacts.apis.io/1nce/security/1nce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/1nce-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/authentication/1nce-authentication.yml
+  href: https://artifacts.apis.io/1nce/authentication/1nce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/1nce-authentication.yml
@@ -475,17 +475,17 @@ common:
   type: Documentation
   url: https://help.1nce.com/dev-hub/reference/api-best-practices
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/plans/1nce-plans-pricing.yml
+  href: https://artifacts.apis.io/1nce/plans/1nce-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/1nce-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/rate-limits/1nce-rate-limits.yml
+  href: https://artifacts.apis.io/1nce/rate-limits/1nce-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/1nce-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/finops/1nce-finops.yml
+  href: https://artifacts.apis.io/1nce/finops/1nce-finops.yml
   title: ''
   type: FinOps
   url: finops/1nce-finops.yml
@@ -512,10 +512,10 @@ features:
 - Self-service registration and provisioning workflow for new IoT projects with no monthly fee and a single upfront payment for the full subscription window
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: 1Nce Finops
   primary_unit: sim
-  service_category: Networking
+  service_category: ''
   slug: 1nce-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/1nce.png
@@ -524,7 +524,7 @@ json_schemas:
   property_count: 5
   slug: 1nce-device
 - name: 1NCE SIM
-  property_count: 0
+  property_count: 16
   slug: 1nce-sim
 jsonld:
 - class_count: 0
@@ -545,9 +545,12 @@ overview: '1NCE publishes 22 API contracts indexed on the [APIs.io](https://apis
   1NCE''s developer surface includes authentication, developer portal, documentation, getting-started guide, sandbox, signup flow, code examples, and 34 more developer resources.'
 plans:
 - name: 1Nce Plans Pricing
-  plan_count: 5
+  plan_count: 10
   slug: 1nce-plans-pricing
-random_paper: 7
+- name: 1Nce Price Estimates
+  plan_count: 0
+  slug: 1nce-price-estimates
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: 1Nce Rate Limits
@@ -566,22 +569,22 @@ rules:
   slug: 1nce-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 44.7
+  composite: 51.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 61.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 53.8
+    artifact_dirs: 19
+    catalog_earned: 70.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 44.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: 1.1
   facets:
-    access_clarity: 50.0
+    access_clarity: 73.7
     contract_governance: 9.8
-    contract_quality: 67.0
+    contract_quality: 71.2
     developer_ergonomics: 48.8
     discoverability: 62.5
-    operational_transparency: 5.3
+    operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -590,13 +593,13 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 48.9
+  previous_composite: 50.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 72.7
       total: 22
   regulatory:
     applies: true
@@ -604,13 +607,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 25.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/1nce/refs/heads/main/screenshots/1nce-2026-06-20T162509.png
+screenshot: https://apis.io/screenshots/1nce/1nce-2026-06-20T162509.png
 security:
 - kind: authentication
   name: 1Nce Authentication

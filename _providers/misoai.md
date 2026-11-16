@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 26.2
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.askmiso.com
   baseurl_source: declared
@@ -87,11 +91,8 @@ apis:
   description: APIs for recommending products and content to users based on their interests.
   name: miso.ai User Recommendations API
   slug: misoai-user-recommendations-api
-artifact_total: 24
+artifact_total: 29
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Miso Ask APIs API
   slug: open-misoai-ask-apis-api
@@ -124,7 +125,7 @@ collections:
   slug: open-misoai-user-recommendations-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/plans/misoai-plans-pricing.yml
+  href: https://artifacts.apis.io/misoai/plans/misoai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/misoai-plans-pricing.yml
@@ -133,12 +134,12 @@ common:
   type: Blog
   url: https://miso.ai/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/capabilities/misoai-capability-edges.yml
+  href: https://artifacts.apis.io/misoai/capabilities/misoai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/misoai-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/overlays/misoai-openapi-overlay.yaml
+  href: https://artifacts.apis.io/misoai/overlays/misoai-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/misoai-openapi-overlay.yaml
@@ -167,7 +168,7 @@ common:
   type: Quickstart
   url: https://docs.miso.ai/introduction/quickstart-ask
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/authentication/misoai-authentication.yml
+  href: https://artifacts.apis.io/misoai/authentication/misoai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/misoai-authentication.yml
@@ -208,67 +209,75 @@ common:
   type: Sandbox
   url: https://dojo.miso.ai
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/packages/misoai-packages.yml
+  href: https://artifacts.apis.io/misoai/packages/misoai-packages.yml
   title: ''
   type: SDKs
   url: packages/misoai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/packages/misoai-packages.yml
+  href: https://artifacts.apis.io/misoai/packages/misoai-packages.yml
   title: ''
   type: Packages
   url: packages/misoai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/llms/misoai-llms.txt
+  href: https://artifacts.apis.io/misoai/llms/misoai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/misoai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/mcp/misoai-mcp.yml
+  href: https://artifacts.apis.io/misoai/mcp/misoai-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/misoai-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/conventions/misoai-conventions.yml
+  href: https://artifacts.apis.io/misoai/conventions/misoai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/misoai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/errors/misoai-problem-types.yml
+  href: https://artifacts.apis.io/misoai/errors/misoai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/misoai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/lifecycle/misoai-lifecycle.yml
+  href: https://artifacts.apis.io/misoai/lifecycle/misoai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/misoai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/conformance/misoai-conformance.yml
+  href: https://artifacts.apis.io/misoai/conformance/misoai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/misoai-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/security/misoai-domain-security.yml
+  href: https://artifacts.apis.io/misoai/security/misoai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/misoai-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/data-model/misoai-data-model.yml
+  href: https://artifacts.apis.io/misoai/data-model/misoai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/misoai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/components/misoai-components.yml
+  href: https://artifacts.apis.io/misoai/components/misoai-components.yml
   title: ''
   type: Components
   url: components/misoai-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/misoai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Miso (Miso Technologies, askmiso.com) is an AI personalization, search, and answers platform for publishers, media companies, and retailers. Miso trains machine-learning "Engines" on three data sets a site already has — its log of historical and real-time user interactions, its catalog of products/content, and its users — and exposes the output as REST APIs for personalized semantic search, typo-tolerant autocomplete, product and user recommendations, and an LLM-grounded Q&A / "Answers" experience that answers questions using only the customer's own content (reducing hallucination). The platform ships JavaScript (client + server), Python, and PHP SDKs, a WordPress plugin, embeddable Ask / Explore / Hybrid Search web modules, and the Dojo console for training engines and managing API keys and environments.
+finops:
+- has_sources: true
+  method: derived
+  name: Misoai Finops
+  primary_unit: ''
+  service_category: ''
+  slug: misoai-finops
+  template: true
 image: https://miso.ai/favicon.ico
 layout: provider
 modified: '2026-10-06'
@@ -278,37 +287,53 @@ network: true
 overview: 'miso.ai publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ask APIs API, Bulk API, Experiment APIs API, and 7 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Search, and Recommendations.
 
 
+  The miso.ai catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   miso.ai''s developer surface includes engineering blog, documentation, API reference, getting-started guide, quickstart, authentication, pricing, and 25 more developer resources.'
 plans:
 - name: Misoai Plans Pricing
   plan_count: 1
   slug: misoai-plans-pricing
-random_paper: 4
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: miso.ai API Rules
+  rule_count: 59
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 3
+    warn: 4
+  slug: misoai-rules
 score:
   band: developing
-  composite: 40.1
+  composite: 51.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 45.0
+    artifact_dirs: 29
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.7
+  delta: 9.2
   facets:
-    access_clarity: 31.6
-    contract_governance: 4.5
-    contract_quality: 47.7
+    access_clarity: 65.8
+    contract_governance: 18.2
+    contract_quality: 53.0
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.4
+  previous_composite: 41.8
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 10
     mcp: derived
     skills: derived
@@ -317,14 +342,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 22.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/misoai/refs/heads/main/screenshots/misoai-2026-08-07T183747.png
+screenshot: https://apis.io/screenshots/misoai/misoai-2026-08-07T183747.png
 security:
 - kind: authentication
   name: Misoai Authentication
@@ -334,6 +359,16 @@ security:
   name: Misoai Domain Security
   slug: misoai-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Answer questions from your content (Ask)
+  slug: misoai-ask-answers
+- name: Ingest your catalog, users, and interactions
+  slug: misoai-ingest-catalog
+- name: Add personalized search and autocomplete
+  slug: misoai-personalized-search
+- name: Serve personalized recommendations
+  slug: misoai-recommendations
 slug: misoai
 tags:
 - Company

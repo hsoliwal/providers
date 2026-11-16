@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: InterSystems Developer Hub provides documentation and resources for developers.
@@ -43,42 +56,42 @@ common:
   type: BlogRSS
   url: https://www.intersystems.com/news/index.rss
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/rules/intersystems-rules.yml
+  href: https://artifacts.apis.io/intersystems/rules/intersystems-rules.yml
   title: ''
   type: Spectral
   url: rules/intersystems-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/json-ld/intersystems-context.jsonld
+  href: https://artifacts.apis.io/intersystems/json-ld/intersystems-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/intersystems-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/vocabulary/intersystems-vocabulary.yml
+  href: https://artifacts.apis.io/intersystems/vocabulary/intersystems-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/intersystems-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/data-model/intersystems-data-model.yml
+  href: https://artifacts.apis.io/intersystems/data-model/intersystems-data-model.yml
   title: ''
   type: DataModel
   url: data-model/intersystems-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/conformance/intersystems-conformance.yml
+  href: https://artifacts.apis.io/intersystems/conformance/intersystems-conformance.yml
   title: ''
   type: Conformance
   url: conformance/intersystems-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/llms/intersystems-llms.txt
+  href: https://artifacts.apis.io/intersystems/llms/intersystems-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/intersystems-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/hosts/intersystems-hosts.yml
+  href: https://artifacts.apis.io/intersystems/hosts/intersystems-hosts.yml
   title: ''
   type: Hosts
   url: hosts/intersystems-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/vendors/intersystems-vendors.yml
+  href: https://artifacts.apis.io/intersystems/vendors/intersystems-vendors.yml
   title: ''
   type: Vendors
   url: vendors/intersystems-vendors.yml
@@ -91,7 +104,7 @@ common:
   type: Documentation
   url: https://developer.intersystems.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/security/intersystems-domain-security.yml
+  href: https://artifacts.apis.io/intersystems/security/intersystems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/intersystems-domain-security.yml
@@ -148,23 +161,23 @@ rules:
   slug: intersystems-rules
 score:
   band: emerging
-  composite: 15.4
+  composite: 13.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 36.2
     catalog_earned_first_party: 0.0
     catalog_gap: 63.9
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -13.0
+  delta: -2.1
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 17.4
-    developer_ergonomics: 23.8
+    developer_ergonomics: 13.1
     discoverability: 42.9
     operational_transparency: 0.0
-  previous_composite: 28.4
+  previous_composite: 15.4
   provenance:
     conformance: derived
     contracts:
@@ -179,14 +192,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/intersystems/refs/heads/main/screenshots/intersystems-2026-10-11T105815.png
+screenshot: https://apis.io/screenshots/intersystems/intersystems-2026-10-11T105815.png
 security:
 - kind: domain-security
   name: Intersystems Domain Security

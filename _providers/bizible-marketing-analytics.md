@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/security/bizible-marketing-analytics-domain-security.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/security/bizible-marketing-analytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bizible-marketing-analytics-domain-security.yml
@@ -50,42 +55,42 @@ common:
   type: Website
   url: https://bizible.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/packages/bizible-marketing-analytics-packages.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/packages/bizible-marketing-analytics-packages.yml
   title: ''
   type: Packages
   url: packages/bizible-marketing-analytics-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/components/bizible-marketing-analytics-components.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/components/bizible-marketing-analytics-components.yml
   title: ''
   type: Components
   url: components/bizible-marketing-analytics-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/changelog/bizible-marketing-analytics-changelog.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/changelog/bizible-marketing-analytics-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bizible-marketing-analytics-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/lifecycle/bizible-marketing-analytics-lifecycle.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/lifecycle/bizible-marketing-analytics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bizible-marketing-analytics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/conformance/bizible-marketing-analytics-conformance.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/conformance/bizible-marketing-analytics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bizible-marketing-analytics-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/plans/bizible-marketing-analytics-plans-pricing.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/plans/bizible-marketing-analytics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bizible-marketing-analytics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/rate-limits/bizible-marketing-analytics-rate-limits.yml
+  href: https://artifacts.apis.io/bizible-marketing-analytics/rate-limits/bizible-marketing-analytics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bizible-marketing-analytics-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/llms/bizible-marketing-analytics-llms.txt
+  href: https://artifacts.apis.io/bizible-marketing-analytics/llms/bizible-marketing-analytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bizible-marketing-analytics-llms.txt
@@ -119,7 +124,7 @@ plans:
 - name: Bizible Marketing Analytics Plans Pricing
   plan_count: 0
   slug: bizible-marketing-analytics-plans-pricing
-random_paper: 7
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Bizible Marketing Analytics Rate Limits
@@ -151,14 +156,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bizible-marketing-analytics/refs/heads/main/screenshots/bizible-marketing-analytics-2026-07-25T203222.png
+screenshot: https://apis.io/screenshots/bizible-marketing-analytics/bizible-marketing-analytics-2026-07-25T203222.png
 security:
 - kind: domain-security
   name: Bizible Marketing Analytics Domain Security

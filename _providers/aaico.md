@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Opus REST API. Generate a workflow from a natural-language prompt, run a workflow as a "case" with populated inputs, upload files as case inputs through a presigned-URL flow, poll or receive a cal
@@ -32,7 +47,7 @@ apis:
 - description: 'A first-party remote MCP server over the Opus developer documentation, reachable anonymously at https://developer.opus.com/mcp over streamable HTTP. Three tools: semantic search across the docs, a rea'
   name: Opus Docs MCP Server
   slug: opus-docs-mcp
-artifact_total: 9
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -79,82 +94,82 @@ common:
   type: TrustCenter
   url: https://trust.opus.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/conformance/aaico-conformance.yml
+  href: https://artifacts.apis.io/aaico/conformance/aaico-conformance.yml
   title: ''
   type: Compliance
   url: conformance/aaico-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/changelog/aaico-changelog.yml
+  href: https://artifacts.apis.io/aaico/changelog/aaico-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/aaico-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/lifecycle/aaico-lifecycle.yml
+  href: https://artifacts.apis.io/aaico/lifecycle/aaico-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/aaico-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/mcp/aaico-mcp.yml
+  href: https://artifacts.apis.io/aaico/mcp/aaico-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/aaico-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/a2a/aaico-a2a.yml
+  href: https://artifacts.apis.io/aaico/a2a/aaico-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/aaico-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/aaico/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/llms/aaico-llms.txt
+  href: https://artifacts.apis.io/aaico/llms/aaico-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aaico-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/well-known/aaico-well-known.yml
+  href: https://artifacts.apis.io/aaico/well-known/aaico-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/aaico-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/authentication/aaico-authentication.yml
+  href: https://artifacts.apis.io/aaico/authentication/aaico-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aaico-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/conventions/aaico-conventions.yml
+  href: https://artifacts.apis.io/aaico/conventions/aaico-conventions.yml
   title: ''
   type: Conventions
   url: conventions/aaico-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/errors/aaico-problem-types.yml
+  href: https://artifacts.apis.io/aaico/errors/aaico-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/aaico-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/rate-limits/aaico-rate-limits.yml
+  href: https://artifacts.apis.io/aaico/rate-limits/aaico-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aaico-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/plans/aaico-plans-pricing.yml
+  href: https://artifacts.apis.io/aaico/plans/aaico-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aaico-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/packages/aaico-packages.yml
+  href: https://artifacts.apis.io/aaico/packages/aaico-packages.yml
   title: ''
   type: Packages
   url: packages/aaico-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/conformance/aaico-conformance.yml
+  href: https://artifacts.apis.io/aaico/conformance/aaico-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aaico-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/security/aaico-domain-security.yml
+  href: https://artifacts.apis.io/aaico/security/aaico-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aaico-domain-security.yml
@@ -163,7 +178,7 @@ common:
   type: Postman
   url: https://developer.opus.com/api-reference/v0-jobs/postman-collection
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/conventions/aaico-conventions.yml
+  href: https://artifacts.apis.io/aaico/conventions/aaico-conventions.yml
   title: ''
   type: Webhooks
   url: conventions/aaico-conventions.yml
@@ -188,7 +203,7 @@ plans:
 - name: Aaico Plans Pricing
   plan_count: 0
   slug: aaico-plans-pricing
-random_paper: 3
+random_paper: 5
 rate_limits:
 - limit_count: 3
   name: Aaico Rate Limits
@@ -222,14 +237,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aaico/refs/heads/main/screenshots/aaico-2026-10-11T092340.png
+screenshot: https://apis.io/screenshots/aaico/aaico-2026-10-11T092340.png
 security:
 - kind: authentication
   name: Aaico Authentication
@@ -247,6 +262,10 @@ security:
   name: Aaico Trust Center
   slug: aaico-trust-center
   summary_line: SOC 2 Type II, ISO 27001, ISO 42001, HIPAA, GDPR, EU AI Act
+skill_count: 1
+skills:
+- name: Opus Developer Documentation
+  slug: aaico-opus-developer-documentation
 slug: aaico
 tags:
 - Company

@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: near-conformant
     agent_skills: false
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-10-17'
+  score: 32.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Live GPU cloud price comparison across the whole market, as a REST API and MCP server.
@@ -46,53 +60,58 @@ apis:
   slug: fastgpu-router-api
 artifact_total: 8
 common:
+- group: other
+  href: https://artifacts.apis.io/fastgpu/capabilities/fastgpu-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fastgpu-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/rules/fastgpu-rules.yml
+  href: https://artifacts.apis.io/fastgpu/rules/fastgpu-rules.yml
   title: ''
   type: Spectral
   url: rules/fastgpu-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/vocabulary/fastgpu-vocabulary.yml
+  href: https://artifacts.apis.io/fastgpu/vocabulary/fastgpu-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/fastgpu-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/conformance/fastgpu-conformance.yml
+  href: https://artifacts.apis.io/fastgpu/conformance/fastgpu-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fastgpu-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/plans/fastgpu-plans-pricing.yml
+  href: https://artifacts.apis.io/fastgpu/plans/fastgpu-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fastgpu-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/errors/fastgpu-problem-types.yml
+  href: https://artifacts.apis.io/fastgpu/errors/fastgpu-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/fastgpu-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/llms/fastgpu-llms.txt
+  href: https://artifacts.apis.io/fastgpu/llms/fastgpu-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fastgpu-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/a2a/fastgpu-a2a.yml
+  href: https://artifacts.apis.io/fastgpu/a2a/fastgpu-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/fastgpu-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/mcp/fastgpu-mcp.yml
+  href: https://artifacts.apis.io/fastgpu/mcp/fastgpu-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/fastgpu-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/hosts/fastgpu-hosts.yml
+  href: https://artifacts.apis.io/fastgpu/hosts/fastgpu-hosts.yml
   title: ''
   type: Hosts
   url: hosts/fastgpu-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/vendors/fastgpu-vendors.yml
+  href: https://artifacts.apis.io/fastgpu/vendors/fastgpu-vendors.yml
   title: ''
   type: Vendors
   url: vendors/fastgpu-vendors.yml
@@ -105,7 +124,7 @@ common:
   type: PrivacyPolicy
   url: https://fastgpu.co/legal/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastgpu/refs/heads/main/security/fastgpu-domain-security.yml
+  href: https://artifacts.apis.io/fastgpu/security/fastgpu-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fastgpu-domain-security.yml
@@ -151,12 +170,12 @@ overview: 'FastGPU publishes 4 API contracts indexed on the [APIs.io](https://ap
   The FastGPU catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  FastGPU''s developer surface includes documentation, API reference, pricing, engineering blog, support, and 14 more developer resources.'
+  FastGPU''s developer surface includes documentation, API reference, pricing, engineering blog, support, and 15 more developer resources.'
 plans:
 - name: Fastgpu Plans Pricing
   plan_count: 2
   slug: fastgpu-plans-pricing
-random_paper: 14
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -172,21 +191,23 @@ rules:
   slug: fastgpu-rules
 score:
   band: thin
-  composite: 36.6
+  composite: 30.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 19
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.1
   facets:
-    access_clarity: 52.6
+    access_clarity: 36.8
     contract_governance: 19.7
     contract_quality: 50.6
-    developer_ergonomics: 23.8
+    developer_ergonomics: 11.9
     discoverability: 66.7
     operational_transparency: 0.0
+  previous_composite: 36.6
   provenance:
     conformance: derived
     contracts:
@@ -194,18 +215,20 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-    mcp: unknown
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/fastgpu/fastgpu-2026-11-03T131916.png
 security:
 - kind: domain-security
   name: Fastgpu Domain Security

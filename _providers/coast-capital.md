@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: No public API · Aggregator-mediated data access only
+  confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
-  - website
-  - research
+  - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,37 +41,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/security/coast-capital-domain-security.yml
+  href: https://artifacts.apis.io/coast-capital/security/coast-capital-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coast-capital-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/well-known/coast-capital-well-known.yml
+  href: https://artifacts.apis.io/coast-capital/well-known/coast-capital-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coast-capital-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/authentication/coast-capital-authentication.yml
+  href: https://artifacts.apis.io/coast-capital/authentication/coast-capital-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coast-capital-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/scopes/coast-capital-scopes.yml
+  href: https://artifacts.apis.io/coast-capital/scopes/coast-capital-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/coast-capital-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/conformance/coast-capital-conformance.yml
+  href: https://artifacts.apis.io/coast-capital/conformance/coast-capital-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coast-capital-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/llms/coast-capital-llms.txt
+  href: https://artifacts.apis.io/coast-capital/llms/coast-capital-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coast-capital-llms.txt
@@ -93,7 +100,7 @@ overview: 'Coast Capital Savings is profiled on the [APIs.io](https://apis.io/) 
 
 
   Coast Capital Savings'' developer surface includes authentication and 8 more developer resources.'
-random_paper: 19
+random_paper: 21
 scopes:
 - name: Coast Capital Scopes
   scope_count: 2
@@ -133,14 +140,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 29.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/screenshots/coast-capital-2026-07-25T205833.png
+screenshot: https://apis.io/screenshots/coast-capital/coast-capital-2026-07-25T205833.png
 security:
 - kind: authentication
   name: Coast Capital Authentication

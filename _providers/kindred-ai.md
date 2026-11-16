@@ -5,14 +5,15 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kindred-ai/refs/heads/main/security/kindred-ai-domain-security.yml
+  href: https://artifacts.apis.io/kindred-ai/security/kindred-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kindred-ai-domain-security.yml
@@ -25,7 +26,7 @@ name: Kindred Ai
 nav: Providers
 network: true
 overview: Kindred Ai is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Robotics, Artificial Intelligence, Machine Learning, and Reinforcement Learning.
-random_paper: 16
+random_paper: 0
 security:
 - kind: domain-security
   name: Kindred Ai Domain Security

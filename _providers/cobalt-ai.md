@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cobalt-ai/refs/heads/main/security/cobalt-ai-domain-security.yml
+  href: https://artifacts.apis.io/cobalt-ai/security/cobalt-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cobalt-ai-domain-security.yml
@@ -74,7 +78,7 @@ common:
   type: Careers
   url: https://www.cobaltai.com/careers/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cobalt-ai/refs/heads/main/security/cobalt-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cobalt-ai/security/cobalt-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cobalt-ai-vulnerability-disclosure.yml
@@ -94,6 +98,10 @@ common:
   title: ''
   type: YouTube
   url: https://www.youtube.com/@Just_Cobalt
+- group: company
+  title: ''
+  type: Blog
+  url: https://blog.cobaltrobotics.com/
 created: '2026-07-17'
 description: Cobalt AI (formerly Cobalt Robotics) is a San Francisco based physical security automation company whose Cobalt Monitoring Intelligence platform uses AI handlers to investigate security events across access control systems and video feeds, determine root cause, and trigger automated responses so security teams focus on genuine threats instead of alarm triage. Its offerings include the Cobalt Command Center remote monitoring service and an indoor autonomous security robot, with integrations spanning LenelS2, Genetec, Avigilon, Brivo, Eagle Eye Networks, Milestone, Okta, ServiceNow, Salesforce, and Slack. The company was founded in 2016, backed early by Bloomberg Beta and Sequoia, and acquired in 2024 by Dean Drako, who rebranded it to Cobalt AI.
 image: https://www.cobaltai.com/wp-content/uploads/2024/04/cropped-favicon-InfinityMark-blue-192x192.png
@@ -105,13 +113,13 @@ network: true
 overview: 'Cobalt AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Physical Security, Security Automation, Artificial Intelligence, and Video Monitoring.
 
 
-  Cobalt AI''s developer surface includes engineering blog, support, YouTube channel, and 11 more developer resources.'
-random_paper: 18
+  Cobalt AI''s developer surface includes engineering blog, support, YouTube channel, and 12 more developer resources.'
+random_paper: 12
 score:
   band: minimal
   composite: 10.9
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -132,14 +140,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 14.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cobalt-ai/refs/heads/main/screenshots/cobalt-ai-2026-07-25T205842.png
+screenshot: https://apis.io/screenshots/cobalt-ai/cobalt-ai-2026-07-25T205842.png
 security:
 - kind: domain-security
   name: Cobalt Ai Domain Security
@@ -160,5 +168,7 @@ tags:
 - Robotics
 - Remote Monitoring
 - Security Operations
+- Security
+- Automation
 website: https://www.cobaltai.com/
 ---

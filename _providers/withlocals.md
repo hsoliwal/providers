@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 41.8
-  scored_at: '2026-10-17'
+  score: 43.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -59,149 +74,154 @@ apis:
   description: Out-of-band events delivered by Withlocals to a partner-registered URL. Register at `PUT /webhooks`. See the *Webhooks* section for the delivery contract and the events Withlocals sends.
   name: Withlocals Webhooks API
   slug: withlocals-webhooks-api
-artifact_total: 21
+artifact_total: 24
 asyncapis:
 - description: ''
   name: Withlocals Webhooks
   slug: withlocals-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/withlocals/capabilities/withlocals-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/withlocals-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/agentic-access/withlocals-agentic-access.yml
+  href: https://artifacts.apis.io/withlocals/agentic-access/withlocals-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/withlocals-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/rules/withlocals-rules.yml
+  href: https://artifacts.apis.io/withlocals/rules/withlocals-rules.yml
   title: ''
   type: Spectral
   url: rules/withlocals-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/rules/withlocals-partner-api-doc-spectral-rules.yml
+  href: https://artifacts.apis.io/withlocals/rules/withlocals-partner-api-doc-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/withlocals-partner-api-doc-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/json-ld/withlocals-context.jsonld
+  href: https://artifacts.apis.io/withlocals/json-ld/withlocals-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/withlocals-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/vocabulary/withlocals-vocabulary.yml
+  href: https://artifacts.apis.io/withlocals/vocabulary/withlocals-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/withlocals-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/withlocals/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/asyncapi/withlocals-webhooks.yml
+  href: https://artifacts.apis.io/withlocals/asyncapi/withlocals-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/withlocals-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/data-model/withlocals-data-model.yml
+  href: https://artifacts.apis.io/withlocals/data-model/withlocals-data-model.yml
   title: ''
   type: DataModel
   url: data-model/withlocals-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/conventions/withlocals-conventions.yml
+  href: https://artifacts.apis.io/withlocals/conventions/withlocals-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/withlocals-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/conventions/withlocals-conventions.yml
+  href: https://artifacts.apis.io/withlocals/conventions/withlocals-conventions.yml
   title: ''
   type: Conventions
   url: conventions/withlocals-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/sandbox/withlocals-sandbox.yml
+  href: https://artifacts.apis.io/withlocals/sandbox/withlocals-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/withlocals-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/security/withlocals-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/withlocals/security/withlocals-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/withlocals-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/lifecycle/withlocals-lifecycle.yml
+  href: https://artifacts.apis.io/withlocals/lifecycle/withlocals-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/withlocals-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/errors/withlocals-error-codes.yml
+  href: https://artifacts.apis.io/withlocals/errors/withlocals-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/withlocals-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/errors/withlocals-problem-types.yml
+  href: https://artifacts.apis.io/withlocals/errors/withlocals-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/withlocals-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/conformance/withlocals-conformance.yml
+  href: https://artifacts.apis.io/withlocals/conformance/withlocals-conformance.yml
   title: ''
   type: Conformance
   url: conformance/withlocals-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/overlays/withlocals-partner-api-overlay.yaml
+  href: https://artifacts.apis.io/withlocals/overlays/withlocals-partner-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/withlocals-partner-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/llms/withlocals-llms.txt
+  href: https://artifacts.apis.io/withlocals/llms/withlocals-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/withlocals-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/well-known/withlocals-security.txt
+  href: https://artifacts.apis.io/withlocals/well-known/withlocals-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/withlocals-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/well-known/withlocals-helpcenter-security.txt
+  href: https://artifacts.apis.io/withlocals/well-known/withlocals-helpcenter-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/withlocals-helpcenter-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/well-known/withlocals-well-known.yml
+  href: https://artifacts.apis.io/withlocals/well-known/withlocals-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/withlocals-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/hosts/withlocals-hosts.yml
+  href: https://artifacts.apis.io/withlocals/hosts/withlocals-hosts.yml
   title: ''
   type: Hosts
   url: hosts/withlocals-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/vendors/withlocals-vendors.yml
+  href: https://artifacts.apis.io/withlocals/vendors/withlocals-vendors.yml
   title: ''
   type: Vendors
   url: vendors/withlocals-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/packages/withlocals-packages.yml
+  href: https://artifacts.apis.io/withlocals/packages/withlocals-packages.yml
   title: ''
   type: SDKs
   url: packages/withlocals-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/packages/withlocals-packages.yml
+  href: https://artifacts.apis.io/withlocals/packages/withlocals-packages.yml
   title: ''
   type: Packages
   url: packages/withlocals-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/authentication/withlocals-authentication.yml
+  href: https://artifacts.apis.io/withlocals/authentication/withlocals-authentication.yml
   title: ''
   type: Authentication
   url: authentication/withlocals-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/security/withlocals-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/withlocals/security/withlocals-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/withlocals-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/security/withlocals-domain-security.yml
+  href: https://artifacts.apis.io/withlocals/security/withlocals-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/withlocals-domain-security.yml
@@ -283,12 +303,12 @@ overview: 'Withlocals publishes 5 API contracts indexed on the [APIs.io](https:/
   The Withlocals catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Withlocals'' developer surface includes sandbox, authentication, API reference, signup flow, and 34 more developer resources.'
+  Withlocals'' developer surface includes sandbox, authentication, API reference, signup flow, and 35 more developer resources.'
 plans:
 - name: Withlocals Plans Pricing
   plan_count: 0
   slug: withlocals-plans-pricing
-random_paper: 4
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Withlocals Rate Limits
@@ -320,30 +340,30 @@ rules:
   slug: withlocals-rules
 score:
   band: developing
-  composite: 52.5
+  composite: 46.5
   coverage:
-    artifact_dirs: 28
+    artifact_dirs: 30
     catalog_earned: 62.0
     catalog_earned_first_party: 0.0
     catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.1
+  delta: -6.0
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 19.7
-    contract_quality: 78.0
-    developer_ergonomics: 58.9
+    contract_quality: 83.9
+    developer_ergonomics: 43.5
     discoverability: 73.2
-    operational_transparency: 23.7
-  previous_composite: 55.6
+    operational_transparency: 21.1
+  previous_composite: 52.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 5
     mcp: derived
     skills: derived
@@ -352,14 +372,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/withlocals/refs/heads/main/screenshots/withlocals-2026-10-11T195734.png
+screenshot: https://apis.io/screenshots/withlocals/withlocals-2026-10-11T195734.png
 security:
 - kind: authentication
   name: Withlocals Authentication
@@ -373,6 +393,14 @@ security:
   name: Withlocals Vulnerability Disclosure
   slug: withlocals-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: withlocals-book-experience
+  slug: withlocals-book-experience
+- name: withlocals-manage-booking
+  slug: withlocals-manage-booking
+- name: withlocals-webhooks
+  slug: withlocals-webhooks
 slug: withlocals
 tags:
 - Company

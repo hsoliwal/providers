@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 29.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -109,11 +112,8 @@ apis:
   description: Operations involving verifiable credentials
   name: Tradeverifyd Verifiable Credentials API
   slug: tradeverifyd-verifiable-credentials-api
-artifact_total: 31
+artifact_total: 34
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Tradeverifyd Documents API
   slug: open-tradeverifyd-documents-api
@@ -155,12 +155,12 @@ collections:
   slug: open-tradeverifyd-verifiable-credentials-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/capabilities/tradeverifyd-capability-edges.yml
+  href: https://artifacts.apis.io/tradeverifyd/capabilities/tradeverifyd-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tradeverifyd-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/overlays/tradeverifyd-openapi-overlay.yaml
+  href: https://artifacts.apis.io/tradeverifyd/overlays/tradeverifyd-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tradeverifyd-openapi-overlay.yaml
@@ -209,82 +209,82 @@ common:
   type: PrivacyPolicy
   url: https://tradeverifyd.com/privacy-policy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/postman/tradeverifyd-shipments-cbp-postman-collection.json
+  href: https://artifacts.apis.io/tradeverifyd/postman/tradeverifyd-shipments-cbp-postman-collection.json
   title: ''
   type: Postman
   url: postman/tradeverifyd-shipments-cbp-postman-collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/examples/tradeverifyd-entities-by-flag-type-guide.md
+  href: https://artifacts.apis.io/tradeverifyd/examples/tradeverifyd-entities-by-flag-type-guide.md
   title: ''
   type: Examples
   url: examples/tradeverifyd-entities-by-flag-type-guide.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/authentication/tradeverifyd-authentication.yml
+  href: https://artifacts.apis.io/tradeverifyd/authentication/tradeverifyd-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tradeverifyd-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/security/tradeverifyd-domain-security.yml
+  href: https://artifacts.apis.io/tradeverifyd/security/tradeverifyd-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tradeverifyd-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/security/tradeverifyd-trust-center.yml
+  href: https://artifacts.apis.io/tradeverifyd/security/tradeverifyd-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tradeverifyd-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/agentic-access/tradeverifyd-agentic-access.yml
+  href: https://artifacts.apis.io/tradeverifyd/agentic-access/tradeverifyd-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tradeverifyd-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/lifecycle/tradeverifyd-lifecycle.yml
+  href: https://artifacts.apis.io/tradeverifyd/lifecycle/tradeverifyd-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tradeverifyd-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/conventions/tradeverifyd-conventions.yml
+  href: https://artifacts.apis.io/tradeverifyd/conventions/tradeverifyd-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tradeverifyd-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/errors/tradeverifyd-problem-types.yml
+  href: https://artifacts.apis.io/tradeverifyd/errors/tradeverifyd-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/tradeverifyd-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/conformance/tradeverifyd-conformance.yml
+  href: https://artifacts.apis.io/tradeverifyd/conformance/tradeverifyd-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tradeverifyd-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/data-model/tradeverifyd-data-model.yml
+  href: https://artifacts.apis.io/tradeverifyd/data-model/tradeverifyd-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tradeverifyd-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/mcp/tradeverifyd-mcp.yml
+  href: https://artifacts.apis.io/tradeverifyd/mcp/tradeverifyd-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/tradeverifyd-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/llms/tradeverifyd-llms.txt
+  href: https://artifacts.apis.io/tradeverifyd/llms/tradeverifyd-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tradeverifyd-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/well-known/tradeverifyd-well-known.yml
+  href: https://artifacts.apis.io/tradeverifyd/well-known/tradeverifyd-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tradeverifyd-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tradeverifyd/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/openapi/_original/tradeverifyd-transparency-service-openapi.yaml
+  href: https://artifacts.apis.io/tradeverifyd/openapi/_original/tradeverifyd-transparency-service-openapi.yaml
   title: ''
   type: OpenAPI
   url: openapi/_original/tradeverifyd-transparency-service-openapi.yaml
@@ -299,27 +299,43 @@ network: true
 overview: 'Tradeverifyd publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Documents API, Entity API, Flags API, and 10 more. Tagged areas include Supply Chain, Trade Compliance, Risk Management, Verifiable Credentials, and Customs.
 
 
+  The Tradeverifyd catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tradeverifyd''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, code examples, authentication, and 22 more developer resources.'
-random_paper: 13
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 113
+  extends:
+  - spectral:oas
+  name: Tradeverifyd API Rules
+  rule_count: 72
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 9
+    warn: 15
+  slug: tradeverifyd-rules
 score:
   band: developing
-  composite: 40.4
+  composite: 42.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 35.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.4
     developer_ergonomics: 38.7
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 40.3
+  previous_composite: 42.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -336,13 +352,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tradeverifyd/refs/heads/main/screenshots/tradeverifyd-2026-08-17T082420.png
+screenshot: https://apis.io/screenshots/tradeverifyd/tradeverifyd-2026-08-17T082420.png
 security:
 - kind: authentication
   name: Tradeverifyd Authentication
@@ -356,6 +372,14 @@ security:
   name: Tradeverifyd Trust Center
   slug: tradeverifyd-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Map a multi-tier supplier graph and its flagged relationships
+  slug: tradeverifyd-map-supplier-graph
+- name: Screen a supplier for supply chain risk
+  slug: tradeverifyd-screen-supplier-risk
+- name: Create a shipment, issue verifiable credentials, and submit to US CBP
+  slug: tradeverifyd-shipment-cbp-credentials
 slug: tradeverifyd
 tags:
 - Supply Chain

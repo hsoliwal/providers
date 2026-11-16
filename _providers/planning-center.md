@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.1
-  scored_at: '2026-10-17'
+  score: 32.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -92,9 +99,6 @@ apis:
 artifact_total: 29
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Planning Center Calendar API
   slug: open-planning-center-calendar-api
 - collection_type: open
@@ -126,37 +130,37 @@ collections:
   slug: open-planning-center
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/capabilities/planning-center-capability-edges.yml
+  href: https://artifacts.apis.io/planning-center/capabilities/planning-center-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/planning-center-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/agentic-access/planning-center-agentic-access.yml
+  href: https://artifacts.apis.io/planning-center/agentic-access/planning-center-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/planning-center-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/security/planning-center-trust-center.yml
+  href: https://artifacts.apis.io/planning-center/security/planning-center-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/planning-center-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/security/planning-center-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/planning-center/security/planning-center-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/planning-center-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/security/planning-center-domain-security.yml
+  href: https://artifacts.apis.io/planning-center/security/planning-center-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/planning-center-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/authentication/planning-center-authentication.yml
+  href: https://artifacts.apis.io/planning-center/authentication/planning-center-authentication.yml
   title: ''
   type: Authentication
   url: authentication/planning-center-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/scopes/planning-center-scopes.yml
+  href: https://artifacts.apis.io/planning-center/scopes/planning-center-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/planning-center-scopes.yml
@@ -177,17 +181,17 @@ common:
   type: Documentation
   url: https://developer.planning.center/docs/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/plans/planning-center-plans-pricing.yml
+  href: https://artifacts.apis.io/planning-center/plans/planning-center-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/planning-center-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/rate-limits/planning-center-rate-limits.yml
+  href: https://artifacts.apis.io/planning-center/rate-limits/planning-center-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/planning-center-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/finops/planning-center-finops.yml
+  href: https://artifacts.apis.io/planning-center/finops/planning-center-finops.yml
   title: ''
   type: FinOps
   url: finops/planning-center-finops.yml
@@ -214,16 +218,32 @@ network: true
 overview: 'Planning Center publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calendar API, Check-Ins API, Giving API, and 6 more. Tagged areas include Church Management, ChMS, Faith, Giving, and Event.
 
 
+  The Planning Center catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Planning Center''s developer surface includes authentication, documentation, engineering blog, and 12 more developer resources.'
 plans:
 - name: Planning Center Plans Pricing
   plan_count: 5
   slug: planning-center-plans-pricing
-random_paper: 1
+random_paper: 5
 rate_limits:
 - limit_count: 2
   name: Planning Center Rate Limits
   slug: planning-center-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Planning Center API Rules
+  rule_count: 54
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 2
+    warn: 1
+  slug: planning-center-rules
 scopes:
 - name: Planning Center Scopes
   scope_count: 8
@@ -231,23 +251,23 @@ scopes:
   summary_line: 8 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.6
+  composite: 33.6
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 42.0
+    artifact_dirs: 18
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.1
     developer_ergonomics: 32.1
     discoverability: 66.1
-    operational_transparency: 7.9
-  previous_composite: 38.0
+    operational_transparency: 18.4
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
@@ -261,13 +281,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/planning-center/refs/heads/main/screenshots/planning-center-2026-09-02T151416.png
+screenshot: https://apis.io/screenshots/planning-center/planning-center-2026-09-02T151416.png
 security:
 - kind: authentication
   name: Planning Center Authentication

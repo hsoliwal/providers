@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Enterprise
   onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Valero Energy Corporation SEC filings and financial data available through the SEC EDGAR system. Includes 10-K, 10-Q, earnings releases, and other regulatory filings. Accessible via the SEC EDGAR API '
@@ -42,22 +46,22 @@ apis:
 artifact_total: 11
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/valero-energy/refs/heads/main/plans/valero-energy-plans-pricing.yml
+  href: https://artifacts.apis.io/valero-energy/plans/valero-energy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/valero-energy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/valero-energy/refs/heads/main/rate-limits/valero-energy-rate-limits.yml
+  href: https://artifacts.apis.io/valero-energy/rate-limits/valero-energy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/valero-energy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/valero-energy/refs/heads/main/finops/valero-energy-finops.yml
+  href: https://artifacts.apis.io/valero-energy/finops/valero-energy-finops.yml
   title: ''
   type: FinOps
   url: finops/valero-energy-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/valero-energy/refs/heads/main/security/valero-energy-domain-security.yml
+  href: https://artifacts.apis.io/valero-energy/security/valero-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/valero-energy-domain-security.yml
@@ -149,7 +153,7 @@ press:
 - date: ''
   title: Valero to run refineries up to 95% of capacity in Q2 2026, ...
   url: https://www.reuters.com/business/energy/valero-run-refineries-up-95-capacity-q2-2026-conf-call-2026-04-30/
-random_paper: 2
+random_paper: 0
 rate_limits:
 - limit_count: 1
   name: Valero Energy Rate Limits
@@ -176,7 +180,7 @@ score:
     catalog_gap: 66.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 23.5
@@ -191,21 +195,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.8
+  previous_composite: 13.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/valero-energy/refs/heads/main/screenshots/valero-energy-2026-06-20T200749.png
+screenshot: https://apis.io/screenshots/valero-energy/valero-energy-2026-06-20T200749.png
 security:
 - kind: domain-security
   name: Valero Energy Domain Security

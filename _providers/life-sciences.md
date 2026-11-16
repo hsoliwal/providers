@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.5
-  scored_at: '2026-10-17'
+  score: 20.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -114,11 +118,8 @@ apis:
   description: The Version API from Life Sciences — 1 operation(s) for version.
   name: Life Sciences Version API
   slug: life-sciences-version-api
-artifact_total: 37
+artifact_total: 36
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ClinicalTrials.gov API v2 Stats API
   slug: open-life-sciences-stats-api
@@ -133,7 +134,7 @@ collections:
   slug: open-life-sciences
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/life-sciences/refs/heads/main/capabilities/life-sciences-capability-edges.yml
+  href: https://artifacts.apis.io/life-sciences/capabilities/life-sciences-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/life-sciences-capability-edges.yml
@@ -154,12 +155,12 @@ common:
   type: License
   url: https://github.com/FDA/openfda/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/life-sciences/refs/heads/main/agentic-access/life-sciences-agentic-access.yml
+  href: https://artifacts.apis.io/life-sciences/agentic-access/life-sciences-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/life-sciences-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/life-sciences/refs/heads/main/security/life-sciences-domain-security.yml
+  href: https://artifacts.apis.io/life-sciences/security/life-sciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/life-sciences-domain-security.yml
@@ -200,7 +201,7 @@ overview: 'Life Sciences publishes 22 API contracts indexed on the [APIs.io](htt
 
 
   The Life Sciences catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
-random_paper: 8
+random_paper: 10
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -245,14 +246,14 @@ score:
     regime: Health
     regime_id: health
     score: 8.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/life-sciences/refs/heads/main/screenshots/life-sciences-2026-06-20T184511.png
+screenshot: https://apis.io/screenshots/life-sciences/life-sciences-2026-06-20T184511.png
 security:
 - kind: domain-security
   name: Life Sciences Domain Security

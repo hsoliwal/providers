@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.7
-  scored_at: '2026-10-17'
+  score: 48.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,11 +87,8 @@ apis:
   description: Airline route data endpoints
   name: FlightLabs Routes API
   slug: flightlabs-routes-api
-artifact_total: 31
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: FlightLabs Aircraft API
   slug: open-flightlabs-aircraft-api
@@ -109,32 +112,32 @@ collections:
   slug: open-flightlabs-routes-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/flightlabs/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/flightlabs/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/flightlabs/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/agentic-access/flightlabs-agentic-access.yml
+  href: https://artifacts.apis.io/flightlabs/agentic-access/flightlabs-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/flightlabs-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/security/flightlabs-domain-security.yml
+  href: https://artifacts.apis.io/flightlabs/security/flightlabs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flightlabs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/authentication/flightlabs-authentication.yml
+  href: https://artifacts.apis.io/flightlabs/authentication/flightlabs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flightlabs-authentication.yml
@@ -218,13 +221,13 @@ score:
   band: thin
   composite: 29.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 14.5
     contract_governance: 9.8
@@ -232,7 +235,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 35.2
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
@@ -247,14 +250,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/flightlabs/refs/heads/main/screenshots/flightlabs-2026-06-20T181312.png
+screenshot: https://apis.io/screenshots/flightlabs/flightlabs-2026-06-20T181312.png
 security:
 - kind: authentication
   name: Flightlabs Authentication

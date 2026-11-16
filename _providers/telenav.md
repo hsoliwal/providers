@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Location-based semantic search for the connected car - onebox search with category, brand, corridor, polygon, and bounding-box filters, reverse geocoding, EV charge-station search, auto-suggest and wo
@@ -88,72 +91,72 @@ common:
   type: GitHubOrganization
   url: https://github.com/Telenav
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/security/telenav-domain-security.yml
+  href: https://artifacts.apis.io/telenav/security/telenav-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/telenav-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/authentication/telenav-authentication.yml
+  href: https://artifacts.apis.io/telenav/authentication/telenav-authentication.yml
   title: ''
   type: Authentication
   url: authentication/telenav-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/conventions/telenav-conventions.yml
+  href: https://artifacts.apis.io/telenav/conventions/telenav-conventions.yml
   title: ''
   type: Conventions
   url: conventions/telenav-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/errors/telenav-problem-types.yml
+  href: https://artifacts.apis.io/telenav/errors/telenav-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/telenav-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/lifecycle/telenav-lifecycle.yml
+  href: https://artifacts.apis.io/telenav/lifecycle/telenav-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/telenav-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/changelog/telenav-changelog.yml
+  href: https://artifacts.apis.io/telenav/changelog/telenav-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/telenav-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/conformance/telenav-conformance.yml
+  href: https://artifacts.apis.io/telenav/conformance/telenav-conformance.yml
   title: ''
   type: Conformance
   url: conformance/telenav-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/packages/telenav-packages.yml
+  href: https://artifacts.apis.io/telenav/packages/telenav-packages.yml
   title: ''
   type: Packages
   url: packages/telenav-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/packages/telenav-packages.yml
+  href: https://artifacts.apis.io/telenav/packages/telenav-packages.yml
   title: ''
   type: SDKs
   url: packages/telenav-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/sandbox/telenav-sandbox.yml
+  href: https://artifacts.apis.io/telenav/sandbox/telenav-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/telenav-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/asyncapi/telenav-webhooks.yml
+  href: https://artifacts.apis.io/telenav/asyncapi/telenav-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/telenav-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/well-known/telenav-well-known.yml
+  href: https://artifacts.apis.io/telenav/well-known/telenav-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/telenav-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/mcp/telenav-mcp.yml
+  href: https://artifacts.apis.io/telenav/mcp/telenav-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/telenav-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/llms/telenav-llms.txt
+  href: https://artifacts.apis.io/telenav/llms/telenav-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/telenav-llms.txt
@@ -172,12 +175,12 @@ overview: 'Telenav is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Telenav''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, changelog, and 17 more developer resources.'
-random_paper: 3
+random_paper: 7
 score:
   band: developing
   composite: 39.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -201,14 +204,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/telenav/refs/heads/main/screenshots/telenav-2026-09-02T162734.png
+screenshot: https://apis.io/screenshots/telenav/telenav-2026-09-02T162734.png
 security:
 - kind: authentication
   name: Telenav Authentication

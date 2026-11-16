@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-10-17'
+  score: 11.4
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -81,42 +85,42 @@ common:
   type: Security
   url: https://legal.shakepay.com/v/master/bug-bounty-program
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/mcp/shakepay-mcp.yml
+  href: https://artifacts.apis.io/shakepay/mcp/shakepay-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/shakepay-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/llms/shakepay-llms.txt
+  href: https://artifacts.apis.io/shakepay/llms/shakepay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shakepay-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/well-known/shakepay-well-known.yml
+  href: https://artifacts.apis.io/shakepay/well-known/shakepay-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/shakepay-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/well-known/shakepay-security.txt
+  href: https://artifacts.apis.io/shakepay/well-known/shakepay-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/shakepay-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/security/shakepay-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/shakepay/security/shakepay-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/shakepay-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/security/shakepay-domain-security.yml
+  href: https://artifacts.apis.io/shakepay/security/shakepay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shakepay-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/conformance/shakepay-conformance.yml
+  href: https://artifacts.apis.io/shakepay/conformance/shakepay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shakepay-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/lifecycle/shakepay-lifecycle.yml
+  href: https://artifacts.apis.io/shakepay/lifecycle/shakepay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/shakepay-lifecycle.yml
@@ -136,12 +140,12 @@ overview: 'Shakepay is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Shakepay''s developer surface includes engineering blog, pricing, signup flow, and 16 more developer resources.'
-random_paper: 18
+random_paper: 14
 score:
   band: emerging
   composite: 24.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -176,14 +180,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/shakepay/refs/heads/main/screenshots/shakepay-2026-09-02T155102.png
+screenshot: https://apis.io/screenshots/shakepay/shakepay-2026-09-02T155102.png
 security:
 - kind: domain-security
   name: Shakepay Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 27.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -112,9 +118,6 @@ collections:
   name: Arcade Admin Tools API
   slug: postman-arcade-dev-tools-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Arcade Admin API
   slug: open-arcade-admin-api
 - collection_type: open
@@ -167,7 +170,7 @@ collections:
   slug: open-arcade-workers-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/capabilities/arcade-dev-capability-edges.yml
+  href: https://artifacts.apis.io/arcade-dev/capabilities/arcade-dev-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/arcade-dev-capability-edges.yml
@@ -180,17 +183,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/arcade-dev/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/agentic-access/arcade-dev-agentic-access.yml
+  href: https://artifacts.apis.io/arcade-dev/agentic-access/arcade-dev-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arcade-dev-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/security/arcade-dev-domain-security.yml
+  href: https://artifacts.apis.io/arcade-dev/security/arcade-dev-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arcade-dev-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/authentication/arcade-dev-authentication.yml
+  href: https://artifacts.apis.io/arcade-dev/authentication/arcade-dev-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arcade-dev-authentication.yml
@@ -327,32 +330,32 @@ common:
   type: X
   url: https://x.com/TryArcade
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/plans/arcade-dev-plans-pricing.yml
+  href: https://artifacts.apis.io/arcade-dev/plans/arcade-dev-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/arcade-dev-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/rate-limits/arcade-dev-rate-limits.yml
+  href: https://artifacts.apis.io/arcade-dev/rate-limits/arcade-dev-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/arcade-dev-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/finops/arcade-dev-finops.yml
+  href: https://artifacts.apis.io/arcade-dev/finops/arcade-dev-finops.yml
   title: ''
   type: FinOps
   url: finops/arcade-dev-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/rules/arcade-dev-rules.yml
+  href: https://artifacts.apis.io/arcade-dev/rules/arcade-dev-rules.yml
   title: ''
   type: SpectralRules
   url: rules/arcade-dev-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/json-ld/arcade-dev-context.jsonld
+  href: https://artifacts.apis.io/arcade-dev/json-ld/arcade-dev-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/arcade-dev-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/vocabulary/arcade-dev-vocabulary.yml
+  href: https://artifacts.apis.io/arcade-dev/vocabulary/arcade-dev-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/arcade-dev-vocabulary.yml
@@ -413,10 +416,10 @@ features:
 - SSO/SAML, RBAC, and tenant isolation on Enterprise
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Arcade Dev Finops
-  primary_unit: execution
-  service_category: AI and Machine Learning
+  primary_unit: platform fee
+  service_category: ''
   slug: arcade-dev-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arcade-dev.png
@@ -467,7 +470,10 @@ plans:
 - name: Arcade Dev Plans Pricing
   plan_count: 3
   slug: arcade-dev-plans-pricing
-random_paper: 4
+- name: Arcade Dev Price Estimates
+  plan_count: 0
+  slug: arcade-dev-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Arcade Dev Rate Limits
@@ -500,13 +506,13 @@ score:
   band: strong
   composite: 58.7
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 79.0
     catalog_earned_first_party: 12.0
     catalog_gap: 36.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.6
+  delta: 0.0
   facets:
     access_clarity: 63.2
     contract_governance: 27.3
@@ -514,7 +520,7 @@ score:
     developer_ergonomics: 67.9
     discoverability: 62.5
     operational_transparency: 5.3
-  previous_composite: 57.1
+  previous_composite: 58.7
   provenance:
     agentic_access: derived
     contracts:
@@ -528,13 +534,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/screenshots/arcade-dev-2026-06-20T172356.png
+screenshot: https://apis.io/screenshots/arcade-dev/arcade-dev-2026-06-20T172356.png
 security:
 - kind: authentication
   name: Arcade Dev Authentication

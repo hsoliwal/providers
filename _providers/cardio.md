@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -69,22 +73,22 @@ common:
   type: SourceCode
   url: https://github.com/card-io/card.io-Android-SDK
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cardio/refs/heads/main/packages/cardio-packages.yml
+  href: https://artifacts.apis.io/cardio/packages/cardio-packages.yml
   title: ''
   type: Packages
   url: packages/cardio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cardio/refs/heads/main/packages/cardio-packages.yml
+  href: https://artifacts.apis.io/cardio/packages/cardio-packages.yml
   title: ''
   type: SDKs
   url: packages/cardio-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cardio/refs/heads/main/security/cardio-domain-security.yml
+  href: https://artifacts.apis.io/cardio/security/cardio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cardio-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cardio/refs/heads/main/llms/cardio-llms.txt
+  href: https://artifacts.apis.io/cardio/llms/cardio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cardio-llms.txt
@@ -100,12 +104,12 @@ overview: 'card.io is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   card.io''s developer surface includes documentation and 11 more developer resources.'
-random_paper: 10
+random_paper: 2
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -127,14 +131,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 5.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cardio/refs/heads/main/screenshots/cardio-2026-07-25T204718.png
+screenshot: https://apis.io/screenshots/cardio/cardio-2026-07-25T204718.png
 security:
 - kind: domain-security
   name: Cardio Domain Security

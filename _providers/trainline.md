@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Trainline Partner Solutions'' wholesale rail and coach distribution API, sold to travel sellers, OTAs, TMCs and corporate booking tools. Trainline publicly describes it as "a modern, intuitive RESTful '
@@ -54,12 +57,12 @@ common:
   type: License
   url: https://github.com/trainline-eu/stations/blob/master/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/security/trainline-domain-security.yml
+  href: https://artifacts.apis.io/trainline/security/trainline-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trainline-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/security/trainline-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/trainline/security/trainline-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/trainline-vulnerability-disclosure.yml
@@ -68,7 +71,7 @@ common:
   type: Security
   url: https://www.thetrainline.com/terms/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/security/trainline-trust-center.yml
+  href: https://artifacts.apis.io/trainline/security/trainline-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/trainline-trust-center.yml
@@ -77,37 +80,37 @@ common:
   type: Compliance
   url: https://www.thetrainline.com/terms/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/conformance/trainline-conformance.yml
+  href: https://artifacts.apis.io/trainline/conformance/trainline-conformance.yml
   title: ''
   type: Conformance
   url: conformance/trainline-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/well-known/trainline-well-known.yml
+  href: https://artifacts.apis.io/trainline/well-known/trainline-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/trainline-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/llms/trainline-llms.txt
+  href: https://artifacts.apis.io/trainline/llms/trainline-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/trainline-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/lifecycle/trainline-lifecycle.yml
+  href: https://artifacts.apis.io/trainline/lifecycle/trainline-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/trainline-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/packages/trainline-packages.yml
+  href: https://artifacts.apis.io/trainline/packages/trainline-packages.yml
   title: ''
   type: Packages
   url: packages/trainline-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/vocabulary/trainline-station-identifiers.yml
+  href: https://artifacts.apis.io/trainline/vocabulary/trainline-station-identifiers.yml
   title: ''
   type: Vocabulary
   url: vocabulary/trainline-station-identifiers.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/json-schema/trainline-station.json
+  href: https://artifacts.apis.io/trainline/json-schema/trainline-station.json
   title: ''
   type: JsonSchema
   url: json-schema/trainline-station.json
@@ -200,12 +203,12 @@ overview: 'Trainline is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Trainline''s developer surface includes developer portal, documentation, support, engineering blog, and 29 more developer resources.'
-random_paper: 20
+random_paper: 6
 score:
   band: emerging
   composite: 25.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 28.3
     catalog_earned_first_party: 0.0
     catalog_gap: 86.8
@@ -236,14 +239,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/trainline/refs/heads/main/screenshots/trainline-2026-09-02T164109.png
+screenshot: https://apis.io/screenshots/trainline/trainline-2026-09-02T164109.png
 security:
 - kind: domain-security
   name: Trainline Domain Security

@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/rate-limits/aiguang-rate-limits.yml
+  href: https://artifacts.apis.io/aiguang/rate-limits/aiguang-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aiguang-rate-limits.yml
@@ -49,12 +64,12 @@ common:
   type: Community
   url: https://bbs.guang.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/changelog/aiguang-changelog.yml
+  href: https://artifacts.apis.io/aiguang/changelog/aiguang-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/aiguang-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/lifecycle/aiguang-lifecycle.yml
+  href: https://artifacts.apis.io/aiguang/lifecycle/aiguang-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/aiguang-lifecycle.yml
@@ -75,17 +90,17 @@ common:
   type: PrivacyPolicy
   url: https://bbs.guang.com/d/965
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/plans/aiguang-plans-pricing.yml
+  href: https://artifacts.apis.io/aiguang/plans/aiguang-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aiguang-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/llms/aiguang-llms.txt
+  href: https://artifacts.apis.io/aiguang/llms/aiguang-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aiguang-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/security/aiguang-domain-security.yml
+  href: https://artifacts.apis.io/aiguang/security/aiguang-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aiguang-domain-security.yml
@@ -121,7 +136,7 @@ plans:
 - name: Aiguang Plans Pricing
   plan_count: 0
   slug: aiguang-plans-pricing
-random_paper: 6
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Aiguang Rate Limits
@@ -136,7 +151,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
@@ -151,21 +166,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 15.9
+  previous_composite: 16.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aiguang/refs/heads/main/screenshots/aiguang-2026-10-11T093303.png
+screenshot: https://apis.io/screenshots/aiguang/aiguang-2026-10-11T093303.png
 security:
 - kind: domain-security
   name: Aiguang Domain Security

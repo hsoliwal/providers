@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -163,9 +169,6 @@ apis:
 artifact_total: 55
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Teachworks Availabilities API
   slug: open-teachworks-availabilities-api
 - collection_type: open
@@ -239,27 +242,27 @@ collections:
   slug: open-teachworks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/capabilities/teachworks-capability-edges.yml
+  href: https://artifacts.apis.io/teachworks/capabilities/teachworks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/teachworks-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/agentic-access/teachworks-agentic-access.yml
+  href: https://artifacts.apis.io/teachworks/agentic-access/teachworks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/teachworks-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/security/teachworks-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/teachworks/security/teachworks-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/teachworks-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/security/teachworks-domain-security.yml
+  href: https://artifacts.apis.io/teachworks/security/teachworks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/teachworks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/authentication/teachworks-authentication.yml
+  href: https://artifacts.apis.io/teachworks/authentication/teachworks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/teachworks-authentication.yml
@@ -276,17 +279,17 @@ common:
   type: Documentation
   url: https://teachworks.com/addons/api
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/plans/teachworks-plans-pricing.yml
+  href: https://artifacts.apis.io/teachworks/plans/teachworks-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/teachworks-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/rate-limits/teachworks-rate-limits.yml
+  href: https://artifacts.apis.io/teachworks/rate-limits/teachworks-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/teachworks-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/finops/teachworks-finops.yml
+  href: https://artifacts.apis.io/teachworks/finops/teachworks-finops.yml
   title: ''
   type: FinOps
   url: finops/teachworks-finops.yml
@@ -313,35 +316,51 @@ network: true
 overview: 'Teachworks publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Availabilities API, Cost Premiums API, Credit Note Allocations API, and 20 more. Tagged areas include Education, Tutoring, EdTech, Scheduling, and Business Management.
 
 
+  The Teachworks catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Teachworks'' developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Teachworks Plans Pricing
   plan_count: 4
   slug: teachworks-plans-pricing
-random_paper: 5
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Teachworks Rate Limits
   slug: teachworks-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Teachworks API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: teachworks-rules
 score:
-  band: emerging
-  composite: 26.0
+  band: thin
+  composite: 29.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.2
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.5
-    developer_ergonomics: 29.8
+    developer_ergonomics: 31.0
     discoverability: 66.1
-    operational_transparency: 7.9
-  previous_composite: 34.3
+    operational_transparency: 18.4
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -355,13 +374,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/teachworks/refs/heads/main/screenshots/teachworks-2026-09-02T162640.png
+screenshot: https://apis.io/screenshots/teachworks/teachworks-2026-09-02T162640.png
 security:
 - kind: authentication
   name: Teachworks Authentication

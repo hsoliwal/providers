@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Enterprise reporting API that returns test and run analytics and raw test-result data from Cypress Cloud. Requests are HTTP GET with an organization API key passed as the token query parameter, and da
@@ -47,7 +50,7 @@ common:
   type: Website
   url: https://www.cypress.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/security/cypressio-trust-center.yml
+  href: https://artifacts.apis.io/cypressio/security/cypressio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cypressio-trust-center.yml
@@ -116,47 +119,47 @@ common:
   type: ChangeLog
   url: https://docs.cypress.io/app/references/changelog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/llms/cypressio-llms.txt
+  href: https://artifacts.apis.io/cypressio/llms/cypressio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cypressio-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/packages/cypressio-packages.yml
+  href: https://artifacts.apis.io/cypressio/packages/cypressio-packages.yml
   title: ''
   type: Packages
   url: packages/cypressio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/packages/cypressio-packages.yml
+  href: https://artifacts.apis.io/cypressio/packages/cypressio-packages.yml
   title: ''
   type: SDKs
   url: packages/cypressio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/cli/cypressio-cli.yml
+  href: https://artifacts.apis.io/cypressio/cli/cypressio-cli.yml
   title: ''
   type: CLI
   url: cli/cypressio-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/changelog/cypressio-changelog.yml
+  href: https://artifacts.apis.io/cypressio/changelog/cypressio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cypressio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/lifecycle/cypressio-lifecycle.yml
+  href: https://artifacts.apis.io/cypressio/lifecycle/cypressio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cypressio-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/lifecycle/cypressio-lifecycle.yml
+  href: https://artifacts.apis.io/cypressio/lifecycle/cypressio-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/cypressio-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/authentication/cypressio-authentication.yml
+  href: https://artifacts.apis.io/cypressio/authentication/cypressio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cypressio-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/security/cypressio-domain-security.yml
+  href: https://artifacts.apis.io/cypressio/security/cypressio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cypressio-domain-security.yml
@@ -180,12 +183,12 @@ overview: 'Cypress.io is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Cypress.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
-random_paper: 3
+random_paper: 9
 score:
   band: thin
   composite: 37.8
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -208,14 +211,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cypressio/refs/heads/main/screenshots/cypressio-2026-07-25T211057.png
+screenshot: https://apis.io/screenshots/cypressio/cypressio-2026-07-25T211057.png
 security:
 - kind: authentication
   name: Cypressio Authentication

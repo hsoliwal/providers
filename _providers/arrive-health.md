@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Arrive Health provides healthcare navigation and payment solutions.
@@ -31,17 +44,17 @@ apis:
   slug: arrive-health-api
 artifact_total: 3
 common:
+- group: auth
+  href: https://artifacts.apis.io/arrive-health/well-known/arrive-health-clarity-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/arrive-health-clarity-security.txt
 - group: company
   title: ''
   type: BlogRSS
   url: https://arrivehealth.com/feed/
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/well-known/arrive-health-clarity-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/arrive-health-clarity-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/well-known/arrive-health-well-known.yml
+  href: https://artifacts.apis.io/arrive-health/well-known/arrive-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arrive-health-well-known.yml
@@ -50,12 +63,12 @@ common:
   type: Security
   url: https://clarity.com/vdp
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/hosts/arrive-health-hosts.yml
+  href: https://artifacts.apis.io/arrive-health/hosts/arrive-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/arrive-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/vendors/arrive-health-vendors.yml
+  href: https://artifacts.apis.io/arrive-health/vendors/arrive-health-vendors.yml
   title: ''
   type: Vendors
   url: vendors/arrive-health-vendors.yml
@@ -76,12 +89,12 @@ common:
   type: Leadership
   url: https://arrivehealth.com/about/leadership/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/security/arrive-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/arrive-health/security/arrive-health-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/arrive-health-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/security/arrive-health-domain-security.yml
+  href: https://artifacts.apis.io/arrive-health/security/arrive-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arrive-health-domain-security.yml
@@ -110,23 +123,23 @@ overview: 'Arrive Health is listed with 1 API on the [APIs.io](https://apis.io/)
   Arrive Health''s developer surface includes pricing and 12 more developer resources.'
 random_paper: 4
 score:
-  band: emerging
-  composite: 11.7
+  band: minimal
+  composite: 8.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.2
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 60.7
-    operational_transparency: 10.5
+    discoverability: 58.9
+    operational_transparency: 5.3
   previous_composite: 11.7
   provenance:
     mcp: derived
@@ -135,15 +148,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 10.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/arrive-health/refs/heads/main/screenshots/arrive-health-2026-10-11T100350.png
+screenshot: https://apis.io/screenshots/arrive-health/arrive-health-2026-10-11T100350.png
 security:
 - kind: domain-security
   name: Arrive Health Domain Security

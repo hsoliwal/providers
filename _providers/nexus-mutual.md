@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-10-17'
+  score: 26.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,11 +62,8 @@ apis:
   description: The Quote API from Nexus Mutual — 1 operation(s) for quote.
   name: Nexus Mutual Quote API
   slug: nexus-mutual-quote-api
-artifact_total: 23
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cover Router Capacity API
   slug: open-nexus-mutual-capacity-api
@@ -94,12 +95,12 @@ common:
   type: License
   url: https://github.com/NexusMutual/cover-router/blob/dev/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nexus-mutual/refs/heads/main/agentic-access/nexus-mutual-agentic-access.yml
+  href: https://artifacts.apis.io/nexus-mutual/agentic-access/nexus-mutual-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nexus-mutual-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nexus-mutual/refs/heads/main/security/nexus-mutual-domain-security.yml
+  href: https://artifacts.apis.io/nexus-mutual/security/nexus-mutual-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nexus-mutual-domain-security.yml
@@ -221,7 +222,7 @@ plans:
 - name: Plans
   plan_count: 1
   slug: plans
-random_paper: 18
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -242,13 +243,13 @@ score:
   band: thin
   composite: 37.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 47.3
     catalog_earned_first_party: 0.0
     catalog_gap: 67.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.8
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -259,7 +260,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 41.7
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     contracts:
@@ -273,14 +274,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/nexus-mutual/refs/heads/main/screenshots/nexus-mutual-2026-06-20T190302.png
+screenshot: https://apis.io/screenshots/nexus-mutual/nexus-mutual-2026-06-20T190302.png
 security:
 - kind: domain-security
   name: Nexus Mutual Domain Security

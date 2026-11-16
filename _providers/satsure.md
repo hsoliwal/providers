@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: SatSure provides APIs for its satellite‑derived decision intelligence products. The developer portal at https://dev.satsure.co lists the offerings but no machine‑readable contract was found.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/satsure/refs/heads/main/conformance/satsure-conformance.yml
+  href: https://artifacts.apis.io/satsure/conformance/satsure-conformance.yml
   title: ''
   type: Conformance
   url: conformance/satsure-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/satsure/refs/heads/main/llms/satsure-llms.txt
+  href: https://artifacts.apis.io/satsure/llms/satsure-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/satsure-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/satsure/refs/heads/main/hosts/satsure-hosts.yml
+  href: https://artifacts.apis.io/satsure/hosts/satsure-hosts.yml
   title: ''
   type: Hosts
   url: hosts/satsure-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/satsure/refs/heads/main/vendors/satsure-vendors.yml
+  href: https://artifacts.apis.io/satsure/vendors/satsure-vendors.yml
   title: ''
   type: Vendors
   url: vendors/satsure-vendors.yml
@@ -64,7 +77,7 @@ common:
   type: Leadership
   url: https://www.satsure.co/leadership/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/satsure/refs/heads/main/security/satsure-domain-security.yml
+  href: https://artifacts.apis.io/satsure/security/satsure-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/satsure-domain-security.yml
@@ -99,28 +112,30 @@ modified: '2026-10-12'
 name: SatSure
 nav: Providers
 network: true
-overview: 'SatSure is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Satellite, Artificial Intelligence, Decision-Intelligence, and Agriculture.
+overview: 'SatSure is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Satellite, Artificial Intelligence, Decision Intelligence, and Agriculture.
 
 
   SatSure''s developer surface includes documentation and 11 more developer resources.'
-random_paper: 5
+random_paper: 7
 score:
-  band: emerging
-  composite: 13.5
+  band: minimal
+  composite: 10.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.4
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 19.0
-    discoverability: 67.9
+    developer_ergonomics: 9.5
+    discoverability: 66.1
     operational_transparency: 0.0
+  previous_composite: 13.5
   provenance:
     conformance: first-party
     mcp: unknown
@@ -133,13 +148,15 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 11.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/satsure/satsure-2026-11-03T142737.png
 security:
 - kind: domain-security
   name: Satsure Domain Security
@@ -150,7 +167,7 @@ tags:
 - Company
 - Satellite
 - Artificial Intelligence
-- Decision-Intelligence
+- Decision Intelligence
 - Agriculture
 - Banking
 website: https://satsure.co/

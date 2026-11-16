@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/rate-limits/power-ledger-rate-limits.yml
+  href: https://artifacts.apis.io/power-ledger/rate-limits/power-ledger-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/power-ledger-rate-limits.yml
@@ -84,27 +87,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/PowerLedger
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/packages/power-ledger-packages.yml
+  href: https://artifacts.apis.io/power-ledger/packages/power-ledger-packages.yml
   title: ''
   type: Packages
   url: packages/power-ledger-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/llms/power-ledger-llms.txt
+  href: https://artifacts.apis.io/power-ledger/llms/power-ledger-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/power-ledger-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/lifecycle/power-ledger-lifecycle.yml
+  href: https://artifacts.apis.io/power-ledger/lifecycle/power-ledger-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/power-ledger-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/security/power-ledger-domain-security.yml
+  href: https://artifacts.apis.io/power-ledger/security/power-ledger-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/power-ledger-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/plans/power-ledger-plans-pricing.yml
+  href: https://artifacts.apis.io/power-ledger/plans/power-ledger-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/power-ledger-plans-pricing.yml
@@ -142,7 +145,7 @@ plans:
 - name: Power Ledger Plans Pricing
   plan_count: 0
   slug: power-ledger-plans-pricing
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Power Ledger Rate Limits
@@ -151,7 +154,7 @@ score:
   band: minimal
   composite: 7.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -179,14 +182,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 8.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/power-ledger/refs/heads/main/screenshots/power-ledger-2026-09-02T151840.png
+screenshot: https://apis.io/screenshots/power-ledger/power-ledger-2026-09-02T151840.png
 security:
 - kind: domain-security
   name: Power Ledger Domain Security

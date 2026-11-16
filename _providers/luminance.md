@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.5
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://your-instance.app.luminance.com/api2
@@ -143,11 +146,8 @@ apis:
   description: The Workflows API from Luminance — 4 operation(s) for workflows.
   name: Luminance Workflows API
   slug: luminance-workflows-api
-artifact_total: 47
+artifact_total: 51
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Luminance Accounts API
   slug: open-luminance-accounts-api
@@ -210,22 +210,22 @@ collections:
   slug: open-luminance-workflows-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/capabilities/luminance-capability-edges.yml
+  href: https://artifacts.apis.io/luminance/capabilities/luminance-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/luminance-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/mcp/luminance-mcp.yml
+  href: https://artifacts.apis.io/luminance/mcp/luminance-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/luminance-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/overlays/luminance-public-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/luminance/overlays/luminance-public-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/luminance-public-api-v2-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/security/luminance-trust-center.yml
+  href: https://artifacts.apis.io/luminance/security/luminance-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/luminance-trust-center.yml
@@ -274,62 +274,62 @@ common:
   type: Compliance
   url: https://www.luminance.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/authentication/luminance-authentication.yml
+  href: https://artifacts.apis.io/luminance/authentication/luminance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/luminance-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/scopes/luminance-scopes.yml
+  href: https://artifacts.apis.io/luminance/scopes/luminance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/luminance-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/conventions/luminance-conventions.yml
+  href: https://artifacts.apis.io/luminance/conventions/luminance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/luminance-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/rate-limits/luminance-rate-limits.yml
+  href: https://artifacts.apis.io/luminance/rate-limits/luminance-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/luminance-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/errors/luminance-problem-types.yml
+  href: https://artifacts.apis.io/luminance/errors/luminance-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/luminance-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/lifecycle/luminance-lifecycle.yml
+  href: https://artifacts.apis.io/luminance/lifecycle/luminance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/luminance-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/conformance/luminance-conformance.yml
+  href: https://artifacts.apis.io/luminance/conformance/luminance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/luminance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/data-model/luminance-data-model.yml
+  href: https://artifacts.apis.io/luminance/data-model/luminance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/luminance-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/well-known/luminance-well-known.yml
+  href: https://artifacts.apis.io/luminance/well-known/luminance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/luminance-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/llms/luminance-llms.txt
+  href: https://artifacts.apis.io/luminance/llms/luminance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/luminance-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/luminance/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/security/luminance-domain-security.yml
+  href: https://artifacts.apis.io/luminance/security/luminance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/luminance-domain-security.yml
@@ -345,12 +345,28 @@ network: true
 overview: 'Luminance publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Annotation Source Relations API, Annotation Sources API, and 18 more. Tagged areas include Company, Legal, Artificial Intelligence, Contracts, and Contract Lifecycle Management.
 
 
+  The Luminance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Luminance''s developer surface includes documentation, API reference, support, engineering blog, signup flow, authentication, and 21 more developer resources.'
-random_paper: 10
+random_paper: 20
 rate_limits:
 - limit_count: 1
   name: Luminance Rate Limits
   slug: luminance-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Luminance API Rules
+  rule_count: 53
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 2
+    warn: 13
+  slug: luminance-rules
 scopes:
 - name: Luminance Scopes
   scope_count: 0
@@ -358,18 +374,18 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.1
+  composite: 46.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 48.0
+    artifact_dirs: 22
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 41.8
     developer_ergonomics: 47.0
     discoverability: 78.6
@@ -379,7 +395,7 @@ score:
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 45.1
+  previous_composite: 46.8
   provenance:
     conformance: first-party
     contracts:
@@ -395,13 +411,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/luminance/refs/heads/main/screenshots/luminance-2026-08-07T171838.png
+screenshot: https://apis.io/screenshots/luminance/luminance-2026-08-07T171838.png
 security:
 - kind: authentication
   name: Luminance Authentication
@@ -415,6 +431,16 @@ security:
   name: Luminance Trust Center
   slug: luminance-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 4
+skills:
+- name: Generate a contract from a document template
+  slug: luminance-generate-contract-from-template
+- name: Ingest a contract and run Traffic Light Analysis
+  slug: luminance-ingest-and-analyze-contract
+- name: Run a review task and record outcomes
+  slug: luminance-run-review-task
+- name: Search the contract repository and read matter intelligence
+  slug: luminance-search-the-contract-repository
 slug: luminance
 tags:
 - Company

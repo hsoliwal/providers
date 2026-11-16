@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.2
-  scored_at: '2026-10-17'
+  score: 44.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 506
   human_in_the_loop: 0
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 552
   slug: apyhub-agentic-access
   summary_line: 552 operations · 506 acting
-api_count: 220
+api_count: 215
 apis:
 - description: Classify a public JPG, PNG, or WebP URL as likely AI-generated, human, or uncertain. Returns ai_score, confidence, and source_breakdown.
   name: AI-Generated Image Detection API
@@ -884,11 +890,8 @@ apis:
   description: Document generation utilities
   name: ApyHub Generate API
   slug: apyhub-generate-api
-artifact_total: 282
+artifact_total: 281
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ApyHub Convert API
   slug: open-apyhub-convert-api
@@ -907,22 +910,22 @@ common:
   type: Pricing
   url: https://apyhub.com/pricing
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/rate-limits/apyhub-rate-limits.yml
+  href: https://artifacts.apis.io/apyhub/rate-limits/apyhub-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apyhub-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/finops/apyhub-finops.yml
+  href: https://artifacts.apis.io/apyhub/finops/apyhub-finops.yml
   title: ''
   type: FinOps
   url: finops/apyhub-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/plans/apyhub-plans-pricing.yml
+  href: https://artifacts.apis.io/apyhub/plans/apyhub-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apyhub-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/capabilities/apyhub-capability-edges.yml
+  href: https://artifacts.apis.io/apyhub/capabilities/apyhub-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/apyhub-capability-edges.yml
@@ -940,7 +943,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apyhub Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apyhub-finops
   template: true
@@ -978,7 +981,7 @@ plans:
 - name: Apyhub Plans Pricing
   plan_count: 3
   slug: apyhub-plans-pricing
-random_paper: 11
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Apyhub Rate Limits
@@ -1011,13 +1014,13 @@ score:
   band: thin
   composite: 32.4
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 25
     catalog_earned: 59.5
     catalog_earned_first_party: 12.0
     catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 5.2
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 13.6
@@ -1025,7 +1028,7 @@ score:
     developer_ergonomics: 9.5
     discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 27.2
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     contracts:
@@ -1040,13 +1043,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 8.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/screenshots/apyhub-2026-06-20T172345.png
+screenshot: https://apis.io/screenshots/apyhub/apyhub-2026-06-20T172345.png
 security:
 - kind: authentication
   name: Apyhub Authentication

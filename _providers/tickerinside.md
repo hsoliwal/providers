@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 39.8
-  scored_at: '2026-10-17'
+  score: 42.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -188,93 +201,98 @@ apis:
   slug: tickerinside-uptime-json-api
 artifact_total: 38
 common:
+- group: other
+  href: https://artifacts.apis.io/tickerinside/capabilities/tickerinside-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tickerinside-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/agentic-access/tickerinside-agentic-access.yml
+  href: https://artifacts.apis.io/tickerinside/agentic-access/tickerinside-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tickerinside-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/rules/tickerinside-rules.yml
+  href: https://artifacts.apis.io/tickerinside/rules/tickerinside-rules.yml
   title: ''
   type: Spectral
   url: rules/tickerinside-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/json-ld/tickerinside-context.jsonld
+  href: https://artifacts.apis.io/tickerinside/json-ld/tickerinside-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/tickerinside-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/vocabulary/tickerinside-vocabulary.yml
+  href: https://artifacts.apis.io/tickerinside/vocabulary/tickerinside-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/tickerinside-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/data-model/tickerinside-data-model.yml
+  href: https://artifacts.apis.io/tickerinside/data-model/tickerinside-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tickerinside-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/errors/tickerinside-problem-types.yml
+  href: https://artifacts.apis.io/tickerinside/errors/tickerinside-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/tickerinside-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/overlays/tickerinside-openapi-overlay.yaml
+  href: https://artifacts.apis.io/tickerinside/overlays/tickerinside-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tickerinside-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/mcp/tickerinside-mcp.yml
+  href: https://artifacts.apis.io/tickerinside/mcp/tickerinside-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/tickerinside-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/cli/tickerinside-cli.yml
+  href: https://artifacts.apis.io/tickerinside/cli/tickerinside-cli.yml
   title: ''
   type: CLI
   url: cli/tickerinside-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/security/tickerinside-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tickerinside/security/tickerinside-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/tickerinside-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/conformance/tickerinside-conformance.yml
+  href: https://artifacts.apis.io/tickerinside/conformance/tickerinside-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tickerinside-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/llms/tickerinside-llms.txt
+  href: https://artifacts.apis.io/tickerinside/llms/tickerinside-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tickerinside-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/well-known/tickerinside-security.txt
+  href: https://artifacts.apis.io/tickerinside/well-known/tickerinside-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/tickerinside-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/well-known/tickerinside-well-known.yml
+  href: https://artifacts.apis.io/tickerinside/well-known/tickerinside-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tickerinside-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/hosts/tickerinside-hosts.yml
+  href: https://artifacts.apis.io/tickerinside/hosts/tickerinside-hosts.yml
   title: ''
   type: Hosts
   url: hosts/tickerinside-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/vendors/tickerinside-vendors.yml
+  href: https://artifacts.apis.io/tickerinside/vendors/tickerinside-vendors.yml
   title: ''
   type: Vendors
   url: vendors/tickerinside-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/packages/tickerinside-packages.yml
+  href: https://artifacts.apis.io/tickerinside/packages/tickerinside-packages.yml
   title: ''
   type: SDKs
   url: packages/tickerinside-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/packages/tickerinside-packages.yml
+  href: https://artifacts.apis.io/tickerinside/packages/tickerinside-packages.yml
   title: ''
   type: Packages
   url: packages/tickerinside-packages.yml
@@ -291,12 +309,12 @@ common:
   type: APIReference
   url: https://tickerinside.com/api/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/security/tickerinside-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tickerinside/security/tickerinside-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tickerinside-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tickerinside/refs/heads/main/security/tickerinside-domain-security.yml
+  href: https://artifacts.apis.io/tickerinside/security/tickerinside-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tickerinside-domain-security.yml
@@ -345,14 +363,14 @@ modified: '2026-10-06'
 name: TickerInside
 nav: Providers
 network: true
-overview: 'TickerInside publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch API, Changelog.json API, Compare API, and 28 more. Tagged areas include ETFs, Finance, Open Data, SEC-filings, and Holdings.
+overview: 'TickerInside publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch API, Changelog.json API, Compare API, and 28 more. Tagged areas include ETFs, Finance, Open Data, SEC Filings, and Holdings.
 
 
   The TickerInside catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  TickerInside''s developer surface includes CLI, support, API reference, documentation, and 24 more developer resources.'
-random_paper: 2
+  TickerInside''s developer surface includes CLI, support, API reference, documentation, and 25 more developer resources.'
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Tickerinside Rate Limits
@@ -372,21 +390,23 @@ rules:
   slug: tickerinside-rules
 score:
   band: thin
-  composite: 38.9
+  composite: 33.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 23
     catalog_earned: 51.8
     catalog_earned_first_party: 0.0
     catalog_gap: 63.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.9
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 55.7
-    developer_ergonomics: 35.7
+    developer_ergonomics: 25.0
     discoverability: 71.7
-    operational_transparency: 26.3
+    operational_transparency: 18.4
+  previous_composite: 38.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -401,13 +421,15 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/tickerinside/tickerinside-2026-11-03T144722.png
 security:
 - kind: domain-security
   name: Tickerinside Domain Security
@@ -422,7 +444,7 @@ tags:
 - ETFs
 - Finance
 - Open Data
-- SEC-filings
+- SEC Filings
 - Holdings
 website: https://tickerinside.com/
 ---

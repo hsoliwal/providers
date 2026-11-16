@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/expressable/refs/heads/main/security/expressable-domain-security.yml
+  href: https://artifacts.apis.io/expressable/security/expressable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/expressable-domain-security.yml
@@ -72,7 +75,7 @@ common:
   type: Blog
   url: https://www.expressable.com/learning-center
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/expressable/refs/heads/main/llms/expressable-llms.txt
+  href: https://artifacts.apis.io/expressable/llms/expressable-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/expressable-llms.txt
@@ -85,17 +88,17 @@ common:
   type: Accessibility
   url: https://www.expressable.com/accessibility-statement
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/expressable/refs/heads/main/plans/expressable-plans-pricing.yml
+  href: https://artifacts.apis.io/expressable/plans/expressable-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/expressable-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/expressable/refs/heads/main/rate-limits/expressable-rate-limits.yml
+  href: https://artifacts.apis.io/expressable/rate-limits/expressable-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/expressable-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/expressable/refs/heads/main/conformance/expressable-conformance.yml
+  href: https://artifacts.apis.io/expressable/conformance/expressable-conformance.yml
   title: ''
   type: Conformance
   url: conformance/expressable-conformance.yml
@@ -133,7 +136,7 @@ plans:
 - name: Expressable Plans Pricing
   plan_count: 0
   slug: expressable-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Expressable Rate Limits
@@ -176,14 +179,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/expressable/refs/heads/main/screenshots/expressable-2026-09-02T145451.png
+screenshot: https://apis.io/screenshots/expressable/expressable-2026-09-02T145451.png
 security:
 - kind: domain-security
   name: Expressable Domain Security

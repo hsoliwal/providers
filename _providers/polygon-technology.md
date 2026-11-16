@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.0
-  scored_at: '2026-10-17'
+  score: 28.5
+  scored_at: '2026-11-06'
 api_count: 15
 apis:
 - baseURL: https://sandbox-api.polygon.technology
@@ -108,77 +122,77 @@ asyncapis:
   slug: polygon-technology-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/rules/polygon-technology-rules.yml
+  href: https://artifacts.apis.io/polygon-technology/rules/polygon-technology-rules.yml
   title: ''
   type: Spectral
   url: rules/polygon-technology-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/json-ld/polygon-technology-context.jsonld
+  href: https://artifacts.apis.io/polygon-technology/json-ld/polygon-technology-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/polygon-technology-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/vocabulary/polygon-technology-vocabulary.yml
+  href: https://artifacts.apis.io/polygon-technology/vocabulary/polygon-technology-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/polygon-technology-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/asyncapi/polygon-technology-webhooks.yml
+  href: https://artifacts.apis.io/polygon-technology/asyncapi/polygon-technology-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/polygon-technology-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/data-model/polygon-technology-data-model.yml
+  href: https://artifacts.apis.io/polygon-technology/data-model/polygon-technology-data-model.yml
   title: ''
   type: DataModel
   url: data-model/polygon-technology-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/changelog/polygon-technology-changelog.yml
+  href: https://artifacts.apis.io/polygon-technology/changelog/polygon-technology-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/polygon-technology-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/conventions/polygon-technology-conventions.yml
+  href: https://artifacts.apis.io/polygon-technology/conventions/polygon-technology-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/polygon-technology-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/conventions/polygon-technology-conventions.yml
+  href: https://artifacts.apis.io/polygon-technology/conventions/polygon-technology-conventions.yml
   title: ''
   type: Conventions
   url: conventions/polygon-technology-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/sandbox/polygon-technology-sandbox.yml
+  href: https://artifacts.apis.io/polygon-technology/sandbox/polygon-technology-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/polygon-technology-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/conformance/polygon-technology-conformance.yml
+  href: https://artifacts.apis.io/polygon-technology/conformance/polygon-technology-conformance.yml
   title: ''
   type: Conformance
   url: conformance/polygon-technology-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/llms/polygon-technology-llms.txt
+  href: https://artifacts.apis.io/polygon-technology/llms/polygon-technology-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/polygon-technology-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/a2a/polygon-technology-a2a.yml
+  href: https://artifacts.apis.io/polygon-technology/a2a/polygon-technology-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/polygon-technology-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/well-known/polygon-technology-well-known.yml
+  href: https://artifacts.apis.io/polygon-technology/well-known/polygon-technology-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/polygon-technology-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/hosts/polygon-technology-hosts.yml
+  href: https://artifacts.apis.io/polygon-technology/hosts/polygon-technology-hosts.yml
   title: ''
   type: Hosts
   url: hosts/polygon-technology-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/vendors/polygon-technology-vendors.yml
+  href: https://artifacts.apis.io/polygon-technology/vendors/polygon-technology-vendors.yml
   title: ''
   type: Vendors
   url: vendors/polygon-technology-vendors.yml
@@ -195,7 +209,7 @@ common:
   type: PrivacyPolicy
   url: https://polygon.technology/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polygon-technology/refs/heads/main/security/polygon-technology-domain-security.yml
+  href: https://artifacts.apis.io/polygon-technology/security/polygon-technology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/polygon-technology-domain-security.yml
@@ -279,14 +293,14 @@ modified: '2026-10-13'
 name: Polygon Labs
 nav: Providers
 network: true
-overview: 'Polygon Labs is listed with 15 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Cash Ins API, Counterparties API, and 12 more. Tagged areas include Fintech, Payments, Blockchain, Stablecoins, and DeveloperPlatform.
+overview: 'Polygon Labs is listed with 15 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Cash Ins API, Counterparties API, and 12 more. Tagged areas include Fintech, Payments, Blockchain, Stablecoins, and Developer Platform.
 
 
   The Polygon Labs catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
   Polygon Labs'' developer surface includes changelog, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 22 more developer resources.'
-random_paper: 13
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -301,22 +315,24 @@ rules:
     warn: 1
   slug: polygon-technology-rules
 score:
-  band: developing
-  composite: 44.2
+  band: thin
+  composite: 33.9
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 24
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.3
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 35.6
     contract_quality: 33.2
-    developer_ergonomics: 57.1
+    developer_ergonomics: 32.1
     discoverability: 78.6
-    operational_transparency: 44.7
+    operational_transparency: 34.2
+  previous_composite: 44.2
   provenance:
     conformance: first-party
     contracts:
@@ -330,12 +346,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/polygon-technology/polygon-technology-2026-11-03T141406.png
 security:
 - kind: domain-security
   name: Polygon Technology Domain Security
@@ -347,6 +365,6 @@ tags:
 - Payments
 - Blockchain
 - Stablecoins
-- DeveloperPlatform
+- Developer Platform
 website: https://polygon.technology
 ---

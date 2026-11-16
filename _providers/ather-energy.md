@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -49,7 +52,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/security/ather-energy-domain-security.yml
+  href: https://artifacts.apis.io/ather-energy/security/ather-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ather-energy-domain-security.yml
@@ -106,47 +109,47 @@ common:
   type: Security
   url: https://www.atherenergy.com/bug-bounty
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/security/ather-energy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ather-energy/security/ather-energy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ather-energy-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/llms/ather-energy-llms.txt
+  href: https://artifacts.apis.io/ather-energy/llms/ather-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ather-energy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/llms/ather-energy-shop-llms.txt
+  href: https://artifacts.apis.io/ather-energy/llms/ather-energy-shop-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ather-energy-shop-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/well-known/ather-energy-well-known.yml
+  href: https://artifacts.apis.io/ather-energy/well-known/ather-energy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ather-energy-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/mcp/ather-energy-mcp.yml
+  href: https://artifacts.apis.io/ather-energy/mcp/ather-energy-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ather-energy-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/agentic-access/ather-energy-agentic-access.yml
+  href: https://artifacts.apis.io/ather-energy/agentic-access/ather-energy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ather-energy-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/conventions/ather-energy-conventions.yml
+  href: https://artifacts.apis.io/ather-energy/conventions/ather-energy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ather-energy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/conformance/ather-energy-conformance.yml
+  href: https://artifacts.apis.io/ather-energy/conformance/ather-energy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ather-energy-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/packages/ather-energy-packages.yml
+  href: https://artifacts.apis.io/ather-energy/packages/ather-energy-packages.yml
   title: ''
   type: Packages
   url: packages/ather-energy-packages.yml
@@ -170,12 +173,12 @@ overview: 'Ather Energy is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   Ather Energy''s developer surface includes engineering blog, support, FAQ, pricing, and 20 more developer resources.'
-random_paper: 17
+random_paper: 3
 score:
   band: emerging
   composite: 20.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -207,14 +210,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ather-energy/refs/heads/main/screenshots/ather-energy-2026-08-07T161835.png
+screenshot: https://apis.io/screenshots/ather-energy/ather-energy-2026-08-07T161835.png
 security:
 - kind: domain-security
   name: Ather Energy Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -105,9 +111,6 @@ apis:
 artifact_total: 30
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Salt Edge Account Information Accounts API
   slug: open-salt-edge-accounts-api
 - collection_type: open
@@ -143,22 +146,22 @@ common:
   type: Website
   url: https://www.saltedge.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/capabilities/salt-edge-capability-edges.yml
+  href: https://artifacts.apis.io/salt-edge/capabilities/salt-edge-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/salt-edge-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/agentic-access/salt-edge-agentic-access.yml
+  href: https://artifacts.apis.io/salt-edge/agentic-access/salt-edge-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/salt-edge-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/security/salt-edge-domain-security.yml
+  href: https://artifacts.apis.io/salt-edge/security/salt-edge-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/salt-edge-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/authentication/salt-edge-authentication.yml
+  href: https://artifacts.apis.io/salt-edge/authentication/salt-edge-authentication.yml
   title: ''
   type: Authentication
   url: authentication/salt-edge-authentication.yml
@@ -187,17 +190,17 @@ common:
   type: Pricing
   url: https://www.saltedge.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/plans/salt-edge-plans-pricing.yml
+  href: https://artifacts.apis.io/salt-edge/plans/salt-edge-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/salt-edge-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/rate-limits/salt-edge-rate-limits.yml
+  href: https://artifacts.apis.io/salt-edge/rate-limits/salt-edge-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/salt-edge-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/finops/salt-edge-finops.yml
+  href: https://artifacts.apis.io/salt-edge/finops/salt-edge-finops.yml
   title: ''
   type: FinOps
   url: finops/salt-edge-finops.yml
@@ -220,30 +223,46 @@ network: true
 overview: 'Salt Edge publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Connect Sessions API, Connections API, and 10 more. Tagged areas include Fintech, Open Banking, PSD2, Aggregator, and Global.
 
 
+  The Salt Edge catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Salt Edge''s developer surface includes authentication, engineering blog, developer portal, documentation, pricing, and 9 more developer resources.'
 plans:
 - name: Salt Edge Plans Pricing
   plan_count: 4
   slug: salt-edge-plans-pricing
-random_paper: 6
+random_paper: 22
 rate_limits:
 - limit_count: 3
   name: Salt Edge Rate Limits
   slug: salt-edge-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Salt Edge API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: salt-edge-rules
 score:
-  band: emerging
-  composite: 25.3
+  band: thin
+  composite: 26.9
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.7
     developer_ergonomics: 33.3
     discoverability: 66.1
@@ -253,7 +272,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - global
-  previous_composite: 26.8
+  previous_composite: 26.9
   provenance:
     agentic_access: derived
     contracts:
@@ -267,13 +286,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/salt-edge/refs/heads/main/screenshots/salt-edge-2026-06-20T193356.png
+screenshot: https://apis.io/screenshots/salt-edge/salt-edge-2026-06-20T193356.png
 security:
 - kind: authentication
   name: Salt Edge Authentication

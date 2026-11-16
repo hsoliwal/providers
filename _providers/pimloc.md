@@ -1,18 +1,22 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
-  trial: false
-  try_now: false
+  trial: true
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 29.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -70,15 +77,12 @@ apis:
   description: The Secure Redact API API from Pimloc — 0 operation(s) for secure redact api.
   name: Pimloc Secure Redact API
   slug: pimloc-secure-redact-api-api
-artifact_total: 15
+artifact_total: 19
 asyncapis:
 - description: Secure Redact processes media asynchronously. When a state_callback and/or export_callback URL is supplied on upload, the platform POSTs event payloads to those URLs as media moves through the redacti
   name: Secure Redact Media Callbacks
   slug: pimloc-secureredact-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Secure Redact Account API
   slug: open-pimloc-account-api
@@ -93,22 +97,22 @@ collections:
   slug: open-pimloc-projects-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/plans/pimloc-plans-pricing.yml
+  href: https://artifacts.apis.io/pimloc/plans/pimloc-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pimloc-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/capabilities/pimloc-capability-edges.yml
+  href: https://artifacts.apis.io/pimloc/capabilities/pimloc-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pimloc-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/agentic-access/pimloc-agentic-access.yml
+  href: https://artifacts.apis.io/pimloc/agentic-access/pimloc-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pimloc-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/security/pimloc-domain-security.yml
+  href: https://artifacts.apis.io/pimloc/security/pimloc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pimloc-domain-security.yml
@@ -165,27 +169,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/pimloc
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/authentication/pimloc-authentication.yml
+  href: https://artifacts.apis.io/pimloc/authentication/pimloc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pimloc-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/conventions/pimloc-conventions.yml
+  href: https://artifacts.apis.io/pimloc/conventions/pimloc-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pimloc-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/errors/pimloc-problem-types.yml
+  href: https://artifacts.apis.io/pimloc/errors/pimloc-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pimloc-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/lifecycle/pimloc-lifecycle.yml
+  href: https://artifacts.apis.io/pimloc/lifecycle/pimloc-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pimloc-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/conformance/pimloc-conformance.yml
+  href: https://artifacts.apis.io/pimloc/conformance/pimloc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pimloc-conformance.yml
@@ -194,57 +198,65 @@ common:
   type: Compliance
   url: https://www.secureredact.ai/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/packages/pimloc-packages.yml
+  href: https://artifacts.apis.io/pimloc/packages/pimloc-packages.yml
   title: ''
   type: Packages
   url: packages/pimloc-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/packages/pimloc-packages.yml
+  href: https://artifacts.apis.io/pimloc/packages/pimloc-packages.yml
   title: ''
   type: SDKs
   url: packages/pimloc-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/mcp/pimloc-mcp.yml
+  href: https://artifacts.apis.io/pimloc/mcp/pimloc-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/pimloc-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/llms/pimloc-llms.txt
+  href: https://artifacts.apis.io/pimloc/llms/pimloc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pimloc-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/overlays/pimloc-secureredact-overlay.yaml
+  href: https://artifacts.apis.io/pimloc/overlays/pimloc-secureredact-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pimloc-secureredact-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/data-model/pimloc-data-model.yml
+  href: https://artifacts.apis.io/pimloc/data-model/pimloc-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pimloc-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/sandbox/pimloc-sandbox.yml
+  href: https://artifacts.apis.io/pimloc/sandbox/pimloc-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pimloc-sandbox.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/asyncapi/pimloc-secureredact-asyncapi.yml
+  href: https://artifacts.apis.io/pimloc/asyncapi/pimloc-secureredact-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/pimloc-secureredact-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/asyncapi/pimloc-secureredact-asyncapi.yml
+  href: https://artifacts.apis.io/pimloc/asyncapi/pimloc-secureredact-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/pimloc-secureredact-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pimloc/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Pimloc is a UK-based AI company whose Secure Redact platform automates the redaction and anonymization of personally identifiable information (PII) in video, audio, images and documents — blurring faces, license plates, screens, on-screen text and full bodies with high accuracy. Used across law enforcement, local government, transport, insurance, healthcare, education and retail to meet GDPR, CCPA, HIPAA, FOIA and DSAR obligations, Secure Redact offers a browser SaaS and a v3 REST API. The API supports a fully automated Standard Flow (upload by URL, process, download) and an Enterprise Flow (review and edit in the UI, with projects, users and audit/chain-of-custody trails), plus audio transcription, video search and webhook callbacks. Pimloc is backed by Speedinvest.
+finops:
+- has_sources: true
+  method: derived
+  name: Pimloc Finops
+  primary_unit: credit
+  service_category: ''
+  slug: pimloc-finops
+  template: false
 image: https://www.secureredact.ai/favicon.ico
 layout: provider
 modified: '2026-07-20'
@@ -254,7 +266,7 @@ network: true
 overview: 'Pimloc publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Authentication API, Media API, and 2 more. Tagged areas include Company, Privacy, Video Redaction, Anonymization, and PII.
 
 
-  The Pimloc catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Pimloc catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Pimloc''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
@@ -262,22 +274,38 @@ plans:
 - name: Pimloc Plans Pricing
   plan_count: 5
   slug: pimloc-plans-pricing
-random_paper: 6
+- name: Pimloc Price Estimates
+  plan_count: 0
+  slug: pimloc-price-estimates
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Pimloc API Rules
+  rule_count: 62
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 2
+    warn: 2
+  slug: pimloc-rules
 score:
   band: strong
-  composite: 55.5
+  composite: 60.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 1.4
   facets:
-    access_clarity: 77.6
-    contract_governance: 18.2
-    contract_quality: 53.2
+    access_clarity: 85.5
+    contract_governance: 31.8
+    contract_quality: 62.0
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 10.5
@@ -286,7 +314,7 @@ score:
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 49.1
+  previous_composite: 59.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -303,13 +331,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/screenshots/pimloc-2026-08-17T081234.png
+screenshot: https://apis.io/screenshots/pimloc/pimloc-2026-08-17T081234.png
 security:
 - kind: authentication
   name: Pimloc Authentication
@@ -319,6 +347,12 @@ security:
   name: Pimloc Domain Security
   slug: pimloc-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Redact a video with Secure Redact (Standard Flow)
+  slug: pimloc-standard-flow-redact
+- name: Transcribe audio and download a Secure Redact transcript
+  slug: pimloc-transcribe-and-download
 slug: pimloc
 tags:
 - Company

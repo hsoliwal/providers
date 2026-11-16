@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 14.7
-  scored_at: '2026-10-17'
+  score: 16.5
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: REST and SOAP APIs for USPS shipping services, including rates, label creation, tracking, and address verification.
@@ -66,52 +79,52 @@ common:
   type: PrivacyPolicy
   url: https://www.stamps.com/privacy-policy/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/rules/stamps-com-rules.yml
+  href: https://artifacts.apis.io/stamps-com/rules/stamps-com-rules.yml
   title: ''
   type: Spectral
   url: rules/stamps-com-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/json-ld/stamps-com-context.jsonld
+  href: https://artifacts.apis.io/stamps-com/json-ld/stamps-com-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/stamps-com-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/vocabulary/stamps-com-vocabulary.yml
+  href: https://artifacts.apis.io/stamps-com/vocabulary/stamps-com-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/stamps-com-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/data-model/stamps-com-data-model.yml
+  href: https://artifacts.apis.io/stamps-com/data-model/stamps-com-data-model.yml
   title: ''
   type: DataModel
   url: data-model/stamps-com-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/conformance/stamps-com-conformance.yml
+  href: https://artifacts.apis.io/stamps-com/conformance/stamps-com-conformance.yml
   title: ''
   type: Conformance
   url: conformance/stamps-com-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/llms/stamps-com-llms.txt
+  href: https://artifacts.apis.io/stamps-com/llms/stamps-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/stamps-com-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/well-known/stamps-com-status-security.txt
+  href: https://artifacts.apis.io/stamps-com/well-known/stamps-com-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/stamps-com-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/well-known/stamps-com-well-known.yml
+  href: https://artifacts.apis.io/stamps-com/well-known/stamps-com-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/stamps-com-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/hosts/stamps-com-hosts.yml
+  href: https://artifacts.apis.io/stamps-com/hosts/stamps-com-hosts.yml
   title: ''
   type: Hosts
   url: hosts/stamps-com-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/vendors/stamps-com-vendors.yml
+  href: https://artifacts.apis.io/stamps-com/vendors/stamps-com-vendors.yml
   title: ''
   type: Vendors
   url: vendors/stamps-com-vendors.yml
@@ -124,7 +137,7 @@ common:
   type: Newsroom
   url: https://www.stamps.com/media/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stamps-com/refs/heads/main/security/stamps-com-domain-security.yml
+  href: https://artifacts.apis.io/stamps-com/security/stamps-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stamps-com-domain-security.yml
@@ -214,7 +227,7 @@ overview: 'Stamps.com is listed with 7 APIs on the [APIs.io](https://apis.io/) n
 
 
   Stamps.com''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 17 more developer resources.'
-random_paper: 16
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -230,21 +243,23 @@ rules:
   slug: stamps-com-rules
 score:
   band: thin
-  composite: 35.8
+  composite: 26.4
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.7
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 22.0
     contract_quality: 24.5
-    developer_ergonomics: 45.2
-    discoverability: 71.4
-    operational_transparency: 15.8
+    developer_ergonomics: 22.6
+    discoverability: 70.5
+    operational_transparency: 18.4
+  previous_composite: 37.1
   provenance:
     conformance: derived
     contracts:
@@ -258,12 +273,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/stamps-com/stamps-com-2026-11-03T143724.png
 security:
 - kind: domain-security
   name: Stamps Com Domain Security

@@ -1,11 +1,15 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  label: Self-serve signup
+  onboarding: self-serve
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 22
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/security/american-international-domain-security.yml
+  href: https://artifacts.apis.io/american-international/security/american-international-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/american-international-domain-security.yml
@@ -50,62 +57,62 @@ common:
   type: Website
   url: https://www.aig.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/well-known/american-international-well-known.yml
+  href: https://artifacts.apis.io/american-international/well-known/american-international-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/american-international-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/authentication/american-international-authentication.yml
+  href: https://artifacts.apis.io/american-international/authentication/american-international-authentication.yml
   title: ''
   type: Authentication
   url: authentication/american-international-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/scopes/american-international-scopes.yml
+  href: https://artifacts.apis.io/american-international/scopes/american-international-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/american-international-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/conformance/american-international-conformance.yml
+  href: https://artifacts.apis.io/american-international/conformance/american-international-conformance.yml
   title: ''
   type: Conformance
   url: conformance/american-international-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/errors/american-international-problem-types.yml
+  href: https://artifacts.apis.io/american-international/errors/american-international-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/american-international-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/conventions/american-international-conventions.yml
+  href: https://artifacts.apis.io/american-international/conventions/american-international-conventions.yml
   title: ''
   type: Conventions
   url: conventions/american-international-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/lifecycle/american-international-lifecycle.yml
+  href: https://artifacts.apis.io/american-international/lifecycle/american-international-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/american-international-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/packages/american-international-packages.yml
+  href: https://artifacts.apis.io/american-international/packages/american-international-packages.yml
   title: ''
   type: Packages
   url: packages/american-international-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/llms/american-international-llms.txt
+  href: https://artifacts.apis.io/american-international/llms/american-international-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/american-international-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/plans/american-international-plans-pricing.yml
+  href: https://artifacts.apis.io/american-international/plans/american-international-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/american-international-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/rate-limits/american-international-rate-limits.yml
+  href: https://artifacts.apis.io/american-international/rate-limits/american-international-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/american-international-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/security/american-international-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/american-international/security/american-international-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/american-international-vulnerability-disclosure.yml
@@ -190,7 +197,7 @@ plans:
 - name: American International Plans Pricing
   plan_count: 0
   slug: american-international-plans-pricing
-random_paper: 11
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: American International Rate Limits
@@ -204,7 +211,7 @@ score:
   band: emerging
   composite: 24.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -232,14 +239,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 42.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/american-international/refs/heads/main/screenshots/american-international-2026-06-20T171919.png
+screenshot: https://apis.io/screenshots/american-international/american-international-2026-06-20T171919.png
 security:
 - kind: authentication
   name: American International Authentication

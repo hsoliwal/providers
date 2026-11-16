@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/security/sydney-airport-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sydney-airport/security/sydney-airport-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sydney-airport-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/security/sydney-airport-domain-security.yml
+  href: https://artifacts.apis.io/sydney-airport/security/sydney-airport-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sydney-airport-domain-security.yml
@@ -65,37 +68,37 @@ common:
   type: PartnerPortal
   url: https://www.sydneyairport.com.au/infosyd
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/authentication/sydney-airport-authentication.yml
+  href: https://artifacts.apis.io/sydney-airport/authentication/sydney-airport-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sydney-airport-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/authentication/sydney-airport-openid-configuration.json
+  href: https://artifacts.apis.io/sydney-airport/authentication/sydney-airport-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: authentication/sydney-airport-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/scopes/sydney-airport-scopes.yml
+  href: https://artifacts.apis.io/sydney-airport/scopes/sydney-airport-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sydney-airport-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/well-known/sydney-airport-well-known.yml
+  href: https://artifacts.apis.io/sydney-airport/well-known/sydney-airport-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sydney-airport-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/conformance/sydney-airport-conformance.yml
+  href: https://artifacts.apis.io/sydney-airport/conformance/sydney-airport-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sydney-airport-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/lifecycle/sydney-airport-lifecycle.yml
+  href: https://artifacts.apis.io/sydney-airport/lifecycle/sydney-airport-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sydney-airport-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/llms/sydney-airport-llms.txt
+  href: https://artifacts.apis.io/sydney-airport/llms/sydney-airport-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sydney-airport-llms.txt
@@ -124,7 +127,7 @@ common:
   type: Copyright
   url: https://www.sydneyairport.com.au/copyright
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/well-known/sydney-airport-security.txt
+  href: https://artifacts.apis.io/sydney-airport/well-known/sydney-airport-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/sydney-airport-security.txt
@@ -145,7 +148,7 @@ overview: 'Sydney Airport is profiled on the [APIs.io](https://apis.io/) network
 
 
   Sydney Airport''s developer surface includes authentication, support, engineering blog, and 18 more developer resources.'
-random_paper: 8
+random_paper: 18
 scopes:
 - name: Sydney Airport Scopes
   scope_count: 8
@@ -155,7 +158,7 @@ score:
   band: emerging
   composite: 17.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -185,14 +188,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sydney-airport/refs/heads/main/screenshots/sydney-airport-2026-09-02T161434.png
+screenshot: https://apis.io/screenshots/sydney-airport/sydney-airport-2026-09-02T161434.png
 security:
 - kind: authentication
   name: Sydney Airport Authentication

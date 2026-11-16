@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Mobile Center APIs from Highway 9 Networks enable partners to integrate configuration, device management, monitoring, analytics, and operational workflows with the Virtual Mobile Cloud platform. Resou
@@ -43,7 +46,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/highway9/refs/heads/main/security/highway9-domain-security.yml
+  href: https://artifacts.apis.io/highway9/security/highway9-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/highway9-domain-security.yml
@@ -88,12 +91,12 @@ common:
   type: TermsOfService
   url: https://www.highway9.com/end-user-license-agreement/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/highway9/refs/heads/main/authentication/highway9-authentication.yml
+  href: https://artifacts.apis.io/highway9/authentication/highway9-authentication.yml
   title: ''
   type: Authentication
   url: authentication/highway9-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/highway9/refs/heads/main/llms/highway9-llms.txt
+  href: https://artifacts.apis.io/highway9/llms/highway9-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/highway9-llms.txt
@@ -114,7 +117,7 @@ score:
   band: emerging
   composite: 18.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -135,14 +138,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/highway9/refs/heads/main/screenshots/highway9-2026-07-25T221213.png
+screenshot: https://apis.io/screenshots/highway9/highway9-2026-07-25T221213.png
 security:
 - kind: authentication
   name: Highway9 Authentication

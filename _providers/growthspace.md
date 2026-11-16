@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-10-17'
+  score: 25.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 6
@@ -76,20 +79,20 @@ apis:
   description: The Up Time Check API from GrowthSpace — 1 operation(s) for up time check.
   name: GrowthSpace Up Time Check API
   slug: growthspace-up-time-check-api
-artifact_total: 12
+artifact_total: 15
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/overlays/growthspace-public-api-management-overlay.yaml
+  href: https://artifacts.apis.io/growthspace/overlays/growthspace-public-api-management-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/growthspace-public-api-management-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/agentic-access/growthspace-agentic-access.yml
+  href: https://artifacts.apis.io/growthspace/agentic-access/growthspace-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/growthspace-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/security/growthspace-domain-security.yml
+  href: https://artifacts.apis.io/growthspace/security/growthspace-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/growthspace-domain-security.yml
@@ -138,67 +141,67 @@ common:
   type: YouTube
   url: https://www.youtube.com/@Growthspaceus
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/scopes/growthspace-scopes.yml
+  href: https://artifacts.apis.io/growthspace/scopes/growthspace-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/growthspace-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/authentication/growthspace-authentication.yml
+  href: https://artifacts.apis.io/growthspace/authentication/growthspace-authentication.yml
   title: ''
   type: Authentication
   url: authentication/growthspace-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/conventions/growthspace-conventions.yml
+  href: https://artifacts.apis.io/growthspace/conventions/growthspace-conventions.yml
   title: ''
   type: Conventions
   url: conventions/growthspace-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/errors/growthspace-problem-types.yml
+  href: https://artifacts.apis.io/growthspace/errors/growthspace-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/growthspace-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/lifecycle/growthspace-lifecycle.yml
+  href: https://artifacts.apis.io/growthspace/lifecycle/growthspace-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/growthspace-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/conformance/growthspace-conformance.yml
+  href: https://artifacts.apis.io/growthspace/conformance/growthspace-conformance.yml
   title: ''
   type: Conformance
   url: conformance/growthspace-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/packages/growthspace-packages.yml
+  href: https://artifacts.apis.io/growthspace/packages/growthspace-packages.yml
   title: ''
   type: Packages
   url: packages/growthspace-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/components/growthspace-components.yml
+  href: https://artifacts.apis.io/growthspace/components/growthspace-components.yml
   title: ''
   type: Components
   url: components/growthspace-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/data-model/growthspace-data-model.yml
+  href: https://artifacts.apis.io/growthspace/data-model/growthspace-data-model.yml
   title: ''
   type: DataModel
   url: data-model/growthspace-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/llms/growthspace-llms.txt
+  href: https://artifacts.apis.io/growthspace/llms/growthspace-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/growthspace-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/plans/growthspace-plans-pricing.yml
+  href: https://artifacts.apis.io/growthspace/plans/growthspace-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/growthspace-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/rate-limits/growthspace-rate-limits.yml
+  href: https://artifacts.apis.io/growthspace/rate-limits/growthspace-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/growthspace-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/growthspace/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -214,16 +217,32 @@ network: true
 overview: 'GrowthSpace publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Ah API, @growthspace Engineering/public Api Management API, and 3 more. Tagged areas include Company, Learning and Development, Talent Development, Human Resources, and Coaching.
 
 
+  The GrowthSpace catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   GrowthSpace''s developer surface includes engineering blog, support, YouTube channel, authentication, and 23 more developer resources.'
 plans:
 - name: Growthspace Plans Pricing
   plan_count: 0
   slug: growthspace-plans-pricing
-random_paper: 3
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Growthspace Rate Limits
   slug: growthspace-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: GrowthSpace API Rules
+  rule_count: 39
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 1
+    warn: 1
+  slug: growthspace-rules
 scopes:
 - name: Growthspace Scopes
   scope_count: 11
@@ -231,18 +250,18 @@ scopes:
   summary_line: 11 scopes
 score:
   band: thin
-  composite: 32.9
+  composite: 34.5
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 35.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 32.4
     developer_ergonomics: 28.0
     discoverability: 66.1
@@ -254,7 +273,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.9
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -271,13 +290,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/growthspace/refs/heads/main/screenshots/growthspace-2026-09-02T145640.png
+screenshot: https://apis.io/screenshots/growthspace/growthspace-2026-09-02T145640.png
 security:
 - kind: authentication
   name: Growthspace Authentication
@@ -287,6 +306,12 @@ security:
   name: Growthspace Domain Security
   slug: growthspace-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: growthspace-provision-public-api-app
+  slug: growthspace-provision-public-api-app
+- name: growthspace-rotate-public-api-token
+  slug: growthspace-rotate-public-api-token
 slug: growthspace
 tags:
 - Company

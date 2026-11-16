@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: System calls for file and directory manipulation, including open, read, write, and file descriptor management.
@@ -72,22 +76,22 @@ apis:
 artifact_total: 37
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unix/refs/heads/main/plans/unix-plans-pricing.yml
+  href: https://artifacts.apis.io/unix/plans/unix-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/unix-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unix/refs/heads/main/rate-limits/unix-rate-limits.yml
+  href: https://artifacts.apis.io/unix/rate-limits/unix-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/unix-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unix/refs/heads/main/finops/unix-finops.yml
+  href: https://artifacts.apis.io/unix/finops/unix-finops.yml
   title: ''
   type: FinOps
   url: finops/unix-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unix/refs/heads/main/security/unix-domain-security.yml
+  href: https://artifacts.apis.io/unix/security/unix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unix-domain-security.yml
@@ -136,7 +140,7 @@ finops:
 - has_sources: false
   method: generated
   name: Unix Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: unix-finops
   template: true
@@ -161,7 +165,7 @@ plans:
 - name: Unix Plans Pricing
   plan_count: 3
   slug: unix-plans-pricing
-random_paper: 12
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: Unix Rate Limits
@@ -176,7 +180,7 @@ score:
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -184,21 +188,21 @@ score:
     developer_ergonomics: 28.6
     discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 16.3
+  previous_composite: 14.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unix/refs/heads/main/screenshots/unix-2026-06-20T200339.png
+screenshot: https://apis.io/screenshots/unix/unix-2026-06-20T200339.png
 security:
 - kind: domain-security
   name: Unix Domain Security

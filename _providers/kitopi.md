@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,16 +37,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Model Context Protocol endpoint that Kitopi''s Wix-hosted website exposes for agentic AI access. It is a platform-provided (Wix) site assistant server rather than a Kitopi product API: it lets an a'
   name: Kitopi Site MCP
   slug: site-mcp
-artifact_total: 4
+artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/security/kitopi-domain-security.yml
+  href: https://artifacts.apis.io/kitopi/security/kitopi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kitopi-domain-security.yml
@@ -120,42 +123,42 @@ common:
   type: Instagram
   url: https://www.instagram.com/thisiskitopi/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/mcp/kitopi-mcp.yml
+  href: https://artifacts.apis.io/kitopi/mcp/kitopi-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kitopi-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/llms/kitopi-llms.txt
+  href: https://artifacts.apis.io/kitopi/llms/kitopi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kitopi-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/well-known/kitopi-well-known.yml
+  href: https://artifacts.apis.io/kitopi/well-known/kitopi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kitopi-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/conventions/kitopi-conventions.yml
+  href: https://artifacts.apis.io/kitopi/conventions/kitopi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kitopi-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/authentication/kitopi-authentication.yml
+  href: https://artifacts.apis.io/kitopi/authentication/kitopi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kitopi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/conformance/kitopi-conformance.yml
+  href: https://artifacts.apis.io/kitopi/conformance/kitopi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kitopi-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/lifecycle/kitopi-lifecycle.yml
+  href: https://artifacts.apis.io/kitopi/lifecycle/kitopi-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kitopi-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kitopi/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -175,18 +178,18 @@ overview: 'Kitopi is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Kitopi''s developer surface includes documentation, engineering blog, support, authentication, and 23 more developer resources.'
-random_paper: 18
+random_paper: 8
 score:
   band: emerging
   composite: 21.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -202,7 +205,7 @@ score:
     regions:
     - mena
     - middle-east
-  previous_composite: 21.5
+  previous_composite: 21.6
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -213,14 +216,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kitopi/refs/heads/main/screenshots/kitopi-2026-07-25T223911.png
+screenshot: https://apis.io/screenshots/kitopi/kitopi-2026-07-25T223911.png
 security:
 - kind: authentication
   name: Kitopi Authentication
@@ -230,6 +233,10 @@ security:
   name: Kitopi Domain Security
   slug: kitopi-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Look up Kitopi business and site information over MCP
+  slug: kitopi-site-mcp-lookup
 slug: kitopi
 tags:
 - Company

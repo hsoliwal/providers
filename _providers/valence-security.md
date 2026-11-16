@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Valence Security REST API enables integration with the Valence platform for ingesting security data from custom sources, exporting alerts and audit logs, and configuring security monitoring via th
@@ -42,27 +46,27 @@ apis:
 artifact_total: 12
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/valence-security/refs/heads/main/plans/valence-security-plans-pricing.yml
+  href: https://artifacts.apis.io/valence-security/plans/valence-security-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/valence-security-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/valence-security/refs/heads/main/rate-limits/valence-security-rate-limits.yml
+  href: https://artifacts.apis.io/valence-security/rate-limits/valence-security-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/valence-security-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/valence-security/refs/heads/main/finops/valence-security-finops.yml
+  href: https://artifacts.apis.io/valence-security/finops/valence-security-finops.yml
   title: ''
   type: FinOps
   url: finops/valence-security-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/valence-security/refs/heads/main/security/valence-security-trust-center.yml
+  href: https://artifacts.apis.io/valence-security/security/valence-security-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/valence-security-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/valence-security/refs/heads/main/security/valence-security-domain-security.yml
+  href: https://artifacts.apis.io/valence-security/security/valence-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/valence-security-domain-security.yml
@@ -116,7 +120,7 @@ finops:
 - has_sources: false
   method: generated
   name: Valence Security Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: valence-security-finops
   template: true
@@ -153,7 +157,7 @@ plans:
 - name: Valence Security Plans Pricing
   plan_count: 3
   slug: valence-security-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 5
   name: Valence Security Rate Limits
@@ -174,13 +178,13 @@ score:
   band: emerging
   composite: 18.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 53.8
     catalog_earned_first_party: 0.0
     catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 23.5
@@ -188,21 +192,21 @@ score:
     developer_ergonomics: 11.9
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 19.7
+  previous_composite: 18.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/valence-security/refs/heads/main/screenshots/valence-security-2026-06-20T200753.png
+screenshot: https://apis.io/screenshots/valence-security/valence-security-2026-06-20T200753.png
 security:
 - kind: domain-security
   name: Valence Security Domain Security

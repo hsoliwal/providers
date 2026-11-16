@@ -1,8 +1,9 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  gated_conflict: 'x-api-posture: private but 3 published API entries'
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Anonymous Model Context Protocol server served from the Feastables origin. Answers initialize and tools/list with no credential (probed 2026-08-01, HTTP 200) and returns five tools with full JSON Sche
@@ -47,7 +51,7 @@ apis:
 - description: Read-only JSON endpoints the store documents in /agents.md for agents that only need to read store data without transacting - GET /products.json, /products/{handle}.json, /collections/{handle}/product
   name: Feastables Storefront JSON
   slug: feastables-storefront-json
-artifact_total: 7
+artifact_total: 9
 common:
 - group: company
   title: ''
@@ -58,72 +62,72 @@ common:
   type: Documentation
   url: https://feastables.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/llms/feastables-llms.txt
+  href: https://artifacts.apis.io/feastables/llms/feastables-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/feastables-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/well-known/feastables-well-known.yml
+  href: https://artifacts.apis.io/feastables/well-known/feastables-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/feastables-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/mcp/feastables-mcp.yml
+  href: https://artifacts.apis.io/feastables/mcp/feastables-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/feastables-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/mcp/feastables-tool-crosswalk.yml
+  href: https://artifacts.apis.io/feastables/mcp/feastables-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/feastables-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/feastables/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/authentication/feastables-authentication.yml
+  href: https://artifacts.apis.io/feastables/authentication/feastables-authentication.yml
   title: ''
   type: Authentication
   url: authentication/feastables-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/scopes/feastables-scopes.yml
+  href: https://artifacts.apis.io/feastables/scopes/feastables-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/feastables-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/conformance/feastables-conformance.yml
+  href: https://artifacts.apis.io/feastables/conformance/feastables-conformance.yml
   title: ''
   type: Conformance
   url: conformance/feastables-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/conventions/feastables-conventions.yml
+  href: https://artifacts.apis.io/feastables/conventions/feastables-conventions.yml
   title: ''
   type: Conventions
   url: conventions/feastables-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/conventions/feastables-conventions.yml
+  href: https://artifacts.apis.io/feastables/conventions/feastables-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/feastables-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/errors/feastables-problem-types.yml
+  href: https://artifacts.apis.io/feastables/errors/feastables-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/feastables-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/lifecycle/feastables-lifecycle.yml
+  href: https://artifacts.apis.io/feastables/lifecycle/feastables-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/feastables-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/data-model/feastables-data-model.yml
+  href: https://artifacts.apis.io/feastables/data-model/feastables-data-model.yml
   title: ''
   type: DataModel
   url: data-model/feastables-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/security/feastables-domain-security.yml
+  href: https://artifacts.apis.io/feastables/security/feastables-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/feastables-domain-security.yml
@@ -167,7 +171,7 @@ overview: 'Feastables is listed with 3 APIs on the [APIs.io](https://apis.io/) n
 
 
   Feastables'' developer surface includes documentation, authentication, support, and 19 more developer resources.'
-random_paper: 16
+random_paper: 18
 scopes:
 - name: Feastables Scopes
   scope_count: 4
@@ -183,7 +187,7 @@ score:
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -191,7 +195,7 @@ score:
     developer_ergonomics: 33.3
     discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 23.4
+  previous_composite: 23.5
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -202,14 +206,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/feastables/refs/heads/main/screenshots/feastables-2026-08-07T165236.png
+screenshot: https://apis.io/screenshots/feastables/feastables-2026-08-07T165236.png
 security:
 - kind: authentication
   name: Feastables Authentication
@@ -219,6 +223,12 @@ security:
   name: Feastables Domain Security
   slug: feastables-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Build a cart and complete a Feastables checkout over UCP
+  slug: feastables-agentic-checkout
+- name: Browse and search the Feastables catalog
+  slug: feastables-shop-catalog
 slug: feastables
 tags:
 - Company

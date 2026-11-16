@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -55,11 +61,8 @@ apis:
   description: The Where API from OneBusAway — 17 operation(s) for where.
   name: OneBusAway Where API
   slug: onebusaway-where-api
-artifact_total: 102
+artifact_total: 101
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OneBusAway default API
   slug: open-onebusaway-default-api
@@ -68,7 +71,7 @@ collections:
   slug: open-onebusaway-where-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/onebusaway/refs/heads/main/plans/onebusaway-plans-pricing.yml
+  href: https://artifacts.apis.io/onebusaway/plans/onebusaway-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/onebusaway-plans-pricing.yml
@@ -85,17 +88,17 @@ common:
   type: License
   url: https://github.com/OneBusAway/sdk-config/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onebusaway/refs/heads/main/agentic-access/onebusaway-agentic-access.yml
+  href: https://artifacts.apis.io/onebusaway/agentic-access/onebusaway-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/onebusaway-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onebusaway/refs/heads/main/security/onebusaway-domain-security.yml
+  href: https://artifacts.apis.io/onebusaway/security/onebusaway-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onebusaway-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onebusaway/refs/heads/main/authentication/onebusaway-authentication.yml
+  href: https://artifacts.apis.io/onebusaway/authentication/onebusaway-authentication.yml
   title: ''
   type: Authentication
   url: authentication/onebusaway-authentication.yml
@@ -490,7 +493,7 @@ plans:
 - name: Onebusaway Plans Pricing
   plan_count: 2
   slug: onebusaway-plans-pricing
-random_paper: 8
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -507,13 +510,13 @@ score:
   band: thin
   composite: 28.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 50.3
     catalog_earned_first_party: 0.0
     catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.1
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 9.8
@@ -524,7 +527,7 @@ score:
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 31.0
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     contracts:
@@ -538,14 +541,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/onebusaway/refs/heads/main/screenshots/onebusaway-2026-06-20T190710.png
+screenshot: https://apis.io/screenshots/onebusaway/onebusaway-2026-06-20T190710.png
 security:
 - kind: authentication
   name: Onebusaway Authentication

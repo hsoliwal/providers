@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +26,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.7
-  scored_at: '2026-10-17'
+  score: 16.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -82,15 +87,12 @@ apis:
   description: Access to transactions
   name: Meter Transactions API
   slug: meter-transactions-api
-artifact_total: 20
+artifact_total: 23
 asyncapis:
 - description: 'Real-time WebSocket subscription channels of the Meter native node API, generated from the /subscriptions/* GET (websocket-upgrade) operations declared in the Meter RESTful OpenAPI (Meterest v1.2.2). '
   name: Meter Subscriptions (WebSocket)
   slug: meter-subscriptions-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Meterest Accounts API
   slug: open-meter-accounts-api
@@ -117,92 +119,92 @@ collections:
   slug: open-meter-transactions-api
 common:
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/openapi/_original/meter-openapi-original.yml
+  href: https://artifacts.apis.io/meter/openapi/_original/meter-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/meter-openapi-original.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/asyncapi/meter-subscriptions-asyncapi.yml
+  href: https://artifacts.apis.io/meter/asyncapi/meter-subscriptions-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/meter-subscriptions-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/asyncapi/meter-subscriptions-asyncapi.yml
+  href: https://artifacts.apis.io/meter/asyncapi/meter-subscriptions-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/meter-subscriptions-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/agentic-access/meter-agentic-access.yml
+  href: https://artifacts.apis.io/meter/agentic-access/meter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/meter-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/security/meter-domain-security.yml
+  href: https://artifacts.apis.io/meter/security/meter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/meter-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/packages/meter-packages.yml
+  href: https://artifacts.apis.io/meter/packages/meter-packages.yml
   title: ''
   type: Packages
   url: packages/meter-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/packages/meter-packages.yml
+  href: https://artifacts.apis.io/meter/packages/meter-packages.yml
   title: ''
   type: SDKs
   url: packages/meter-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/mcp/meter-mcp.yml
+  href: https://artifacts.apis.io/meter/mcp/meter-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/meter-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/llms/meter-llms.txt
+  href: https://artifacts.apis.io/meter/llms/meter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/meter-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/overlays/meter-openapi-overlay.yaml
+  href: https://artifacts.apis.io/meter/overlays/meter-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/meter-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/conventions/meter-conventions.yml
+  href: https://artifacts.apis.io/meter/conventions/meter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/meter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/data-model/meter-data-model.yml
+  href: https://artifacts.apis.io/meter/data-model/meter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/meter-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/conformance/meter-conformance.yml
+  href: https://artifacts.apis.io/meter/conformance/meter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/meter-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/lifecycle/meter-lifecycle.yml
+  href: https://artifacts.apis.io/meter/lifecycle/meter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/meter-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/lifecycle/meter-lifecycle.yml
+  href: https://artifacts.apis.io/meter/lifecycle/meter-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/meter-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/changelog/meter-changelog.yml
+  href: https://artifacts.apis.io/meter/changelog/meter-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/meter-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/sandbox/meter-sandbox.yml
+  href: https://artifacts.apis.io/meter/sandbox/meter-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/meter-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/meter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -253,30 +255,43 @@ network: true
 overview: 'Meter publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Blocks API, Debug API, and 5 more. Tagged areas include Blockchain, Web3, Cryptocurrency, Layer 1, and EVM.
 
 
-  The Meter catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Meter catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Meter''s developer surface includes changelog, sandbox, documentation, API reference, getting-started guide, engineering blog, support, and 20 more developer resources.'
 random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Meter API Rules
+  rule_count: 52
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 3
+    warn: 4
+  slug: meter-rules
 score:
   band: thin
-  composite: 34.2
+  composite: 35.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 43.8
     developer_ergonomics: 61.3
     discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 34.1
+  previous_composite: 35.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -293,18 +308,26 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/meter/refs/heads/main/screenshots/meter-2026-08-07T172700.png
+screenshot: https://apis.io/screenshots/meter/meter-2026-08-07T172700.png
 security:
 - kind: domain-security
   name: Meter Domain Security
   slug: meter-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Filter and stream Meter logs
+  slug: meter-filter-logs
+- name: Query a Meter account
+  slug: meter-query-account
+- name: Submit a Meter transaction
+  slug: meter-submit-transaction
 slug: meter
 tags:
 - Blockchain

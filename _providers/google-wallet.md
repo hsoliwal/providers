@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -68,7 +72,7 @@ apis:
   description: Manage loyalty card classes and objects
   name: Google Wallet Loyalty Cards API
   slug: google-wallet-loyalty-cards-api
-artifact_total: 26
+artifact_total: 25
 collections:
 - collection_type: postman
   name: Google Wallet Event Tickets API
@@ -85,9 +89,6 @@ collections:
 - collection_type: postman
   name: Google Wallet Event Tickets Loyalty Cards API
   slug: postman-google-wallet-loyalty-cards-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Google Wallet Event Tickets API
   slug: open-google-wallet-event-tickets-api
@@ -107,18 +108,23 @@ collections:
   name: Google Wallet API
   slug: open-openapi
 common:
+- group: other
+  href: https://artifacts.apis.io/google-wallet/capabilities/google-wallet-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/google-wallet-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/plans/google-wallet-plans-pricing.yml
+  href: https://artifacts.apis.io/google-wallet/plans/google-wallet-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/google-wallet-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/rate-limits/google-wallet-rate-limits.yml
+  href: https://artifacts.apis.io/google-wallet/rate-limits/google-wallet-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/google-wallet-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/finops/google-wallet-finops.yml
+  href: https://artifacts.apis.io/google-wallet/finops/google-wallet-finops.yml
   title: ''
   type: FinOps
   url: finops/google-wallet-finops.yml
@@ -131,17 +137,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/google-wallet/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/agentic-access/google-wallet-agentic-access.yml
+  href: https://artifacts.apis.io/google-wallet/agentic-access/google-wallet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/google-wallet-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/security/google-wallet-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google-wallet/security/google-wallet-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-wallet-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/security/google-wallet-domain-security.yml
+  href: https://artifacts.apis.io/google-wallet/security/google-wallet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-wallet-domain-security.yml
@@ -191,7 +197,7 @@ finops:
 - has_sources: false
   method: generated
   name: Google Wallet Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: google-wallet-finops
   template: true
@@ -216,7 +222,7 @@ overview: 'Google Wallet publishes 5 API contracts indexed on the [APIs.io](http
   The Google Wallet catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Google Wallet''s developer surface includes developer portal, getting-started guide, documentation, authentication, support, and 13 more developer resources.'
+  Google Wallet''s developer surface includes developer portal, getting-started guide, documentation, authentication, support, and 14 more developer resources.'
 plans:
 - name: Google Wallet Plans Pricing
   plan_count: 3
@@ -240,23 +246,23 @@ rules:
   slug: google-wallet-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 39.8
+  composite: 41.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 59.7
     catalog_earned_first_party: 0.0
     catalog_gap: 55.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
     contract_quality: 53.8
     developer_ergonomics: 44.0
     discoverability: 66.1
-    operational_transparency: 26.3
-  previous_composite: 41.3
+    operational_transparency: 36.8
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     contracts:
@@ -270,13 +276,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/google-wallet/refs/heads/main/screenshots/google-wallet-2026-06-20T182248.png
+screenshot: https://apis.io/screenshots/google-wallet/google-wallet-2026-06-20T182248.png
 security:
 - kind: domain-security
   name: Google Wallet Domain Security

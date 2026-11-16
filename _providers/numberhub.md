@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for prepaid wallet, SMS verification, number rentals, eSIMs, email OTP and residential proxies.
@@ -32,27 +45,27 @@ apis:
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/changelog/numberhub-changelog.yml
+  href: https://artifacts.apis.io/numberhub/changelog/numberhub-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/numberhub-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/conformance/numberhub-conformance.yml
+  href: https://artifacts.apis.io/numberhub/conformance/numberhub-conformance.yml
   title: ''
   type: Conformance
   url: conformance/numberhub-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/llms/numberhub-llms.txt
+  href: https://artifacts.apis.io/numberhub/llms/numberhub-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/numberhub-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/hosts/numberhub-hosts.yml
+  href: https://artifacts.apis.io/numberhub/hosts/numberhub-hosts.yml
   title: ''
   type: Hosts
   url: hosts/numberhub-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/vendors/numberhub-vendors.yml
+  href: https://artifacts.apis.io/numberhub/vendors/numberhub-vendors.yml
   title: ''
   type: Vendors
   url: vendors/numberhub-vendors.yml
@@ -85,12 +98,12 @@ common:
   type: ChangeLog
   url: https://numberhub.io/changelog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/security/numberhub-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/numberhub/security/numberhub-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/numberhub-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/security/numberhub-domain-security.yml
+  href: https://artifacts.apis.io/numberhub/security/numberhub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/numberhub-domain-security.yml
@@ -114,10 +127,10 @@ overview: 'NumberHub is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   NumberHub''s developer surface includes changelog, pricing, documentation, and 13 more developer resources.'
-random_paper: 0
+random_paper: 8
 score:
   band: emerging
-  composite: 23.3
+  composite: 14.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 32.0
@@ -125,15 +138,15 @@ score:
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: -8.6
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 9.5
+    developer_ergonomics: 4.8
     discoverability: 64.3
-    operational_transparency: 42.1
-  previous_composite: 23.4
+    operational_transparency: 21.1
+  previous_composite: 23.3
   provenance:
     conformance: derived
     mcp: unknown
@@ -142,15 +155,15 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 17.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/numberhub/refs/heads/main/screenshots/numberhub-2026-10-11T111657.png
+screenshot: https://apis.io/screenshots/numberhub/numberhub-2026-10-11T111657.png
 security:
 - kind: domain-security
   name: Numberhub Domain Security

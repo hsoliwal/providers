@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
-    event_surface_described: true
-    idempotency: false
+    error_semantics: verified
+    event_surface_described: false
+    idempotency: verified
     mcp_server: false
-    openapi_examples: documented
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
-    rate_limit_signal: derived
-    reversibility_documented: documented
+    rate_limit_signal: verified
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-10-17'
+  score: 39.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 1
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 67
   slug: e2b-dev-agentic-access
   summary_line: 67 operations · 36 acting · 1 human-in-the-loop
-api_count: 3
+api_count: 2
 apis:
 - description: 'Higher-level SDK on top of the Sandbox API that exposes a Jupyter-style code interpreter for LLM-driven Python and JavaScript execution. Returns structured execution results including stdout, stderr, '
   name: E2B Code Interpreter SDK
@@ -53,44 +59,14 @@ apis:
   slug: e2b-desktop-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
-  description: The access-tokens API from E2B — 2 operation(s) for access-tokens.
-  name: E2B Access Tokens API
-  slug: e2b-dev-access-tokens-api
-- baseURL: https://api.e2b.app
-  baseurl_source: declared
-  description: The admin API from E2B — 4 operation(s) for admin.
-  name: E2B Admin API
-  slug: e2b-dev-admin-api
-- baseURL: https://api.e2b.app
-  baseurl_source: declared
-  description: The api-keys API from E2B — 2 operation(s) for api-keys.
-  name: E2B API Keys API
-  slug: e2b-dev-api-keys-api
-- baseURL: https://api.e2b.app
-  baseurl_source: declared
-  description: The auth API from E2B — 3 operation(s) for auth.
-  name: E2B Auth API
-  slug: e2b-dev-auth-api
-- baseURL: https://api.e2b.app
-  baseurl_source: declared
   description: The events API from E2B — 2 operation(s) for events.
   name: E2B Events API
   slug: e2b-dev-events-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
-  description: The Health API from E2B — 1 operation(s) for health.
-  name: E2B Health API
-  slug: e2b-dev-health-api
-- baseURL: https://api.e2b.app
-  baseurl_source: declared
   description: The sandboxes API from E2B — 13 operation(s) for sandboxes.
   name: E2B Sandboxes API
   slug: e2b-dev-sandboxes-api
-- baseURL: https://api.e2b.app
-  baseurl_source: declared
-  description: The snapshots API from E2B — 1 operation(s) for snapshots.
-  name: E2B Snapshots API
-  slug: e2b-dev-snapshots-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The tags API from E2B — 2 operation(s) for tags.
@@ -116,7 +92,32 @@ apis:
   description: The E2B Sandbox Events And Webhooks API API from E2B — 0 operation(s) for e2b sandbox events and webhooks api.
   name: E2B Sandbox Events And Webhooks API
   slug: e2b-dev-e2b-sandbox-events-and-webhooks-api-api
-artifact_total: 73
+- baseURL: https://api.e2b.app
+  baseurl_source: declared
+  description: The Envd API from E2B — 3 operation(s) for envd.
+  name: E2B Envd API
+  slug: e2b-dev-envd-api
+- baseURL: https://api.e2b.app
+  baseurl_source: declared
+  description: The Filesystem API from E2B — 10 operation(s) for filesystem.
+  name: E2B Filesystem API
+  slug: e2b-dev-filesystem-api
+- baseURL: https://api.e2b.app
+  baseurl_source: declared
+  description: The Process API from E2B — 8 operation(s) for process.
+  name: E2B Process API
+  slug: e2b-dev-process-api
+- baseURL: https://api.e2b.app
+  baseurl_source: declared
+  description: The Secrets API from E2B — 2 operation(s) for secrets.
+  name: E2B Secrets API
+  slug: e2b-dev-secrets-api
+- baseURL: https://api.e2b.app
+  baseurl_source: declared
+  description: The Teams API from E2B — 2 operation(s) for teams.
+  name: E2B Teams API
+  slug: e2b-dev-teams-api
+artifact_total: 72
 collections:
 - collection_type: postman
   name: E2B access-tokens API
@@ -154,9 +155,6 @@ collections:
 - collection_type: postman
   name: E2B access-tokens webhooks API
   slug: postman-e2b-dev-webhooks-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: E2B API
   slug: open-e2b-api
@@ -216,7 +214,7 @@ common:
   type: BlogRSS
   url: https://e2b.dev/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/capabilities/e2b-dev-capability-edges.yml
+  href: https://artifacts.apis.io/e2b-dev/capabilities/e2b-dev-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/e2b-dev-capability-edges.yml
@@ -229,22 +227,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/e2b/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/agentic-access/e2b-dev-agentic-access.yml
+  href: https://artifacts.apis.io/e2b-dev/agentic-access/e2b-dev-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/e2b-dev-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/security/e2b-dev-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/e2b-dev/security/e2b-dev-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/e2b-dev-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/security/e2b-dev-domain-security.yml
+  href: https://artifacts.apis.io/e2b-dev/security/e2b-dev-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/e2b-dev-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/authentication/e2b-dev-authentication.yml
+  href: https://artifacts.apis.io/e2b-dev/authentication/e2b-dev-authentication.yml
   title: ''
   type: Authentication
   url: authentication/e2b-dev-authentication.yml
@@ -413,17 +411,17 @@ common:
   type: CLI
   url: https://www.npmjs.com/package/@e2b/cli
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/plans/e2b-dev-plans-pricing.yml
+  href: https://artifacts.apis.io/e2b-dev/plans/e2b-dev-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/e2b-dev-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/rate-limits/e2b-dev-rate-limits.yml
+  href: https://artifacts.apis.io/e2b-dev/rate-limits/e2b-dev-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/e2b-dev-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/finops/e2b-dev-finops.yml
+  href: https://artifacts.apis.io/e2b-dev/finops/e2b-dev-finops.yml
   title: ''
   type: FinOps
   url: finops/e2b-dev-finops.yml
@@ -455,13 +453,13 @@ features:
 - Per-second usage-based pricing on CPU, RAM, and storage with a $100 signup credit
 - Used in production by AI labs, agent startups, and Fortune 100 enterprises; 1B+ sandboxes started and 3.5M+ monthly SDK downloads
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: E2B Dev Finops
-  primary_unit: ''
+  primary_unit: sandbox runtime
   service_category: ''
   slug: e2b-dev-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/e2b-dev.png
 json_schemas:
 - name: E2B Sandbox
@@ -480,7 +478,7 @@ modified: '2026-10-06'
 name: E2B
 nav: Providers
 network: true
-overview: 'E2B publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Tokens API, Admin API, API Keys API, and 12 more. Tagged areas include Artificial Intelligence, Agents, Code Execution, Code Interpreter, and Sandbox.
+overview: 'E2B publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Sandboxes API, Tags API, and 11 more. Tagged areas include Artificial Intelligence, Agents, Code Execution, Code Interpreter, and Sandbox.
 
 
   The E2B catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -491,7 +489,10 @@ plans:
 - name: E2B Dev Plans Pricing
   plan_count: 5
   slug: e2b-dev-plans-pricing
-random_paper: 19
+- name: E2B Dev Price Estimates
+  plan_count: 0
+  slug: e2b-dev-price-estimates
+random_paper: 13
 rate_limits:
 - limit_count: 8
   name: E2B Dev Rate Limits
@@ -509,44 +510,49 @@ rules:
     warn: 3
   slug: e2b-dev-jsonschema-spectral-rules
 score:
-  band: strong
-  composite: 63.8
+  band: exemplar
+  composite: 68.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 73.3
     catalog_earned_first_party: 12.0
     catalog_gap: 41.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.6
   facets:
-    access_clarity: 84.2
+    access_clarity: 92.1
     contract_governance: 9.8
-    contract_quality: 69.8
+    contract_quality: 72.6
     developer_ergonomics: 82.1
-    discoverability: 62.5
-    operational_transparency: 28.9
-  previous_composite: 65.3
+    discoverability: 57.1
+    operational_transparency: 39.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 67.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 13
+      marker_coverage: 40.0
+      total: 25
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/screenshots/e2b-dev-2026-06-20T180353.png
+    score: 11.1
+screenshot: https://apis.io/screenshots/e2b-dev/e2b-dev-2026-06-20T180353.png
 security:
 - kind: authentication
   name: E2B Dev Authentication

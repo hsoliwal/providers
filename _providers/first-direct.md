@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup (HSBC developer portal) · public Open Data
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
-  - open-data
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 35.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -214,64 +218,89 @@ apis:
   description: The Transactions API from first direct — 2 operation(s) for transactions.
   name: first direct Transactions API
   slug: first-direct-transactions-api
-artifact_total: 40
+artifact_total: 63
 collections:
 - collection_type: open
   name: Open Data API
   slug: open-obie-opendata
 common:
+- group: design
+  href: https://artifacts.apis.io/first-direct/rules/first-direct-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/first-direct-rules.yml
+- group: design
+  href: https://artifacts.apis.io/first-direct/json-ld/first-direct-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/first-direct-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/first-direct/vocabulary/first-direct-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/first-direct-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/capabilities/first-direct-capability-edges.yml
+  href: https://artifacts.apis.io/first-direct/hosts/first-direct-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/first-direct-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/first-direct/vendors/first-direct-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/first-direct-vendors.yml
+- group: other
+  href: https://artifacts.apis.io/first-direct/capabilities/first-direct-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/first-direct-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/mcp/first-direct-mcp.yml
+  href: https://artifacts.apis.io/first-direct/mcp/first-direct-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/first-direct-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/agentic-access/first-direct-agentic-access.yml
+  href: https://artifacts.apis.io/first-direct/agentic-access/first-direct-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/first-direct-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/security/first-direct-domain-security.yml
+  href: https://artifacts.apis.io/first-direct/security/first-direct-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/first-direct-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/scopes/first-direct-scopes.yml
+  href: https://artifacts.apis.io/first-direct/scopes/first-direct-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/first-direct-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/authentication/first-direct-authentication.yml
+  href: https://artifacts.apis.io/first-direct/authentication/first-direct-authentication.yml
   title: ''
   type: Authentication
   url: authentication/first-direct-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/conventions/first-direct-conventions.yml
+  href: https://artifacts.apis.io/first-direct/conventions/first-direct-conventions.yml
   title: ''
   type: Conventions
   url: conventions/first-direct-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/conventions/first-direct-conventions.yml
+  href: https://artifacts.apis.io/first-direct/conventions/first-direct-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/first-direct-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/errors/first-direct-problem-types.yml
+  href: https://artifacts.apis.io/first-direct/errors/first-direct-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/first-direct-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/conformance/first-direct-conformance.yml
+  href: https://artifacts.apis.io/first-direct/conformance/first-direct-conformance.yml
   title: ''
   type: Conformance
   url: conformance/first-direct-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/lifecycle/first-direct-lifecycle.yml
+  href: https://artifacts.apis.io/first-direct/lifecycle/first-direct-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/first-direct-lifecycle.yml
@@ -280,17 +309,17 @@ common:
   type: Deprecation
   url: https://standards.openbanking.org.uk/operational-guidelines/change-and-communication-management/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/changelog/first-direct-changelog.yml
+  href: https://artifacts.apis.io/first-direct/changelog/first-direct-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/first-direct-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/data-model/first-direct-data-model.yml
+  href: https://artifacts.apis.io/first-direct/data-model/first-direct-data-model.yml
   title: ''
   type: DataModel
   url: data-model/first-direct-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/sandbox/first-direct-sandbox.yml
+  href: https://artifacts.apis.io/first-direct/sandbox/first-direct-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/first-direct-sandbox.yml
@@ -299,17 +328,12 @@ common:
   type: Postman
   url: https://develop.hsbc.com/knowledge-article/get-started-open-banking-apis
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/well-known/first-direct-well-known.yml
+  href: https://artifacts.apis.io/first-direct/well-known/first-direct-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/first-direct-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/well-known/first-direct-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/first-direct-security.txt
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/security/first-direct-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/first-direct/security/first-direct-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/first-direct-vulnerability-disclosure.yml
@@ -318,32 +342,27 @@ common:
   type: Security
   url: https://www.hsbc.com/.well-known/security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/first-direct/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/llms/first-direct-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/first-direct-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/overlays/first-direct-obie-account-info-overlay.yaml
+  href: https://artifacts.apis.io/first-direct/overlays/first-direct-obie-account-info-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/first-direct-obie-account-info-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/overlays/first-direct-obie-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/first-direct/overlays/first-direct-obie-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/first-direct-obie-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/overlays/first-direct-obie-confirmation-funds-overlay.yaml
+  href: https://artifacts.apis.io/first-direct/overlays/first-direct-obie-confirmation-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/first-direct-obie-confirmation-funds-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/overlays/first-direct-obie-opendata-overlay.yaml
+  href: https://artifacts.apis.io/first-direct/overlays/first-direct-obie-opendata-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/first-direct-obie-opendata-overlay.yaml
@@ -395,6 +414,66 @@ created: '2026-07-23'
 description: first direct is a telephone- and internet-based retail bank and a division of HSBC UK Bank plc, headquartered in Leeds, England and launched in 1989. It offers personal current accounts, savings, credit cards, loans, mortgages and insurance to UK consumers with a reputation for customer service, operating with no physical branches of its own. As an HSBC brand, first direct participates in the UK Open Banking regime under HSBC UK - one of the nine CMA9 banks mandated by the Competition and Markets Authority - and is regulated by the Financial Conduct Authority (FCA) and Prudential Regulation Authority (PRA). Its Open Banking surfaces conform to the Open Banking Implementation Entity (OBIE / Open Banking Limited) standards - a public, unauthenticated Open Data API (personal current account product reference data, ATM and branch locators, published on the shared HSBC api.hsbc.com host where "first direct" appears as a distinct brand) and the FAPI-secured OBIE Read/Write APIs -
   Account and Transaction Information (AIS), Payment Initiation (PIS) and Confirmation of Funds (CBPII) - onboarded and documented through HSBC's developer portal at develop.hsbc.com, which serves the HSBC UK, first direct and M&S Bank brands.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+json_schemas:
+- name: File
+  property_count: 0
+  slug: first-direct-file
+- name: OBFundsConfirmationConsent1
+  property_count: 1
+  slug: first-direct-obfunds-confirmation-consent1
+- name: OBFundsConfirmation1
+  property_count: 1
+  slug: first-direct-obfunds-confirmation1
+- name: OBReadConsent1
+  property_count: 2
+  slug: first-direct-obread-consent1
+- name: OBWriteDomesticConsent4
+  property_count: 2
+  slug: first-direct-obwrite-domestic-consent4
+- name: OBWriteDomesticScheduledConsent4
+  property_count: 2
+  slug: first-direct-obwrite-domestic-scheduled-consent4
+- name: OBWriteDomesticScheduled2
+  property_count: 2
+  slug: first-direct-obwrite-domestic-scheduled2
+- name: OBWriteDomesticStandingOrderConsent5
+  property_count: 2
+  slug: first-direct-obwrite-domestic-standing-order-consent5
+- name: OBWriteDomesticStandingOrder3
+  property_count: 2
+  slug: first-direct-obwrite-domestic-standing-order3
+- name: OBWriteDomestic2
+  property_count: 2
+  slug: first-direct-obwrite-domestic2
+- name: OBWriteFileConsent3
+  property_count: 1
+  slug: first-direct-obwrite-file-consent3
+- name: OBWriteFile2
+  property_count: 1
+  slug: first-direct-obwrite-file2
+- name: OBWriteInternationalConsent5
+  property_count: 2
+  slug: first-direct-obwrite-international-consent5
+- name: OBWriteInternationalScheduledConsent5
+  property_count: 2
+  slug: first-direct-obwrite-international-scheduled-consent5
+- name: OBWriteInternationalScheduled3
+  property_count: 2
+  slug: first-direct-obwrite-international-scheduled3
+- name: OBWriteInternationalStandingOrderConsent6
+  property_count: 2
+  slug: first-direct-obwrite-international-standing-order-consent6
+- name: OBWriteInternationalStandingOrder4
+  property_count: 2
+  slug: first-direct-obwrite-international-standing-order4
+- name: OBWriteInternational3
+  property_count: 2
+  slug: first-direct-obwrite-international3
+jsonld:
+- class_count: 120
+  name: First Direct Context
+  property_count: 123
+  slug: first-direct-context
 layout: provider
 modified: '2026-09-16'
 name: first direct
@@ -403,28 +482,44 @@ network: true
 overview: 'first direct publishes 34 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
-  first direct''s developer surface includes authentication, changelog, sandbox, getting-started guide, signup flow, documentation, support, and 30 more developer resources.'
-random_paper: 0
+  The first direct catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  first direct''s developer surface includes authentication, changelog, sandbox, getting-started guide, signup flow, documentation, support, and 33 more developer resources.'
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: first direct API Rules
+  rule_count: 69
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 8
+    warn: 7
+  slug: first-direct-rules
 scopes:
 - name: First Direct Scopes
   scope_count: 3
   slug: first-direct-scopes
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 49.0
+  band: strong
+  composite: 54.5
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 29
+    catalog_earned: 65.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.9
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 46.9
+    contract_governance: 22.0
+    contract_quality: 60.5
     developer_ergonomics: 68.5
     discoverability: 78.6
     operational_transparency: 36.8
@@ -436,7 +531,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 49.0
+  previous_composite: 50.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -457,13 +552,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 48.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/first-direct/refs/heads/main/screenshots/first-direct-2026-07-25T214603.png
+screenshot: https://apis.io/screenshots/first-direct/first-direct-2026-07-25T214603.png
 security:
 - kind: authentication
   name: First Direct Authentication
@@ -477,6 +572,14 @@ security:
   name: First Direct Vulnerability Disclosure
   slug: first-direct-vulnerability-disclosure
   summary_line: Bugcrowd · security.txt · contact published
+skill_count: 3
+skills:
+- name: Retrieve account information (AIS)
+  slug: first-direct-account-information
+- name: Confirm availability of funds (CBPII)
+  slug: first-direct-confirmation-of-funds
+- name: Initiate a domestic payment (PIS)
+  slug: first-direct-domestic-payment
 slug: first-direct
 tags:
 - Financial Services

@@ -5,7 +5,10 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A live, anonymously reachable Model Context Protocol endpoint served from the atma.io marketing site (Avery Dennison's connected product cloud and Digital Product Passport brand). It is the Wix-platfo
@@ -41,7 +47,7 @@ apis:
 artifact_total: 6
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/rate-limits/avery-dennison-rate-limits.yml
+  href: https://artifacts.apis.io/avery-dennison/rate-limits/avery-dennison-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/avery-dennison-rate-limits.yml
@@ -78,22 +84,22 @@ common:
   type: PrivacyPolicy
   url: https://www.averydennison.com/en/home/legal-and-privacy-notices.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/security/avery-dennison-domain-security.yml
+  href: https://artifacts.apis.io/avery-dennison/security/avery-dennison-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/avery-dennison-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/well-known/avery-dennison-well-known.yml
+  href: https://artifacts.apis.io/avery-dennison/well-known/avery-dennison-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/avery-dennison-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/conformance/avery-dennison-conformance.yml
+  href: https://artifacts.apis.io/avery-dennison/conformance/avery-dennison-conformance.yml
   title: ''
   type: Conformance
   url: conformance/avery-dennison-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/plans/avery-dennison-plans-pricing.yml
+  href: https://artifacts.apis.io/avery-dennison/plans/avery-dennison-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/avery-dennison-plans-pricing.yml
@@ -116,7 +122,7 @@ description: Avery Dennison is a global materials science and manufacturing comp
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/avery-dennison.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at www.atma.io over HTTP; 9 tools listed.
+- description: Remote MCP server at www.atma.io over HTTP; 10 tools listed.
   name: atma.io (Wix Site MCP)
   slug: atma-io-wix-site-mcp
 modified: '2026-09-18'
@@ -147,7 +153,7 @@ press:
 - date: ''
   title: Avery Dennison's atma.io adds new ChatGPT and AI ...
   url: https://rfid.averydennison.com/en/home/news-insights/press-releases/avery-dennisons-atma-io-adds-new-chatgpt-and-ai-features-to-help-manage-billion-of-items-across-its-connected-product-cloud.html
-random_paper: 6
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Avery Dennison Rate Limits
@@ -156,7 +162,7 @@ score:
   band: emerging
   composite: 18.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -180,14 +186,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/screenshots/avery-dennison-2026-07-25T202123.png
+screenshot: https://apis.io/screenshots/avery-dennison/avery-dennison-2026-07-25T202123.png
 security:
 - kind: authentication
   name: Avery Dennison Authentication

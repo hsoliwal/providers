@@ -1,11 +1,11 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:Partner Gated
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -38,57 +41,57 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/security/caa-insurance-domain-security.yml
+  href: https://artifacts.apis.io/caa-insurance/security/caa-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/caa-insurance-domain-security.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/wsdl/_index.yml
+  href: https://artifacts.apis.io/caa-insurance/wsdl/_index.yml
   title: ''
   type: WSDL
   url: wsdl/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/authentication/caa-insurance-authentication.yml
+  href: https://artifacts.apis.io/caa-insurance/authentication/caa-insurance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/caa-insurance-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/well-known/caa-insurance-openid-configuration.json
+  href: https://artifacts.apis.io/caa-insurance/well-known/caa-insurance-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/caa-insurance-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/scopes/caa-insurance-scopes.yml
+  href: https://artifacts.apis.io/caa-insurance/scopes/caa-insurance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/caa-insurance-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/well-known/caa-insurance-well-known.yml
+  href: https://artifacts.apis.io/caa-insurance/well-known/caa-insurance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/caa-insurance-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/conformance/caa-insurance-conformance.yml
+  href: https://artifacts.apis.io/caa-insurance/conformance/caa-insurance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/caa-insurance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/conventions/caa-insurance-conventions.yml
+  href: https://artifacts.apis.io/caa-insurance/conventions/caa-insurance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/caa-insurance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/errors/caa-insurance-problem-types.yml
+  href: https://artifacts.apis.io/caa-insurance/errors/caa-insurance-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/caa-insurance-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/llms/caa-insurance-llms.txt
+  href: https://artifacts.apis.io/caa-insurance/llms/caa-insurance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/caa-insurance-llms.txt
@@ -150,7 +153,7 @@ overview: 'CAA Insurance is profiled on the [APIs.io](https://apis.io/) network.
 
 
   CAA Insurance''s developer surface includes authentication, engineering blog, FAQ, support, and 17 more developer resources.'
-random_paper: 8
+random_paper: 10
 scopes:
 - name: Caa Insurance Scopes
   scope_count: 4
@@ -190,14 +193,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 36.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/caa-insurance/refs/heads/main/screenshots/caa-insurance-2026-07-25T204155.png
+screenshot: https://apis.io/screenshots/caa-insurance/caa-insurance-2026-07-25T204155.png
 security:
 - kind: authentication
   name: Caa Insurance Authentication

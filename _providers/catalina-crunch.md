@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL API providing access to Catalina Crunch e‑commerce data such as products, collections, and checkout.
@@ -32,7 +45,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/well-known/catalina-crunch-clarity-security.txt
+  href: https://artifacts.apis.io/catalina-crunch/well-known/catalina-crunch-clarity-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/catalina-crunch-clarity-security.txt
@@ -41,22 +54,22 @@ common:
   type: Security
   url: https://clarity.com/vdp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/llms/catalina-crunch-llms.txt
+  href: https://artifacts.apis.io/catalina-crunch/llms/catalina-crunch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/catalina-crunch-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/well-known/catalina-crunch-well-known.yml
+  href: https://artifacts.apis.io/catalina-crunch/well-known/catalina-crunch-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/catalina-crunch-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/hosts/catalina-crunch-hosts.yml
+  href: https://artifacts.apis.io/catalina-crunch/hosts/catalina-crunch-hosts.yml
   title: ''
   type: Hosts
   url: hosts/catalina-crunch-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/vendors/catalina-crunch-vendors.yml
+  href: https://artifacts.apis.io/catalina-crunch/vendors/catalina-crunch-vendors.yml
   title: ''
   type: Vendors
   url: vendors/catalina-crunch-vendors.yml
@@ -85,12 +98,12 @@ common:
   type: Support
   url: https://us.catalinacrunch.com/pages/contact
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/security/catalina-crunch-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/catalina-crunch/security/catalina-crunch-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/catalina-crunch-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catalina-crunch/refs/heads/main/security/catalina-crunch-domain-security.yml
+  href: https://artifacts.apis.io/catalina-crunch/security/catalina-crunch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/catalina-crunch-domain-security.yml
@@ -110,24 +123,26 @@ overview: 'Catalina Crunch is listed with 1 API on the [APIs.io](https://apis.io
 
 
   Catalina Crunch''s developer surface includes documentation, support, and 13 more developer resources.'
-random_paper: 21
+random_paper: 5
 score:
   band: emerging
-  composite: 19.1
+  composite: 13.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.1
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 14.3
-    discoverability: 75.0
-    operational_transparency: 10.5
+    developer_ergonomics: 7.1
+    discoverability: 74.1
+    operational_transparency: 5.3
+  previous_composite: 19.1
   provenance:
     mcp: unknown
   regulatory:
@@ -135,13 +150,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/catalina-crunch/catalina-crunch-2026-11-03T123504.png
 security:
 - kind: domain-security
   name: Catalina Crunch Domain Security

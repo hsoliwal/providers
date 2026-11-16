@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-10-17'
+  score: 26.7
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'The Unifonic Conversations API sends WhatsApp template and session messages and manages the WhatsApp service: template management and Meta catalog retrieval endpoints, incoming-message and delivery-st'
@@ -76,7 +80,7 @@ apis:
   description: The Wrapper API from Unifonic — 2 operation(s) for wrapper.
   name: Unifonic Wrapper API
   slug: unifonic-wrapper-api
-artifact_total: 30
+artifact_total: 34
 asyncapis:
 - description: ''
   name: Unifonic Webhooks
@@ -104,9 +108,6 @@ collections:
   name: Unifonic Authenticate Call Management and Status Wrapper API
   slug: postman-unifonic-wrapper-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Unifonic Authenticate Call Management and Status API
   slug: open-unifonic-call-management-and-status-api
 - collection_type: open
@@ -133,17 +134,17 @@ common:
   type: Pricing
   url: https://www.unifonic.com/en/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/plans/unifonic-plans-pricing.yml
+  href: https://artifacts.apis.io/unifonic/plans/unifonic-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/unifonic-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/capabilities/unifonic-capability-edges.yml
+  href: https://artifacts.apis.io/unifonic/capabilities/unifonic-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/unifonic-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/overlays/unifonic-authenticate-overlay.yaml
+  href: https://artifacts.apis.io/unifonic/overlays/unifonic-authenticate-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/unifonic-authenticate-overlay.yaml
@@ -152,7 +153,7 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/unifonic/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/security/unifonic-domain-security.yml
+  href: https://artifacts.apis.io/unifonic/security/unifonic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unifonic-domain-security.yml
@@ -209,87 +210,87 @@ common:
   type: ReleaseNotes
   url: https://docs.unifonic.com/articles/release-notes-publication/2026-release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/changelog/unifonic-changelog.yml
+  href: https://artifacts.apis.io/unifonic/changelog/unifonic-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/unifonic-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/lifecycle/unifonic-lifecycle.yml
+  href: https://artifacts.apis.io/unifonic/lifecycle/unifonic-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unifonic-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/errors/unifonic-problem-types.yml
+  href: https://artifacts.apis.io/unifonic/errors/unifonic-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/unifonic-problem-types.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/authentication/unifonic-authentication.yml
+  href: https://artifacts.apis.io/unifonic/authentication/unifonic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unifonic-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/conventions/unifonic-conventions.yml
+  href: https://artifacts.apis.io/unifonic/conventions/unifonic-conventions.yml
   title: ''
   type: Conventions
   url: conventions/unifonic-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/conformance/unifonic-conformance.yml
+  href: https://artifacts.apis.io/unifonic/conformance/unifonic-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unifonic-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/packages/unifonic-packages.yml
+  href: https://artifacts.apis.io/unifonic/packages/unifonic-packages.yml
   title: ''
   type: Packages
   url: packages/unifonic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/packages/unifonic-packages.yml
+  href: https://artifacts.apis.io/unifonic/packages/unifonic-packages.yml
   title: ''
   type: SDKs
   url: packages/unifonic-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/components/unifonic-components.yml
+  href: https://artifacts.apis.io/unifonic/components/unifonic-components.yml
   title: ''
   type: Components
   url: components/unifonic-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/data-model/unifonic-data-model.yml
+  href: https://artifacts.apis.io/unifonic/data-model/unifonic-data-model.yml
   title: ''
   type: DataModel
   url: data-model/unifonic-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/sandbox/unifonic-sandbox.yml
+  href: https://artifacts.apis.io/unifonic/sandbox/unifonic-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/unifonic-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/asyncapi/unifonic-webhooks.yml
+  href: https://artifacts.apis.io/unifonic/asyncapi/unifonic-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/unifonic-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/mcp/unifonic-mcp.yml
+  href: https://artifacts.apis.io/unifonic/mcp/unifonic-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/unifonic-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/llms/unifonic-llms.txt
+  href: https://artifacts.apis.io/unifonic/llms/unifonic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unifonic-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/well-known/unifonic-well-known.yml
+  href: https://artifacts.apis.io/unifonic/well-known/unifonic-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/unifonic-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/unifonic/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/security/unifonic-trust-center.yml
+  href: https://artifacts.apis.io/unifonic/security/unifonic-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/unifonic-trust-center.yml
@@ -299,6 +300,14 @@ common:
   url: https://www.unifonic.com/en/legal/trust-centre
 created: '2026-07-17'
 description: Unifonic is a Saudi Arabia-based customer engagement and CPaaS platform, backed by SoftBank Vision Fund, that powers SMS, WhatsApp, voice, push notification, and OTP-verification communication for enterprises across the Middle East and beyond. Its developer surface spans an SMS (NextGen) REST API, an Authenticate API for multi-channel OTP verification, Voice APIs for calls, IVR, and number masking, and a WhatsApp Conversations API with template, session, and management endpoints, alongside webhooks for delivery status and channel events, mobile push SDKs, a web event-tracking SDK, chatbot and Flow Studio automation products, and a WhatsApp sandbox for testing.
+finops:
+- has_sources: true
+  method: derived
+  name: Unifonic Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: unifonic-finops
+  template: false
 image: https://www.unifonic.com/hubfs/UNI_Logo_RGB-01.png
 layout: provider
 mcp_servers:
@@ -312,7 +321,7 @@ network: true
 overview: 'Unifonic publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Call Management and Status API, Call Queue Management API, Number Masking API, and 5 more. Tagged areas include Company, Enterprise, CPaaS, Messaging, and SMS.
 
 
-  The Unifonic catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Unifonic catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Unifonic''s developer surface includes pricing, documentation, API reference, getting-started guide, support, engineering blog, release notes, and 30 more developer resources.'
@@ -323,21 +332,34 @@ plans:
 - name: Unifonic Price Estimates
   plan_count: 0
   slug: unifonic-price-estimates
-random_paper: 1
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Unifonic API Rules
+  rule_count: 49
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 6
+  slug: unifonic-rules
 score:
   band: strong
-  composite: 59.0
+  composite: 61.1
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 52.0
+    artifact_dirs: 31
+    catalog_earned: 59.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.1
   facets:
-    access_clarity: 92.1
-    contract_governance: 0.0
+    access_clarity: 94.7
+    contract_governance: 13.6
     contract_quality: 53.6
     developer_ergonomics: 74.4
     discoverability: 71.4
@@ -350,7 +372,7 @@ score:
     regions:
     - mena
     - middle-east
-  previous_composite: 59.0
+  previous_composite: 62.2
   provenance:
     conformance: derived
     contracts:
@@ -366,13 +388,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/unifonic/refs/heads/main/screenshots/unifonic-2026-08-17T082602.png
+screenshot: https://apis.io/screenshots/unifonic/unifonic-2026-08-17T082602.png
 security:
 - kind: authentication
   name: Unifonic Authentication
@@ -386,6 +408,14 @@ security:
   name: Unifonic Trust Center
   slug: unifonic-trust-center
   summary_line: ISO 27001, ISO 42001, ISO 27017, ISO 27018, CSA STAR Level 2, SOC 2 Type I, SOC 2 Type II
+skill_count: 3
+skills:
+- name: unifonic-send-sms
+  slug: unifonic-send-sms
+- name: unifonic-verify-otp
+  slug: unifonic-verify-otp
+- name: unifonic-voice-call
+  slug: unifonic-voice-call
 slug: unifonic
 tags:
 - Company

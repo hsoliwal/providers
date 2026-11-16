@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -63,9 +69,6 @@ apis:
 artifact_total: 15
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Sonatype Central Portal Publishing Deployment API
   slug: open-maven-central-deployment-api
 - collection_type: open
@@ -82,37 +85,37 @@ collections:
   slug: open-maven-central-search
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/plans/maven-central-plans-pricing.yml
+  href: https://artifacts.apis.io/maven-central/plans/maven-central-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/maven-central-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/rate-limits/maven-central-rate-limits.yml
+  href: https://artifacts.apis.io/maven-central/rate-limits/maven-central-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/maven-central-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/finops/maven-central-finops.yml
+  href: https://artifacts.apis.io/maven-central/finops/maven-central-finops.yml
   title: ''
   type: FinOps
   url: finops/maven-central-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/capabilities/maven-central-capability-edges.yml
+  href: https://artifacts.apis.io/maven-central/capabilities/maven-central-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/maven-central-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/agentic-access/maven-central-agentic-access.yml
+  href: https://artifacts.apis.io/maven-central/agentic-access/maven-central-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/maven-central-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/security/maven-central-domain-security.yml
+  href: https://artifacts.apis.io/maven-central/security/maven-central-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/maven-central-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/authentication/maven-central-authentication.yml
+  href: https://artifacts.apis.io/maven-central/authentication/maven-central-authentication.yml
   title: ''
   type: Authentication
   url: authentication/maven-central-authentication.yml
@@ -150,7 +153,7 @@ finops:
 - has_sources: false
   method: generated
   name: Maven Central Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: maven-central-finops
   template: true
@@ -163,6 +166,9 @@ network: true
 overview: 'Maven Central publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Deployment API, Download API, and Search API. Tagged areas include Artifacts, Developer Tools, Java, JVM, and Maven.
 
 
+  The Maven Central catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Maven Central''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, support, and 9 more developer resources.'
 plans:
 - name: Maven Central Plans Pricing
@@ -173,25 +179,38 @@ rate_limits:
 - limit_count: 5
   name: Maven Central Rate Limits
   slug: maven-central-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Maven Central API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: maven-central-rules
 score:
   band: thin
-  composite: 31.0
+  composite: 32.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 14
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.1
     developer_ergonomics: 45.2
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 32.5
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -205,13 +224,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/maven-central/refs/heads/main/screenshots/maven-central-2026-06-20T185044.png
+screenshot: https://apis.io/screenshots/maven-central/maven-central-2026-06-20T185044.png
 security:
 - kind: authentication
   name: Maven Central Authentication

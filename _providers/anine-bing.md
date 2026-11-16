@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -50,42 +55,42 @@ common:
   type: Website
   url: https://www.aninebing.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/mcp/anine-bing-mcp.yml
+  href: https://artifacts.apis.io/anine-bing/mcp/anine-bing-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/anine-bing-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/llms/anine-bing-llms.txt
+  href: https://artifacts.apis.io/anine-bing/llms/anine-bing-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/anine-bing-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/skills/anine-bing-agents.md
+  href: https://artifacts.apis.io/anine-bing/skills/anine-bing-agents.md
   title: ''
   type: AgentSkill
   url: skills/anine-bing-agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/well-known/anine-bing-well-known.yml
+  href: https://artifacts.apis.io/anine-bing/well-known/anine-bing-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/anine-bing-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/authentication/anine-bing-authentication.yml
+  href: https://artifacts.apis.io/anine-bing/authentication/anine-bing-authentication.yml
   title: ''
   type: Authentication
   url: authentication/anine-bing-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/well-known/anine-bing-openid-configuration.json
+  href: https://artifacts.apis.io/anine-bing/well-known/anine-bing-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/anine-bing-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/scopes/anine-bing-scopes.yml
+  href: https://artifacts.apis.io/anine-bing/scopes/anine-bing-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/anine-bing-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/security/anine-bing-domain-security.yml
+  href: https://artifacts.apis.io/anine-bing/security/anine-bing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/anine-bing-domain-security.yml
@@ -121,7 +126,7 @@ overview: 'Anine Bing is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   Anine Bing''s developer surface includes engineering blog, authentication, support, and 12 more developer resources.'
-random_paper: 16
+random_paper: 0
 scopes:
 - name: Anine Bing Scopes
   scope_count: 4
@@ -131,7 +136,7 @@ score:
   band: emerging
   composite: 17.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -162,14 +167,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/anine-bing/refs/heads/main/screenshots/anine-bing-2026-08-07T161415.png
+screenshot: https://apis.io/screenshots/anine-bing/anine-bing-2026-08-07T161415.png
 security:
 - kind: authentication
   name: Anine Bing Authentication

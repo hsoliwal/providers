@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -62,17 +65,17 @@ common:
   type: TermsOfService
   url: https://www.atompower.com/terms-conditions
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/atom-power/refs/heads/main/llms/atom-power-llms.txt
+  href: https://artifacts.apis.io/atom-power/llms/atom-power-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/atom-power-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/atom-power/refs/heads/main/mcp/atom-power-mcp.yml
+  href: https://artifacts.apis.io/atom-power/mcp/atom-power-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/atom-power-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/atom-power/refs/heads/main/security/atom-power-domain-security.yml
+  href: https://artifacts.apis.io/atom-power/security/atom-power-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/atom-power-domain-security.yml
@@ -110,12 +113,12 @@ overview: 'Atom Power is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   Atom Power''s developer surface includes engineering blog, support, and 7 more developer resources.'
-random_paper: 1
+random_paper: 3
 score:
   band: emerging
   composite: 11.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -138,14 +141,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/atom-power/refs/heads/main/screenshots/atom-power-2026-08-07T161854.png
+screenshot: https://apis.io/screenshots/atom-power/atom-power-2026-08-07T161854.png
 security:
 - kind: domain-security
   name: Atom Power Domain Security

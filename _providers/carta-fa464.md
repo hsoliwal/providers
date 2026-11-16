@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 32.0
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Carta provides a developer API platform for managing private fund data and investor relations.
@@ -35,27 +53,27 @@ apis:
 artifact_total: 11
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/rate-limits/carta-fa464-rate-limits.yml
+  href: https://artifacts.apis.io/carta-fa464/rate-limits/carta-fa464-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/carta-fa464-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/rules/carta-fa464-rules.yml
+  href: https://artifacts.apis.io/carta-fa464/rules/carta-fa464-rules.yml
   title: ''
   type: Spectral
   url: rules/carta-fa464-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/json-ld/carta-fa464-context.jsonld
+  href: https://artifacts.apis.io/carta-fa464/json-ld/carta-fa464-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/carta-fa464-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/vocabulary/carta-fa464-vocabulary.yml
+  href: https://artifacts.apis.io/carta-fa464/vocabulary/carta-fa464-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/carta-fa464-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/data-model/carta-fa464-data-model.yml
+  href: https://artifacts.apis.io/carta-fa464/data-model/carta-fa464-data-model.yml
   title: ''
   type: DataModel
   url: data-model/carta-fa464-data-model.yml
@@ -64,37 +82,37 @@ common:
   type: Compliance
   url: https://trust.carta.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/authentication/carta-fa464-authentication.yml
+  href: https://artifacts.apis.io/carta-fa464/authentication/carta-fa464-authentication.yml
   title: ''
   type: Authentication
   url: authentication/carta-fa464-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/conformance/carta-fa464-conformance.yml
+  href: https://artifacts.apis.io/carta-fa464/conformance/carta-fa464-conformance.yml
   title: ''
   type: Conformance
   url: conformance/carta-fa464-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/llms/carta-fa464-llms.txt
+  href: https://artifacts.apis.io/carta-fa464/llms/carta-fa464-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/carta-fa464-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/well-known/carta-fa464-status-security.txt
+  href: https://artifacts.apis.io/carta-fa464/well-known/carta-fa464-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/carta-fa464-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/well-known/carta-fa464-well-known.yml
+  href: https://artifacts.apis.io/carta-fa464/well-known/carta-fa464-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/carta-fa464-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/hosts/carta-fa464-hosts.yml
+  href: https://artifacts.apis.io/carta-fa464/hosts/carta-fa464-hosts.yml
   title: ''
   type: Hosts
   url: hosts/carta-fa464-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/vendors/carta-fa464-vendors.yml
+  href: https://artifacts.apis.io/carta-fa464/vendors/carta-fa464-vendors.yml
   title: ''
   type: Vendors
   url: vendors/carta-fa464-vendors.yml
@@ -143,12 +161,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/carta
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/security/carta-fa464-trust-center.yml
+  href: https://artifacts.apis.io/carta-fa464/security/carta-fa464-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/carta-fa464-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carta-fa464/refs/heads/main/security/carta-fa464-domain-security.yml
+  href: https://artifacts.apis.io/carta-fa464/security/carta-fa464-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carta-fa464-domain-security.yml
@@ -194,7 +212,7 @@ overview: 'Carta Fa464 is listed with 2 APIs on the [APIs.io](https://apis.io/) 
 
 
   Carta Fa464''s developer surface includes authentication, engineering blog, API reference, getting-started guide, documentation, and 22 more developer resources.'
-random_paper: 1
+random_paper: 13
 rate_limits:
 - limit_count: 2
   name: Carta Fa464 Rate Limits
@@ -214,21 +232,23 @@ rules:
   slug: carta-fa464-rules
 score:
   band: thin
-  composite: 38.6
+  composite: 29.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 59.8
     catalog_earned_first_party: 8.0
     catalog_gap: 55.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.9
   facets:
-    access_clarity: 39.5
+    access_clarity: 23.7
     contract_governance: 22.0
     contract_quality: 20.1
-    developer_ergonomics: 42.9
-    discoverability: 67.9
-    operational_transparency: 52.6
+    developer_ergonomics: 28.6
+    discoverability: 66.1
+    operational_transparency: 36.8
+  previous_composite: 38.6
   provenance:
     conformance: derived
     contracts:
@@ -242,12 +262,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/carta-fa464/carta-fa464-2026-11-03T123419.png
 security:
 - kind: authentication
   name: Carta Fa464 Authentication

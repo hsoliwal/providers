@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/direct-line-group/refs/heads/main/security/direct-line-group-domain-security.yml
+  href: https://artifacts.apis.io/direct-line-group/security/direct-line-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/direct-line-group-domain-security.yml
@@ -102,12 +105,12 @@ common:
   type: Partners
   url: https://www.bymiles.co.uk/partners
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/direct-line-group/refs/heads/main/conformance/direct-line-group-conformance.yml
+  href: https://artifacts.apis.io/direct-line-group/conformance/direct-line-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/direct-line-group-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/direct-line-group/refs/heads/main/llms/direct-line-group-llms.txt
+  href: https://artifacts.apis.io/direct-line-group/llms/direct-line-group-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/direct-line-group-llms.txt
@@ -124,7 +127,7 @@ overview: 'Direct Line Group is profiled on the [APIs.io](https://apis.io/) netw
 
 
   Direct Line Group''s developer surface includes support, engineering blog, and 15 more developer resources.'
-random_paper: 12
+random_paper: 2
 score:
   band: minimal
   composite: 9.4
@@ -160,14 +163,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 13.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/direct-line-group/refs/heads/main/screenshots/direct-line-group-2026-07-25T212052.png
+screenshot: https://apis.io/screenshots/direct-line-group/direct-line-group-2026-07-25T212052.png
 security:
 - kind: domain-security
   name: Direct Line Group Domain Security

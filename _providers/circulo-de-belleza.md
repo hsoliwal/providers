@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -50,37 +55,37 @@ common:
   type: Website
   url: https://circulodebelleza.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/mcp/circulo-de-belleza-mcp.yml
+  href: https://artifacts.apis.io/circulo-de-belleza/mcp/circulo-de-belleza-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/circulo-de-belleza-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/llms/circulo-de-belleza-llms.txt
+  href: https://artifacts.apis.io/circulo-de-belleza/llms/circulo-de-belleza-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/circulo-de-belleza-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/well-known/circulo-de-belleza-well-known.yml
+  href: https://artifacts.apis.io/circulo-de-belleza/well-known/circulo-de-belleza-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/circulo-de-belleza-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/authentication/circulo-de-belleza-authentication.yml
+  href: https://artifacts.apis.io/circulo-de-belleza/authentication/circulo-de-belleza-authentication.yml
   title: ''
   type: Authentication
   url: authentication/circulo-de-belleza-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/scopes/circulo-de-belleza-scopes.yml
+  href: https://artifacts.apis.io/circulo-de-belleza/scopes/circulo-de-belleza-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/circulo-de-belleza-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/conventions/circulo-de-belleza-conventions.yml
+  href: https://artifacts.apis.io/circulo-de-belleza/conventions/circulo-de-belleza-conventions.yml
   title: ''
   type: Conventions
   url: conventions/circulo-de-belleza-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/security/circulo-de-belleza-domain-security.yml
+  href: https://artifacts.apis.io/circulo-de-belleza/security/circulo-de-belleza-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/circulo-de-belleza-domain-security.yml
@@ -108,7 +113,7 @@ overview: 'Circulo de Belleza is profiled on the [APIs.io](https://apis.io/) net
 
 
   Circulo de Belleza''s developer surface includes engineering blog, authentication, and 10 more developer resources.'
-random_paper: 19
+random_paper: 3
 scopes:
 - name: Circulo De Belleza Scopes
   scope_count: 4
@@ -118,13 +123,13 @@ score:
   band: emerging
   composite: 15.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -139,7 +144,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 14.5
+  previous_composite: 15.1
   provenance:
     mcp: platform-generated
   regulatory:
@@ -148,14 +153,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/circulo-de-belleza/refs/heads/main/screenshots/circulo-de-belleza-2026-08-07T163427.png
+screenshot: https://apis.io/screenshots/circulo-de-belleza/circulo-de-belleza-2026-08-07T163427.png
 security:
 - kind: authentication
   name: Circulo De Belleza Authentication

@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 24
 apis:
 - description: Worldwide end-of-day equity pricing (open, high, low, close, bid, ask, last trade, volume) queried by MIC, LocalCode, or ISIN via the GetLatestEODPrices endpoint, returned as JSON or pipe-separated va
@@ -116,42 +119,42 @@ common:
   type: BlogRSS
   url: https://www.exchange-data.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/security/exchange-data-international-domain-security.yml
+  href: https://artifacts.apis.io/exchange-data-international/security/exchange-data-international-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/exchange-data-international-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/well-known/exchange-data-international-well-known.yml
+  href: https://artifacts.apis.io/exchange-data-international/well-known/exchange-data-international-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/exchange-data-international-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/authentication/exchange-data-international-authentication.yml
+  href: https://artifacts.apis.io/exchange-data-international/authentication/exchange-data-international-authentication.yml
   title: ''
   type: Authentication
   url: authentication/exchange-data-international-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/errors/exchange-data-international-problem-types.yml
+  href: https://artifacts.apis.io/exchange-data-international/errors/exchange-data-international-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/exchange-data-international-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/conventions/exchange-data-international-conventions.yml
+  href: https://artifacts.apis.io/exchange-data-international/conventions/exchange-data-international-conventions.yml
   title: ''
   type: Conventions
   url: conventions/exchange-data-international-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/sandbox/exchange-data-international-sandbox.yml
+  href: https://artifacts.apis.io/exchange-data-international/sandbox/exchange-data-international-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/exchange-data-international-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/conformance/exchange-data-international-conformance.yml
+  href: https://artifacts.apis.io/exchange-data-international/conformance/exchange-data-international-conformance.yml
   title: ''
   type: Conformance
   url: conformance/exchange-data-international-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/llms/exchange-data-international-llms.txt
+  href: https://artifacts.apis.io/exchange-data-international/llms/exchange-data-international-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/exchange-data-international-llms.txt
@@ -207,12 +210,12 @@ overview: 'Exchange Data International is listed with 24 APIs on the [APIs.io](h
 
 
   Exchange Data International''s developer surface includes authentication, sandbox, API reference, developer portal, documentation, signup flow, engineering blog, and 12 more developer resources.'
-random_paper: 7
+random_paper: 23
 score:
   band: emerging
   composite: 26.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -243,14 +246,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/exchange-data-international/refs/heads/main/screenshots/exchange-data-international-2026-07-22T202401.png
+screenshot: https://apis.io/screenshots/exchange-data-international/exchange-data-international-2026-07-22T202401.png
 security:
 - kind: authentication
   name: Exchange Data International Authentication

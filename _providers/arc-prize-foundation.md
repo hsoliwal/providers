@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 23.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://three.arcprize.org
@@ -52,11 +55,8 @@ apis:
   description: The Scorecards API from Arc Prize Foundation — 4 operation(s) for scorecards.
   name: Arc Prize Foundation Scorecards API
   slug: arc-prize-foundation-scorecards-api
-artifact_total: 9
+artifact_total: 10
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ARC‑AGI‑3 REST Commands API
   slug: open-arc-prize-foundation-commands-api
@@ -72,77 +72,77 @@ common:
   type: BlogRSS
   url: https://arcprize.org/feed.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/overlays/arc-prize-foundation-arc-agi-3-overlay.yaml
+  href: https://artifacts.apis.io/arc-prize-foundation/overlays/arc-prize-foundation-arc-agi-3-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/arc-prize-foundation-arc-agi-3-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/security/arc-prize-foundation-domain-security.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/security/arc-prize-foundation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arc-prize-foundation-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/authentication/arc-prize-foundation-authentication.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/authentication/arc-prize-foundation-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arc-prize-foundation-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/packages/arc-prize-foundation-packages.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/packages/arc-prize-foundation-packages.yml
   title: ''
   type: Packages
   url: packages/arc-prize-foundation-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/packages/arc-prize-foundation-packages.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/packages/arc-prize-foundation-packages.yml
   title: ''
   type: SDKs
   url: packages/arc-prize-foundation-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/mcp/arc-prize-foundation-mcp.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/mcp/arc-prize-foundation-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/arc-prize-foundation-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/llms/arc-prize-foundation-llms.txt
+  href: https://artifacts.apis.io/arc-prize-foundation/llms/arc-prize-foundation-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arc-prize-foundation-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/errors/arc-prize-foundation-problem-types.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/errors/arc-prize-foundation-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/arc-prize-foundation-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/conventions/arc-prize-foundation-conventions.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/conventions/arc-prize-foundation-conventions.yml
   title: ''
   type: Conventions
   url: conventions/arc-prize-foundation-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/data-model/arc-prize-foundation-data-model.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/data-model/arc-prize-foundation-data-model.yml
   title: ''
   type: DataModel
   url: data-model/arc-prize-foundation-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/conformance/arc-prize-foundation-conformance.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/conformance/arc-prize-foundation-conformance.yml
   title: ''
   type: Conformance
   url: conformance/arc-prize-foundation-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/lifecycle/arc-prize-foundation-lifecycle.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/lifecycle/arc-prize-foundation-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/arc-prize-foundation-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/changelog/arc-prize-foundation-changelog.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/changelog/arc-prize-foundation-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/arc-prize-foundation-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/well-known/arc-prize-foundation-well-known.yml
+  href: https://artifacts.apis.io/arc-prize-foundation/well-known/arc-prize-foundation-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arc-prize-foundation-well-known.yml
@@ -189,27 +189,43 @@ network: true
 overview: 'Arc Prize Foundation publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Commands API, Games API, and Scorecards API. Tagged areas include Company, Artificial Intelligence, AGI, Benchmarks, and Agents.
 
 
+  The Arc Prize Foundation catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Arc Prize Foundation''s developer surface includes authentication, changelog, documentation, API reference, quickstart, engineering blog, signup flow, and 17 more developer resources.'
-random_paper: 9
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Arc Prize Foundation API Rules
+  rule_count: 59
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 1
+  slug: arc-prize-foundation-rules
 score:
   band: thin
-  composite: 37.2
+  composite: 38.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 50.8
     developer_ergonomics: 61.3
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 37.1
+  previous_composite: 38.9
   provenance:
     conformance: derived
     contracts:
@@ -225,13 +241,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/arc-prize-foundation/refs/heads/main/screenshots/arc-prize-foundation-2026-07-25T201009.png
+screenshot: https://apis.io/screenshots/arc-prize-foundation/arc-prize-foundation-2026-07-25T201009.png
 security:
 - kind: authentication
   name: Arc Prize Foundation Authentication
@@ -241,6 +257,10 @@ security:
   name: Arc Prize Foundation Domain Security
   slug: arc-prize-foundation-domain-security
   summary_line: TLSv1.2 · DMARC
+skill_count: 1
+skills:
+- name: arc-agi-3-play-game
+  slug: arc-prize-foundation-play-game
 slug: arc-prize-foundation
 tags:
 - Company

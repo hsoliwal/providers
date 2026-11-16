@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: documented
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -77,42 +81,42 @@ common:
   type: PrivacyPolicy
   url: https://www.anzenna.ai/privacy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/llms/anzenna-llms.txt
+  href: https://artifacts.apis.io/anzenna/llms/anzenna-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/anzenna-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/well-known/anzenna-well-known.yml
+  href: https://artifacts.apis.io/anzenna/well-known/anzenna-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/anzenna-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/well-known/anzenna-security.txt
+  href: https://artifacts.apis.io/anzenna/well-known/anzenna-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/anzenna-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/security/anzenna-domain-security.yml
+  href: https://artifacts.apis.io/anzenna/security/anzenna-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/anzenna-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/security/anzenna-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/anzenna/security/anzenna-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/anzenna-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/well-known/anzenna-security.txt
+  href: https://artifacts.apis.io/anzenna/well-known/anzenna-security.txt
   title: ''
   type: Security
   url: well-known/anzenna-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/security/anzenna-trust-center.yml
+  href: https://artifacts.apis.io/anzenna/security/anzenna-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/anzenna-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/conformance/anzenna-conformance.yml
+  href: https://artifacts.apis.io/anzenna/conformance/anzenna-conformance.yml
   title: ''
   type: Conformance
   url: conformance/anzenna-conformance.yml
@@ -136,12 +140,12 @@ overview: 'Anzenna is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Anzenna''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, and 13 more developer resources.'
-random_paper: 21
+random_paper: 3
 score:
   band: thin
   composite: 30.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -170,14 +174,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/anzenna/refs/heads/main/screenshots/anzenna-2026-07-25T200519.png
+screenshot: https://apis.io/screenshots/anzenna/anzenna-2026-07-25T200519.png
 security:
 - kind: domain-security
   name: Anzenna Domain Security

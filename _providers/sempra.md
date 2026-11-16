@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Sempra runs a Google Apigee API program. api.sempra.com is the Apigee runtime gateway and developer.sempra.com is an Apigee integrated developer portal (Apigee organization "sempra", site id "sempra-p
@@ -74,52 +77,52 @@ common:
   type: TermsOfService
   url: https://www.sempra.com/terms-and-conditions
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/security/sempra-domain-security.yml
+  href: https://artifacts.apis.io/sempra/security/sempra-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sempra-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/authentication/sempra-authentication.yml
+  href: https://artifacts.apis.io/sempra/authentication/sempra-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sempra-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/errors/sempra-problem-types.yml
+  href: https://artifacts.apis.io/sempra/errors/sempra-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sempra-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/conventions/sempra-conventions.yml
+  href: https://artifacts.apis.io/sempra/conventions/sempra-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sempra-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/lifecycle/sempra-lifecycle.yml
+  href: https://artifacts.apis.io/sempra/lifecycle/sempra-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sempra-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/conformance/sempra-conformance.yml
+  href: https://artifacts.apis.io/sempra/conformance/sempra-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sempra-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/plans/sempra-plans-pricing.yml
+  href: https://artifacts.apis.io/sempra/plans/sempra-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sempra-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/rate-limits/sempra-rate-limits.yml
+  href: https://artifacts.apis.io/sempra/rate-limits/sempra-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sempra-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/packages/sempra-packages.yml
+  href: https://artifacts.apis.io/sempra/packages/sempra-packages.yml
   title: ''
   type: Packages
   url: packages/sempra-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/llms/sempra-llms.txt
+  href: https://artifacts.apis.io/sempra/llms/sempra-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sempra-llms.txt
@@ -157,7 +160,7 @@ plans:
 - name: Sempra Plans Pricing
   plan_count: 0
   slug: sempra-plans-pricing
-random_paper: 10
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Sempra Rate Limits
@@ -166,7 +169,7 @@ score:
   band: emerging
   composite: 19.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -196,14 +199,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sempra/refs/heads/main/screenshots/sempra-2026-06-20T193648.png
+screenshot: https://apis.io/screenshots/sempra/sempra-2026-06-20T193648.png
 security:
 - kind: authentication
   name: Sempra Authentication

@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-10-17'
+  score: 29.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -49,11 +52,8 @@ apis:
   description: The endpoints API from Cirrus Identity — 2 operation(s) for endpoints.
   name: Cirrus Identity Endpoints API
   slug: cirrus-identity-endpoints-api
-artifact_total: 8
+artifact_total: 9
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cirrus Identity Log endpoints API
   slug: open-cirrus-identity-endpoints-api
@@ -115,77 +115,77 @@ common:
   type: Security
   url: https://www.cirrusidentity.com/resources/trust-and-compliance-center
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/authentication/cirrus-identity-authentication.yml
+  href: https://artifacts.apis.io/cirrus-identity/authentication/cirrus-identity-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cirrus-identity-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/agentic-access/cirrus-identity-agentic-access.yml
+  href: https://artifacts.apis.io/cirrus-identity/agentic-access/cirrus-identity-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cirrus-identity-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/security/cirrus-identity-domain-security.yml
+  href: https://artifacts.apis.io/cirrus-identity/security/cirrus-identity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cirrus-identity-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/security/cirrus-identity-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cirrus-identity/security/cirrus-identity-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cirrus-identity-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/errors/cirrus-identity-problem-types.yml
+  href: https://artifacts.apis.io/cirrus-identity/errors/cirrus-identity-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cirrus-identity-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/conventions/cirrus-identity-conventions.yml
+  href: https://artifacts.apis.io/cirrus-identity/conventions/cirrus-identity-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cirrus-identity-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/data-model/cirrus-identity-data-model.yml
+  href: https://artifacts.apis.io/cirrus-identity/data-model/cirrus-identity-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cirrus-identity-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/overlays/cirrus-identity-log-api-overlay.yaml
+  href: https://artifacts.apis.io/cirrus-identity/overlays/cirrus-identity-log-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cirrus-identity-log-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/mcp/cirrus-identity-mcp.yml
+  href: https://artifacts.apis.io/cirrus-identity/mcp/cirrus-identity-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cirrus-identity-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/lifecycle/cirrus-identity-lifecycle.yml
+  href: https://artifacts.apis.io/cirrus-identity/lifecycle/cirrus-identity-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cirrus-identity-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/conformance/cirrus-identity-conformance.yml
+  href: https://artifacts.apis.io/cirrus-identity/conformance/cirrus-identity-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cirrus-identity-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/vocabulary/cirrus-identity-log-vocabulary.yml
+  href: https://artifacts.apis.io/cirrus-identity/vocabulary/cirrus-identity-log-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cirrus-identity-log-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cirrus-identity/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/packages/cirrus-identity-packages.yml
+  href: https://artifacts.apis.io/cirrus-identity/packages/cirrus-identity-packages.yml
   title: ''
   type: Packages
   url: packages/cirrus-identity-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/llms/cirrus-identity-llms.txt
+  href: https://artifacts.apis.io/cirrus-identity/llms/cirrus-identity-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cirrus-identity-llms.txt
@@ -204,27 +204,43 @@ network: true
 overview: 'Cirrus Identity publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Endpoints API. Tagged areas include Company, Identity, Authentication, SSO, and SAML.
 
 
+  The Cirrus Identity catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cirrus Identity''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 24 more developer resources.'
-random_paper: 21
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Cirrus Identity API Rules
+  rule_count: 47
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cirrus-identity-rules
 score:
   band: developing
-  composite: 44.5
+  composite: 46.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 38.3
+    artifact_dirs: 24
+    catalog_earned: 42.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 76.8
+    catalog_gap: 72.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 8.3
+    contract_governance: 22.0
     contract_quality: 50.2
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 44.5
+  previous_composite: 46.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,14 +257,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/cirrus-identity/refs/heads/main/screenshots/cirrus-identity-2026-07-25T205419.png
+screenshot: https://apis.io/screenshots/cirrus-identity/cirrus-identity-2026-07-25T205419.png
 security:
 - kind: authentication
   name: Cirrus Identity Authentication
@@ -266,6 +282,10 @@ security:
   name: Cirrus Identity Trust Center
   slug: cirrus-identity-trust-center
   summary_line: SOC 2 Type 2, TX-RAMP Level 1
+skill_count: 1
+skills:
+- name: Export Cirrus Identity org logs
+  slug: cirrus-identity-export-org-logs
 slug: cirrus-identity
 tags:
 - Company

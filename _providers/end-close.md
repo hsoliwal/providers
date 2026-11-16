@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.5
-  scored_at: '2026-10-17'
+  score: 35.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 1
@@ -71,11 +74,6 @@ apis:
   slug: end-close-data-streams-api
 - baseURL: https://api.endclose.com/v1
   baseurl_source: declared
-  description: The Import Batches API from End Close — 2 operation(s) for import batches.
-  name: End Close Import Batches API
-  slug: end-close-import-batches-api
-- baseURL: https://api.endclose.com/v1
-  baseurl_source: declared
   description: The Reconciliation Exceptions API from End Close — 2 operation(s) for reconciliation exceptions.
   name: End Close Reconciliation Exceptions API
   slug: end-close-reconciliation-exceptions-api
@@ -109,15 +107,27 @@ apis:
   description: The End Close API API from End Close — 0 operation(s) for end close api.
   name: End Close End Close API
   slug: end-close-end-close-api-api
-artifact_total: 32
+- baseURL: https://api.endclose.com/v1
+  baseurl_source: declared
+  description: The Agents API from End Close — 6 operation(s) for agents.
+  name: End Close Agents API
+  slug: end-close-agents-api
+- baseURL: https://api.endclose.com/v1
+  baseurl_source: declared
+  description: The File Imports API from End Close — 5 operation(s) for file imports.
+  name: End Close File Imports API
+  slug: end-close-file-imports-api
+- baseURL: https://api.endclose.com/v1
+  baseurl_source: declared
+  description: The Relays API from End Close — 3 operation(s) for relays.
+  name: End Close Relays API
+  slug: end-close-relays-api
+artifact_total: 34
 asyncapis:
 - description: ''
   name: End Close Webhooks
   slug: end-close-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: End Close Bank Account Balances API
   slug: open-end-close-bank-account-balances-api
@@ -160,7 +170,7 @@ common:
   type: Website
   url: https://www.endclose.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/capabilities/end-close-capability-edges.yml
+  href: https://artifacts.apis.io/end-close/capabilities/end-close-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/end-close-capability-edges.yml
@@ -173,77 +183,77 @@ common:
   type: Login
   url: https://app.endclose.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/authentication/end-close-authentication.yml
+  href: https://artifacts.apis.io/end-close/authentication/end-close-authentication.yml
   title: ''
   type: Authentication
   url: authentication/end-close-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/conventions/end-close-conventions.yml
+  href: https://artifacts.apis.io/end-close/conventions/end-close-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/end-close-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/conventions/end-close-conventions.yml
+  href: https://artifacts.apis.io/end-close/conventions/end-close-conventions.yml
   title: ''
   type: Conventions
   url: conventions/end-close-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/errors/end-close-problem-types.yml
+  href: https://artifacts.apis.io/end-close/errors/end-close-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/end-close-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/asyncapi/end-close-webhooks.yml
+  href: https://artifacts.apis.io/end-close/asyncapi/end-close-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/end-close-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/mcp/end-close-mcp.yml
+  href: https://artifacts.apis.io/end-close/mcp/end-close-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/end-close-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/llms/end-close-llms.txt
+  href: https://artifacts.apis.io/end-close/llms/end-close-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/end-close-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/overlays/end-close-openapi-overlay.yaml
+  href: https://artifacts.apis.io/end-close/overlays/end-close-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/end-close-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/conformance/end-close-conformance.yml
+  href: https://artifacts.apis.io/end-close/conformance/end-close-conformance.yml
   title: ''
   type: Conformance
   url: conformance/end-close-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/lifecycle/end-close-lifecycle.yml
+  href: https://artifacts.apis.io/end-close/lifecycle/end-close-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/end-close-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/data-model/end-close-data-model.yml
+  href: https://artifacts.apis.io/end-close/data-model/end-close-data-model.yml
   title: ''
   type: DataModel
   url: data-model/end-close-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/well-known/end-close-well-known.yml
+  href: https://artifacts.apis.io/end-close/well-known/end-close-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/end-close-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/well-known/end-close-security.txt
+  href: https://artifacts.apis.io/end-close/well-known/end-close-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/end-close-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/security/end-close-domain-security.yml
+  href: https://artifacts.apis.io/end-close/security/end-close-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/end-close-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/security/end-close-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/end-close/security/end-close-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/end-close-vulnerability-disclosure.yml
@@ -252,12 +262,12 @@ common:
   type: Security
   url: https://www.endclose.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/security/end-close-trust-center.yml
+  href: https://artifacts.apis.io/end-close/security/end-close-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/end-close-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/agentic-access/end-close-agentic-access.yml
+  href: https://artifacts.apis.io/end-close/agentic-access/end-close-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/end-close-agentic-access.yml
@@ -269,41 +279,54 @@ modified: '2026-07-19'
 name: End Close
 nav: Providers
 network: true
-overview: 'End Close publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bank Account Balances API, Bank Accounts API, Bulk Requests API, and 10 more. Tagged areas include Company, Reconciliation, Payments, Financial Operations, and Accounting.
+overview: 'End Close publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bank Account Balances API, Bank Accounts API, Bulk Requests API, and 12 more. Tagged areas include Company, Reconciliation, Payments, Financial Operations, and Accounting.
 
 
-  The End Close catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The End Close catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   End Close''s developer surface includes authentication and 21 more developer resources.'
-random_paper: 10
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: End Close API Rules
+  rule_count: 55
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 9
+  slug: end-close-rules
 score:
   band: developing
-  composite: 40.7
+  composite: 43.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.6
   facets:
     access_clarity: 14.5
-    contract_governance: 4.5
-    contract_quality: 57.0
+    contract_governance: 18.2
+    contract_quality: 61.0
     developer_ergonomics: 38.1
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 40.6
+  previous_composite: 42.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 13
+      marker_coverage: 50.0
+      total: 28
     mcp: derived
   regulatory:
     applies: true
@@ -311,13 +334,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 22.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/end-close/refs/heads/main/screenshots/end-close-2026-07-25T213309.png
+screenshot: https://apis.io/screenshots/end-close/end-close-2026-07-25T213309.png
 security:
 - kind: authentication
   name: End Close Authentication

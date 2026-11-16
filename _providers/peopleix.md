@@ -1,11 +1,18 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The hosted, remote Model Context Protocol server through which peopleIX exposes a customer's People Intelligence knowledge layer to agents such as Claude, ChatGPT and Copilot. A JSON-RPC POST to https
@@ -41,52 +51,52 @@ apis:
 artifact_total: 8
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/mcp/peopleix-mcp.yml
+  href: https://artifacts.apis.io/peopleix/mcp/peopleix-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/peopleix-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/authentication/peopleix-authentication.yml
+  href: https://artifacts.apis.io/peopleix/authentication/peopleix-authentication.yml
   title: ''
   type: Authentication
   url: authentication/peopleix-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/scopes/peopleix-scopes.yml
+  href: https://artifacts.apis.io/peopleix/scopes/peopleix-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/peopleix-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/well-known/peopleix-well-known.yml
+  href: https://artifacts.apis.io/peopleix/well-known/peopleix-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/peopleix-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/conventions/peopleix-conventions.yml
+  href: https://artifacts.apis.io/peopleix/conventions/peopleix-conventions.yml
   title: ''
   type: Conventions
   url: conventions/peopleix-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/lifecycle/peopleix-lifecycle.yml
+  href: https://artifacts.apis.io/peopleix/lifecycle/peopleix-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/peopleix-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/packages/peopleix-packages.yml
+  href: https://artifacts.apis.io/peopleix/packages/peopleix-packages.yml
   title: ''
   type: Packages
   url: packages/peopleix-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/plans/peopleix-plans-pricing.yml
+  href: https://artifacts.apis.io/peopleix/plans/peopleix-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/peopleix-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/rate-limits/peopleix-rate-limits.yml
+  href: https://artifacts.apis.io/peopleix/rate-limits/peopleix-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/peopleix-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/security/peopleix-domain-security.yml
+  href: https://artifacts.apis.io/peopleix/security/peopleix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peopleix-domain-security.yml
@@ -119,17 +129,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/peopleIX
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/llms/peopleix-llms.txt
+  href: https://artifacts.apis.io/peopleix/llms/peopleix-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/peopleix-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/conformance/peopleix-conformance.yml
+  href: https://artifacts.apis.io/peopleix/conformance/peopleix-conformance.yml
   title: ''
   type: Conformance
   url: conformance/peopleix-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/security/peopleix-trust-center.yml
+  href: https://artifacts.apis.io/peopleix/security/peopleix-trust-center.yml
   title: ''
   type: Compliance
   url: security/peopleix-trust-center.yml
@@ -158,7 +168,7 @@ plans:
 - name: Peopleix Plans Pricing
   plan_count: 0
   slug: peopleix-plans-pricing
-random_paper: 12
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Peopleix Rate Limits
@@ -208,14 +218,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/peopleix/refs/heads/main/screenshots/peopleix-2026-09-02T151023.png
+screenshot: https://apis.io/screenshots/peopleix/peopleix-2026-09-02T151023.png
 security:
 - kind: authentication
   name: Peopleix Authentication

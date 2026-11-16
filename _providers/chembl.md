@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -45,89 +49,71 @@ api_count: 1
 apis:
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Activity values recorded in assays, linking molecules to targets with quantitative bioactivity measurements.
-  name: ChEMBL Activity API
-  slug: chembl-activity-api
+  description: Chembl Activities Resource
+  name: ChEMBL Activities API
+  slug: chembl-activities-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Experimental protocols and result details from source documents and datasets.
-  name: ChEMBL Assay API
-  slug: chembl-assay-api
+  description: Chembl Assays Resource
+  name: ChEMBL Assays API
+  slug: chembl-assays-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: WHO Anatomical Therapeutic Chemical classification for drugs.
-  name: ChEMBL ATC Classification API
-  slug: chembl-atc-classification-api
+  description: Drug Resource
+  name: ChEMBL Drugs API
+  slug: chembl-drugs-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Target binding site definitions used in assays.
-  name: ChEMBL Binding Site API
-  slug: chembl-binding-site-api
+  description: EFO Resource
+  name: ChEMBL EFO disease terms API
+  slug: chembl-efo-disease-terms-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Cell line information used in assays.
-  name: ChEMBL Cell Line API
-  slug: chembl-cell-line-api
+  description: HPO Resource
+  name: ChEMBL HPO API
+  slug: chembl-hpo-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Occurrence of a compound in a specific source document.
-  name: ChEMBL Compound Record API
-  slug: chembl-compound-record-api
+  description: Intact Resource
+  name: ChEMBL Intact API
+  slug: chembl-intact-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Source documents and datasets from which assay data is derived.
-  name: ChEMBL Document API
-  slug: chembl-document-api
+  description: Chembl Molecules Resource
+  name: ChEMBL Molecules API
+  slug: chembl-molecules-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Approved drug information including applicants, patent numbers, and research codes.
-  name: ChEMBL Drug API
-  slug: chembl-drug-api
+  description: Protein Resource
+  name: ChEMBL Proteins API
+  slug: chembl-proteins-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Drug-disease associations with clinical trial and regulatory references.
-  name: ChEMBL Drug Indication API
-  slug: chembl-drug-indication-api
+  description: Pubchem Bioassay Sids Resource
+  name: ChEMBL PubChem Bioassay Sids API
+  slug: chembl-pubchem-bioassay-sids-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Safety information for withdrawn or black-box warned drugs.
-  name: ChEMBL Drug Warning API
-  slug: chembl-drug-warning-api
+  description: Pubchem Bioassay Resource
+  name: ChEMBL PubChem Biossays API
+  slug: chembl-pubchem-biossays-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Mechanism of action information for approved drugs.
-  name: ChEMBL Mechanism API
-  slug: chembl-mechanism-api
+  description: Pubchem Compound Resource
+  name: ChEMBL PubChem Compounds API
+  slug: chembl-pubchem-compounds-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Chemical molecules including properties, structural representations, synonyms, and drug-like properties.
-  name: ChEMBL Molecule API
-  slug: chembl-molecule-api
+  description: Pubchem Substance Resource
+  name: ChEMBL PubChem Substances API
+  slug: chembl-pubchem-substances-api
 - baseURL: https://www.ebi.ac.uk/chembl/api/data/
   baseurl_source: declared
-  description: Molecule similarity searching using Tanimoto coefficient.
-  name: ChEMBL Similarity API
-  slug: chembl-similarity-api
-- baseURL: https://www.ebi.ac.uk/chembl/api/data/
-  baseurl_source: declared
-  description: API operational status and ChEMBL database version information.
-  name: ChEMBL Status API
-  slug: chembl-status-api
-- baseURL: https://www.ebi.ac.uk/chembl/api/data/
-  baseurl_source: declared
-  description: Molecular substructure searching.
-  name: ChEMBL Substructure API
-  slug: chembl-substructure-api
-- baseURL: https://www.ebi.ac.uk/chembl/api/data/
-  baseurl_source: declared
-  description: Protein and non-protein targets defined in assays.
-  name: ChEMBL Target API
-  slug: chembl-target-api
-artifact_total: 45
+  description: Chembl Targets Resource
+  name: ChEMBL Targets API
+  slug: chembl-targets-api
+artifact_total: 41
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ChEMBL Data REST Activity API
   slug: open-chembl-activity-api
@@ -178,32 +164,32 @@ collections:
   slug: open-chembl-target-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/chembl/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/chembl/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/chembl/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/capabilities/chembl-capability-edges.yml
+  href: https://artifacts.apis.io/chembl/capabilities/chembl-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/chembl-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/agentic-access/chembl-agentic-access.yml
+  href: https://artifacts.apis.io/chembl/agentic-access/chembl-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/chembl-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/security/chembl-domain-security.yml
+  href: https://artifacts.apis.io/chembl/security/chembl-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chembl-domain-security.yml
@@ -275,7 +261,7 @@ modified: '2026-06-13'
 name: ChEMBL
 nav: Providers
 network: true
-overview: 'ChEMBL publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activity API, Assay API, ATC Classification API, and 13 more. Tagged areas include Drug Discovery, Bioactivity, Molecules, Cheminformatics, and Life Sciences.
+overview: 'ChEMBL publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, Assays API, Drugs API, and 10 more. Tagged areas include Drug Discovery, Bioactivity, Molecules, Cheminformatics, and Life Sciences.
 
 
   The ChEMBL catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -286,7 +272,7 @@ plans:
 - name: Plans
   plan_count: 1
   slug: plans
-random_paper: 3
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -305,44 +291,44 @@ rules:
   slug: chembl-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 27.1
+  composite: 26.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 42.3
     catalog_earned_first_party: 0.0
     catalog_gap: 72.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.5
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 44.4
+    contract_quality: 42.9
     developer_ergonomics: 21.4
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 31.4
+  previous_composite: 26.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 16
+      marker_coverage: 43.3
+      total: 30
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/chembl/refs/heads/main/screenshots/chembl-2026-06-20T174255.png
+screenshot: https://apis.io/screenshots/chembl/chembl-2026-06-20T174255.png
 security:
 - kind: domain-security
   name: Chembl Domain Security

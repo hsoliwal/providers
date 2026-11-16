@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.7
-  scored_at: '2026-10-17'
+  score: 24.1
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://api.payplug.com
@@ -49,67 +62,67 @@ apis:
 artifact_total: 13
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/rules/payplug-rules.yml
+  href: https://artifacts.apis.io/payplug/rules/payplug-rules.yml
   title: ''
   type: Spectral
   url: rules/payplug-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/json-ld/payplug-context.jsonld
+  href: https://artifacts.apis.io/payplug/json-ld/payplug-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/payplug-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/vocabulary/payplug-vocabulary.yml
+  href: https://artifacts.apis.io/payplug/vocabulary/payplug-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/payplug-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/data-model/payplug-data-model.yml
+  href: https://artifacts.apis.io/payplug/data-model/payplug-data-model.yml
   title: ''
   type: DataModel
   url: data-model/payplug-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/changelog/payplug-changelog.yml
+  href: https://artifacts.apis.io/payplug/changelog/payplug-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/payplug-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/lifecycle/payplug-lifecycle.yml
+  href: https://artifacts.apis.io/payplug/lifecycle/payplug-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/payplug-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/conformance/payplug-conformance.yml
+  href: https://artifacts.apis.io/payplug/conformance/payplug-conformance.yml
   title: ''
   type: Conformance
   url: conformance/payplug-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/well-known/payplug-status-security.txt
+  href: https://artifacts.apis.io/payplug/well-known/payplug-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/payplug-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/well-known/payplug-well-known.yml
+  href: https://artifacts.apis.io/payplug/well-known/payplug-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/payplug-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/hosts/payplug-hosts.yml
+  href: https://artifacts.apis.io/payplug/hosts/payplug-hosts.yml
   title: ''
   type: Hosts
   url: hosts/payplug-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/vendors/payplug-vendors.yml
+  href: https://artifacts.apis.io/payplug/vendors/payplug-vendors.yml
   title: ''
   type: Vendors
   url: vendors/payplug-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/packages/payplug-packages.yml
+  href: https://artifacts.apis.io/payplug/packages/payplug-packages.yml
   title: ''
   type: SDKs
   url: packages/payplug-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/packages/payplug-packages.yml
+  href: https://artifacts.apis.io/payplug/packages/payplug-packages.yml
   title: ''
   type: Packages
   url: packages/payplug-packages.yml
@@ -158,7 +171,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/payplug
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payplug/refs/heads/main/security/payplug-domain-security.yml
+  href: https://artifacts.apis.io/payplug/security/payplug-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/payplug-domain-security.yml
@@ -213,7 +226,7 @@ overview: 'PayPlug is listed with 4 APIs on the [APIs.io](https://apis.io/) netw
 
 
   PayPlug''s developer surface includes changelog, support, pricing, engineering blog, getting-started guide, documentation, and 20 more developer resources.'
-random_paper: 0
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -229,21 +242,23 @@ rules:
   slug: payplug-rules
 score:
   band: thin
-  composite: 34.6
+  composite: 26.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 55.8
     catalog_earned_first_party: 0.0
     catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.0
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 45.2
-    discoverability: 55.4
+    developer_ergonomics: 26.2
+    discoverability: 54.5
     operational_transparency: 36.8
+  previous_composite: 35.9
   provenance:
     conformance: derived
     contracts:
@@ -257,12 +272,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/payplug/payplug-2026-11-03T141031.png
 security:
 - kind: domain-security
   name: Payplug Domain Security

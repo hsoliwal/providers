@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
-    rate_limit_signal: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.9
-  scored_at: '2026-10-17'
+  score: 35.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -47,11 +53,6 @@ api_count: 1
 apis:
 - baseURL: https://api.buywhere.ai/v1
   baseurl_source: declared
-  description: Agent registration and API key issuance.
-  name: BuyWhere Authentication API
-  slug: buywhere-authentication-api
-- baseURL: https://api.buywhere.ai/v1
-  baseurl_source: declared
   description: Product taxonomy and category browsing.
   name: BuyWhere Categories API
   slug: buywhere-categories-api
@@ -60,11 +61,23 @@ apis:
   description: Product search, lookup, comparison, deals, and price history.
   name: BuyWhere Products API
   slug: buywhere-products-api
-artifact_total: 33
+- baseURL: https://api.buywhere.ai/v1
+  baseurl_source: declared
+  description: The Auth API from BuyWhere — 1 operation(s) for auth.
+  name: BuyWhere Auth API
+  slug: buywhere-auth-api
+- baseURL: https://api.buywhere.ai/v1
+  baseurl_source: declared
+  description: The Featured API from BuyWhere — 1 operation(s) for featured.
+  name: BuyWhere Featured API
+  slug: buywhere-featured-api
+- baseURL: https://api.buywhere.ai/v1
+  baseurl_source: declared
+  description: The Usage API from BuyWhere — 1 operation(s) for usage.
+  name: BuyWhere Usage API
+  slug: buywhere-usage-api
+artifact_total: 34
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: BuyWhere Product Catalog Authentication API
   slug: open-buywhere-authentication-api
@@ -79,27 +92,27 @@ collections:
   slug: open-buywhere
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/capabilities/buywhere-capability-edges.yml
+  href: https://artifacts.apis.io/buywhere/capabilities/buywhere-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/buywhere-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/a2a/buywhere-a2a.yml
+  href: https://artifacts.apis.io/buywhere/a2a/buywhere-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/buywhere-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/agentic-access/buywhere-agentic-access.yml
+  href: https://artifacts.apis.io/buywhere/agentic-access/buywhere-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/buywhere-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/security/buywhere-domain-security.yml
+  href: https://artifacts.apis.io/buywhere/security/buywhere-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/buywhere-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/authentication/buywhere-authentication.yml
+  href: https://artifacts.apis.io/buywhere/authentication/buywhere-authentication.yml
   title: ''
   type: Authentication
   url: authentication/buywhere-authentication.yml
@@ -144,27 +157,27 @@ common:
   type: GitHub
   url: https://github.com/BuyWhere/buywhere
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/plans/buywhere-plans-pricing.yml
+  href: https://artifacts.apis.io/buywhere/plans/buywhere-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/buywhere-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/rate-limits/buywhere-rate-limits.yml
+  href: https://artifacts.apis.io/buywhere/rate-limits/buywhere-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/buywhere-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/finops/buywhere-finops.yml
+  href: https://artifacts.apis.io/buywhere/finops/buywhere-finops.yml
   title: ''
   type: FinOps
   url: finops/buywhere-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/vocabulary/buywhere-vocabulary.yml
+  href: https://artifacts.apis.io/buywhere/vocabulary/buywhere-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/buywhere-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/json-ld/buywhere-context.jsonld
+  href: https://artifacts.apis.io/buywhere/json-ld/buywhere-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/buywhere-context.jsonld
@@ -241,7 +254,7 @@ modified: '2026-05-19'
 name: BuyWhere
 nav: Providers
 network: true
-overview: 'BuyWhere publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Authentication API, Categories API, and Products API. Tagged areas include E-Commerce, Shopping, Price Comparison, SEA, and Southeast Asia.
+overview: 'BuyWhere publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Products API, Auth API, and 2 more. Tagged areas include E-Commerce, Shopping, Price Comparison, SEA, and Southeast Asia.
 
 
   The BuyWhere catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -252,7 +265,7 @@ plans:
 - name: Buywhere Plans Pricing
   plan_count: 3
   slug: buywhere-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 4
   name: Buywhere Rate Limits
@@ -283,19 +296,19 @@ rules:
   slug: buywhere-rules
 score:
   band: thin
-  composite: 34.4
+  composite: 33.3
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 69.0
     catalog_earned_first_party: 0.0
     catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.7
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
-    contract_quality: 66.2
+    contract_quality: 61.6
     developer_ergonomics: 21.4
     discoverability: 75.0
     operational_transparency: 13.2
@@ -304,14 +317,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 42.7
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 3
+      marker_coverage: 55.6
+      total: 9
     mcp: first-party
   regulatory:
     applies: true
@@ -319,13 +332,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/screenshots/buywhere-2026-06-20T173822.png
+screenshot: https://apis.io/screenshots/buywhere/buywhere-2026-06-20T173822.png
 security:
 - kind: authentication
   name: Buywhere Authentication

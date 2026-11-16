@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -64,11 +71,8 @@ apis:
   description: Manage public status pages for communicating service health
   name: Better Uptime Status Pages API
   slug: betteruptime-status-pages-api
-artifact_total: 27
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Better Stack Uptime Heartbeats API
   slug: open-betteruptime-heartbeats-api
@@ -82,33 +86,37 @@ collections:
   name: Better Stack Uptime Heartbeats Status Pages API
   slug: open-betteruptime-status-pages-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/better-uptime/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/capabilities/betteruptime-capability-edges.yml
+  href: https://artifacts.apis.io/betteruptime/capabilities/betteruptime-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/betteruptime-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/agentic-access/betteruptime-agentic-access.yml
+  href: https://artifacts.apis.io/betteruptime/agentic-access/betteruptime-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/betteruptime-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/security/betteruptime-trust-center.yml
+  href: https://artifacts.apis.io/betteruptime/security/betteruptime-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/betteruptime-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/security/betteruptime-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/betteruptime/security/betteruptime-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/betteruptime-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/security/betteruptime-domain-security.yml
+  href: https://artifacts.apis.io/betteruptime/security/betteruptime-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/betteruptime-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/authentication/betteruptime-authentication.yml
+  href: https://artifacts.apis.io/betteruptime/authentication/betteruptime-authentication.yml
   title: ''
   type: Authentication
   url: authentication/betteruptime-authentication.yml
@@ -145,32 +153,32 @@ common:
   type: StatusPage
   url: https://status.betterstack.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/plans/betteruptime-plans-pricing.yml
+  href: https://artifacts.apis.io/betteruptime/plans/betteruptime-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/betteruptime-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/rate-limits/betteruptime-rate-limits.yml
+  href: https://artifacts.apis.io/betteruptime/rate-limits/betteruptime-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/betteruptime-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/finops/betteruptime-finops.yml
+  href: https://artifacts.apis.io/betteruptime/finops/betteruptime-finops.yml
   title: ''
   type: FinOps
   url: finops/betteruptime-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/vocabulary/betteruptime-vocabulary.yml
+  href: https://artifacts.apis.io/betteruptime/vocabulary/betteruptime-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/betteruptime-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/json-ld/betteruptime-context.jsonld
+  href: https://artifacts.apis.io/betteruptime/json-ld/betteruptime-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/betteruptime-context.jsonld
 - group: company
-  href: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/blogs/blogs.json
+  href: https://artifacts.apis.io/betteruptime/blogs/blogs.json
   title: ''
   type: BlogFeed
   url: blogs/blogs.json
@@ -227,12 +235,12 @@ overview: 'Better Uptime publishes 4 API contracts indexed on the [APIs.io](http
   The Better Uptime catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Better Uptime''s developer surface includes authentication, documentation, engineering blog, pricing, and 16 more developer resources.'
+  Better Uptime''s developer surface includes authentication, documentation, engineering blog, pricing, and 17 more developer resources.'
 plans:
 - name: Betteruptime Plans Pricing
   plan_count: 3
   slug: betteruptime-plans-pricing
-random_paper: 8
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Betteruptime Rate Limits
@@ -251,23 +259,23 @@ rules:
   slug: betteruptime-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 37.6
+  composite: 39.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 23.5
     contract_quality: 59.7
-    developer_ergonomics: 23.8
+    developer_ergonomics: 25.0
     discoverability: 66.1
-    operational_transparency: 15.8
-  previous_composite: 45.0
+    operational_transparency: 26.3
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     contracts:
@@ -281,13 +289,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/betteruptime/refs/heads/main/screenshots/betteruptime-2026-06-20T173208.png
+screenshot: https://apis.io/screenshots/betteruptime/betteruptime-2026-06-20T173208.png
 security:
 - kind: authentication
   name: Betteruptime Authentication

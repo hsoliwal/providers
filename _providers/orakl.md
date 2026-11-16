@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 30.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -89,11 +92,8 @@ apis:
   description: Resource 'WebResponse' operations.
   name: Orakl WebResponse API
   slug: orakl-webresponse-api
-artifact_total: 22
+artifact_total: 23
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Orakl Oncology public website CommonContent API
   slug: open-orakl-commoncontent-api
@@ -123,12 +123,12 @@ collections:
   slug: open-orakl-webresponse-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/overlays/orakl-website-overlay.yaml
+  href: https://artifacts.apis.io/orakl/overlays/orakl-website-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/orakl-website-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/security/orakl-domain-security.yml
+  href: https://artifacts.apis.io/orakl/security/orakl-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/orakl-domain-security.yml
@@ -157,32 +157,32 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/orakloncology/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/agentic-access/orakl-agentic-access.yml
+  href: https://artifacts.apis.io/orakl/agentic-access/orakl-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/orakl-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/authentication/orakl-authentication.yml
+  href: https://artifacts.apis.io/orakl/authentication/orakl-authentication.yml
   title: ''
   type: Authentication
   url: authentication/orakl-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/well-known/orakl-well-known.yml
+  href: https://artifacts.apis.io/orakl/well-known/orakl-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/orakl-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/mcp/orakl-mcp.yml
+  href: https://artifacts.apis.io/orakl/mcp/orakl-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/orakl-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/llms/orakl-llms.txt
+  href: https://artifacts.apis.io/orakl/llms/orakl-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/orakl-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/orakl/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -197,22 +197,38 @@ network: true
 overview: 'Orakl publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including CommonContent API, CustomForm API, Folder API, and 6 more. Tagged areas include Company, TechBio, Oncology, Drug Development, and Artificial Intelligence.
 
 
+  The Orakl catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Orakl''s developer surface includes documentation, API reference, authentication, and 11 more developer resources.'
 random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Orakl API Rules
+  rule_count: 62
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 5
+    warn: 7
+  slug: orakl-rules
 score:
   band: thin
-  composite: 28.8
+  composite: 30.5
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 32.0
+    artifact_dirs: 19
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.1
     developer_ergonomics: 25.6
     discoverability: 64.3
@@ -225,7 +241,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 28.8
+  previous_composite: 30.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -242,13 +258,13 @@ score:
     regime: Health
     regime_id: health
     score: 18.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/orakl/refs/heads/main/screenshots/orakl-2026-08-07T190829.png
+screenshot: https://apis.io/screenshots/orakl/orakl-2026-08-07T190829.png
 security:
 - kind: authentication
   name: Orakl Authentication
@@ -258,6 +274,10 @@ security:
   name: Orakl Domain Security
   slug: orakl-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 1
+skills:
+- name: Fetch Orakl Oncology website page content
+  slug: orakl-fetch-page-content
 slug: orakl
 tags:
 - Company

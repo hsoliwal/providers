@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 12.3
-  scored_at: '2026-10-17'
+  score: 15.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -39,12 +52,12 @@ apis:
 artifact_total: 6
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/agentic-access/nanoparse-agentic-access.yml
+  href: https://artifacts.apis.io/nanoparse/agentic-access/nanoparse-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nanoparse-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/rules/nanoparse-rules.yml
+  href: https://artifacts.apis.io/nanoparse/rules/nanoparse-rules.yml
   title: ''
   type: Spectral
   url: rules/nanoparse-rules.yml
@@ -53,62 +66,62 @@ common:
   type: Security
   url: https://nanoparse.app/privacy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/errors/nanoparse-problem-types.yml
+  href: https://artifacts.apis.io/nanoparse/errors/nanoparse-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nanoparse-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/conformance/nanoparse-conformance.yml
+  href: https://artifacts.apis.io/nanoparse/conformance/nanoparse-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nanoparse-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/llms/nanoparse-llms.txt
+  href: https://artifacts.apis.io/nanoparse/llms/nanoparse-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nanoparse-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/a2a/nanoparse-a2a.yml
+  href: https://artifacts.apis.io/nanoparse/a2a/nanoparse-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/nanoparse-a2a.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/mcp/nanoparse-tool-crosswalk.yml
+  href: https://artifacts.apis.io/nanoparse/mcp/nanoparse-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/nanoparse-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/mcp/nanoparse-mcp.yml
+  href: https://artifacts.apis.io/nanoparse/mcp/nanoparse-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/nanoparse-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/well-known/nanoparse-security.txt
+  href: https://artifacts.apis.io/nanoparse/well-known/nanoparse-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/nanoparse-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/well-known/nanoparse-well-known.yml
+  href: https://artifacts.apis.io/nanoparse/well-known/nanoparse-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nanoparse-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/hosts/nanoparse-hosts.yml
+  href: https://artifacts.apis.io/nanoparse/hosts/nanoparse-hosts.yml
   title: ''
   type: Hosts
   url: hosts/nanoparse-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/vendors/nanoparse-vendors.yml
+  href: https://artifacts.apis.io/nanoparse/vendors/nanoparse-vendors.yml
   title: ''
   type: Vendors
   url: vendors/nanoparse-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/security/nanoparse-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nanoparse/security/nanoparse-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nanoparse-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nanoparse/refs/heads/main/security/nanoparse-domain-security.yml
+  href: https://artifacts.apis.io/nanoparse/security/nanoparse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nanoparse-domain-security.yml
@@ -158,7 +171,7 @@ overview: 'NanoParse is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   NanoParse''s developer surface includes documentation, engineering blog, API reference, and 19 more developer resources.'
-random_paper: 21
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -174,21 +187,23 @@ rules:
   slug: nanoparse-rules
 score:
   band: emerging
-  composite: 21.5
+  composite: 15.9
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 39.5
     catalog_earned_first_party: 0.0
     catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.6
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 31.8
     contract_quality: 0.0
-    developer_ergonomics: 19.0
+    developer_ergonomics: 9.5
     discoverability: 71.7
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 21.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -202,13 +217,15 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/nanoparse/nanoparse-2026-11-03T135955.png
 security:
 - kind: domain-security
   name: Nanoparse Domain Security

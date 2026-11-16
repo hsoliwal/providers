@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.4
-  scored_at: '2026-10-17'
+  score: 33.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 27
   slug: activepieces-agentic-access
   summary_line: 27 operations · 14 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://cloud.activepieces.com/api/v1
   baseurl_source: declared
@@ -90,7 +96,92 @@ apis:
   description: Worker queue metrics
   name: Activepieces Worker Machines API
   slug: activepieces-worker-machines-api
-artifact_total: 145
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The agent API from Activepieces — 5 operation(s) for agent.
+  name: Activepieces Agent API
+  slug: activepieces-agent-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The app-connections API from Activepieces — 5 operation(s) for app-connections.
+  name: Activepieces App Connections API
+  slug: activepieces-app-connections-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The embedding API from Activepieces — 1 operation(s) for embedding.
+  name: Activepieces Embedding API
+  slug: activepieces-embedding-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The event-destinations API from Activepieces — 1 operation(s) for event-destinations.
+  name: Activepieces Event Destinations API
+  slug: activepieces-event-destinations-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The git-repos API from Activepieces — 1 operation(s) for git-repos.
+  name: Activepieces Git Repos API
+  slug: activepieces-git-repos-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The global-connections API from Activepieces — 2 operation(s) for global-connections.
+  name: Activepieces Global Connections API
+  slug: activepieces-global-connections-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The knowledge-base API from Activepieces — 8 operation(s) for knowledge-base.
+  name: Activepieces Knowledge Base API
+  slug: activepieces-knowledge-base-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The mcp API from Activepieces — 4 operation(s) for mcp.
+  name: Activepieces MCP API
+  slug: activepieces-mcp-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The mcp-oauth API from Activepieces — 1 operation(s) for mcp-oauth.
+  name: Activepieces MCP OAUTH API
+  slug: activepieces-mcp-oauth-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The platforms API from Activepieces — 1 operation(s) for platforms.
+  name: Activepieces Platforms API
+  slug: activepieces-platforms-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The project-members API from Activepieces — 3 operation(s) for project-members.
+  name: Activepieces Project Members API
+  slug: activepieces-project-members-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The project-releases API from Activepieces — 1 operation(s) for project-releases.
+  name: Activepieces Project Releases API
+  slug: activepieces-project-releases-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The records API from Activepieces — 2 operation(s) for records.
+  name: Activepieces Records API
+  slug: activepieces-records-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The sample-data API from Activepieces — 2 operation(s) for sample-data.
+  name: Activepieces Sample Data API
+  slug: activepieces-sample-data-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The tables API from Activepieces — 8 operation(s) for tables.
+  name: Activepieces Tables API
+  slug: activepieces-tables-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The user-invitations API from Activepieces — 2 operation(s) for user-invitations.
+  name: Activepieces User Invitations API
+  slug: activepieces-user-invitations-api
+- baseURL: https://cloud.activepieces.com/api
+  baseurl_source: declared
+  description: The variables API from Activepieces — 2 operation(s) for variables.
+  name: Activepieces Variables API
+  slug: activepieces-variables-api
+artifact_total: 162
 collections:
 - collection_type: postman
   name: Activepieces Connections API
@@ -119,9 +210,6 @@ collections:
 - collection_type: postman
   name: Activepieces Connections Worker Machines API
   slug: postman-activepieces-worker-machines-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Activepieces Connections API
   slug: open-activepieces-connections-api
@@ -154,17 +242,17 @@ collections:
   slug: open-activepieces
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/plans/activepieces-plans-pricing.yml
+  href: https://artifacts.apis.io/activepieces/plans/activepieces-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/activepieces-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/rate-limits/activepieces-rate-limits.yml
+  href: https://artifacts.apis.io/activepieces/rate-limits/activepieces-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/activepieces-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/finops/activepieces-finops.yml
+  href: https://artifacts.apis.io/activepieces/finops/activepieces-finops.yml
   title: ''
   type: FinOps
   url: finops/activepieces-finops.yml
@@ -201,17 +289,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/activepieces/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/agentic-access/activepieces-agentic-access.yml
+  href: https://artifacts.apis.io/activepieces/agentic-access/activepieces-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/activepieces-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/security/activepieces-domain-security.yml
+  href: https://artifacts.apis.io/activepieces/security/activepieces-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/activepieces-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/authentication/activepieces-authentication.yml
+  href: https://artifacts.apis.io/activepieces/authentication/activepieces-authentication.yml
   title: ''
   type: Authentication
   url: authentication/activepieces-authentication.yml
@@ -252,17 +340,17 @@ common:
   type: StatusPage
   url: https://status.activepieces.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/rules/activepieces-spectral-rules.yml
+  href: https://artifacts.apis.io/activepieces/rules/activepieces-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/activepieces-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/vocabulary/activepieces-vocabulary.yaml
+  href: https://artifacts.apis.io/activepieces/vocabulary/activepieces-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/activepieces-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/json-ld/activepieces-context.jsonld
+  href: https://artifacts.apis.io/activepieces/json-ld/activepieces-context.jsonld
   title: Activepieces Context
   type: JSONLD
   url: json-ld/activepieces-context.jsonld
@@ -374,13 +462,13 @@ features:
 - description: Share and reuse flow templates across projects and teams.
   name: Flow Templates
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Activepieces Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: subscription
+  service_category: ''
   slug: activepieces-finops
-  template: true
+  template: false
 image: /assets/icons/activepieces.png
 integrations:
 - description: Trigger workflows on GitHub events and automate repository operations.
@@ -565,7 +653,7 @@ modified: '2026-10-06'
 name: Activepieces
 nav: Providers
 network: true
-overview: 'Activepieces publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connections API, Flow Runs API, Flows API, and 6 more. Tagged areas include Automation, No-Code, Open Source, Workflows, and AI Agents.
+overview: 'Activepieces publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connections API, Flow Runs API, Flows API, and 23 more. Tagged areas include Automation, No-Code, Open Source, Workflows, and AI Agents.
 
 
   The Activepieces catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -574,9 +662,12 @@ overview: 'Activepieces publishes 9 API contracts indexed on the [APIs.io](https
   Activepieces'' developer surface includes engineering blog, authentication, developer portal, documentation, getting-started guide, pricing, and 21 more developer resources.'
 plans:
 - name: Activepieces Plans Pricing
-  plan_count: 3
+  plan_count: 6
   slug: activepieces-plans-pricing
-random_paper: 15
+- name: Activepieces Price Estimates
+  plan_count: 0
+  slug: activepieces-price-estimates
+random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Activepieces Rate Limits
@@ -606,31 +697,31 @@ rules:
     warn: 16
   slug: activepieces-spectral-rules
 score:
-  band: developing
-  composite: 40.5
+  band: strong
+  composite: 56.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 72.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    artifact_dirs: 22
+    catalog_earned: 84.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 31.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.1
   facets:
-    access_clarity: 18.4
+    access_clarity: 50.0
     contract_governance: 27.3
-    contract_quality: 33.7
+    contract_quality: 56.0
     developer_ergonomics: 53.6
     discoverability: 68.3
     operational_transparency: 44.7
-  previous_composite: 42.0
+  previous_composite: 55.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
-      derived: 9
-      marker_coverage: 100.0
-      total: 9
+      derived: 10
+      marker_coverage: 27.8
+      total: 36
     mcp: first-party
   regulatory:
     applies: true
@@ -638,13 +729,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/activepieces/refs/heads/main/screenshots/activepieces-2026-06-20T164235.png
+    score: 61.1
+screenshot: https://apis.io/screenshots/activepieces/activepieces-2026-06-20T164235.png
 security:
 - kind: authentication
   name: Activepieces Authentication

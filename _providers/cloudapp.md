@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API documentation and developer resources for Zight (formerly CloudApp).
@@ -32,42 +46,42 @@ apis:
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/plans/cloudapp-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudapp/plans/cloudapp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudapp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/changelog/cloudapp-changelog.yml
+  href: https://artifacts.apis.io/cloudapp/changelog/cloudapp-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cloudapp-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/conformance/cloudapp-conformance.yml
+  href: https://artifacts.apis.io/cloudapp/conformance/cloudapp-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudapp-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/llms/cloudapp-llms.txt
+  href: https://artifacts.apis.io/cloudapp/llms/cloudapp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudapp-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/well-known/cloudapp-status-security.txt
+  href: https://artifacts.apis.io/cloudapp/well-known/cloudapp-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cloudapp-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/well-known/cloudapp-well-known.yml
+  href: https://artifacts.apis.io/cloudapp/well-known/cloudapp-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudapp-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/hosts/cloudapp-hosts.yml
+  href: https://artifacts.apis.io/cloudapp/hosts/cloudapp-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudapp-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/vendors/cloudapp-vendors.yml
+  href: https://artifacts.apis.io/cloudapp/vendors/cloudapp-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudapp-vendors.yml
@@ -124,7 +138,7 @@ common:
   type: GettingStarted
   url: https://zight.com/use-cases/training-onboarding
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudapp/refs/heads/main/security/cloudapp-domain-security.yml
+  href: https://artifacts.apis.io/cloudapp/security/cloudapp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudapp-domain-security.yml
@@ -163,24 +177,26 @@ plans:
 - name: Cloudapp Plans Pricing
   plan_count: 4
   slug: cloudapp-plans-pricing
-random_paper: 20
+random_paper: 16
 score:
   band: thin
-  composite: 37.2
+  composite: 29.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.8
   facets:
-    access_clarity: 84.2
+    access_clarity: 68.4
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 35.7
-    discoverability: 57.1
-    operational_transparency: 31.6
+    developer_ergonomics: 21.4
+    discoverability: 56.3
+    operational_transparency: 26.3
+  previous_composite: 38.6
   provenance:
     conformance: first-party
     mcp: unknown
@@ -195,13 +211,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cloudapp/cloudapp-2026-11-03T124454.png
 security:
 - kind: domain-security
   name: Cloudapp Domain Security

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -88,9 +91,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Xendit Balance API
   slug: open-xendit-balance-api
 - collection_type: open
@@ -119,22 +119,22 @@ collections:
   slug: open-xendit
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/capabilities/xendit-capability-edges.yml
+  href: https://artifacts.apis.io/xendit/capabilities/xendit-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/xendit-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/agentic-access/xendit-agentic-access.yml
+  href: https://artifacts.apis.io/xendit/agentic-access/xendit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/xendit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/security/xendit-domain-security.yml
+  href: https://artifacts.apis.io/xendit/security/xendit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xendit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/authentication/xendit-authentication.yml
+  href: https://artifacts.apis.io/xendit/authentication/xendit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/xendit-authentication.yml
@@ -155,17 +155,17 @@ common:
   type: Documentation
   url: https://docs.xendit.co
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/plans/xendit-plans-pricing.yml
+  href: https://artifacts.apis.io/xendit/plans/xendit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/xendit-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/rate-limits/xendit-rate-limits.yml
+  href: https://artifacts.apis.io/xendit/rate-limits/xendit-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/xendit-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/finops/xendit-finops.yml
+  href: https://artifacts.apis.io/xendit/finops/xendit-finops.yml
   title: ''
   type: FinOps
   url: finops/xendit-finops.yml
@@ -192,30 +192,46 @@ network: true
 overview: 'Xendit publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Balance API, Customers API, Invoices API, and 5 more. Tagged areas include Payments, Fintech, Payment Gateway, Southeast Asia, and Indonesia.
 
 
+  The Xendit catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Xendit''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Xendit Plans Pricing
   plan_count: 2
   slug: xendit-plans-pricing
-random_paper: 14
+random_paper: 4
 rate_limits:
 - limit_count: 4
   name: Xendit Rate Limits
   slug: xendit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Xendit API Rules
+  rule_count: 61
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 4
+  slug: xendit-rules
 score:
   band: thin
-  composite: 28.5
+  composite: 30.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 31.0
     discoverability: 66.1
@@ -228,7 +244,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 35.5
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     contracts:
@@ -242,13 +258,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/xendit/refs/heads/main/screenshots/xendit-2026-09-02T171119.png
+screenshot: https://apis.io/screenshots/xendit/xendit-2026-09-02T171119.png
 security:
 - kind: authentication
   name: Xendit Authentication

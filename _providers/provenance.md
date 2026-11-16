@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public Cosmos SDK REST (LCD / gRPC-gateway), gRPC, and Tendermint RPC interface to the Provenance Blockchain. Query and broadcast transactions against the marker, metadata, exchange, ledger, name, att
@@ -74,62 +78,62 @@ common:
   type: Support
   url: https://docs.provenance.io/community/support
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/grpc/provenance-marker-query.proto
+  href: https://artifacts.apis.io/provenance/grpc/provenance-marker-query.proto
   title: ''
   type: Protobuf
   url: grpc/provenance-marker-query.proto
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/packages/provenance-packages.yml
+  href: https://artifacts.apis.io/provenance/packages/provenance-packages.yml
   title: ''
   type: Packages
   url: packages/provenance-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/packages/provenance-packages.yml
+  href: https://artifacts.apis.io/provenance/packages/provenance-packages.yml
   title: ''
   type: SDKs
   url: packages/provenance-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/mcp/provenance-mcp.yml
+  href: https://artifacts.apis.io/provenance/mcp/provenance-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/provenance-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/llms/provenance-llms.txt
+  href: https://artifacts.apis.io/provenance/llms/provenance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/provenance-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/conformance/provenance-conformance.yml
+  href: https://artifacts.apis.io/provenance/conformance/provenance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/provenance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/lifecycle/provenance-lifecycle.yml
+  href: https://artifacts.apis.io/provenance/lifecycle/provenance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/provenance-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/changelog/provenance-changelog.yml
+  href: https://artifacts.apis.io/provenance/changelog/provenance-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/provenance-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/conventions/provenance-conventions.yml
+  href: https://artifacts.apis.io/provenance/conventions/provenance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/provenance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/data-model/provenance-data-model.yml
+  href: https://artifacts.apis.io/provenance/data-model/provenance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/provenance-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/authentication/provenance-authentication.yml
+  href: https://artifacts.apis.io/provenance/authentication/provenance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/provenance-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/security/provenance-domain-security.yml
+  href: https://artifacts.apis.io/provenance/security/provenance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/provenance-domain-security.yml
@@ -150,13 +154,13 @@ score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
@@ -164,7 +168,7 @@ score:
     developer_ergonomics: 64.3
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 28.8
+  previous_composite: 29.4
   provenance:
     conformance: derived
     mcp: derived
@@ -174,14 +178,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/provenance/refs/heads/main/screenshots/provenance-2026-09-02T152236.png
+screenshot: https://apis.io/screenshots/provenance/provenance-2026-09-02T152236.png
 security:
 - kind: authentication
   name: Provenance Authentication

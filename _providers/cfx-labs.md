@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 38.4
-  scored_at: '2026-10-17'
+  score: 40.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -95,62 +110,62 @@ asyncapis:
   slug: cfx-labs-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/agentic-access/cfx-labs-agentic-access.yml
+  href: https://artifacts.apis.io/cfx-labs/agentic-access/cfx-labs-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cfx-labs-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/rules/cfx-labs-rules.yml
+  href: https://artifacts.apis.io/cfx-labs/rules/cfx-labs-rules.yml
   title: ''
   type: Spectral
   url: rules/cfx-labs-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/vocabulary/cfx-labs-vocabulary.yml
+  href: https://artifacts.apis.io/cfx-labs/vocabulary/cfx-labs-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cfx-labs-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/asyncapi/cfx-labs-webhooks.yml
+  href: https://artifacts.apis.io/cfx-labs/asyncapi/cfx-labs-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cfx-labs-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/conventions/cfx-labs-conventions.yml
+  href: https://artifacts.apis.io/cfx-labs/conventions/cfx-labs-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cfx-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/conventions/cfx-labs-conventions.yml
+  href: https://artifacts.apis.io/cfx-labs/conventions/cfx-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cfx-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/errors/cfx-labs-problem-types.yml
+  href: https://artifacts.apis.io/cfx-labs/errors/cfx-labs-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cfx-labs-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/conformance/cfx-labs-conformance.yml
+  href: https://artifacts.apis.io/cfx-labs/conformance/cfx-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cfx-labs-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/llms/cfx-labs-llms.txt
+  href: https://artifacts.apis.io/cfx-labs/llms/cfx-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cfx-labs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/well-known/cfx-labs-well-known.yml
+  href: https://artifacts.apis.io/cfx-labs/well-known/cfx-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cfx-labs-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/hosts/cfx-labs-hosts.yml
+  href: https://artifacts.apis.io/cfx-labs/hosts/cfx-labs-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cfx-labs-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/vendors/cfx-labs-vendors.yml
+  href: https://artifacts.apis.io/cfx-labs/vendors/cfx-labs-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cfx-labs-vendors.yml
@@ -163,12 +178,12 @@ common:
   type: APIReference
   url: https://docs.cfx.to/reference
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/authentication/cfx-labs-authentication.yml
+  href: https://artifacts.apis.io/cfx-labs/authentication/cfx-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cfx-labs-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfx-labs/refs/heads/main/security/cfx-labs-domain-security.yml
+  href: https://artifacts.apis.io/cfx-labs/security/cfx-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cfx-labs-domain-security.yml
@@ -217,14 +232,14 @@ modified: '2026-10-07'
 name: CFX Labs
 nav: Providers
 network: true
-overview: 'CFX Labs publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cash API, Deposit API, Deposit Memos API, and 8 more. Tagged areas include Fintech, Banking, Payments, programmable, and Company.
+overview: 'CFX Labs publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cash API, Deposit API, Deposit Memos API, and 8 more. Tagged areas include Fintech, Banking, Payments, Programmable, and Company.
 
 
   The CFX Labs catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   CFX Labs'' developer surface includes API reference, authentication, documentation, and 19 more developer resources.'
-random_paper: 14
+random_paper: 16
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -239,22 +254,24 @@ rules:
     warn: 1
   slug: cfx-labs-rules
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 33.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 45.8
     catalog_earned_first_party: 0.0
     catalog_gap: 69.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.3
   facets:
-    access_clarity: 28.9
+    access_clarity: 14.5
     contract_governance: 22.0
     contract_quality: 62.0
-    developer_ergonomics: 38.1
+    developer_ergonomics: 25.0
     discoverability: 78.6
     operational_transparency: 7.9
+  previous_composite: 40.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -269,12 +286,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cfx-labs/cfx-labs-2026-11-03T123746.png
 security:
 - kind: authentication
   name: Cfx Labs Authentication
@@ -289,7 +308,7 @@ tags:
 - Fintech
 - Banking
 - Payments
-- programmable
+- Programmable
 - Company
 website: https://cfx.to/
 ---

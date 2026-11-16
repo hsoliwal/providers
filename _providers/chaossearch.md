@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 15.1
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://<chaossearch
@@ -41,30 +56,30 @@ apis:
   description: The User API from ChaosSearch — 2 operation(s) for user.
   name: ChaosSearch User API
   slug: chaossearch-user-api
-artifact_total: 15
+artifact_total: 16
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/plans/chaossearch-plans-pricing.yml
+  href: https://artifacts.apis.io/chaossearch/plans/chaossearch-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chaossearch-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/rules/chaossearch-rules.yml
+  href: https://artifacts.apis.io/chaossearch/rules/chaossearch-rules.yml
   title: ''
   type: Spectral
   url: rules/chaossearch-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/json-ld/chaossearch-context.jsonld
+  href: https://artifacts.apis.io/chaossearch/json-ld/chaossearch-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chaossearch-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/vocabulary/chaossearch-vocabulary.yml
+  href: https://artifacts.apis.io/chaossearch/vocabulary/chaossearch-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/chaossearch-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/data-model/chaossearch-data-model.yml
+  href: https://artifacts.apis.io/chaossearch/data-model/chaossearch-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chaossearch-data-model.yml
@@ -73,27 +88,27 @@ common:
   type: Compliance
   url: https://www.chaossearch.io/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/authentication/chaossearch-authentication.yml
+  href: https://artifacts.apis.io/chaossearch/authentication/chaossearch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chaossearch-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/conformance/chaossearch-conformance.yml
+  href: https://artifacts.apis.io/chaossearch/conformance/chaossearch-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chaossearch-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/llms/chaossearch-llms.txt
+  href: https://artifacts.apis.io/chaossearch/llms/chaossearch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chaossearch-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/hosts/chaossearch-hosts.yml
+  href: https://artifacts.apis.io/chaossearch/hosts/chaossearch-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chaossearch-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/vendors/chaossearch-vendors.yml
+  href: https://artifacts.apis.io/chaossearch/vendors/chaossearch-vendors.yml
   title: ''
   type: Vendors
   url: vendors/chaossearch-vendors.yml
@@ -130,17 +145,17 @@ common:
   type: Documentation
   url: https://docs.chaossearch.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/security/chaossearch-trust-center.yml
+  href: https://artifacts.apis.io/chaossearch/security/chaossearch-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/chaossearch-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/security/chaossearch-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chaossearch/security/chaossearch-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/chaossearch-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chaossearch/refs/heads/main/security/chaossearch-domain-security.yml
+  href: https://artifacts.apis.io/chaossearch/security/chaossearch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chaossearch-domain-security.yml
@@ -163,6 +178,14 @@ coverage:
   state: gated
 created: '2026-10-08'
 description: ChaosSearch provides a live analytics platform that transforms cloud storage into a searchable, SQL‑enabled and generative‑AI‑ready analytical database. It enables customers to ingest streaming data at scale, perform real‑time search, visualizations, and advanced analytics without managing infrastructure. The service supports integrations with AWS, Azure, and GCP, offering fast query performance and flexible data retention for operational and business use cases.
+finops:
+- has_sources: true
+  method: derived
+  name: Chaossearch Finops
+  primary_unit: seat
+  service_category: ''
+  slug: chaossearch-finops
+  template: false
 image: https://www.chaossearch.io/hubfs/Homepage%20Header%20Graphic.png
 json_schemas:
 - name: GetUserGroupsResponse
@@ -201,7 +224,7 @@ plans:
 - name: Chaossearch Plans Pricing
   plan_count: 3
   slug: chaossearch-plans-pricing
-random_paper: 12
+random_paper: 4
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -216,22 +239,24 @@ rules:
     warn: 1
   slug: chaossearch-rules
 score:
-  band: developing
-  composite: 43.6
+  band: thin
+  composite: 36.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 74.8
+    artifact_dirs: 21
+    catalog_earned: 77.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.3
   facets:
-    access_clarity: 68.4
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 22.6
-    developer_ergonomics: 42.9
+    developer_ergonomics: 27.4
     discoverability: 78.6
-    operational_transparency: 26.3
+    operational_transparency: 13.2
+  previous_composite: 45.1
   provenance:
     conformance: derived
     contracts:
@@ -245,12 +270,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 27.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/chaossearch/chaossearch-2026-11-03T123842.png
 security:
 - kind: authentication
   name: Chaossearch Authentication

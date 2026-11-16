@@ -1,6 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: human-only
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,35 +25,38 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.5
-  scored_at: '2026-10-17'
+  score: 5.4
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/llms/blue-ocean-barns-llms.txt
+  href: https://artifacts.apis.io/blue-ocean-barns/llms/blue-ocean-barns-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blue-ocean-barns-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/mcp/blue-ocean-barns-mcp.yml
+  href: https://artifacts.apis.io/blue-ocean-barns/mcp/blue-ocean-barns-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/blue-ocean-barns-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/hosts/blue-ocean-barns-hosts.yml
+  href: https://artifacts.apis.io/blue-ocean-barns/hosts/blue-ocean-barns-hosts.yml
   title: ''
   type: Hosts
   url: hosts/blue-ocean-barns-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/vendors/blue-ocean-barns-vendors.yml
+  href: https://artifacts.apis.io/blue-ocean-barns/vendors/blue-ocean-barns-vendors.yml
   title: ''
   type: Vendors
   url: vendors/blue-ocean-barns-vendors.yml
@@ -52,7 +65,7 @@ common:
   type: Leadership
   url: https://www.blueoceanbarns.com/team
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/security/blue-ocean-barns-domain-security.yml
+  href: https://artifacts.apis.io/blue-ocean-barns/security/blue-ocean-barns-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blue-ocean-barns-domain-security.yml
@@ -72,7 +85,7 @@ created: '2026-09-29'
 description: Blue Ocean Barns develops Brominata®, a patented seaweed-based feed supplement that dramatically reduces methane emissions from cattle, improving energy conversion and profitability for farmers. By leveraging Asparagopsis taxiformis, the product can cut enteric methane by up to 80%, contributing to climate-smart agriculture and offering a sustainable solution for the livestock industry.
 layout: provider
 mcp_servers:
-- description: Remote MCP server at www.blueoceanbarns.com.
+- description: Remote MCP server at www.blueoceanbarns.com; 10 tools listed.
   name: Blue Ocean Barns MCP Server
   slug: blue-ocean-barns-mcp-yml
 modified: '2026-09-29'
@@ -80,10 +93,10 @@ name: Blue Ocean Barns
 nav: Providers
 network: true
 overview: Blue Ocean Barns is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, Climate Tech, Livestock, and Sustainability.
-random_paper: 4
+random_paper: 6
 score:
   band: minimal
-  composite: 4.3
+  composite: 4.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 25.0
@@ -91,15 +104,15 @@ score:
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 56.7
+    discoverability: 55.8
     operational_transparency: 0.0
-  previous_composite: 4.2
+  previous_composite: 4.3
   provenance:
     mcp: first-party
   regulatory:
@@ -108,14 +121,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/blue-ocean-barns/refs/heads/main/screenshots/blue-ocean-barns-2026-10-11T102501.png
+screenshot: https://apis.io/screenshots/blue-ocean-barns/blue-ocean-barns-2026-10-11T102501.png
 security:
 - kind: domain-security
   name: Blue Ocean Barns Domain Security

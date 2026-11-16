@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.2
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for Visible.vc providing access to portfolio data, metrics, contacts, and notes.
@@ -31,8 +45,13 @@ apis:
   slug: visible-api
 artifact_total: 5
 common:
+- group: auth
+  href: https://artifacts.apis.io/visible-vc/well-known/visible-vc-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/visible-vc-status-security.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/plans/visible-vc-plans-pricing.yml
+  href: https://artifacts.apis.io/visible-vc/plans/visible-vc-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/visible-vc-plans-pricing.yml
@@ -41,37 +60,32 @@ common:
   type: Compliance
   url: https://visible.vc/security/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/llms/visible-vc-llms.txt
+  href: https://artifacts.apis.io/visible-vc/llms/visible-vc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/visible-vc-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/mcp/visible-vc-mcp.yml
+  href: https://artifacts.apis.io/visible-vc/mcp/visible-vc-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/visible-vc-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/well-known/visible-vc-status-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/visible-vc-status-security.txt
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/well-known/visible-vc-help-security.txt
+  href: https://artifacts.apis.io/visible-vc/well-known/visible-vc-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/visible-vc-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/well-known/visible-vc-well-known.yml
+  href: https://artifacts.apis.io/visible-vc/well-known/visible-vc-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/visible-vc-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/hosts/visible-vc-hosts.yml
+  href: https://artifacts.apis.io/visible-vc/hosts/visible-vc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/visible-vc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/vendors/visible-vc-vendors.yml
+  href: https://artifacts.apis.io/visible-vc/vendors/visible-vc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/visible-vc-vendors.yml
@@ -108,12 +122,12 @@ common:
   type: Documentation
   url: https://docs.visible.vc/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/security/visible-vc-trust-center.yml
+  href: https://artifacts.apis.io/visible-vc/security/visible-vc-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/visible-vc-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/visible-vc/refs/heads/main/security/visible-vc-domain-security.yml
+  href: https://artifacts.apis.io/visible-vc/security/visible-vc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/visible-vc-domain-security.yml
@@ -149,24 +163,26 @@ plans:
 - name: Visible Vc Plans Pricing
   plan_count: 4
   slug: visible-vc-plans-pricing
-random_paper: 0
+random_paper: 4
 score:
-  band: thin
-  composite: 31.4
+  band: emerging
+  composite: 23.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 13
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.2
   facets:
-    access_clarity: 78.9
+    access_clarity: 59.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
+    developer_ergonomics: 8.3
     discoverability: 75.0
-    operational_transparency: 26.3
+    operational_transparency: 13.2
+  previous_composite: 31.4
   provenance:
     mcp: first-party
   regulatory:
@@ -174,13 +190,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/visible-vc/visible-vc-2026-11-03T145851.png
 security:
 - kind: domain-security
   name: Visible Vc Domain Security

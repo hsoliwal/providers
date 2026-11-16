@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/medwing/refs/heads/main/security/medwing-domain-security.yml
+  href: https://artifacts.apis.io/medwing/security/medwing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/medwing-domain-security.yml
@@ -70,12 +74,12 @@ common:
   type: Press
   url: https://medwing.com/de/de/ueber-medwing/presse
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/medwing/refs/heads/main/llms/medwing-llms.txt
+  href: https://artifacts.apis.io/medwing/llms/medwing-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/medwing-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/medwing/refs/heads/main/well-known/medwing-well-known.yml
+  href: https://artifacts.apis.io/medwing/well-known/medwing-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/medwing-well-known.yml
@@ -91,12 +95,12 @@ overview: 'Medwing is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Medwing''s developer surface includes engineering blog, pricing, signup flow, and 7 more developer resources.'
-random_paper: 21
+random_paper: 3
 score:
   band: minimal
   composite: 8.4
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -125,14 +129,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/medwing/refs/heads/main/screenshots/medwing-2026-10-11T191412.png
+screenshot: https://apis.io/screenshots/medwing/medwing-2026-10-11T191412.png
 security:
 - kind: domain-security
   name: Medwing Domain Security

@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/i-pulse/refs/heads/main/security/i-pulse-domain-security.yml
+  href: https://artifacts.apis.io/i-pulse/security/i-pulse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/i-pulse-domain-security.yml
@@ -67,7 +70,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/i-pulse-inc.
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/i-pulse/refs/heads/main/llms/i-pulse-llms.txt
+  href: https://artifacts.apis.io/i-pulse/llms/i-pulse-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/i-pulse-llms.txt
@@ -100,12 +103,12 @@ overview: 'I-Pulse is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   I-Pulse''s developer surface includes engineering blog, support, and 6 more developer resources.'
-random_paper: 21
+random_paper: 7
 score:
   band: minimal
   composite: 8.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -131,14 +134,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 8.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/i-pulse/refs/heads/main/screenshots/i-pulse-2026-09-02T145816.png
+screenshot: https://apis.io/screenshots/i-pulse/i-pulse-2026-09-02T145816.png
 security:
 - kind: domain-security
   name: I Pulse Domain Security

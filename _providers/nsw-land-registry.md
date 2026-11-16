@@ -1,13 +1,13 @@
 ---
 access_model:
-  confidence: high
-  label: Broker licence agreement required · wholesale data solutions by commercial contact only · no developer portal
+  confidence: low
+  label: Unknown
   onboarding: unknown
-  pricing: paid
+  pricing: unknown
   public: false
   source:
-  - documentation
-  - terms-of-use
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: A live Cantaloupe Image Server exposing the International Image Interoperability Framework (IIIF) Image API 2.x over the scanned NSW land record images behind the Historical Land Records Viewer. Verif
@@ -57,37 +60,37 @@ collections:
   slug: open-nsw-land-registry-hlrv-iiif-image-information
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/security/nsw-land-registry-domain-security.yml
+  href: https://artifacts.apis.io/nsw-land-registry/security/nsw-land-registry-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nsw-land-registry-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/authentication/nsw-land-registry-authentication.yml
+  href: https://artifacts.apis.io/nsw-land-registry/authentication/nsw-land-registry-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nsw-land-registry-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/conventions/nsw-land-registry-conventions.yml
+  href: https://artifacts.apis.io/nsw-land-registry/conventions/nsw-land-registry-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nsw-land-registry-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/conformance/nsw-land-registry-conformance.yml
+  href: https://artifacts.apis.io/nsw-land-registry/conformance/nsw-land-registry-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nsw-land-registry-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/errors/nsw-land-registry-problem-types.yml
+  href: https://artifacts.apis.io/nsw-land-registry/errors/nsw-land-registry-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nsw-land-registry-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/lifecycle/nsw-land-registry-lifecycle.yml
+  href: https://artifacts.apis.io/nsw-land-registry/lifecycle/nsw-land-registry-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nsw-land-registry-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/changelog/nsw-land-registry-changelog.yml
+  href: https://artifacts.apis.io/nsw-land-registry/changelog/nsw-land-registry-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nsw-land-registry-changelog.yml
@@ -96,27 +99,27 @@ common:
   type: ChangeLog
   url: https://nswlrs.com.au/about-us/education-hub/lrs-connect-release-schedule
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/vocabulary/nsw-land-registry-glossary.yml
+  href: https://artifacts.apis.io/nsw-land-registry/vocabulary/nsw-land-registry-glossary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/nsw-land-registry-glossary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/data-model/nsw-land-registry-data-model.yml
+  href: https://artifacts.apis.io/nsw-land-registry/data-model/nsw-land-registry-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nsw-land-registry-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/asyncapi/nsw-land-registry-status-webhooks.yml
+  href: https://artifacts.apis.io/nsw-land-registry/asyncapi/nsw-land-registry-status-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/nsw-land-registry-status-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/nsw-land-registry/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/llms/nsw-land-registry-llms.txt
+  href: https://artifacts.apis.io/nsw-land-registry/llms/nsw-land-registry-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nsw-land-registry-llms.txt
@@ -153,7 +156,7 @@ common:
   type: Documentation
   url: https://nswlrs.com.au/services
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/openapi/nsw-land-registry-eplan-cif-enumerated-types-4-0.xsd
+  href: https://artifacts.apis.io/nsw-land-registry/openapi/nsw-land-registry-eplan-cif-enumerated-types-4-0.xsd
   title: ''
   type: XSD
   url: openapi/nsw-land-registry-eplan-cif-enumerated-types-4-0.xsd
@@ -247,12 +250,12 @@ overview: 'NSW Land Registry Services is listed with 3 APIs on the [APIs.io](htt
 
 
   NSW Land Registry Services'' developer surface includes authentication, changelog, code examples, engineering blog, documentation, developer portal, pricing, and 29 more developer resources.'
-random_paper: 0
+random_paper: 10
 score:
   band: developing
   composite: 46.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 45.0
     catalog_earned_first_party: 5.0
     catalog_gap: 70.0
@@ -282,14 +285,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 22.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nsw-land-registry/refs/heads/main/screenshots/nsw-land-registry-2026-07-27T125345.png
+screenshot: https://apis.io/screenshots/nsw-land-registry/nsw-land-registry-2026-07-27T125345.png
 security:
 - kind: authentication
   name: Nsw Land Registry Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,7 +69,7 @@ common:
   type: PrivacyPolicy
   url: https://fiveable.me/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fiveable/refs/heads/main/security/fiveable-domain-security.yml
+  href: https://artifacts.apis.io/fiveable/security/fiveable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fiveable-domain-security.yml
@@ -81,7 +85,7 @@ overview: 'Fiveable is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Fiveable''s developer surface includes pricing, signup flow, support, and 5 more developer resources.'
-random_paper: 16
+random_paper: 14
 score:
   band: emerging
   composite: 14.0
@@ -107,14 +111,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fiveable/refs/heads/main/screenshots/fiveable-2026-08-07T165331.png
+screenshot: https://apis.io/screenshots/fiveable/fiveable-2026-08-07T165331.png
 security:
 - kind: domain-security
   name: Fiveable Domain Security

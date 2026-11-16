@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Token-authenticated REST API for the Growatt ShineServer monitoring platform. Exposes plant lists and details, plant energy overview and history, device lists, and per-device energy, detail, history a
@@ -59,47 +62,47 @@ common:
   type: APIReference
   url: https://www.showdoc.com.cn/262556420217021/0
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/packages/growatt-packages.yml
+  href: https://artifacts.apis.io/growatt/packages/growatt-packages.yml
   title: ''
   type: Packages
   url: packages/growatt-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/well-known/growatt-well-known.yml
+  href: https://artifacts.apis.io/growatt/well-known/growatt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/growatt-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/authentication/growatt-authentication.yml
+  href: https://artifacts.apis.io/growatt/authentication/growatt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/growatt-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/conventions/growatt-conventions.yml
+  href: https://artifacts.apis.io/growatt/conventions/growatt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/growatt-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/lifecycle/growatt-lifecycle.yml
+  href: https://artifacts.apis.io/growatt/lifecycle/growatt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/growatt-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/conformance/growatt-conformance.yml
+  href: https://artifacts.apis.io/growatt/conformance/growatt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/growatt-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/mcp/growatt-mcp.yml
+  href: https://artifacts.apis.io/growatt/mcp/growatt-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/growatt-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/llms/growatt-llms.txt
+  href: https://artifacts.apis.io/growatt/llms/growatt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/growatt-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/security/growatt-domain-security.yml
+  href: https://artifacts.apis.io/growatt/security/growatt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/growatt-domain-security.yml
@@ -115,7 +118,7 @@ overview: 'Growatt is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Growatt''s developer surface includes developer portal, documentation, API reference, authentication, and 9 more developer resources.'
-random_paper: 6
+random_paper: 8
 score:
   band: emerging
   composite: 12.2
@@ -144,14 +147,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/growatt/refs/heads/main/screenshots/growatt-2026-07-25T220401.png
+screenshot: https://apis.io/screenshots/growatt/growatt-2026-07-25T220401.png
 security:
 - kind: authentication
   name: Growatt Authentication

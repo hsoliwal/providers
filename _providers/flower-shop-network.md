@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -66,9 +70,6 @@ apis:
 artifact_total: 15
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Flower Shop Network JSON Authentication API
   slug: open-flower-shop-network-authentication-api
 - collection_type: open
@@ -85,32 +86,32 @@ collections:
   slug: open-flower-shop-network
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/plans/flower-shop-network-plans-pricing.yml
+  href: https://artifacts.apis.io/flower-shop-network/plans/flower-shop-network-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flower-shop-network-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/rate-limits/flower-shop-network-rate-limits.yml
+  href: https://artifacts.apis.io/flower-shop-network/rate-limits/flower-shop-network-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/flower-shop-network-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/finops/flower-shop-network-finops.yml
+  href: https://artifacts.apis.io/flower-shop-network/finops/flower-shop-network-finops.yml
   title: ''
   type: FinOps
   url: finops/flower-shop-network-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/capabilities/flower-shop-network-capability-edges.yml
+  href: https://artifacts.apis.io/flower-shop-network/capabilities/flower-shop-network-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/flower-shop-network-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/agentic-access/flower-shop-network-agentic-access.yml
+  href: https://artifacts.apis.io/flower-shop-network/agentic-access/flower-shop-network-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/flower-shop-network-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/security/flower-shop-network-domain-security.yml
+  href: https://artifacts.apis.io/flower-shop-network/security/flower-shop-network-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flower-shop-network-domain-security.yml
@@ -136,7 +137,7 @@ finops:
 - has_sources: false
   method: generated
   name: Flower Shop Network Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: flower-shop-network-finops
   template: true
@@ -149,35 +150,51 @@ network: true
 overview: 'Flower Shop Network publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Florists API, Orders API, and 1 more. Tagged areas include Florists, Flowers, Wire Orders, and Point-of-Sale.
 
 
+  The Flower Shop Network catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Flower Shop Network''s developer surface includes documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Flower Shop Network Plans Pricing
   plan_count: 3
   slug: flower-shop-network-plans-pricing
-random_paper: 7
+random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Flower Shop Network Rate Limits
   slug: flower-shop-network-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Flower Shop Network API Rules
+  rule_count: 44
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 2
+    warn: 1
+  slug: flower-shop-network-rules
 score:
   band: emerging
-  composite: 18.6
+  composite: 20.2
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 38.0
+    artifact_dirs: 15
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 39.8
     developer_ergonomics: 11.9
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 20.1
+  previous_composite: 20.2
   provenance:
     agentic_access: derived
     contracts:
@@ -191,13 +208,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/screenshots/flower-shop-network-2026-06-20T181329.png
+screenshot: https://apis.io/screenshots/flower-shop-network/flower-shop-network-2026-06-20T181329.png
 security:
 - kind: domain-security
   name: Flower Shop Network Domain Security

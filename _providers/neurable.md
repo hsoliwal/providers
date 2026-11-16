@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-10-17'
-api_count: 9
+  score: 31.9
+  scored_at: '2026-11-06'
+api_count: 3
 apis:
 - baseURL: https://analytics-service.neurable.com
   baseurl_source: declared
@@ -63,11 +66,8 @@ apis:
   description: The OAuth API from Neurable — 3 operation(s) for oauth.
   name: Neurable O Auth API
   slug: neurable-oauth-api
-artifact_total: 17
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Analytics Service
   slug: open-neurable-analytics-service
@@ -94,17 +94,17 @@ collections:
   slug: open-neurable-protected-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/mcp/neurable-mcp.yml
+  href: https://artifacts.apis.io/neurable/mcp/neurable-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/neurable-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/overlays/neurable-analytics-service-overlay.yaml
+  href: https://artifacts.apis.io/neurable/overlays/neurable-analytics-service-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/neurable-analytics-service-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/security/neurable-domain-security.yml
+  href: https://artifacts.apis.io/neurable/security/neurable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/neurable-domain-security.yml
@@ -141,52 +141,52 @@ common:
   type: PrivacyPolicy
   url: https://www.neurable.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/authentication/neurable-authentication.yml
+  href: https://artifacts.apis.io/neurable/authentication/neurable-authentication.yml
   title: ''
   type: Authentication
   url: authentication/neurable-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/scopes/neurable-scopes.yml
+  href: https://artifacts.apis.io/neurable/scopes/neurable-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/neurable-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/conventions/neurable-conventions.yml
+  href: https://artifacts.apis.io/neurable/conventions/neurable-conventions.yml
   title: ''
   type: Conventions
   url: conventions/neurable-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/lifecycle/neurable-lifecycle.yml
+  href: https://artifacts.apis.io/neurable/lifecycle/neurable-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/neurable-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/conformance/neurable-conformance.yml
+  href: https://artifacts.apis.io/neurable/conformance/neurable-conformance.yml
   title: ''
   type: Conformance
   url: conformance/neurable-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/errors/neurable-problem-types.yml
+  href: https://artifacts.apis.io/neurable/errors/neurable-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/neurable-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/data-model/neurable-data-model.yml
+  href: https://artifacts.apis.io/neurable/data-model/neurable-data-model.yml
   title: ''
   type: DataModel
   url: data-model/neurable-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/well-known/neurable-well-known.yml
+  href: https://artifacts.apis.io/neurable/well-known/neurable-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/neurable-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/llms/neurable-llms.txt
+  href: https://artifacts.apis.io/neurable/llms/neurable-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/neurable-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/neurable/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -202,8 +202,24 @@ network: true
 overview: 'Neurable publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Core API, OIDC API, Open API, and 2 more. Tagged areas include Neurotechnology, Brain-Computer Interface, EEG, Neuroscience, and Wearables.
 
 
+  The Neurable catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Neurable''s developer surface includes engineering blog, support, authentication, and 18 more developer resources.'
-random_paper: 10
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: Neurable API Rules
+  rule_count: 43
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 1
+  slug: neurable-rules
 scopes:
 - name: Neurable Scopes
   scope_count: 5
@@ -211,29 +227,29 @@ scopes:
   summary_line: 5 scopes
 score:
   band: thin
-  composite: 32.5
+  composite: 34.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 40.0
+    artifact_dirs: 21
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
-    contract_governance: 18.2
-    contract_quality: 39.6
+    contract_governance: 31.8
+    contract_quality: 41.3
     developer_ergonomics: 28.0
     discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 32.5
+  previous_composite: 34.1
   provenance:
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 40.0
       total: 5
     mcp: derived
     skills: derived
@@ -243,13 +259,13 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/neurable/refs/heads/main/screenshots/neurable-2026-10-11T111528.png
+screenshot: https://apis.io/screenshots/neurable/neurable-2026-10-11T111528.png
 security:
 - kind: authentication
   name: Neurable Authentication
@@ -259,6 +275,16 @@ security:
   name: Neurable Domain Security
   slug: neurable-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: neurable-authenticate-oidc
+  slug: neurable-authenticate-oidc
+- name: neurable-download-eeg-recording
+  slug: neurable-download-eeg-recording
+- name: neurable-issue-headset-license
+  slug: neurable-issue-headset-license
+- name: neurable-upload-eeg-recording
+  slug: neurable-upload-eeg-recording
 slug: neurable
 tags:
 - Neurotechnology
@@ -272,6 +298,7 @@ tags:
 - Research Tools
 - cognitive-analytics
 - Health Data
+- OAuth
 - Authentication
 website: https://www.neurable.com/
 ---

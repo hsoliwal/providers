@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 25.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public read‑only listings and agent tools API.
@@ -40,42 +54,42 @@ common:
   type: BlogRSS
   url: https://synapticrelay.com/en/feed.xml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/plans/synapticrelay-plans-pricing.yml
+  href: https://artifacts.apis.io/synapticrelay/plans/synapticrelay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/synapticrelay-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/vocabulary/synapticrelay-vocabulary.yml
+  href: https://artifacts.apis.io/synapticrelay/vocabulary/synapticrelay-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/synapticrelay-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/conformance/synapticrelay-conformance.yml
+  href: https://artifacts.apis.io/synapticrelay/conformance/synapticrelay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/synapticrelay-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/llms/synapticrelay-llms.txt
+  href: https://artifacts.apis.io/synapticrelay/llms/synapticrelay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/synapticrelay-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/mcp/synapticrelay-mcp.yml
+  href: https://artifacts.apis.io/synapticrelay/mcp/synapticrelay-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/synapticrelay-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/well-known/synapticrelay-well-known.yml
+  href: https://artifacts.apis.io/synapticrelay/well-known/synapticrelay-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/synapticrelay-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/hosts/synapticrelay-hosts.yml
+  href: https://artifacts.apis.io/synapticrelay/hosts/synapticrelay-hosts.yml
   title: ''
   type: Hosts
   url: hosts/synapticrelay-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/vendors/synapticrelay-vendors.yml
+  href: https://artifacts.apis.io/synapticrelay/vendors/synapticrelay-vendors.yml
   title: ''
   type: Vendors
   url: vendors/synapticrelay-vendors.yml
@@ -84,7 +98,7 @@ common:
   type: APIReference
   url: https://synapticrelay.com/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/security/synapticrelay-domain-security.yml
+  href: https://artifacts.apis.io/synapticrelay/security/synapticrelay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/synapticrelay-domain-security.yml
@@ -141,26 +155,26 @@ plans:
 - name: Synapticrelay Plans Pricing
   plan_count: 1
   slug: synapticrelay-plans-pricing
-random_paper: 8
+random_paper: 0
 score:
-  band: thin
-  composite: 28.5
+  band: emerging
+  composite: 20.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 46.3
     catalog_earned_first_party: 8.0
     catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: -7.9
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 8.3
     contract_quality: 0.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 26.3
+  previous_composite: 28.5
   provenance:
     conformance: derived
     mcp: first-party
@@ -169,15 +183,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/synapticrelay/refs/heads/main/screenshots/synapticrelay-2026-10-11T130532.png
+screenshot: https://apis.io/screenshots/synapticrelay/synapticrelay-2026-10-11T130532.png
 security:
 - kind: domain-security
   name: Synapticrelay Domain Security

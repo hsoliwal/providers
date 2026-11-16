@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   - '{''url'': ''https://nonamesecurity.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.akamai.com/products/api-security — a different registrable domain (nonamesecurity.com -> akamai.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: The Noname API Security Platform provides comprehensive API security through discovery, posture management, runtime protection, and active testing. It discovers all APIs across the organization, detec
@@ -52,17 +56,17 @@ apis:
 artifact_total: 8
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/noname-security/refs/heads/main/plans/noname-security-plans-pricing.yml
+  href: https://artifacts.apis.io/noname-security/plans/noname-security-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/noname-security-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/noname-security/refs/heads/main/rate-limits/noname-security-rate-limits.yml
+  href: https://artifacts.apis.io/noname-security/rate-limits/noname-security-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/noname-security-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/noname-security/refs/heads/main/finops/noname-security-finops.yml
+  href: https://artifacts.apis.io/noname-security/finops/noname-security-finops.yml
   title: ''
   type: FinOps
   url: finops/noname-security-finops.yml
@@ -71,7 +75,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/akamai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/noname-security/refs/heads/main/security/noname-security-domain-security.yml
+  href: https://artifacts.apis.io/noname-security/security/noname-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/noname-security-domain-security.yml
@@ -121,7 +125,7 @@ finops:
 - has_sources: false
   method: generated
   name: Noname Security Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: noname-security-finops
   template: true
@@ -139,7 +143,7 @@ plans:
 - name: Noname Security Plans Pricing
   plan_count: 3
   slug: noname-security-plans-pricing
-random_paper: 9
+random_paper: 11
 rate_limits:
 - limit_count: 5
   name: Noname Security Rate Limits
@@ -148,13 +152,13 @@ score:
   band: minimal
   composite: 9.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 14.5
     contract_governance: 0.0
@@ -162,21 +166,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 11.1
+  previous_composite: 9.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/noname-security/refs/heads/main/screenshots/noname-security-2026-06-20T190402.png
+screenshot: https://apis.io/screenshots/noname-security/noname-security-2026-06-20T190402.png
 security:
 - kind: domain-security
   name: Noname Security Domain Security

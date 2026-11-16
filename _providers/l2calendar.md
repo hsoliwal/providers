@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Agent-native content surface exposing machine-readable summaries via llms.txt and llms-full.txt for AI assistants and crawlers to help players find Lineage 2 servers.
@@ -36,12 +50,12 @@ common:
   type: Website
   url: https://l2calendar.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/l2calendar/refs/heads/main/security/l2calendar-domain-security.yml
+  href: https://artifacts.apis.io/l2calendar/security/l2calendar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/l2calendar-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/l2calendar/refs/heads/main/plans/l2calendar-plans-pricing.yml
+  href: https://artifacts.apis.io/l2calendar/plans/l2calendar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/l2calendar-plans-pricing.yml
@@ -87,18 +101,18 @@ plans:
 - name: L2Calendar Plans Pricing
   plan_count: 5
   slug: l2calendar-plans-pricing
-random_paper: 16
+random_paper: 0
 score:
   band: emerging
   composite: 16.1
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 41.0
     catalog_earned_first_party: 12.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 55.3
     contract_governance: 0.0
@@ -106,21 +120,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 58.9
     operational_transparency: 0.0
-  previous_composite: 16.0
+  previous_composite: 16.1
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/l2calendar/refs/heads/main/screenshots/l2calendar-2026-10-11T110303.png
+screenshot: https://apis.io/screenshots/l2calendar/l2calendar-2026-10-11T110303.png
 security:
 - kind: domain-security
   name: L2Calendar Domain Security
@@ -133,7 +147,7 @@ tags:
 - Game Servers
 - Gaming
 - server-listing
-- llms-txt
+- Llms.txt
 - agent-native-content
 website: https://l2calendar.com
 ---

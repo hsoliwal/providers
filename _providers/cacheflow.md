@@ -1,15 +1,15 @@
 ---
 access_model:
-  confidence: high
-  label: Public contract, retired runtime
+  confidence: low
+  label: Unknown
   onboarding: unknown
   pricing: unknown
-  public: true
+  public: false
   source:
   - authentication
-  - lifecycle
-  - plans
-  - '{''url'': ''http://www.getcacheflow.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.hubspot.com/products/revenue/cpq — a different registrable domain (getcacheflow.com -> hubspot.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 25.3
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://api.getcacheflow.com
   baseurl_source: declared
@@ -324,7 +327,7 @@ apis:
   description: The Webhooks API from Cacheflow — 6 operation(s) for webhooks.
   name: Cacheflow Webhooks API
   slug: cacheflow-webhooks-api
-artifact_total: 62
+artifact_total: 67
 asyncapis:
 - description: ''
   name: Cacheflow Webhooks
@@ -335,7 +338,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/hubspot/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/capabilities/cacheflow-capability-edges.yml
+  href: https://artifacts.apis.io/cacheflow/capabilities/cacheflow-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cacheflow-capability-edges.yml
@@ -364,87 +367,87 @@ common:
   type: GitHubOrganization
   url: https://github.com/getcacheflow
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/openapi/_original/cacheflow-api-openapi.yml
+  href: https://artifacts.apis.io/cacheflow/openapi/_original/cacheflow-api-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/cacheflow-api-openapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/llms/cacheflow-llms.txt
+  href: https://artifacts.apis.io/cacheflow/llms/cacheflow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cacheflow-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/authentication/cacheflow-authentication.yml
+  href: https://artifacts.apis.io/cacheflow/authentication/cacheflow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cacheflow-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/conventions/cacheflow-conventions.yml
+  href: https://artifacts.apis.io/cacheflow/conventions/cacheflow-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cacheflow-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/errors/cacheflow-error-codes.yml
+  href: https://artifacts.apis.io/cacheflow/errors/cacheflow-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/cacheflow-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/data-model/cacheflow-data-model.yml
+  href: https://artifacts.apis.io/cacheflow/data-model/cacheflow-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cacheflow-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/lifecycle/cacheflow-lifecycle.yml
+  href: https://artifacts.apis.io/cacheflow/lifecycle/cacheflow-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cacheflow-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/conformance/cacheflow-conformance.yml
+  href: https://artifacts.apis.io/cacheflow/conformance/cacheflow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cacheflow-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/asyncapi/cacheflow-webhooks.yml
+  href: https://artifacts.apis.io/cacheflow/asyncapi/cacheflow-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cacheflow-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/sandbox/cacheflow-sandbox.yml
+  href: https://artifacts.apis.io/cacheflow/sandbox/cacheflow-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cacheflow-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/packages/cacheflow-packages.yml
+  href: https://artifacts.apis.io/cacheflow/packages/cacheflow-packages.yml
   title: ''
   type: Packages
   url: packages/cacheflow-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/plans/cacheflow-plans-pricing.yml
+  href: https://artifacts.apis.io/cacheflow/plans/cacheflow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cacheflow-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/rate-limits/cacheflow-rate-limits.yml
+  href: https://artifacts.apis.io/cacheflow/rate-limits/cacheflow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cacheflow-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/mcp/cacheflow-mcp.yml
+  href: https://artifacts.apis.io/cacheflow/mcp/cacheflow-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cacheflow-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cacheflow/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/overlays/cacheflow-api-overlay.yaml
+  href: https://artifacts.apis.io/cacheflow/overlays/cacheflow-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cacheflow-api-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/security/cacheflow-domain-security.yml
+  href: https://artifacts.apis.io/cacheflow/security/cacheflow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cacheflow-domain-security.yml
@@ -460,7 +463,7 @@ network: true
 overview: 'Cacheflow publishes 57 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Addresses API, Approval Groups API, and 54 more. Tagged areas include Company, Fintech, Billing, Subscription, and CPQ.
 
 
-  The Cacheflow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Cacheflow catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Cacheflow''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 20 more developer resources.'
@@ -468,36 +471,49 @@ plans:
 - name: Cacheflow Plans Pricing
   plan_count: 0
   slug: cacheflow-plans-pricing
-random_paper: 16
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Cacheflow Rate Limits
   slug: cacheflow-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Cacheflow API Rules
+  rule_count: 40
+  severity_counts:
+    error: 28
+    hint: 0
+    info: 1
+    warn: 11
+  slug: cacheflow-rules
 score:
   band: thin
-  composite: 30.4
+  composite: 36.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 4.7
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 44.8
-    developer_ergonomics: 39.9
-    discoverability: 78.6
+    contract_governance: 18.2
+    contract_quality: 48.6
+    developer_ergonomics: 58.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 29.8
+  previous_composite: 31.5
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 57
     mcp: derived
     skills: derived
@@ -507,13 +523,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/cacheflow/refs/heads/main/screenshots/cacheflow-2026-07-25T204205.png
+screenshot: https://apis.io/screenshots/cacheflow/cacheflow-2026-07-25T204205.png
 security:
 - kind: authentication
   name: Cacheflow Authentication
@@ -523,6 +539,16 @@ security:
   name: Cacheflow Domain Security
   slug: cacheflow-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Create a customer, build a proposal, and get it accepted
+  slug: cacheflow-quote-to-cash
+- name: Change an existing subscription
+  slug: cacheflow-subscription-change
+- name: Load usage onto a subscription and invoice it
+  slug: cacheflow-usage-billing
+- name: Subscribe to Cacheflow events with webhooks
+  slug: cacheflow-webhook-subscriptions
 slug: cacheflow
 tags:
 - Company

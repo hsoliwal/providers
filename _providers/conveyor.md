@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-10-17'
+  score: 38.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.conveyor.com
@@ -31,24 +49,24 @@ apis:
   description: The Single Question API from Conveyor — 1 operation(s) for single question.
   name: Conveyor Single Question API
   slug: conveyor-single-question-api
-artifact_total: 8
+artifact_total: 9
 asyncapis:
 - description: ''
   name: Conveyor Webhooks
   slug: conveyor-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/plans/conveyor-plans-pricing.yml
+  href: https://artifacts.apis.io/conveyor/plans/conveyor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/conveyor-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/rules/conveyor-rules.yml
+  href: https://artifacts.apis.io/conveyor/rules/conveyor-rules.yml
   title: ''
   type: Spectral
   url: rules/conveyor-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/asyncapi/conveyor-webhooks.yml
+  href: https://artifacts.apis.io/conveyor/asyncapi/conveyor-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/conveyor-webhooks.yml
@@ -57,42 +75,42 @@ common:
   type: Compliance
   url: https://trust.conveyor.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/authentication/conveyor-authentication.yml
+  href: https://artifacts.apis.io/conveyor/authentication/conveyor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/conveyor-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/conformance/conveyor-conformance.yml
+  href: https://artifacts.apis.io/conveyor/conformance/conveyor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/conveyor-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/llms/conveyor-llms.txt
+  href: https://artifacts.apis.io/conveyor/llms/conveyor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/conveyor-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/mcp/conveyor-mcp.yml
+  href: https://artifacts.apis.io/conveyor/mcp/conveyor-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/conveyor-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/well-known/conveyor-status-security.txt
+  href: https://artifacts.apis.io/conveyor/well-known/conveyor-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/conveyor-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/well-known/conveyor-well-known.yml
+  href: https://artifacts.apis.io/conveyor/well-known/conveyor-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/conveyor-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/hosts/conveyor-hosts.yml
+  href: https://artifacts.apis.io/conveyor/hosts/conveyor-hosts.yml
   title: ''
   type: Hosts
   url: hosts/conveyor-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/vendors/conveyor-vendors.yml
+  href: https://artifacts.apis.io/conveyor/vendors/conveyor-vendors.yml
   title: ''
   type: Vendors
   url: vendors/conveyor-vendors.yml
@@ -125,12 +143,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/conveyor
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/security/conveyor-trust-center.yml
+  href: https://artifacts.apis.io/conveyor/security/conveyor-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/conveyor-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conveyor/refs/heads/main/security/conveyor-domain-security.yml
+  href: https://artifacts.apis.io/conveyor/security/conveyor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/conveyor-domain-security.yml
@@ -164,6 +182,14 @@ coverage:
   state: unreadable
 created: '2026-10-10'
 description: Conveyor provides an AI‑powered platform that automates security questionnaire responses, trust‑center management, and RFP workflows for enterprise teams. By combining large‑language models with a curated knowledge base, Conveyor helps security, compliance, and sales organizations accelerate reviews, improve accuracy, and reduce manual effort. The solution includes a Trust Center, AI‑driven questionnaire automation, analytics, and integrations with popular SaaS tools, delivering a secure, scalable, and customizable experience for high‑stakes customer interactions.
+finops:
+- has_sources: true
+  method: derived
+  name: Conveyor Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: conveyor-finops
+  template: false
 image: https://cdn.prod.website-files.com/696e25579726c96825c6d025/699c0c6c8d3725bc4a835181_conveyor-og.png
 layout: provider
 mcp_servers:
@@ -183,9 +209,9 @@ overview: 'Conveyor is listed with 1 API on the [APIs.io](https://apis.io/) netw
   Conveyor''s developer surface includes authentication, changelog, API reference, getting-started guide, documentation, engineering blog, pricing, and 19 more developer resources.'
 plans:
 - name: Conveyor Plans Pricing
-  plan_count: 3
+  plan_count: 2
   slug: conveyor-plans-pricing
-random_paper: 5
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -200,22 +226,24 @@ rules:
     warn: 1
   slug: conveyor-rules
 score:
-  band: developing
-  composite: 47.3
+  band: thin
+  composite: 35.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 53.5
-    catalog_earned_first_party: 12.0
-    catalog_gap: 61.5
+    artifact_dirs: 18
+    catalog_earned: 52.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.0
   facets:
-    access_clarity: 78.9
+    access_clarity: 56.6
     contract_governance: 18.2
     contract_quality: 19.8
-    developer_ergonomics: 42.9
+    developer_ergonomics: 27.4
     discoverability: 75.0
-    operational_transparency: 55.3
+    operational_transparency: 31.6
+  previous_composite: 46.8
   provenance:
     conformance: derived
     contracts:
@@ -229,12 +257,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/conveyor/conveyor-2026-11-03T125239.png
 security:
 - kind: authentication
   name: Conveyor Authentication

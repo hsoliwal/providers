@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Zippin Gateway is Zippin's integration/API framework for its checkout-free store platform — the surface retailers and partners use to connect payment gateways, loyalty and gift providers, campus c
@@ -32,7 +46,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/security/zippin-domain-security.yml
+  href: https://artifacts.apis.io/zippin/security/zippin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zippin-domain-security.yml
@@ -85,32 +99,32 @@ common:
   type: Newsroom
   url: https://www.getzippin.com/press-and-resources
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/plans/zippin-plans-pricing.yml
+  href: https://artifacts.apis.io/zippin/plans/zippin-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zippin-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/rate-limits/zippin-rate-limits.yml
+  href: https://artifacts.apis.io/zippin/rate-limits/zippin-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zippin-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/lifecycle/zippin-lifecycle.yml
+  href: https://artifacts.apis.io/zippin/lifecycle/zippin-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zippin-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/conventions/zippin-conventions.yml
+  href: https://artifacts.apis.io/zippin/conventions/zippin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zippin-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/packages/zippin-packages.yml
+  href: https://artifacts.apis.io/zippin/packages/zippin-packages.yml
   title: ''
   type: Packages
   url: packages/zippin-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/llms/zippin-llms.txt
+  href: https://artifacts.apis.io/zippin/llms/zippin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zippin-llms.txt
@@ -146,7 +160,7 @@ plans:
 - name: Zippin Plans Pricing
   plan_count: 0
   slug: zippin-plans-pricing
-random_paper: 6
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Zippin Rate Limits
@@ -155,7 +169,7 @@ score:
   band: emerging
   composite: 15.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -183,14 +197,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 11.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/screenshots/zippin-2026-10-11T195129.png
+screenshot: https://apis.io/screenshots/zippin/zippin-2026-10-11T195129.png
 security:
 - kind: domain-security
   name: Zippin Domain Security

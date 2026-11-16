@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 35.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -214,79 +220,79 @@ apis:
   description: The Transactions API from Secure Trust Bank — 2 operation(s) for transactions.
   name: Secure Trust Bank Transactions API
   slug: secure-trust-bank-transactions-api
-artifact_total: 39
+artifact_total: 43
 collections:
 - collection_type: open
   name: Open Data API
   slug: open-obie-open-data-standard
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/capabilities/secure-trust-bank-capability-edges.yml
+  href: https://artifacts.apis.io/secure-trust-bank/capabilities/secure-trust-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/secure-trust-bank-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/overlays/secure-trust-bank-open-data-overlay.yaml
+  href: https://artifacts.apis.io/secure-trust-bank/overlays/secure-trust-bank-open-data-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/secure-trust-bank-open-data-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/overlays/secure-trust-bank-account-info-overlay.yaml
+  href: https://artifacts.apis.io/secure-trust-bank/overlays/secure-trust-bank-account-info-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/secure-trust-bank-account-info-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/overlays/secure-trust-bank-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/secure-trust-bank/overlays/secure-trust-bank-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/secure-trust-bank-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/overlays/secure-trust-bank-confirmation-of-funds-overlay.yaml
+  href: https://artifacts.apis.io/secure-trust-bank/overlays/secure-trust-bank-confirmation-of-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/secure-trust-bank-confirmation-of-funds-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/agentic-access/secure-trust-bank-agentic-access.yml
+  href: https://artifacts.apis.io/secure-trust-bank/agentic-access/secure-trust-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/secure-trust-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/security/secure-trust-bank-domain-security.yml
+  href: https://artifacts.apis.io/secure-trust-bank/security/secure-trust-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/secure-trust-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/scopes/secure-trust-bank-scopes.yml
+  href: https://artifacts.apis.io/secure-trust-bank/scopes/secure-trust-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/secure-trust-bank-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/authentication/secure-trust-bank-authentication.yml
+  href: https://artifacts.apis.io/secure-trust-bank/authentication/secure-trust-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/secure-trust-bank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/conventions/secure-trust-bank-conventions.yml
+  href: https://artifacts.apis.io/secure-trust-bank/conventions/secure-trust-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/secure-trust-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/conventions/secure-trust-bank-conventions.yml
+  href: https://artifacts.apis.io/secure-trust-bank/conventions/secure-trust-bank-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/secure-trust-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/errors/secure-trust-bank-problem-types.yml
+  href: https://artifacts.apis.io/secure-trust-bank/errors/secure-trust-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/secure-trust-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/conformance/secure-trust-bank-conformance.yml
+  href: https://artifacts.apis.io/secure-trust-bank/conformance/secure-trust-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/secure-trust-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/lifecycle/secure-trust-bank-lifecycle.yml
+  href: https://artifacts.apis.io/secure-trust-bank/lifecycle/secure-trust-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/secure-trust-bank-lifecycle.yml
@@ -295,27 +301,27 @@ common:
   type: Deprecation
   url: https://standards.openbanking.org.uk/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/data-model/secure-trust-bank-data-model.yml
+  href: https://artifacts.apis.io/secure-trust-bank/data-model/secure-trust-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/secure-trust-bank-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/mcp/secure-trust-bank-mcp.yml
+  href: https://artifacts.apis.io/secure-trust-bank/mcp/secure-trust-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/secure-trust-bank-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/mcp/secure-trust-bank-tool-crosswalk.yml
+  href: https://artifacts.apis.io/secure-trust-bank/mcp/secure-trust-bank-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/secure-trust-bank-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/secure-trust-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/llms/secure-trust-bank-llms.txt
+  href: https://artifacts.apis.io/secure-trust-bank/llms/secure-trust-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/secure-trust-bank-llms.txt
@@ -367,8 +373,24 @@ network: true
 overview: 'Secure Trust Bank publishes 34 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
+  The Secure Trust Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Secure Trust Bank''s developer surface includes authentication, engineering blog, support, and 26 more developer resources.'
-random_paper: 11
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Secure Trust Bank API Rules
+  rule_count: 69
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 8
+    warn: 7
+  slug: secure-trust-bank-rules
 scopes:
 - name: Secure Trust Bank Scopes
   scope_count: 3
@@ -376,18 +398,18 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 36.2
+  composite: 37.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 35.0
+    artifact_dirs: 23
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.9
     developer_ergonomics: 37.5
     discoverability: 69.6
@@ -400,7 +422,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 36.2
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -421,13 +443,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 44.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/secure-trust-bank/refs/heads/main/screenshots/secure-trust-bank-2026-09-02T154718.png
+screenshot: https://apis.io/screenshots/secure-trust-bank/secure-trust-bank-2026-09-02T154718.png
 security:
 - kind: authentication
   name: Secure Trust Bank Authentication
@@ -437,6 +459,14 @@ security:
   name: Secure Trust Bank Domain Security
   slug: secure-trust-bank-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Confirm funds availability (CBPII)
+  slug: secure-trust-bank-confirm-funds
+- name: Initiate a domestic payment (PIS)
+  slug: secure-trust-bank-initiate-domestic-payment
+- name: Read account information with consent (AIS)
+  slug: secure-trust-bank-read-account-information
 slug: secure-trust-bank
 tags:
 - Financial Services

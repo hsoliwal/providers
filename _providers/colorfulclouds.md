@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.2
-  scored_at: '2026-10-17'
+  score: 24.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -74,11 +81,8 @@ apis:
   description: Combined weather envelope returning realtime, minutely, hourly, daily, and alerts in one call.
   name: ColorfulClouds Weather API
   slug: colorfulclouds-weather-api
-artifact_total: 154
+artifact_total: 153
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Caiyun Weather Air Quality API
   slug: open-colorfulclouds-air-quality-api
@@ -102,17 +106,17 @@ collections:
   slug: open-colorfulclouds-weather-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/agentic-access/colorfulclouds-agentic-access.yml
+  href: https://artifacts.apis.io/colorfulclouds/agentic-access/colorfulclouds-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/colorfulclouds-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/security/colorfulclouds-domain-security.yml
+  href: https://artifacts.apis.io/colorfulclouds/security/colorfulclouds-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/colorfulclouds-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/authentication/colorfulclouds-authentication.yml
+  href: https://artifacts.apis.io/colorfulclouds/authentication/colorfulclouds-authentication.yml
   title: ''
   type: Authentication
   url: authentication/colorfulclouds-authentication.yml
@@ -149,32 +153,32 @@ common:
   type: Tools
   url: https://github.com/caiyunapp/cyeva
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/plans/colorfulclouds-plans-pricing.yml
+  href: https://artifacts.apis.io/colorfulclouds/plans/colorfulclouds-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/colorfulclouds-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/rate-limits/colorfulclouds-rate-limits.yml
+  href: https://artifacts.apis.io/colorfulclouds/rate-limits/colorfulclouds-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/colorfulclouds-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/finops/colorfulclouds-finops.yml
+  href: https://artifacts.apis.io/colorfulclouds/finops/colorfulclouds-finops.yml
   title: ''
   type: FinOps
   url: finops/colorfulclouds-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/rules/colorfulclouds-rules.yml
+  href: https://artifacts.apis.io/colorfulclouds/rules/colorfulclouds-rules.yml
   title: ''
   type: Rules
   url: rules/colorfulclouds-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/vocabulary/colorfulclouds-vocabulary.yml
+  href: https://artifacts.apis.io/colorfulclouds/vocabulary/colorfulclouds-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/colorfulclouds-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/json-ld/colorfulclouds-context.jsonld
+  href: https://artifacts.apis.io/colorfulclouds/json-ld/colorfulclouds-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/colorfulclouds-context.jsonld
@@ -325,7 +329,7 @@ finops:
 image: https://caiyunapp.com/static/img/logo.png
 json_schemas:
 - name: AirQualityRealtimeResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-air-quality-realtime-response
 - name: AirQualityRealtime
   property_count: 8
@@ -337,7 +341,7 @@ json_schemas:
   property_count: 15
   slug: caiyun-weather-alert-content-item
 - name: AlertResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-alert-response
 - name: Alert
   property_count: 3
@@ -373,7 +377,7 @@ json_schemas:
   property_count: 5
   slug: caiyun-weather-daily-precipitation-item
 - name: DailyResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-daily-response
 - name: Daily
   property_count: 21
@@ -406,7 +410,7 @@ json_schemas:
   property_count: 3
   slug: caiyun-weather-hourly-precipitation-item
 - name: HourlyResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-hourly-response
 - name: Hourly
   property_count: 13
@@ -421,7 +425,7 @@ json_schemas:
   property_count: 2
   slug: caiyun-weather-life-index-item
 - name: MinutelyResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-minutely-response
 - name: Minutely
   property_count: 6
@@ -439,7 +443,7 @@ json_schemas:
   property_count: 2
   slug: caiyun-weather-realtime-life-index
 - name: RealtimeResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-realtime-response
 - name: Realtime
   property_count: 13
@@ -451,7 +455,7 @@ json_schemas:
   property_count: 0
   slug: caiyun-weather-sky-con
 - name: WeatherResponse
-  property_count: 0
+  property_count: 1
   slug: caiyun-weather-weather-response
 - name: Wind
   property_count: 2
@@ -610,7 +614,7 @@ plans:
 - name: Colorfulclouds Plans Pricing
   plan_count: 3
   slug: colorfulclouds-plans-pricing
-random_paper: 2
+random_paper: 8
 rate_limits:
 - limit_count: 4
   name: Colorfulclouds Rate Limits
@@ -642,13 +646,13 @@ score:
   band: thin
   composite: 28.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 66.0
     catalog_earned_first_party: 0.0
     catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 27.3
@@ -663,7 +667,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 37.1
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     contracts:
@@ -677,14 +681,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/colorfulclouds/refs/heads/main/screenshots/colorfulclouds-2026-06-20T174759.png
+screenshot: https://apis.io/screenshots/colorfulclouds/colorfulclouds-2026-06-20T174759.png
 security:
 - kind: authentication
   name: Colorfulclouds Authentication

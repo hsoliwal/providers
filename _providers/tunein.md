@@ -1,12 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Free
   onboarding: unknown
-  pricing: unknown
+  pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'The TuneIn Platform API is a partner-facing REST API (OAuth 2.0) for embedding TuneIn''s full audio service into third-party devices and ecosystems. It exposes endpoints for categories, user profiles, '
@@ -67,9 +71,6 @@ apis:
 artifact_total: 17
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: TuneIn Streaming API (OPML/RadioTime) Browse.ashx API
   slug: open-tunein-browse-ashx-api
 - collection_type: open
@@ -90,7 +91,7 @@ common:
   type: Blog
   url: https://tunein.com/press/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tunein/refs/heads/main/security/tunein-domain-security.yml
+  href: https://artifacts.apis.io/tunein/security/tunein-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tunein-domain-security.yml
@@ -150,7 +151,7 @@ network: true
 overview: 'TuneIn publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Browse.ashx API, Describe.ashx API, Playing.ashx API, and 3 more. Tagged areas include Radio, Internet Radio, Podcasts, Streaming Audio, and Sports Audio.
 
 
-  The TuneIn catalog on APIs.io includes 1 JSON-LD context.
+  The TuneIn catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   TuneIn''s developer surface includes engineering blog, status page, and 8 more developer resources.'
@@ -158,30 +159,43 @@ plans:
 - name: Plans
   plan_count: 4
   slug: plans
-random_paper: 21
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Rate Limits
   slug: rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: TuneIn API Rules
+  rule_count: 49
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 2
+    warn: 1
+  slug: tunein-rules
 score:
-  band: emerging
-  composite: 24.6
+  band: thin
+  composite: 26.2
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 45.0
+    artifact_dirs: 15
+    catalog_earned: 49.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.8
     developer_ergonomics: 21.4
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 29.7
+  previous_composite: 26.2
   provenance:
     contracts:
       callable: 100.0
@@ -194,14 +208,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/tunein/refs/heads/main/screenshots/tunein-2026-06-20T195830.png
+screenshot: https://apis.io/screenshots/tunein/tunein-2026-06-20T195830.png
 security:
 - kind: domain-security
   name: Tunein Domain Security

@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.0
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 52.9
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
@@ -79,11 +82,8 @@ apis:
   description: Articles, role model stories, and recipes
   name: Thrive Global Stories API
   slug: thrive-global-stories-api
-artifact_total: 21
+artifact_total: 24
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Thrive Global Partner audio experiences API
   slug: open-thrive-global-audio-experiences-api
@@ -110,7 +110,12 @@ collections:
   slug: open-thrive-global-stories-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/overlays/thrive-global-partner-api-overlay.yaml
+  href: https://artifacts.apis.io/thrive-global/capabilities/thrive-global-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/thrive-global-capability-edges.yml
+- group: other
+  href: https://artifacts.apis.io/thrive-global/overlays/thrive-global-partner-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/thrive-global-partner-api-overlay.yaml
@@ -163,47 +168,47 @@ common:
   type: StatusPage
   url: https://partners-api.thriveglobal.com/status
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/lifecycle/thrive-global-lifecycle.yml
+  href: https://artifacts.apis.io/thrive-global/lifecycle/thrive-global-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/thrive-global-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/mcp/thrive-global-mcp.yml
+  href: https://artifacts.apis.io/thrive-global/mcp/thrive-global-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/thrive-global-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/llms/thrive-global-llms.txt
+  href: https://artifacts.apis.io/thrive-global/llms/thrive-global-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/thrive-global-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/authentication/thrive-global-authentication.yml
+  href: https://artifacts.apis.io/thrive-global/authentication/thrive-global-authentication.yml
   title: ''
   type: Authentication
   url: authentication/thrive-global-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/conventions/thrive-global-conventions.yml
+  href: https://artifacts.apis.io/thrive-global/conventions/thrive-global-conventions.yml
   title: ''
   type: Conventions
   url: conventions/thrive-global-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/sandbox/thrive-global-sandbox.yml
+  href: https://artifacts.apis.io/thrive-global/sandbox/thrive-global-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/thrive-global-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/errors/thrive-global-problem-types.yml
+  href: https://artifacts.apis.io/thrive-global/errors/thrive-global-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/thrive-global-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/data-model/thrive-global-data-model.yml
+  href: https://artifacts.apis.io/thrive-global/data-model/thrive-global-data-model.yml
   title: ''
   type: DataModel
   url: data-model/thrive-global-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/conformance/thrive-global-conformance.yml
+  href: https://artifacts.apis.io/thrive-global/conformance/thrive-global-conformance.yml
   title: ''
   type: Conformance
   url: conformance/thrive-global-conformance.yml
@@ -212,17 +217,17 @@ common:
   type: Compliance
   url: https://thriveglobal.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/security/thrive-global-trust-center.yml
+  href: https://artifacts.apis.io/thrive-global/security/thrive-global-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/thrive-global-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/security/thrive-global-domain-security.yml
+  href: https://artifacts.apis.io/thrive-global/security/thrive-global-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/thrive-global-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/thrive-global/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -241,33 +246,49 @@ network: true
 overview: 'Thrive Global publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including audio experiences API, Auth API, Content API, and 5 more. Tagged areas include Company, Consumer, Wellness, Wellbeing, and Behavior Change.
 
 
-  Thrive Global''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 19 more developer resources.'
+  The Thrive Global catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Thrive Global''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 20 more developer resources.'
 random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Thrive Global API Rules
+  rule_count: 66
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 5
+  slug: thrive-global-rules
 score:
-  band: thin
-  composite: 38.0
+  band: developing
+  composite: 41.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 43.4
-    contract_governance: 4.5
-    contract_quality: 51.9
+    contract_governance: 18.2
+    contract_quality: 57.7
     developer_ergonomics: 28.0
     discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 38.0
+  previous_composite: 39.7
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: first-party
     skills: derived
@@ -277,13 +298,13 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/thrive-global/refs/heads/main/screenshots/thrive-global-2026-08-17T082348.png
+screenshot: https://apis.io/screenshots/thrive-global/thrive-global-2026-08-17T082348.png
 security:
 - kind: authentication
   name: Thrive Global Authentication
@@ -297,6 +318,14 @@ security:
   name: Thrive Global Trust Center
   slug: thrive-global-trust-center
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR
+skill_count: 3
+skills:
+- name: Authenticate and browse Thrive Resets
+  slug: thrive-global-authenticate-and-browse-resets
+- name: Search the Thrive content library
+  slug: thrive-global-search-wellbeing-content
+- name: Serve a daily wellbeing content mix
+  slug: thrive-global-serve-daily-wellbeing-content
 slug: thrive-global
 tags:
 - Company

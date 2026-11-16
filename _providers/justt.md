@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 50.2
-  scored_at: '2026-10-17'
+  score: 52.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 13
@@ -106,7 +109,7 @@ arazzos:
 - description: 'List open chargebacks, enrich one with additional merchant data, and override whether Justt should represent it. Acceptance is deliberately NOT part of this workflow — it is irreversible and requires '
   name: Triage Justt chargebacks and set the representment decision
   slug: justt-triage-and-decide
-artifact_total: 21
+artifact_total: 27
 asyncapis:
 - description: ''
   name: Justt Webhook Events
@@ -117,22 +120,22 @@ common:
   type: BlogRSS
   url: https://justt.ai/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/capabilities/justt-capability-edges.yml
+  href: https://artifacts.apis.io/justt/capabilities/justt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/justt-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/agentic-access/justt-agentic-access.yml
+  href: https://artifacts.apis.io/justt/agentic-access/justt-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/justt-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/security/justt-domain-security.yml
+  href: https://artifacts.apis.io/justt/security/justt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/justt-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/authentication/justt-authentication.yml
+  href: https://artifacts.apis.io/justt/authentication/justt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/justt-authentication.yml
@@ -189,47 +192,47 @@ common:
   type: Compliance
   url: https://trust.justt.ai/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/well-known/justt-well-known.yml
+  href: https://artifacts.apis.io/justt/well-known/justt-well-known.yml
   title: ''
   type: APICatalog
   url: well-known/justt-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/well-known/justt-well-known.yml
+  href: https://artifacts.apis.io/justt/well-known/justt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/justt-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/mcp/justt-mcp.yml
+  href: https://artifacts.apis.io/justt/mcp/justt-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/justt-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/mcp/justt-tool-crosswalk.yml
+  href: https://artifacts.apis.io/justt/mcp/justt-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/justt-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/llms/justt-llms.txt
+  href: https://artifacts.apis.io/justt/llms/justt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/justt-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/overlays/justt-rest-api-overlay.yaml
+  href: https://artifacts.apis.io/justt/overlays/justt-rest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/justt-rest-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/conformance/justt-conformance.yml
+  href: https://artifacts.apis.io/justt/conformance/justt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/justt-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/errors/justt-problem-types.yml
+  href: https://artifacts.apis.io/justt/errors/justt-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/justt-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/lifecycle/justt-lifecycle.yml
+  href: https://artifacts.apis.io/justt/lifecycle/justt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/justt-lifecycle.yml
@@ -238,52 +241,60 @@ common:
   type: Deprecation
   url: https://developers.justt.ai/docs/legacy-api-to-rest-api-migration-guide
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/scopes/justt-scopes.yml
+  href: https://artifacts.apis.io/justt/scopes/justt-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/justt-scopes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/sandbox/justt-sandbox.yml
+  href: https://artifacts.apis.io/justt/sandbox/justt-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/justt-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/conventions/justt-conventions.yml
+  href: https://artifacts.apis.io/justt/conventions/justt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/justt-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/data-model/justt-data-model.yml
+  href: https://artifacts.apis.io/justt/data-model/justt-data-model.yml
   title: ''
   type: DataModel
   url: data-model/justt-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/asyncapi/justt-webhook-events.yml
+  href: https://artifacts.apis.io/justt/asyncapi/justt-webhook-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/justt-webhook-events.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/justt/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/plans/justt-plans-pricing.yml
+  href: https://artifacts.apis.io/justt/plans/justt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/justt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/rate-limits/justt-rate-limits.yml
+  href: https://artifacts.apis.io/justt/rate-limits/justt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/justt-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/arazzo/_index.yml
+  href: https://artifacts.apis.io/justt/arazzo/_index.yml
   title: ''
   type: Arazzo
   url: arazzo/_index.yml
 created: '2026-08-23'
 description: Justt is an AI-native chargeback management and dispute-representment platform for high-volume merchants. Its Dynamic Arguments engine assembles evidence-backed representment packages for card disputes across 30+ payment service providers (Stripe, Adyen, PayPal, Braintree, Checkout.com, Worldpay, Chase Paymentech, Nuvei and others), and it also handles pre-chargeback alerts from Ethoca, Verifi CDRN and RDR. Justt publishes a public developer portal at developers.justt.ai with three OpenAPI definitions — a REST API for chargebacks, transactions, evidence, files, merchants and integrations; a Pre-Chargeback Alerts API; and an OpenAPI 3.1 webhook-events specification covering eleven signed event types — plus an RFC 9727 /.well-known/api-catalog, an llms.txt documentation index, a sandbox environment, and a Vanta-hosted trust center.
+finops:
+- has_sources: true
+  method: derived
+  name: Justt Finops
+  primary_unit: ''
+  service_category: ''
+  slug: justt-finops
+  template: true
 image: https://justt.ai/wp-content/uploads/2025/03/blog-7-1.jpg
 layout: provider
 modified: '2026-10-06'
@@ -293,7 +304,7 @@ network: true
 overview: 'Justt publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chargebacks API, Data Subjects API, Evidence API, and 6 more. Tagged areas include Company, Payments, Chargebacks, Disputes, and Fraud Prevention.
 
 
-  The Justt catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Justt catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Justt''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, sandbox, and 30 more developer resources.'
@@ -301,35 +312,48 @@ plans:
 - name: Justt Plans Pricing
   plan_count: 0
   slug: justt-plans-pricing
-random_paper: 20
+random_paper: 18
 rate_limits:
 - limit_count: 1
   name: Justt Rate Limits
   slug: justt-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Justt API Rules
+  rule_count: 57
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 3
+    warn: 8
+  slug: justt-rules
 scopes:
 - name: Justt Scopes
   scope_count: 1
   slug: justt-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: developing
-  composite: 52.3
+  band: strong
+  composite: 57.7
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 45.0
+    artifact_dirs: 31
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.8
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 56.4
-    developer_ergonomics: 49.4
+    developer_ergonomics: 66.1
     discoverability: 75.0
-    operational_transparency: 48.7
-  previous_composite: 52.2
+    operational_transparency: 52.6
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -346,13 +370,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 33.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/justt/refs/heads/main/screenshots/justt-2026-09-02T150010.png
+screenshot: https://apis.io/screenshots/justt/justt-2026-09-02T150010.png
 security:
 - kind: authentication
   name: Justt Authentication
@@ -366,6 +390,16 @@ security:
   name: Justt Trust Center
   slug: justt-trust-center
   summary_line: SOC 2 Type II, ISO 27001, ISO 27017, ISO 27018
+skill_count: 4
+skills:
+- name: Receive and verify Justt webhooks
+  slug: justt-handle-webhooks
+- name: Submit evidence for a Justt chargeback
+  slug: justt-submit-evidence
+- name: Triage Justt chargebacks and set the fight/accept decision
+  slug: justt-triage-and-decide-disputes
+- name: Work Justt pre-chargeback alerts
+  slug: justt-work-pre-chargeback-alerts
 slug: justt
 tags:
 - Company

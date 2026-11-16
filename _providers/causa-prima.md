@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.8
-  scored_at: '2026-10-17'
+  score: 47.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -58,11 +65,8 @@ apis:
   description: The Scribo API from Causa Prima — 4 operation(s) for scribo.
   name: Causa Prima Scribo API
   slug: causa-prima-scribo-api
-artifact_total: 11
+artifact_total: 12
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Scribo Invoice Invoices API
   slug: open-causa-prima-invoices-api
@@ -74,7 +78,7 @@ collections:
   slug: open-causa-prima-scribo-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/capabilities/causa-prima-capability-edges.yml
+  href: https://artifacts.apis.io/causa-prima/capabilities/causa-prima-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/causa-prima-capability-edges.yml
@@ -115,82 +119,82 @@ common:
   type: Compliance
   url: https://scribo.causaprima.ai/compliance
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/openapi/_original/causa-prima-scribo-openapi.json
+  href: https://artifacts.apis.io/causa-prima/openapi/_original/causa-prima-scribo-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/causa-prima-scribo-openapi.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/llms/causa-prima-llms.txt
+  href: https://artifacts.apis.io/causa-prima/llms/causa-prima-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/causa-prima-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/mcp/causa-prima-mcp.yml
+  href: https://artifacts.apis.io/causa-prima/mcp/causa-prima-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/causa-prima-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/causa-prima/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/packages/causa-prima-packages.yml
+  href: https://artifacts.apis.io/causa-prima/packages/causa-prima-packages.yml
   title: ''
   type: Packages
   url: packages/causa-prima-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/cli/causa-prima-cli.yml
+  href: https://artifacts.apis.io/causa-prima/cli/causa-prima-cli.yml
   title: ''
   type: CLI
   url: cli/causa-prima-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/errors/causa-prima-problem-types.yml
+  href: https://artifacts.apis.io/causa-prima/errors/causa-prima-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/causa-prima-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/conventions/causa-prima-conventions.yml
+  href: https://artifacts.apis.io/causa-prima/conventions/causa-prima-conventions.yml
   title: ''
   type: Conventions
   url: conventions/causa-prima-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/conventions/causa-prima-conventions.yml
+  href: https://artifacts.apis.io/causa-prima/conventions/causa-prima-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/causa-prima-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/data-model/causa-prima-data-model.yml
+  href: https://artifacts.apis.io/causa-prima/data-model/causa-prima-data-model.yml
   title: ''
   type: DataModel
   url: data-model/causa-prima-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/conformance/causa-prima-conformance.yml
+  href: https://artifacts.apis.io/causa-prima/conformance/causa-prima-conformance.yml
   title: ''
   type: Conformance
   url: conformance/causa-prima-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/lifecycle/causa-prima-lifecycle.yml
+  href: https://artifacts.apis.io/causa-prima/lifecycle/causa-prima-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/causa-prima-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/overlays/causa-prima-scribo-overlay.yaml
+  href: https://artifacts.apis.io/causa-prima/overlays/causa-prima-scribo-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/causa-prima-scribo-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/security/causa-prima-domain-security.yml
+  href: https://artifacts.apis.io/causa-prima/security/causa-prima-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/causa-prima-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/agentic-access/causa-prima-agentic-access.yml
+  href: https://artifacts.apis.io/causa-prima/agentic-access/causa-prima-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/causa-prima-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/authentication/causa-prima-authentication.yml
+  href: https://artifacts.apis.io/causa-prima/authentication/causa-prima-authentication.yml
   title: ''
   type: Authentication
   url: authentication/causa-prima-authentication.yml
@@ -209,23 +213,39 @@ network: true
 overview: 'Causa Prima publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Invoices API, Jurisdictions API, and Scribo API. Tagged areas include Company, Artificial Intelligence, Fintech, E-Invoicing, and Invoicing.
 
 
+  The Causa Prima catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Causa Prima''s developer surface includes documentation, API reference, getting-started guide, CLI, authentication, and 21 more developer resources.'
-random_paper: 7
+random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Causa Prima API Rules
+  rule_count: 57
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 3
+    warn: 3
+  slug: causa-prima-rules
 score:
   band: developing
-  composite: 40.5
+  composite: 43.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 28.9
-    contract_governance: 18.2
-    contract_quality: 46.9
+    contract_governance: 31.8
+    contract_quality: 52.2
     developer_ergonomics: 64.3
     discoverability: 75.0
     operational_transparency: 2.6
@@ -237,14 +257,14 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 40.5
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: first-party
     skills: first-party
@@ -254,13 +274,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/causa-prima/refs/heads/main/screenshots/causa-prima-2026-07-25T204814.png
+screenshot: https://apis.io/screenshots/causa-prima/causa-prima-2026-07-25T204814.png
 security:
 - kind: authentication
   name: Causa Prima Authentication
@@ -270,6 +290,10 @@ security:
   name: Causa Prima Domain Security
   slug: causa-prima-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: scribo
+  slug: causa-prima-scribo
 slug: causa-prima
 tags:
 - Company

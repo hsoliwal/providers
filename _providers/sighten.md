@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://sighten.io'', ''status'': 301, ''note'': ''declared website redirects to https://www.goeverbright.com/ — a different registrable domain (sighten.io -> goeverbright.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -66,12 +70,12 @@ common:
   type: TrustCenter
   url: https://trust.goeverbright.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sighten/refs/heads/main/security/sighten-trust-center.yml
+  href: https://artifacts.apis.io/sighten/security/sighten-trust-center.yml
   title: ''
   type: Compliance
   url: security/sighten-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sighten/refs/heads/main/security/sighten-domain-security.yml
+  href: https://artifacts.apis.io/sighten/security/sighten-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sighten-domain-security.yml
@@ -87,7 +91,7 @@ overview: 'Sighten is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Sighten''s developer surface includes engineering blog, support, and 7 more developer resources.'
-random_paper: 6
+random_paper: 10
 score:
   band: emerging
   composite: 12.7
@@ -113,14 +117,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sighten/refs/heads/main/screenshots/sighten-2026-09-02T155424.png
+screenshot: https://apis.io/screenshots/sighten/sighten-2026-09-02T155424.png
 security:
 - kind: domain-security
   name: Sighten Domain Security

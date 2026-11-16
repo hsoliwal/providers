@@ -1,13 +1,16 @@
 ---
 access_model:
   confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.6
-  scored_at: '2026-10-17'
+  score: 37.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 63
   human_in_the_loop: 1
@@ -69,11 +75,6 @@ apis:
   description: The Billing API from Compresr — 10 operation(s) for billing.
   name: Compresr Billing API
   slug: compresr-billing-api
-- baseURL: https://api.compresr.ai
-  baseurl_source: declared
-  description: The Careers API from Compresr — 12 operation(s) for careers.
-  name: Compresr Careers API
-  slug: compresr-careers-api
 - baseURL: https://api.compresr.ai
   baseurl_source: declared
   description: The Compresr Platform API API from Compresr — 1 operation(s) for compresr platform api.
@@ -179,11 +180,8 @@ apis:
   description: The OAuth API from Compresr — 6 operation(s) for oauth.
   name: Compresr O Auth API
   slug: compresr-oauth-api
-artifact_total: 61
+artifact_total: 63
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Compresr Platform Admin API
   slug: open-compresr-admin-api
@@ -266,6 +264,10 @@ collections:
   name: Compresr Platform Admin Usage API
   slug: open-compresr-usage-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/compresr/overview
 - group: company
   title: ''
   type: BlogRSS
@@ -275,7 +277,7 @@ common:
   type: Website
   url: https://www.compresr.ai/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/capabilities/compresr-capability-edges.yml
+  href: https://artifacts.apis.io/compresr/capabilities/compresr-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/compresr-capability-edges.yml
@@ -324,112 +326,112 @@ common:
   type: ChangeLog
   url: https://compresr.ai/changelog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/llms/compresr-llms.txt
+  href: https://artifacts.apis.io/compresr/llms/compresr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/compresr-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/authentication/compresr-authentication.yml
+  href: https://artifacts.apis.io/compresr/authentication/compresr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/compresr-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/openapi/_original/compresr-openapi-original.json
+  href: https://artifacts.apis.io/compresr/openapi/_original/compresr-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/compresr-openapi-original.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/packages/compresr-packages.yml
+  href: https://artifacts.apis.io/compresr/packages/compresr-packages.yml
   title: ''
   type: Packages
   url: packages/compresr-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/packages/compresr-packages.yml
+  href: https://artifacts.apis.io/compresr/packages/compresr-packages.yml
   title: ''
   type: SDKs
   url: packages/compresr-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/cli/compresr-cli.yml
+  href: https://artifacts.apis.io/compresr/cli/compresr-cli.yml
   title: ''
   type: CLI
   url: cli/compresr-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/mcp/compresr-mcp.yml
+  href: https://artifacts.apis.io/compresr/mcp/compresr-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/compresr-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/compresr/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/conventions/compresr-conventions.yml
+  href: https://artifacts.apis.io/compresr/conventions/compresr-conventions.yml
   title: ''
   type: Conventions
   url: conventions/compresr-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/conventions/compresr-conventions.yml
+  href: https://artifacts.apis.io/compresr/conventions/compresr-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/compresr-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/errors/compresr-error-codes.yml
+  href: https://artifacts.apis.io/compresr/errors/compresr-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/compresr-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/lifecycle/compresr-lifecycle.yml
+  href: https://artifacts.apis.io/compresr/lifecycle/compresr-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/compresr-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/lifecycle/compresr-lifecycle.yml
+  href: https://artifacts.apis.io/compresr/lifecycle/compresr-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/compresr-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/conformance/compresr-conformance.yml
+  href: https://artifacts.apis.io/compresr/conformance/compresr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/compresr-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/data-model/compresr-data-model.yml
+  href: https://artifacts.apis.io/compresr/data-model/compresr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/compresr-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/sandbox/compresr-sandbox.yml
+  href: https://artifacts.apis.io/compresr/sandbox/compresr-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/compresr-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/security/compresr-domain-security.yml
+  href: https://artifacts.apis.io/compresr/security/compresr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/compresr-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/agentic-access/compresr-agentic-access.yml
+  href: https://artifacts.apis.io/compresr/agentic-access/compresr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/compresr-agentic-access.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/overlays/compresr-openapi-overlay.yaml
+  href: https://artifacts.apis.io/compresr/overlays/compresr-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/compresr-openapi-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/rate-limits/compresr-rate-limits.yml
+  href: https://artifacts.apis.io/compresr/rate-limits/compresr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/compresr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/plans/compresr-plans.yml
+  href: https://artifacts.apis.io/compresr/plans/compresr-plans.yml
   title: ''
   type: Plans
   url: plans/compresr-plans.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/finops/compresr-finops.yml
+  href: https://artifacts.apis.io/compresr/finops/compresr-finops.yml
   title: ''
   type: FinOps
   url: finops/compresr-finops.yml
@@ -449,46 +451,62 @@ modified: '2026-10-06'
 name: Compresr
 nav: Providers
 network: true
-overview: 'Compresr publishes 27 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Admin - Whitelist API, API Keys API, and 24 more. Tagged areas include LLM, Context Compression, Prompt Engineering, RAG, and AI Infrastructure.
+overview: 'Compresr publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Admin - Whitelist API, API Keys API, and 23 more. Tagged areas include LLM, Context Compression, Prompt Engineering, RAG, and AI Infrastructure.
 
 
-  Compresr''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, changelog, and 29 more developer resources.'
+  The Compresr catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Compresr''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, changelog, and 30 more developer resources.'
 plans:
 - name: Compresr Plans
-  plan_count: 2
+  plan_count: 1
   slug: compresr-plans
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 5
   name: Compresr Rate Limits
   slug: compresr-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Compresr API Rules
+  rule_count: 44
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 2
+    warn: 9
+  slug: compresr-rules
 score:
   band: strong
-  composite: 59.5
+  composite: 61.9
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 57.0
+    artifact_dirs: 33
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.6
   facets:
     access_clarity: 65.8
-    contract_governance: 4.5
-    contract_quality: 44.4
-    developer_ergonomics: 83.3
+    contract_governance: 18.2
+    contract_quality: 46.5
+    developer_ergonomics: 84.5
     discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 61.0
+  previous_composite: 61.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 27
+      marker_coverage: 49.1
+      total: 53
     mcp: derived
     skills: first-party
   regulatory:
@@ -497,13 +515,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/compresr/refs/heads/main/screenshots/compresr-2026-07-25T210203.png
+screenshot: https://apis.io/screenshots/compresr/compresr-2026-07-25T210203.png
 security:
 - kind: authentication
   name: Compresr Authentication
@@ -513,6 +531,14 @@ security:
   name: Compresr Domain Security
   slug: compresr-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 3
+skills:
+- name: compresr-compress-for-rag
+  slug: compresr-compress-for-rag
+- name: compresr-compress-tool-output
+  slug: compresr-compress-tool-output
+- name: compresr-setup
+  slug: compresr-setup
 slug: compresr
 tags:
 - LLM

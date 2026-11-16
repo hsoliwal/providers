@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.2
-  scored_at: '2026-10-17'
+  score: 19.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -79,11 +82,8 @@ apis:
   description: The Users API from Miriel — 3 operation(s) for users.
   name: Miriel Users API
   slug: miriel-users-api
-artifact_total: 18
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Miriel Context Engine Documents API
   slug: open-miriel-documents-api
@@ -139,67 +139,67 @@ common:
   type: Login
   url: https://app.miriel.ai
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/llms/miriel-llms.txt
+  href: https://artifacts.apis.io/miriel/llms/miriel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/miriel-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/overlays/miriel-overlay.yaml
+  href: https://artifacts.apis.io/miriel/overlays/miriel-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/miriel-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/authentication/miriel-authentication.yml
+  href: https://artifacts.apis.io/miriel/authentication/miriel-authentication.yml
   title: ''
   type: Authentication
   url: authentication/miriel-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/agentic-access/miriel-agentic-access.yml
+  href: https://artifacts.apis.io/miriel/agentic-access/miriel-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/miriel-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/conventions/miriel-conventions.yml
+  href: https://artifacts.apis.io/miriel/conventions/miriel-conventions.yml
   title: ''
   type: Conventions
   url: conventions/miriel-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/data-model/miriel-data-model.yml
+  href: https://artifacts.apis.io/miriel/data-model/miriel-data-model.yml
   title: ''
   type: DataModel
   url: data-model/miriel-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/conformance/miriel-conformance.yml
+  href: https://artifacts.apis.io/miriel/conformance/miriel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/miriel-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/packages/miriel-packages.yml
+  href: https://artifacts.apis.io/miriel/packages/miriel-packages.yml
   title: ''
   type: Packages
   url: packages/miriel-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/packages/miriel-packages.yml
+  href: https://artifacts.apis.io/miriel/packages/miriel-packages.yml
   title: ''
   type: SDKs
   url: packages/miriel-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/mcp/miriel-mcp.yml
+  href: https://artifacts.apis.io/miriel/mcp/miriel-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/miriel-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/miriel/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/well-known/miriel-well-known.yml
+  href: https://artifacts.apis.io/miriel/well-known/miriel-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/miriel-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/lifecycle/miriel-lifecycle.yml
+  href: https://artifacts.apis.io/miriel/lifecycle/miriel-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/miriel-lifecycle.yml
@@ -208,7 +208,7 @@ common:
   type: StatusPage
   url: https://status.miriel.ai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/security/miriel-domain-security.yml
+  href: https://artifacts.apis.io/miriel/security/miriel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/miriel-domain-security.yml
@@ -227,27 +227,43 @@ network: true
 overview: 'Miriel is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Learn API, Monitoring API, and 4 more. Tagged areas include Company, Artificial Intelligence, Context Engine, Retrieval, and RAG.
 
 
+  The Miriel catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Miriel''s developer surface includes documentation, API reference, engineering blog, signup flow, authentication, and 19 more developer resources.'
-random_paper: 4
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Miriel API Rules
+  rule_count: 45
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 2
+  slug: miriel-rules
 score:
-  band: emerging
-  composite: 24.9
+  band: thin
+  composite: 26.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 12.9
     developer_ergonomics: 49.4
     discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 24.8
+  previous_composite: 26.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -264,13 +280,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/miriel/refs/heads/main/screenshots/miriel-2026-08-07T183723.png
+screenshot: https://apis.io/screenshots/miriel/miriel-2026-08-07T183723.png
 security:
 - kind: authentication
   name: Miriel Authentication
@@ -280,6 +296,12 @@ security:
   name: Miriel Domain Security
   slug: miriel-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Learn a source and query context
+  slug: miriel-learn-and-query
+- name: Manage users and document access
+  slug: miriel-manage-access
 slug: miriel
 tags:
 - Company

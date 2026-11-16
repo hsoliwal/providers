@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -43,7 +46,7 @@ common:
   type: BlogRSS
   url: https://hubsync.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/security/hubsync-domain-security.yml
+  href: https://artifacts.apis.io/hubsync/security/hubsync-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hubsync-domain-security.yml
@@ -72,37 +75,37 @@ common:
   type: PrivacyPolicy
   url: https://hubsync.com/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/llms/hubsync-llms.txt
+  href: https://artifacts.apis.io/hubsync/llms/hubsync-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hubsync-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/mcp/hubsync-mcp.yml
+  href: https://artifacts.apis.io/hubsync/mcp/hubsync-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hubsync-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/conformance/hubsync-conformance.yml
+  href: https://artifacts.apis.io/hubsync/conformance/hubsync-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hubsync-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/conformance/hubsync-conformance.yml
+  href: https://artifacts.apis.io/hubsync/conformance/hubsync-conformance.yml
   title: ''
   type: Compliance
   url: conformance/hubsync-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/plans/hubsync-plans-pricing.yml
+  href: https://artifacts.apis.io/hubsync/plans/hubsync-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hubsync-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/rate-limits/hubsync-rate-limits.yml
+  href: https://artifacts.apis.io/hubsync/rate-limits/hubsync-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hubsync-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/lifecycle/hubsync-lifecycle.yml
+  href: https://artifacts.apis.io/hubsync/lifecycle/hubsync-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hubsync-lifecycle.yml
@@ -141,7 +144,7 @@ plans:
 - name: Hubsync Plans Pricing
   plan_count: 0
   slug: hubsync-plans-pricing
-random_paper: 16
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Hubsync Rate Limits
@@ -150,7 +153,7 @@ score:
   band: emerging
   composite: 16.2
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -179,14 +182,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/screenshots/hubsync-2026-09-02T145749.png
+screenshot: https://apis.io/screenshots/hubsync/hubsync-2026-09-02T145749.png
 security:
 - kind: domain-security
   name: Hubsync Domain Security

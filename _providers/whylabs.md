@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: whylogs is an open-source data logging library that creates approximate statistical profiles of datasets, enabling drift detection, data quality monitoring, and bias analysis for ML pipelines. Support
@@ -48,17 +52,17 @@ apis:
 artifact_total: 23
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/whylabs/refs/heads/main/plans/whylabs-plans-pricing.yml
+  href: https://artifacts.apis.io/whylabs/plans/whylabs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/whylabs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/whylabs/refs/heads/main/rate-limits/whylabs-rate-limits.yml
+  href: https://artifacts.apis.io/whylabs/rate-limits/whylabs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/whylabs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/whylabs/refs/heads/main/finops/whylabs-finops.yml
+  href: https://artifacts.apis.io/whylabs/finops/whylabs-finops.yml
   title: ''
   type: FinOps
   url: finops/whylabs-finops.yml
@@ -87,7 +91,7 @@ common:
   type: License
   url: https://github.com/whylabs/whylogs/blob/mainline/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/whylabs/refs/heads/main/security/whylabs-domain-security.yml
+  href: https://artifacts.apis.io/whylabs/security/whylabs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/whylabs-domain-security.yml
@@ -169,7 +173,7 @@ plans:
 - name: Whylabs Plans Pricing
   plan_count: 1
   slug: whylabs-plans-pricing
-random_paper: 14
+random_paper: 18
 rate_limits:
 - limit_count: 2
   name: Whylabs Rate Limits
@@ -178,7 +182,7 @@ score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
@@ -203,14 +207,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/whylabs/refs/heads/main/screenshots/whylabs-2026-06-20T201448.png
+screenshot: https://apis.io/screenshots/whylabs/whylabs-2026-06-20T201448.png
 security:
 - kind: domain-security
   name: Whylabs Domain Security

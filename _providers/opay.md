@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-10-17'
+  score: 27.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -62,9 +65,6 @@ apis:
 artifact_total: 46
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: OPay Cashier API
   slug: open-opay-cashier-api
 - collection_type: open
@@ -79,22 +79,22 @@ common:
   type: Blog
   url: https://www.opayweb.com/newsroom/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opay/refs/heads/main/capabilities/opay-capability-edges.yml
+  href: https://artifacts.apis.io/opay/capabilities/opay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/opay-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opay/refs/heads/main/agentic-access/opay-agentic-access.yml
+  href: https://artifacts.apis.io/opay/agentic-access/opay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/opay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opay/refs/heads/main/security/opay-domain-security.yml
+  href: https://artifacts.apis.io/opay/security/opay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opay-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opay/refs/heads/main/authentication/opay-authentication.yml
+  href: https://artifacts.apis.io/opay/authentication/opay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opay-authentication.yml
@@ -260,22 +260,38 @@ network: true
 overview: 'OPay is listed with 3 APIs on the [APIs.io](https://apis.io/) network: Cashier API, Payments API, and Refunds API. Tagged areas include Payments, Mobile Money, Fintech, Super App, and Nigeria.
 
 
+  The OPay catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   OPay''s developer surface includes engineering blog, authentication, developer portal, documentation, getting-started guide, API reference, sandbox, and 24 more developer resources.'
-random_paper: 1
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: OPay API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: opay-rules
 score:
   band: thin
-  composite: 33.0
+  composite: 34.6
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 40.0
+    artifact_dirs: 13
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.1
     developer_ergonomics: 61.9
     discoverability: 71.4
@@ -287,7 +303,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 32.5
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -301,13 +317,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/opay/refs/heads/main/screenshots/opay-2026-06-20T190727.png
+screenshot: https://apis.io/screenshots/opay/opay-2026-06-20T190727.png
 security:
 - kind: authentication
   name: Opay Authentication

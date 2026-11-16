@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 35.4
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.youscan.io/api/external
   baseurl_source: declared
@@ -79,15 +82,12 @@ apis:
   description: Webhooks push new mentions to your own server in real time, so you don't have to poll the API. Every time a new mention is found and saved to a topic, YouScan sends an HTTP `POST` with the mention pay
   name: YouScan Webhook API
   slug: youscan-webhook-api
-artifact_total: 24
+artifact_total: 28
 asyncapis:
 - description: ''
   name: Youscan Mentions Webhooks
   slug: youscan-mentions-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: YouScan Data Import API
   slug: open-youscan-data-import-api
@@ -114,17 +114,17 @@ collections:
   slug: open-youscan-webhook-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/capabilities/youscan-capability-edges.yml
+  href: https://artifacts.apis.io/youscan/capabilities/youscan-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/youscan-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-trust-center.yml
+  href: https://artifacts.apis.io/youscan/security/youscan-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/youscan-trust-center.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/overlays/youscan-openapi-overlay.yaml
+  href: https://artifacts.apis.io/youscan/overlays/youscan-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/youscan-openapi-overlay.yaml
@@ -177,67 +177,67 @@ common:
   type: GitHubOrganization
   url: https://github.com/youscan
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/lifecycle/youscan-lifecycle.yml
+  href: https://artifacts.apis.io/youscan/lifecycle/youscan-lifecycle.yml
   title: ''
   type: StatusPage
   url: lifecycle/youscan-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/lifecycle/youscan-lifecycle.yml
+  href: https://artifacts.apis.io/youscan/lifecycle/youscan-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/youscan-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/changelog/youscan-changelog.yml
+  href: https://artifacts.apis.io/youscan/changelog/youscan-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/youscan-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/asyncapi/youscan-mentions-webhooks.yml
+  href: https://artifacts.apis.io/youscan/asyncapi/youscan-mentions-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/youscan-mentions-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/conventions/youscan-conventions.yml
+  href: https://artifacts.apis.io/youscan/conventions/youscan-conventions.yml
   title: ''
   type: Conventions
   url: conventions/youscan-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/errors/youscan-problem-types.yml
+  href: https://artifacts.apis.io/youscan/errors/youscan-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/youscan-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/conformance/youscan-conformance.yml
+  href: https://artifacts.apis.io/youscan/conformance/youscan-conformance.yml
   title: ''
   type: Conformance
   url: conformance/youscan-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/data-model/youscan-data-model.yml
+  href: https://artifacts.apis.io/youscan/data-model/youscan-data-model.yml
   title: ''
   type: DataModel
   url: data-model/youscan-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/authentication/youscan-authentication.yml
+  href: https://artifacts.apis.io/youscan/authentication/youscan-authentication.yml
   title: ''
   type: Authentication
   url: authentication/youscan-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-domain-security.yml
+  href: https://artifacts.apis.io/youscan/security/youscan-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/youscan-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/mcp/youscan-mcp.yml
+  href: https://artifacts.apis.io/youscan/mcp/youscan-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/youscan-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/packages/youscan-packages.yml
+  href: https://artifacts.apis.io/youscan/packages/youscan-packages.yml
   title: ''
   type: Packages
   url: packages/youscan-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/youscan/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -246,32 +246,40 @@ common:
   type: GettingStarted
   url: https://help.youscan.io/en/articles/2754452-how-to-use-youscan-api
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/youscan/security/youscan-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/youscan-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/youscan/security/youscan-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/youscan-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-trust-center.yml
+  href: https://artifacts.apis.io/youscan/security/youscan-trust-center.yml
   title: ''
   type: Compliance
   url: security/youscan-trust-center.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/plans/youscan-plans-pricing.yml
+  href: https://artifacts.apis.io/youscan/plans/youscan-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/youscan-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/rate-limits/youscan-rate-limits.yml
+  href: https://artifacts.apis.io/youscan/rate-limits/youscan-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/youscan-rate-limits.yml
 created: '2026-07-17'
 description: YouScan is an AI-powered social media listening and consumer-intelligence platform that monitors mentions, conversations, and images across social networks, news, blogs, forums, and review sites. It provides sentiment analysis, trend and topic detection, visual insights via image recognition, and an AI Insights Copilot for querying data in natural language. YouScan exposes a REST API (documented with an OpenAPI 3.1 specification) to manage monitoring topics, retrieve and stream mentions, manage tags, run data imports, and query statistics, plus outbound webhooks that push new mentions to subscriber endpoints in real time.
+finops:
+- has_sources: true
+  method: derived
+  name: Youscan Finops
+  primary_unit: month, billed annually
+  service_category: ''
+  slug: youscan-finops
+  template: false
 image: https://youscan.io/favicon.ico
 layout: provider
 modified: '2026-08-13'
@@ -281,7 +289,7 @@ network: true
 overview: 'YouScan publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Import API, History API, Mentions API, and 5 more. Tagged areas include Company, Social Media Listening, Social Intelligence, Consumer Insights, and Sentiment Analysis.
 
 
-  The YouScan catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The YouScan catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   YouScan''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 27 more developer resources.'
@@ -289,36 +297,52 @@ plans:
 - name: Youscan Plans Pricing
   plan_count: 2
   slug: youscan-plans-pricing
-random_paper: 0
+- name: Youscan Price Estimates
+  plan_count: 0
+  slug: youscan-price-estimates
+random_paper: 2
 rate_limits:
 - limit_count: 2
   name: Youscan Rate Limits
   slug: youscan-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 113
+  extends:
+  - spectral:oas
+  name: YouScan API Rules
+  rule_count: 72
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 5
+    warn: 7
+  slug: youscan-rules
 score:
   band: strong
-  composite: 57.8
+  composite: 62.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 53.0
+    artifact_dirs: 29
+    catalog_earned: 60.5
     catalog_earned_first_party: 16.0
-    catalog_gap: 62.0
+    catalog_gap: 54.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
-    access_clarity: 68.4
-    contract_governance: 18.2
-    contract_quality: 60.4
+    access_clarity: 76.3
+    contract_governance: 31.8
+    contract_quality: 66.2
     developer_ergonomics: 39.9
     discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 57.7
+  previous_composite: 61.0
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: derived
     skills: derived
@@ -332,13 +356,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/screenshots/youscan-2026-08-17T080440.png
+screenshot: https://apis.io/screenshots/youscan/youscan-2026-08-17T080440.png
 security:
 - kind: authentication
   name: Youscan Authentication
@@ -356,6 +380,12 @@ security:
   name: Youscan Trust Center
   slug: youscan-trust-center
   summary_line: SOC 2 Type 2, ISO/IEC 27001:2022, GDPR
+skill_count: 2
+skills:
+- name: youscan-import-mentions
+  slug: youscan-import-mentions
+- name: youscan-monitor-mentions
+  slug: youscan-monitor-mentions
 slug: youscan
 tags:
 - Company

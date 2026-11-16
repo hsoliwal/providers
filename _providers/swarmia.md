@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -78,9 +84,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Swarmia Additional AI integrations API
   slug: open-swarmia-additional-ai-integrations-api
 - collection_type: open
@@ -103,27 +106,27 @@ collections:
   slug: open-swarmia
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/capabilities/swarmia-capability-edges.yml
+  href: https://artifacts.apis.io/swarmia/capabilities/swarmia-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/swarmia-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/agentic-access/swarmia-agentic-access.yml
+  href: https://artifacts.apis.io/swarmia/agentic-access/swarmia-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/swarmia-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/security/swarmia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/swarmia/security/swarmia-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/swarmia-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/security/swarmia-domain-security.yml
+  href: https://artifacts.apis.io/swarmia/security/swarmia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/swarmia-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/authentication/swarmia-authentication.yml
+  href: https://artifacts.apis.io/swarmia/authentication/swarmia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/swarmia-authentication.yml
@@ -144,17 +147,17 @@ common:
   type: Documentation
   url: https://help.swarmia.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/plans/swarmia-plans-pricing.yml
+  href: https://artifacts.apis.io/swarmia/plans/swarmia-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/swarmia-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/rate-limits/swarmia-rate-limits.yml
+  href: https://artifacts.apis.io/swarmia/rate-limits/swarmia-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/swarmia-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/finops/swarmia-finops.yml
+  href: https://artifacts.apis.io/swarmia/finops/swarmia-finops.yml
   title: ''
   type: FinOps
   url: finops/swarmia-finops.yml
@@ -181,35 +184,51 @@ network: true
 overview: 'Swarmia publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Additional AI integrations API, Built-in reports API, Custom reports API, and 3 more. Tagged areas include Engineering Effectiveness, Developer Productivity, DORA, Software Delivery, and Analytics.
 
 
+  The Swarmia catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Swarmia''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Swarmia Plans Pricing
   plan_count: 4
   slug: swarmia-plans-pricing
-random_paper: 8
+random_paper: 12
 rate_limits:
 - limit_count: 3
   name: Swarmia Rate Limits
   slug: swarmia-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Swarmia API Rules
+  rule_count: 60
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 1
+  slug: swarmia-rules
 score:
   band: thin
-  composite: 31.2
+  composite: 34.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.0
     developer_ergonomics: 32.1
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 39.5
+    operational_transparency: 21.1
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     contracts:
@@ -223,13 +242,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/swarmia/refs/heads/main/screenshots/swarmia-2026-09-02T161344.png
+screenshot: https://apis.io/screenshots/swarmia/swarmia-2026-09-02T161344.png
 security:
 - kind: authentication
   name: Swarmia Authentication

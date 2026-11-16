@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-10-17'
+  score: 34.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -111,39 +114,44 @@ apis:
   description: The Webhooks API from Rollee — 11 operation(s) for webhooks.
   name: Rollee Webhooks API
   slug: rollee-webhooks-api
-artifact_total: 33
+artifact_total: 36
 asyncapis:
 - description: ''
   name: Rollee Webhooks
   slug: rollee-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/rollee/capabilities/rollee-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rollee-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/agentic-access/rollee-agentic-access.yml
+  href: https://artifacts.apis.io/rollee/agentic-access/rollee-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rollee-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/rules/rollee-rules.yml
+  href: https://artifacts.apis.io/rollee/rules/rollee-rules.yml
   title: ''
   type: Spectral
   url: rules/rollee-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/json-ld/rollee-context.jsonld
+  href: https://artifacts.apis.io/rollee/json-ld/rollee-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/rollee-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/vocabulary/rollee-vocabulary.yml
+  href: https://artifacts.apis.io/rollee/vocabulary/rollee-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/rollee-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/hosts/rollee-hosts.yml
+  href: https://artifacts.apis.io/rollee/hosts/rollee-hosts.yml
   title: ''
   type: Hosts
   url: hosts/rollee-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/vendors/rollee-vendors.yml
+  href: https://artifacts.apis.io/rollee/vendors/rollee-vendors.yml
   title: ''
   type: Vendors
   url: vendors/rollee-vendors.yml
@@ -156,12 +164,12 @@ common:
   type: Newsroom
   url: https://www.getrollee.com/company/newsroom
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/security/rollee-trust-center.yml
+  href: https://artifacts.apis.io/rollee/security/rollee-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/rollee-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/security/rollee-domain-security.yml
+  href: https://artifacts.apis.io/rollee/security/rollee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rollee-domain-security.yml
@@ -214,37 +222,37 @@ common:
   type: ChangeLog
   url: https://developers.getrollee.com/changelog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/llms/rollee-llms.txt
+  href: https://artifacts.apis.io/rollee/llms/rollee-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rollee-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/mcp/rollee-mcp.yml
+  href: https://artifacts.apis.io/rollee/mcp/rollee-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rollee-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/authentication/rollee-authentication.yml
+  href: https://artifacts.apis.io/rollee/authentication/rollee-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rollee-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/conventions/rollee-conventions.yml
+  href: https://artifacts.apis.io/rollee/conventions/rollee-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rollee-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/changelog/rollee-changelog.yml
+  href: https://artifacts.apis.io/rollee/changelog/rollee-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rollee-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/lifecycle/rollee-lifecycle.yml
+  href: https://artifacts.apis.io/rollee/lifecycle/rollee-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rollee-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/conformance/rollee-conformance.yml
+  href: https://artifacts.apis.io/rollee/conformance/rollee-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rollee-conformance.yml
@@ -253,42 +261,42 @@ common:
   type: Compliance
   url: https://www.getrollee.com/security
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/sandbox/rollee-sandbox.yml
+  href: https://artifacts.apis.io/rollee/sandbox/rollee-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rollee-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/errors/rollee-problem-types.yml
+  href: https://artifacts.apis.io/rollee/errors/rollee-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rollee-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/data-model/rollee-data-model.yml
+  href: https://artifacts.apis.io/rollee/data-model/rollee-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rollee-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/asyncapi/rollee-webhooks.yml
+  href: https://artifacts.apis.io/rollee/asyncapi/rollee-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rollee-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/packages/rollee-packages.yml
+  href: https://artifacts.apis.io/rollee/packages/rollee-packages.yml
   title: ''
   type: Packages
   url: packages/rollee-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/packages/rollee-packages.yml
+  href: https://artifacts.apis.io/rollee/packages/rollee-packages.yml
   title: ''
   type: SDKs
   url: packages/rollee-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/components/rollee-components.yml
+  href: https://artifacts.apis.io/rollee/components/rollee-components.yml
   title: ''
   type: Components
   url: components/rollee-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rollee/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -349,8 +357,8 @@ overview: 'Rollee publishes 14 API contracts indexed on the [APIs.io](https://ap
   The Rollee catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Rollee''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 31 more developer resources.'
-random_paper: 5
+  Rollee''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 32 more developer resources.'
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -366,23 +374,23 @@ rules:
   slug: rollee-rules
 score:
   band: strong
-  composite: 55.6
+  composite: 59.8
   coverage:
-    artifact_dirs: 28
+    artifact_dirs: 30
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 11.0
+  delta: 4.2
   facets:
     access_clarity: 50.0
     contract_governance: 35.6
-    contract_quality: 68.5
-    developer_ergonomics: 57.7
-    discoverability: 76.7
+    contract_quality: 73.3
+    developer_ergonomics: 73.2
+    discoverability: 75.8
     operational_transparency: 31.6
-  previous_composite: 44.6
+  previous_composite: 55.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -403,13 +411,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rollee/refs/heads/main/screenshots/rollee-2026-08-17T081628.png
+screenshot: https://apis.io/screenshots/rollee/rollee-2026-08-17T081628.png
 security:
 - kind: authentication
   name: Rollee Authentication
@@ -423,6 +431,14 @@ security:
   name: Rollee Trust Center
   slug: rollee-trust-center
   summary_line: ISO 27001, GDPR
+skill_count: 3
+skills:
+- name: Connect a company account and read employer data with Rollee
+  slug: rollee-connect-company-account
+- name: Set up Rollee webhooks for async data delivery
+  slug: rollee-set-up-webhooks
+- name: Verify a worker's income and employment with Rollee
+  slug: rollee-verify-income-and-employment
 slug: rollee
 tags:
 - Company

@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Token- and signature-authenticated REST API for enterprises to integrate Fenbeitong organization structure, orders (flights, car, train, hotel, dining, takeout, procurement), approvals, budgets and bi
@@ -86,52 +91,52 @@ common:
   type: TermsOfService
   url: https://www.fenbeitong.com/level-agreement-6c73c91144ec5aa632b25bedb4e657c4.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/authentication/fenbeitong-authentication.yml
+  href: https://artifacts.apis.io/fenbeitong/authentication/fenbeitong-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fenbeitong-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/conventions/fenbeitong-conventions.yml
+  href: https://artifacts.apis.io/fenbeitong/conventions/fenbeitong-conventions.yml
   title: ''
   type: Conventions
   url: conventions/fenbeitong-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/asyncapi/fenbeitong-webhooks.yml
+  href: https://artifacts.apis.io/fenbeitong/asyncapi/fenbeitong-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/fenbeitong-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/errors/fenbeitong-error-codes.yml
+  href: https://artifacts.apis.io/fenbeitong/errors/fenbeitong-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/fenbeitong-error-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/sandbox/fenbeitong-sandbox.yml
+  href: https://artifacts.apis.io/fenbeitong/sandbox/fenbeitong-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/fenbeitong-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/lifecycle/fenbeitong-lifecycle.yml
+  href: https://artifacts.apis.io/fenbeitong/lifecycle/fenbeitong-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fenbeitong-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/security/fenbeitong-domain-security.yml
+  href: https://artifacts.apis.io/fenbeitong/security/fenbeitong-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fenbeitong-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/security/fenbeitong-trust-center.yml
+  href: https://artifacts.apis.io/fenbeitong/security/fenbeitong-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/fenbeitong-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/security/fenbeitong-trust-center.yml
+  href: https://artifacts.apis.io/fenbeitong/security/fenbeitong-trust-center.yml
   title: ''
   type: Compliance
   url: security/fenbeitong-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/llms/fenbeitong-llms.txt
+  href: https://artifacts.apis.io/fenbeitong/llms/fenbeitong-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fenbeitong-llms.txt
@@ -159,13 +164,13 @@ score:
   band: developing
   composite: 41.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
@@ -180,7 +185,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 41.0
+  previous_composite: 41.1
   provenance:
     mcp: first-party
   regulatory:
@@ -189,14 +194,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fenbeitong/refs/heads/main/screenshots/fenbeitong-2026-07-25T214442.png
+screenshot: https://apis.io/screenshots/fenbeitong/fenbeitong-2026-07-25T214442.png
 security:
 - kind: authentication
   name: Fenbeitong Authentication

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 31.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -110,11 +113,8 @@ apis:
   description: Access stakeholder intelligence including government officials and organizational relationships.
   name: FiscalNote Stakeholders API
   slug: fiscalnote-stakeholders-api
-artifact_total: 42
+artifact_total: 41
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: FiscalNote AppData API
   slug: open-fiscalnote-appdata
@@ -167,33 +167,37 @@ collections:
   name: FiscalNote AppData Bills Stakeholders API
   slug: open-fiscalnote-stakeholders-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/fiscalnote/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/plans/fiscalnote-plans-pricing.yml
+  href: https://artifacts.apis.io/fiscalnote/plans/fiscalnote-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fiscalnote-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/rate-limits/fiscalnote-rate-limits.yml
+  href: https://artifacts.apis.io/fiscalnote/rate-limits/fiscalnote-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fiscalnote-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/finops/fiscalnote-finops.yml
+  href: https://artifacts.apis.io/fiscalnote/finops/fiscalnote-finops.yml
   title: ''
   type: FinOps
   url: finops/fiscalnote-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/agentic-access/fiscalnote-agentic-access.yml
+  href: https://artifacts.apis.io/fiscalnote/agentic-access/fiscalnote-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fiscalnote-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/security/fiscalnote-domain-security.yml
+  href: https://artifacts.apis.io/fiscalnote/security/fiscalnote-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fiscalnote-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/authentication/fiscalnote-authentication.yml
+  href: https://artifacts.apis.io/fiscalnote/authentication/fiscalnote-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fiscalnote-authentication.yml
@@ -234,22 +238,22 @@ common:
   type: Login
   url: https://app.fiscalnote.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/json-ld/fiscalnote-context.jsonld
+  href: https://artifacts.apis.io/fiscalnote/json-ld/fiscalnote-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/fiscalnote-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/json-schema/fiscalnote-legislation-schema.json
+  href: https://artifacts.apis.io/fiscalnote/json-schema/fiscalnote-legislation-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/fiscalnote-legislation-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/json-schema/fiscalnote-official-schema.json
+  href: https://artifacts.apis.io/fiscalnote/json-schema/fiscalnote-official-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/fiscalnote-official-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/json-schema/fiscalnote-transcript-schema.json
+  href: https://artifacts.apis.io/fiscalnote/json-schema/fiscalnote-transcript-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/fiscalnote-transcript-schema.json
@@ -290,7 +294,7 @@ overview: 'FiscalNote publishes 13 API contracts indexed on the [APIs.io](https:
   The FiscalNote catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  FiscalNote''s developer surface includes authentication, developer portal, documentation, engineering blog, and 15 more developer resources.'
+  FiscalNote''s developer surface includes authentication, developer portal, documentation, engineering blog, and 16 more developer resources.'
 plans:
 - name: Fiscalnote Plans Pricing
   plan_count: 4
@@ -314,23 +318,23 @@ rules:
   slug: fiscalnote-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 38.0
+  composite: 38.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 53.3
     catalog_earned_first_party: 0.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 9.8
     contract_quality: 52.8
-    developer_ergonomics: 33.3
+    developer_ergonomics: 34.5
     discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 39.6
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     contracts:
@@ -344,14 +348,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/fiscalnote/refs/heads/main/screenshots/fiscalnote-2026-06-20T181249.png
+screenshot: https://apis.io/screenshots/fiscalnote/fiscalnote-2026-06-20T181249.png
 security:
 - kind: authentication
   name: Fiscalnote Authentication

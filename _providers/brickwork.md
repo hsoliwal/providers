@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.2
-  scored_at: '2026-10-17'
+  score: 19.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 0
@@ -209,11 +212,8 @@ apis:
   description: The Utilities API from Brickwork — 1 operation(s) for utilities.
   name: Brickwork Utilities API
   slug: brickwork-utilities-api
-artifact_total: 71
+artifact_total: 74
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Brickwork Admin Appointments API
   slug: open-brickwork-admin-appointments-api
@@ -319,17 +319,17 @@ common:
   type: Blog
   url: https://www.devhub.com/resources/blog/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/plans/brickwork-plans-pricing.yml
+  href: https://artifacts.apis.io/brickwork/plans/brickwork-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/brickwork-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/capabilities/brickwork-capability-edges.yml
+  href: https://artifacts.apis.io/brickwork/capabilities/brickwork-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/brickwork-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/overlays/brickwork-openapi-overlay.yaml
+  href: https://artifacts.apis.io/brickwork/overlays/brickwork-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/brickwork-openapi-overlay.yaml
@@ -370,52 +370,52 @@ common:
   type: GitHubOrganization
   url: https://github.com/BrickworkSoftware
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/authentication/brickwork-authentication.yml
+  href: https://artifacts.apis.io/brickwork/authentication/brickwork-authentication.yml
   title: ''
   type: Authentication
   url: authentication/brickwork-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/agentic-access/brickwork-agentic-access.yml
+  href: https://artifacts.apis.io/brickwork/agentic-access/brickwork-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/brickwork-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/security/brickwork-domain-security.yml
+  href: https://artifacts.apis.io/brickwork/security/brickwork-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brickwork-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/conventions/brickwork-conventions.yml
+  href: https://artifacts.apis.io/brickwork/conventions/brickwork-conventions.yml
   title: ''
   type: Conventions
   url: conventions/brickwork-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/data-model/brickwork-data-model.yml
+  href: https://artifacts.apis.io/brickwork/data-model/brickwork-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brickwork-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/conformance/brickwork-conformance.yml
+  href: https://artifacts.apis.io/brickwork/conformance/brickwork-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brickwork-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/lifecycle/brickwork-lifecycle.yml
+  href: https://artifacts.apis.io/brickwork/lifecycle/brickwork-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/brickwork-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/mcp/brickwork-mcp.yml
+  href: https://artifacts.apis.io/brickwork/mcp/brickwork-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/brickwork-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/llms/brickwork-llms.txt
+  href: https://artifacts.apis.io/brickwork/llms/brickwork-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brickwork-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/brickwork/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -430,31 +430,47 @@ network: true
 overview: 'Brickwork publishes 33 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin Appointments API, Admin Company Users API, Admin Customer Appointments API, and 30 more. Tagged areas include Company, Consumer, Retail, Omnichannel, and Store Locator.
 
 
+  The Brickwork catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Brickwork''s developer surface includes engineering blog, documentation, API reference, pricing, support, authentication, and 17 more developer resources.'
 plans:
 - name: Brickwork Plans Pricing
   plan_count: 0
   slug: brickwork-plans-pricing
-random_paper: 6
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Brickwork API Rules
+  rule_count: 53
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 6
+  slug: brickwork-rules
 score:
   band: thin
-  composite: 35.4
+  composite: 38.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.2
   facets:
     access_clarity: 31.6
-    contract_governance: 4.5
-    contract_quality: 43.1
+    contract_governance: 18.2
+    contract_quality: 47.9
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 34.8
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -471,13 +487,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/brickwork/refs/heads/main/screenshots/brickwork-2026-07-25T203804.png
+screenshot: https://apis.io/screenshots/brickwork/brickwork-2026-07-25T203804.png
 security:
 - kind: authentication
   name: Brickwork Authentication
@@ -487,6 +503,14 @@ security:
   name: Brickwork Domain Security
   slug: brickwork-domain-security
   summary_line: TLSv1.3
+skill_count: 3
+skills:
+- name: Book a store appointment
+  slug: brickwork-book-store-appointment
+- name: Manage a store profile and hours
+  slug: brickwork-manage-store-profile
+- name: Publish a store event and take RSVPs
+  slug: brickwork-publish-store-event
 slug: brickwork
 tags:
 - Company

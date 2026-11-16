@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,12 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.5
-  scored_at: '2026-10-17'
+  score: 39.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -99,7 +107,7 @@ apis:
   description: Vulnerability tracking and remediation management
   name: Vanta Vulnerabilities API
   slug: vanta-vulnerabilities-api
-artifact_total: 57
+artifact_total: 56
 collections:
 - collection_type: postman
   name: Conduct an audit Auditors API
@@ -134,9 +142,6 @@ collections:
 - collection_type: postman
   name: Conduct an audit Auditors Vulnerabilities API
   slug: postman-vanta-vulnerabilities-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Conduct an audit
   slug: open-vanta-auditor
@@ -178,22 +183,22 @@ collections:
   slug: open-vanta
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/plans/vanta-plans-pricing.yml
+  href: https://artifacts.apis.io/vanta/plans/vanta-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vanta-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/rate-limits/vanta-rate-limits.yml
+  href: https://artifacts.apis.io/vanta/rate-limits/vanta-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vanta-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/finops/vanta-finops.yml
+  href: https://artifacts.apis.io/vanta/finops/vanta-finops.yml
   title: ''
   type: FinOps
   url: finops/vanta-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/capabilities/vanta-capability-edges.yml
+  href: https://artifacts.apis.io/vanta/capabilities/vanta-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/vanta-capability-edges.yml
@@ -206,27 +211,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/vanta/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/agentic-access/vanta-agentic-access.yml
+  href: https://artifacts.apis.io/vanta/agentic-access/vanta-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/vanta-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/security/vanta-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/vanta/security/vanta-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/vanta-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/security/vanta-domain-security.yml
+  href: https://artifacts.apis.io/vanta/security/vanta-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vanta-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/authentication/vanta-authentication.yml
+  href: https://artifacts.apis.io/vanta/authentication/vanta-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vanta-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/scopes/vanta-scopes.yml
+  href: https://artifacts.apis.io/vanta/scopes/vanta-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/vanta-scopes.yml
@@ -325,7 +330,7 @@ finops:
 - has_sources: false
   method: generated
   name: Vanta Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: vanta-finops
   template: true
@@ -408,23 +413,23 @@ scopes:
   summary_line: 8 scopes · clientCredentials
 score:
   band: developing
-  composite: 47.3
+  composite: 48.6
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 25
     catalog_earned: 58.5
     catalog_earned_first_party: 0.0
     catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
     contract_quality: 61.9
     developer_ergonomics: 66.7
     discoverability: 75.0
-    operational_transparency: 23.7
-  previous_composite: 48.8
+    operational_transparency: 34.2
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     contracts:
@@ -439,13 +444,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/screenshots/vanta-2026-06-20T200811.png
+screenshot: https://apis.io/screenshots/vanta/vanta-2026-06-20T200811.png
 security:
 - kind: authentication
   name: Vanta Authentication

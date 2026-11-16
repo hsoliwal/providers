@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -73,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Metals.Dev Account API
   slug: open-metals-dev-account-api
 - collection_type: open
@@ -95,17 +98,17 @@ collections:
   slug: open-metals-dev
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/plans/metals-dev-plans-pricing.yml
+  href: https://artifacts.apis.io/metals-dev/plans/metals-dev-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/metals-dev-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/rate-limits/metals-dev-rate-limits.yml
+  href: https://artifacts.apis.io/metals-dev/rate-limits/metals-dev-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/metals-dev-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/finops/metals-dev-finops.yml
+  href: https://artifacts.apis.io/metals-dev/finops/metals-dev-finops.yml
   title: ''
   type: FinOps
   url: finops/metals-dev-finops.yml
@@ -114,17 +117,17 @@ common:
   type: Website
   url: https://www.metals.dev/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/agentic-access/metals-dev-agentic-access.yml
+  href: https://artifacts.apis.io/metals-dev/agentic-access/metals-dev-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/metals-dev-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/security/metals-dev-domain-security.yml
+  href: https://artifacts.apis.io/metals-dev/security/metals-dev-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/metals-dev-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/authentication/metals-dev-authentication.yml
+  href: https://artifacts.apis.io/metals-dev/authentication/metals-dev-authentication.yml
   title: ''
   type: Authentication
   url: authentication/metals-dev-authentication.yml
@@ -154,7 +157,7 @@ finops:
 - has_sources: false
   method: generated
   name: Metals Dev Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: metals-dev-finops
   template: true
@@ -167,35 +170,51 @@ network: true
 overview: 'Metals.Dev publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Authority API, Currency API, and 2 more. Tagged areas include Financial Data, Gold, Precious Metals, Silver, and Spot Prices.
 
 
+  The Metals.Dev catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Metals.Dev''s developer surface includes authentication, developer portal, pricing, signup flow, and 8 more developer resources.'
 plans:
 - name: Metals Dev Plans Pricing
   plan_count: 3
   slug: metals-dev-plans-pricing
-random_paper: 20
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Metals Dev Rate Limits
   slug: metals-dev-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Metals.Dev API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: metals-dev-rules
 score:
   band: thin
-  composite: 36.2
+  composite: 37.8
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 43.0
+    artifact_dirs: 13
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.1
     developer_ergonomics: 42.9
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 37.7
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -209,14 +228,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/metals-dev/refs/heads/main/screenshots/metals-dev-2026-06-20T185246.png
+screenshot: https://apis.io/screenshots/metals-dev/metals-dev-2026-06-20T185246.png
 security:
 - kind: authentication
   name: Metals Dev Authentication

@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Professional REST + WebSocket trading API for Spot (INR/USDT), USDT-margined Perpetual Futures, HFT, and Options on the CoinSwitch PRO venue. Ed25519 request signing; v2 base path /trade/api/v2.
@@ -92,62 +95,62 @@ common:
   type: ChangeLog
   url: https://api-trading.coinswitch.co/resources/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/changelog/coinswitch-changelog.yml
+  href: https://artifacts.apis.io/coinswitch/changelog/coinswitch-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/coinswitch-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/lifecycle/coinswitch-lifecycle.yml
+  href: https://artifacts.apis.io/coinswitch/lifecycle/coinswitch-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/coinswitch-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/lifecycle/coinswitch-lifecycle.yml
+  href: https://artifacts.apis.io/coinswitch/lifecycle/coinswitch-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/coinswitch-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/authentication/coinswitch-authentication.yml
+  href: https://artifacts.apis.io/coinswitch/authentication/coinswitch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coinswitch-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/rate-limits/coinswitch-rate-limits.yml
+  href: https://artifacts.apis.io/coinswitch/rate-limits/coinswitch-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/coinswitch-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/errors/coinswitch-problem-types.yml
+  href: https://artifacts.apis.io/coinswitch/errors/coinswitch-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/coinswitch-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/conventions/coinswitch-conventions.yml
+  href: https://artifacts.apis.io/coinswitch/conventions/coinswitch-conventions.yml
   title: ''
   type: Conventions
   url: conventions/coinswitch-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/asyncapi/coinswitch-streams-webhooks.yml
+  href: https://artifacts.apis.io/coinswitch/asyncapi/coinswitch-streams-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/coinswitch-streams-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/mcp/coinswitch-mcp.yml
+  href: https://artifacts.apis.io/coinswitch/mcp/coinswitch-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/coinswitch-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/llms/coinswitch-llms.txt
+  href: https://artifacts.apis.io/coinswitch/llms/coinswitch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coinswitch-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/packages/coinswitch-packages.yml
+  href: https://artifacts.apis.io/coinswitch/packages/coinswitch-packages.yml
   title: ''
   type: Packages
   url: packages/coinswitch-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/security/coinswitch-domain-security.yml
+  href: https://artifacts.apis.io/coinswitch/security/coinswitch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coinswitch-domain-security.yml
@@ -166,7 +169,7 @@ overview: 'CoinSwitch is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   CoinSwitch''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 16 more developer resources.'
-random_paper: 5
+random_paper: 3
 rate_limits:
 - limit_count: 17
   name: Coinswitch Rate Limits
@@ -175,7 +178,7 @@ score:
   band: developing
   composite: 41.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -205,14 +208,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 18.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/coinswitch/refs/heads/main/screenshots/coinswitch-2026-07-25T210036.png
+screenshot: https://apis.io/screenshots/coinswitch/coinswitch-2026-07-25T210036.png
 security:
 - kind: authentication
   name: Coinswitch Authentication

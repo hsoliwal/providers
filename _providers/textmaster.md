@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,16 +30,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.0
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 39.9
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.textmaster.com
   baseurl_source: declared
@@ -141,24 +144,24 @@ apis:
   description: The Work Templates API from TextMaster — 2 operation(s) for work templates.
   name: TextMaster Work Templates API
   slug: textmaster-work-templates-api
-artifact_total: 27
+artifact_total: 33
 asyncapis:
 - description: ''
   name: Textmaster Event Surface
   slug: textmaster-event-surface
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/rate-limits/textmaster-rate-limits.yml
+  href: https://artifacts.apis.io/textmaster/rate-limits/textmaster-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/textmaster-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/mcp/textmaster-mcp.yml
+  href: https://artifacts.apis.io/textmaster/mcp/textmaster-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/textmaster-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/overlays/textmaster-api-v1-overlay.yaml
+  href: https://artifacts.apis.io/textmaster/overlays/textmaster-api-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/textmaster-api-v1-overlay.yaml
@@ -211,7 +214,7 @@ common:
   type: StatusPage
   url: https://status.textmaster.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/lifecycle/textmaster-lifecycle.yml
+  href: https://artifacts.apis.io/textmaster/lifecycle/textmaster-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/textmaster-lifecycle.yml
@@ -220,12 +223,12 @@ common:
   type: Security
   url: https://github.com/textmaster/bugbounty/blob/main/SECURITY.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/security/textmaster-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/textmaster/security/textmaster-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/textmaster-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/security/textmaster-domain-security.yml
+  href: https://artifacts.apis.io/textmaster/security/textmaster-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/textmaster-domain-security.yml
@@ -234,22 +237,22 @@ common:
   type: Compliance
   url: https://docs.textmaster.com/client/policies/subprocessors
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/conformance/textmaster-conformance.yml
+  href: https://artifacts.apis.io/textmaster/conformance/textmaster-conformance.yml
   title: ''
   type: Conformance
   url: conformance/textmaster-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/packages/textmaster-packages.yml
+  href: https://artifacts.apis.io/textmaster/packages/textmaster-packages.yml
   title: ''
   type: Packages
   url: packages/textmaster-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/packages/textmaster-packages.yml
+  href: https://artifacts.apis.io/textmaster/packages/textmaster-packages.yml
   title: ''
   type: SDKs
   url: packages/textmaster-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/llms/textmaster-llms.txt
+  href: https://artifacts.apis.io/textmaster/llms/textmaster-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/textmaster-llms.txt
@@ -258,17 +261,25 @@ common:
   type: ContentSignal
   url: https://developer.textmaster.com/robots.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/textmaster/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/plans/textmaster-plans-pricing.yml
+  href: https://artifacts.apis.io/textmaster/plans/textmaster-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/textmaster-plans-pricing.yml
 created: '2026-08-17'
 description: TextMaster is a French professional translation, proofreading and copywriting platform that sells human-and-machine language work as an API-first service in 50+ languages. Clients create Projects, attach Documents (plain text or file URLs), request a quotation, launch against a prepaid credit wallet, and receive finished content back through status-change webhooks. The platform exposes a documented OpenAPI 3.0.3 REST API at api.textmaster.com covering projects, documents, glossaries, expertises, preferred authors, work/API templates, transactions, invoices and receipts, secured by OAuth 2.0 authorization-code apps with 22 granular scopes plus a legacy signature strategy. It ships first-party Akeneo, Magento 2, Salesforce Commerce Cloud and Hybris connectors and a PHP API client. TextMaster is now part of Acolad Group; the marketing site is a transition landing page pointing at Acolad's Lia platform, while the application, the API and the developer portal remain live and in service.
+finops:
+- has_sources: true
+  method: derived
+  name: Textmaster Finops
+  primary_unit: ''
+  service_category: ''
+  slug: textmaster-finops
+  template: true
 image: https://www.textmaster.com/assets/textmaster-logo.svg
 layout: provider
 modified: '2026-08-17'
@@ -278,7 +289,7 @@ network: true
 overview: 'TextMaster publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Abilities API, API Templates API, Authors API, and 17 more. Tagged areas include Company, Translation, Localization, Language Services, and Copywriting.
 
 
-  The TextMaster catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The TextMaster catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   TextMaster''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, and 22 more developer resources.'
@@ -286,11 +297,24 @@ plans:
 - name: Textmaster Plans Pricing
   plan_count: 0
   slug: textmaster-plans-pricing
-random_paper: 5
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Textmaster Rate Limits
   slug: textmaster-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: TextMaster API Rules
+  rule_count: 57
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 6
+    warn: 8
+  slug: textmaster-rules
 scopes:
 - name: Textmaster Scopes
   scope_count: 22
@@ -298,18 +322,18 @@ scopes:
   summary_line: 22 scopes · authorizationCode
 score:
   band: developing
-  composite: 49.9
+  composite: 51.5
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 25.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 53.2
     developer_ergonomics: 75.6
     discoverability: 73.2
@@ -319,7 +343,7 @@ score:
     countries:
     - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 49.8
+  previous_composite: 51.5
   provenance:
     conformance: first-party
     contracts:
@@ -335,13 +359,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/textmaster/refs/heads/main/screenshots/textmaster-2026-09-02T163300.png
+screenshot: https://apis.io/screenshots/textmaster/textmaster-2026-09-02T163300.png
 security:
 - kind: authentication
   name: Textmaster Authentication
@@ -355,6 +379,16 @@ security:
   name: Textmaster Vulnerability Disclosure
   slug: textmaster-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 4
+skills:
+- name: Authenticate against the TextMaster API
+  slug: textmaster-authenticate-oauth-app
+- name: Collect completed translations and reconcile spend
+  slug: textmaster-collect-completed-translations
+- name: Quote and order a translation project
+  slug: textmaster-quote-and-order-translation
+- name: Subscribe to TextMaster project and document events
+  slug: textmaster-subscribe-to-project-events
 slug: textmaster
 tags:
 - Company
@@ -370,7 +404,8 @@ tags:
 - Ecommerce Localization
 - Product Information Management
 - Webhook
-- Authentication
+- OAuth
 - Software-as-a-Service
+- Authentication
 website: https://www.textmaster.com/
 ---

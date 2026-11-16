@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stryker/refs/heads/main/security/stryker-trust-center.yml
+  href: https://artifacts.apis.io/stryker/security/stryker-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/stryker-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stryker/refs/heads/main/security/stryker-domain-security.yml
+  href: https://artifacts.apis.io/stryker/security/stryker-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stryker-domain-security.yml
@@ -83,17 +87,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/Stryker-S1
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stryker/refs/heads/main/vocabulary/stryker-vocabulary.yml
+  href: https://artifacts.apis.io/stryker/vocabulary/stryker-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/stryker-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stryker/refs/heads/main/json-ld/stryker-context.jsonld
+  href: https://artifacts.apis.io/stryker/json-ld/stryker-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/stryker-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/stryker/refs/heads/main/json-schema/stryker-medical-device-schema.json
+  href: https://artifacts.apis.io/stryker/json-schema/stryker-medical-device-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/stryker-medical-device-schema.json
@@ -134,7 +138,7 @@ press:
 - date: ''
   title: Advanced Digital Healthcare
   url: https://www.stryker.com/us/en/portfolios/medical-surgical-equipment/advanced-digital-healthcare.html
-random_paper: 18
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -151,7 +155,7 @@ score:
   band: emerging
   composite: 15.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 42.8
     catalog_earned_first_party: 0.0
     catalog_gap: 72.3
@@ -172,14 +176,14 @@ score:
     regime: Health
     regime_id: health
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/stryker/refs/heads/main/screenshots/stryker-2026-06-20T194623.png
+screenshot: https://apis.io/screenshots/stryker/stryker-2026-06-20T194623.png
 security:
 - kind: domain-security
   name: Stryker Domain Security

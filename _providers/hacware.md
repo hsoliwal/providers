@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.1
-  scored_at: '2026-10-17'
+  score: 23.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 3
@@ -99,11 +106,8 @@ apis:
   description: The User API from Hacware — 9 operation(s) for user.
   name: Hacware User API
   slug: hacware-user-api
-artifact_total: 27
+artifact_total: 32
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Security Awareness API Documentation Admin API
   slug: open-hacware-admin-api
@@ -139,22 +143,22 @@ collections:
   slug: open-hacware-user-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/plans/hacware-plans-pricing.yml
+  href: https://artifacts.apis.io/hacware/plans/hacware-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hacware-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/capabilities/hacware-capability-edges.yml
+  href: https://artifacts.apis.io/hacware/capabilities/hacware-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hacware-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/mcp/hacware-mcp.yml
+  href: https://artifacts.apis.io/hacware/mcp/hacware-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/hacware-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/overlays/hacware-openapi-overlay.yaml
+  href: https://artifacts.apis.io/hacware/overlays/hacware-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hacware-openapi-overlay.yaml
@@ -203,22 +207,30 @@ common:
   type: PrivacyPolicy
   url: https://hacware.com/privacy.pdf
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/llms/hacware-llms.txt
+  href: https://artifacts.apis.io/hacware/llms/hacware-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hacware-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hacware/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/security/hacware-domain-security.yml
+  href: https://artifacts.apis.io/hacware/security/hacware-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hacware-domain-security.yml
 created: '2026-07-17'
 description: 'HacWare is an AI-powered security awareness training and phishing simulation platform that helps organizations reduce human-factor cyber risk. Its RESTful Security Awareness API lets partners and developers embed HacWare into their own products: schedule and manage AI-generated phishing simulations (clickable link, attachment, direct response, and SMS), enroll users in micro-training courses, lesson plans and quizzes, run dark web breach reporting and human-risk assessments, manage users, groups and Microsoft 365 security groups, and operate a multi-tenant partner/customer hierarchy with compliance evidence retrieval. The API is documented with apiDoc and exposes 114 operations across Phishing, Training, Reporting, User, Group, Compliance, and Multi-Tenant surfaces. HacWare is a Techstars portfolio company.'
+finops:
+- has_sources: true
+  method: derived
+  name: Hacware Finops
+  primary_unit: credits
+  service_category: ''
+  slug: hacware-finops
+  template: false
 image: https://hacware.com/img/logo.png
 layout: provider
 modified: '2026-07-19'
@@ -228,31 +240,50 @@ network: true
 overview: 'Hacware publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Compliance API, Compliance-Tenant API, and 8 more. Tagged areas include Company, Security, Cybersecurity, Security Awareness, and Phishing.
 
 
+  The Hacware catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Hacware''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, engineering blog, and 11 more developer resources.'
 plans:
 - name: Hacware Plans Pricing
   plan_count: 3
   slug: hacware-plans-pricing
-random_paper: 5
+- name: Hacware Price Estimates
+  plan_count: 0
+  slug: hacware-price-estimates
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Hacware API Rules
+  rule_count: 57
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 8
+  slug: hacware-rules
 score:
   band: developing
-  composite: 48.2
+  composite: 51.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 26
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
+    access_clarity: 84.2
+    contract_governance: 18.2
     contract_quality: 47.2
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 41.8
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -269,13 +300,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/hacware/refs/heads/main/screenshots/hacware-2026-07-25T220524.png
+screenshot: https://apis.io/screenshots/hacware/hacware-2026-07-25T220524.png
 security:
 - kind: authentication
   name: Hacware Authentication
@@ -285,6 +316,14 @@ security:
   name: Hacware Domain Security
   slug: hacware-domain-security
   summary_line: TLSv1.2 · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Enroll a user in security training
+  slug: hacware-enroll-user-training
+- name: Onboard a partner and create a customer (multi-tenant)
+  slug: hacware-onboard-partner-customer
+- name: Run an AI phishing simulation campaign
+  slug: hacware-run-phishing-simulation
 slug: hacware
 tags:
 - Company

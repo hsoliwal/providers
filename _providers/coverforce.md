@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Unified commercial insurance API connecting to 40+ carriers and MGAs through a single integration. Documented endpoint families include Applications (create and submit in a unified JSON schema), Quote
@@ -89,22 +93,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/coverforceinc
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/llms/coverforce-llms.txt
+  href: https://artifacts.apis.io/coverforce/llms/coverforce-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coverforce-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/well-known/coverforce-well-known.yml
+  href: https://artifacts.apis.io/coverforce/well-known/coverforce-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coverforce-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/security/coverforce-domain-security.yml
+  href: https://artifacts.apis.io/coverforce/security/coverforce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coverforce-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/conformance/coverforce-conformance.yml
+  href: https://artifacts.apis.io/coverforce/conformance/coverforce-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coverforce-conformance.yml
@@ -113,12 +117,12 @@ common:
   type: Compliance
   url: https://www.coverforce.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/security/coverforce-trust-center.yml
+  href: https://artifacts.apis.io/coverforce/security/coverforce-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/coverforce-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/mcp/coverforce-mcp.yml
+  href: https://artifacts.apis.io/coverforce/mcp/coverforce-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/coverforce-mcp.yml
@@ -139,7 +143,7 @@ score:
   band: thin
   composite: 27.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -172,14 +176,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 28.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/coverforce/refs/heads/main/screenshots/coverforce-2026-07-25T210552.png
+screenshot: https://apis.io/screenshots/coverforce/coverforce-2026-07-25T210552.png
 security:
 - kind: domain-security
   name: Coverforce Domain Security

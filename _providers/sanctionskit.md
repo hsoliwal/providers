@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: three_quarters
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 59.1
-  scored_at: '2026-10-17'
+  score: 58.6
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.sanctionskit.com/api/v1
@@ -76,74 +92,79 @@ apis:
   description: Webhook endpoint operations of the SanctionsKit API — read endpoints and recent delivery history, register a public HTTPS endpoint and receive its signing secret once, disable an endpoint, and retry a
   name: SanctionsKit Webhooks API
   slug: sanctionskit-webhooks-api
-artifact_total: 16
+artifact_total: 19
 asyncapis:
 - description: ''
   name: Sanctionskit Webhooks
   slug: sanctionskit-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/sanctionskit/capabilities/sanctionskit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sanctionskit-capability-edges.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/rate-limits/sanctionskit-rate-limits.yml
+  href: https://artifacts.apis.io/sanctionskit/rate-limits/sanctionskit-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sanctionskit-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/plans/sanctionskit-plans-pricing.yml
+  href: https://artifacts.apis.io/sanctionskit/plans/sanctionskit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sanctionskit-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/asyncapi/sanctionskit-webhooks.yml
+  href: https://artifacts.apis.io/sanctionskit/asyncapi/sanctionskit-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/sanctionskit-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/conventions/sanctionskit-conventions.yml
+  href: https://artifacts.apis.io/sanctionskit/conventions/sanctionskit-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/sanctionskit-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/conventions/sanctionskit-conventions.yml
+  href: https://artifacts.apis.io/sanctionskit/conventions/sanctionskit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sanctionskit-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/authentication/sanctionskit-authentication.yml
+  href: https://artifacts.apis.io/sanctionskit/authentication/sanctionskit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sanctionskit-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/conformance/sanctionskit-conformance.yml
+  href: https://artifacts.apis.io/sanctionskit/conformance/sanctionskit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sanctionskit-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/llms/sanctionskit-llms.txt
+  href: https://artifacts.apis.io/sanctionskit/llms/sanctionskit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sanctionskit-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/well-known/sanctionskit-well-known.yml
+  href: https://artifacts.apis.io/sanctionskit/well-known/sanctionskit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sanctionskit-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/hosts/sanctionskit-hosts.yml
+  href: https://artifacts.apis.io/sanctionskit/hosts/sanctionskit-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sanctionskit-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/vendors/sanctionskit-vendors.yml
+  href: https://artifacts.apis.io/sanctionskit/vendors/sanctionskit-vendors.yml
   title: ''
   type: Vendors
   url: vendors/sanctionskit-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/packages/sanctionskit-packages.yml
+  href: https://artifacts.apis.io/sanctionskit/packages/sanctionskit-packages.yml
   title: ''
   type: SDKs
   url: packages/sanctionskit-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/packages/sanctionskit-packages.yml
+  href: https://artifacts.apis.io/sanctionskit/packages/sanctionskit-packages.yml
   title: ''
   type: Packages
   url: packages/sanctionskit-packages.yml
@@ -156,7 +177,7 @@ common:
   type: DeveloperPortal
   url: https://www.sanctionskit.com/product/for/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/security/sanctionskit-domain-security.yml
+  href: https://artifacts.apis.io/sanctionskit/security/sanctionskit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sanctionskit-domain-security.yml
@@ -213,7 +234,7 @@ common:
   type: OpenAPI
   url: https://www.sanctionskit.com/openapi.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/mcp/sanctionskit-mcp.yml
+  href: https://artifacts.apis.io/sanctionskit/mcp/sanctionskit-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/sanctionskit-mcp.yml
@@ -231,6 +252,14 @@ common:
   url: https://www.sanctionskit.com/.well-known/oauth-protected-resource/mcp
 created: '2026-10-02'
 description: SanctionsKit provides a comprehensive sanctions screening API and compliance dashboard that enables businesses to screen individuals and organizations against global restricted‑party lists, manage investigations, and maintain audit trails. The platform offers batch and real‑time screening, case management, and ongoing monitoring with a free sandbox key for developers to test integrations. It serves financial services, fintech, trade, logistics, and marketplace sectors, delivering detailed source evidence and customizable alerts.
+finops:
+- has_sources: true
+  method: derived
+  name: Sanctionskit Finops
+  primary_unit: seat
+  service_category: ''
+  slug: sanctionskit-finops
+  template: false
 image: https://www.sanctionskit.com/og/v1/home
 layout: provider
 mcp_servers:
@@ -244,44 +273,60 @@ network: true
 overview: 'SanctionsKit publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batches and files API, Counterparties API, Monitoring API, and 7 more. Tagged areas include Company, Sanctions, Compliance, Screening, and Fintech.
 
 
-  The SanctionsKit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The SanctionsKit catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  SanctionsKit''s developer surface includes authentication, documentation, API reference, getting-started guide, support, pricing, signup flow, and 26 more developer resources.'
+  SanctionsKit''s developer surface includes authentication, documentation, API reference, getting-started guide, support, pricing, signup flow, and 27 more developer resources.'
 plans:
 - name: Sanctionskit Plans Pricing
   plan_count: 3
   slug: sanctionskit-plans-pricing
-random_paper: 8
+- name: Sanctionskit Price Estimates
+  plan_count: 0
+  slug: sanctionskit-price-estimates
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Sanctionskit Rate Limits
   slug: sanctionskit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: SanctionsKit API Rules
+  rule_count: 62
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 11
+  slug: sanctionskit-rules
 score:
-  band: strong
-  composite: 60.1
+  band: developing
+  composite: 52.9
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 57.0
+    artifact_dirs: 22
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.7
+  delta: -10.5
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
-    contract_quality: 59.7
-    developer_ergonomics: 66.7
+    access_clarity: 61.8
+    contract_governance: 18.2
+    contract_quality: 65.3
+    developer_ergonomics: 42.9
     discoverability: 75.0
-    operational_transparency: 60.5
-  previous_composite: 55.4
+    operational_transparency: 44.7
+  previous_composite: 63.4
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 10
     mcp: first-party
   regulatory:
@@ -289,14 +334,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sanctionskit/refs/heads/main/screenshots/sanctionskit-2026-10-11T125521.png
+screenshot: https://apis.io/screenshots/sanctionskit/sanctionskit-2026-10-11T125521.png
 security:
 - kind: authentication
   name: Sanctionskit Authentication

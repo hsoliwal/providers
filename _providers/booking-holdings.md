@@ -1,18 +1,21 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 28.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 0
@@ -90,11 +96,8 @@ apis:
   description: Enables management of booking orders within the Demand API. </br></br>Use these endpoints to preview and create new orders, check order details, cancel or modify existing orders. This collection is re
   name: Booking Holdings Orders API
   slug: booking-holdings-orders-api
-artifact_total: 104
+artifact_total: 103
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Booking.com Demand Accommodations API
   slug: open-booking-holdings-accommodations-api
@@ -124,17 +127,17 @@ collections:
   slug: open-booking-holdings-orders-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/agentic-access/booking-holdings-agentic-access.yml
+  href: https://artifacts.apis.io/booking-holdings/agentic-access/booking-holdings-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/booking-holdings-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/security/booking-holdings-domain-security.yml
+  href: https://artifacts.apis.io/booking-holdings/security/booking-holdings-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/booking-holdings-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/authentication/booking-holdings-authentication.yml
+  href: https://artifacts.apis.io/booking-holdings/authentication/booking-holdings-authentication.yml
   title: ''
   type: Authentication
   url: authentication/booking-holdings-authentication.yml
@@ -163,32 +166,32 @@ common:
   type: Contact
   url: https://www.bookingholdings.com/contact/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/plans/booking-holdings-plans-pricing.yml
+  href: https://artifacts.apis.io/booking-holdings/plans/booking-holdings-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/booking-holdings-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/rate-limits/booking-holdings-rate-limits.yml
+  href: https://artifacts.apis.io/booking-holdings/rate-limits/booking-holdings-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/booking-holdings-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/finops/booking-holdings-finops.yml
+  href: https://artifacts.apis.io/booking-holdings/finops/booking-holdings-finops.yml
   title: ''
   type: FinOps
   url: finops/booking-holdings-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/rules/booking-com-demand-api-spectral-rules.yml
+  href: https://artifacts.apis.io/booking-holdings/rules/booking-com-demand-api-spectral-rules.yml
   title: ''
   type: Rules
   url: rules/booking-com-demand-api-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/vocabulary/booking-holdings-vocabulary.yaml
+  href: https://artifacts.apis.io/booking-holdings/vocabulary/booking-holdings-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/booking-holdings-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/json-ld/booking-holdings-demand-api-context.jsonld
+  href: https://artifacts.apis.io/booking-holdings/json-ld/booking-holdings-demand-api-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/booking-holdings-demand-api-context.jsonld
@@ -472,7 +475,7 @@ plans:
 - name: Booking Holdings Plans Pricing
   plan_count: 2
   slug: booking-holdings-plans-pricing
-random_paper: 18
+random_paper: 14
 rate_limits:
 - limit_count: 3
   name: Booking Holdings Rate Limits
@@ -516,13 +519,13 @@ score:
   band: emerging
   composite: 20.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 65.0
     catalog_earned_first_party: 0.0
     catalog_gap: 50.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
@@ -530,7 +533,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 71.4
     operational_transparency: 13.2
-  previous_composite: 27.2
+  previous_composite: 20.3
   provenance:
     agentic_access: derived
     contracts:
@@ -544,13 +547,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/booking-holdings/refs/heads/main/screenshots/booking-holdings-2026-06-20T173602.png
+screenshot: https://apis.io/screenshots/booking-holdings/booking-holdings-2026-06-20T173602.png
 security:
 - kind: authentication
   name: Booking Holdings Authentication

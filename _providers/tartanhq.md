@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -57,7 +61,7 @@ common:
   type: ChangeLog
   url: https://www.tartanhq.com/product-update
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tartanhq/refs/heads/main/changelog/tartanhq-changelog.yml
+  href: https://artifacts.apis.io/tartanhq/changelog/tartanhq-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tartanhq-changelog.yml
@@ -82,22 +86,22 @@ common:
   type: Compliance
   url: https://www.tartanhq.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tartanhq/refs/heads/main/llms/tartanhq-llms.txt
+  href: https://artifacts.apis.io/tartanhq/llms/tartanhq-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tartanhq-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tartanhq/refs/heads/main/security/tartanhq-domain-security.yml
+  href: https://artifacts.apis.io/tartanhq/security/tartanhq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tartanhq-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tartanhq/refs/heads/main/security/tartanhq-trust-center.yml
+  href: https://artifacts.apis.io/tartanhq/security/tartanhq-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tartanhq-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tartanhq/refs/heads/main/conformance/tartanhq-conformance.yml
+  href: https://artifacts.apis.io/tartanhq/conformance/tartanhq-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tartanhq-conformance.yml
@@ -113,12 +117,12 @@ overview: 'TartanHQ is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   TartanHQ''s developer surface includes signup flow, engineering blog, changelog, support, and 11 more developer resources.'
-random_paper: 9
+random_paper: 3
 score:
   band: emerging
   composite: 19.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -148,14 +152,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tartanhq/refs/heads/main/screenshots/tartanhq-2026-09-02T162547.png
+screenshot: https://apis.io/screenshots/tartanhq/tartanhq-2026-09-02T162547.png
 security:
 - kind: domain-security
   name: Tartanhq Domain Security

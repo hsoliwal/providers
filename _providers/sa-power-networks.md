@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/security/sa-power-networks-domain-security.yml
+  href: https://artifacts.apis.io/sa-power-networks/security/sa-power-networks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sa-power-networks-domain-security.yml
@@ -109,32 +112,32 @@ common:
   type: TermsOfService
   url: https://www.sapowernetworks.com.au/policies/disclaimer/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/well-known/sa-power-networks-well-known.yml
+  href: https://artifacts.apis.io/sa-power-networks/well-known/sa-power-networks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sa-power-networks-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/authentication/sa-power-networks-authentication.yml
+  href: https://artifacts.apis.io/sa-power-networks/authentication/sa-power-networks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sa-power-networks-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/scopes/sa-power-networks-scopes.yml
+  href: https://artifacts.apis.io/sa-power-networks/scopes/sa-power-networks-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sa-power-networks-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/conformance/sa-power-networks-conformance.yml
+  href: https://artifacts.apis.io/sa-power-networks/conformance/sa-power-networks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sa-power-networks-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/lifecycle/sa-power-networks-lifecycle.yml
+  href: https://artifacts.apis.io/sa-power-networks/lifecycle/sa-power-networks-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sa-power-networks-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/llms/sa-power-networks-llms.txt
+  href: https://artifacts.apis.io/sa-power-networks/llms/sa-power-networks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sa-power-networks-llms.txt
@@ -151,7 +154,7 @@ overview: 'SA Power Networks is profiled on the [APIs.io](https://apis.io/) netw
 
 
   SA Power Networks'' developer surface includes engineering blog, developer portal, documentation, support, authentication, and 18 more developer resources.'
-random_paper: 14
+random_paper: 0
 scopes:
 - name: Sa Power Networks Scopes
   scope_count: 36
@@ -191,14 +194,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sa-power-networks/refs/heads/main/screenshots/sa-power-networks-2026-09-02T154238.png
+screenshot: https://apis.io/screenshots/sa-power-networks/sa-power-networks-2026-09-02T154238.png
 security:
 - kind: authentication
   name: Sa Power Networks Authentication

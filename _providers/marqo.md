@@ -1,12 +1,11 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
-  - plans
   - authentication
   - security
   trial: false
@@ -27,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -83,9 +85,6 @@ apis:
 artifact_total: 49
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Marqo REST Documents API
   slug: open-marqo-documents-api
 - collection_type: open
@@ -110,6 +109,11 @@ collections:
   name: Marqo REST API
   slug: open-marqo
 common:
+- group: other
+  href: https://artifacts.apis.io/marqo/capabilities/marqo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/marqo-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -131,17 +135,17 @@ common:
   type: ContributionGuide
   url: https://github.com/marqo-ai/marqo/blob/mainline/CONTRIBUTING.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/agentic-access/marqo-agentic-access.yml
+  href: https://artifacts.apis.io/marqo/agentic-access/marqo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/marqo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/security/marqo-domain-security.yml
+  href: https://artifacts.apis.io/marqo/security/marqo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/marqo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/authentication/marqo-authentication.yml
+  href: https://artifacts.apis.io/marqo/authentication/marqo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/marqo-authentication.yml
@@ -182,17 +186,17 @@ common:
   type: Pricing
   url: https://www.marqo.ai/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/plans/marqo-plans-pricing.yml
+  href: https://artifacts.apis.io/marqo/plans/marqo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/marqo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/rate-limits/marqo-rate-limits.yml
+  href: https://artifacts.apis.io/marqo/rate-limits/marqo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/marqo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/finops/marqo-finops.yml
+  href: https://artifacts.apis.io/marqo/finops/marqo-finops.yml
   title: ''
   type: FinOps
   url: finops/marqo-finops.yml
@@ -253,12 +257,12 @@ features:
 - Hosted Marqo Cloud surface preserves API parity for legacy users
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Marqo Finops
   primary_unit: ''
-  service_category: Vector Database
+  service_category: ''
   slug: marqo-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/marqo.png
 integrations:
 - description: Vespa is the underlying storage and retrieval engine that backs every Marqo index.
@@ -286,33 +290,49 @@ modified: '2026-05-25'
 name: Marqo
 nav: Providers
 network: true
-overview: 'Marqo publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Documents API, Embeddings API, Indexes API, and 4 more. Tagged areas include Vector Database, Vector Search, Multi-Modal, Semantic Search, and Embeddings.
+overview: 'Marqo publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Documents API, Embeddings API, Indexes API, and 4 more. Tagged areas include Vector Search, Multi-Modal, Semantic Search, Embeddings, and Artificial Intelligence.
 
 
-  Marqo''s developer surface includes authentication, documentation, getting-started guide, engineering blog, pricing, tooling, code examples, and 23 more developer resources.'
+  The Marqo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Marqo''s developer surface includes authentication, documentation, getting-started guide, engineering blog, pricing, tooling, code examples, and 24 more developer resources.'
 plans:
 - name: Marqo Plans Pricing
-  plan_count: 1
+  plan_count: 0
   slug: marqo-plans-pricing
 random_paper: 16
 rate_limits:
 - limit_count: 1
   name: Marqo Rate Limits
   slug: marqo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Marqo API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: marqo-rules
 score:
   band: developing
-  composite: 41.2
+  composite: 41.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 36.0
+    artifact_dirs: 16
+    catalog_earned: 38.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 76.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.8
+  delta: 0.0
   facets:
-    access_clarity: 15.8
-    contract_governance: 0.0
+    access_clarity: 10.5
+    contract_governance: 13.6
     contract_quality: 45.0
     developer_ergonomics: 42.9
     discoverability: 57.1
@@ -320,7 +340,7 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 43.0
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     contracts:
@@ -334,13 +354,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/marqo/refs/heads/main/screenshots/marqo-2026-06-20T185006.png
+screenshot: https://apis.io/screenshots/marqo/marqo-2026-06-20T185006.png
 security:
 - kind: authentication
   name: Marqo Authentication
@@ -352,7 +372,6 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: marqo
 tags:
-- Vector Database
 - Vector Search
 - Multi-Modal
 - Semantic Search

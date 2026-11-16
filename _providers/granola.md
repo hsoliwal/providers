@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -13,29 +16,33 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: bearer
+    auth_clarity: negotiable
     consent_identity: false
-    delegated_identity: false
-    dry_run_mode: na
+    delegated_identity: documented
+    dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
-    event_surface_described: false
-    idempotency: na
+    error_semantics: verified
+    event_surface_described: true
+    idempotency: false
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
-    rate_limit_signal: derived
-    reversibility_documented: na
+    rate_limit_signal: verified
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.9
-  scored_at: '2026-10-17'
+  score: 54.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -56,14 +63,21 @@ apis:
   slug: zapier
 - baseURL: https://public-api.granola.ai/v1
   baseurl_source: declared
-  description: The Notes API from Granola — 2 operation(s) for notes.
-  name: Granola Notes API
-  slug: granola-notes-api
-artifact_total: 16
+  description: Lease, acknowledge, and release inbox messages
+  name: Granola Inbox Messages API
+  slug: granola-inbox-messages-api
+- baseURL: https://public-api.granola.ai/v1
+  baseurl_source: declared
+  description: Create and manage trigger inboxes
+  name: Granola Inboxes API
+  slug: granola-inboxes-api
+- baseURL: https://public-api.granola.ai/v1
+  baseurl_source: declared
+  description: The Trigger Inbox API API from Granola — 0 operation(s) for trigger inbox api.
+  name: Granola Trigger Inbox API
+  slug: granola-trigger-inbox-api-api
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Granola Public Notes API
   slug: open-granola-notes-api
@@ -72,27 +86,27 @@ collections:
   slug: open-granola
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/agentic-access/granola-agentic-access.yml
+  href: https://artifacts.apis.io/granola/agentic-access/granola-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/granola-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/security/granola-trust-center.yml
+  href: https://artifacts.apis.io/granola/security/granola-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/granola-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/security/granola-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/granola/security/granola-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/granola-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/security/granola-domain-security.yml
+  href: https://artifacts.apis.io/granola/security/granola-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/granola-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/authentication/granola-authentication.yml
+  href: https://artifacts.apis.io/granola/authentication/granola-authentication.yml
   title: ''
   type: Authentication
   url: authentication/granola-authentication.yml
@@ -117,17 +131,17 @@ common:
   type: Blog
   url: https://www.granola.ai/blog
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/plans/granola-plans-pricing.yml
+  href: https://artifacts.apis.io/granola/plans/granola-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/granola-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/rate-limits/granola-rate-limits.yml
+  href: https://artifacts.apis.io/granola/rate-limits/granola-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/granola-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/finops/granola-finops.yml
+  href: https://artifacts.apis.io/granola/finops/granola-finops.yml
   title: ''
   type: FinOps
   url: finops/granola-finops.yml
@@ -151,7 +165,10 @@ modified: '2026-05-23'
 name: Granola
 nav: Providers
 network: true
-overview: 'Granola publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Notes API, and 3 more. Tagged areas include Artificial Intelligence, Meeting Notes, Transcription, Productivity, and MCP.
+overview: 'Granola publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Inbox Messages API, Inboxes API, Trigger Inbox API, and 3 more. Tagged areas include Artificial Intelligence, Meeting Notes, Transcription, Productivity, and MCP.
+
+
+  The Granola catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Granola''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
@@ -159,37 +176,50 @@ plans:
 - name: Granola Plans Pricing
   plan_count: 1
   slug: granola-plans-pricing
-random_paper: 14
+random_paper: 20
 rate_limits:
 - limit_count: 2
   name: Granola Rate Limits
   slug: granola-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Granola API Rules
+  rule_count: 62
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 6
+  slug: granola-rules
 score:
   band: thin
-  composite: 27.2
+  composite: 32.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 36.0
+    artifact_dirs: 17
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.6
   facets:
     access_clarity: 13.2
-    contract_governance: 0.0
-    contract_quality: 49.0
+    contract_governance: 13.6
+    contract_quality: 59.7
     developer_ergonomics: 23.8
     discoverability: 60.0
-    operational_transparency: 5.3
-  previous_composite: 33.2
+    operational_transparency: 15.8
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 40.0
+      total: 5
     mcp: first-party
   regulatory:
     applies: true
@@ -197,14 +227,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
-    applies: false
-    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
-    reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/screenshots/granola-2026-06-20T182324.png
+    applies: true
+    score: 0.0
+screenshot: https://apis.io/screenshots/granola/granola-2026-06-20T182324.png
 security:
 - kind: authentication
   name: Granola Authentication

@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,21 +38,21 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A local transcription server for macOS that is API-compatible with the Deepgram Speech-to-Text (Live) API, exposing a WebSocket streaming interface (default ws://localhost:50060) driven by the officia
   name: Argmax Local Server
   slug: argmax-local-server
-artifact_total: 4
+artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/plans/argmax-plans-pricing.yml
+  href: https://artifacts.apis.io/argmax/plans/argmax-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/argmax-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/security/argmax-domain-security.yml
+  href: https://artifacts.apis.io/argmax/security/argmax-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/argmax-domain-security.yml
@@ -121,32 +125,40 @@ common:
   type: PrivacyPolicy
   url: https://www.argmaxinc.com/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/packages/argmax-packages.yml
+  href: https://artifacts.apis.io/argmax/packages/argmax-packages.yml
   title: ''
   type: Packages
   url: packages/argmax-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/packages/argmax-packages.yml
+  href: https://artifacts.apis.io/argmax/packages/argmax-packages.yml
   title: ''
   type: SDKs
   url: packages/argmax-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/authentication/argmax-authentication.yml
+  href: https://artifacts.apis.io/argmax/authentication/argmax-authentication.yml
   title: ''
   type: Authentication
   url: authentication/argmax-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/conventions/argmax-conventions.yml
+  href: https://artifacts.apis.io/argmax/conventions/argmax-conventions.yml
   title: ''
   type: Conventions
   url: conventions/argmax-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/llms/argmax-llms.txt
+  href: https://artifacts.apis.io/argmax/llms/argmax-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/argmax-llms.txt
 created: '2026-07-17'
 description: 'Argmax, Inc. builds on-device inference infrastructure that lets developers run foundation models locally on user devices for privacy, real-time performance, and predictable per-device costs. Its products are commercial Pro SDKs on top of open-source cores: WhisperKit (speech-to-text with file transcription, real-time streaming, word timestamps, and subtitle export), SpeakerKit (speaker recognition, diarization, and voice-activity detection), DiffusionKit (image generation for Flux.1 and Stable Diffusion on Apple Silicon), and TTSKit. Argmax also ships the Argmax Local Server for macOS, a local transcription server that is API-compatible with the Deepgram Speech-to-Text (Live) API and driven by an official Node client (@argmaxinc/local-server). Devices are licensed through the ArgmaxSDK (ax_-prefixed API keys) with device-based billing measured by unique licenseId. Backed by General Catalyst.'
+finops:
+- has_sources: true
+  method: derived
+  name: Argmax Finops
+  primary_unit: device
+  service_category: ''
+  slug: argmax-finops
+  template: false
 image: https://cdn.prod.website-files.com/677fd5c33a098b58d447e17b/678ec5cb674cb149d3c4c026_Argmax-OpenGraph.png
 layout: provider
 modified: '2026-07-18'
@@ -161,40 +173,40 @@ plans:
 - name: Argmax Plans Pricing
   plan_count: 4
   slug: argmax-plans-pricing
-random_paper: 2
+random_paper: 16
 score:
   band: developing
-  composite: 40.5
+  composite: 42.0
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 44.0
+    artifact_dirs: 12
+    catalog_earned: 47.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 71.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.0
+  delta: 0.0
   facets:
-    access_clarity: 76.3
+    access_clarity: 84.2
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
     discoverability: 64.3
     operational_transparency: 34.2
-  previous_composite: 34.5
+  previous_composite: 42.0
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/argmax/refs/heads/main/screenshots/argmax-2026-07-25T201142.png
+screenshot: https://apis.io/screenshots/argmax/argmax-2026-07-25T201142.png
 security:
 - kind: authentication
   name: Argmax Authentication

@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
+  label: Enterprise
   onboarding: unknown
-  pricing: paid
+  pricing: enterprise
   public: false
   source:
   - plans
@@ -13,29 +13,33 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: bearer
+    auth_clarity: negotiable
     consent_identity: false
-    delegated_identity: false
-    dry_run_mode: false
+    delegated_identity: documented
+    dry_run_mode: na
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: derived
-    idempotency: false
+    idempotency: na
     mcp_server: verified
-    openapi_examples: verified
+    mcp_tool_quality: quarter
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-10-17'
+  score: 39.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -53,24 +57,29 @@ apis:
   slug: crewai-enterprise-mcp-server
 - baseURL: https://{crew-name}.crewai.com
   baseurl_source: declared
-  description: Discover the input parameters this crew accepts.
-  name: CrewAI Cloud Inputs API
-  slug: crewai-cloud-inputs-api
+  description: The Blog Posts API from CrewAI Cloud — 1 operation(s) for blog posts.
+  name: CrewAI Cloud Blog Posts API
+  slug: crewai-cloud-blog-posts-api
 - baseURL: https://{crew-name}.crewai.com
   baseurl_source: declared
-  description: Launch a crew execution.
-  name: CrewAI Cloud Kickoff API
-  slug: crewai-cloud-kickoff-api
+  description: The Case Studies API from CrewAI Cloud — 1 operation(s) for case studies.
+  name: CrewAI Cloud Case Studies API
+  slug: crewai-cloud-case-studies-api
 - baseURL: https://{crew-name}.crewai.com
   baseurl_source: declared
-  description: Deliver human-in-the-loop feedback on a paused task.
-  name: CrewAI Cloud Resume API
-  slug: crewai-cloud-resume-api
+  description: The Events API from CrewAI Cloud — 1 operation(s) for events.
+  name: CrewAI Cloud Events API
+  slug: crewai-cloud-events-api
 - baseURL: https://{crew-name}.crewai.com
   baseurl_source: declared
-  description: Inspect execution progress and retrieve results.
-  name: CrewAI Cloud Status API
-  slug: crewai-cloud-status-api
+  description: The Health API from CrewAI Cloud — 1 operation(s) for health.
+  name: CrewAI Cloud Health API
+  slug: crewai-cloud-health-api
+- baseURL: https://{crew-name}.crewai.com
+  baseurl_source: declared
+  description: The Webinars API from CrewAI Cloud — 1 operation(s) for webinars.
+  name: CrewAI Cloud Webinars API
+  slug: crewai-cloud-webinars-api
 arazzos:
 - description: Discover the inputs a crew expects, then launch an execution with them.
   name: CrewAI AMP Discover Inputs and Kick Off
@@ -97,9 +106,6 @@ collections:
   name: CrewAI AMP REST API
   slug: postman-crewai-amp-rest-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: CrewAI AMP REST API
   slug: open-crewai-amp-rest-api
 - collection_type: open
@@ -116,22 +122,22 @@ collections:
   slug: open-crewai-cloud-status-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/agentic-access/crewai-cloud-agentic-access.yml
+  href: https://artifacts.apis.io/crewai-cloud/agentic-access/crewai-cloud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/crewai-cloud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/security/crewai-cloud-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/crewai-cloud/security/crewai-cloud-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/crewai-cloud-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/security/crewai-cloud-domain-security.yml
+  href: https://artifacts.apis.io/crewai-cloud/security/crewai-cloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/crewai-cloud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/authentication/crewai-cloud-authentication.yml
+  href: https://artifacts.apis.io/crewai-cloud/authentication/crewai-cloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/crewai-cloud-authentication.yml
@@ -140,27 +146,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/crewai-cloud/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/arazzo/crewai-cloud-discover-inputs-and-kickoff-workflow.yml
+  href: https://artifacts.apis.io/crewai-cloud/arazzo/crewai-cloud-discover-inputs-and-kickoff-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/crewai-cloud-discover-inputs-and-kickoff-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/arazzo/crewai-cloud-full-run-with-result-workflow.yml
+  href: https://artifacts.apis.io/crewai-cloud/arazzo/crewai-cloud-full-run-with-result-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/crewai-cloud-full-run-with-result-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/arazzo/crewai-cloud-kickoff-and-poll-until-complete-workflow.yml
+  href: https://artifacts.apis.io/crewai-cloud/arazzo/crewai-cloud-kickoff-and-poll-until-complete-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/crewai-cloud-kickoff-and-poll-until-complete-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/arazzo/crewai-cloud-kickoff-with-hitl-review-workflow.yml
+  href: https://artifacts.apis.io/crewai-cloud/arazzo/crewai-cloud-kickoff-with-hitl-review-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/crewai-cloud-kickoff-with-hitl-review-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/arazzo/crewai-cloud-resume-paused-execution-workflow.yml
+  href: https://artifacts.apis.io/crewai-cloud/arazzo/crewai-cloud-resume-paused-execution-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/crewai-cloud-resume-paused-execution-workflow.yml
@@ -369,17 +375,17 @@ common:
   type: Documentation
   url: https://docs.crewai.com/en/enterprise/resources/frequently-asked-questions
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/plans/crewai-cloud-plans-pricing.yml
+  href: https://artifacts.apis.io/crewai-cloud/plans/crewai-cloud-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/crewai-cloud-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/rate-limits/crewai-cloud-rate-limits.yml
+  href: https://artifacts.apis.io/crewai-cloud/rate-limits/crewai-cloud-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/crewai-cloud-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/finops/crewai-cloud-finops.yml
+  href: https://artifacts.apis.io/crewai-cloud/finops/crewai-cloud-finops.yml
   title: ''
   type: FinOps
   url: finops/crewai-cloud-finops.yml
@@ -423,7 +429,7 @@ features:
 - Used by 60% of Fortune 500 companies; runs 450M+ agentic workflows per month
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Crewai Cloud Finops
   primary_unit: ''
   service_category: ''
@@ -458,7 +464,7 @@ modified: '2026-05-24'
 name: CrewAI Cloud
 nav: Providers
 network: true
-overview: 'CrewAI Cloud publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including CrewAI AMP Webhook Streaming, Inputs API, Kickoff API, and 3 more. Tagged areas include AI Agents, AI Agent Platform, Agent Orchestration, Multi-Agent Systems, and Agent Management Platform.
+overview: 'CrewAI Cloud publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including CrewAI AMP Webhook Streaming, Blog Posts API, Case Studies API, and 4 more. Tagged areas include AI Agents, AI Agent Platform, Agent Orchestration, Multi-Agent Systems, and Agent Management Platform.
 
 
   The CrewAI Cloud catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
@@ -469,7 +475,7 @@ plans:
 - name: Crewai Cloud Plans Pricing
   plan_count: 2
   slug: crewai-cloud-plans-pricing
-random_paper: 5
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Crewai Cloud Rate Limits
@@ -512,30 +518,30 @@ rules:
   slug: crewai-cloud-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 41.2
+  composite: 45.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 65.5
+    artifact_dirs: 25
+    catalog_earned: 55.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.5
+  delta: 0.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 44.7
     contract_governance: 13.6
-    contract_quality: 66.0
-    developer_ergonomics: 39.3
+    contract_quality: 58.0
+    developer_ergonomics: 42.4
     discoverability: 66.7
-    operational_transparency: 18.4
-  previous_composite: 49.7
+    operational_transparency: 28.9
+  previous_composite: 44.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 4
+      marker_coverage: 50.0
+      total: 10
     mcp: first-party
   regulatory:
     applies: true
@@ -543,13 +549,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
-    applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/crewai-cloud/refs/heads/main/screenshots/crewai-cloud-2026-06-20T175231.png
+    applies: false
+    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
+    reason: read_only
+screenshot: https://apis.io/screenshots/crewai-cloud/crewai-cloud-2026-06-20T175231.png
 security:
 - kind: authentication
   name: Crewai Cloud Authentication

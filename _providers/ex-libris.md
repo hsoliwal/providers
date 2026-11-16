@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 26.7
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://gateway-hostname
@@ -39,57 +52,57 @@ apis:
 artifact_total: 6
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/rules/ex-libris-rules.yml
+  href: https://artifacts.apis.io/ex-libris/rules/ex-libris-rules.yml
   title: ''
   type: Spectral
   url: rules/ex-libris-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/json-ld/ex-libris-context.jsonld
+  href: https://artifacts.apis.io/ex-libris/json-ld/ex-libris-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/ex-libris-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/vocabulary/ex-libris-vocabulary.yml
+  href: https://artifacts.apis.io/ex-libris/vocabulary/ex-libris-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/ex-libris-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/data-model/ex-libris-data-model.yml
+  href: https://artifacts.apis.io/ex-libris/data-model/ex-libris-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ex-libris-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/conformance/ex-libris-conformance.yml
+  href: https://artifacts.apis.io/ex-libris/conformance/ex-libris-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ex-libris-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/well-known/ex-libris-knowledge-security.txt
+  href: https://artifacts.apis.io/ex-libris/well-known/ex-libris-knowledge-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ex-libris-knowledge-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/well-known/ex-libris-well-known.yml
+  href: https://artifacts.apis.io/ex-libris/well-known/ex-libris-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ex-libris-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/hosts/ex-libris-hosts.yml
+  href: https://artifacts.apis.io/ex-libris/hosts/ex-libris-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ex-libris-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/vendors/ex-libris-vendors.yml
+  href: https://artifacts.apis.io/ex-libris/vendors/ex-libris-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ex-libris-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/packages/ex-libris-packages.yml
+  href: https://artifacts.apis.io/ex-libris/packages/ex-libris-packages.yml
   title: ''
   type: SDKs
   url: packages/ex-libris-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/packages/ex-libris-packages.yml
+  href: https://artifacts.apis.io/ex-libris/packages/ex-libris-packages.yml
   title: ''
   type: Packages
   url: packages/ex-libris-packages.yml
@@ -122,7 +135,7 @@ common:
   type: Documentation
   url: https://developers.exlibrisgroup.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ex-libris/refs/heads/main/security/ex-libris-domain-security.yml
+  href: https://artifacts.apis.io/ex-libris/security/ex-libris-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ex-libris-domain-security.yml
@@ -162,7 +175,7 @@ overview: 'Ex Libris is listed with 2 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Ex Libris'' developer surface includes engineering blog, documentation, and 18 more developer resources.'
-random_paper: 9
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -177,22 +190,24 @@ rules:
     warn: 1
   slug: ex-libris-rules
 score:
-  band: thin
-  composite: 26.3
+  band: emerging
+  composite: 21.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 53.2
     catalog_earned_first_party: 0.0
     catalog_gap: 61.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.8
   facets:
-    access_clarity: 18.4
+    access_clarity: 9.2
     contract_governance: 22.0
     contract_quality: 20.4
-    developer_ergonomics: 19.0
+    developer_ergonomics: 17.9
     discoverability: 66.1
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 26.3
   provenance:
     conformance: derived
     contracts:
@@ -206,12 +221,14 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/ex-libris/ex-libris-2026-11-03T131723.png
 security:
 - kind: domain-security
   name: Ex Libris Domain Security

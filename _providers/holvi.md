@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-10-17'
+  score: 23.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -64,11 +67,8 @@ apis:
   description: TPP certificate lifecycle.
   name: Holvi Third Party Provider API
   slug: holvi-third-party-provider-api
-artifact_total: 13
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Holvi PSD2 Account Information API
   slug: open-holvi-account-information-api
@@ -87,77 +87,77 @@ common:
   type: BlogRSS
   url: https://blog.holvi.com/rss.xml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/plans/holvi-plans-pricing.yml
+  href: https://artifacts.apis.io/holvi/plans/holvi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/holvi-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/capabilities/holvi-capability-edges.yml
+  href: https://artifacts.apis.io/holvi/capabilities/holvi-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/holvi-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/agentic-access/holvi-agentic-access.yml
+  href: https://artifacts.apis.io/holvi/agentic-access/holvi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/holvi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/authentication/holvi-authentication.yml
+  href: https://artifacts.apis.io/holvi/authentication/holvi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/holvi-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/security/holvi-domain-security.yml
+  href: https://artifacts.apis.io/holvi/security/holvi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/holvi-domain-security.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/openapi/_original/holvi-psd2-openapi.yml
+  href: https://artifacts.apis.io/holvi/openapi/_original/holvi-psd2-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/holvi-psd2-openapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/conventions/holvi-conventions.yml
+  href: https://artifacts.apis.io/holvi/conventions/holvi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/holvi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/errors/holvi-problem-types.yml
+  href: https://artifacts.apis.io/holvi/errors/holvi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/holvi-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/lifecycle/holvi-lifecycle.yml
+  href: https://artifacts.apis.io/holvi/lifecycle/holvi-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/holvi-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/conformance/holvi-conformance.yml
+  href: https://artifacts.apis.io/holvi/conformance/holvi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/holvi-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/well-known/holvi-well-known.yml
+  href: https://artifacts.apis.io/holvi/well-known/holvi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/holvi-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/mcp/holvi-mcp.yml
+  href: https://artifacts.apis.io/holvi/mcp/holvi-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/holvi-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/data-model/holvi-data-model.yml
+  href: https://artifacts.apis.io/holvi/data-model/holvi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/holvi-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/holvi/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/llms/holvi-llms.txt
+  href: https://artifacts.apis.io/holvi/llms/holvi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/holvi-llms.txt
@@ -219,6 +219,14 @@ common:
   url: https://support.holvi.com/hc/en-gb/articles/29831985498258-Privacy-Notice
 created: '2026-07-17'
 description: Holvi is a Finnish digital business-banking service for freelancers, founders and small businesses, founded in Helsinki in 2011 and operating as a regulated Authorised Payment Institution supervised by the Finnish Financial Supervisory Authority. It combines a business account with its own IBAN, a Holvi Business Mastercard, invoicing, expense tracking, VAT calculation and bookkeeping preparation in one dashboard, serving more than 150,000 businesses across Europe with a focus on Finland, Germany and Austria. For developers, Holvi publishes a PSD2 API v2.0 for licensed Third Party Providers, exposing account information (AISP) and payment initiation (PISP, SEPA / SEPA Instant / SWIFT) with Strong Customer Authentication and optional Verification of Payee.
+finops:
+- has_sources: true
+  method: derived
+  name: Holvi Finops
+  primary_unit: ''
+  service_category: ''
+  slug: holvi-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/holvi.png
 layout: provider
 modified: '2026-10-06'
@@ -228,26 +236,42 @@ network: true
 overview: 'Holvi publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Information API, Consent API, Payment Initiation API, and 1 more. Tagged areas include Company, Banking, Fintech, Payments, and Business Banking.
 
 
+  The Holvi catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Holvi''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, support, engineering blog, and 23 more developer resources.'
 plans:
 - name: Holvi Plans Pricing
   plan_count: 0
   slug: holvi-plans-pricing
 random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Holvi API Rules
+  rule_count: 59
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 1
+  slug: holvi-rules
 score:
   band: developing
-  composite: 43.6
+  composite: 45.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 38.2
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 50.7
     developer_ergonomics: 58.9
     discoverability: 73.2
@@ -260,7 +284,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 43.6
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -281,13 +305,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 22.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/holvi/refs/heads/main/screenshots/holvi-2026-07-25T221323.png
+screenshot: https://apis.io/screenshots/holvi/holvi-2026-07-25T221323.png
 security:
 - kind: authentication
   name: Holvi Authentication
@@ -297,6 +321,14 @@ security:
   name: Holvi Domain Security
   slug: holvi-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Initiate a Holvi SEPA payment (PISP)
+  slug: holvi-initiate-sepa-payment
+- name: Read Holvi account information (AISP)
+  slug: holvi-read-account-information
+- name: Verify payee then pay (VOP)
+  slug: holvi-verify-payee-and-pay
 slug: holvi
 tags:
 - Company

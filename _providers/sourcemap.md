@@ -1,6 +1,7 @@
 ---
 access_model:
   confidence: low
+  gated_conflict: 'x-api-posture: private but 1 published API entry'
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Sourcemap describes a secure real-time RESTful API used to integrate the traceability platform with ERP and enterprise data stacks (SAP, Salesforce Net Zero Cloud, Databricks) and with customs portals
@@ -43,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/security/sourcemap-domain-security.yml
+  href: https://artifacts.apis.io/sourcemap/security/sourcemap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sourcemap-domain-security.yml
@@ -68,22 +72,22 @@ common:
   type: PrivacyPolicy
   url: https://www.sourcemap.com/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/llms/sourcemap-llms.txt
+  href: https://artifacts.apis.io/sourcemap/llms/sourcemap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sourcemap-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/conformance/sourcemap-conformance.yml
+  href: https://artifacts.apis.io/sourcemap/conformance/sourcemap-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sourcemap-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/conformance/sourcemap-conformance.yml
+  href: https://artifacts.apis.io/sourcemap/conformance/sourcemap-conformance.yml
   title: ''
   type: Compliance
   url: conformance/sourcemap-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/lifecycle/sourcemap-lifecycle.yml
+  href: https://artifacts.apis.io/sourcemap/lifecycle/sourcemap-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sourcemap-lifecycle.yml
@@ -92,17 +96,17 @@ common:
   type: StatusPage
   url: https://status.sourcemap.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/plans/sourcemap-plans-pricing.yml
+  href: https://artifacts.apis.io/sourcemap/plans/sourcemap-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sourcemap-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/rate-limits/sourcemap-rate-limits.yml
+  href: https://artifacts.apis.io/sourcemap/rate-limits/sourcemap-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sourcemap-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/packages/sourcemap-packages.yml
+  href: https://artifacts.apis.io/sourcemap/packages/sourcemap-packages.yml
   title: ''
   type: Packages
   url: packages/sourcemap-packages.yml
@@ -141,7 +145,7 @@ plans:
 - name: Sourcemap Plans Pricing
   plan_count: 0
   slug: sourcemap-plans-pricing
-random_paper: 7
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Sourcemap Rate Limits
@@ -150,13 +154,13 @@ score:
   band: emerging
   composite: 19.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -169,7 +173,7 @@ score:
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 18.9
+  previous_composite: 19.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -179,14 +183,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/screenshots/sourcemap-2026-09-02T160303.png
+screenshot: https://apis.io/screenshots/sourcemap/sourcemap-2026-09-02T160303.png
 security:
 - kind: domain-security
   name: Sourcemap Domain Security

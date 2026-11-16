@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/security/aifi-domain-security.yml
+  href: https://artifacts.apis.io/aifi/security/aifi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aifi-domain-security.yml
@@ -77,17 +80,17 @@ common:
   type: OpenSourcePolicy
   url: https://www.aifi.com/open-source
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/llms/aifi-llms.txt
+  href: https://artifacts.apis.io/aifi/llms/aifi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aifi-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/well-known/aifi-well-known.yml
+  href: https://artifacts.apis.io/aifi/well-known/aifi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/aifi-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/authentication/aifi-authentication.yml
+  href: https://artifacts.apis.io/aifi/authentication/aifi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aifi-authentication.yml
@@ -96,12 +99,12 @@ common:
   type: OpenIDConnect
   url: https://auth.aifi.com/realms/aifi/.well-known/openid-configuration
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/scopes/aifi-scopes.yml
+  href: https://artifacts.apis.io/aifi/scopes/aifi-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/aifi-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/conformance/aifi-conformance.yml
+  href: https://artifacts.apis.io/aifi/conformance/aifi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aifi-conformance.yml
@@ -133,7 +136,7 @@ overview: 'AiFi is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   AiFi''s developer surface includes engineering blog, authentication, and 13 more developer resources.'
-random_paper: 13
+random_paper: 1
 scopes:
 - name: Aifi Scopes
   scope_count: 10
@@ -143,7 +146,7 @@ score:
   band: emerging
   composite: 13.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -173,14 +176,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aifi/refs/heads/main/screenshots/aifi-2026-08-07T161053.png
+screenshot: https://apis.io/screenshots/aifi/aifi-2026-08-07T161053.png
 security:
 - kind: authentication
   name: Aifi Authentication

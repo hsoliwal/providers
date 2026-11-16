@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.7
-  scored_at: '2026-10-17'
+  score: 20.4
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.useburrow.com
@@ -39,67 +54,67 @@ apis:
 artifact_total: 9
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/plans/burrow-plans-pricing.yml
+  href: https://artifacts.apis.io/burrow/plans/burrow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/burrow-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/rules/burrow-rules.yml
+  href: https://artifacts.apis.io/burrow/rules/burrow-rules.yml
   title: ''
   type: Spectral
   url: rules/burrow-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/json-ld/burrow-context.jsonld
+  href: https://artifacts.apis.io/burrow/json-ld/burrow-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/burrow-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/vocabulary/burrow-vocabulary.yml
+  href: https://artifacts.apis.io/burrow/vocabulary/burrow-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/burrow-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/data-model/burrow-data-model.yml
+  href: https://artifacts.apis.io/burrow/data-model/burrow-data-model.yml
   title: ''
   type: DataModel
   url: data-model/burrow-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/changelog/burrow-changelog.yml
+  href: https://artifacts.apis.io/burrow/changelog/burrow-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/burrow-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/conventions/burrow-conventions.yml
+  href: https://artifacts.apis.io/burrow/conventions/burrow-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/burrow-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/conventions/burrow-conventions.yml
+  href: https://artifacts.apis.io/burrow/conventions/burrow-conventions.yml
   title: ''
   type: Conventions
   url: conventions/burrow-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/authentication/burrow-authentication.yml
+  href: https://artifacts.apis.io/burrow/authentication/burrow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/burrow-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/conformance/burrow-conformance.yml
+  href: https://artifacts.apis.io/burrow/conformance/burrow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/burrow-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/llms/burrow-llms.txt
+  href: https://artifacts.apis.io/burrow/llms/burrow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/burrow-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/hosts/burrow-hosts.yml
+  href: https://artifacts.apis.io/burrow/hosts/burrow-hosts.yml
   title: ''
   type: Hosts
   url: hosts/burrow-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/vendors/burrow-vendors.yml
+  href: https://artifacts.apis.io/burrow/vendors/burrow-vendors.yml
   title: ''
   type: Vendors
   url: vendors/burrow-vendors.yml
@@ -128,7 +143,7 @@ common:
   type: GettingStarted
   url: https://useburrow.com/docs
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/burrow/refs/heads/main/security/burrow-domain-security.yml
+  href: https://artifacts.apis.io/burrow/security/burrow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/burrow-domain-security.yml
@@ -175,7 +190,7 @@ plans:
 - name: Burrow Plans Pricing
   plan_count: 1
   slug: burrow-plans-pricing
-random_paper: 13
+random_paper: 1
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -191,25 +206,27 @@ rules:
   slug: burrow-rules
 score:
   band: thin
-  composite: 35.7
+  composite: 28.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 22
     catalog_earned: 62.8
     catalog_earned_first_party: 8.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.2
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 22.0
-    contract_quality: 24.0
-    developer_ergonomics: 23.8
+    contract_quality: 23.1
+    developer_ergonomics: 17.9
     discoverability: 64.3
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 35.5
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 3
       marker_coverage: 100.0
       total: 3
@@ -219,12 +236,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/burrow/burrow-2026-11-03T122812.png
 security:
 - kind: authentication
   name: Burrow Authentication

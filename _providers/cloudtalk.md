@@ -1,16 +1,22 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,17 +29,20 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
-    idempotency: false
+    idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-10-17'
+  score: 46.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -90,33 +99,40 @@ apis:
   slug: cloudtalk-numbers-api
 - baseURL: https://my.cloudtalk.io/api
   baseurl_source: declared
-  description: All other helper endpoints.
-  name: CloudTalk Other API
-  slug: cloudtalk-other-api
-- baseURL: https://my.cloudtalk.io/api
-  baseurl_source: declared
   description: Sms handling.
   name: CloudTalk Sms API
   slug: cloudtalk-sms-api
 - baseURL: https://my.cloudtalk.io/api
   baseurl_source: declared
-  description: All data you can get about your tags.
-  name: CloudTalk Tags API
-  slug: cloudtalk-tags-api
-- baseURL: https://my.cloudtalk.io/api
-  baseurl_source: declared
   description: VoiceAgent API ver. 1.0.0
   name: CloudTalk VoiceAgent API
   slug: cloudtalk-voiceagent-api
-artifact_total: 35
+- baseURL: https://my.cloudtalk.io/api
+  baseurl_source: declared
+  description: The tags you create and assign to your contacts.
+  name: CloudTalk Contact tags API
+  slug: cloudtalk-contact-tags-api
+- baseURL: https://my.cloudtalk.io/api
+  baseurl_source: declared
+  description: 'Partner API for the CloudTalk sales dialer — campaigns, campaign contacts, call scripts, surveys, disposition buttons, statistics and data exports. The Dialer is a newly released product surface: depe'
+  name: CloudTalk Dialer API
+  slug: cloudtalk-dialer-api
+- baseURL: https://my.cloudtalk.io/api
+  baseurl_source: declared
+  description: All other helper endpoints.
+  name: CloudTalk Utilities API
+  slug: cloudtalk-utilities-api
+- baseURL: https://my.cloudtalk.io/api
+  baseurl_source: declared
+  description: 'Manage webhook endpoints: subscriptions, signing secrets, test events and the delivery log. Endpoints created here and in the Dashboard are the same endpoints.'
+  name: CloudTalk Webhooks API
+  slug: cloudtalk-webhooks-api
+artifact_total: 42
 asyncapis:
 - description: ''
   name: Cloudtalk Webhooks
   slug: cloudtalk-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CloudTalk Agents API
   slug: open-cloudtalk-agents-api
@@ -158,7 +174,7 @@ collections:
   slug: open-cloudtalk-voiceagent-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/capabilities/cloudtalk-capability-edges.yml
+  href: https://artifacts.apis.io/cloudtalk/capabilities/cloudtalk-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cloudtalk-capability-edges.yml
@@ -215,47 +231,47 @@ common:
   type: PrivacyPolicy
   url: https://www.cloudtalk.io/privacy-notice/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/authentication/cloudtalk-authentication.yml
+  href: https://artifacts.apis.io/cloudtalk/authentication/cloudtalk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudtalk-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/conventions/cloudtalk-conventions.yml
+  href: https://artifacts.apis.io/cloudtalk/conventions/cloudtalk-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cloudtalk-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/rate-limits/cloudtalk-rate-limits.yml
+  href: https://artifacts.apis.io/cloudtalk/rate-limits/cloudtalk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudtalk-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/plans/cloudtalk-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudtalk/plans/cloudtalk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudtalk-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/changelog/cloudtalk-changelog.yml
+  href: https://artifacts.apis.io/cloudtalk/changelog/cloudtalk-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cloudtalk-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/packages/cloudtalk-packages.yml
+  href: https://artifacts.apis.io/cloudtalk/packages/cloudtalk-packages.yml
   title: ''
   type: Packages
   url: packages/cloudtalk-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/errors/cloudtalk-problem-types.yml
+  href: https://artifacts.apis.io/cloudtalk/errors/cloudtalk-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cloudtalk-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/lifecycle/cloudtalk-lifecycle.yml
+  href: https://artifacts.apis.io/cloudtalk/lifecycle/cloudtalk-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cloudtalk-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/conformance/cloudtalk-conformance.yml
+  href: https://artifacts.apis.io/cloudtalk/conformance/cloudtalk-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudtalk-conformance.yml
@@ -264,7 +280,7 @@ common:
   type: Compliance
   url: https://trust.cloudtalk.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/security/cloudtalk-trust-center.yml
+  href: https://artifacts.apis.io/cloudtalk/security/cloudtalk-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cloudtalk-trust-center.yml
@@ -273,52 +289,52 @@ common:
   type: Security
   url: https://trust.cloudtalk.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/security/cloudtalk-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cloudtalk/security/cloudtalk-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cloudtalk-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/security/cloudtalk-domain-security.yml
+  href: https://artifacts.apis.io/cloudtalk/security/cloudtalk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudtalk-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/data-model/cloudtalk-data-model.yml
+  href: https://artifacts.apis.io/cloudtalk/data-model/cloudtalk-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudtalk-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/asyncapi/cloudtalk-webhooks.yml
+  href: https://artifacts.apis.io/cloudtalk/asyncapi/cloudtalk-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cloudtalk-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/mcp/cloudtalk-mcp.yml
+  href: https://artifacts.apis.io/cloudtalk/mcp/cloudtalk-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cloudtalk-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cloudtalk/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/llms/cloudtalk-help-llms.txt
+  href: https://artifacts.apis.io/cloudtalk/llms/cloudtalk-help-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudtalk-help-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/llms/cloudtalk-llms.txt
+  href: https://artifacts.apis.io/cloudtalk/llms/cloudtalk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudtalk-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/overlays/cloudtalk-openapi-overlay.yaml
+  href: https://artifacts.apis.io/cloudtalk/overlays/cloudtalk-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cloudtalk-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/agentic-access/cloudtalk-agentic-access.yml
+  href: https://artifacts.apis.io/cloudtalk/agentic-access/cloudtalk-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudtalk-agentic-access.yml
@@ -328,55 +344,79 @@ common:
   url: https://www.cloudtalk.io
 created: '2026-07-17'
 description: CloudTalk is an AI-powered cloud call center and business phone system (CCaaS) for sales and customer support teams, backed by Point Nine. Its public REST API (served at https://my.cloudtalk.io/api, published as OpenAPI 3.0.1 version 1.7) lets developers automate calls, contacts, agents, groups, phone numbers, campaigns, tags, SMS, blacklists and notes, and read Conversation Intelligence data — transcription, sentiment, topics, talk-listen ratio and smart notes — plus initiate VoiceAgent calls. Authentication is HTTPS-only HTTP Basic Auth using an API Access Key ID and Secret; responses are JSON, paginated with a Collections Envelope, and rate limited to 60 requests per minute per company. Events are delivered through Workflow Automation triggers (native and virtual webhooks) rather than the REST API.
+finops:
+- has_sources: true
+  method: derived
+  name: Cloudtalk Finops
+  primary_unit: user
+  service_category: ''
+  slug: cloudtalk-finops
+  template: false
 image: https://www.cloudtalk.sk/files/social/1/Share-Img.png
 layout: provider
 modified: '2026-08-14'
 name: CloudTalk
 nav: Providers
 network: true
-overview: 'CloudTalk publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Bulks API, Calls API, and 10 more. Tagged areas include Company, Communications, Voice, VoIP, and Call Center.
+overview: 'CloudTalk publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Bulks API, Calls API, and 12 more. Tagged areas include Company, Communications, Voice, VoIP, and Call Center.
 
 
-  The CloudTalk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The CloudTalk catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   CloudTalk''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
 plans:
 - name: Cloudtalk Plans Pricing
-  plan_count: 4
+  plan_count: 15
   slug: cloudtalk-plans-pricing
-random_paper: 17
+- name: Cloudtalk Price Estimates
+  plan_count: 0
+  slug: cloudtalk-price-estimates
+random_paper: 3
 rate_limits:
 - limit_count: 1
   name: Cloudtalk Rate Limits
   slug: cloudtalk-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: CloudTalk API Rules
+  rule_count: 64
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 5
+    warn: 13
+  slug: cloudtalk-rules
 score:
-  band: strong
-  composite: 56.7
+  band: exemplar
+  composite: 68.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 57.0
+    artifact_dirs: 30
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.0
   facets:
-    access_clarity: 84.2
-    contract_governance: 4.5
-    contract_quality: 54.6
-    developer_ergonomics: 32.7
+    access_clarity: 92.1
+    contract_governance: 18.2
+    contract_quality: 67.1
+    developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 68.4
-  previous_composite: 56.7
+  previous_composite: 62.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 13
+      marker_coverage: 51.7
+      total: 29
     mcp: derived
     skills: derived
   regulatory:
@@ -385,13 +425,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 25.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloudtalk/refs/heads/main/screenshots/cloudtalk-2026-07-25T205712.png
+screenshot: https://apis.io/screenshots/cloudtalk/cloudtalk-2026-07-25T205712.png
 security:
 - kind: authentication
   name: Cloudtalk Authentication
@@ -409,6 +449,14 @@ security:
   name: Cloudtalk Trust Center
   slug: cloudtalk-trust-center
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR
+skill_count: 3
+skills:
+- name: Get CloudTalk Conversation Intelligence for a call
+  slug: cloudtalk-conversation-intelligence
+- name: Make an outbound CloudTalk call
+  slug: cloudtalk-make-outbound-call
+- name: Manage CloudTalk contacts
+  slug: cloudtalk-manage-contacts
 slug: cloudtalk
 tags:
 - Company

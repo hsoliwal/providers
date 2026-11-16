@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/rate-limits/acuitymd-rate-limits.yml
+  href: https://artifacts.apis.io/acuitymd/rate-limits/acuitymd-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acuitymd-rate-limits.yml
@@ -85,37 +88,37 @@ common:
   type: Marketplace
   url: https://app.snowflake.com/marketplace/listing/GZ2FTZ5OMHSBI/acuitymd-acuitymd-encounters-data-mart-us
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/llms/acuitymd-llms.txt
+  href: https://artifacts.apis.io/acuitymd/llms/acuitymd-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acuitymd-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/changelog/acuitymd-changelog.yml
+  href: https://artifacts.apis.io/acuitymd/changelog/acuitymd-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/acuitymd-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/lifecycle/acuitymd-lifecycle.yml
+  href: https://artifacts.apis.io/acuitymd/lifecycle/acuitymd-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/acuitymd-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/plans/acuitymd-plans-pricing.yml
+  href: https://artifacts.apis.io/acuitymd/plans/acuitymd-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acuitymd-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/conformance/acuitymd-conformance.yml
+  href: https://artifacts.apis.io/acuitymd/conformance/acuitymd-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acuitymd-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/conformance/acuitymd-conformance.yml
+  href: https://artifacts.apis.io/acuitymd/conformance/acuitymd-conformance.yml
   title: ''
   type: Compliance
   url: conformance/acuitymd-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/security/acuitymd-domain-security.yml
+  href: https://artifacts.apis.io/acuitymd/security/acuitymd-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acuitymd-domain-security.yml
@@ -149,7 +152,7 @@ plans:
 - name: Acuitymd Plans Pricing
   plan_count: 0
   slug: acuitymd-plans-pricing
-random_paper: 6
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Acuitymd Rate Limits
@@ -158,7 +161,7 @@ score:
   band: emerging
   composite: 19.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -182,14 +185,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acuitymd/refs/heads/main/screenshots/acuitymd-2026-07-25T181538.png
+screenshot: https://apis.io/screenshots/acuitymd/acuitymd-2026-07-25T181538.png
 security:
 - kind: domain-security
   name: Acuitymd Domain Security

@@ -1,6 +1,10 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_conflict: 'x-api-posture: private but 2 published API entries'
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -29,15 +33,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.7
-  scored_at: '2026-10-17'
+  score: 36.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -55,7 +62,7 @@ apis:
   description: Create, Updated, Remove and Retrieve properties
   name: Rightmove Property API
   slug: rightmove-property-api
-artifact_total: 8
+artifact_total: 12
 collections:
 - collection_type: open
   name: Commercial Listings API
@@ -66,97 +73,97 @@ common:
   type: BlogRSS
   url: https://www.rightmove.co.uk/news/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/capabilities/rightmove-capability-edges.yml
+  href: https://artifacts.apis.io/rightmove/capabilities/rightmove-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rightmove-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/mcp/rightmove-mcp.yml
+  href: https://artifacts.apis.io/rightmove/mcp/rightmove-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rightmove-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/agentic-access/rightmove-agentic-access.yml
+  href: https://artifacts.apis.io/rightmove/agentic-access/rightmove-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rightmove-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/security/rightmove-domain-security.yml
+  href: https://artifacts.apis.io/rightmove/security/rightmove-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rightmove-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/scopes/rightmove-scopes.yml
+  href: https://artifacts.apis.io/rightmove/scopes/rightmove-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/rightmove-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/authentication/rightmove-authentication.yml
+  href: https://artifacts.apis.io/rightmove/authentication/rightmove-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rightmove-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/conventions/rightmove-conventions.yml
+  href: https://artifacts.apis.io/rightmove/conventions/rightmove-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rightmove-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/conventions/rightmove-conventions.yml
+  href: https://artifacts.apis.io/rightmove/conventions/rightmove-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/rightmove-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/errors/rightmove-problem-types.yml
+  href: https://artifacts.apis.io/rightmove/errors/rightmove-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rightmove-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/rate-limits/rightmove-rate-limits.yml
+  href: https://artifacts.apis.io/rightmove/rate-limits/rightmove-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rightmove-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/lifecycle/rightmove-lifecycle.yml
+  href: https://artifacts.apis.io/rightmove/lifecycle/rightmove-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rightmove-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/changelog/rightmove-changelog.yml
+  href: https://artifacts.apis.io/rightmove/changelog/rightmove-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rightmove-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/data-model/rightmove-data-model.yml
+  href: https://artifacts.apis.io/rightmove/data-model/rightmove-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rightmove-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/conformance/rightmove-conformance.yml
+  href: https://artifacts.apis.io/rightmove/conformance/rightmove-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rightmove-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/sandbox/rightmove-sandbox.yml
+  href: https://artifacts.apis.io/rightmove/sandbox/rightmove-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rightmove-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/packages/rightmove-packages.yml
+  href: https://artifacts.apis.io/rightmove/packages/rightmove-packages.yml
   title: ''
   type: Packages
   url: packages/rightmove-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rightmove/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/llms/rightmove-llms.txt
+  href: https://artifacts.apis.io/rightmove/llms/rightmove-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rightmove-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/overlays/rightmove-commercial-listings-overlay.yaml
+  href: https://artifacts.apis.io/rightmove/overlays/rightmove-commercial-listings-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rightmove-commercial-listings-overlay.yaml
@@ -236,12 +243,28 @@ network: true
 overview: 'Rightmove publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Property API, and 1 more. Tagged areas include Real Estate, United Kingdom, Property Listings, Property Portal, and PropTech.
 
 
+  The Rightmove catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Rightmove''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, signup flow, and 29 more developer resources.'
-random_paper: 13
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Rightmove Rate Limits
   slug: rightmove-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: Rightmove API Rules
+  rule_count: 67
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 4
+  slug: rightmove-rules
 scopes:
 - name: Rightmove Scopes
   scope_count: 1
@@ -249,18 +272,18 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: thin
-  composite: 27.1
+  composite: 34.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 5.4
   facets:
-    access_clarity: 13.2
-    contract_governance: 4.5
+    access_clarity: 34.2
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 13.7
     discoverability: 66.1
@@ -273,7 +296,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 27.0
+  previous_composite: 28.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -289,14 +312,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 34.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rightmove/refs/heads/main/screenshots/rightmove-2026-08-17T081601.png
+screenshot: https://apis.io/screenshots/rightmove/rightmove-2026-08-17T081601.png
 security:
 - kind: authentication
   name: Rightmove Authentication
@@ -306,6 +329,14 @@ security:
   name: Rightmove Domain Security
   slug: rightmove-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Publish or update a commercial property listing
+  slug: rightmove-publish-commercial-listing
+- name: Reconcile a branch's commercial listings
+  slug: rightmove-reconcile-branch-listings
+- name: Withdraw or remove a commercial listing
+  slug: rightmove-withdraw-commercial-listing
 slug: rightmove
 tags:
 - Real Estate

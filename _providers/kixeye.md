@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 9.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -79,42 +82,42 @@ common:
   type: Careers
   url: https://corp.kixeye.com/#careers
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/well-known/kixeye-well-known.yml
+  href: https://artifacts.apis.io/kixeye/well-known/kixeye-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kixeye-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/well-known/kixeye-openid-configuration.json
+  href: https://artifacts.apis.io/kixeye/well-known/kixeye-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/kixeye-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/authentication/kixeye-authentication.yml
+  href: https://artifacts.apis.io/kixeye/authentication/kixeye-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kixeye-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/packages/kixeye-packages.yml
+  href: https://artifacts.apis.io/kixeye/packages/kixeye-packages.yml
   title: ''
   type: Packages
   url: packages/kixeye-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/security/kixeye-domain-security.yml
+  href: https://artifacts.apis.io/kixeye/security/kixeye-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kixeye-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/conformance/kixeye-conformance.yml
+  href: https://artifacts.apis.io/kixeye/conformance/kixeye-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kixeye-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/lifecycle/kixeye-lifecycle.yml
+  href: https://artifacts.apis.io/kixeye/lifecycle/kixeye-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kixeye-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/llms/kixeye-llms.txt
+  href: https://artifacts.apis.io/kixeye/llms/kixeye-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kixeye-llms.txt
@@ -131,18 +134,18 @@ overview: 'Kixeye is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Kixeye''s developer surface includes engineering blog, support, legal docs, authentication, and 14 more developer resources.'
-random_paper: 17
+random_paper: 7
 score:
   band: emerging
   composite: 15.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
@@ -157,7 +160,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.3
+  previous_composite: 15.8
   provenance:
     conformance: derived
   regulatory:
@@ -166,14 +169,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kixeye/refs/heads/main/screenshots/kixeye-2026-07-25T223925.png
+screenshot: https://apis.io/screenshots/kixeye/kixeye-2026-07-25T223925.png
 security:
 - kind: authentication
   name: Kixeye Authentication

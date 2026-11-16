@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-10-17'
+  score: 34.2
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
-- description: API documentation for Brite Payments offering Pay by Bank integration.
+- baseURL: https://sandbox.britepaymentgroup.com
+  baseurl_source: spec
+  description: API documentation for Brite Payments offering Pay by Bank integration.
   name: Brite Payments API
-  slug: brite-payments-api-2
+  slug: brite-payments-api
 - baseURL: https://sandbox.britepaymentgroup.com
   baseurl_source: declared
   description: The Assets API from Brite Payments — 2 operation(s) for assets.
@@ -62,47 +77,47 @@ apis:
 artifact_total: 16
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/rules/brite-payments-rules.yml
+  href: https://artifacts.apis.io/brite-payments/rules/brite-payments-rules.yml
   title: ''
   type: Spectral
   url: rules/brite-payments-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/json-ld/brite-payments-context.jsonld
+  href: https://artifacts.apis.io/brite-payments/json-ld/brite-payments-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/brite-payments-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/vocabulary/brite-payments-vocabulary.yml
+  href: https://artifacts.apis.io/brite-payments/vocabulary/brite-payments-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/brite-payments-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/data-model/brite-payments-data-model.yml
+  href: https://artifacts.apis.io/brite-payments/data-model/brite-payments-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brite-payments-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/conformance/brite-payments-conformance.yml
+  href: https://artifacts.apis.io/brite-payments/conformance/brite-payments-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brite-payments-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/llms/brite-payments-llms.txt
+  href: https://artifacts.apis.io/brite-payments/llms/brite-payments-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brite-payments-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/well-known/brite-payments-well-known.yml
+  href: https://artifacts.apis.io/brite-payments/well-known/brite-payments-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brite-payments-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/hosts/brite-payments-hosts.yml
+  href: https://artifacts.apis.io/brite-payments/hosts/brite-payments-hosts.yml
   title: ''
   type: Hosts
   url: hosts/brite-payments-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/vendors/brite-payments-vendors.yml
+  href: https://artifacts.apis.io/brite-payments/vendors/brite-payments-vendors.yml
   title: ''
   type: Vendors
   url: vendors/brite-payments-vendors.yml
@@ -119,7 +134,7 @@ common:
   type: Newsroom
   url: https://britepayments.com/resources/press/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/security/brite-payments-domain-security.yml
+  href: https://artifacts.apis.io/brite-payments/security/brite-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brite-payments-domain-security.yml
@@ -187,14 +202,14 @@ modified: '2026-10-15'
 name: Brite Payments
 nav: Providers
 network: true
-overview: 'Brite Payments is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Bank Account API, Brite Payments API, and 4 more. Tagged areas include Company, Payments, Fintech, Europe, and OnlinePayments.
+overview: 'Brite Payments is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Bank Account API, and 5 more. Tagged areas include Company, Payments, Fintech, Europe, and Online Payments.
 
 
   The Brite Payments catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Brite Payments'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, and 14 more developer resources.'
-random_paper: 8
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -209,22 +224,29 @@ rules:
     warn: 1
   slug: brite-payments-rules
 score:
-  band: thin
-  composite: 27.3
+  band: emerging
+  composite: 21.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.3
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 35.7
-    discoverability: 71.4
+    developer_ergonomics: 17.9
+    discoverability: 70.5
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+  previous_composite: 27.3
   provenance:
     conformance: derived
     contracts:
@@ -238,12 +260,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/brite-payments/brite-payments-2026-11-03T122647.png
 security:
 - kind: domain-security
   name: Brite Payments Domain Security
@@ -255,6 +279,6 @@ tags:
 - Payments
 - Fintech
 - Europe
-- OnlinePayments
+- Online Payments
 website: https://britepayments.com/
 ---

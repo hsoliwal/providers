@@ -1,13 +1,12 @@
 ---
 access_model:
-  confidence: medium
-  label: Partner onboarding via Relationship Manager / Treasury Management Officer
+  confidence: low
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
-  - developer-portal
-  - documentation
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Account Verification Services API from PNC's developer portal for confirming the ownership and status of bank accounts before disbursing or collecting funds, helping corporate and institutional client
@@ -78,22 +80,22 @@ common:
   type: Blog
   url: https://www.pnc.com/insights/corporate-institutional.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pnc/refs/heads/main/security/pnc-domain-security.yml
+  href: https://artifacts.apis.io/pnc/security/pnc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pnc-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pnc/refs/heads/main/well-known/pnc-security.txt
+  href: https://artifacts.apis.io/pnc/well-known/pnc-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/pnc-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pnc/refs/heads/main/well-known/pnc-well-known.yml
+  href: https://artifacts.apis.io/pnc/well-known/pnc-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pnc-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pnc/refs/heads/main/security/pnc-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/pnc/security/pnc-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/pnc-vulnerability-disclosure.yml
@@ -134,12 +136,12 @@ overview: 'PNC is listed with 6 APIs on the [APIs.io](https://apis.io/) network.
 
 
   PNC''s developer surface includes documentation, engineering blog, support, and 12 more developer resources.'
-random_paper: 13
+random_paper: 9
 score:
   band: minimal
   composite: 10.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -167,14 +169,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pnc/refs/heads/main/screenshots/pnc-2026-06-20T191824.png
+screenshot: https://apis.io/screenshots/pnc/pnc-2026-06-20T191824.png
 security:
 - kind: domain-security
   name: Pnc Domain Security

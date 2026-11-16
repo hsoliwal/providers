@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-10-17'
+  score: 19.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -92,9 +96,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Curve.finance crvUSD API
   slug: open-curve-finance-crvusd-api
 - collection_type: open
@@ -127,17 +128,17 @@ common:
   type: Website
   url: https://www.curve.finance/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/agentic-access/curve-finance-agentic-access.yml
+  href: https://artifacts.apis.io/curve-finance/agentic-access/curve-finance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/curve-finance-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/security/curve-finance-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/curve-finance/security/curve-finance-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/curve-finance-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/security/curve-finance-domain-security.yml
+  href: https://artifacts.apis.io/curve-finance/security/curve-finance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/curve-finance-domain-security.yml
@@ -158,17 +159,17 @@ common:
   type: Forums
   url: https://gov.curve.finance/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/plans/curve-finance-plans-pricing.yml
+  href: https://artifacts.apis.io/curve-finance/plans/curve-finance-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/curve-finance-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/rate-limits/curve-finance-rate-limits.yml
+  href: https://artifacts.apis.io/curve-finance/rate-limits/curve-finance-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/curve-finance-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/finops/curve-finance-finops.yml
+  href: https://artifacts.apis.io/curve-finance/finops/curve-finance-finops.yml
   title: ''
   type: FinOps
   url: finops/curve-finance-finops.yml
@@ -203,35 +204,51 @@ network: true
 overview: 'Curve Finance publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Crv USD API, Deprecated API, Gauges API, and 7 more. Tagged areas include Web3, DeFi, Decentralized Exchange, AMM, and Stablecoins.
 
 
+  The Curve Finance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Curve Finance''s developer surface includes developer portal, documentation, GitHub presence, engineering blog, and 9 more developer resources.'
 plans:
 - name: Curve Finance Plans Pricing
   plan_count: 2
   slug: curve-finance-plans-pricing
-random_paper: 20
+random_paper: 22
 rate_limits:
 - limit_count: 1
   name: Curve Finance Rate Limits
   slug: curve-finance-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Curve Finance API Rules
+  rule_count: 41
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 2
+  slug: curve-finance-rules
 score:
   band: thin
-  composite: 26.5
+  composite: 29.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.6
     developer_ergonomics: 26.2
     discoverability: 73.2
-    operational_transparency: 10.5
-  previous_composite: 28.1
+    operational_transparency: 21.1
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
@@ -245,14 +262,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/screenshots/curve-finance-2026-06-20T175354.png
+screenshot: https://apis.io/screenshots/curve-finance/curve-finance-2026-06-20T175354.png
 security:
 - kind: domain-security
   name: Curve Finance Domain Security

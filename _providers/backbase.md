@@ -1,6 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 28.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -31,7 +44,7 @@ agentic_access:
   operation_count: 26
   slug: backbase-agentic-access
   summary_line: 26 operations · 12 acting
-api_count: 4
+api_count: 2
 apis:
 - baseURL: https://api.backbase.com
   baseurl_source: declared
@@ -73,75 +86,75 @@ apis:
   description: The wallet API from BackBase — 2 operation(s) for wallet.
   name: BackBase Wallet API
   slug: backbase-wallet-api
-artifact_total: 26
+artifact_total: 27
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/agentic-access/backbase-agentic-access.yml
+  href: https://artifacts.apis.io/backbase/agentic-access/backbase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/backbase-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/rules/backbase-rules.yml
+  href: https://artifacts.apis.io/backbase/rules/backbase-rules.yml
   title: ''
   type: Spectral
   url: rules/backbase-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/json-ld/backbase-context.jsonld
+  href: https://artifacts.apis.io/backbase/json-ld/backbase-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/backbase-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/vocabulary/backbase-vocabulary.yml
+  href: https://artifacts.apis.io/backbase/vocabulary/backbase-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/backbase-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/backbase/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/data-model/backbase-data-model.yml
+  href: https://artifacts.apis.io/backbase/data-model/backbase-data-model.yml
   title: ''
   type: DataModel
   url: data-model/backbase-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/errors/backbase-problem-types.yml
+  href: https://artifacts.apis.io/backbase/errors/backbase-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/backbase-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/conformance/backbase-conformance.yml
+  href: https://artifacts.apis.io/backbase/conformance/backbase-conformance.yml
   title: ''
   type: Conformance
   url: conformance/backbase-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/overlays/backbase-payment-order-client-api-overlay.yaml
+  href: https://artifacts.apis.io/backbase/overlays/backbase-payment-order-client-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/backbase-payment-order-client-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/llms/backbase-llms.txt
+  href: https://artifacts.apis.io/backbase/llms/backbase-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/backbase-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/hosts/backbase-hosts.yml
+  href: https://artifacts.apis.io/backbase/hosts/backbase-hosts.yml
   title: ''
   type: Hosts
   url: hosts/backbase-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/vendors/backbase-vendors.yml
+  href: https://artifacts.apis.io/backbase/vendors/backbase-vendors.yml
   title: ''
   type: Vendors
   url: vendors/backbase-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/packages/backbase-packages.yml
+  href: https://artifacts.apis.io/backbase/packages/backbase-packages.yml
   title: ''
   type: SDKs
   url: packages/backbase-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/packages/backbase-packages.yml
+  href: https://artifacts.apis.io/backbase/packages/backbase-packages.yml
   title: ''
   type: Packages
   url: packages/backbase-packages.yml
@@ -174,12 +187,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/Backbase
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/security/backbase-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/backbase/security/backbase-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/backbase-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/security/backbase-domain-security.yml
+  href: https://artifacts.apis.io/backbase/security/backbase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/backbase-domain-security.yml
@@ -241,7 +254,7 @@ modified: '2026-09-27'
 name: BackBase
 nav: Providers
 network: true
-overview: 'BackBase publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Approve API, Bbt API, Patch API, and 5 more. Tagged areas include Banking, Fintech, Digital Banking, API Platform, and AI-Native.
+overview: 'BackBase publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Approve API, Bbt API, Patch API, and 5 more. Tagged areas include Banking, Fintech, Digital Banking, API Platform, and AI-native.
 
 
   The BackBase catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -276,22 +289,22 @@ rules:
   slug: backbase-rules
 score:
   band: thin
-  composite: 34.5
+  composite: 30.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 65.8
+    artifact_dirs: 22
+    catalog_earned: 62.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.3
+    catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: -3.6
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
-    contract_quality: 57.6
-    developer_ergonomics: 32.7
-    discoverability: 80.4
-    operational_transparency: 15.8
+    contract_quality: 62.2
+    developer_ergonomics: 20.8
+    discoverability: 74.1
+    operational_transparency: 7.9
   previous_composite: 33.9
   provenance:
     agentic_access: derived
@@ -299,7 +312,7 @@ score:
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: derived
     skills: derived
@@ -308,14 +321,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 16.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/backbase/refs/heads/main/screenshots/backbase-2026-10-11T101427.png
+screenshot: https://apis.io/screenshots/backbase/backbase-2026-10-11T101427.png
 security:
 - kind: domain-security
   name: Backbase Domain Security
@@ -325,12 +338,16 @@ security:
   name: Backbase Vulnerability Disclosure
   slug: backbase-vulnerability-disclosure
   summary_line: security.txt
+skill_count: 1
+skills:
+- name: payment-orders
+  slug: backbase-payment-orders
 slug: backbase
 tags:
 - Banking
 - Fintech
 - Digital Banking
 - API Platform
-- AI-Native
+- AI-native
 website: https://www.backbase.com
 ---

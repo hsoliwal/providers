@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Enterprise
   onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.4
-  scored_at: '2026-10-17'
+  score: 19.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -83,11 +87,8 @@ apis:
   description: Look up waybill details for shipments
   name: Union Pacific Waybill API
   slug: union-pacific-waybill-api
-artifact_total: 47
+artifact_total: 46
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Union Pacific Account API
   slug: open-union-pacific-account-api
@@ -114,17 +115,17 @@ collections:
   slug: open-union-pacific-waybill-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/union-pacific/refs/heads/main/plans/union-pacific-plans-pricing.yml
+  href: https://artifacts.apis.io/union-pacific/plans/union-pacific-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/union-pacific-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/union-pacific/refs/heads/main/rate-limits/union-pacific-rate-limits.yml
+  href: https://artifacts.apis.io/union-pacific/rate-limits/union-pacific-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/union-pacific-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/union-pacific/refs/heads/main/finops/union-pacific-finops.yml
+  href: https://artifacts.apis.io/union-pacific/finops/union-pacific-finops.yml
   title: ''
   type: FinOps
   url: finops/union-pacific-finops.yml
@@ -137,12 +138,12 @@ common:
   type: BlogRSS
   url: https://www.up.com/news/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/union-pacific/refs/heads/main/agentic-access/union-pacific-agentic-access.yml
+  href: https://artifacts.apis.io/union-pacific/agentic-access/union-pacific-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/union-pacific-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/union-pacific/refs/heads/main/security/union-pacific-domain-security.yml
+  href: https://artifacts.apis.io/union-pacific/security/union-pacific-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/union-pacific-domain-security.yml
@@ -270,7 +271,7 @@ press:
 - date: ''
   title: Union Pacific's AI Chat Gives Employees Tool to Save ...
   url: https://www.up.com/news/service/ai-chatgpt-tool-it-240205
-random_paper: 19
+random_paper: 21
 rate_limits:
 - limit_count: 1
   name: Union Pacific Rate Limits
@@ -303,13 +304,13 @@ score:
   band: emerging
   composite: 20.0
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 70.0
     catalog_earned_first_party: 0.0
     catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
@@ -317,7 +318,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 71.4
     operational_transparency: 5.3
-  previous_composite: 21.0
+  previous_composite: 20.0
   provenance:
     agentic_access: derived
     contracts:
@@ -331,13 +332,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/union-pacific/refs/heads/main/screenshots/union-pacific-2026-09-02T164906.png
+screenshot: https://apis.io/screenshots/union-pacific/union-pacific-2026-09-02T164906.png
 security:
 - kind: domain-security
   name: Union Pacific Domain Security

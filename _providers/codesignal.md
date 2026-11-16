@@ -1,16 +1,22 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.1
-  scored_at: '2026-10-17'
+  score: 42.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Primary GraphQL API for companies, tests, test sessions, live interviews, and interview templates. Authenticated with an API key.
@@ -47,19 +56,21 @@ apis:
   description: The Organization API from Codesignal — 5 operation(s) for organization.
   name: Codesignal Organization API
   slug: codesignal-organization-api
-artifact_total: 12
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Codesignal Webhooks
   slug: codesignal-webhooks
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Codesignal Learn Public Organization API
   slug: open-codesignal-organization-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/codesignal/plans/codesignal-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/codesignal-plans-pricing.yml
 - group: company
   title: ''
   type: Blog
@@ -69,57 +80,57 @@ common:
   type: BlogRSS
   url: https://codesignal.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/capabilities/codesignal-capability-edges.yml
+  href: https://artifacts.apis.io/codesignal/capabilities/codesignal-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/codesignal-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/mcp/codesignal-mcp.yml
+  href: https://artifacts.apis.io/codesignal/mcp/codesignal-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/codesignal-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/asyncapi/codesignal-webhooks.yml
+  href: https://artifacts.apis.io/codesignal/asyncapi/codesignal-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/codesignal-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/codesignal/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/authentication/codesignal-authentication.yml
+  href: https://artifacts.apis.io/codesignal/authentication/codesignal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codesignal-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/scopes/codesignal-scopes.yml
+  href: https://artifacts.apis.io/codesignal/scopes/codesignal-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/codesignal-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/conventions/codesignal-conventions.yml
+  href: https://artifacts.apis.io/codesignal/conventions/codesignal-conventions.yml
   title: ''
   type: Conventions
   url: conventions/codesignal-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/errors/codesignal-problem-types.yml
+  href: https://artifacts.apis.io/codesignal/errors/codesignal-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/codesignal-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/data-model/codesignal-data-model.yml
+  href: https://artifacts.apis.io/codesignal/data-model/codesignal-data-model.yml
   title: ''
   type: DataModel
   url: data-model/codesignal-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/conformance/codesignal-conformance.yml
+  href: https://artifacts.apis.io/codesignal/conformance/codesignal-conformance.yml
   title: ''
   type: Conformance
   url: conformance/codesignal-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/lifecycle/codesignal-lifecycle.yml
+  href: https://artifacts.apis.io/codesignal/lifecycle/codesignal-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/codesignal-lifecycle.yml
@@ -128,27 +139,27 @@ common:
   type: StatusPage
   url: https://status.codesignal.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/overlays/codesignal-learn-overlay.yaml
+  href: https://artifacts.apis.io/codesignal/overlays/codesignal-learn-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/codesignal-learn-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/llms/codesignal-llms.txt
+  href: https://artifacts.apis.io/codesignal/llms/codesignal-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/codesignal-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/well-known/codesignal-well-known.yml
+  href: https://artifacts.apis.io/codesignal/well-known/codesignal-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/codesignal-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/well-known/codesignal-security.txt
+  href: https://artifacts.apis.io/codesignal/well-known/codesignal-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/codesignal-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/security/codesignal-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/codesignal/security/codesignal-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/codesignal-vulnerability-disclosure.yml
@@ -161,7 +172,7 @@ common:
   type: TrustCenter
   url: https://trust.codesignal.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/security/codesignal-domain-security.yml
+  href: https://artifacts.apis.io/codesignal/security/codesignal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codesignal-domain-security.yml
@@ -211,6 +222,14 @@ common:
   url: https://codesignal.com
 created: '2026-07-17'
 description: CodeSignal is a technical interview and skills-assessment platform used by companies to screen, interview, and upskill software engineers. Its developer surface includes a GraphQL API (companies, tests, test sessions, interviews, and interview templates), a versioned Learn REST API (OpenAPI 3.1) for organization members, skill sets, and learning progress, a webhook event API covering assessment, candidate, auditor, and live-interview workflows with HMAC-SHA256 signed deliveries, and an official remote MCP server that lets AI agents work with assessments, candidate sessions, and interviews. CodeSignal is backed by Menlo Ventures.
+finops:
+- has_sources: true
+  method: derived
+  name: Codesignal Finops
+  primary_unit: user
+  service_category: ''
+  slug: codesignal-finops
+  template: false
 image: https://codesignal.com/wp-content/uploads/2022/12/codesignal-fallbck.jpg
 layout: provider
 mcp_servers:
@@ -224,35 +243,55 @@ network: true
 overview: 'Codesignal publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Organization API, and 2 more. Tagged areas include Company, Technical Interview, Skills Assessment, Hiring, and Recruiting.
 
 
-  The Codesignal catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Codesignal catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Codesignal''s developer surface includes engineering blog, authentication, documentation, API reference, support, pricing, signup flow, and 26 more developer resources.'
-random_paper: 15
+  Codesignal''s developer surface includes engineering blog, authentication, documentation, API reference, support, pricing, signup flow, and 27 more developer resources.'
+plans:
+- name: Codesignal Plans Pricing
+  plan_count: 11
+  slug: codesignal-plans-pricing
+- name: Codesignal Price Estimates
+  plan_count: 0
+  slug: codesignal-price-estimates
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Codesignal API Rules
+  rule_count: 47
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 1
+  slug: codesignal-rules
 scopes:
 - name: Codesignal Scopes
   scope_count: 1
   slug: codesignal-scopes
   summary_line: 1 scope · clientCredentials
 score:
-  band: developing
-  composite: 47.0
+  band: strong
+  composite: 56.5
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 4.5
+    access_clarity: 78.9
+    contract_governance: 18.2
     contract_quality: 51.5
     developer_ergonomics: 47.0
     discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 47.0
+  previous_composite: 56.5
   provenance:
     conformance: derived
     contracts:
@@ -268,14 +307,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/screenshots/codesignal-2026-07-25T205933.png
+screenshot: https://apis.io/screenshots/codesignal/codesignal-2026-07-25T205933.png
 security:
 - kind: authentication
   name: Codesignal Authentication
@@ -293,6 +332,14 @@ security:
   name: Codesignal Trust Center
   slug: codesignal-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Schedule and run a CodeSignal live interview
+  slug: codesignal-run-live-interview
+- name: Screen a candidate with a CodeSignal assessment
+  slug: codesignal-screen-candidate
+- name: Track organization learning progress via the Learn API
+  slug: codesignal-track-learn-progress
 slug: codesignal
 tags:
 - Company

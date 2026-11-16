@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 31.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 70
   human_in_the_loop: 0
@@ -341,87 +357,87 @@ apis:
 artifact_total: 79
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/agentic-access/hitbtc-agentic-access.yml
+  href: https://artifacts.apis.io/hitbtc/agentic-access/hitbtc-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hitbtc-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/rate-limits/hitbtc-rate-limits.yml
+  href: https://artifacts.apis.io/hitbtc/rate-limits/hitbtc-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hitbtc-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/rules/hitbtc-rules.yml
+  href: https://artifacts.apis.io/hitbtc/rules/hitbtc-rules.yml
   title: ''
   type: Spectral
   url: rules/hitbtc-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/json-ld/hitbtc-context.jsonld
+  href: https://artifacts.apis.io/hitbtc/json-ld/hitbtc-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hitbtc-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/vocabulary/hitbtc-vocabulary.yml
+  href: https://artifacts.apis.io/hitbtc/vocabulary/hitbtc-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/hitbtc-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/data-model/hitbtc-data-model.yml
+  href: https://artifacts.apis.io/hitbtc/data-model/hitbtc-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hitbtc-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/changelog/hitbtc-changelog.yml
+  href: https://artifacts.apis.io/hitbtc/changelog/hitbtc-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hitbtc-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/conventions/hitbtc-conventions.yml
+  href: https://artifacts.apis.io/hitbtc/conventions/hitbtc-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hitbtc-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/sandbox/hitbtc-sandbox.yml
+  href: https://artifacts.apis.io/hitbtc/sandbox/hitbtc-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/hitbtc-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/errors/hitbtc-problem-types.yml
+  href: https://artifacts.apis.io/hitbtc/errors/hitbtc-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hitbtc-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/conformance/hitbtc-conformance.yml
+  href: https://artifacts.apis.io/hitbtc/conformance/hitbtc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hitbtc-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/hosts/hitbtc-hosts.yml
+  href: https://artifacts.apis.io/hitbtc/hosts/hitbtc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/hitbtc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/vendors/hitbtc-vendors.yml
+  href: https://artifacts.apis.io/hitbtc/vendors/hitbtc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/hitbtc-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/packages/hitbtc-packages.yml
+  href: https://artifacts.apis.io/hitbtc/packages/hitbtc-packages.yml
   title: ''
   type: SDKs
   url: packages/hitbtc-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/packages/hitbtc-packages.yml
+  href: https://artifacts.apis.io/hitbtc/packages/hitbtc-packages.yml
   title: ''
   type: Packages
   url: packages/hitbtc-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/authentication/hitbtc-authentication.yml
+  href: https://artifacts.apis.io/hitbtc/authentication/hitbtc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hitbtc-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitbtc/refs/heads/main/security/hitbtc-domain-security.yml
+  href: https://artifacts.apis.io/hitbtc/security/hitbtc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hitbtc-domain-security.yml
@@ -484,10 +500,10 @@ json_schemas:
   property_count: 5
   slug: hitbtc-wallet-subaccount-created
 - name: wallet_Transaction
-  property_count: 0
+  property_count: 20
   slug: hitbtc-wallet-transaction
 - name: Withdrawal request
-  property_count: 0
+  property_count: 10
   slug: hitbtc-wallet-withdrawal-request
 jsonld:
 - class_count: 120
@@ -506,7 +522,7 @@ overview: 'HitBTC publishes 61 API contracts indexed on the [APIs.io](https://ap
 
 
   HitBTC''s developer surface includes changelog, sandbox, authentication, documentation, API reference, support, and 17 more developer resources.'
-random_paper: 0
+random_paper: 14
 rate_limits:
 - limit_count: 13
   name: Hitbtc Rate Limits
@@ -526,21 +542,23 @@ rules:
   slug: hitbtc-rules
 score:
   band: developing
-  composite: 42.0
+  composite: 39.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 24
     catalog_earned: 77.8
     catalog_earned_first_party: 12.0
     catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.5
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 64.6
-    developer_ergonomics: 47.6
+    developer_ergonomics: 36.9
     discoverability: 71.4
-    operational_transparency: 52.6
+    operational_transparency: 50.0
+  previous_composite: 42.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -556,11 +574,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
+screenshot: https://apis.io/screenshots/hitbtc/hitbtc-2026-11-03T133425.png
 security:
 - kind: authentication
   name: Hitbtc Authentication

@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Free · Open access
+  onboarding: open
+  pricing: free
+  public: true
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.8
-  scored_at: '2026-10-17'
+  score: 14.3
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'Anonymous JSON read surface for the BotMarket directory at https://botmarket.bot/v1 — documented in llms.txt rather than in a contract: GET /v1/mcps?q=, /v1/agents, /v1/protocols, /v1/quests, /v1/skil'
@@ -43,7 +62,7 @@ common:
   type: Blog
   url: https://botmarket.bot/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/security/botmarket-bot-domain-security.yml
+  href: https://artifacts.apis.io/botmarket-bot/security/botmarket-bot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/botmarket-bot-domain-security.yml
@@ -60,57 +79,57 @@ common:
   type: GitHubOrganization
   url: https://github.com/koalabs-ai
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/a2a/botmarket-bot-a2a.yml
+  href: https://artifacts.apis.io/botmarket-bot/a2a/botmarket-bot-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/botmarket-bot-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/mcp/botmarket-bot-mcp.yml
+  href: https://artifacts.apis.io/botmarket-bot/mcp/botmarket-bot-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/botmarket-bot-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/well-known/botmarket-bot-well-known.yml
+  href: https://artifacts.apis.io/botmarket-bot/well-known/botmarket-bot-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/botmarket-bot-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/llms/botmarket-bot-llms.txt
+  href: https://artifacts.apis.io/botmarket-bot/llms/botmarket-bot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/botmarket-bot-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/authentication/botmarket-bot-authentication.yml
+  href: https://artifacts.apis.io/botmarket-bot/authentication/botmarket-bot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/botmarket-bot-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/conventions/botmarket-bot-conventions.yml
+  href: https://artifacts.apis.io/botmarket-bot/conventions/botmarket-bot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/botmarket-bot-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/errors/botmarket-bot-problem-types.yml
+  href: https://artifacts.apis.io/botmarket-bot/errors/botmarket-bot-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/botmarket-bot-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/rate-limits/botmarket-bot-rate-limits.yml
+  href: https://artifacts.apis.io/botmarket-bot/rate-limits/botmarket-bot-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/botmarket-bot-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/plans/botmarket-bot-plans-pricing.yml
+  href: https://artifacts.apis.io/botmarket-bot/plans/botmarket-bot-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/botmarket-bot-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/conformance/botmarket-bot-conformance.yml
+  href: https://artifacts.apis.io/botmarket-bot/conformance/botmarket-bot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/botmarket-bot-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/lifecycle/botmarket-bot-lifecycle.yml
+  href: https://artifacts.apis.io/botmarket-bot/lifecycle/botmarket-bot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/botmarket-bot-lifecycle.yml
@@ -142,20 +161,20 @@ rate_limits:
   slug: botmarket-bot-rate-limits
 score:
   band: emerging
-  composite: 26.1
+  composite: 24.0
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.6
+  delta: -2.1
   facets:
-    access_clarity: 31.6
+    access_clarity: 26.3
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 23.8
+    developer_ergonomics: 19.0
     discoverability: 75.0
     operational_transparency: 36.8
   jurisdiction:
@@ -165,7 +184,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 23.5
+  previous_composite: 26.1
   provenance:
     conformance: first-party
     mcp: first-party
@@ -175,14 +194,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/botmarket-bot/refs/heads/main/screenshots/botmarket-bot-2026-10-11T102531.png
+screenshot: https://apis.io/screenshots/botmarket-bot/botmarket-bot-2026-10-11T102531.png
 security:
 - kind: authentication
   name: Botmarket Bot Authentication

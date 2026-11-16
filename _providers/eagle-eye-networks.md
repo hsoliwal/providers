@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.8
-  scored_at: '2026-10-17'
+  score: 40.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 99
   human_in_the_loop: 0
@@ -272,39 +277,44 @@ apis:
   description: Visit tracking and session management for LPR events at site-level.
   name: Eagle Eye Networks VSP Visits API
   slug: eagle-eye-networks-vsp-visits-api
-artifact_total: 113
+artifact_total: 116
 asyncapis:
 - description: ''
   name: Eagle Eye Networks Events Webhooks
   slug: eagle-eye-networks-events-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/eagle-eye-networks/capabilities/eagle-eye-networks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/eagle-eye-networks-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/agentic-access/eagle-eye-networks-agentic-access.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/agentic-access/eagle-eye-networks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/eagle-eye-networks-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/rules/eagle-eye-networks-rules.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/rules/eagle-eye-networks-rules.yml
   title: ''
   type: Spectral
   url: rules/eagle-eye-networks-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/json-ld/eagle-eye-networks-context.jsonld
+  href: https://artifacts.apis.io/eagle-eye-networks/json-ld/eagle-eye-networks-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/eagle-eye-networks-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/vocabulary/eagle-eye-networks-vocabulary.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/vocabulary/eagle-eye-networks-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/eagle-eye-networks-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/hosts/eagle-eye-networks-hosts.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/hosts/eagle-eye-networks-hosts.yml
   title: ''
   type: Hosts
   url: hosts/eagle-eye-networks-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/vendors/eagle-eye-networks-vendors.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/vendors/eagle-eye-networks-vendors.yml
   title: ''
   type: Vendors
   url: vendors/eagle-eye-networks-vendors.yml
@@ -321,7 +331,7 @@ common:
   type: BlogRSS
   url: https://www.een.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/security/eagle-eye-networks-domain-security.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/security/eagle-eye-networks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eagle-eye-networks-domain-security.yml
@@ -370,87 +380,87 @@ common:
   type: ChangeLog
   url: https://developer.eagleeyenetworks.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/changelog/eagle-eye-networks-changelog.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/changelog/eagle-eye-networks-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/eagle-eye-networks-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/llms/eagle-eye-networks-llms.txt
+  href: https://artifacts.apis.io/eagle-eye-networks/llms/eagle-eye-networks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/eagle-eye-networks-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/well-known/eagle-eye-networks-well-known.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/well-known/eagle-eye-networks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/eagle-eye-networks-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/authentication/eagle-eye-networks-authentication.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/authentication/eagle-eye-networks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/eagle-eye-networks-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/scopes/eagle-eye-networks-scopes.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/scopes/eagle-eye-networks-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/eagle-eye-networks-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/conventions/eagle-eye-networks-conventions.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/conventions/eagle-eye-networks-conventions.yml
   title: ''
   type: Conventions
   url: conventions/eagle-eye-networks-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/lifecycle/eagle-eye-networks-lifecycle.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/lifecycle/eagle-eye-networks-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/eagle-eye-networks-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/packages/eagle-eye-networks-packages.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/packages/eagle-eye-networks-packages.yml
   title: ''
   type: Packages
   url: packages/eagle-eye-networks-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/packages/eagle-eye-networks-packages.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/packages/eagle-eye-networks-packages.yml
   title: ''
   type: SDKs
   url: packages/eagle-eye-networks-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/cli/eagle-eye-networks-cli.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/cli/eagle-eye-networks-cli.yml
   title: ''
   type: CLI
   url: cli/eagle-eye-networks-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/components/eagle-eye-networks-components.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/components/eagle-eye-networks-components.yml
   title: ''
   type: Components
   url: components/eagle-eye-networks-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/mcp/eagle-eye-networks-mcp.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/mcp/eagle-eye-networks-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/eagle-eye-networks-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/asyncapi/eagle-eye-networks-events-webhooks.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/asyncapi/eagle-eye-networks-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/eagle-eye-networks-events-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/errors/eagle-eye-networks-problem-types.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/errors/eagle-eye-networks-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/eagle-eye-networks-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/data-model/eagle-eye-networks-data-model.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/data-model/eagle-eye-networks-data-model.yml
   title: ''
   type: DataModel
   url: data-model/eagle-eye-networks-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/conformance/eagle-eye-networks-conformance.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/conformance/eagle-eye-networks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/eagle-eye-networks-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/eagle-eye-networks/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -471,7 +481,7 @@ json_schemas:
   property_count: 0
   slug: eagle-eye-networks-alert-action
 - name: AlertActionUpdate
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-alert-action-update
 - name: Alert
   property_count: 22
@@ -480,13 +490,13 @@ json_schemas:
   property_count: 1
   slug: eagle-eye-networks-api-add-camera
 - name: ApiAddUser
-  property_count: 0
+  property_count: 11
   slug: eagle-eye-networks-api-add-user
 - name: ApiApplicationCreate
-  property_count: 0
+  property_count: 10
   slug: eagle-eye-networks-api-application-create
 - name: ApiApplication
-  property_count: 0
+  property_count: 11
   slug: eagle-eye-networks-api-application
 - name: ApiAuthSettings
   property_count: 0
@@ -507,31 +517,31 @@ json_schemas:
   property_count: 1
   slug: eagle-eye-networks-api-create-export-response
 - name: ApiDownloadDetailsWithIncludes
-  property_count: 9
+  property_count: 15
   slug: eagle-eye-networks-api-download-details-with-includes
 - name: ApiEventAlertConditionRuleCreate
-  property_count: 2
+  property_count: 8
   slug: eagle-eye-networks-api-event-alert-condition-rule-create
 - name: ApiEventAlertConditionRule
-  property_count: 0
+  property_count: 12
   slug: eagle-eye-networks-api-event-alert-condition-rule
 - name: ApiEventRulesFields
   property_count: 3
   slug: eagle-eye-networks-api-event-rules-fields
 - name: ApiEventsByTypeResponse
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-api-events-by-type-response
 - name: ApiLayoutForSingle
-  property_count: 7
+  property_count: 9
   slug: eagle-eye-networks-api-layout-for-single
 - name: ApiLayoutUpdate
   property_count: 3
   slug: eagle-eye-networks-api-layout-update
 - name: ApiPaginatedFileResponse
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-api-paginated-file-response
 - name: ApiPaginatedOauthClientResponse
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-api-paginated-oauth-client-response
 - name: ApiPtzPosition
   property_count: 3
@@ -567,7 +577,7 @@ json_schemas:
   property_count: 4
   slug: eagle-eye-networks-application-oauth-client-update
 - name: ContractList
-  property_count: 0
+  property_count: 3
   slug: eagle-eye-networks-contract-list
 - name: ContractRecord
   property_count: 13
@@ -588,10 +598,10 @@ json_schemas:
   property_count: 0
   slug: eagle-eye-networks-job
 - name: Location
-  property_count: 8
+  property_count: 12
   slug: eagle-eye-networks-location
 - name: LprAlertConditionRule
-  property_count: 0
+  property_count: 5
   slug: eagle-eye-networks-lpr-alert-condition-rule
 - name: LprAlertConditionRuleUntaggedForPost
   property_count: 0
@@ -600,10 +610,10 @@ json_schemas:
   property_count: 10
   slug: eagle-eye-networks-lpr-fields-data
 - name: LprVehicleListMeta
-  property_count: 0
+  property_count: 9
   slug: eagle-eye-networks-lpr-vehicle-list-meta
 - name: LprVehicleListUntaggedRecord
-  property_count: 0
+  property_count: 11
   slug: eagle-eye-networks-lpr-vehicle-list-untagged-record
 - name: LprVehicleListUntaggedRecordUpdate
   property_count: 10
@@ -612,19 +622,19 @@ json_schemas:
   property_count: 19
   slug: eagle-eye-networks-notification
 - name: PaginatedFloorPlansResponse
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-paginated-floor-plans-response
 - name: PaginatedLocationDescendantsResponse
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-paginated-location-descendants-response
 - name: PaginatedLocationResponse
-  property_count: 0
+  property_count: 4
   slug: eagle-eye-networks-paginated-location-response
 - name: PaginatedResponse
   property_count: 4
   slug: eagle-eye-networks-paginated-response
 - name: PersonAttributeList
-  property_count: 0
+  property_count: 3
   slug: eagle-eye-networks-person-attribute-list
 - name: PtzSettings
   property_count: 4
@@ -633,10 +643,10 @@ json_schemas:
   property_count: 3
   slug: eagle-eye-networks-region-info
 - name: SearchEvent.v1
-  property_count: 0
+  property_count: 13
   slug: eagle-eye-networks-search-event-v1
 - name: VideoSummaryExportDetails
-  property_count: 0
+  property_count: 9
   slug: eagle-eye-networks-video-summary-export-details
 jsonld:
 - class_count: 120
@@ -654,8 +664,8 @@ overview: 'Eagle Eye Networks publishes 46 API contracts indexed on the [APIs.io
   The Eagle Eye Networks catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Eagle Eye Networks'' developer surface includes support, documentation, API reference, getting-started guide, engineering blog, changelog, authentication, and 31 more developer resources.'
-random_paper: 12
+  Eagle Eye Networks'' developer surface includes support, documentation, API reference, getting-started guide, engineering blog, changelog, authentication, and 32 more developer resources.'
+random_paper: 16
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -676,23 +686,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 51.5
+  composite: 53.3
   coverage:
-    artifact_dirs: 29
+    artifact_dirs: 31
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 13.1
+  delta: 1.8
   facets:
     access_clarity: 10.5
     contract_governance: 35.6
-    contract_quality: 74.2
-    developer_ergonomics: 54.2
+    contract_quality: 79.7
+    developer_ergonomics: 51.8
     discoverability: 78.6
-    operational_transparency: 48.7
-  previous_composite: 38.4
+    operational_transparency: 55.3
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -709,13 +719,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/eagle-eye-networks/refs/heads/main/screenshots/eagle-eye-networks-2026-07-25T212634.png
+screenshot: https://apis.io/screenshots/eagle-eye-networks/eagle-eye-networks-2026-07-25T212634.png
 security:
 - kind: authentication
   name: Eagle Eye Networks Authentication
@@ -725,6 +735,14 @@ security:
   name: Eagle Eye Networks Domain Security
   slug: eagle-eye-networks-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Export and download recorded video
+  slug: eagle-eye-networks-export-recorded-video
+- name: Subscribe to events via webhook
+  slug: eagle-eye-networks-subscribe-to-events
+- name: View live and recorded camera video
+  slug: eagle-eye-networks-view-live-and-recorded-video
 slug: eagle-eye-networks
 tags:
 - Company

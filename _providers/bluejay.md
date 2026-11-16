@@ -1,17 +1,22 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -20,21 +25,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: false
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.6
-  scored_at: '2026-10-17'
+  score: 41.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 123
   human_in_the_loop: 1
@@ -71,11 +79,6 @@ apis:
   slug: bluejay-call-logs-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
-  description: The Check Queue Simulation Run API from Bluejay — 1 operation(s) for check queue simulation run.
-  name: Bluejay Check Queue Simulation Run API
-  slug: bluejay-check-queue-simulation-run-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
   description: The Communities API from Bluejay — 5 operation(s) for communities.
   name: Bluejay Communities API
   slug: bluejay-communities-api
@@ -89,11 +92,6 @@ apis:
   description: The Create Schedule API from Bluejay — 1 operation(s) for create schedule.
   name: Bluejay Create Schedule API
   slug: bluejay-create-schedule-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
-  description: The Create Simulation API from Bluejay — 1 operation(s) for create simulation.
-  name: Bluejay Create Simulation API
-  slug: bluejay-create-simulation-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The Custom Metrics API from Bluejay — 7 operation(s) for custom metrics.
@@ -141,19 +139,9 @@ apis:
   slug: bluejay-folders-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
-  description: The Generate Custom Metrics API from Bluejay — 1 operation(s) for generate custom metrics.
-  name: Bluejay Generate Custom Metrics API
-  slug: bluejay-generate-custom-metrics-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
   description: The Generate Customer Personas API from Bluejay — 1 operation(s) for generate customer personas.
   name: Bluejay Generate Customer Personas API
   slug: bluejay-generate-customer-personas-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
-  description: The Generate Digital Humans API from Bluejay — 1 operation(s) for generate digital humans.
-  name: Bluejay Generate Digital Humans API
-  slug: bluejay-generate-digital-humans-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The Generate Test Scenarios API from Bluejay — 1 operation(s) for generate test scenarios.
@@ -164,21 +152,6 @@ apis:
   description: The Generate Translated Transcript API from Bluejay — 1 operation(s) for generate translated transcript.
   name: Bluejay Generate Translated Transcript API
   slug: bluejay-generate-translated-transcript-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
-  description: The Get All Simulations API from Bluejay — 1 operation(s) for get all simulations.
-  name: Bluejay Get All Simulations API
-  slug: bluejay-get-all-simulations-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
-  description: The Get Simulation Runs API from Bluejay — 1 operation(s) for get simulation runs.
-  name: Bluejay Get Simulation Runs API
-  slug: bluejay-get-simulation-runs-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
-  description: The Get Simulations By Agent API from Bluejay — 1 operation(s) for get simulations by agent.
-  name: Bluejay Get Simulations By Agent API
-  slug: bluejay-get-simulations-by-agent-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The Goals API from Bluejay — 1 operation(s) for goals.
@@ -266,19 +239,9 @@ apis:
   slug: bluejay-retell-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
-  description: The Retrieve Simulation Result API from Bluejay — 1 operation(s) for retrieve simulation result.
-  name: Bluejay Retrieve Simulation Result API
-  slug: bluejay-retrieve-simulation-result-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
   description: The Retrieve Simulation Results API from Bluejay — 1 operation(s) for retrieve simulation results.
   name: Bluejay Retrieve Simulation Results API
   slug: bluejay-retrieve-simulation-results-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
-  description: The Send Text API from Bluejay — 1 operation(s) for send text.
-  name: Bluejay Send Text API
-  slug: bluejay-send-text-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The Simulation Results API from Bluejay — 1 operation(s) for simulation results.
@@ -341,23 +304,260 @@ apis:
   slug: bluejay-weekly-notifications-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
-  description: The Workflows API from Bluejay — 3 operation(s) for workflows.
-  name: Bluejay Workflows API
-  slug: bluejay-workflows-api
-- baseURL: https://api.getbluejay.ai
-  baseurl_source: declared
   description: The Bluejay API API from Bluejay — 0 operation(s) for bluejay api.
   name: Bluejay API
   slug: bluejay-bluejay-api-api
-artifact_total: 128
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Agent Versions API from Bluejay — 5 operation(s) for agent versions.
+  name: Bluejay Agent Versions API
+  slug: bluejay-agent-versions-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Agent Workflow API from Bluejay — 14 operation(s) for agent workflow.
+  name: Bluejay Agent Workflow API
+  slug: bluejay-agent-workflow-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Aligned Diff API from Bluejay — 1 operation(s) for aligned diff.
+  name: Bluejay Aligned Diff API
+  slug: bluejay-aligned-diff-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Amelia API from Bluejay — 4 operation(s) for amelia.
+  name: Bluejay Amelia API
+  slug: bluejay-amelia-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The BBB API from Bluejay — 2 operation(s) for bbb.
+  name: Bluejay BBB API
+  slug: bluejay-bbb-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Bluejay as Code API from Bluejay — 2 operation(s) for bluejay as code.
+  name: Bluejay Bluejay as Code API
+  slug: bluejay-bluejay-as-code-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The BluejayAI References API from Bluejay — 2 operation(s) for bluejayai references.
+  name: Bluejay BluejayAI References API
+  slug: bluejay-bluejayai-references-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Custom Metric Templates API from Bluejay — 8 operation(s) for custom metric templates.
+  name: Bluejay Custom Metric Templates API
+  slug: bluejay-custom-metric-templates-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Dashboards API from Bluejay — 4 operation(s) for dashboards.
+  name: Bluejay Dashboards API
+  slug: bluejay-dashboards-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Documents API from Bluejay — 6 operation(s) for documents.
+  name: Bluejay Documents API
+  slug: bluejay-documents-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Email Simulations API from Bluejay — 2 operation(s) for email simulations.
+  name: Bluejay Email Simulations API
+  slug: bluejay-email-simulations-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The google_agents API from Bluejay — 3 operation(s) for google_agents.
+  name: Bluejay Google Agents API
+  slug: bluejay-google-agents-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The google_ces API from Bluejay — 2 operation(s) for google_ces.
+  name: Bluejay Google Ces API
+  slug: bluejay-google-ces-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The google_dfcx API from Bluejay — 1 operation(s) for google_dfcx.
+  name: Bluejay Google Dfcx API
+  slug: bluejay-google-dfcx-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Health API from Bluejay — 2 operation(s) for health.
+  name: Bluejay Health API
+  slug: bluejay-health-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Human Edits API from Bluejay — 12 operation(s) for human edits.
+  name: Bluejay Human Edits API
+  slug: bluejay-human-edits-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Internal API from Bluejay — 5 operation(s) for internal.
+  name: Bluejay Internal API
+  slug: bluejay-internal-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Issues API from Bluejay — 2 operation(s) for issues.
+  name: Bluejay Issues API
+  slug: bluejay-issues-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Journey Steps API from Bluejay — 1 operation(s) for journey steps.
+  name: Bluejay Journey Steps API
+  slug: bluejay-journey-steps-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Live Transcripts API from Bluejay — 1 operation(s) for live transcripts.
+  name: Bluejay Live Transcripts API
+  slug: bluejay-live-transcripts-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The livekit API from Bluejay — 1 operation(s) for livekit.
+  name: Bluejay Livekit API
+  slug: bluejay-livekit-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Metronome Webhook API from Bluejay — 1 operation(s) for metronome webhook.
+  name: Bluejay Metronome Webhook API
+  slug: bluejay-metronome-webhook-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Observability Conversations API from Bluejay — 2 operation(s) for observability conversations.
+  name: Bluejay Observability Conversations API
+  slug: bluejay-observability-conversations-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Observability Issues API from Bluejay — 2 operation(s) for observability issues.
+  name: Bluejay Observability Issues API
+  slug: bluejay-observability-issues-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The oidc API from Bluejay — 2 operation(s) for oidc.
+  name: Bluejay Oidc API
+  slug: bluejay-oidc-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The OpenAI API from Bluejay — 1 operation(s) for openai.
+  name: Bluejay Open AI API
+  slug: bluejay-openai-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Personalities API from Bluejay — 3 operation(s) for personalities.
+  name: Bluejay Personalities API
+  slug: bluejay-personalities-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Preview Chat API from Bluejay — 1 operation(s) for preview chat.
+  name: Bluejay Preview Chat API
+  slug: bluejay-preview-chat-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Recently Deleted API from Bluejay — 2 operation(s) for recently deleted.
+  name: Bluejay Recently Deleted API
+  slug: bluejay-recently-deleted-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Red-Team Simulations API from Bluejay — 4 operation(s) for red-team simulations.
+  name: Bluejay Red-Team Simulations API
+  slug: bluejay-red-team-simulations-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Rerun Simulation Results API from Bluejay — 1 operation(s) for rerun simulation results.
+  name: Bluejay Rerun Simulation Results API
+  slug: bluejay-rerun-simulation-results-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Scenario Builder API from Bluejay — 6 operation(s) for scenario builder.
+  name: Bluejay Scenario Builder API
+  slug: bluejay-scenario-builder-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Schedule API from Bluejay — 1 operation(s) for schedule.
+  name: Bluejay Schedule API
+  slug: bluejay-schedule-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Schedules API from Bluejay — 1 operation(s) for schedules.
+  name: Bluejay Schedules API
+  slug: bluejay-schedules-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The SCIM API from Bluejay — 6 operation(s) for scim.
+  name: Bluejay SCIM API
+  slug: bluejay-scim-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Self-Improve API from Bluejay — 3 operation(s) for self-improve.
+  name: Bluejay Self Improve API
+  slug: bluejay-self-improve-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Sierra API from Bluejay — 1 operation(s) for sierra.
+  name: Bluejay Sierra API
+  slug: bluejay-sierra-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Simulation Issues API from Bluejay — 2 operation(s) for simulation issues.
+  name: Bluejay Simulation Issues API
+  slug: bluejay-simulation-issues-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Slack Assistant API from Bluejay — 2 operation(s) for slack assistant.
+  name: Bluejay Slack Assistant API
+  slug: bluejay-slack-assistant-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The SMS Testing API from Bluejay — 4 operation(s) for sms testing.
+  name: Bluejay SMS Testing API
+  slug: bluejay-sms-testing-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Stripe Webhook API from Bluejay — 1 operation(s) for stripe webhook.
+  name: Bluejay Stripe Webhook API
+  slug: bluejay-stripe-webhook-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The twins API from Bluejay — 2 operation(s) for twins.
+  name: Bluejay Twins API
+  slug: bluejay-twins-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Uptime API from Bluejay — 7 operation(s) for uptime.
+  name: Bluejay Uptime API
+  slug: bluejay-uptime-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Usage Alerts API from Bluejay — 2 operation(s) for usage alerts.
+  name: Bluejay Usage Alerts API
+  slug: bluejay-usage-alerts-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Voice Clones API from Bluejay — 3 operation(s) for voice clones.
+  name: Bluejay Voice Clones API
+  slug: bluejay-voice-clones-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Voice Generation API from Bluejay — 1 operation(s) for voice generation.
+  name: Bluejay Voice Generation API
+  slug: bluejay-voice-generation-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Widgets API from Bluejay — 3 operation(s) for widgets.
+  name: Bluejay Widgets API
+  slug: bluejay-widgets-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Workflow Extraction API from Bluejay — 4 operation(s) for workflow extraction.
+  name: Bluejay Workflow Extraction API
+  slug: bluejay-workflow-extraction-api
+- baseURL: https://api.getbluejay.ai
+  baseurl_source: declared
+  description: The Workspaces API from Bluejay — 8 operation(s) for workspaces.
+  name: Bluejay Workspaces API
+  slug: bluejay-workspaces-api
+artifact_total: 171
 asyncapis:
 - description: ''
   name: Bluejay Webhooks
   slug: bluejay-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Bluejay Agents API
   slug: open-bluejay-agents-api
@@ -540,12 +740,12 @@ collections:
   slug: open-bluejay-workflows-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/plans/bluejay-plans-pricing.yml
+  href: https://artifacts.apis.io/bluejay/plans/bluejay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bluejay-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/capabilities/bluejay-capability-edges.yml
+  href: https://artifacts.apis.io/bluejay/capabilities/bluejay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bluejay-capability-edges.yml
@@ -598,92 +798,100 @@ common:
   type: TrustCenter
   url: https://compliance.getbluejay.ai/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/changelog/bluejay-changelog.yml
+  href: https://artifacts.apis.io/bluejay/changelog/bluejay-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bluejay-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/authentication/bluejay-authentication.yml
+  href: https://artifacts.apis.io/bluejay/authentication/bluejay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bluejay-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/openapi/_original/bluejay-openapi-original.json
+  href: https://artifacts.apis.io/bluejay/openapi/_original/bluejay-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/bluejay-openapi-original.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/mcp/bluejay-mcp.yml
+  href: https://artifacts.apis.io/bluejay/mcp/bluejay-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bluejay-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/packages/bluejay-packages.yml
+  href: https://artifacts.apis.io/bluejay/packages/bluejay-packages.yml
   title: ''
   type: Packages
   url: packages/bluejay-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/packages/bluejay-packages.yml
+  href: https://artifacts.apis.io/bluejay/packages/bluejay-packages.yml
   title: ''
   type: SDKs
   url: packages/bluejay-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/asyncapi/bluejay-webhooks.yml
+  href: https://artifacts.apis.io/bluejay/asyncapi/bluejay-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bluejay-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/errors/bluejay-problem-types.yml
+  href: https://artifacts.apis.io/bluejay/errors/bluejay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bluejay-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/conventions/bluejay-conventions.yml
+  href: https://artifacts.apis.io/bluejay/conventions/bluejay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bluejay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/lifecycle/bluejay-lifecycle.yml
+  href: https://artifacts.apis.io/bluejay/lifecycle/bluejay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bluejay-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/conformance/bluejay-conformance.yml
+  href: https://artifacts.apis.io/bluejay/conformance/bluejay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bluejay-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/data-model/bluejay-data-model.yml
+  href: https://artifacts.apis.io/bluejay/data-model/bluejay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bluejay-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/overlays/bluejay-openapi-overlay.yaml
+  href: https://artifacts.apis.io/bluejay/overlays/bluejay-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bluejay-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bluejay/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/agentic-access/bluejay-agentic-access.yml
+  href: https://artifacts.apis.io/bluejay/agentic-access/bluejay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bluejay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/security/bluejay-domain-security.yml
+  href: https://artifacts.apis.io/bluejay/security/bluejay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bluejay-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/llms/bluejay-llms.txt
+  href: https://artifacts.apis.io/bluejay/llms/bluejay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bluejay-llms.txt
 created: '2026-07-17'
 description: Bluejay is the testing, monitoring, and improvement layer for conversational AI agents. Enterprises, startups, and developers use Bluejay to evaluate voice and chat agents, run lifelike simulations with synthetic "digital humans" across voice, chat, SMS, and text channels, load-test and replay production calls, and catch regressions before they reach customers. The platform pairs a simulation engine with production observability - automated evaluation of tone, accuracy, task completion, and custom metrics, plus dashboards and alerts. It exposes a REST API (X-API-Key auth, /v1), a hosted MCP server, event webhooks, a first-party Python SDK, and integrations with Vapi, Retell, ElevenLabs, Bland, LiveKit, Google Dialogflow CX / CES, and Kore.ai. Backed by Homebrew.
+finops:
+- has_sources: true
+  method: derived
+  name: Bluejay Finops
+  primary_unit: credits/minutes
+  service_category: ''
+  slug: bluejay-finops
+  template: false
 image: https://framerusercontent.com/assets/0eWRRDcsziAELTSPQghHwloyXH0.jpg
 layout: provider
 mcp_servers:
@@ -694,10 +902,10 @@ modified: '2026-09-16'
 name: Bluejay
 nav: Providers
 network: true
-overview: 'Bluejay publishes 61 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Alerts API, Api Keys API, and 58 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Voice AI, and Conversational AI.
+overview: 'Bluejay publishes 100 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Alerts API, Api Keys API, and 97 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Voice AI, and Conversational AI.
 
 
-  The Bluejay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Bluejay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Bluejay''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 24 more developer resources.'
@@ -705,34 +913,50 @@ plans:
 - name: Bluejay Plans Pricing
   plan_count: 4
   slug: bluejay-plans-pricing
-random_paper: 0
+- name: Bluejay Price Estimates
+  plan_count: 0
+  slug: bluejay-price-estimates
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Bluejay API Rules
+  rule_count: 56
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 13
+  slug: bluejay-rules
 score:
   band: strong
-  composite: 57.0
+  composite: 61.1
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 49.0
+    artifact_dirs: 27
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.0
+  delta: 0.8
   facets:
-    access_clarity: 77.6
-    contract_governance: 4.5
-    contract_quality: 56.1
+    access_clarity: 85.5
+    contract_governance: 18.2
+    contract_quality: 59.6
     developer_ergonomics: 61.3
     discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 51.0
+  previous_composite: 60.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 61
+      marker_coverage: 61.5
+      total: 161
     mcp: first-party
     skills: derived
   regulatory:
@@ -741,13 +965,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/screenshots/bluejay-2026-07-25T203452.png
+screenshot: https://apis.io/screenshots/bluejay/bluejay-2026-07-25T203452.png
 security:
 - kind: authentication
   name: Bluejay Authentication
@@ -757,6 +981,12 @@ security:
   name: Bluejay Domain Security
   slug: bluejay-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create an agent and run a simulation
+  slug: bluejay-create-agent-and-simulate
+- name: Evaluate production calls with observability
+  slug: bluejay-evaluate-production-calls
 slug: bluejay
 tags:
 - Company

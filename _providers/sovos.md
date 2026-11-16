@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: documented
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 19.4
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
-- description: Sovos provides tax compliance, e‑invoicing, and filing APIs.
+- baseURL: https://api.sovos.com
+  baseurl_source: declared
+  description: Sovos provides tax compliance, e‑invoicing, and filing APIs.
   name: Sovos API
-  slug: sovos-api-2
+  slug: sovos-api
 - baseURL: https://api.sovos.com
   baseurl_source: declared
   description: The Configurations API from Sovos — 24 operation(s) for configurations.
@@ -57,37 +72,37 @@ apis:
 artifact_total: 15
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/rules/sovos-rules.yml
+  href: https://artifacts.apis.io/sovos/rules/sovos-rules.yml
   title: ''
   type: Spectral
   url: rules/sovos-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/json-ld/sovos-context.jsonld
+  href: https://artifacts.apis.io/sovos/json-ld/sovos-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sovos-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/vocabulary/sovos-vocabulary.yml
+  href: https://artifacts.apis.io/sovos/vocabulary/sovos-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sovos-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/data-model/sovos-data-model.yml
+  href: https://artifacts.apis.io/sovos/data-model/sovos-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sovos-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/conformance/sovos-conformance.yml
+  href: https://artifacts.apis.io/sovos/conformance/sovos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sovos-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/well-known/sovos-well-known.yml
+  href: https://artifacts.apis.io/sovos/well-known/sovos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sovos-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/hosts/sovos-hosts.yml
+  href: https://artifacts.apis.io/sovos/hosts/sovos-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sovos-hosts.yml
@@ -116,7 +131,7 @@ common:
   type: Documentation
   url: https://dev.sovos.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sovos/refs/heads/main/security/sovos-domain-security.yml
+  href: https://artifacts.apis.io/sovos/security/sovos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sovos-domain-security.yml
@@ -163,14 +178,14 @@ modified: '2026-10-13'
 name: Sovos
 nav: Providers
 network: true
-overview: 'Sovos is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Configurations API, Documents API, Notifications API, and 3 more. Tagged areas include Tax, Compliance, Cloud, and Global.
+overview: 'Sovos is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Configurations API, Documents API, and 4 more. Tagged areas include Tax, Compliance, Cloud, and Global.
 
 
   The Sovos catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Sovos'' developer surface includes signup flow, changelog, engineering blog, documentation, and 11 more developer resources.'
-random_paper: 20
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -186,21 +201,28 @@ rules:
   slug: sovos-rules
 score:
   band: emerging
-  composite: 25.8
+  composite: 19.8
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.9
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 22.0
-    contract_quality: 25.7
-    developer_ergonomics: 11.9
+    contract_quality: 25.5
+    developer_ergonomics: 6.0
     discoverability: 62.5
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - global
+  previous_composite: 25.7
   provenance:
     conformance: derived
     contracts:
@@ -214,12 +236,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/sovos/sovos-2026-11-03T143559.png
 security:
 - kind: domain-security
   name: Sovos Domain Security

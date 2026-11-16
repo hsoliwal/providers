@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://demand-api.eqtv.io
@@ -64,57 +78,57 @@ apis:
 artifact_total: 17
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/rules/equativ-rules.yml
+  href: https://artifacts.apis.io/equativ/rules/equativ-rules.yml
   title: ''
   type: Spectral
   url: rules/equativ-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/json-ld/equativ-context.jsonld
+  href: https://artifacts.apis.io/equativ/json-ld/equativ-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/equativ-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/vocabulary/equativ-vocabulary.yml
+  href: https://artifacts.apis.io/equativ/vocabulary/equativ-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/equativ-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/data-model/equativ-data-model.yml
+  href: https://artifacts.apis.io/equativ/data-model/equativ-data-model.yml
   title: ''
   type: DataModel
   url: data-model/equativ-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/changelog/equativ-changelog.yml
+  href: https://artifacts.apis.io/equativ/changelog/equativ-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/equativ-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/authentication/equativ-authentication.yml
+  href: https://artifacts.apis.io/equativ/authentication/equativ-authentication.yml
   title: ''
   type: Authentication
   url: authentication/equativ-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/conformance/equativ-conformance.yml
+  href: https://artifacts.apis.io/equativ/conformance/equativ-conformance.yml
   title: ''
   type: Conformance
   url: conformance/equativ-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/well-known/equativ-status-security.txt
+  href: https://artifacts.apis.io/equativ/well-known/equativ-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/equativ-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/well-known/equativ-well-known.yml
+  href: https://artifacts.apis.io/equativ/well-known/equativ-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/equativ-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/hosts/equativ-hosts.yml
+  href: https://artifacts.apis.io/equativ/hosts/equativ-hosts.yml
   title: ''
   type: Hosts
   url: hosts/equativ-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/vendors/equativ-vendors.yml
+  href: https://artifacts.apis.io/equativ/vendors/equativ-vendors.yml
   title: ''
   type: Vendors
   url: vendors/equativ-vendors.yml
@@ -155,7 +169,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/equativ
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/equativ/refs/heads/main/security/equativ-domain-security.yml
+  href: https://artifacts.apis.io/equativ/security/equativ-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/equativ-domain-security.yml
@@ -202,7 +216,7 @@ overview: 'Equativ is listed with 7 APIs on the [APIs.io](https://apis.io/) netw
 
 
   Equativ''s developer surface includes changelog, authentication, engineering blog, getting-started guide, documentation, and 17 more developer resources.'
-random_paper: 19
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -218,25 +232,27 @@ rules:
   slug: equativ-rules
 score:
   band: thin
-  composite: 35.8
+  composite: 30.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 35.6
-    contract_quality: 26.0
-    developer_ergonomics: 35.7
-    discoverability: 75.0
+    contract_quality: 25.2
+    developer_ergonomics: 23.8
+    discoverability: 73.2
     operational_transparency: 36.8
+  previous_composite: 36.9
   provenance:
     conformance: first-party
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 8
       marker_coverage: 100.0
       total: 8
@@ -250,13 +266,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/equativ/equativ-2026-11-03T131609.png
 security:
 - kind: authentication
   name: Equativ Authentication

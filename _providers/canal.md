@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.4
-  scored_at: '2026-10-17'
+  score: 35.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.shopcanal.com/platform
@@ -123,15 +126,12 @@ apis:
   description: The webhooks API from Canal — 2 operation(s) for webhooks.
   name: Canal Webhooks API
   slug: canal-webhooks-api
-artifact_total: 38
+artifact_total: 40
 asyncapis:
 - description: ''
   name: Canal Webhooks
   slug: canal-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rokt Catalog csv API
   slug: open-canal-csv-api
@@ -185,82 +185,82 @@ collections:
   slug: open-canal-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/capabilities/canal-capability-edges.yml
+  href: https://artifacts.apis.io/canal/capabilities/canal-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/canal-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/security/canal-domain-security.yml
+  href: https://artifacts.apis.io/canal/security/canal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canal-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/authentication/canal-authentication.yml
+  href: https://artifacts.apis.io/canal/authentication/canal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/canal-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/openapi/_original/canal-openapi-original.yml
+  href: https://artifacts.apis.io/canal/openapi/_original/canal-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/canal-openapi-original.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/overlays/canal-openapi-overlay.yaml
+  href: https://artifacts.apis.io/canal/overlays/canal-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/canal-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/llms/canal-llms.txt
+  href: https://artifacts.apis.io/canal/llms/canal-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/canal-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/errors/canal-problem-types.yml
+  href: https://artifacts.apis.io/canal/errors/canal-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/canal-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/data-model/canal-data-model.yml
+  href: https://artifacts.apis.io/canal/data-model/canal-data-model.yml
   title: ''
   type: DataModel
   url: data-model/canal-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/conventions/canal-conventions.yml
+  href: https://artifacts.apis.io/canal/conventions/canal-conventions.yml
   title: ''
   type: Conventions
   url: conventions/canal-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/conventions/canal-conventions.yml
+  href: https://artifacts.apis.io/canal/conventions/canal-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/canal-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/lifecycle/canal-lifecycle.yml
+  href: https://artifacts.apis.io/canal/lifecycle/canal-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/canal-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/sandbox/canal-sandbox.yml
+  href: https://artifacts.apis.io/canal/sandbox/canal-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/canal-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/conformance/canal-conformance.yml
+  href: https://artifacts.apis.io/canal/conformance/canal-conformance.yml
   title: ''
   type: Conformance
   url: conformance/canal-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/mcp/canal-mcp.yml
+  href: https://artifacts.apis.io/canal/mcp/canal-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/canal-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/asyncapi/canal-webhooks.yml
+  href: https://artifacts.apis.io/canal/asyncapi/canal-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/canal-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/canal/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -319,30 +319,43 @@ network: true
 overview: 'Canal publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including CSV API, Fulfillments API, Markets API, and 14 more. Tagged areas include Company, E-Commerce, Dropshipping, Marketplace, and Commerce.
 
 
-  The Canal catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Canal catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Canal''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 20 more developer resources.'
-random_paper: 5
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Canal API Rules
+  rule_count: 55
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 8
+    warn: 4
+  slug: canal-rules
 score:
   band: developing
-  composite: 40.5
+  composite: 39.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -2.3
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 57.3
-    developer_ergonomics: 47.0
+    developer_ergonomics: 35.1
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 40.4
+  previous_composite: 42.1
   provenance:
     conformance: derived
     contracts:
@@ -358,13 +371,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/canal/refs/heads/main/screenshots/canal-2026-07-25T204329.png
+screenshot: https://apis.io/screenshots/canal/canal-2026-07-25T204329.png
 security:
 - kind: authentication
   name: Canal Authentication
@@ -374,6 +387,12 @@ security:
   name: Canal Domain Security
   slug: canal-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Place and track a Rokt Catalog (Canal) order from a Storefront
+  slug: canal-storefront-order
+- name: Manage a Rokt Catalog (Canal) supplier catalog and fulfill orders
+  slug: canal-supplier-catalog
 slug: canal
 tags:
 - Company

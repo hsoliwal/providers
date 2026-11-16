@@ -1,19 +1,20 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: platform
     auth_clarity: bearer
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.4
-  scored_at: '2026-10-17'
+  score: 24.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 6
@@ -48,32 +52,29 @@ apis:
   description: The Analytics API from Saviynt — 8 operation(s) for analytics.
   name: Saviynt Analytics API
   slug: saviynt-analytics-api
-artifact_total: 27
+artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Saviynt Enterprise Identity Cloud (EIC) Analytics API
   slug: open-saviynt-analytics-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/capabilities/saviynt-capability-edges.yml
+  href: https://artifacts.apis.io/saviynt/capabilities/saviynt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/saviynt-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/agentic-access/saviynt-agentic-access.yml
+  href: https://artifacts.apis.io/saviynt/agentic-access/saviynt-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/saviynt-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/security/saviynt-trust-center.yml
+  href: https://artifacts.apis.io/saviynt/security/saviynt-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/saviynt-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/security/saviynt-domain-security.yml
+  href: https://artifacts.apis.io/saviynt/security/saviynt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/saviynt-domain-security.yml
@@ -110,17 +111,17 @@ common:
   type: X
   url: https://x.com/saviynt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/plans/saviynt-plans-pricing.yml
+  href: https://artifacts.apis.io/saviynt/plans/saviynt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/saviynt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/rate-limits/saviynt-rate-limits.yml
+  href: https://artifacts.apis.io/saviynt/rate-limits/saviynt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/saviynt-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/finops/saviynt-finops.yml
+  href: https://artifacts.apis.io/saviynt/finops/saviynt-finops.yml
   title: ''
   type: FinOps
   url: finops/saviynt-finops.yml
@@ -203,7 +204,7 @@ plans:
 - name: Saviynt Plans Pricing
   plan_count: 3
   slug: saviynt-plans-pricing
-random_paper: 12
+random_paper: 14
 rate_limits:
 - limit_count: 3
   name: Saviynt Rate Limits
@@ -236,13 +237,13 @@ score:
   band: thin
   composite: 38.2
   coverage:
-    artifact_dirs: 28
+    artifact_dirs: 30
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -19.3
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 22.0
@@ -250,7 +251,7 @@ score:
     developer_ergonomics: 26.2
     discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 57.5
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -267,13 +268,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/saviynt/refs/heads/main/screenshots/saviynt-2026-06-20T193458.png
+screenshot: https://apis.io/screenshots/saviynt/saviynt-2026-06-20T193458.png
 security:
 - kind: domain-security
   name: Saviynt Domain Security
@@ -283,6 +284,12 @@ security:
   name: Saviynt Trust Center
   slug: saviynt-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, PCI DSS, FedRAMP, FIPS 140
+skill_count: 2
+skills:
+- name: saviynt-analytics-run
+  slug: saviynt-analytics-run
+- name: saviynt-create-or-view-connection
+  slug: saviynt-create-or-view-connection
 slug: saviynt
 tags:
 - Identity Governance

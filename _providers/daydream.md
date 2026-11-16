@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -69,7 +73,7 @@ common:
   type: TrustCenter
   url: https://hipaa.daydream.dental
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/daydream/refs/heads/main/security/daydream-domain-security.yml
+  href: https://artifacts.apis.io/daydream/security/daydream-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/daydream-domain-security.yml
@@ -85,7 +89,7 @@ overview: 'DayDream Dental is profiled on the [APIs.io](https://apis.io/) networ
 
 
   DayDream Dental''s developer surface includes engineering blog, support, signup flow, and 6 more developer resources.'
-random_paper: 3
+random_paper: 23
 score:
   band: emerging
   composite: 14.7
@@ -111,14 +115,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/daydream/refs/heads/main/screenshots/daydream-2026-07-25T211442.png
+screenshot: https://apis.io/screenshots/daydream/daydream-2026-07-25T211442.png
 security:
 - kind: domain-security
   name: Daydream Domain Security
@@ -132,7 +136,6 @@ tags:
 - Healthcare
 - Insurance Verification
 - Claims
-- RCM
 - Dental Service Organization
 website: https://www.daydream.dental
 ---

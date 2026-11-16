@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 27.9
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.prod.fortahealth.com/api/v1/
   baseurl_source: declared
@@ -210,9 +213,6 @@ apis:
 artifact_total: 72
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Fast Assessment Surveys API
   slug: open-forta-health-assessment-surveys-api
 - collection_type: open
@@ -319,17 +319,17 @@ collections:
   slug: open-forta-health-treatment-plan-statuses-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/capabilities/forta-health-capability-edges.yml
+  href: https://artifacts.apis.io/forta-health/capabilities/forta-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/forta-health-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/forta-health/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/overlays/forta-health-platform-overlay.yaml
+  href: https://artifacts.apis.io/forta-health/overlays/forta-health-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/forta-health-platform-overlay.yaml
@@ -386,27 +386,27 @@ common:
   type: Compliance
   url: https://www.fortahealth.com/notice-of-privacy-practices
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/conformance/forta-health-conformance.yml
+  href: https://artifacts.apis.io/forta-health/conformance/forta-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/forta-health-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/packages/forta-health-packages.yml
+  href: https://artifacts.apis.io/forta-health/packages/forta-health-packages.yml
   title: ''
   type: Packages
   url: packages/forta-health-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/lifecycle/forta-health-lifecycle.yml
+  href: https://artifacts.apis.io/forta-health/lifecycle/forta-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/forta-health-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/security/forta-health-domain-security.yml
+  href: https://artifacts.apis.io/forta-health/security/forta-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/forta-health-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/llms/forta-health-llms.txt
+  href: https://artifacts.apis.io/forta-health/llms/forta-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/forta-health-llms.txt
@@ -422,34 +422,50 @@ network: true
 overview: 'Forta Health publishes 34 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assessment Surveys API, Behavior API, Bt Supervisions API, and 31 more. Tagged areas include Healthcare, Autism, ABA Therapy, Behavioral Health, and Telehealth.
 
 
+  The Forta Health catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Forta Health''s developer surface includes signup flow, support, engineering blog, and 18 more developer resources.'
-random_paper: 5
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Forta Health API Rules
+  rule_count: 46
+  severity_counts:
+    error: 28
+    hint: 0
+    info: 1
+    warn: 17
+  slug: forta-health-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 38.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.6
   facets:
     access_clarity: 42.1
-    contract_governance: 4.5
-    contract_quality: 46.2
+    contract_governance: 18.2
+    contract_quality: 48.5
     developer_ergonomics: 25.5
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 36.6
+  previous_composite: 38.3
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 34
+      marker_coverage: 47.9
+      total: 71
     skills: unknown
   regulatory:
     applies: true
@@ -463,13 +479,13 @@ score:
     regime: Health
     regime_id: health
     score: 22.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/forta-health/refs/heads/main/screenshots/forta-health-2026-08-07T165415.png
+screenshot: https://apis.io/screenshots/forta-health/forta-health-2026-08-07T165415.png
 security:
 - kind: authentication
   name: Forta Health Authentication

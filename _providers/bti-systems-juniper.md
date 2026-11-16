@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,7 +57,7 @@ common:
   type: Support
   url: https://supportportal.juniper.net/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bti-systems-juniper/refs/heads/main/lifecycle/bti-systems-juniper-lifecycle.yml
+  href: https://artifacts.apis.io/bti-systems-juniper/lifecycle/bti-systems-juniper-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bti-systems-juniper-lifecycle.yml
@@ -62,17 +66,17 @@ common:
   type: Deprecation
   url: https://support.juniper.net/support/eol/product/bti_series/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bti-systems-juniper/refs/heads/main/security/bti-systems-juniper-domain-security.yml
+  href: https://artifacts.apis.io/bti-systems-juniper/security/bti-systems-juniper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bti-systems-juniper-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bti-systems-juniper/refs/heads/main/well-known/bti-systems-juniper-well-known.yml
+  href: https://artifacts.apis.io/bti-systems-juniper/well-known/bti-systems-juniper-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bti-systems-juniper-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bti-systems-juniper/refs/heads/main/llms/bti-systems-juniper-llms.txt
+  href: https://artifacts.apis.io/bti-systems-juniper/llms/bti-systems-juniper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bti-systems-juniper-llms.txt
@@ -89,7 +93,7 @@ overview: 'BTI Systems (Juniper) is profiled on the [APIs.io](https://apis.io/) 
 
 
   BTI Systems (Juniper)''s developer surface includes documentation, API reference, support, and 6 more developer resources.'
-random_paper: 8
+random_paper: 22
 score:
   band: minimal
   composite: 8.5
@@ -100,7 +104,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -108,21 +112,21 @@ score:
     developer_ergonomics: 21.4
     discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 8.6
+  previous_composite: 8.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
     score: 5.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bti-systems-juniper/refs/heads/main/screenshots/bti-systems-juniper-2026-07-25T204022.png
+screenshot: https://apis.io/screenshots/bti-systems-juniper/bti-systems-juniper-2026-07-25T204022.png
 security:
 - kind: domain-security
   name: Bti Systems Juniper Domain Security

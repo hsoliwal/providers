@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 66.9
-  scored_at: '2026-10-17'
+  score: 65.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 103
   human_in_the_loop: 3
@@ -161,11 +164,8 @@ apis:
   description: Manage user profiles, preferences, API keys, and account settings. Preferences control notification delivery, theme, and feature opt-ins. API keys authenticate CLI and programmatic access.
   name: Sageox Users API
   slug: sageox-users-api
-artifact_total: 52
+artifact_total: 54
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SageOx Admin API
   slug: open-sageox-admin-api
@@ -237,27 +237,27 @@ collections:
   slug: open-sageox-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/capabilities/sageox-capability-edges.yml
+  href: https://artifacts.apis.io/sageox/capabilities/sageox-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sageox-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/skills/sageox-capture-a-recording.md
+  href: https://artifacts.apis.io/sageox/skills/sageox-capture-a-recording.md
   title: ''
   type: AgentSkill
   url: skills/sageox-capture-a-recording.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/mcp/sageox-mcp.yml
+  href: https://artifacts.apis.io/sageox/mcp/sageox-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/sageox-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/overlays/sageox-openapi-overlay.yaml
+  href: https://artifacts.apis.io/sageox/overlays/sageox-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sageox-openapi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/a2a/sageox-a2a.yml
+  href: https://artifacts.apis.io/sageox/a2a/sageox-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/sageox-a2a.yml
@@ -272,8 +272,24 @@ modified: '2026-07-17'
 name: Sageox
 nav: Providers
 network: true
-overview: Sageox publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, AgentX API, API Keys API, and 20 more. Tagged areas include Company and A2A.
-random_paper: 9
+overview: 'Sageox publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, AgentX API, API Keys API, and 20 more. Tagged areas include Company and A2A.
+
+
+  The Sageox catalog on APIs.io includes 1 Spectral governance ruleset.'
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 111
+  extends:
+  - spectral:oas
+  name: Sageox API Rules
+  rule_count: 70
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 6
+    warn: 13
+  slug: sageox-rules
 scopes:
 - name: Sageox Scopes
   scope_count: 4
@@ -281,18 +297,18 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 23.1
+  composite: 24.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 15.0
+    artifact_dirs: 24
+    catalog_earned: 19.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 100.0
+    catalog_gap: 95.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 51.4
     developer_ergonomics: 1.8
     discoverability: 38.3
@@ -303,7 +319,7 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 23.0
+  previous_composite: 24.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -320,8 +336,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
@@ -335,6 +351,12 @@ security:
   name: Sageox Domain Security
   slug: sageox-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Capture and complete a repo recording
+  slug: sageox-capture-a-recording
+- name: Provision programmatic API access
+  slug: sageox-provision-api-access
 slug: sageox
 tags:
 - Company

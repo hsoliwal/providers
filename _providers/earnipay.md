@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.7
-  scored_at: '2026-10-17'
+  score: 27.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 50
   human_in_the_loop: 50
@@ -109,11 +112,8 @@ apis:
   description: User profile management
   name: Earnipay Users API
   slug: earnipay-users-api
-artifact_total: 30
+artifact_total: 32
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Earnipay Invoicing App API
   slug: open-earnipay-app-api
@@ -159,67 +159,67 @@ common:
   type: Blog
   url: https://www.earnipay.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/capabilities/earnipay-capability-edges.yml
+  href: https://artifacts.apis.io/earnipay/capabilities/earnipay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/earnipay-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/agentic-access/earnipay-agentic-access.yml
+  href: https://artifacts.apis.io/earnipay/agentic-access/earnipay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/earnipay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/security/earnipay-domain-security.yml
+  href: https://artifacts.apis.io/earnipay/security/earnipay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/earnipay-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/authentication/earnipay-authentication.yml
+  href: https://artifacts.apis.io/earnipay/authentication/earnipay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/earnipay-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/mcp/earnipay-mcp.yml
+  href: https://artifacts.apis.io/earnipay/mcp/earnipay-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/earnipay-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/earnipay/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/errors/earnipay-problem-types.yml
+  href: https://artifacts.apis.io/earnipay/errors/earnipay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/earnipay-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/conventions/earnipay-conventions.yml
+  href: https://artifacts.apis.io/earnipay/conventions/earnipay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/earnipay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/lifecycle/earnipay-lifecycle.yml
+  href: https://artifacts.apis.io/earnipay/lifecycle/earnipay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/earnipay-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/conformance/earnipay-conformance.yml
+  href: https://artifacts.apis.io/earnipay/conformance/earnipay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/earnipay-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/data-model/earnipay-data-model.yml
+  href: https://artifacts.apis.io/earnipay/data-model/earnipay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/earnipay-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/overlays/earnipay-e-invoicing-overlay.yaml
+  href: https://artifacts.apis.io/earnipay/overlays/earnipay-e-invoicing-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/earnipay-e-invoicing-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/llms/earnipay-llms.txt
+  href: https://artifacts.apis.io/earnipay/llms/earnipay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/earnipay-llms.txt
@@ -258,22 +258,38 @@ network: true
 overview: 'Earnipay publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including App API, APP Provider API, Authentication API, and 10 more. Tagged areas include Company, E-Invoicing, Invoicing, FIRS, and NRS.
 
 
+  The Earnipay catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Earnipay''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, and 15 more developer resources.'
-random_paper: 21
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Earnipay API Rules
+  rule_count: 55
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 5
+    warn: 4
+  slug: earnipay-rules
 score:
   band: emerging
-  composite: 22.6
+  composite: 24.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.3
     developer_ergonomics: 23.2
     discoverability: 73.2
@@ -285,7 +301,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 22.1
+  previous_composite: 24.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -302,13 +318,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/earnipay/refs/heads/main/screenshots/earnipay-2026-07-25T212700.png
+screenshot: https://apis.io/screenshots/earnipay/earnipay-2026-07-25T212700.png
 security:
 - kind: authentication
   name: Earnipay Authentication
@@ -318,6 +334,12 @@ security:
   name: Earnipay Domain Security
   slug: earnipay-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create and submit a FIRS-compliant invoice
+  slug: earnipay-create-and-submit-invoice
+- name: Onboard a business for FIRS e-invoicing
+  slug: earnipay-onboard-business
 slug: earnipay
 tags:
 - Company

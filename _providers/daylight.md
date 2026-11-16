@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Daylight's partner/product API surface at api.daylight.ai, protected by OAuth2 / OpenID Connect (Bearer token, authorization server at auth.app.daylight.ai). Access is authenticated (returns 401 witho
@@ -82,42 +87,42 @@ common:
   type: PrivacyPolicy
   url: https://daylight.ai/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/mcp/daylight-mcp.yml
+  href: https://artifacts.apis.io/daylight/mcp/daylight-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/daylight-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/authentication/daylight-authentication.yml
+  href: https://artifacts.apis.io/daylight/authentication/daylight-authentication.yml
   title: ''
   type: Authentication
   url: authentication/daylight-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/scopes/daylight-scopes.yml
+  href: https://artifacts.apis.io/daylight/scopes/daylight-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/daylight-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/well-known/daylight-well-known.yml
+  href: https://artifacts.apis.io/daylight/well-known/daylight-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/daylight-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/security/daylight-domain-security.yml
+  href: https://artifacts.apis.io/daylight/security/daylight-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/daylight-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/conformance/daylight-conformance.yml
+  href: https://artifacts.apis.io/daylight/conformance/daylight-conformance.yml
   title: ''
   type: Conformance
   url: conformance/daylight-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/conformance/daylight-conformance.yml
+  href: https://artifacts.apis.io/daylight/conformance/daylight-conformance.yml
   title: ''
   type: Compliance
   url: conformance/daylight-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/llms/daylight-llms.txt
+  href: https://artifacts.apis.io/daylight/llms/daylight-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/daylight-llms.txt
@@ -138,7 +143,7 @@ overview: 'Daylight is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Daylight''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 12 more developer resources.'
-random_paper: 18
+random_paper: 14
 scopes:
 - name: Daylight Scopes
   scope_count: 2
@@ -148,7 +153,7 @@ score:
   band: emerging
   composite: 22.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -172,14 +177,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/daylight/refs/heads/main/screenshots/daylight-2026-07-25T211450.png
+screenshot: https://apis.io/screenshots/daylight/daylight-2026-07-25T211450.png
 security:
 - kind: authentication
   name: Daylight Authentication

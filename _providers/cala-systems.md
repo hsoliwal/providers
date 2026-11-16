@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: No public developer API documented; only a Shopify storefront GraphQL endpoint was discovered, which belongs to Shopify, not Cala Systems.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cala-systems/refs/heads/main/llms/cala-systems-llms.txt
+  href: https://artifacts.apis.io/cala-systems/llms/cala-systems-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cala-systems-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cala-systems/refs/heads/main/well-known/cala-systems-well-known.yml
+  href: https://artifacts.apis.io/cala-systems/well-known/cala-systems-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cala-systems-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cala-systems/refs/heads/main/hosts/cala-systems-hosts.yml
+  href: https://artifacts.apis.io/cala-systems/hosts/cala-systems-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cala-systems-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cala-systems/refs/heads/main/vendors/cala-systems-vendors.yml
+  href: https://artifacts.apis.io/cala-systems/vendors/cala-systems-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cala-systems-vendors.yml
@@ -80,7 +93,7 @@ common:
   type: GettingStarted
   url: https://www.calasystems.com/news/the-ira-may-be-ending-but-the-future-of-heat-pump-water-heaters-is-just-getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cala-systems/refs/heads/main/security/cala-systems-domain-security.yml
+  href: https://artifacts.apis.io/cala-systems/security/cala-systems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cala-systems-domain-security.yml
@@ -100,42 +113,53 @@ modified: '2026-10-06'
 name: Cala Systems
 nav: Providers
 network: true
-overview: 'Cala Systems is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, HeatPump, WaterHeater, EnergyEfficiency, and USA.
+overview: 'Cala Systems is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, HeatPump, WaterHeater, Energy Efficiency, and USA.
 
 
   Cala Systems'' developer surface includes support, engineering blog, getting-started guide, and 11 more developer resources.'
-random_paper: 6
+random_paper: 14
 score:
   band: emerging
-  composite: 17.0
+  composite: 11.1
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.9
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
-    discoverability: 66.1
+    developer_ergonomics: 9.5
+    discoverability: 65.2
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 17.0
   provenance:
     mcp: derived
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: tags
+    regime: Energy & Utilities
+    regime_id: energy_utilities
+    score: 8.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cala-systems/cala-systems-2026-11-03T123005.png
 security:
 - kind: domain-security
   name: Cala Systems Domain Security
@@ -146,7 +170,7 @@ tags:
 - Company
 - HeatPump
 - WaterHeater
-- EnergyEfficiency
+- Energy Efficiency
 - USA
 website: https://www.calasystems.com/
 ---

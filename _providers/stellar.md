@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 29.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 45
   human_in_the_loop: 2
@@ -207,11 +214,8 @@ apis:
   description: The Wallets API from Stellar — 2 operation(s) for wallets.
   name: Stellar Wallets API
   slug: stellar-wallets-api
-artifact_total: 248
+artifact_total: 247
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Platform Server Accounts API
   slug: open-stellar-accounts-api
@@ -310,17 +314,17 @@ collections:
   slug: open-stellar-wallets-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/plans/stellar-plans-pricing.yml
+  href: https://artifacts.apis.io/stellar/plans/stellar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/stellar-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/rate-limits/stellar-rate-limits.yml
+  href: https://artifacts.apis.io/stellar/rate-limits/stellar-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/stellar-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/finops/stellar-finops.yml
+  href: https://artifacts.apis.io/stellar/finops/stellar-finops.yml
   title: ''
   type: FinOps
   url: finops/stellar-finops.yml
@@ -329,7 +333,7 @@ common:
   type: Website
   url: https://www.stellar.org/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/capabilities/stellar-capability-edges.yml
+  href: https://artifacts.apis.io/stellar/capabilities/stellar-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/stellar-capability-edges.yml
@@ -350,17 +354,17 @@ common:
   type: License
   url: https://github.com/stellar/go/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/agentic-access/stellar-agentic-access.yml
+  href: https://artifacts.apis.io/stellar/agentic-access/stellar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/stellar-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/security/stellar-domain-security.yml
+  href: https://artifacts.apis.io/stellar/security/stellar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stellar-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/authentication/stellar-authentication.yml
+  href: https://artifacts.apis.io/stellar/authentication/stellar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/stellar-authentication.yml
@@ -409,12 +413,12 @@ common:
   type: About
   url: https://stellar.org/foundation
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/json-ld/stellar-context.jsonld
+  href: https://artifacts.apis.io/stellar/json-ld/stellar-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/stellar-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/vocabulary/stellar-vocabulary.yml
+  href: https://artifacts.apis.io/stellar/vocabulary/stellar-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/stellar-vocabulary.yml
@@ -621,7 +625,7 @@ json_schemas:
   property_count: 14
   slug: stellar-horizon-basefeedistribution
 - name: ChargedFeeDistribution
-  property_count: 0
+  property_count: 14
   slug: stellar-horizon-chargedfeedistribution
 - name: ClaimableBalance
   property_count: 10
@@ -681,7 +685,7 @@ json_schemas:
   property_count: 1
   slug: stellar-horizon-liquiditypools
 - name: MaxFeeDistribution
-  property_count: 0
+  property_count: 14
   slug: stellar-horizon-maxfeedistribution
 - name: Offer
   property_count: 1
@@ -974,7 +978,7 @@ plans:
 - name: Stellar Plans Pricing
   plan_count: 3
   slug: stellar-plans-pricing
-random_paper: 11
+random_paper: 15
 rate_limits:
 - limit_count: 2
   name: Stellar Rate Limits
@@ -995,13 +999,13 @@ score:
   band: developing
   composite: 41.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 63.8
     catalog_earned_first_party: 0.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.7
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
@@ -1012,7 +1016,7 @@ score:
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 48.1
+  previous_composite: 41.4
   provenance:
     agentic_access: derived
     contracts:
@@ -1026,13 +1030,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/stellar/refs/heads/main/screenshots/stellar-2026-06-20T194539.png
+screenshot: https://apis.io/screenshots/stellar/stellar-2026-06-20T194539.png
 security:
 - kind: authentication
   name: Stellar Authentication

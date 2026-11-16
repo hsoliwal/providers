@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/broadbitbatteries/refs/heads/main/hosts/broadbitbatteries-hosts.yml
+  href: https://artifacts.apis.io/broadbitbatteries/hosts/broadbitbatteries-hosts.yml
   title: ''
   type: Hosts
   url: hosts/broadbitbatteries-hosts.yml
@@ -37,7 +50,7 @@ common:
   type: Newsroom
   url: https://broadbit.com/news/Na-patent/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/broadbitbatteries/refs/heads/main/security/broadbitbatteries-domain-security.yml
+  href: https://artifacts.apis.io/broadbitbatteries/security/broadbitbatteries-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/broadbitbatteries-domain-security.yml
@@ -62,24 +75,34 @@ name: Broadbitbatteries
 nav: Providers
 network: true
 overview: Broadbitbatteries is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Battery, Energy, Cleantech, Technology, and Finland.
-random_paper: 20
+random_paper: 2
 score:
   band: minimal
-  composite: 3.8
+  composite: 3.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - finland
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - nordics
+  previous_composite: 3.8
   provenance:
     mcp: derived
   regulatory:
@@ -88,12 +111,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/broadbitbatteries/broadbitbatteries-2026-11-03T122652.png
 security:
 - kind: domain-security
   name: Broadbitbatteries Domain Security

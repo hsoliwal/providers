@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -87,9 +93,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Numeral Customers API
   slug: open-numeral-customers-api
 - collection_type: open
@@ -116,22 +119,22 @@ common:
   type: Blog
   url: https://www.numeral.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/capabilities/numeral-capability-edges.yml
+  href: https://artifacts.apis.io/numeral/capabilities/numeral-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/numeral-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/agentic-access/numeral-agentic-access.yml
+  href: https://artifacts.apis.io/numeral/agentic-access/numeral-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/numeral-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/security/numeral-domain-security.yml
+  href: https://artifacts.apis.io/numeral/security/numeral-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/numeral-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/authentication/numeral-authentication.yml
+  href: https://artifacts.apis.io/numeral/authentication/numeral-authentication.yml
   title: ''
   type: Authentication
   url: authentication/numeral-authentication.yml
@@ -152,17 +155,17 @@ common:
   type: Documentation
   url: https://docs.numeral.com/api-reference/introduction
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/plans/numeral-plans-pricing.yml
+  href: https://artifacts.apis.io/numeral/plans/numeral-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/numeral-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/rate-limits/numeral-rate-limits.yml
+  href: https://artifacts.apis.io/numeral/rate-limits/numeral-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/numeral-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/finops/numeral-finops.yml
+  href: https://artifacts.apis.io/numeral/finops/numeral-finops.yml
   title: ''
   type: FinOps
   url: finops/numeral-finops.yml
@@ -185,35 +188,51 @@ network: true
 overview: 'Numeral publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Customers API, Health API, Products API, and 6 more. Tagged areas include Sales Tax, Tax Compliance, Tax Calculation, E-Commerce, and Software-as-a-Service.
 
 
+  The Numeral catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Numeral''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Numeral Plans Pricing
   plan_count: 3
   slug: numeral-plans-pricing
-random_paper: 8
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Numeral Rate Limits
   slug: numeral-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Numeral API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: numeral-rules
 score:
-  band: emerging
-  composite: 25.5
+  band: thin
+  composite: 27.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.1
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 32.4
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     contracts:
@@ -227,13 +246,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/numeral/refs/heads/main/screenshots/numeral-2026-08-07T185732.png
+screenshot: https://apis.io/screenshots/numeral/numeral-2026-08-07T185732.png
 security:
 - kind: authentication
   name: Numeral Authentication

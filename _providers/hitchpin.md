@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.1
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 1
@@ -59,11 +62,8 @@ apis:
   description: The rendering API from HitchPin — 3 operation(s) for rendering.
   name: HitchPin Rendering API
   slug: hitchpin-rendering-api
-artifact_total: 12
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Django instant-invoice-share API
   slug: open-hitchpin-instant-invoice-share-api
@@ -79,12 +79,12 @@ common:
   type: Blog
   url: https://www.hitchpin.com/news/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/capabilities/hitchpin-capability-edges.yml
+  href: https://artifacts.apis.io/hitchpin/capabilities/hitchpin-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hitchpin-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/overlays/hitchpin-django-api-overlay.yaml
+  href: https://artifacts.apis.io/hitchpin/overlays/hitchpin-django-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hitchpin-django-api-overlay.yaml
@@ -129,67 +129,67 @@ common:
   type: PrivacyPolicy
   url: https://www.hitchpin.com/legal
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/authentication/hitchpin-authentication.yml
+  href: https://artifacts.apis.io/hitchpin/authentication/hitchpin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hitchpin-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/agentic-access/hitchpin-agentic-access.yml
+  href: https://artifacts.apis.io/hitchpin/agentic-access/hitchpin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hitchpin-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/security/hitchpin-domain-security.yml
+  href: https://artifacts.apis.io/hitchpin/security/hitchpin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hitchpin-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/conventions/hitchpin-conventions.yml
+  href: https://artifacts.apis.io/hitchpin/conventions/hitchpin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hitchpin-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/errors/hitchpin-problem-types.yml
+  href: https://artifacts.apis.io/hitchpin/errors/hitchpin-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hitchpin-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/conformance/hitchpin-conformance.yml
+  href: https://artifacts.apis.io/hitchpin/conformance/hitchpin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hitchpin-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/data-model/hitchpin-data-model.yml
+  href: https://artifacts.apis.io/hitchpin/data-model/hitchpin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hitchpin-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/mcp/hitchpin-mcp.yml
+  href: https://artifacts.apis.io/hitchpin/mcp/hitchpin-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/hitchpin-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/skills/hitchpin-instant-invoicing.md
+  href: https://artifacts.apis.io/hitchpin/skills/hitchpin-instant-invoicing.md
   title: ''
   type: AgentSkill
   url: skills/hitchpin-instant-invoicing.md
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/sandbox/hitchpin-sandbox.yml
+  href: https://artifacts.apis.io/hitchpin/sandbox/hitchpin-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/hitchpin-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/llms/hitchpin-llms.txt
+  href: https://artifacts.apis.io/hitchpin/llms/hitchpin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hitchpin-llms.txt
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/json-schema/hitchpin-problem-details.schema.json
+  href: https://artifacts.apis.io/hitchpin/json-schema/hitchpin-problem-details.schema.json
   title: ''
   type: JSONSchema
   url: json-schema/hitchpin-problem-details.schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/json-schema/hitchpin-cloudevents.schema.json
+  href: https://artifacts.apis.io/hitchpin/json-schema/hitchpin-cloudevents.schema.json
   title: ''
   type: JSONSchema
   url: json-schema/hitchpin-cloudevents.schema.json
@@ -211,27 +211,43 @@ network: true
 overview: 'HitchPin publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Instant Invoice Share API, Instant Invoices API, and Rendering API. Tagged areas include Company, Marketplace, Agriculture, Livestock, and Hay and Forage.
 
 
+  The HitchPin catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   HitchPin''s developer surface includes engineering blog, documentation, getting-started guide, pricing, signup flow, support, authentication, and 19 more developer resources.'
-random_paper: 19
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: HitchPin API Rules
+  rule_count: 44
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 3
+    warn: 3
+  slug: hitchpin-rules
 score:
   band: thin
-  composite: 27.1
+  composite: 28.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 47.4
     developer_ergonomics: 32.7
     discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 26.6
+  previous_composite: 28.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -248,13 +264,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hitchpin/refs/heads/main/screenshots/hitchpin-2026-07-25T221300.png
+screenshot: https://apis.io/screenshots/hitchpin/hitchpin-2026-07-25T221300.png
 security:
 - kind: authentication
   name: Hitchpin Authentication
@@ -264,6 +280,10 @@ security:
   name: Hitchpin Domain Security
   slug: hitchpin-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Create, share, and collect on a HitchPin instant invoice
+  slug: hitchpin-instant-invoicing
 slug: hitchpin
 tags:
 - Company

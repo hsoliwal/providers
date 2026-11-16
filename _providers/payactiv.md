@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Access-as-a-Service is Payactiv's API-driven infrastructure for embedding Earned Wage Access, debit and payroll card programs, instant payouts, and HCM workforce-data workflows into a partner platform
@@ -94,32 +97,32 @@ common:
   type: StatusPage
   url: https://status.payactiv.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/llms/payactiv-llms.txt
+  href: https://artifacts.apis.io/payactiv/llms/payactiv-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/payactiv-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/well-known/payactiv-well-known.yml
+  href: https://artifacts.apis.io/payactiv/well-known/payactiv-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/payactiv-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/security/payactiv-domain-security.yml
+  href: https://artifacts.apis.io/payactiv/security/payactiv-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/payactiv-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/security/payactiv-trust-center.yml
+  href: https://artifacts.apis.io/payactiv/security/payactiv-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/payactiv-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/conformance/payactiv-conformance.yml
+  href: https://artifacts.apis.io/payactiv/conformance/payactiv-conformance.yml
   title: ''
   type: Conformance
   url: conformance/payactiv-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/lifecycle/payactiv-lifecycle.yml
+  href: https://artifacts.apis.io/payactiv/lifecycle/payactiv-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/payactiv-lifecycle.yml
@@ -149,12 +152,12 @@ overview: 'PayActiv is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   PayActiv''s developer surface includes engineering blog, documentation, signup flow, support, and 15 more developer resources.'
-random_paper: 7
+random_paper: 1
 score:
   band: emerging
   composite: 24.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -181,14 +184,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 28.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/screenshots/payactiv-2026-08-07T191623.png
+screenshot: https://apis.io/screenshots/payactiv/payactiv-2026-08-07T191623.png
 security:
 - kind: domain-security
   name: Payactiv Domain Security

@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -22,21 +22,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: documented
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.6
-  scored_at: '2026-10-17'
+  score: 48.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 1
@@ -156,7 +159,7 @@ apis:
   description: The Webhooks API from Zepto — 4 operation(s) for webhooks.
   name: Zepto Webhooks API
   slug: zepto-payments-webhooks-api
-artifact_total: 43
+artifact_total: 47
 asyncapis:
 - description: ''
   name: Zepto Payments Notifications Webhooks
@@ -206,7 +209,7 @@ collections:
   slug: open-zepto-payments-zepto
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/capabilities/zepto-payments-capability-edges.yml
+  href: https://artifacts.apis.io/zepto-payments/capabilities/zepto-payments-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zepto-payments-capability-edges.yml
@@ -215,27 +218,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/zepto/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/security/zepto-payments-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/zepto-payments/security/zepto-payments-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/zepto-payments-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/security/zepto-payments-domain-security.yml
+  href: https://artifacts.apis.io/zepto-payments/security/zepto-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zepto-payments-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/agentic-access/zepto-payments-agentic-access.yml
+  href: https://artifacts.apis.io/zepto-payments/agentic-access/zepto-payments-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zepto-payments-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/authentication/zepto-payments-authentication.yml
+  href: https://artifacts.apis.io/zepto-payments/authentication/zepto-payments-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zepto-payments-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/scopes/zepto-payments-scopes.yml
+  href: https://artifacts.apis.io/zepto-payments/scopes/zepto-payments-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zepto-payments-scopes.yml
@@ -296,17 +299,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/zeptofs
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/packages/zepto-payments-packages.yml
+  href: https://artifacts.apis.io/zepto-payments/packages/zepto-payments-packages.yml
   title: ''
   type: Packages
   url: packages/zepto-payments-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/well-known/zepto-payments-well-known.yml
+  href: https://artifacts.apis.io/zepto-payments/well-known/zepto-payments-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zepto-payments-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/well-known/zepto-payments-security.txt
+  href: https://artifacts.apis.io/zepto-payments/well-known/zepto-payments-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/zepto-payments-security.txt
@@ -315,7 +318,7 @@ common:
   type: Security
   url: https://zepto.com.au/uploads/documents/Vulnerability-Disclosure-Policy.pdf
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/security/zepto-payments-trust-center.yml
+  href: https://artifacts.apis.io/zepto-payments/security/zepto-payments-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zepto-payments-trust-center.yml
@@ -324,72 +327,72 @@ common:
   type: Compliance
   url: https://zepto.com.au/platform-and-accreditations
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/conformance/zepto-payments-conformance.yml
+  href: https://artifacts.apis.io/zepto-payments/conformance/zepto-payments-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zepto-payments-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/llms/zepto-payments-llms.txt
+  href: https://artifacts.apis.io/zepto-payments/llms/zepto-payments-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zepto-payments-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/mcp/zepto-payments-mcp.yml
+  href: https://artifacts.apis.io/zepto-payments/mcp/zepto-payments-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/zepto-payments-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/conventions/zepto-payments-conventions.yml
+  href: https://artifacts.apis.io/zepto-payments/conventions/zepto-payments-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zepto-payments-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/conventions/zepto-payments-conventions.yml
+  href: https://artifacts.apis.io/zepto-payments/conventions/zepto-payments-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/zepto-payments-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/errors/zepto-payments-problem-types.yml
+  href: https://artifacts.apis.io/zepto-payments/errors/zepto-payments-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zepto-payments-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/errors/zepto-payments-decline-codes.yml
+  href: https://artifacts.apis.io/zepto-payments/errors/zepto-payments-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/zepto-payments-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/lifecycle/zepto-payments-lifecycle.yml
+  href: https://artifacts.apis.io/zepto-payments/lifecycle/zepto-payments-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zepto-payments-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/changelog/zepto-payments-changelog.yml
+  href: https://artifacts.apis.io/zepto-payments/changelog/zepto-payments-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/zepto-payments-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/sandbox/zepto-payments-sandbox.yml
+  href: https://artifacts.apis.io/zepto-payments/sandbox/zepto-payments-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/zepto-payments-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/data-model/zepto-payments-data-model.yml
+  href: https://artifacts.apis.io/zepto-payments/data-model/zepto-payments-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zepto-payments-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/asyncapi/zepto-payments-notifications-webhooks.yml
+  href: https://artifacts.apis.io/zepto-payments/asyncapi/zepto-payments-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zepto-payments-notifications-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zepto-payments/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/overlays/zepto-payments-zepto-overlay.yaml
+  href: https://artifacts.apis.io/zepto-payments/overlays/zepto-payments-zepto-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zepto-payments-zepto-overlay.yaml
@@ -405,34 +408,47 @@ network: true
 overview: 'Zepto publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agreement modification API, Agreements API, Alias Resolution API, and 19 more. Tagged areas include Payments, Australia, Real-Time Payments, Account-to-Account, and New Payments Platform.
 
 
-  The Zepto catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Zepto catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Zepto''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, engineering blog, sandbox, and 34 more developer resources.'
-random_paper: 14
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Zepto API Rules
+  rule_count: 61
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 4
+    warn: 12
+  slug: zepto-payments-rules
 scopes:
 - name: Zepto Payments Scopes
   scope_count: 9
   slug: zepto-payments-scopes
   summary_line: 9 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 59.2
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 40.0
+    artifact_dirs: 29
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 4.0
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
-    contract_quality: 59.5
-    developer_ergonomics: 57.7
+    contract_governance: 31.8
+    contract_quality: 64.4
+    developer_ergonomics: 67.3
     discoverability: 78.6
-    operational_transparency: 44.7
+    operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -440,14 +456,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 53.4
+  previous_composite: 55.2
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 72.7
       total: 22
     mcp: derived
     skills: derived
@@ -457,13 +473,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 41.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zepto-payments/refs/heads/main/screenshots/zepto-payments-2026-08-17T083057.png
+screenshot: https://apis.io/screenshots/zepto-payments/zepto-payments-2026-08-17T083057.png
 security:
 - kind: authentication
   name: Zepto Payments Authentication
@@ -481,6 +497,14 @@ security:
   name: Zepto Payments Trust Center
   slug: zepto-payments-trust-center
   summary_line: PCI DSS Level 1 (v4.0), ISO/IEC 27001, ASAE 3150 (independently certified by RSM Australia), CIS Benchmark Level 2, ISO 9362 (registered SWIFT BIC SPPYAU22)
+skill_count: 3
+skills:
+- name: Set up a PayTo agreement and collect payment
+  slug: zepto-payments-collect-with-payto
+- name: Make an account-to-account payment with Zepto
+  slug: zepto-payments-make-a-payment
+- name: Verify a payee with Confirmation of Payee before paying
+  slug: zepto-payments-verify-payee
 slug: zepto-payments
 tags:
 - Payments

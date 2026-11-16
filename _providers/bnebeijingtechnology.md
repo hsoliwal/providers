@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bnebeijingtechnology/refs/heads/main/hosts/bnebeijingtechnology-hosts.yml
+  href: https://artifacts.apis.io/bnebeijingtechnology/hosts/bnebeijingtechnology-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bnebeijingtechnology-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bnebeijingtechnology/refs/heads/main/vendors/bnebeijingtechnology-vendors.yml
+  href: https://artifacts.apis.io/bnebeijingtechnology/vendors/bnebeijingtechnology-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bnebeijingtechnology-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bnebeijingtechnology/refs/heads/main/security/bnebeijingtechnology-domain-security.yml
+  href: https://artifacts.apis.io/bnebeijingtechnology/security/bnebeijingtechnology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bnebeijingtechnology-domain-security.yml
@@ -68,7 +81,7 @@ score:
   band: minimal
   composite: 3.4
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -91,8 +104,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

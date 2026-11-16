@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,12 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 30.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.marketaux.com/v1
@@ -52,19 +60,19 @@ apis:
   description: News source metadata usable in news feed filters.
   name: MarketAux Sources API
   slug: marketaux-sources-api
-artifact_total: 8
+artifact_total: 14
 collections:
 - collection_type: open
   name: Marketaux API
   slug: open-marketaux
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/overlays/marketaux-openapi-overlay.yaml
+  href: https://artifacts.apis.io/marketaux/overlays/marketaux-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/marketaux-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/mcp/marketaux-mcp.yml
+  href: https://artifacts.apis.io/marketaux/mcp/marketaux-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/marketaux-mcp.yml
@@ -113,72 +121,72 @@ common:
   type: PrivacyPolicy
   url: https://www.marketaux.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/authentication/marketaux-authentication.yml
+  href: https://artifacts.apis.io/marketaux/authentication/marketaux-authentication.yml
   title: ''
   type: Authentication
   url: authentication/marketaux-authentication.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/plans/marketaux-plans.yml
+  href: https://artifacts.apis.io/marketaux/plans/marketaux-plans.yml
   title: ''
   type: Plans
   url: plans/marketaux-plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/rate-limits/marketaux-rate-limits.yml
+  href: https://artifacts.apis.io/marketaux/rate-limits/marketaux-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/marketaux-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/errors/marketaux-problem-types.yml
+  href: https://artifacts.apis.io/marketaux/errors/marketaux-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/marketaux-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/conventions/marketaux-conventions.yml
+  href: https://artifacts.apis.io/marketaux/conventions/marketaux-conventions.yml
   title: ''
   type: Conventions
   url: conventions/marketaux-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/lifecycle/marketaux-lifecycle.yml
+  href: https://artifacts.apis.io/marketaux/lifecycle/marketaux-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/marketaux-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/conformance/marketaux-conformance.yml
+  href: https://artifacts.apis.io/marketaux/conformance/marketaux-conformance.yml
   title: ''
   type: Conformance
   url: conformance/marketaux-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/data-model/marketaux-data-model.yml
+  href: https://artifacts.apis.io/marketaux/data-model/marketaux-data-model.yml
   title: ''
   type: DataModel
   url: data-model/marketaux-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/examples/marketaux-examples.yml
+  href: https://artifacts.apis.io/marketaux/examples/marketaux-examples.yml
   title: ''
   type: Examples
   url: examples/marketaux-examples.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/packages/marketaux-packages.yml
+  href: https://artifacts.apis.io/marketaux/packages/marketaux-packages.yml
   title: ''
   type: Packages
   url: packages/marketaux-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/well-known/marketaux-well-known.yml
+  href: https://artifacts.apis.io/marketaux/well-known/marketaux-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/marketaux-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/llms/marketaux-llms.txt
+  href: https://artifacts.apis.io/marketaux/llms/marketaux-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/marketaux-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/marketaux/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/security/marketaux-domain-security.yml
+  href: https://artifacts.apis.io/marketaux/security/marketaux-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/marketaux-domain-security.yml
@@ -188,6 +196,14 @@ common:
   url: https://github.com/public-apis/public-apis
 created: '2026-05-28'
 description: Marketaux is a global financial and stock market news API that pairs every article with entity recognition and sentiment analysis. It aggregates 5,000+ news sources in 30+ languages, tracking 200,000+ entities — equities, indices, ETFs, mutual funds, currencies, and cryptocurrencies — across 80+ markets. Beyond filtered news feeds, it provides entity statistics time series, aggregations, and trending-entity endpoints for identifying the best and worst performing entities in the news, with a free self-serve tier.
+finops:
+- has_sources: true
+  method: derived
+  name: Marketaux Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: marketaux-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/marketaux.png
 layout: provider
 modified: '2026-07-22'
@@ -197,35 +213,54 @@ network: true
 overview: 'MarketAux publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Entities API, News API, and Sources API. Tagged areas include News, Financial News, Stock Market, Sentiment Analysis, and Market Data.
 
 
+  The MarketAux catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   MarketAux''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, FAQ, and 21 more developer resources.'
 plans:
 - name: Marketaux Plans
-  plan_count: 6
+  plan_count: 10
   slug: marketaux-plans
-random_paper: 10
+- name: Marketaux Price Estimates
+  plan_count: 0
+  slug: marketaux-price-estimates
+random_paper: 18
 rate_limits:
 - limit_count: 6
   name: Marketaux Rate Limits
   slug: marketaux-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: MarketAux API Rules
+  rule_count: 63
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 4
+  slug: marketaux-rules
 score:
   band: developing
-  composite: 42.1
+  composite: 45.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 61.0
+    artifact_dirs: 24
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
+    access_clarity: 84.2
+    contract_governance: 18.2
     contract_quality: 17.0
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 42.0
+  previous_composite: 45.3
   provenance:
     conformance: derived
     contracts:
@@ -241,14 +276,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 28.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/marketaux/refs/heads/main/screenshots/marketaux-2026-06-20T184952.png
+screenshot: https://apis.io/screenshots/marketaux/marketaux-2026-06-20T184952.png
 security:
 - kind: authentication
   name: Marketaux Authentication
@@ -258,6 +293,14 @@ security:
   name: Marketaux Domain Security
   slug: marketaux-domain-security
   summary_line: TLSv1.3 · DNSSEC
+skill_count: 3
+skills:
+- name: Build an entity-filtered market news feed
+  slug: marketaux-build-entity-news-feed
+- name: Find trending entities in the news
+  slug: marketaux-find-trending-entities
+- name: Monitor entity sentiment over time
+  slug: marketaux-monitor-entity-sentiment
 slug: marketaux
 tags:
 - News

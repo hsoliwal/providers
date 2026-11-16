@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API Overview page for Seccl developers
@@ -32,27 +45,27 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/security/seccl-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/seccl/security/seccl-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/seccl-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/well-known/seccl-security.txt
+  href: https://artifacts.apis.io/seccl/well-known/seccl-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/seccl-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/well-known/seccl-well-known.yml
+  href: https://artifacts.apis.io/seccl/well-known/seccl-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/seccl-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/hosts/seccl-hosts.yml
+  href: https://artifacts.apis.io/seccl/hosts/seccl-hosts.yml
   title: ''
   type: Hosts
   url: hosts/seccl-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/vendors/seccl-vendors.yml
+  href: https://artifacts.apis.io/seccl/vendors/seccl-vendors.yml
   title: ''
   type: Vendors
   url: vendors/seccl-vendors.yml
@@ -61,12 +74,12 @@ common:
   type: Support
   url: https://support.seccl.tech/hc/en-gb
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/security/seccl-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/seccl/security/seccl-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/seccl-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seccl/refs/heads/main/security/seccl-domain-security.yml
+  href: https://artifacts.apis.io/seccl/security/seccl-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/seccl-domain-security.yml
@@ -122,24 +135,26 @@ overview: 'Seccl is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   Seccl''s developer surface includes support, documentation, getting-started guide, engineering blog, pricing, and 11 more developer resources.'
-random_paper: 16
+random_paper: 18
 score:
   band: emerging
-  composite: 19.4
+  composite: 12.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 38.1
+    developer_ergonomics: 19.0
     discoverability: 48.2
     operational_transparency: 10.5
+  previous_composite: 19.4
   provenance:
     mcp: derived
   regulatory:
@@ -147,13 +162,15 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/seccl/seccl-2026-11-03T142927.png
 security:
 - kind: domain-security
   name: Seccl Domain Security

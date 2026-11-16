@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Travelier Connect is the group's partner distribution API — marketed on travelier.com/partners as "the largest ground & sea transportation GDS", aggregating 12,000+ intercity transport operators acros
@@ -46,7 +49,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/security/travelier-domain-security.yml
+  href: https://artifacts.apis.io/travelier/security/travelier-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/travelier-domain-security.yml
@@ -63,27 +66,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/Travelier
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/plans/travelier-plans-pricing.yml
+  href: https://artifacts.apis.io/travelier/plans/travelier-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/travelier-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/rate-limits/travelier-rate-limits.yml
+  href: https://artifacts.apis.io/travelier/rate-limits/travelier-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/travelier-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/lifecycle/travelier-lifecycle.yml
+  href: https://artifacts.apis.io/travelier/lifecycle/travelier-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/travelier-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/packages/travelier-packages.yml
+  href: https://artifacts.apis.io/travelier/packages/travelier-packages.yml
   title: ''
   type: Packages
   url: packages/travelier-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/llms/travelier-llms.txt
+  href: https://artifacts.apis.io/travelier/llms/travelier-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/travelier-llms.txt
@@ -124,7 +127,7 @@ plans:
 - name: Travelier Plans Pricing
   plan_count: 0
   slug: travelier-plans-pricing
-random_paper: 6
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Travelier Rate Limits
@@ -164,14 +167,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/travelier/refs/heads/main/screenshots/travelier-2026-09-02T164142.png
+screenshot: https://apis.io/screenshots/travelier/travelier-2026-09-02T164142.png
 security:
 - kind: domain-security
   name: Travelier Domain Security

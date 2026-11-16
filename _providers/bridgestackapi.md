@@ -1,10 +1,21 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
@@ -15,15 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.0
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 0
+  human_in_the_loop: 0
+  name: Bridgestackapi Agentic Access
+  operation_count: 1
+  slug: bridgestackapi-agentic-access
+  summary_line: 1 operation
 api_count: 1
 apis:
 - baseURL: https://api.bridgestackapi.com
@@ -31,40 +52,50 @@ apis:
   description: The BridgeStackAPI API API from BridgeStackAPI — 1 operation(s) for bridgestackapi api.
   name: BridgeStackAPI BridgeStackAPI API
   slug: bridgestackapi-bridgestackapi-api-api
-artifact_total: 4
+artifact_total: 5
 common:
+- group: agent
+  href: https://artifacts.apis.io/bridgestackapi/agentic-access/bridgestackapi-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/bridgestackapi-agentic-access.yml
+- group: design
+  href: https://artifacts.apis.io/bridgestackapi/vocabulary/bridgestackapi-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/bridgestackapi-vocabulary.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/well-known/bridgestackapi-bridgestackapi-security.txt
+  href: https://artifacts.apis.io/bridgestackapi/well-known/bridgestackapi-bridgestackapi-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bridgestackapi-bridgestackapi-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/well-known/bridgestackapi-well-known.yml
+  href: https://artifacts.apis.io/bridgestackapi/well-known/bridgestackapi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bridgestackapi-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/rules/bridgestackapi-rules.yml
+  href: https://artifacts.apis.io/bridgestackapi/rules/bridgestackapi-rules.yml
   title: ''
   type: Spectral
   url: rules/bridgestackapi-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/authentication/bridgestackapi-authentication.yml
+  href: https://artifacts.apis.io/bridgestackapi/authentication/bridgestackapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bridgestackapi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/conformance/bridgestackapi-conformance.yml
+  href: https://artifacts.apis.io/bridgestackapi/conformance/bridgestackapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bridgestackapi-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/hosts/bridgestackapi-hosts.yml
+  href: https://artifacts.apis.io/bridgestackapi/hosts/bridgestackapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bridgestackapi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/vendors/bridgestackapi-vendors.yml
+  href: https://artifacts.apis.io/bridgestackapi/vendors/bridgestackapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bridgestackapi-vendors.yml
@@ -89,7 +120,7 @@ common:
   type: GettingStarted
   url: https://www.bridgestackapi.com/docs/getting-started/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/security/bridgestackapi-domain-security.yml
+  href: https://artifacts.apis.io/bridgestackapi/security/bridgestackapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bridgestackapi-domain-security.yml
@@ -110,39 +141,42 @@ overview: 'BridgeStackAPI is listed with 1 API on the [APIs.io](https://apis.io/
   The BridgeStackAPI catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  BridgeStackAPI''s developer surface includes authentication, documentation, API reference, getting-started guide, and 10 more developer resources.'
-random_paper: 17
+  BridgeStackAPI''s developer surface includes authentication, documentation, API reference, getting-started guide, and 12 more developer resources.'
+random_paper: 5
 rules:
 - authorship: generated
-  effective_rule_count: 52
+  effective_rule_count: 76
   extends:
   - spectral:oas
   name: BridgeStackAPI API Rules
-  rule_count: 11
+  rule_count: 35
   severity_counts:
-    error: 9
+    error: 33
     hint: 0
     info: 1
     warn: 1
   slug: bridgestackapi-rules
 score:
   band: emerging
-  composite: 23.6
+  composite: 20.2
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 34.5
+    artifact_dirs: 16
+    catalog_earned: 35.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.5
+    catalog_gap: 79.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.7
   facets:
-    access_clarity: 13.2
-    contract_governance: 18.2
+    access_clarity: 6.6
+    contract_governance: 22.0
     contract_quality: 11.9
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 53.6
-    operational_transparency: 15.8
+    operational_transparency: 18.4
+  previous_composite: 24.9
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
@@ -156,12 +190,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/bridgestackapi/bridgestackapi-2026-11-03T122608.png
 security:
 - kind: authentication
   name: Bridgestackapi Authentication

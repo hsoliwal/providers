@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 22.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -93,9 +96,6 @@ apis:
 artifact_total: 48
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Drift Accounts API
   slug: open-drift-com-accounts-api
 - collection_type: open
@@ -134,22 +134,22 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/salesloft/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/capabilities/drift-com-capability-edges.yml
+  href: https://artifacts.apis.io/drift-com/capabilities/drift-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/drift-com-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/agentic-access/drift-com-agentic-access.yml
+  href: https://artifacts.apis.io/drift-com/agentic-access/drift-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/drift-com-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/security/drift-com-domain-security.yml
+  href: https://artifacts.apis.io/drift-com/security/drift-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/drift-com-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/authentication/drift-com-authentication.yml
+  href: https://artifacts.apis.io/drift-com/authentication/drift-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/drift-com-authentication.yml
@@ -190,17 +190,17 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/drift
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/plans/drift-com-plans-pricing.yml
+  href: https://artifacts.apis.io/drift-com/plans/drift-com-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/drift-com-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/rate-limits/drift-com-rate-limits.yml
+  href: https://artifacts.apis.io/drift-com/rate-limits/drift-com-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/drift-com-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/finops/drift-com-finops.yml
+  href: https://artifacts.apis.io/drift-com/finops/drift-com-finops.yml
   title: ''
   type: FinOps
   url: finops/drift-com-finops.yml
@@ -255,35 +255,51 @@ network: true
 overview: 'Drift publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, App Admin API, Contacts API, and 6 more. Tagged areas include Conversational Marketing, Chatbots, Sales, Messaging, and Customer Engagement.
 
 
+  The Drift catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Drift''s developer surface includes authentication, documentation, developer portal, and 14 more developer resources.'
 plans:
 - name: Drift Com Plans Pricing
   plan_count: 1
   slug: drift-com-plans-pricing
-random_paper: 21
+random_paper: 13
 rate_limits:
 - limit_count: 1
   name: Drift Com Rate Limits
   slug: drift-com-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Drift API Rules
+  rule_count: 40
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 1
+    warn: 2
+  slug: drift-com-rules
 score:
   band: thin
-  composite: 30.2
+  composite: 31.6
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 41.0
+    artifact_dirs: 19
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.9
+  delta: -0.2
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.4
-    developer_ergonomics: 44.0
+    developer_ergonomics: 42.9
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 32.1
+  previous_composite: 31.8
   provenance:
     agentic_access: derived
     contracts:
@@ -297,13 +313,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/drift-com/refs/heads/main/screenshots/drift-com-2026-06-20T180240.png
+screenshot: https://apis.io/screenshots/drift-com/drift-com-2026-06-20T180240.png
 security:
 - kind: authentication
   name: Drift Com Authentication

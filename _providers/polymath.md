@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 25.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 4
@@ -93,11 +98,8 @@ apis:
   description: All endpoints related to interacting with Robot's vehicle operations here
   name: Polymath Robotics Vehicle Operations API
   slug: polymath-vehicle-operations-api
-artifact_total: 24
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Polymath API Service CANBus API
   slug: open-polymath-canbus-api
@@ -134,7 +136,7 @@ common:
   type: BlogRSS
   url: https://www.polymathrobotics.com/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/overlays/polymath-synapse-v2-overlay.yaml
+  href: https://artifacts.apis.io/polymath/overlays/polymath-synapse-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/polymath-synapse-v2-overlay.yaml
@@ -183,57 +185,57 @@ common:
   type: SourceCode
   url: https://github.com/polymathrobotics/caladan_examples
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/agentic-access/polymath-agentic-access.yml
+  href: https://artifacts.apis.io/polymath/agentic-access/polymath-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/polymath-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/authentication/polymath-authentication.yml
+  href: https://artifacts.apis.io/polymath/authentication/polymath-authentication.yml
   title: ''
   type: Authentication
   url: authentication/polymath-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/packages/polymath-packages.yml
+  href: https://artifacts.apis.io/polymath/packages/polymath-packages.yml
   title: ''
   type: Packages
   url: packages/polymath-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/mcp/polymath-mcp.yml
+  href: https://artifacts.apis.io/polymath/mcp/polymath-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/polymath-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/llms/polymath-llms.txt
+  href: https://artifacts.apis.io/polymath/llms/polymath-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/polymath-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/conformance/polymath-conformance.yml
+  href: https://artifacts.apis.io/polymath/conformance/polymath-conformance.yml
   title: ''
   type: Conformance
   url: conformance/polymath-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/lifecycle/polymath-lifecycle.yml
+  href: https://artifacts.apis.io/polymath/lifecycle/polymath-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/polymath-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/conventions/polymath-conventions.yml
+  href: https://artifacts.apis.io/polymath/conventions/polymath-conventions.yml
   title: ''
   type: Conventions
   url: conventions/polymath-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/sandbox/polymath-sandbox.yml
+  href: https://artifacts.apis.io/polymath/sandbox/polymath-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/polymath-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/security/polymath-domain-security.yml
+  href: https://artifacts.apis.io/polymath/security/polymath-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/polymath-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/polymath/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -248,27 +250,43 @@ network: true
 overview: 'Polymath Robotics publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including CANBus API, Filesystem API, Health Check API, and 7 more. Tagged areas include Robotics, Autonomy, Industrial Vehicles, Off-Highway, and Machine Learning.
 
 
+  The Polymath Robotics catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Polymath Robotics'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 17 more developer resources.'
-random_paper: 20
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Polymath Robotics API Rules
+  rule_count: 62
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 9
+  slug: polymath-rules
 score:
   band: thin
-  composite: 37.0
+  composite: 38.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 43.8
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.9
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -285,13 +303,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/polymath/refs/heads/main/screenshots/polymath-2026-09-02T151709.png
+screenshot: https://apis.io/screenshots/polymath/polymath-2026-09-02T151709.png
 security:
 - kind: authentication
   name: Polymath Authentication
@@ -301,6 +319,14 @@ security:
   name: Polymath Domain Security
   slug: polymath-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Navigate a Polymath robot with GPS waypoints
+  slug: polymath-navigate-gps-waypoints
+- name: Set a reference target and read autonomy feedback
+  slug: polymath-set-reference-target
+- name: Take exclusive teleop control and send a motion command
+  slug: polymath-teleop-motion-command
 slug: polymath
 tags:
 - Robotics

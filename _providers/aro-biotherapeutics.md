@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A live, anonymously reachable Model Context Protocol endpoint served from Aro Biotherapeutics' own host and advertised in the site's llms.txt. It is provided by the Wix platform, not built by Aro — it
@@ -47,27 +50,27 @@ common:
   type: Website
   url: https://www.arobiotx.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aro-biotherapeutics/refs/heads/main/mcp/aro-biotherapeutics-mcp.yml
+  href: https://artifacts.apis.io/aro-biotherapeutics/mcp/aro-biotherapeutics-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/aro-biotherapeutics-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aro-biotherapeutics/refs/heads/main/llms/aro-biotherapeutics-llms.txt
+  href: https://artifacts.apis.io/aro-biotherapeutics/llms/aro-biotherapeutics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aro-biotherapeutics-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aro-biotherapeutics/refs/heads/main/authentication/aro-biotherapeutics-authentication.yml
+  href: https://artifacts.apis.io/aro-biotherapeutics/authentication/aro-biotherapeutics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aro-biotherapeutics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aro-biotherapeutics/refs/heads/main/conformance/aro-biotherapeutics-conformance.yml
+  href: https://artifacts.apis.io/aro-biotherapeutics/conformance/aro-biotherapeutics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aro-biotherapeutics-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aro-biotherapeutics/refs/heads/main/security/aro-biotherapeutics-domain-security.yml
+  href: https://artifacts.apis.io/aro-biotherapeutics/security/aro-biotherapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aro-biotherapeutics-domain-security.yml
@@ -103,12 +106,12 @@ overview: 'Aro Biotherapeutics is listed with 1 API on the [APIs.io](https://api
 
 
   Aro Biotherapeutics'' developer surface includes authentication, engineering blog, support, and 7 more developer resources.'
-random_paper: 20
+random_paper: 10
 score:
   band: emerging
   composite: 18.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -139,14 +142,14 @@ score:
     regime: Health
     regime_id: health
     score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aro-biotherapeutics/refs/heads/main/screenshots/aro-biotherapeutics-2026-08-07T161732.png
+screenshot: https://apis.io/screenshots/aro-biotherapeutics/aro-biotherapeutics-2026-08-07T161732.png
 security:
 - kind: authentication
   name: Aro Biotherapeutics Authentication

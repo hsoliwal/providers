@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.rasgoml.com
@@ -42,17 +45,14 @@ apis:
   description: Table metadata operations
   name: Rasgo Metadata API
   slug: rasgo-metadata-api
-artifact_total: 5
+artifact_total: 6
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rasgo Metadata API
   slug: open-rasgo-metadata-api
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/security/rasgo-domain-security.yml
+  href: https://artifacts.apis.io/rasgo/security/rasgo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rasgo-domain-security.yml
@@ -85,52 +85,52 @@ common:
   type: ChangeLog
   url: https://docs.rasgoml.com/rasgo-docs/whats-new.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/llms/rasgo-llms.txt
+  href: https://artifacts.apis.io/rasgo/llms/rasgo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rasgo-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/packages/rasgo-packages.yml
+  href: https://artifacts.apis.io/rasgo/packages/rasgo-packages.yml
   title: ''
   type: Packages
   url: packages/rasgo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/packages/rasgo-packages.yml
+  href: https://artifacts.apis.io/rasgo/packages/rasgo-packages.yml
   title: ''
   type: SDKs
   url: packages/rasgo-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/authentication/rasgo-authentication.yml
+  href: https://artifacts.apis.io/rasgo/authentication/rasgo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rasgo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/conventions/rasgo-conventions.yml
+  href: https://artifacts.apis.io/rasgo/conventions/rasgo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rasgo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/conformance/rasgo-conformance.yml
+  href: https://artifacts.apis.io/rasgo/conformance/rasgo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rasgo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/lifecycle/rasgo-lifecycle.yml
+  href: https://artifacts.apis.io/rasgo/lifecycle/rasgo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rasgo-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/changelog/rasgo-changelog.yml
+  href: https://artifacts.apis.io/rasgo/changelog/rasgo-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rasgo-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/mcp/rasgo-mcp.yml
+  href: https://artifacts.apis.io/rasgo/mcp/rasgo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rasgo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rasgo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -145,27 +145,43 @@ network: true
 overview: 'Rasgo publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Metadata API. Tagged areas include Company, Data Warehouse, Analytics, Artificial Intelligence, and Natural-Language.
 
 
+  The Rasgo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Rasgo''s developer surface includes documentation, API reference, getting-started guide, signup flow, changelog, authentication, and 12 more developer resources.'
 random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Rasgo API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: rasgo-rules
 score:
   band: thin
-  composite: 34.5
+  composite: 36.1
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 18
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 48.4
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 34.4
+  previous_composite: 36.1
   provenance:
     conformance: derived
     contracts:
@@ -181,13 +197,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rasgo/refs/heads/main/screenshots/rasgo-2026-09-02T152909.png
+screenshot: https://apis.io/screenshots/rasgo/rasgo-2026-09-02T152909.png
 security:
 - kind: authentication
   name: Rasgo Authentication
@@ -197,6 +213,10 @@ security:
   name: Rasgo Domain Security
   slug: rasgo-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC
+skill_count: 1
+skills:
+- name: Attach metadata notes to a Rasgo table
+  slug: rasgo-attach-table-metadata
 slug: rasgo
 tags:
 - Company

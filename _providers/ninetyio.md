@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 15
@@ -86,11 +93,8 @@ arazzos:
 - description: Resolve a team, create an Issue on its list, then mark it solved.
   name: Log and Solve a Ninety Issue
   slug: ninetyio-log-and-solve-issue
-artifact_total: 21
+artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Ninety Public Issues API
   slug: open-ninetyio-issues-api
@@ -113,6 +117,11 @@ collections:
   name: Ninety Public Issues Users API
   slug: open-ninetyio-users-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/ninetyio/plans/ninetyio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ninetyio-plans-pricing.yml
 - group: company
   title: ''
   type: Blog
@@ -122,7 +131,7 @@ common:
   type: BlogRSS
   url: https://www.ninety.io/eos/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/capabilities/ninetyio-capability-edges.yml
+  href: https://artifacts.apis.io/ninetyio/capabilities/ninetyio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ninetyio-capability-edges.yml
@@ -191,82 +200,90 @@ common:
   type: TrustCenter
   url: https://trust.ninety.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/authentication/ninetyio-authentication.yml
+  href: https://artifacts.apis.io/ninetyio/authentication/ninetyio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ninetyio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/conventions/ninetyio-conventions.yml
+  href: https://artifacts.apis.io/ninetyio/conventions/ninetyio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ninetyio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/errors/ninetyio-problem-types.yml
+  href: https://artifacts.apis.io/ninetyio/errors/ninetyio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ninetyio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/lifecycle/ninetyio-lifecycle.yml
+  href: https://artifacts.apis.io/ninetyio/lifecycle/ninetyio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ninetyio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/conformance/ninetyio-conformance.yml
+  href: https://artifacts.apis.io/ninetyio/conformance/ninetyio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ninetyio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/data-model/ninetyio-data-model.yml
+  href: https://artifacts.apis.io/ninetyio/data-model/ninetyio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ninetyio-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/changelog/ninetyio-changelog.yml
+  href: https://artifacts.apis.io/ninetyio/changelog/ninetyio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ninetyio-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/mcp/ninetyio-mcp.yml
+  href: https://artifacts.apis.io/ninetyio/mcp/ninetyio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ninetyio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/llms/ninetyio-llms.txt
+  href: https://artifacts.apis.io/ninetyio/llms/ninetyio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ninetyio-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/overlays/ninetyio-openapi-overlay.yaml
+  href: https://artifacts.apis.io/ninetyio/overlays/ninetyio-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ninetyio-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ninetyio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/arazzo/ninetyio-create-rock-with-milestones.yml
+  href: https://artifacts.apis.io/ninetyio/arazzo/ninetyio-create-rock-with-milestones.yml
   title: ''
   type: Arazzo
   url: arazzo/ninetyio-create-rock-with-milestones.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/arazzo/ninetyio-log-and-solve-issue.yml
+  href: https://artifacts.apis.io/ninetyio/arazzo/ninetyio-log-and-solve-issue.yml
   title: ''
   type: Arazzo
   url: arazzo/ninetyio-log-and-solve-issue.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/agentic-access/ninetyio-agentic-access.yml
+  href: https://artifacts.apis.io/ninetyio/agentic-access/ninetyio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ninetyio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/security/ninetyio-domain-security.yml
+  href: https://artifacts.apis.io/ninetyio/security/ninetyio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ninetyio-domain-security.yml
 created: '2026-07-17'
 description: Ninety.io (Ninety) is a software platform for implementing the Entrepreneurial Operating System (EOS). It gives founders and leadership teams purpose-built tools for the Accountability Chart, the Vision/Traction Organizer (V/TO), quarterly Rocks, the weekly Scorecard, To-Dos, the Issues List, and EOS meeting rhythms such as the Level 10 meeting. Ninety exposes a REST Public API (v1) at api.public.ninety.io authenticated with per-user Personal Access Tokens, giving programmatic create/read/update/delete access to To-Dos, Issues, Rocks, Milestones, Scorecard measurables (KPIs, scores, notes), Teams, and Users.
+finops:
+- has_sources: true
+  method: derived
+  name: Ninetyio Finops
+  primary_unit: user
+  service_category: ''
+  slug: ninetyio-finops
+  template: false
 image: https://www.ninety.io/hubfs/LI_Thumb_Home.jpg
 layout: provider
 modified: '2026-10-06'
@@ -276,27 +293,50 @@ network: true
 overview: 'Ninety.io publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Issues API, Milestones API, Rocks API, and 4 more. Tagged areas include Company, EOS, Entrepreneurial Operating System, Business Management, and Meetings.
 
 
-  Ninety.io''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 27 more developer resources.'
-random_paper: 21
+  The Ninety.io catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Ninety.io''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 28 more developer resources.'
+plans:
+- name: Ninetyio Plans Pricing
+  plan_count: 4
+  slug: ninetyio-plans-pricing
+- name: Ninetyio Price Estimates
+  plan_count: 0
+  slug: ninetyio-price-estimates
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Ninety.io API Rules
+  rule_count: 54
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 3
+    warn: 4
+  slug: ninetyio-rules
 score:
-  band: developing
-  composite: 47.7
+  band: strong
+  composite: 57.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 46.1
-    contract_governance: 4.5
+    access_clarity: 85.5
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 49.4
     discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 47.6
+  previous_composite: 57.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -313,13 +353,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/screenshots/ninetyio-2026-08-07T185322.png
+screenshot: https://apis.io/screenshots/ninetyio/ninetyio-2026-08-07T185322.png
 security:
 - kind: authentication
   name: Ninetyio Authentication
@@ -333,6 +373,16 @@ security:
   name: Ninetyio Trust Center
   slug: ninetyio-trust-center
   summary_line: trust center published
+skill_count: 4
+skills:
+- name: Manage Ninety Issues
+  slug: ninetyio-manage-issues
+- name: Manage Ninety Rocks and Milestones
+  slug: ninetyio-manage-rocks-milestones
+- name: Manage Ninety To-Dos
+  slug: ninetyio-manage-todos
+- name: Update Ninety Scorecard
+  slug: ninetyio-update-scorecard
 slug: ninetyio
 tags:
 - Company

@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -72,12 +75,12 @@ overview: 'All City Communications is profiled on the [APIs.io](https://apis.io/
 
 
   All City Communications'' developer surface includes pricing, signup flow, support, and 3 more developer resources.'
-random_paper: 3
+random_paper: 5
 score:
   band: minimal
   composite: 10.1
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 3
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -111,14 +114,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 3.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/all-city-communications/refs/heads/main/screenshots/all-city-communications-2026-07-25T195633.png
+screenshot: https://apis.io/screenshots/all-city-communications/all-city-communications-2026-07-25T195633.png
 slug: all-city-communications
 tags:
 - Company

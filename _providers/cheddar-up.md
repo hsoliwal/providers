@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -99,32 +102,32 @@ common:
   type: PrivacyPolicy
   url: https://www.cheddarup.com/privacypolicy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/llms/cheddar-up-llms.txt
+  href: https://artifacts.apis.io/cheddar-up/llms/cheddar-up-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cheddar-up-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/components/cheddar-up-components.yml
+  href: https://artifacts.apis.io/cheddar-up/components/cheddar-up-components.yml
   title: ''
   type: Components
   url: components/cheddar-up-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/authentication/cheddar-up-authentication.yml
+  href: https://artifacts.apis.io/cheddar-up/authentication/cheddar-up-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cheddar-up-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/asyncapi/cheddar-up-webhooks.yml
+  href: https://artifacts.apis.io/cheddar-up/asyncapi/cheddar-up-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cheddar-up-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/well-known/cheddar-up-well-known.yml
+  href: https://artifacts.apis.io/cheddar-up/well-known/cheddar-up-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cheddar-up-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/security/cheddar-up-domain-security.yml
+  href: https://artifacts.apis.io/cheddar-up/security/cheddar-up-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cheddar-up-domain-security.yml
@@ -143,7 +146,7 @@ overview: 'Cheddar Up is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   Cheddar Up''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 13 more developer resources.'
-random_paper: 21
+random_paper: 5
 score:
   band: thin
   composite: 36.4
@@ -169,14 +172,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 17.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cheddar-up/refs/heads/main/screenshots/cheddar-up-2026-07-25T205201.png
+screenshot: https://apis.io/screenshots/cheddar-up/cheddar-up-2026-07-25T205201.png
 security:
 - kind: authentication
   name: Cheddar Up Authentication

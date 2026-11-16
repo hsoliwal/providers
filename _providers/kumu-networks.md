@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kumu-networks/refs/heads/main/security/kumu-networks-domain-security.yml
+  href: https://artifacts.apis.io/kumu-networks/security/kumu-networks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kumu-networks-domain-security.yml
@@ -55,7 +58,7 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/kumu-networks_stock/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kumu-networks/refs/heads/main/llms/kumu-networks-llms.txt
+  href: https://artifacts.apis.io/kumu-networks/llms/kumu-networks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kumu-networks-llms.txt
@@ -68,7 +71,7 @@ name: Kumu Networks
 nav: Providers
 network: true
 overview: Kumu Networks is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Semiconductors, Wireless, RF, and Spectrum.
-random_paper: 2
+random_paper: 20
 score:
   band: minimal
   composite: 2.9
@@ -94,8 +97,8 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 5.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

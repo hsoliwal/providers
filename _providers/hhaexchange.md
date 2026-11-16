@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 30.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 8
   slug: hhaexchange-agentic-access
   summary_line: 8 operations · 3 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.hhaexchange.com
   baseurl_source: declared
@@ -59,11 +66,8 @@ apis:
   description: The Onboarding API from HHAeXchange — 3 operation(s) for onboarding.
   name: HHAeXchange Onboarding API
   slug: hhaexchange-onboarding-api
-artifact_total: 18
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HHAeXchange FHIR Configuration API
   slug: open-hhaexchange-configuration-api
@@ -79,37 +83,37 @@ common:
   type: Website
   url: https://www.hhaexchange.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/agentic-access/hhaexchange-agentic-access.yml
+  href: https://artifacts.apis.io/hhaexchange/agentic-access/hhaexchange-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hhaexchange-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/security/hhaexchange-domain-security.yml
+  href: https://artifacts.apis.io/hhaexchange/security/hhaexchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hhaexchange-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/authentication/hhaexchange-authentication.yml
+  href: https://artifacts.apis.io/hhaexchange/authentication/hhaexchange-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hhaexchange-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/scopes/hhaexchange-scopes.yml
+  href: https://artifacts.apis.io/hhaexchange/scopes/hhaexchange-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/hhaexchange-scopes.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/plans/hhaexchange-plans-pricing.yml
+  href: https://artifacts.apis.io/hhaexchange/plans/hhaexchange-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hhaexchange-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/rate-limits/hhaexchange-rate-limits.yml
+  href: https://artifacts.apis.io/hhaexchange/rate-limits/hhaexchange-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hhaexchange-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/finops/hhaexchange-finops.yml
+  href: https://artifacts.apis.io/hhaexchange/finops/hhaexchange-finops.yml
   title: ''
   type: FinOps
   url: finops/hhaexchange-finops.yml
@@ -158,7 +162,7 @@ modified: 2026-06-13
 name: HHAeXchange
 nav: Providers
 network: true
-overview: 'HHAeXchange publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Configuration API, Internal API, and Onboarding API. Tagged areas include Home Care, EVV, Electronic Visit Verification, Medicaid, and Scheduling.
+overview: 'HHAeXchange publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Configuration API, Internal API, and Onboarding API. Tagged areas include Home Care, Electronic Visit Verification, Medicaid, Scheduling, and Caregiver.
 
 
   The HHAeXchange catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -169,7 +173,7 @@ plans:
 - name: Hhaexchange Plans Pricing
   plan_count: 2
   slug: hhaexchange-plans-pricing
-random_paper: 18
+random_paper: 12
 rate_limits:
 - limit_count: 3
   name: Hhaexchange Rate Limits
@@ -193,29 +197,29 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 33.7
+  composite: 35.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 53.3
     catalog_earned_first_party: 0.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 1.4
   facets:
     access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 56.9
+    contract_quality: 62.6
     developer_ergonomics: 40.5
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 40.6
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
   regulatory:
     applies: true
@@ -223,13 +227,13 @@ score:
     regime: Health
     regime_id: health
     score: 26.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hhaexchange/refs/heads/main/screenshots/hhaexchange-2026-06-20T182722.png
+screenshot: https://apis.io/screenshots/hhaexchange/hhaexchange-2026-06-20T182722.png
 security:
 - kind: authentication
   name: Hhaexchange Authentication
@@ -242,7 +246,6 @@ security:
 slug: hhaexchange
 tags:
 - Home Care
-- EVV
 - Electronic Visit Verification
 - Medicaid
 - Scheduling

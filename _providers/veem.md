@@ -1,12 +1,18 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
+  score: 33.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 25
@@ -113,15 +122,12 @@ apis:
   description: Webhook Controller
   name: Veem Webhook Controller API
   slug: veem-webhook-controller-api
-artifact_total: 34
+artifact_total: 38
 asyncapis:
 - description: ''
   name: Veem Webhooks
   slug: veem-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Veem API v1.2 attachment-controller API
   slug: open-veem-attachment-controller-api
@@ -174,17 +180,17 @@ common:
   type: BlogRSS
   url: https://www.veem.com/library/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/capabilities/veem-capability-edges.yml
+  href: https://artifacts.apis.io/veem/capabilities/veem-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/veem-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/overlays/veem-api-overlay.yaml
+  href: https://artifacts.apis.io/veem/overlays/veem-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/veem-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/agentic-access/veem-agentic-access.yml
+  href: https://artifacts.apis.io/veem/agentic-access/veem-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/veem-agentic-access.yml
@@ -225,92 +231,92 @@ common:
   type: Login
   url: https://apps.veem.com/CustomerApp/o/signin
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/llms/veem-llms.txt
+  href: https://artifacts.apis.io/veem/llms/veem-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/veem-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/packages/veem-packages.yml
+  href: https://artifacts.apis.io/veem/packages/veem-packages.yml
   title: ''
   type: Packages
   url: packages/veem-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/packages/veem-packages.yml
+  href: https://artifacts.apis.io/veem/packages/veem-packages.yml
   title: ''
   type: SDKs
   url: packages/veem-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/well-known/veem-well-known.yml
+  href: https://artifacts.apis.io/veem/well-known/veem-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/veem-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/mcp/veem-mcp.yml
+  href: https://artifacts.apis.io/veem/mcp/veem-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/veem-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/conformance/veem-conformance.yml
+  href: https://artifacts.apis.io/veem/conformance/veem-conformance.yml
   title: ''
   type: Conformance
   url: conformance/veem-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/errors/veem-error-codes.yml
+  href: https://artifacts.apis.io/veem/errors/veem-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/veem-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/lifecycle/veem-lifecycle.yml
+  href: https://artifacts.apis.io/veem/lifecycle/veem-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/veem-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/scopes/veem-scopes.yml
+  href: https://artifacts.apis.io/veem/scopes/veem-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/veem-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/authentication/veem-authentication.yml
+  href: https://artifacts.apis.io/veem/authentication/veem-authentication.yml
   title: ''
   type: Authentication
   url: authentication/veem-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/security/veem-domain-security.yml
+  href: https://artifacts.apis.io/veem/security/veem-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/veem-domain-security.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/sandbox/veem-sandbox.yml
+  href: https://artifacts.apis.io/veem/sandbox/veem-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/veem-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/conventions/veem-conventions.yml
+  href: https://artifacts.apis.io/veem/conventions/veem-conventions.yml
   title: ''
   type: Conventions
   url: conventions/veem-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/conventions/veem-conventions.yml
+  href: https://artifacts.apis.io/veem/conventions/veem-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/veem-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/asyncapi/veem-webhooks.yml
+  href: https://artifacts.apis.io/veem/asyncapi/veem-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/veem-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/components/veem-components.yml
+  href: https://artifacts.apis.io/veem/components/veem-components.yml
   title: ''
   type: Components
   url: components/veem-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/data-model/veem-data-model.yml
+  href: https://artifacts.apis.io/veem/data-model/veem-data-model.yml
   title: ''
   type: DataModel
   url: data-model/veem-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/veem/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -325,35 +331,48 @@ network: true
 overview: 'Veem publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attachment Controller API, Bank Account Controller API, Beneficial Owner Information Controller API, and 11 more. Tagged areas include Payments, B2B Payments, Cross-Border Payments, Invoicing, and Wallets.
 
 
-  The Veem catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Veem catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Veem''s developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, sandbox, and 26 more developer resources.'
-random_paper: 11
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Veem API Rules
+  rule_count: 52
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 7
+    warn: 10
+  slug: veem-rules
 scopes:
 - name: Veem Scopes
   scope_count: 1
   slug: veem-scopes
   summary_line: 1 scope · clientCredentials/authorizationCode
 score:
-  band: thin
-  composite: 37.9
+  band: developing
+  composite: 43.4
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 3.8
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 51.1
-    developer_ergonomics: 51.8
+    developer_ergonomics: 70.8
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 37.4
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -370,13 +389,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 24.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/screenshots/veem-2026-08-17T082715.png
+screenshot: https://apis.io/screenshots/veem/veem-2026-08-17T082715.png
 security:
 - kind: authentication
   name: Veem Authentication
@@ -386,6 +405,16 @@ security:
   name: Veem Domain Security
   slug: veem-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Configure and verify webhooks
+  slug: veem-configure-webhooks
+- name: Onboard a customer account
+  slug: veem-onboard-customer-account
+- name: Request money with an invoice
+  slug: veem-request-money-invoice
+- name: Send money with a claimless payment
+  slug: veem-send-money-claimless
 slug: veem
 tags:
 - Payments

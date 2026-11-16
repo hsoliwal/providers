@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Balance API powers embedded B2B payments, digital trade credit, net terms, and order-to-cash automation. Developer documentation is gated behind a request form (ReadMe-hosted) and the production A
@@ -41,7 +45,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/security/getbalance-domain-security.yml
+  href: https://artifacts.apis.io/getbalance/security/getbalance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/getbalance-domain-security.yml
@@ -98,17 +102,17 @@ common:
   type: ChangeLog
   url: https://updates.getbalance.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/changelog/getbalance-changelog.yml
+  href: https://artifacts.apis.io/getbalance/changelog/getbalance-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/getbalance-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/lifecycle/getbalance-lifecycle.yml
+  href: https://artifacts.apis.io/getbalance/lifecycle/getbalance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/getbalance-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/conformance/getbalance-conformance.yml
+  href: https://artifacts.apis.io/getbalance/conformance/getbalance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/getbalance-conformance.yml
@@ -117,12 +121,12 @@ common:
   type: Compliance
   url: https://www.getbalance.com/legal/security-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/security/getbalance-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/getbalance/security/getbalance-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/getbalance-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/llms/getbalance-llms.txt
+  href: https://artifacts.apis.io/getbalance/llms/getbalance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/getbalance-llms.txt
@@ -138,7 +142,7 @@ overview: 'Balance is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Balance''s developer surface includes documentation, API reference, developer portal, signup flow, engineering blog, support, changelog, and 13 more developer resources.'
-random_paper: 18
+random_paper: 22
 score:
   band: thin
   composite: 32.2
@@ -170,14 +174,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 33.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/getbalance/refs/heads/main/screenshots/getbalance-2026-07-25T215722.png
+screenshot: https://apis.io/screenshots/getbalance/getbalance-2026-07-25T215722.png
 security:
 - kind: domain-security
   name: Getbalance Domain Security

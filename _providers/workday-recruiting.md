@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.6
-  scored_at: '2026-10-17'
+  score: 37.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -132,14 +139,11 @@ arazzos:
 - description: Find an application in review for a requisition, inspect it, and move it forward.
   name: Workday Recruiting Screen and Advance a Job Application
   slug: workday-recruiting-screen-and-advance-application-workflow
-artifact_total: 171
+artifact_total: 170
 collections:
 - collection_type: postman
   name: Workday Recruiting REST API
   slug: postman-workday-recruiting-rest-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Workday Recruiting REST Applicants agentDefinition API
   slug: open-workday-recruiting-agentdefinition-api
@@ -181,12 +185,12 @@ collections:
   slug: open-workday-recruiting-rest-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/plans/workday-recruiting-plans-pricing.yml
+  href: https://artifacts.apis.io/workday-recruiting/plans/workday-recruiting-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/workday-recruiting-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/finops/workday-recruiting-finops.yml
+  href: https://artifacts.apis.io/workday-recruiting/finops/workday-recruiting-finops.yml
   title: ''
   type: FinOps
   url: finops/workday-recruiting-finops.yml
@@ -195,27 +199,27 @@ common:
   type: Website
   url: https://www.workday.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/agentic-access/workday-recruiting-agentic-access.yml
+  href: https://artifacts.apis.io/workday-recruiting/agentic-access/workday-recruiting-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/workday-recruiting-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/security/workday-recruiting-trust-center.yml
+  href: https://artifacts.apis.io/workday-recruiting/security/workday-recruiting-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/workday-recruiting-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/security/workday-recruiting-domain-security.yml
+  href: https://artifacts.apis.io/workday-recruiting/security/workday-recruiting-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/workday-recruiting-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/authentication/workday-recruiting-authentication.yml
+  href: https://artifacts.apis.io/workday-recruiting/authentication/workday-recruiting-authentication.yml
   title: ''
   type: Authentication
   url: authentication/workday-recruiting-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/scopes/workday-recruiting-scopes.yml
+  href: https://artifacts.apis.io/workday-recruiting/scopes/workday-recruiting-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/workday-recruiting-scopes.yml
@@ -224,42 +228,42 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/workday-recruiting/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-agency-candidate-submission-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-agency-candidate-submission-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-agency-candidate-submission-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-bulk-applicant-import-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-bulk-applicant-import-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-bulk-applicant-import-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-close-requisition-and-unpost-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-close-requisition-and-unpost-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-close-requisition-and-unpost-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-employee-referral-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-employee-referral-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-employee-referral-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-interview-to-offer-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-interview-to-offer-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-interview-to-offer-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-onboard-candidate-with-resume-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-onboard-candidate-with-resume-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-onboard-candidate-with-resume-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-post-and-source-requisition-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-post-and-source-requisition-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-post-and-source-requisition-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/arazzo/workday-recruiting-screen-and-advance-application-workflow.yml
+  href: https://artifacts.apis.io/workday-recruiting/arazzo/workday-recruiting-screen-and-advance-application-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-recruiting-screen-and-advance-application-workflow.yml
@@ -340,12 +344,12 @@ common:
   type: Partners
   url: https://www.workday.com/en-us/company/partners/overview.html
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/rules/workday-recruiting-spectral-rules.yml
+  href: https://artifacts.apis.io/workday-recruiting/rules/workday-recruiting-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/workday-recruiting-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/vocabulary/workday-recruiting-vocabulary.yaml
+  href: https://artifacts.apis.io/workday-recruiting/vocabulary/workday-recruiting-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/workday-recruiting-vocabulary.yaml
@@ -467,7 +471,7 @@ finops:
 - has_sources: false
   method: generated
   name: Workday Recruiting Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: workday-recruiting-finops
   template: true
@@ -686,7 +690,7 @@ plans:
 - name: Workday Recruiting Plans Pricing
   plan_count: 3
   slug: workday-recruiting-plans-pricing
-random_paper: 6
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Workday Recruiting Rate Limits
@@ -724,13 +728,13 @@ score:
   band: developing
   composite: 43.0
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 72.0
     catalog_earned_first_party: 0.0
     catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 27.3
@@ -738,7 +742,7 @@ score:
     developer_ergonomics: 46.4
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 44.6
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     contracts:
@@ -752,13 +756,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/workday-recruiting/refs/heads/main/screenshots/workday-recruiting-2026-06-20T201608.png
+screenshot: https://apis.io/screenshots/workday-recruiting/workday-recruiting-2026-06-20T201608.png
 security:
 - kind: authentication
   name: Workday Recruiting Authentication

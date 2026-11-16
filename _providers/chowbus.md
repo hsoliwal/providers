@@ -1,11 +1,12 @@
 ---
 access_model:
   confidence: low
-  label: Requires approval
+  label: Paid · Requires approval
   onboarding: approval
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - security
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chowbus/refs/heads/main/plans/chowbus-plans-pricing.yml
+  href: https://artifacts.apis.io/chowbus/plans/chowbus-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chowbus-plans-pricing.yml
@@ -107,17 +111,17 @@ common:
   type: Twitter
   url: https://twitter.com/chowbus
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chowbus/refs/heads/main/llms/chowbus-llms.txt
+  href: https://artifacts.apis.io/chowbus/llms/chowbus-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chowbus-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chowbus/refs/heads/main/conventions/chowbus-conventions.yml
+  href: https://artifacts.apis.io/chowbus/conventions/chowbus-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chowbus-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chowbus/refs/heads/main/security/chowbus-domain-security.yml
+  href: https://artifacts.apis.io/chowbus/security/chowbus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chowbus-domain-security.yml
@@ -138,18 +142,18 @@ plans:
 - name: Chowbus Plans Pricing
   plan_count: 3
   slug: chowbus-plans-pricing
-random_paper: 15
+random_paper: 19
 score:
   band: emerging
   composite: 17.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 65.8
     contract_governance: 0.0
@@ -164,21 +168,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.6
+  previous_composite: 17.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
     score: 8.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/chowbus/refs/heads/main/screenshots/chowbus-2026-08-07T163334.png
+screenshot: https://apis.io/screenshots/chowbus/chowbus-2026-08-07T163334.png
 security:
 - kind: domain-security
   name: Chowbus Domain Security

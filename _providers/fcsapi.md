@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 15.1
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: Free and fast access to Forex, cryptocurrency, and stock market data via REST and WebSocket endpoints.
@@ -44,50 +58,50 @@ apis:
   description: The Stock API from FCS API — 6 operation(s) for stock.
   name: FCS API Stock API
   slug: fcsapi-stock-api
-artifact_total: 14
+artifact_total: 15
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/vendors/fcsapi-vendors.yml
+  href: https://artifacts.apis.io/fcsapi/vendors/fcsapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/fcsapi-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/plans/fcsapi-plans-pricing.yml
+  href: https://artifacts.apis.io/fcsapi/plans/fcsapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fcsapi-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/rules/fcsapi-rules.yml
+  href: https://artifacts.apis.io/fcsapi/rules/fcsapi-rules.yml
   title: ''
   type: Spectral
   url: rules/fcsapi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/json-ld/fcsapi-context.jsonld
+  href: https://artifacts.apis.io/fcsapi/json-ld/fcsapi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/fcsapi-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/vocabulary/fcsapi-vocabulary.yml
+  href: https://artifacts.apis.io/fcsapi/vocabulary/fcsapi-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/fcsapi-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/data-model/fcsapi-data-model.yml
+  href: https://artifacts.apis.io/fcsapi/data-model/fcsapi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fcsapi-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/conformance/fcsapi-conformance.yml
+  href: https://artifacts.apis.io/fcsapi/conformance/fcsapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fcsapi-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/llms/fcsapi-llms.txt
+  href: https://artifacts.apis.io/fcsapi/llms/fcsapi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fcsapi-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/hosts/fcsapi-hosts.yml
+  href: https://artifacts.apis.io/fcsapi/hosts/fcsapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/fcsapi-hosts.yml
@@ -100,7 +114,7 @@ common:
   type: DeveloperPortal
   url: https://developer.fcsapi.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fcsapi/refs/heads/main/security/fcsapi-domain-security.yml
+  href: https://artifacts.apis.io/fcsapi/security/fcsapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fcsapi-domain-security.yml
@@ -149,6 +163,14 @@ coverage:
   state: none
 created: '2026-10-16'
 description: FCS API provides free and fast access to Forex, cryptocurrency, and stock market data through a simple REST and WebSocket API. It offers real-time and historical rates, technical indicators, and charting data for developers building trading, analytics, or financial applications. The service includes extensive documentation, pricing tiers, and a developer portal for easy integration.
+finops:
+- has_sources: true
+  method: derived
+  name: Fcsapi Finops
+  primary_unit: ''
+  service_category: ''
+  slug: fcsapi-finops
+  template: true
 image: https://fcsapi.com/assets/images/home-top-bg.webp
 json_schemas:
 - name: GetForexJwtTokenResponse
@@ -179,7 +201,7 @@ modified: '2026-10-16'
 name: FCS API
 nav: Providers
 network: true
-overview: 'FCS API is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Forex API, Raw API, Stock API, and 1 more. Tagged areas include Finance, Foreign Exchange, Cryptocurrency, Stocks, and DataAPI.
+overview: 'FCS API is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Forex API, Raw API, Stock API, and 1 more. Tagged areas include Finance, Foreign Exchange, Cryptocurrency, Stocks, and Data API.
 
 
   The FCS API catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -190,7 +212,7 @@ plans:
 - name: Fcsapi Plans Pricing
   plan_count: 5
   slug: fcsapi-plans-pricing
-random_paper: 14
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -205,22 +227,24 @@ rules:
     warn: 2
   slug: fcsapi-rules
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 31.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 19
     catalog_earned: 77.8
     catalog_earned_first_party: 12.0
     catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.6
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
     contract_quality: 24.7
-    developer_ergonomics: 45.2
+    developer_ergonomics: 22.6
     discoverability: 78.6
     operational_transparency: 0.0
+  previous_composite: 40.8
   provenance:
     conformance: derived
     contracts:
@@ -234,12 +258,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/fcsapi/fcsapi-2026-11-03T131914.png
 security:
 - kind: domain-security
   name: Fcsapi Domain Security
@@ -251,6 +277,6 @@ tags:
 - Foreign Exchange
 - Cryptocurrency
 - Stocks
-- DataAPI
+- Data API
 website: https://fcsapi.com/
 ---

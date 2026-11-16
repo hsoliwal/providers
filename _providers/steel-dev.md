@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -68,9 +74,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Steel Files API
   slug: open-steel-dev-files-api
 - collection_type: open
@@ -91,17 +94,17 @@ common:
   type: Blog
   url: https://steel.dev/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/agentic-access/steel-dev-agentic-access.yml
+  href: https://artifacts.apis.io/steel-dev/agentic-access/steel-dev-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/steel-dev-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/security/steel-dev-domain-security.yml
+  href: https://artifacts.apis.io/steel-dev/security/steel-dev-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/steel-dev-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/authentication/steel-dev-authentication.yml
+  href: https://artifacts.apis.io/steel-dev/authentication/steel-dev-authentication.yml
   title: ''
   type: Authentication
   url: authentication/steel-dev-authentication.yml
@@ -122,17 +125,17 @@ common:
   type: Documentation
   url: https://docs.steel.dev
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/plans/steel-dev-plans-pricing.yml
+  href: https://artifacts.apis.io/steel-dev/plans/steel-dev-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/steel-dev-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/rate-limits/steel-dev-rate-limits.yml
+  href: https://artifacts.apis.io/steel-dev/rate-limits/steel-dev-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/steel-dev-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/finops/steel-dev-finops.yml
+  href: https://artifacts.apis.io/steel-dev/finops/steel-dev-finops.yml
   title: ''
   type: FinOps
   url: finops/steel-dev-finops.yml
@@ -152,7 +155,10 @@ modified: '2026-10-06'
 name: Steel
 nav: Providers
 network: true
-overview: 'Steel publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Files API, Quick Actions API, Session Actions API, and 1 more. Tagged areas include Browser, Web Automation, Web Scraping, AI Agents, and Open Source.
+overview: 'Steel publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Files API, Quick Actions API, Session Actions API, and 1 more. Tagged areas include Browser, Browser Automation, Web Scraping, AI Agents, and Open Source.
+
+
+  The Steel catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Steel''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
@@ -160,30 +166,43 @@ plans:
 - name: Steel Dev Plans Pricing
   plan_count: 6
   slug: steel-dev-plans-pricing
-random_paper: 3
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Steel Dev Rate Limits
   slug: steel-dev-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Steel API Rules
+  rule_count: 54
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 2
+    warn: 1
+  slug: steel-dev-rules
 score:
-  band: emerging
-  composite: 25.9
+  band: thin
+  composite: 27.5
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.5
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 33.7
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     contracts:
@@ -197,13 +216,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/steel-dev/refs/heads/main/screenshots/steel-dev-2026-10-11T130356.png
+screenshot: https://apis.io/screenshots/steel-dev/steel-dev-2026-10-11T130356.png
 security:
 - kind: authentication
   name: Steel Dev Authentication
@@ -216,10 +235,9 @@ security:
 slug: steel-dev
 tags:
 - Browser
-- Web Automation
+- Browser Automation
 - Web Scraping
 - AI Agents
 - Open Source
-- Browser Automation
 website: https://steel.dev
 ---

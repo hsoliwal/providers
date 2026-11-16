@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Documented product APIs across Token Hub tokenization, the Areion Payment Gateway (3-D Secure authentication and authorization), Prepaid card issuance/lifecycle/transaction management, Fraud Risk Mana
@@ -42,7 +46,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/security/wibmo-domain-security.yml
+  href: https://artifacts.apis.io/wibmo/security/wibmo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wibmo-domain-security.yml
@@ -79,17 +83,17 @@ common:
   type: PrivacyPolicy
   url: https://wibmo.co/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/llms/wibmo-llms.txt
+  href: https://artifacts.apis.io/wibmo/llms/wibmo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wibmo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/authentication/wibmo-authentication.yml
+  href: https://artifacts.apis.io/wibmo/authentication/wibmo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wibmo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/conformance/wibmo-conformance.yml
+  href: https://artifacts.apis.io/wibmo/conformance/wibmo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wibmo-conformance.yml
@@ -98,12 +102,12 @@ common:
   type: Compliance
   url: https://wibmo.co/security-and-privacy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/packages/wibmo-packages.yml
+  href: https://artifacts.apis.io/wibmo/packages/wibmo-packages.yml
   title: ''
   type: Packages
   url: packages/wibmo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/packages/wibmo-packages.yml
+  href: https://artifacts.apis.io/wibmo/packages/wibmo-packages.yml
   title: ''
   type: SDKs
   url: packages/wibmo-packages.yml
@@ -158,14 +162,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wibmo/refs/heads/main/screenshots/wibmo-2026-10-11T195725.png
+screenshot: https://apis.io/screenshots/wibmo/wibmo-2026-10-11T195725.png
 security:
 - kind: authentication
   name: Wibmo Authentication

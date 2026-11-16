@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -44,7 +47,7 @@ common:
   type: BlogRSS
   url: https://www.telesair.com/blog-feed.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/security/telesair-domain-security.yml
+  href: https://artifacts.apis.io/telesair/security/telesair-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/telesair-domain-security.yml
@@ -73,37 +76,37 @@ common:
   type: FAQ
   url: https://www.telesair.com/faqs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/mcp/telesair-mcp.yml
+  href: https://artifacts.apis.io/telesair/mcp/telesair-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/telesair-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/llms/telesair-llms.txt
+  href: https://artifacts.apis.io/telesair/llms/telesair-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/telesair-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/authentication/telesair-authentication.yml
+  href: https://artifacts.apis.io/telesair/authentication/telesair-authentication.yml
   title: ''
   type: Authentication
   url: authentication/telesair-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/conventions/telesair-conventions.yml
+  href: https://artifacts.apis.io/telesair/conventions/telesair-conventions.yml
   title: ''
   type: Conventions
   url: conventions/telesair-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/conformance/telesair-conformance.yml
+  href: https://artifacts.apis.io/telesair/conformance/telesair-conformance.yml
   title: ''
   type: Conformance
   url: conformance/telesair-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/plans/telesair-plans-pricing.yml
+  href: https://artifacts.apis.io/telesair/plans/telesair-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/telesair-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/rate-limits/telesair-rate-limits.yml
+  href: https://artifacts.apis.io/telesair/rate-limits/telesair-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/telesair-rate-limits.yml
@@ -144,7 +147,7 @@ plans:
 - name: Telesair Plans Pricing
   plan_count: 0
   slug: telesair-plans-pricing
-random_paper: 21
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Telesair Rate Limits
@@ -153,13 +156,13 @@ score:
   band: emerging
   composite: 14.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
@@ -174,7 +177,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.5
+  previous_composite: 14.6
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -184,14 +187,14 @@ score:
     regime: Health
     regime_id: health
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/telesair/refs/heads/main/screenshots/telesair-2026-09-02T162737.png
+screenshot: https://apis.io/screenshots/telesair/telesair-2026-09-02T162737.png
 security:
 - kind: authentication
   name: Telesair Authentication

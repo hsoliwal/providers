@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evie-networks/refs/heads/main/security/evie-networks-domain-security.yml
+  href: https://artifacts.apis.io/evie-networks/security/evie-networks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/evie-networks-domain-security.yml
@@ -79,12 +82,12 @@ common:
   type: Team
   url: https://evie.com.au/about-evie/our-team/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/evie-networks/refs/heads/main/llms/evie-networks-llms.txt
+  href: https://artifacts.apis.io/evie-networks/llms/evie-networks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/evie-networks-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/evie-networks/refs/heads/main/conformance/evie-networks-conformance.yml
+  href: https://artifacts.apis.io/evie-networks/conformance/evie-networks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/evie-networks-conformance.yml
@@ -117,12 +120,12 @@ overview: 'Evie Networks is profiled on the [APIs.io](https://apis.io/) network.
 
 
   Evie Networks'' developer surface includes engineering blog, support, FAQ, and 13 more developer resources.'
-random_paper: 21
+random_paper: 19
 score:
   band: emerging
   composite: 11.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -152,14 +155,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/evie-networks/refs/heads/main/screenshots/evie-networks-2026-08-07T165052.png
+screenshot: https://apis.io/screenshots/evie-networks/evie-networks-2026-08-07T165052.png
 security:
 - kind: domain-security
   name: Evie Networks Domain Security
@@ -174,7 +177,7 @@ tags:
 - Utilities
 - E-Mobility
 - Charging Infrastructure
-- Fleet
+- Fleet Management
 - Transport Electrification
 website: https://evie.com.au/
 ---

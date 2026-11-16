@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.0
-  scored_at: '2026-10-17'
+  score: 42.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -219,7 +222,7 @@ apis:
   description: The Transactions API from Bank of Ireland (UK) — 2 operation(s) for transactions.
   name: Bank of Ireland (UK) Transactions API
   slug: bank-of-ireland-uk-transactions-api
-artifact_total: 40
+artifact_total: 44
 collections:
 - collection_type: open
   name: Open Data API
@@ -230,102 +233,102 @@ common:
   type: Blog
   url: https://www.bankofirelanduk.com/about/media-centre/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/capabilities/bank-of-ireland-uk-capability-edges.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/capabilities/bank-of-ireland-uk-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bank-of-ireland-uk-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/agentic-access/bank-of-ireland-uk-agentic-access.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/agentic-access/bank-of-ireland-uk-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bank-of-ireland-uk-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/security/bank-of-ireland-uk-domain-security.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/security/bank-of-ireland-uk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bank-of-ireland-uk-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/scopes/bank-of-ireland-uk-scopes.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/scopes/bank-of-ireland-uk-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bank-of-ireland-uk-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/authentication/bank-of-ireland-uk-authentication.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/authentication/bank-of-ireland-uk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bank-of-ireland-uk-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/well-known/bank-of-ireland-uk-well-known.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/well-known/bank-of-ireland-uk-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bank-of-ireland-uk-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/conformance/bank-of-ireland-uk-conformance.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/conformance/bank-of-ireland-uk-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bank-of-ireland-uk-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/errors/bank-of-ireland-uk-problem-types.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/errors/bank-of-ireland-uk-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bank-of-ireland-uk-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/lifecycle/bank-of-ireland-uk-lifecycle.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/lifecycle/bank-of-ireland-uk-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bank-of-ireland-uk-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/lifecycle/bank-of-ireland-uk-lifecycle.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/lifecycle/bank-of-ireland-uk-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/bank-of-ireland-uk-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/conventions/bank-of-ireland-uk-conventions.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/conventions/bank-of-ireland-uk-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bank-of-ireland-uk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/conventions/bank-of-ireland-uk-conventions.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/conventions/bank-of-ireland-uk-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/bank-of-ireland-uk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/data-model/bank-of-ireland-uk-data-model.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/data-model/bank-of-ireland-uk-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bank-of-ireland-uk-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/mcp/bank-of-ireland-uk-mcp.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/mcp/bank-of-ireland-uk-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bank-of-ireland-uk-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/llms/bank-of-ireland-uk-llms.txt
+  href: https://artifacts.apis.io/bank-of-ireland-uk/llms/bank-of-ireland-uk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bank-of-ireland-uk-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/overlays/bank-of-ireland-uk-open-data-overlay.yaml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/overlays/bank-of-ireland-uk-open-data-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bank-of-ireland-uk-open-data-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/overlays/bank-of-ireland-uk-account-info-overlay.yaml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/overlays/bank-of-ireland-uk-account-info-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bank-of-ireland-uk-account-info-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/overlays/bank-of-ireland-uk-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/overlays/bank-of-ireland-uk-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bank-of-ireland-uk-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/overlays/bank-of-ireland-uk-confirmation-funds-overlay.yaml
+  href: https://artifacts.apis.io/bank-of-ireland-uk/overlays/bank-of-ireland-uk-confirmation-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bank-of-ireland-uk-confirmation-funds-overlay.yaml
@@ -385,8 +388,24 @@ network: true
 overview: 'Bank of Ireland (UK) publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 32 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
+  The Bank of Ireland (UK) catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bank of Ireland (UK)''s developer surface includes engineering blog, authentication, getting-started guide, developer portal, documentation, support, and 26 more developer resources.'
-random_paper: 3
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Bank of Ireland (UK) API Rules
+  rule_count: 69
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 8
+    warn: 7
+  slug: bank-of-ireland-uk-rules
 scopes:
 - name: Bank Of Ireland Uk Scopes
   scope_count: 4
@@ -394,18 +413,18 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 37.1
+  composite: 38.7
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
+    artifact_dirs: 27
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 46.9
     developer_ergonomics: 28.0
     discoverability: 78.6
@@ -419,7 +438,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 36.6
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -440,13 +459,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 44.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bank-of-ireland-uk/refs/heads/main/screenshots/bank-of-ireland-uk-2026-07-25T202335.png
+screenshot: https://apis.io/screenshots/bank-of-ireland-uk/bank-of-ireland-uk-2026-07-25T202335.png
 security:
 - kind: authentication
   name: Bank Of Ireland Uk Authentication
@@ -456,6 +475,14 @@ security:
   name: Bank Of Ireland Uk Domain Security
   slug: bank-of-ireland-uk-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Read a customer's accounts and transactions (Bank of Ireland UK AIS)
+  slug: bank-of-ireland-uk-account-information
+- name: Initiate a domestic payment (Bank of Ireland UK PIS)
+  slug: bank-of-ireland-uk-domestic-payment
+- name: Query Bank of Ireland (UK) Open Data (branches, ATMs, products)
+  slug: bank-of-ireland-uk-open-data
 slug: bank-of-ireland-uk
 tags:
 - Financial Services

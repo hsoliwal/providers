@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/westwing/refs/heads/main/security/westwing-domain-security.yml
+  href: https://artifacts.apis.io/westwing/security/westwing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/westwing-domain-security.yml
@@ -46,7 +50,7 @@ common:
   type: Website
   url: https://www.westwing.de
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/westwing/refs/heads/main/llms/westwing-llms.txt
+  href: https://artifacts.apis.io/westwing/llms/westwing-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/westwing-llms.txt
@@ -59,7 +63,7 @@ name: Westwing
 nav: Providers
 network: true
 overview: Westwing is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, E-Commerce, Home & Living, and Furniture.
-random_paper: 8
+random_paper: 0
 score:
   band: minimal
   composite: 4.2
@@ -70,7 +74,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -83,21 +87,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 4.1
+  previous_composite: 4.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/westwing/refs/heads/main/screenshots/westwing-2026-09-02T170640.png
+screenshot: https://apis.io/screenshots/westwing/westwing-2026-09-02T170640.png
 security:
 - kind: domain-security
   name: Westwing Domain Security

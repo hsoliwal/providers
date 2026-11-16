@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/rate-limits/deski-rate-limits.yml
+  href: https://artifacts.apis.io/deski/rate-limits/deski-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/deski-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/security/deski-domain-security.yml
+  href: https://artifacts.apis.io/deski/security/deski-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deski-domain-security.yml
@@ -86,7 +89,7 @@ common:
   type: Pricing
   url: https://www.heartfocus.ai/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/plans/deski-plans-pricing.yml
+  href: https://artifacts.apis.io/deski/plans/deski-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/deski-plans-pricing.yml
@@ -127,7 +130,7 @@ common:
   type: Security
   url: https://www.heartfocus.ai/security/cvd
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/security/deski-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/deski/security/deski-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/deski-vulnerability-disclosure.yml
@@ -136,17 +139,17 @@ common:
   type: Compliance
   url: https://www.heartfocus.ai/hipaa-hbnr-applicability-statement
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/conformance/deski-conformance.yml
+  href: https://artifacts.apis.io/deski/conformance/deski-conformance.yml
   title: ''
   type: Conformance
   url: conformance/deski-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/lifecycle/deski-lifecycle.yml
+  href: https://artifacts.apis.io/deski/lifecycle/deski-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/deski-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/llms/deski-llms.txt
+  href: https://artifacts.apis.io/deski/llms/deski-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/deski-llms.txt
@@ -218,7 +221,7 @@ score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -249,14 +252,14 @@ score:
     regime: Health
     regime_id: health
     score: 22.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/deski/refs/heads/main/screenshots/deski-2026-09-02T145230.png
+screenshot: https://apis.io/screenshots/deski/deski-2026-09-02T145230.png
 security:
 - kind: domain-security
   name: Deski Domain Security

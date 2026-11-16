@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Programmatic access to the Tanaza Cloud dashboard data set across three documented API families — Network Management, Network Monitoring, and Application — plus Push Contact Notifications webhooks. Re
@@ -89,17 +93,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/tanaza
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tanaza/refs/heads/main/asyncapi/tanaza-push-notifications-webhooks.yml
+  href: https://artifacts.apis.io/tanaza/asyncapi/tanaza-push-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/tanaza-push-notifications-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tanaza/refs/heads/main/security/tanaza-domain-security.yml
+  href: https://artifacts.apis.io/tanaza/security/tanaza-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tanaza-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tanaza/refs/heads/main/llms/tanaza-llms.txt
+  href: https://artifacts.apis.io/tanaza/llms/tanaza-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tanaza-llms.txt
@@ -118,12 +122,12 @@ overview: 'Tanaza is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Tanaza''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, and 8 more developer resources.'
-random_paper: 1
+random_paper: 15
 score:
   band: emerging
   composite: 17.4
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -152,14 +156,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 5.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tanaza/refs/heads/main/screenshots/tanaza-2026-09-02T162518.png
+screenshot: https://apis.io/screenshots/tanaza/tanaza-2026-09-02T162518.png
 security:
 - kind: domain-security
   name: Tanaza Domain Security

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Censinet RiskOps API for healthcare vendors and partners
@@ -32,27 +45,27 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/censinet/refs/heads/main/llms/censinet-llms.txt
+  href: https://artifacts.apis.io/censinet/llms/censinet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/censinet-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/censinet/refs/heads/main/well-known/censinet-help-security.txt
+  href: https://artifacts.apis.io/censinet/well-known/censinet-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/censinet-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/censinet/refs/heads/main/well-known/censinet-well-known.yml
+  href: https://artifacts.apis.io/censinet/well-known/censinet-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/censinet-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/censinet/refs/heads/main/hosts/censinet-hosts.yml
+  href: https://artifacts.apis.io/censinet/hosts/censinet-hosts.yml
   title: ''
   type: Hosts
   url: hosts/censinet-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/censinet/refs/heads/main/vendors/censinet-vendors.yml
+  href: https://artifacts.apis.io/censinet/vendors/censinet-vendors.yml
   title: ''
   type: Vendors
   url: vendors/censinet-vendors.yml
@@ -77,7 +90,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Censinet
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/censinet/refs/heads/main/security/censinet-domain-security.yml
+  href: https://artifacts.apis.io/censinet/security/censinet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/censinet-domain-security.yml
@@ -121,24 +134,26 @@ overview: 'Censinet is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Censinet''s developer surface includes support, getting-started guide, documentation, engineering blog, and 12 more developer resources.'
-random_paper: 21
+random_paper: 17
 score:
   band: emerging
-  composite: 17.2
+  composite: 12.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 28.6
-    discoverability: 67.9
-    operational_transparency: 5.3
+    developer_ergonomics: 14.3
+    discoverability: 66.1
+    operational_transparency: 13.2
+  previous_composite: 18.6
   provenance:
     mcp: unknown
   regulatory:
@@ -146,13 +161,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/censinet/censinet-2026-11-03T123637.png
 security:
 - kind: domain-security
   name: Censinet Domain Security

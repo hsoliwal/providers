@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.6
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -77,9 +81,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Quartzy Public Inventory Items API
   slug: open-quartzy-inventory-items-api
 - collection_type: open
@@ -102,32 +103,32 @@ collections:
   slug: open-quartzy
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/capabilities/quartzy-capability-edges.yml
+  href: https://artifacts.apis.io/quartzy/capabilities/quartzy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/quartzy-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/agentic-access/quartzy-agentic-access.yml
+  href: https://artifacts.apis.io/quartzy/agentic-access/quartzy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/quartzy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/security/quartzy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/quartzy/security/quartzy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/quartzy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/security/quartzy-domain-security.yml
+  href: https://artifacts.apis.io/quartzy/security/quartzy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quartzy-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/authentication/quartzy-authentication.yml
+  href: https://artifacts.apis.io/quartzy/authentication/quartzy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/quartzy-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/scopes/quartzy-scopes.yml
+  href: https://artifacts.apis.io/quartzy/scopes/quartzy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/quartzy-scopes.yml
@@ -148,17 +149,17 @@ common:
   type: Documentation
   url: https://docs.quartzy.com/api/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/plans/quartzy-plans-pricing.yml
+  href: https://artifacts.apis.io/quartzy/plans/quartzy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quartzy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/rate-limits/quartzy-rate-limits.yml
+  href: https://artifacts.apis.io/quartzy/rate-limits/quartzy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/quartzy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/finops/quartzy-finops.yml
+  href: https://artifacts.apis.io/quartzy/finops/quartzy-finops.yml
   title: ''
   type: FinOps
   url: finops/quartzy-finops.yml
@@ -185,6 +186,9 @@ network: true
 overview: 'Quartzy publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Inventory Items API, Labs API, Order Requests API, and 3 more. Tagged areas include Lab Management, Inventory, Life Sciences, Procurement, and Ordering.
 
 
+  The Quartzy catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Quartzy''s developer surface includes authentication, documentation, support, and 11 more developer resources.'
 plans:
 - name: Quartzy Plans Pricing
@@ -195,6 +199,19 @@ rate_limits:
 - limit_count: 3
   name: Quartzy Rate Limits
   slug: quartzy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Quartzy API Rules
+  rule_count: 68
+  severity_counts:
+    error: 66
+    hint: 0
+    info: 1
+    warn: 1
+  slug: quartzy-rules
 scopes:
 - name: Quartzy Scopes
   scope_count: 0
@@ -202,23 +219,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 30.2
+  composite: 33.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.6
     developer_ergonomics: 34.5
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 38.5
+    operational_transparency: 21.1
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -232,13 +249,13 @@ score:
     regime: Health
     regime_id: health
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/quartzy/refs/heads/main/screenshots/quartzy-2026-09-02T152632.png
+screenshot: https://apis.io/screenshots/quartzy/quartzy-2026-09-02T152632.png
 security:
 - kind: authentication
   name: Quartzy Authentication

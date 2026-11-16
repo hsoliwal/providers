@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public API for accessing events, orders, tickets and tags.
@@ -32,37 +46,37 @@ apis:
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/plans/humanitix-plans-pricing.yml
+  href: https://artifacts.apis.io/humanitix/plans/humanitix-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/humanitix-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/conformance/humanitix-conformance.yml
+  href: https://artifacts.apis.io/humanitix/conformance/humanitix-conformance.yml
   title: ''
   type: Conformance
   url: conformance/humanitix-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/llms/humanitix-llms.txt
+  href: https://artifacts.apis.io/humanitix/llms/humanitix-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/humanitix-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/well-known/humanitix-help-security.txt
+  href: https://artifacts.apis.io/humanitix/well-known/humanitix-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/humanitix-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/well-known/humanitix-well-known.yml
+  href: https://artifacts.apis.io/humanitix/well-known/humanitix-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/humanitix-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/hosts/humanitix-hosts.yml
+  href: https://artifacts.apis.io/humanitix/hosts/humanitix-hosts.yml
   title: ''
   type: Hosts
   url: hosts/humanitix-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/vendors/humanitix-vendors.yml
+  href: https://artifacts.apis.io/humanitix/vendors/humanitix-vendors.yml
   title: ''
   type: Vendors
   url: vendors/humanitix-vendors.yml
@@ -99,7 +113,7 @@ common:
   type: Documentation
   url: https://help.humanitix.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/humanitix/refs/heads/main/security/humanitix-domain-security.yml
+  href: https://artifacts.apis.io/humanitix/security/humanitix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/humanitix-domain-security.yml
@@ -123,24 +137,26 @@ plans:
 - name: Humanitix Plans Pricing
   plan_count: 4
   slug: humanitix-plans-pricing
-random_paper: 15
+random_paper: 23
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 22.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.7
   facets:
-    access_clarity: 65.8
+    access_clarity: 48.7
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 28.6
-    discoverability: 66.1
-    operational_transparency: 0.0
+    developer_ergonomics: 14.3
+    discoverability: 65.2
+    operational_transparency: 10.5
+  previous_composite: 29.0
   provenance:
     conformance: first-party
     mcp: unknown
@@ -149,13 +165,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/humanitix/humanitix-2026-11-03T133537.png
 security:
 - kind: domain-security
   name: Humanitix Domain Security

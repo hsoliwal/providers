@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 28.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -89,11 +92,8 @@ apis:
   description: API health and availability
   name: NOWPayments Status API
   slug: now-payments-status-api
-artifact_total: 31
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: NOWPayments Authentication API
   slug: open-now-payments-authentication-api
@@ -117,17 +117,17 @@ collections:
   slug: open-now-payments-status-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/now-payments/refs/heads/main/agentic-access/now-payments-agentic-access.yml
+  href: https://artifacts.apis.io/now-payments/agentic-access/now-payments-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/now-payments-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/now-payments/refs/heads/main/security/now-payments-domain-security.yml
+  href: https://artifacts.apis.io/now-payments/security/now-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/now-payments-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/now-payments/refs/heads/main/authentication/now-payments-authentication.yml
+  href: https://artifacts.apis.io/now-payments/authentication/now-payments-authentication.yml
   title: ''
   type: Authentication
   url: authentication/now-payments-authentication.yml
@@ -230,7 +230,7 @@ plans:
 - name: Plans
   plan_count: 2
   slug: plans
-random_paper: 12
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -251,13 +251,13 @@ score:
   band: thin
   composite: 30.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 42.3
     catalog_earned_first_party: 0.0
     catalog_gap: 72.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
@@ -265,7 +265,7 @@ score:
     developer_ergonomics: 41.7
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 34.7
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     contracts:
@@ -279,13 +279,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/now-payments/refs/heads/main/screenshots/now-payments-2026-06-20T190442.png
+screenshot: https://apis.io/screenshots/now-payments/now-payments-2026-06-20T190442.png
 security:
 - kind: authentication
   name: Now Payments Authentication

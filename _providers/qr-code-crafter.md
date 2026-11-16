@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -14,7 +17,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.2
-  scored_at: '2026-10-17'
+  score: 39.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -45,7 +51,7 @@ agentic_access:
   operation_count: 19
   slug: qr-code-crafter-agentic-access
   summary_line: 19 operations · 13 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://qrcodecrafter.com
   baseurl_source: spec
@@ -72,14 +78,14 @@ apis:
   description: The Send Feedback API from QR Code Crafter — 1 operation(s) for send feedback.
   name: QR Code Crafter Send Feedback API
   slug: qr-code-crafter-send-feedback-api
-artifact_total: 11
+artifact_total: 17
 collections:
 - collection_type: open
   name: QRCodeCrafter API
   slug: open-qr-code-crafter-openapi-original
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/overlays/qr-code-crafter-openapi-overlay.yaml
+  href: https://artifacts.apis.io/qr-code-crafter/overlays/qr-code-crafter-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/qr-code-crafter-openapi-overlay.yaml
@@ -120,67 +126,67 @@ common:
   type: LLMsTxt
   url: https://qrcodecrafter.com/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/llms/qr-code-crafter-llms.txt
+  href: https://artifacts.apis.io/qr-code-crafter/llms/qr-code-crafter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qr-code-crafter-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/mcp/qr-code-crafter-mcp.yml
+  href: https://artifacts.apis.io/qr-code-crafter/mcp/qr-code-crafter-mcp.yml
   title: ''
   type: WebMCP
   url: mcp/qr-code-crafter-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/qr-code-crafter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/agentic-access/qr-code-crafter-agentic-access.yml
+  href: https://artifacts.apis.io/qr-code-crafter/agentic-access/qr-code-crafter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/qr-code-crafter-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/well-known/qr-code-crafter-well-known.yml
+  href: https://artifacts.apis.io/qr-code-crafter/well-known/qr-code-crafter-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qr-code-crafter-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/authentication/qr-code-crafter-authentication.yml
+  href: https://artifacts.apis.io/qr-code-crafter/authentication/qr-code-crafter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/qr-code-crafter-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/conventions/qr-code-crafter-conventions.yml
+  href: https://artifacts.apis.io/qr-code-crafter/conventions/qr-code-crafter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/qr-code-crafter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/conventions/qr-code-crafter-conventions.yml
+  href: https://artifacts.apis.io/qr-code-crafter/conventions/qr-code-crafter-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/qr-code-crafter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/errors/qr-code-crafter-problem-types.yml
+  href: https://artifacts.apis.io/qr-code-crafter/errors/qr-code-crafter-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/qr-code-crafter-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/rate-limits/qr-code-crafter-rate-limits.yml
+  href: https://artifacts.apis.io/qr-code-crafter/rate-limits/qr-code-crafter-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/qr-code-crafter-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/plans/qr-code-crafter-plans-pricing.yml
+  href: https://artifacts.apis.io/qr-code-crafter/plans/qr-code-crafter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/qr-code-crafter-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/lifecycle/qr-code-crafter-lifecycle.yml
+  href: https://artifacts.apis.io/qr-code-crafter/lifecycle/qr-code-crafter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/qr-code-crafter-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/changelog/qr-code-crafter-changelog.yml
+  href: https://artifacts.apis.io/qr-code-crafter/changelog/qr-code-crafter-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/qr-code-crafter-changelog.yml
@@ -189,27 +195,27 @@ common:
   type: ChangeLog
   url: https://qrcodecrafter.com/feeds/agent-updates.xml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/conformance/qr-code-crafter-conformance.yml
+  href: https://artifacts.apis.io/qr-code-crafter/conformance/qr-code-crafter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/qr-code-crafter-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/examples/qr-code-crafter-agent-recipes.yml
+  href: https://artifacts.apis.io/qr-code-crafter/examples/qr-code-crafter-agent-recipes.yml
   title: ''
   type: Examples
   url: examples/qr-code-crafter-agent-recipes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/sandbox/qr-code-crafter-sandbox.yml
+  href: https://artifacts.apis.io/qr-code-crafter/sandbox/qr-code-crafter-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/qr-code-crafter-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/packages/qr-code-crafter-packages.yml
+  href: https://artifacts.apis.io/qr-code-crafter/packages/qr-code-crafter-packages.yml
   title: ''
   type: Packages
   url: packages/qr-code-crafter-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/security/qr-code-crafter-domain-security.yml
+  href: https://artifacts.apis.io/qr-code-crafter/security/qr-code-crafter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qr-code-crafter-domain-security.yml
@@ -219,6 +225,14 @@ common:
   url: https://qrcodecrafter.com/apis.json
 created: '2026-07-24'
 description: 'Public QR code generation API by Brand Aspect Ltd (England & Wales, company 05105266) supporting 27 payload types — URL, GS1 Digital Link, Wi-Fi, vCard, event, location, crypto and fifteen payment schemes including PIX, UPI, PromptPay, VietQR, Swiss QR-bill and SEPA/GiroCode — exported as SVG, PNG, JPG, WebP, PDF or EPS at up to 4096px. Adds bounded bulk ZIP generation (50 rows with a manifest), a generate-and-verify endpoint that decodes the finished asset and returns an evidence receipt, and capability-managed dynamic URL redirects and vaults with privacy-preserving aggregate counts and no accounts or visitor tracking. Unusually agent-native for its size: it self-publishes an APIs.json index, OpenAPI 3.0.1 in both JSON and YAML, an ai-plugin manifest, a WebMCP browser-agent context with eight tool schemas, llms.txt, ai.txt, an Atom change feed for agents, and Markdown variants of every public page.'
+finops:
+- has_sources: true
+  method: derived
+  name: Qr Code Crafter Finops
+  primary_unit: ''
+  service_category: ''
+  slug: qr-code-crafter-finops
+  template: true
 image: https://qrcodecrafter.com/icons/icon-512x512.png
 layout: provider
 modified: '2026-08-11'
@@ -228,42 +242,58 @@ network: true
 overview: 'QR Code Crafter publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dynamic Qr API, Dynamic Qr Vaults API, .netlify API, and 2 more. Tagged areas include QR Codes, QR Code Generation, Static Qr, Dynamic QR, and dynamic redirects.
 
 
+  The QR Code Crafter catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   QR Code Crafter''s developer surface includes documentation, API reference, pricing, support, authentication, changelog, code examples, and 23 more developer resources.'
 plans:
 - name: Qr Code Crafter Plans Pricing
   plan_count: 1
   slug: qr-code-crafter-plans-pricing
-random_paper: 19
+random_paper: 7
 rate_limits:
 - limit_count: 4
   name: Qr Code Crafter Rate Limits
   slug: qr-code-crafter-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: QR Code Crafter API Rules
+  rule_count: 62
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 5
+    warn: 5
+  slug: qr-code-crafter-rules
 score:
   band: developing
-  composite: 46.5
+  composite: 49.5
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 52.0
+    artifact_dirs: 27
+    catalog_earned: 56.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
     access_clarity: 52.6
-    contract_governance: 4.5
-    contract_quality: 55.1
+    contract_governance: 18.2
+    contract_quality: 60.5
     developer_ergonomics: 42.3
     discoverability: 63.3
     operational_transparency: 47.4
-  previous_composite: 46.4
+  previous_composite: 48.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 5
     mcp: first-party
     skills: derived
@@ -273,13 +303,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/qr-code-crafter/refs/heads/main/screenshots/qr-code-crafter-2026-08-17T081420.png
+screenshot: https://apis.io/screenshots/qr-code-crafter/qr-code-crafter-2026-08-17T081420.png
 security:
 - kind: authentication
   name: Qr Code Crafter Authentication
@@ -289,6 +319,16 @@ security:
   name: Qr Code Crafter Domain Security
   slug: qr-code-crafter-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 4
+skills:
+- name: Bulk generation and capability-managed vaults
+  slug: qr-code-crafter-bulk-and-vaults
+- name: Generate and verify a production QR candidate
+  slug: qr-code-crafter-generate-and-verify
+- name: Generate a static QR code asset
+  slug: qr-code-crafter-generate-static-qr
+- name: Create and manage a dynamic QR redirect
+  slug: qr-code-crafter-manage-dynamic-qr
 slug: qr-code-crafter
 tags:
 - QR Codes
@@ -304,7 +344,7 @@ tags:
 - Browser Agents
 - payments (QR)
 - Agent Readiness
-- llms-txt
+- Llms.txt
 - capability tokens
 website: https://qrcodecrafter.com
 ---

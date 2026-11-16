@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Free · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 21.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 25
   slug: cdk-global-agentic-access
   summary_line: 25 operations · 12 acting
-api_count: 9
+api_count: 5
 apis:
 - description: Fortellis is CDK Global's open automotive commerce platform — an API gateway, app marketplace, and developer community that brokers data flow between dealerships, ISVs, OEMs, heavy-truck, and powerspo
   name: Fortellis Platform
@@ -143,7 +150,7 @@ arazzos:
 - description: Create a booking session, query a requested item, and update its details.
   name: CDK Global Update Service Session Item
   slug: cdk-global-update-service-session-item-workflow
-artifact_total: 72
+artifact_total: 71
 asyncapis:
 - description: Provides an Event Source (Publisher) the ability to post event through Fortellis Event Relay.
   name: Fortellis Event Relay Data API
@@ -167,9 +174,6 @@ collections:
 - collection_type: postman
   name: Booking Sessions
   slug: postman-fortellis-user-service
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: appointments adopt API
   slug: open-cdk-global-adopt-api
@@ -217,22 +221,22 @@ collections:
   slug: open-fortellis-user-service
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/agentic-access/cdk-global-agentic-access.yml
+  href: https://artifacts.apis.io/cdk-global/agentic-access/cdk-global-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cdk-global-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/security/cdk-global-domain-security.yml
+  href: https://artifacts.apis.io/cdk-global/security/cdk-global-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cdk-global-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/authentication/cdk-global-authentication.yml
+  href: https://artifacts.apis.io/cdk-global/authentication/cdk-global-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cdk-global-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/scopes/cdk-global-scopes.yml
+  href: https://artifacts.apis.io/cdk-global/scopes/cdk-global-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cdk-global-scopes.yml
@@ -241,67 +245,67 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/cdk-global/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-add-service-session-item-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-add-service-session-item-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-add-service-session-item-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-book-service-session-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-book-service-session-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-book-service-session-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-cancel-appointment-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-cancel-appointment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-cancel-appointment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-create-data-record-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-create-data-record-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-create-data-record-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-inspect-available-slot-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-inspect-available-slot-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-inspect-available-slot-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-parts-availability-check-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-parts-availability-check-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-parts-availability-check-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-parts-inventory-lookup-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-parts-inventory-lookup-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-parts-inventory-lookup-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-relay-appointment-event-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-relay-appointment-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-relay-appointment-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-remove-service-session-item-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-remove-service-session-item-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-remove-service-session-item-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-reschedule-appointment-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-reschedule-appointment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-reschedule-appointment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-schedule-service-appointment-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-schedule-service-appointment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-schedule-service-appointment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-update-data-record-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-update-data-record-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-update-data-record-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/arazzo/cdk-global-update-service-session-item-workflow.yml
+  href: https://artifacts.apis.io/cdk-global/arazzo/cdk-global-update-service-session-item-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/cdk-global-update-service-session-item-workflow.yml
@@ -402,32 +406,32 @@ common:
   type: Twitter
   url: https://twitter.com/cdkglobal
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/plans/cdk-global-plans-pricing.yml
+  href: https://artifacts.apis.io/cdk-global/plans/cdk-global-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cdk-global-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/rate-limits/cdk-global-rate-limits.yml
+  href: https://artifacts.apis.io/cdk-global/rate-limits/cdk-global-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cdk-global-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/finops/cdk-global-finops.yml
+  href: https://artifacts.apis.io/cdk-global/finops/cdk-global-finops.yml
   title: ''
   type: FinOps
   url: finops/cdk-global-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/vocabulary/cdk-global-vocabulary.yml
+  href: https://artifacts.apis.io/cdk-global/vocabulary/cdk-global-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cdk-global-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/json-ld/cdk-global-context.jsonld
+  href: https://artifacts.apis.io/cdk-global/json-ld/cdk-global-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/cdk-global-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/rules/fortellis-rules.yml
+  href: https://artifacts.apis.io/cdk-global/rules/fortellis-rules.yml
   title: ''
   type: SpectralRules
   url: rules/fortellis-rules.yml
@@ -506,7 +510,7 @@ plans:
 - name: Cdk Global Plans Pricing
   plan_count: 6
   slug: cdk-global-plans-pricing
-random_paper: 8
+random_paper: 16
 rate_limits:
 - limit_count: 4
   name: Cdk Global Rate Limits
@@ -553,30 +557,30 @@ scopes:
   slug: cdk-global-scopes
   summary_line: 3 scopes · implicit
 score:
-  band: thin
-  composite: 39.1
+  band: developing
+  composite: 40.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 25
     catalog_earned: 55.0
     catalog_earned_first_party: 0.0
     catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.9
   facets:
     access_clarity: 21.1
     contract_governance: 27.3
-    contract_quality: 60.5
+    contract_quality: 64.1
     developer_ergonomics: 39.3
     discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 47.4
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 80.0
       total: 10
   regulatory:
     applies: true
@@ -584,13 +588,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cdk-global/refs/heads/main/screenshots/cdk-global-2026-06-20T174106.png
+screenshot: https://apis.io/screenshots/cdk-global/cdk-global-2026-06-20T174106.png
 security:
 - kind: authentication
   name: Cdk Global Authentication

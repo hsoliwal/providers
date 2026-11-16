@@ -20,21 +20,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 62.9
-  scored_at: '2026-10-17'
+  score: 65.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 64
   slug: loops-agentic-access
   summary_line: 64 operations · 35 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://app.loops.so/api/v1
   baseurl_source: declared
@@ -375,15 +378,12 @@ apis:
   description: 'Events Loops sends to your configured webhook endpoint when certain events happen in your account. Configure an endpoint in Settings → Webhooks. Each account supports one webhook endpoint. Events are '
   name: Loops Webhooks API
   slug: loops-webhooks-api
-artifact_total: 43
+artifact_total: 48
 asyncapis:
 - description: Event catalog for the Loops webhook surface, derived operation-for-operation from the `webhooks` block of the Loops OpenAPI 3.1 document (info.version 1.21.6, published at https://app.loops.so/openapi
   name: Loops Webhooks
   slug: loops-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Loops OpenAPI Spec API key API
   slug: open-loops-api-key-api
@@ -419,112 +419,112 @@ collections:
   slug: open-loops-transactional-emails-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/capabilities/loops-capability-edges.yml
+  href: https://artifacts.apis.io/loops/capabilities/loops-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/loops-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/agentic-access/loops-agentic-access.yml
+  href: https://artifacts.apis.io/loops/agentic-access/loops-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/loops-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/authentication/loops-authentication.yml
+  href: https://artifacts.apis.io/loops/authentication/loops-authentication.yml
   title: ''
   type: Authentication
   url: authentication/loops-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/scopes/loops-scopes.yml
+  href: https://artifacts.apis.io/loops/scopes/loops-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/loops-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/conventions/loops-conventions.yml
+  href: https://artifacts.apis.io/loops/conventions/loops-conventions.yml
   title: ''
   type: Conventions
   url: conventions/loops-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/conventions/loops-conventions.yml
+  href: https://artifacts.apis.io/loops/conventions/loops-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/loops-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/errors/loops-problem-types.yml
+  href: https://artifacts.apis.io/loops/errors/loops-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/loops-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/rate-limits/loops-rate-limits.yml
+  href: https://artifacts.apis.io/loops/rate-limits/loops-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/loops-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/plans/loops-plans-pricing.yml
+  href: https://artifacts.apis.io/loops/plans/loops-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/loops-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/finops/loops-finops.yml
+  href: https://artifacts.apis.io/loops/finops/loops-finops.yml
   title: ''
   type: FinOps
   url: finops/loops-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/data-model/loops-data-model.yml
+  href: https://artifacts.apis.io/loops/data-model/loops-data-model.yml
   title: ''
   type: DataModel
   url: data-model/loops-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/examples/loops-examples.yml
+  href: https://artifacts.apis.io/loops/examples/loops-examples.yml
   title: ''
   type: Examples
   url: examples/loops-examples.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/packages/loops-packages.yml
+  href: https://artifacts.apis.io/loops/packages/loops-packages.yml
   title: ''
   type: Packages
   url: packages/loops-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/packages/loops-packages.yml
+  href: https://artifacts.apis.io/loops/packages/loops-packages.yml
   title: ''
   type: SDKs
   url: packages/loops-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/cli/loops-cli.yml
+  href: https://artifacts.apis.io/loops/cli/loops-cli.yml
   title: ''
   type: CLI
   url: cli/loops-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/mcp/loops-mcp.yml
+  href: https://artifacts.apis.io/loops/mcp/loops-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/loops-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/mcp/loops-tool-crosswalk.yml
+  href: https://artifacts.apis.io/loops/mcp/loops-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/loops-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/loops/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/asyncapi/loops-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/loops/asyncapi/loops-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/loops-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/asyncapi/loops-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/loops/asyncapi/loops-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/loops-webhooks-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/well-known/loops-well-known.yml
+  href: https://artifacts.apis.io/loops/well-known/loops-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/loops-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/lifecycle/loops-lifecycle.yml
+  href: https://artifacts.apis.io/loops/lifecycle/loops-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/loops-lifecycle.yml
@@ -533,32 +533,32 @@ common:
   type: StatusPage
   url: https://status.loops.so
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/changelog/loops-changelog.yml
+  href: https://artifacts.apis.io/loops/changelog/loops-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/loops-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/conformance/loops-conformance.yml
+  href: https://artifacts.apis.io/loops/conformance/loops-conformance.yml
   title: ''
   type: Conformance
   url: conformance/loops-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/conformance/loops-conformance.yml
+  href: https://artifacts.apis.io/loops/conformance/loops-conformance.yml
   title: ''
   type: Compliance
   url: conformance/loops-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/security/loops-trust-center.yml
+  href: https://artifacts.apis.io/loops/security/loops-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/loops-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/security/loops-domain-security.yml
+  href: https://artifacts.apis.io/loops/security/loops-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/loops-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/llms/loops-llms.txt
+  href: https://artifacts.apis.io/loops/llms/loops-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/loops-llms.txt
@@ -634,10 +634,10 @@ created: '2026-05-08'
 description: Loops is an email platform built for software companies, combining marketing campaigns, product and lifecycle automation, and transactional email on one contact model. Its REST API v1 exposes 64 operations across contacts, contact properties, mailing lists, audience segments, events and event patterns, campaigns, transactional emails, email messages authored in its own LMX markup, themes, components, uploads and workflow graphs, plus a 17-event signed webhook surface. Loops publishes its OpenAPI 3.1 document openly, ships first-party SDKs for JavaScript, Go, PHP, Ruby and Nuxt, a Go CLI, four versioned Agent Skills, and a hosted OAuth-protected MCP server at mcp.loops.so. Pricing is based on stored subscribed contacts rather than send volume, with a permanent free tier. The operating company is Astrodon Corporation.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Loops Finops
-  primary_unit: ''
-  service_category: Email Marketing
+  primary_unit: subscribed contacts
+  service_category: ''
   slug: loops-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/loops.png
@@ -653,19 +653,35 @@ network: true
 overview: 'Loops publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including API key API, Audience segments API, Campaign groups API, and 18 more. Tagged areas include Email, Email API, Marketing Automation, Transactional Email, and Lifecycle Email.
 
 
-  The Loops catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Loops catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Loops'' developer surface includes authentication, code examples, CLI, changelog, documentation, API reference, getting-started guide, and 39 more developer resources.'
 plans:
 - name: Loops Plans Pricing
-  plan_count: 2
+  plan_count: 3
   slug: loops-plans-pricing
-random_paper: 7
+- name: Loops Price Estimates
+  plan_count: 0
+  slug: loops-price-estimates
+random_paper: 5
 rate_limits:
 - limit_count: 8
   name: Loops Rate Limits
   slug: loops-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Loops API Rules
+  rule_count: 56
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 2
+    warn: 9
+  slug: loops-rules
 scopes:
 - name: Loops Scopes
   scope_count: 1
@@ -673,30 +689,30 @@ scopes:
   summary_line: 1 scope
 score:
   band: exemplar
-  composite: 69.8
+  composite: 76.6
   coverage:
-    artifact_dirs: 30
-    catalog_earned: 57.0
-    catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    artifact_dirs: 34
+    catalog_earned: 68.5
+    catalog_earned_first_party: 24.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 1.2
   facets:
-    access_clarity: 81.6
-    contract_governance: 18.2
-    contract_quality: 58.1
+    access_clarity: 100.0
+    contract_governance: 31.8
+    contract_quality: 63.7
     developer_ergonomics: 78.6
     discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 71.4
+  previous_composite: 75.4
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 94.7
       total: 19
     mcp: first-party
     skills: first-party
@@ -706,13 +722,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/loops/refs/heads/main/screenshots/loops-2026-06-20T184718.png
+screenshot: https://apis.io/screenshots/loops/loops-2026-06-20T184718.png
 security:
 - kind: authentication
   name: Loops Authentication
@@ -726,6 +742,16 @@ security:
   name: Loops Trust Center
   slug: loops-trust-center
   summary_line: SOC 2, EU-U.S. Data Privacy Framework, Swiss-U.S. Data Privacy Framework
+skill_count: 4
+skills:
+- name: loops-api
+  slug: loops-api
+- name: loops-cli
+  slug: loops-cli
+- name: loops-email-sending-best-practices
+  slug: loops-email-sending-best-practices
+- name: loops-lmx
+  slug: loops-lmx
 slug: loops
 tags:
 - Email

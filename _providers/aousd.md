@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The OpenUSD C++ API is the primary interface for working with Universal Scene Description data. Provides access to USD core (scene composition and asset management), UsdImaging and Hydra (rendering in
@@ -45,17 +49,17 @@ apis:
 artifact_total: 29
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aousd/refs/heads/main/plans/aousd-plans-pricing.yml
+  href: https://artifacts.apis.io/aousd/plans/aousd-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aousd-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aousd/refs/heads/main/rate-limits/aousd-rate-limits.yml
+  href: https://artifacts.apis.io/aousd/rate-limits/aousd-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aousd-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aousd/refs/heads/main/finops/aousd-finops.yml
+  href: https://artifacts.apis.io/aousd/finops/aousd-finops.yml
   title: ''
   type: FinOps
   url: finops/aousd-finops.yml
@@ -80,7 +84,7 @@ common:
   type: ContributionGuide
   url: https://github.com/PixarAnimationStudios/OpenUSD/blob/dev/CONTRIBUTING.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aousd/refs/heads/main/security/aousd-domain-security.yml
+  href: https://artifacts.apis.io/aousd/security/aousd-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aousd-domain-security.yml
@@ -144,7 +148,7 @@ finops:
 - has_sources: false
   method: generated
   name: Aousd Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: aousd-finops
   template: true
@@ -216,13 +220,13 @@ score:
   band: thin
   composite: 28.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 61.8
     catalog_earned_first_party: 0.0
     catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
@@ -230,21 +234,21 @@ score:
     developer_ergonomics: 47.6
     discoverability: 66.1
     operational_transparency: 36.8
-  previous_composite: 29.8
+  previous_composite: 28.3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aousd/refs/heads/main/screenshots/aousd-2026-06-20T172036.png
+screenshot: https://apis.io/screenshots/aousd/aousd-2026-06-20T172036.png
 security:
 - kind: domain-security
   name: Aousd Domain Security

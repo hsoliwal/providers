@@ -5,7 +5,11 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/security/sentry-insurance-group-domain-security.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/security/sentry-insurance-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sentry-insurance-group-domain-security.yml
@@ -86,47 +93,47 @@ common:
   type: Careers
   url: https://www.sentry.com/careers
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/well-known/sentry-insurance-group-well-known.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/well-known/sentry-insurance-group-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sentry-insurance-group-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/well-known/sentry-insurance-group-openid-configuration.json
+  href: https://artifacts.apis.io/sentry-insurance-group/well-known/sentry-insurance-group-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/sentry-insurance-group-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/authentication/sentry-insurance-group-authentication.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/authentication/sentry-insurance-group-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sentry-insurance-group-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/scopes/sentry-insurance-group-scopes.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/scopes/sentry-insurance-group-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sentry-insurance-group-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/conformance/sentry-insurance-group-conformance.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/conformance/sentry-insurance-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sentry-insurance-group-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/llms/sentry-insurance-group-llms.txt
+  href: https://artifacts.apis.io/sentry-insurance-group/llms/sentry-insurance-group-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sentry-insurance-group-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/packages/sentry-insurance-group-packages.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/packages/sentry-insurance-group-packages.yml
   title: ''
   type: Packages
   url: packages/sentry-insurance-group-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/plans/sentry-insurance-group-plans-pricing.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/plans/sentry-insurance-group-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sentry-insurance-group-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/rate-limits/sentry-insurance-group-rate-limits.yml
+  href: https://artifacts.apis.io/sentry-insurance-group/rate-limits/sentry-insurance-group-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sentry-insurance-group-rate-limits.yml
@@ -180,7 +187,7 @@ press:
 - date: ''
   title: Dairyland Privacy Policy
   url: https://www.dairylandinsurance.com/privacy
-random_paper: 4
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Sentry Insurance Group Rate Limits
@@ -194,7 +201,7 @@ score:
   band: emerging
   composite: 20.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -225,14 +232,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 36.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/screenshots/sentry-insurance-group-2026-10-11T125715.png
+screenshot: https://apis.io/screenshots/sentry-insurance-group/sentry-insurance-group-2026-10-11T125715.png
 security:
 - kind: authentication
   name: Sentry Insurance Group Authentication

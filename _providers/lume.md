@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API for automating data mappings and transformations with AI. Create and run Flows, manage target schemas, poll job/run status, and retrieve mapping results. Authenticated with a per-account API '
@@ -63,37 +66,37 @@ common:
   type: GettingStarted
   url: https://docs.lume.ai/pages/documentation/getting_started/quickstart.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/llms/lume-llms.txt
+  href: https://artifacts.apis.io/lume/llms/lume-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lume-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/packages/lume-packages.yml
+  href: https://artifacts.apis.io/lume/packages/lume-packages.yml
   title: ''
   type: Packages
   url: packages/lume-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/packages/lume-packages.yml
+  href: https://artifacts.apis.io/lume/packages/lume-packages.yml
   title: ''
   type: SDKs
   url: packages/lume-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/authentication/lume-authentication.yml
+  href: https://artifacts.apis.io/lume/authentication/lume-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lume-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/conventions/lume-conventions.yml
+  href: https://artifacts.apis.io/lume/conventions/lume-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lume-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/asyncapi/lume-webhooks.yml
+  href: https://artifacts.apis.io/lume/asyncapi/lume-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/lume-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/conformance/lume-conformance.yml
+  href: https://artifacts.apis.io/lume/conformance/lume-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lume-conformance.yml
@@ -102,17 +105,17 @@ common:
   type: Compliance
   url: https://docs.lume.ai/pages/documentation/security/security.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/security/lume-domain-security.yml
+  href: https://artifacts.apis.io/lume/security/lume-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lume-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/mcp/lume-mcp.yml
+  href: https://artifacts.apis.io/lume/mcp/lume-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/lume-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/data-model/lume-data-model.yml
+  href: https://artifacts.apis.io/lume/data-model/lume-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lume-data-model.yml
@@ -147,12 +150,12 @@ overview: 'Lume is listed with 1 API on the [APIs.io](https://apis.io/) network.
 
 
   Lume''s developer surface includes documentation, getting-started guide, authentication, signup flow, support, and 14 more developer resources.'
-random_paper: 17
+random_paper: 3
 score:
   band: thin
   composite: 36.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -176,14 +179,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lume/refs/heads/main/screenshots/lume-2026-07-25T225704.png
+screenshot: https://apis.io/screenshots/lume/lume-2026-07-25T225704.png
 security:
 - kind: authentication
   name: Lume Authentication
@@ -201,7 +204,7 @@ tags:
 - ETL
 - Data Transformation
 - Artificial Intelligence
-- Schema Mapping
+- Schema-Mapping
 - Data Quality
 - Developer Tools
 website: https://www.lume.ai/

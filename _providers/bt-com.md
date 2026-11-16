@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 15
 apis:
 - description: Charge one-off or recurring purchases directly to a verified end user's BT or EE mobile bill or pre-pay credit, enabling carrier-billed payments without re-collecting card or bank credentials.
@@ -83,12 +87,12 @@ apis:
 artifact_total: 17
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bt-com/refs/heads/main/security/bt-com-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bt-com/security/bt-com-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bt-com-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bt-com/refs/heads/main/security/bt-com-domain-security.yml
+  href: https://artifacts.apis.io/bt-com/security/bt-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bt-com-domain-security.yml
@@ -213,12 +217,12 @@ overview: 'BT Group is listed with 15 APIs on the [APIs.io](https://apis.io/) ne
 
 
   BT Group''s developer surface includes documentation, signup flow, GitHub presence, YouTube channel, and 25 more developer resources.'
-random_paper: 6
+random_paper: 2
 score:
   band: minimal
-  composite: 8.7
+  composite: 10.1
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -231,7 +235,7 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 9.5
     discoverability: 63.4
-    operational_transparency: 5.3
+    operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -240,21 +244,21 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 8.7
+  previous_composite: 10.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bt-com/refs/heads/main/screenshots/bt-com-2026-06-20T173734.png
+screenshot: https://apis.io/screenshots/bt-com/bt-com-2026-06-20T173734.png
 security:
 - kind: domain-security
   name: Bt Com Domain Security

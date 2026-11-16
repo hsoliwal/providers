@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.7
-  scored_at: '2026-10-17'
+  score: 21.4
+  scored_at: '2026-11-06'
 api_count: 15
 apis:
 - baseURL: https://platform-oauth.convirza.com
@@ -101,59 +116,59 @@ apis:
   description: The Webhooks API from Convirza — 2 operation(s) for webhooks.
   name: Convirza Webhooks API
   slug: convirza-webhooks-api
-artifact_total: 26
+artifact_total: 28
 common:
 - group: docs
   title: ''
   type: Documentation
   url: https://docs.convirza.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/plans/convirza-plans-pricing.yml
+  href: https://artifacts.apis.io/convirza/plans/convirza-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/convirza-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/rules/convirza-rules.yml
+  href: https://artifacts.apis.io/convirza/rules/convirza-rules.yml
   title: ''
   type: Spectral
   url: rules/convirza-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/json-ld/convirza-context.jsonld
+  href: https://artifacts.apis.io/convirza/json-ld/convirza-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/convirza-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/vocabulary/convirza-vocabulary.yml
+  href: https://artifacts.apis.io/convirza/vocabulary/convirza-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/convirza-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/data-model/convirza-data-model.yml
+  href: https://artifacts.apis.io/convirza/data-model/convirza-data-model.yml
   title: ''
   type: DataModel
   url: data-model/convirza-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/authentication/convirza-authentication.yml
+  href: https://artifacts.apis.io/convirza/authentication/convirza-authentication.yml
   title: ''
   type: Authentication
   url: authentication/convirza-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/conformance/convirza-conformance.yml
+  href: https://artifacts.apis.io/convirza/conformance/convirza-conformance.yml
   title: ''
   type: Conformance
   url: conformance/convirza-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/llms/convirza-llms.txt
+  href: https://artifacts.apis.io/convirza/llms/convirza-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/convirza-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/hosts/convirza-hosts.yml
+  href: https://artifacts.apis.io/convirza/hosts/convirza-hosts.yml
   title: ''
   type: Hosts
   url: hosts/convirza-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/vendors/convirza-vendors.yml
+  href: https://artifacts.apis.io/convirza/vendors/convirza-vendors.yml
   title: ''
   type: Vendors
   url: vendors/convirza-vendors.yml
@@ -174,7 +189,7 @@ common:
   type: GettingStarted
   url: https://docs.convirza.com/getting-started-2079902m0
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/convirza/refs/heads/main/security/convirza-domain-security.yml
+  href: https://artifacts.apis.io/convirza/security/convirza-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/convirza-domain-security.yml
@@ -204,6 +219,14 @@ common:
   url: https://kb.convirza.com/
 created: '2026-10-10'
 description: Convirza provides conversation analytics and call tracking solutions that help businesses capture, analyze, and act on phone call data. Their platform offers AI‑driven insights, call recording, transcription, and integration with CRM and marketing tools, enabling improved customer experience and sales performance across industries such as automotive, healthcare, and real estate.
+finops:
+- has_sources: true
+  method: derived
+  name: Convirza Finops
+  primary_unit: seat
+  service_category: ''
+  slug: convirza-finops
+  template: false
 image: https://www.convirza.com/wp-content/uploads/2023/01/convirza-logo.png
 json_schemas:
 - name: GetOauthTokenResponse
@@ -245,7 +268,10 @@ plans:
 - name: Convirza Plans Pricing
   plan_count: 6
   slug: convirza-plans-pricing
-random_paper: 18
+- name: Convirza Price Estimates
+  plan_count: 0
+  slug: convirza-price-estimates
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -260,22 +286,24 @@ rules:
     warn: 1
   slug: convirza-rules
 score:
-  band: developing
-  composite: 45.5
+  band: thin
+  composite: 37.3
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 77.8
+    artifact_dirs: 21
+    catalog_earned: 80.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 37.3
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.8
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 29.1
-    developer_ergonomics: 50.0
+    developer_ergonomics: 31.0
     discoverability: 78.6
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 47.1
   provenance:
     conformance: derived
     contracts:
@@ -289,12 +317,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/convirza/convirza-2026-11-03T125243.png
 security:
 - kind: authentication
   name: Convirza Authentication

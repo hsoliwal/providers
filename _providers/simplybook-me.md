@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,72 +26,75 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: API documentation for SimplyBook.me
   name: SimplyBook.me API
-  slug: simplybook-me-api-2
+  slug: simplybook-me-api
 - description: The Admin API from SimplyBook.me — 2 operation(s) for admin.
   name: SimplyBook.me Admin API
   slug: simplybook-me-admin-api
 artifact_total: 8
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/plans/simplybook-me-plans-pricing.yml
+  href: https://artifacts.apis.io/simplybook-me/plans/simplybook-me-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/simplybook-me-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/rules/simplybook-me-rules.yml
+  href: https://artifacts.apis.io/simplybook-me/rules/simplybook-me-rules.yml
   title: ''
   type: Spectral
   url: rules/simplybook-me-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/json-ld/simplybook-me-context.jsonld
+  href: https://artifacts.apis.io/simplybook-me/json-ld/simplybook-me-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/simplybook-me-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/vocabulary/simplybook-me-vocabulary.yml
+  href: https://artifacts.apis.io/simplybook-me/vocabulary/simplybook-me-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/simplybook-me-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/data-model/simplybook-me-data-model.yml
+  href: https://artifacts.apis.io/simplybook-me/data-model/simplybook-me-data-model.yml
   title: ''
   type: DataModel
   url: data-model/simplybook-me-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/conformance/simplybook-me-conformance.yml
+  href: https://artifacts.apis.io/simplybook-me/conformance/simplybook-me-conformance.yml
   title: ''
   type: Conformance
   url: conformance/simplybook-me-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/llms/simplybook-me-llms.txt
+  href: https://artifacts.apis.io/simplybook-me/llms/simplybook-me-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/simplybook-me-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/well-known/simplybook-me-well-known.yml
+  href: https://artifacts.apis.io/simplybook-me/well-known/simplybook-me-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/simplybook-me-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/hosts/simplybook-me-hosts.yml
+  href: https://artifacts.apis.io/simplybook-me/hosts/simplybook-me-hosts.yml
   title: ''
   type: Hosts
   url: hosts/simplybook-me-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/vendors/simplybook-me-vendors.yml
+  href: https://artifacts.apis.io/simplybook-me/vendors/simplybook-me-vendors.yml
   title: ''
   type: Vendors
   url: vendors/simplybook-me-vendors.yml
@@ -109,7 +123,7 @@ common:
   type: Documentation
   url: https://help.simplybook.me/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/simplybook-me/refs/heads/main/security/simplybook-me-domain-security.yml
+  href: https://artifacts.apis.io/simplybook-me/security/simplybook-me-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/simplybook-me-domain-security.yml
@@ -171,7 +185,7 @@ plans:
 - name: Simplybook Me Plans Pricing
   plan_count: 5
   slug: simplybook-me-plans-pricing
-random_paper: 10
+random_paper: 8
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -187,21 +201,23 @@ rules:
   slug: simplybook-me-rules
 score:
   band: thin
-  composite: 37.4
+  composite: 28.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 18
     catalog_earned: 61.8
     catalog_earned_first_party: 12.0
     catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.9
   facets:
-    access_clarity: 65.8
+    access_clarity: 48.7
     contract_governance: 22.0
     contract_quality: 19.9
-    developer_ergonomics: 45.2
+    developer_ergonomics: 22.6
     discoverability: 60.7
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 37.4
   provenance:
     conformance: derived
     contracts:
@@ -215,12 +231,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/simplybook-me/simplybook-me-2026-11-03T143229.png
 security:
 - kind: domain-security
   name: Simplybook Me Domain Security

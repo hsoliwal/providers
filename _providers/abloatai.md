@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.7
-  scored_at: '2026-10-17'
+  score: 43.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 2
@@ -45,7 +51,7 @@ agentic_access:
   operation_count: 32
   slug: abloatai-agentic-access
   summary_line: 32 operations · 19 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: A public, anonymous, stateless Streamable-HTTP MCP server Ablo runs on its own domain so an AI coding assistant writing an Ablo integration can search the real docs, inspect the actual SDK export surf
   name: Ablo Integration-Helper MCP Server
@@ -85,7 +91,7 @@ apis:
   description: The schema API from Ablo — 1 operation(s) for schema.
   name: Ablo Schema API
   slug: ablo-schema-api
-artifact_total: 15
+artifact_total: 21
 asyncapis:
 - description: ''
   name: Abloatai Webhooks
@@ -156,7 +162,7 @@ common:
   type: ChangeLog
   url: https://github.com/Abloatai/abloatai/blob/main/CHANGELOG.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/changelog/abloatai-changelog.yml
+  href: https://artifacts.apis.io/abloatai/changelog/abloatai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/abloatai-changelog.yml
@@ -165,112 +171,120 @@ common:
   type: Deprecation
   url: https://docs.abloatai.com/migration
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/lifecycle/abloatai-lifecycle.yml
+  href: https://artifacts.apis.io/abloatai/lifecycle/abloatai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/abloatai-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/authentication/abloatai-authentication.yml
+  href: https://artifacts.apis.io/abloatai/authentication/abloatai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/abloatai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/conventions/abloatai-conventions.yml
+  href: https://artifacts.apis.io/abloatai/conventions/abloatai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/abloatai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/conventions/abloatai-conventions.yml
+  href: https://artifacts.apis.io/abloatai/conventions/abloatai-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/abloatai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/errors/abloatai-error-codes.yml
+  href: https://artifacts.apis.io/abloatai/errors/abloatai-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/abloatai-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/data-model/abloatai-data-model.yml
+  href: https://artifacts.apis.io/abloatai/data-model/abloatai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/abloatai-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/rate-limits/abloatai-rate-limits.yml
+  href: https://artifacts.apis.io/abloatai/rate-limits/abloatai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/abloatai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/plans/abloatai-plans-pricing.yml
+  href: https://artifacts.apis.io/abloatai/plans/abloatai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/abloatai-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/packages/abloatai-packages.yml
+  href: https://artifacts.apis.io/abloatai/packages/abloatai-packages.yml
   title: ''
   type: Packages
   url: packages/abloatai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/packages/abloatai-packages.yml
+  href: https://artifacts.apis.io/abloatai/packages/abloatai-packages.yml
   title: ''
   type: SDKs
   url: packages/abloatai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/cli/abloatai-cli.yml
+  href: https://artifacts.apis.io/abloatai/cli/abloatai-cli.yml
   title: ''
   type: CLI
   url: cli/abloatai-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/sandbox/abloatai-sandbox.yml
+  href: https://artifacts.apis.io/abloatai/sandbox/abloatai-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/abloatai-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/asyncapi/abloatai-webhooks.yml
+  href: https://artifacts.apis.io/abloatai/asyncapi/abloatai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/abloatai-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/mcp/abloatai-mcp.yml
+  href: https://artifacts.apis.io/abloatai/mcp/abloatai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/abloatai-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/mcp/abloatai-tool-crosswalk.yml
+  href: https://artifacts.apis.io/abloatai/mcp/abloatai-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/abloatai-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/abloatai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/llms/abloatai-llms.txt
+  href: https://artifacts.apis.io/abloatai/llms/abloatai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/abloatai-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/overlays/abloatai-api-overlay.yaml
+  href: https://artifacts.apis.io/abloatai/overlays/abloatai-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/abloatai-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/conformance/abloatai-conformance.yml
+  href: https://artifacts.apis.io/abloatai/conformance/abloatai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/abloatai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/agentic-access/abloatai-agentic-access.yml
+  href: https://artifacts.apis.io/abloatai/agentic-access/abloatai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/abloatai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/security/abloatai-domain-security.yml
+  href: https://artifacts.apis.io/abloatai/security/abloatai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/abloatai-domain-security.yml
 created: '2026-08-19'
 description: 'Ablo is collaboration infrastructure for AI agents: one API that lets agents, apps and people claim, change and confirm the same database rows without clobbering each other. Rows stay in the customer''s own Postgres — Ablo holds only an ordered transaction log and the coordination state — while durable claims (leases with a wait-line, which make a second writer wait and then hand it the fresh row rather than lock), guarded idempotent writes with stale premises, atomic batch commits and signed webhook delivery turn concurrent multi-agent editing into something that serializes instead of racing. The surface is a 32-operation OpenAPI 3.1 REST API, a WSS realtime stream, a TypeScript SDK and CLI released in lockstep with the API, and two MCP servers.'
+finops:
+- has_sources: true
+  method: derived
+  name: Abloatai Finops
+  primary_unit: operations
+  service_category: ''
+  slug: abloatai-finops
+  template: false
 image: https://www.abloatai.com/logo-black.svg
 layout: provider
 mcp_servers:
@@ -281,10 +295,10 @@ modified: '2026-08-19'
 name: Ablo
 nav: Providers
 network: true
-overview: 'Ablo publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Branches API, Claims API, Commits API, and 5 more. Tagged areas include Agent Infrastructure, multi-agent-coordination, concurrency-control, State Management, and Database.
+overview: 'Ablo publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Branches API, Claims API, Commits API, and 5 more. Tagged areas include Agent Infrastructure, Multi‑Agent Coordination, concurrency-control, State Management, and Database.
 
 
-  The Ablo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Ablo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Ablo''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
@@ -292,37 +306,53 @@ plans:
 - name: Abloatai Plans Pricing
   plan_count: 3
   slug: abloatai-plans-pricing
-random_paper: 15
+- name: Abloatai Price Estimates
+  plan_count: 0
+  slug: abloatai-price-estimates
+random_paper: 13
 rate_limits:
 - limit_count: 6
   name: Abloatai Rate Limits
   slug: abloatai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Ablo API Rules
+  rule_count: 57
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 3
+    warn: 3
+  slug: abloatai-rules
 score:
   band: strong
-  composite: 60.0
+  composite: 65.8
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 61.0
+    artifact_dirs: 30
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 2.6
   facets:
-    access_clarity: 63.2
-    contract_governance: 4.5
-    contract_quality: 52.5
+    access_clarity: 77.6
+    contract_governance: 18.2
+    contract_quality: 57.4
     developer_ergonomics: 75.6
     discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 59.9
+  previous_composite: 63.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: first-party
     skills: derived
@@ -332,13 +362,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/abloatai/refs/heads/main/screenshots/abloatai-2026-09-02T144107.png
+screenshot: https://apis.io/screenshots/abloatai/abloatai-2026-09-02T144107.png
 security:
 - kind: authentication
   name: Abloatai Authentication
@@ -348,10 +378,18 @@ security:
   name: Abloatai Domain Security
   slug: abloatai-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Claim, read, write, release a shared row
+  slug: abloatai-claim-read-write-release
+- name: Commit a batch of changes atomically
+  slug: abloatai-commit-batch-atomically
+- name: Mint a scoped, expiring credential for an agent
+  slug: abloatai-mint-scoped-agent-credential
 slug: abloatai
 tags:
 - Agent Infrastructure
-- multi-agent-coordination
+- Multi‑Agent Coordination
 - concurrency-control
 - State Management
 - Database

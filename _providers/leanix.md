@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -20,21 +24,24 @@ agent_readiness:
     auth_clarity: negotiable
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 33.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -72,9 +79,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Integration configurations API
   slug: open-leanix-configurations-api
 - collection_type: open
@@ -94,42 +98,42 @@ collections:
   slug: open-leanix
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/plans/leanix-plans-pricing.yml
+  href: https://artifacts.apis.io/leanix/plans/leanix-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/leanix-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/rate-limits/leanix-rate-limits.yml
+  href: https://artifacts.apis.io/leanix/rate-limits/leanix-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/leanix-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/finops/leanix-finops.yml
+  href: https://artifacts.apis.io/leanix/finops/leanix-finops.yml
   title: ''
   type: FinOps
   url: finops/leanix-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/agentic-access/leanix-agentic-access.yml
+  href: https://artifacts.apis.io/leanix/agentic-access/leanix-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/leanix-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/security/leanix-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/leanix/security/leanix-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/leanix-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/security/leanix-domain-security.yml
+  href: https://artifacts.apis.io/leanix/security/leanix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/leanix-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/authentication/leanix-authentication.yml
+  href: https://artifacts.apis.io/leanix/authentication/leanix-authentication.yml
   title: ''
   type: Authentication
   url: authentication/leanix-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/scopes/leanix-scopes.yml
+  href: https://artifacts.apis.io/leanix/scopes/leanix-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/leanix-scopes.yml
@@ -159,7 +163,7 @@ finops:
 - has_sources: false
   method: generated
   name: Leanix Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: leanix-finops
   template: true
@@ -172,40 +176,56 @@ network: true
 overview: 'LeanIX publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Configurations API, Examples API, Fast Synchronization Runs API, and 2 more. Tagged areas include Enterprise Architecture, SaaS Management, IT Portfolio Management, Application Portfolio, and Technology Risk.
 
 
+  The LeanIX catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   LeanIX''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Leanix Plans Pricing
   plan_count: 3
   slug: leanix-plans-pricing
-random_paper: 3
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Leanix Rate Limits
   slug: leanix-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: LeanIX API Rules
+  rule_count: 47
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 3
+    warn: 7
+  slug: leanix-rules
 scopes:
 - name: Leanix Scopes
   scope_count: 0
   slug: leanix-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: emerging
-  composite: 25.8
+  band: thin
+  composite: 28.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 40.0
     developer_ergonomics: 14.3
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 27.3
+    operational_transparency: 21.1
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     contracts:
@@ -219,13 +239,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/leanix/refs/heads/main/screenshots/leanix-2026-06-20T184359.png
+screenshot: https://apis.io/screenshots/leanix/leanix-2026-06-20T184359.png
 security:
 - kind: authentication
   name: Leanix Authentication

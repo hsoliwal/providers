@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -75,7 +81,7 @@ apis:
   description: The search API from Web of Science APIs — 3 operation(s) for search.
   name: Web of Science APIs Search API
   slug: web-of-science-apis-search-api
-artifact_total: 129
+artifact_total: 128
 collections:
 - collection_type: postman
   name: Web of Science API Expanded citations API
@@ -95,9 +101,6 @@ collections:
 - collection_type: postman
   name: Web of Science API Expanded citations search API
   slug: postman-web-of-science-apis-search-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Web of Science API Expanded citations API
   slug: open-web-of-science-apis-citations-api
@@ -124,22 +127,22 @@ collections:
   slug: open-web-of-science-starter
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/plans/web-of-science-apis-plans-pricing.yml
+  href: https://artifacts.apis.io/web-of-science-apis/plans/web-of-science-apis-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/web-of-science-apis-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/rate-limits/web-of-science-apis-rate-limits.yml
+  href: https://artifacts.apis.io/web-of-science-apis/rate-limits/web-of-science-apis-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/web-of-science-apis-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/finops/web-of-science-apis-finops.yml
+  href: https://artifacts.apis.io/web-of-science-apis/finops/web-of-science-apis-finops.yml
   title: ''
   type: FinOps
   url: finops/web-of-science-apis-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/capabilities/web-of-science-apis-capability-edges.yml
+  href: https://artifacts.apis.io/web-of-science-apis/capabilities/web-of-science-apis-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/web-of-science-apis-capability-edges.yml
@@ -148,17 +151,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/web-of-science-apis/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/agentic-access/web-of-science-apis-agentic-access.yml
+  href: https://artifacts.apis.io/web-of-science-apis/agentic-access/web-of-science-apis-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/web-of-science-apis-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/security/web-of-science-apis-domain-security.yml
+  href: https://artifacts.apis.io/web-of-science-apis/security/web-of-science-apis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/web-of-science-apis-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/authentication/web-of-science-apis-authentication.yml
+  href: https://artifacts.apis.io/web-of-science-apis/authentication/web-of-science-apis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/web-of-science-apis-authentication.yml
@@ -199,12 +202,12 @@ common:
   type: Blog
   url: https://clarivate.com/blog/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/rules/web-of-science-spectral-rules.yml
+  href: https://artifacts.apis.io/web-of-science-apis/rules/web-of-science-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/web-of-science-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/vocabulary/web-of-science-vocabulary.yml
+  href: https://artifacts.apis.io/web-of-science-apis/vocabulary/web-of-science-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/web-of-science-vocabulary.yml
@@ -317,7 +320,7 @@ finops:
 - has_sources: false
   method: generated
   name: Web Of Science Apis Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: web-of-science-apis-finops
   template: true
@@ -519,7 +522,7 @@ plans:
 - name: Web Of Science Apis Plans Pricing
   plan_count: 3
   slug: web-of-science-apis-plans-pricing
-random_paper: 21
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Web Of Science Apis Rate Limits
@@ -563,13 +566,13 @@ score:
   band: thin
   composite: 38.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 55.0
     catalog_earned_first_party: 0.0
     catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 27.3
@@ -577,7 +580,7 @@ score:
     developer_ergonomics: 39.3
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 40.1
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     contracts:
@@ -591,13 +594,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/web-of-science-apis/refs/heads/main/screenshots/web-of-science-apis-2026-06-20T201320.png
+screenshot: https://apis.io/screenshots/web-of-science-apis/web-of-science-apis-2026-06-20T201320.png
 security:
 - kind: authentication
   name: Web Of Science Apis Authentication

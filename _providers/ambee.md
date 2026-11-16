@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Enterprise (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 21.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -77,9 +84,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Ambee Air Quality API
   slug: open-ambee-air-quality-api
 - collection_type: open
@@ -102,17 +106,17 @@ collections:
   slug: open-ambee
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/agentic-access/ambee-agentic-access.yml
+  href: https://artifacts.apis.io/ambee/agentic-access/ambee-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ambee-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/security/ambee-domain-security.yml
+  href: https://artifacts.apis.io/ambee/security/ambee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ambee-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/authentication/ambee-authentication.yml
+  href: https://artifacts.apis.io/ambee/authentication/ambee-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ambee-authentication.yml
@@ -137,17 +141,17 @@ common:
   type: Documentation
   url: https://docs.ambeedata.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/plans/ambee-plans-pricing.yml
+  href: https://artifacts.apis.io/ambee/plans/ambee-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ambee-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/rate-limits/ambee-rate-limits.yml
+  href: https://artifacts.apis.io/ambee/rate-limits/ambee-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ambee-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/finops/ambee-finops.yml
+  href: https://artifacts.apis.io/ambee/finops/ambee-finops.yml
   title: ''
   type: FinOps
   url: finops/ambee-finops.yml
@@ -170,35 +174,51 @@ network: true
 overview: 'Ambee publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Air Quality API, Fire API, NDVI API, and 3 more. Tagged areas include Environmental Intelligence, Air Quality, Weather, Pollen, and Geospatial.
 
 
+  The Ambee catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ambee''s developer surface includes authentication, engineering blog, documentation, and 8 more developer resources.'
 plans:
 - name: Ambee Plans Pricing
   plan_count: 2
   slug: ambee-plans-pricing
-random_paper: 0
+random_paper: 2
 rate_limits:
 - limit_count: 3
   name: Ambee Rate Limits
   slug: ambee-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Ambee API Rules
+  rule_count: 58
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 2
+    warn: 1
+  slug: ambee-rules
 score:
   band: thin
-  composite: 26.7
+  composite: 28.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 15
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.8
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 33.6
+  previous_composite: 28.3
   provenance:
     agentic_access: derived
     contracts:
@@ -212,14 +232,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ambee/refs/heads/main/screenshots/ambee-2026-07-25T200014.png
+screenshot: https://apis.io/screenshots/ambee/ambee-2026-07-25T200014.png
 security:
 - kind: authentication
   name: Ambee Authentication

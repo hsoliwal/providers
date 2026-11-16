@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
+  score: 38.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,37 +54,37 @@ apis:
 artifact_total: 7
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/agentic-access/bestprintondemand-agentic-access.yml
+  href: https://artifacts.apis.io/bestprintondemand/agentic-access/bestprintondemand-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bestprintondemand-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/rules/bestprintondemand-rules.yml
+  href: https://artifacts.apis.io/bestprintondemand/rules/bestprintondemand-rules.yml
   title: ''
   type: Spectral
   url: rules/bestprintondemand-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/json-ld/bestprintondemand-context.jsonld
+  href: https://artifacts.apis.io/bestprintondemand/json-ld/bestprintondemand-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/bestprintondemand-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/vocabulary/bestprintondemand-vocabulary.yml
+  href: https://artifacts.apis.io/bestprintondemand/vocabulary/bestprintondemand-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/bestprintondemand-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/data-model/bestprintondemand-data-model.yml
+  href: https://artifacts.apis.io/bestprintondemand/data-model/bestprintondemand-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bestprintondemand-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/errors/bestprintondemand-problem-types.yml
+  href: https://artifacts.apis.io/bestprintondemand/errors/bestprintondemand-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bestprintondemand-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/conformance/bestprintondemand-conformance.yml
+  href: https://artifacts.apis.io/bestprintondemand/conformance/bestprintondemand-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bestprintondemand-conformance.yml
@@ -80,17 +93,17 @@ common:
   type: Pricing
   url: https://bestprintondemand.co/price-changes
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/llms/bestprintondemand-llms.txt
+  href: https://artifacts.apis.io/bestprintondemand/llms/bestprintondemand-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bestprintondemand-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/hosts/bestprintondemand-hosts.yml
+  href: https://artifacts.apis.io/bestprintondemand/hosts/bestprintondemand-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bestprintondemand-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/vendors/bestprintondemand-vendors.yml
+  href: https://artifacts.apis.io/bestprintondemand/vendors/bestprintondemand-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bestprintondemand-vendors.yml
@@ -111,7 +124,7 @@ common:
   type: APIReference
   url: https://bestprintondemand.co/data
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/security/bestprintondemand-domain-security.yml
+  href: https://artifacts.apis.io/bestprintondemand/security/bestprintondemand-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bestprintondemand-domain-security.yml
@@ -128,7 +141,7 @@ common:
   type: APIsJSON
   url: https://bestprintondemand.co/apis.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bestprintondemand/refs/heads/main/mcp/bestprintondemand-mcp.yml
+  href: https://artifacts.apis.io/bestprintondemand/mcp/bestprintondemand-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bestprintondemand-mcp.yml
@@ -164,7 +177,7 @@ overview: 'BestPrintOnDemand publishes 1 API contract indexed on the [APIs.io](h
 
 
   BestPrintOnDemand''s developer surface includes pricing, engineering blog, API reference, documentation, and 17 more developer resources.'
-random_paper: 21
+random_paper: 1
 rules:
 - authorship: generated
   effective_rule_count: 58
@@ -180,28 +193,30 @@ rules:
   slug: bestprintondemand-rules
 score:
   band: thin
-  composite: 34.1
+  composite: 29.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 48.2
     catalog_earned_first_party: 0.0
     catalog_gap: 66.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.2
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
-    contract_quality: 56.7
-    developer_ergonomics: 19.0
+    contract_quality: 62.2
+    developer_ergonomics: 9.5
     discoverability: 66.7
     operational_transparency: 0.0
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: first-party
   regulatory:
@@ -209,13 +224,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/bestprintondemand/bestprintondemand-2026-11-03T121654.png
 security:
 - kind: domain-security
   name: Bestprintondemand Domain Security

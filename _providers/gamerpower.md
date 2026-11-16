@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Free · Open access
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Open access
   onboarding: open
-  pricing: free
+  pricing: freemium
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 35.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,11 +65,8 @@ apis:
   description: Aggregate live giveaway counts and USD value estimation.
   name: GamerPower Worth API
   slug: gamerpower-worth-api
-artifact_total: 28
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: GamerPower Filter API
   slug: open-gamerpower-filter-api
@@ -77,17 +81,17 @@ collections:
   slug: open-gamerpower
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gamerpower/refs/heads/main/plans/gamerpower-plans-pricing.yml
+  href: https://artifacts.apis.io/gamerpower/plans/gamerpower-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gamerpower-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gamerpower/refs/heads/main/rate-limits/gamerpower-rate-limits.yml
+  href: https://artifacts.apis.io/gamerpower/rate-limits/gamerpower-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gamerpower-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gamerpower/refs/heads/main/finops/gamerpower-finops.yml
+  href: https://artifacts.apis.io/gamerpower/finops/gamerpower-finops.yml
   title: ''
   type: FinOps
   url: finops/gamerpower-finops.yml
@@ -96,12 +100,12 @@ common:
   type: BlogRSS
   url: https://www.gamerpower.com/rss/giveaways
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gamerpower/refs/heads/main/agentic-access/gamerpower-agentic-access.yml
+  href: https://artifacts.apis.io/gamerpower/agentic-access/gamerpower-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gamerpower-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gamerpower/refs/heads/main/security/gamerpower-domain-security.yml
+  href: https://artifacts.apis.io/gamerpower/security/gamerpower-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gamerpower-domain-security.yml
@@ -152,7 +156,7 @@ finops:
 - has_sources: false
   method: generated
   name: Gamerpower Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: gamerpower-finops
   template: true
@@ -205,7 +209,7 @@ plans:
 - name: Gamerpower Plans Pricing
   plan_count: 2
   slug: gamerpower-plans-pricing
-random_paper: 3
+random_paper: 1
 rate_limits:
 - limit_count: 2
   name: Gamerpower Rate Limits
@@ -238,13 +242,13 @@ score:
   band: emerging
   composite: 24.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 70.0
     catalog_earned_first_party: 0.0
     catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
@@ -252,7 +256,7 @@ score:
     developer_ergonomics: 21.4
     discoverability: 78.6
     operational_transparency: 5.3
-  previous_composite: 30.3
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
@@ -266,14 +270,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/gamerpower/refs/heads/main/screenshots/gamerpower-2026-06-20T181638.png
+screenshot: https://apis.io/screenshots/gamerpower/gamerpower-2026-06-20T181638.png
 security:
 - kind: domain-security
   name: Gamerpower Domain Security

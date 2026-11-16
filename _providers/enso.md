@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
-api_count: 1
+  score: 19.6
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://api.enso.finance
   baseurl_source: declared
@@ -84,11 +87,8 @@ apis:
   description: The wallet API from Enso — 2 operation(s) for wallet.
   name: Enso Wallet API
   slug: enso-wallet-api
-artifact_total: 22
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Enso ccip API
   slug: open-enso-ccip-api
@@ -122,7 +122,7 @@ common:
   type: BlogRSS
   url: https://blog.enso.build/rss/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/overlays/enso-openapi-overlay.yaml
+  href: https://artifacts.apis.io/enso/overlays/enso-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/enso-openapi-overlay.yaml
@@ -171,72 +171,72 @@ common:
   type: StatusPage
   url: https://status.enso.finance
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/changelog/enso-changelog.yml
+  href: https://artifacts.apis.io/enso/changelog/enso-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/enso-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/authentication/enso-authentication.yml
+  href: https://artifacts.apis.io/enso/authentication/enso-authentication.yml
   title: ''
   type: Authentication
   url: authentication/enso-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/packages/enso-packages.yml
+  href: https://artifacts.apis.io/enso/packages/enso-packages.yml
   title: ''
   type: Packages
   url: packages/enso-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/packages/enso-packages.yml
+  href: https://artifacts.apis.io/enso/packages/enso-packages.yml
   title: ''
   type: SDKs
   url: packages/enso-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/components/enso-components.yml
+  href: https://artifacts.apis.io/enso/components/enso-components.yml
   title: ''
   type: Components
   url: components/enso-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/mcp/enso-mcp.yml
+  href: https://artifacts.apis.io/enso/mcp/enso-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/enso-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/enso/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/llms/enso-llms.txt
+  href: https://artifacts.apis.io/enso/llms/enso-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/enso-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/conventions/enso-conventions.yml
+  href: https://artifacts.apis.io/enso/conventions/enso-conventions.yml
   title: ''
   type: Conventions
   url: conventions/enso-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/rate-limits/enso-rate-limits.yml
+  href: https://artifacts.apis.io/enso/rate-limits/enso-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/enso-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/lifecycle/enso-lifecycle.yml
+  href: https://artifacts.apis.io/enso/lifecycle/enso-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/enso-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/conformance/enso-conformance.yml
+  href: https://artifacts.apis.io/enso/conformance/enso-conformance.yml
   title: ''
   type: Conformance
   url: conformance/enso-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/sandbox/enso-sandbox.yml
+  href: https://artifacts.apis.io/enso/sandbox/enso-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/enso-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/security/enso-domain-security.yml
+  href: https://artifacts.apis.io/enso/security/enso-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/enso-domain-security.yml
@@ -251,38 +251,54 @@ network: true
 overview: 'Enso publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ccip API, Cctp API, Layerzero API, and 6 more. Tagged areas include Company, Web3, DeFi, Blockchain, and Cross-Chain.
 
 
+  The Enso catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Enso''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 20 more developer resources.'
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Enso Rate Limits
   slug: enso-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Enso API Rules
+  rule_count: 53
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 5
+  slug: enso-rules
 score:
   band: developing
-  composite: 42.3
+  composite: 40.3
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.4
   facets:
     access_clarity: 23.7
-    contract_governance: 4.5
-    contract_quality: 46.1
+    contract_governance: 18.2
+    contract_quality: 31.5
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 42.2
+  previous_composite: 39.9
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 9
+      marker_coverage: 44.0
+      total: 25
     mcp: derived
     skills: derived
   regulatory:
@@ -291,13 +307,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/screenshots/enso-2026-07-25T213420.png
+screenshot: https://apis.io/screenshots/enso/enso-2026-07-25T213420.png
 security:
 - kind: authentication
   name: Enso Authentication
@@ -307,6 +323,14 @@ security:
   name: Enso Domain Security
   slug: enso-domain-security
   summary_line: TLSv1.2 · DMARC
+skill_count: 3
+skills:
+- name: Compose ordered onchain actions with the Bundle API
+  slug: enso-bundle-actions
+- name: Quote a swap and read wallet balances
+  slug: enso-quote-balances
+- name: Swap or zap between two tokens with the Route API
+  slug: enso-route-swap
 slug: enso
 tags:
 - Company

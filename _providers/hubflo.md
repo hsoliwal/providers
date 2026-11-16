@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -28,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-10-17'
+  score: 45.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 98
   human_in_the_loop: 0
@@ -186,15 +190,12 @@ apis:
   description: The workspace API from Hubflo — 24 operation(s) for workspace.
   name: Hubflo Workspace API
   slug: hubflo-workspace-api
-artifact_total: 63
+artifact_total: 69
 asyncapis:
 - description: ''
   name: Hubflo Webhooks
   slug: hubflo-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hubflo chat_room API
   slug: open-hubflo-chat-room-api
@@ -280,13 +281,18 @@ collections:
   name: Hubflo chat_room workspace API
   slug: open-hubflo-workspace-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/hubflo/plans/hubflo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/hubflo-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/capabilities/hubflo-capability-edges.yml
+  href: https://artifacts.apis.io/hubflo/capabilities/hubflo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hubflo-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/overlays/hubflo-overlay.yaml
+  href: https://artifacts.apis.io/hubflo/overlays/hubflo-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hubflo-overlay.yaml
@@ -335,87 +341,95 @@ common:
   type: PrivacyPolicy
   url: https://www.hubflo.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/authentication/hubflo-authentication.yml
+  href: https://artifacts.apis.io/hubflo/authentication/hubflo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hubflo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/conventions/hubflo-conventions.yml
+  href: https://artifacts.apis.io/hubflo/conventions/hubflo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hubflo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/errors/hubflo-problem-types.yml
+  href: https://artifacts.apis.io/hubflo/errors/hubflo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hubflo-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/rate-limits/hubflo-rate-limits.yml
+  href: https://artifacts.apis.io/hubflo/rate-limits/hubflo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hubflo-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/lifecycle/hubflo-lifecycle.yml
+  href: https://artifacts.apis.io/hubflo/lifecycle/hubflo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hubflo-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/well-known/hubflo-well-known.yml
+  href: https://artifacts.apis.io/hubflo/well-known/hubflo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hubflo-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/mcp/hubflo-mcp.yml
+  href: https://artifacts.apis.io/hubflo/mcp/hubflo-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hubflo-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/packages/hubflo-packages.yml
+  href: https://artifacts.apis.io/hubflo/packages/hubflo-packages.yml
   title: ''
   type: Packages
   url: packages/hubflo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/packages/hubflo-packages.yml
+  href: https://artifacts.apis.io/hubflo/packages/hubflo-packages.yml
   title: ''
   type: SDKs
   url: packages/hubflo-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/conformance/hubflo-conformance.yml
+  href: https://artifacts.apis.io/hubflo/conformance/hubflo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hubflo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/data-model/hubflo-data-model.yml
+  href: https://artifacts.apis.io/hubflo/data-model/hubflo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hubflo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/asyncapi/hubflo-webhooks.yml
+  href: https://artifacts.apis.io/hubflo/asyncapi/hubflo-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/hubflo-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hubflo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/llms/hubflo-llms.txt
+  href: https://artifacts.apis.io/hubflo/llms/hubflo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hubflo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/security/hubflo-domain-security.yml
+  href: https://artifacts.apis.io/hubflo/security/hubflo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hubflo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/agentic-access/hubflo-agentic-access.yml
+  href: https://artifacts.apis.io/hubflo/agentic-access/hubflo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hubflo-agentic-access.yml
 created: '2026-07-17'
 description: Hubflo is a client portal platform for service businesses — consultants, agencies, accountants, and professional-service firms — bringing client onboarding, messaging, document management, e-signatures, forms, proposals, invoicing, tasks, and project collaboration into one branded workspace. Hubflo exposes a REST API (v2) at app.hubflo.com/api/v2 with bearer-token authentication, JSON request/response bodies, UUID resource identifiers, page-based pagination, a 1000 request/minute rate limit, and a native webhook system spanning 29 event types across companies, contacts, workspaces, invoices, forms, tasks, and e-signature submissions. Hubflo also publishes official TypeScript and MCP-server packages and a hosted remote MCP server. Backed by Seedcamp.
+finops:
+- has_sources: true
+  method: derived
+  name: Hubflo Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: hubflo-finops
+  template: false
 image: https://xvxiiiwlonqntbzglrdp.supabase.co/storage/v1/object/public/Assets/hubflo-og-home.png
 layout: provider
 mcp_servers:
@@ -429,34 +443,54 @@ network: true
 overview: 'Hubflo publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chat Room API, Comment API, Company API, and 25 more. Tagged areas include Client Portal, Professional Services, CRM, Invoicing, and Project Management.
 
 
-  The Hubflo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Hubflo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Hubflo''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
-random_paper: 2
+  Hubflo''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
+plans:
+- name: Hubflo Plans Pricing
+  plan_count: 6
+  slug: hubflo-plans-pricing
+- name: Hubflo Price Estimates
+  plan_count: 0
+  slug: hubflo-price-estimates
+random_paper: 16
 rate_limits:
 - limit_count: 1
   name: Hubflo Rate Limits
   slug: hubflo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Hubflo API Rules
+  rule_count: 64
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 14
+  slug: hubflo-rules
 score:
-  band: developing
-  composite: 45.2
+  band: strong
+  composite: 58.6
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 45.0
-    catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    artifact_dirs: 28
+    catalog_earned: 64.5
+    catalog_earned_first_party: 20.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.8
   facets:
-    access_clarity: 44.7
-    contract_governance: 4.5
+    access_clarity: 84.2
+    contract_governance: 18.2
     contract_quality: 57.5
-    developer_ergonomics: 47.0
+    developer_ergonomics: 66.1
     discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 45.1
+  previous_composite: 54.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -473,13 +507,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hubflo/refs/heads/main/screenshots/hubflo-2026-07-25T221612.png
+screenshot: https://apis.io/screenshots/hubflo/hubflo-2026-07-25T221612.png
 security:
 - kind: authentication
   name: Hubflo Authentication
@@ -489,6 +523,14 @@ security:
   name: Hubflo Domain Security
   slug: hubflo-domain-security
   summary_line: TLSv1.2 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Create and issue a Hubflo invoice
+  slug: hubflo-create-and-issue-invoice
+- name: Create a company and add a contact in Hubflo
+  slug: hubflo-create-company-and-contact
+- name: Subscribe to Hubflo webhook events
+  slug: hubflo-subscribe-to-webhooks
 slug: hubflo
 tags:
 - Client Portal

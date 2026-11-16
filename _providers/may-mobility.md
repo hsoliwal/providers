@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: A WebSocket streaming API that delivers live May Mobility vehicle data in two modes. Telemetry mode streams JSON messages for a comma-separated list of per-vehicle topics (GPS, POSE, DRIVE_STATUS, RUN
@@ -95,7 +101,7 @@ common:
   type: Compliance
   url: https://maymobility.com/cybersecurity/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/security/may-mobility-trust-center.yml
+  href: https://artifacts.apis.io/may-mobility/security/may-mobility-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/may-mobility-trust-center.yml
@@ -104,52 +110,52 @@ common:
   type: Security
   url: https://net.maymobility.com/docs/policies/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/security/may-mobility-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/may-mobility/security/may-mobility-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/may-mobility-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/well-known/may-mobility-security.txt
+  href: https://artifacts.apis.io/may-mobility/well-known/may-mobility-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/may-mobility-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/well-known/may-mobility-well-known.yml
+  href: https://artifacts.apis.io/may-mobility/well-known/may-mobility-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/may-mobility-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/security/may-mobility-domain-security.yml
+  href: https://artifacts.apis.io/may-mobility/security/may-mobility-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/may-mobility-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/authentication/may-mobility-fleet-authentication.yml
+  href: https://artifacts.apis.io/may-mobility/authentication/may-mobility-fleet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/may-mobility-fleet-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/scopes/may-mobility-scopes.yml
+  href: https://artifacts.apis.io/may-mobility/scopes/may-mobility-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/may-mobility-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/conventions/may-mobility-fleet-conventions.yml
+  href: https://artifacts.apis.io/may-mobility/conventions/may-mobility-fleet-conventions.yml
   title: ''
   type: Conventions
   url: conventions/may-mobility-fleet-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/conformance/may-mobility-conformance.yml
+  href: https://artifacts.apis.io/may-mobility/conformance/may-mobility-conformance.yml
   title: ''
   type: Conformance
   url: conformance/may-mobility-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/errors/may-mobility-fleet-error-catalog.yml
+  href: https://artifacts.apis.io/may-mobility/errors/may-mobility-fleet-error-catalog.yml
   title: ''
   type: ErrorCatalog
   url: errors/may-mobility-fleet-error-catalog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/lifecycle/may-mobility-lifecycle.yml
+  href: https://artifacts.apis.io/may-mobility/lifecycle/may-mobility-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/may-mobility-lifecycle.yml
@@ -158,37 +164,37 @@ common:
   type: StatusPage
   url: https://status.net.maymobility.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/changelog/may-mobility-changelog.yml
+  href: https://artifacts.apis.io/may-mobility/changelog/may-mobility-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/may-mobility-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/data-model/may-mobility-fleet-data-model.yml
+  href: https://artifacts.apis.io/may-mobility/data-model/may-mobility-fleet-data-model.yml
   title: ''
   type: DataModel
   url: data-model/may-mobility-fleet-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/packages/may-mobility-packages.yml
+  href: https://artifacts.apis.io/may-mobility/packages/may-mobility-packages.yml
   title: ''
   type: Packages
   url: packages/may-mobility-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/packages/may-mobility-packages.yml
+  href: https://artifacts.apis.io/may-mobility/packages/may-mobility-packages.yml
   title: ''
   type: SDKs
   url: packages/may-mobility-packages.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/grpc/may-mobility-quic-wrapper.proto
+  href: https://artifacts.apis.io/may-mobility/grpc/may-mobility-quic-wrapper.proto
   title: ''
   type: Protobuf
   url: grpc/may-mobility-quic-wrapper.proto
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/asyncapi/may-mobility-fleet-events.yml
+  href: https://artifacts.apis.io/may-mobility/asyncapi/may-mobility-fleet-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/may-mobility-fleet-events.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/llms/may-mobility-llms.txt
+  href: https://artifacts.apis.io/may-mobility/llms/may-mobility-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/may-mobility-llms.txt
@@ -208,7 +214,7 @@ overview: 'May Mobility is listed with 2 APIs on the [APIs.io](https://apis.io/)
 
 
   May Mobility''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, changelog, and 24 more developer resources.'
-random_paper: 13
+random_paper: 21
 scopes:
 - name: May Mobility Scopes
   scope_count: 0
@@ -218,7 +224,7 @@ score:
   band: developing
   composite: 48.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -248,14 +254,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/may-mobility/refs/heads/main/screenshots/may-mobility-2026-08-07T172133.png
+screenshot: https://apis.io/screenshots/may-mobility/may-mobility-2026-08-07T172133.png
 security:
 - kind: authentication
   name: May Mobility Fleet Authentication

@@ -1,13 +1,13 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
-  pricing: paid
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
-  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.1
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 53
   slug: flickr-agentic-access
   summary_line: 53 operations · 7 acting
-api_count: 3
+api_count: 2
 apis:
 - baseURL: https://api.flickr.com/services
   baseurl_source: declared
@@ -204,7 +207,7 @@ apis:
   description: Look up Flickr URLs by user, group, gallery
   name: Flickr URLs API
   slug: flickr-urls-api
-artifact_total: 308
+artifact_total: 307
 collections:
 - collection_type: postman
   name: Flickr Activity API
@@ -302,9 +305,6 @@ collections:
 - collection_type: postman
   name: Flickr Activity URLs API
   slug: postman-flickr-urls-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Flickr Activity API
   slug: open-flickr-activity-api
@@ -418,27 +418,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/flickr/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/agentic-access/flickr-agentic-access.yml
+  href: https://artifacts.apis.io/flickr/agentic-access/flickr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/flickr-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/security/flickr-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/flickr/security/flickr-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/flickr-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/security/flickr-domain-security.yml
+  href: https://artifacts.apis.io/flickr/security/flickr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flickr-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/authentication/flickr-authentication.yml
+  href: https://artifacts.apis.io/flickr/authentication/flickr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flickr-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/scopes/flickr-scopes.yml
+  href: https://artifacts.apis.io/flickr/scopes/flickr-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/flickr-scopes.yml
@@ -503,32 +503,32 @@ common:
   type: PublicAPIsListing
   url: https://github.com/public-apis/public-apis
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/rules/flickr-rules.yml
+  href: https://artifacts.apis.io/flickr/rules/flickr-rules.yml
   title: ''
   type: SpectralRules
   url: rules/flickr-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/vocabulary/flickr-vocabulary.yml
+  href: https://artifacts.apis.io/flickr/vocabulary/flickr-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/flickr-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/json-ld/flickr-context.jsonld
+  href: https://artifacts.apis.io/flickr/json-ld/flickr-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/flickr-context.jsonld
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/plans/flickr-plans-pricing.yml
+  href: https://artifacts.apis.io/flickr/plans/flickr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flickr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/rate-limits/flickr-rate-limits.yml
+  href: https://artifacts.apis.io/flickr/rate-limits/flickr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/flickr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/finops/flickr-finops.yml
+  href: https://artifacts.apis.io/flickr/finops/flickr-finops.yml
   title: ''
   type: FinOps
   url: finops/flickr-finops.yml
@@ -732,12 +732,12 @@ features:
   name: Stats
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Flickr Finops
   primary_unit: ''
-  service_category: Media + Photo Hosting + Developer API
+  service_category: ''
   slug: flickr-finops
-  template: false
+  template: true
 image: https://combine.swagger.io/flickr.png
 integrations:
 - description: Push subscription protocol used by `flickr.push.*` topics.
@@ -1119,9 +1119,9 @@ overview: 'Flickr publishes 32 API contracts indexed on the [APIs.io](https://ap
   Flickr''s developer surface includes authentication, developer portal, getting-started guide, signup flow, pricing, engineering blog, changelog, and 22 more developer resources.'
 plans:
 - name: Flickr Plans Pricing
-  plan_count: 2
+  plan_count: 0
   slug: flickr-plans-pricing
-random_paper: 19
+random_paper: 11
 rate_limits:
 - limit_count: 4
   name: Flickr Rate Limits
@@ -1157,29 +1157,29 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 48.9
+  composite: 48.6
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 60.0
+    artifact_dirs: 22
+    catalog_earned: 55.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.3
+  delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 44.7
     contract_governance: 27.3
     contract_quality: 20.4
     developer_ergonomics: 75.0
-    discoverability: 69.6
-    operational_transparency: 42.1
-  previous_composite: 55.2
+    discoverability: 64.3
+    operational_transparency: 52.6
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 32
-      marker_coverage: 97.0
+      marker_coverage: 100.0
       total: 33
   regulatory:
     applies: true
@@ -1187,13 +1187,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/flickr/refs/heads/main/screenshots/flickr-2026-06-20T181308.png
+screenshot: https://apis.io/screenshots/flickr/flickr-2026-06-20T181308.png
 security:
 - kind: authentication
   name: Flickr Authentication

@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -20,7 +20,7 @@ modified: '2026-07-17'
 name: Kindred Ventures
 nav: Providers
 network: true
-random_paper: 2
+random_paper: 18
 slug: kindred-ventures
 tags:
 - Venture Capital

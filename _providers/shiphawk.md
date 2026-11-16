@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -28,7 +31,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: ShipHawk's public REST API. Key-based authentication (X-Api-Key header or api_key query parameter), JSON request and response bodies, POST used for both create and update (no PUT/PATCH). Resources cov
@@ -101,77 +107,77 @@ common:
   type: StatusPage
   url: https://shiphawk.statuspage.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/lifecycle/shiphawk-lifecycle.yml
+  href: https://artifacts.apis.io/shiphawk/lifecycle/shiphawk-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/shiphawk-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/lifecycle/shiphawk-lifecycle.yml
+  href: https://artifacts.apis.io/shiphawk/lifecycle/shiphawk-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/shiphawk-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/packages/shiphawk-packages.yml
+  href: https://artifacts.apis.io/shiphawk/packages/shiphawk-packages.yml
   title: ''
   type: Packages
   url: packages/shiphawk-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/packages/shiphawk-packages.yml
+  href: https://artifacts.apis.io/shiphawk/packages/shiphawk-packages.yml
   title: ''
   type: SDKs
   url: packages/shiphawk-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/authentication/shiphawk-authentication.yml
+  href: https://artifacts.apis.io/shiphawk/authentication/shiphawk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shiphawk-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/conventions/shiphawk-conventions.yml
+  href: https://artifacts.apis.io/shiphawk/conventions/shiphawk-conventions.yml
   title: ''
   type: Conventions
   url: conventions/shiphawk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/errors/shiphawk-problem-types.yml
+  href: https://artifacts.apis.io/shiphawk/errors/shiphawk-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/shiphawk-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/data-model/shiphawk-data-model.yml
+  href: https://artifacts.apis.io/shiphawk/data-model/shiphawk-data-model.yml
   title: ''
   type: DataModel
   url: data-model/shiphawk-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/sandbox/shiphawk-sandbox.yml
+  href: https://artifacts.apis.io/shiphawk/sandbox/shiphawk-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/shiphawk-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/asyncapi/shiphawk-webhooks.yml
+  href: https://artifacts.apis.io/shiphawk/asyncapi/shiphawk-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/shiphawk-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/conformance/shiphawk-conformance.yml
+  href: https://artifacts.apis.io/shiphawk/conformance/shiphawk-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shiphawk-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/plans/shiphawk-plans-pricing.yml
+  href: https://artifacts.apis.io/shiphawk/plans/shiphawk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/shiphawk-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/rate-limits/shiphawk-rate-limits.yml
+  href: https://artifacts.apis.io/shiphawk/rate-limits/shiphawk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/shiphawk-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/llms/shiphawk-llms.txt
+  href: https://artifacts.apis.io/shiphawk/llms/shiphawk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shiphawk-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/security/shiphawk-domain-security.yml
+  href: https://artifacts.apis.io/shiphawk/security/shiphawk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shiphawk-domain-security.yml
@@ -194,7 +200,7 @@ plans:
 - name: Shiphawk Plans Pricing
   plan_count: 0
   slug: shiphawk-plans-pricing
-random_paper: 5
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Shiphawk Rate Limits
@@ -203,7 +209,7 @@ score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -227,14 +233,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/shiphawk/refs/heads/main/screenshots/shiphawk-2026-09-02T155221.png
+screenshot: https://apis.io/screenshots/shiphawk/shiphawk-2026-09-02T155221.png
 security:
 - kind: authentication
   name: Shiphawk Authentication

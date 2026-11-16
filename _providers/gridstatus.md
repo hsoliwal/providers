@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,11 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
-  band_gated_from: agent-native
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: na
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.5
-  scored_at: '2026-10-17'
+  score: 60.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -100,11 +106,13 @@ apis:
   description: Daily peak reports (paid plans).
   name: Grid Status Reports API
   slug: gridstatus-reports-api
-artifact_total: 31
+- baseURL: https://api.gridstatus.io/v1
+  baseurl_source: declared
+  description: The Outages API from Grid Status — 6 operation(s) for outages.
+  name: Grid Status Outages API
+  slug: gridstatus-outages-api
+artifact_total: 32
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Grid Status API Info API
   slug: open-gridstatus-api-info-api
@@ -143,17 +151,17 @@ collections:
   slug: open-gridstatus
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/agentic-access/gridstatus-agentic-access.yml
+  href: https://artifacts.apis.io/gridstatus/agentic-access/gridstatus-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gridstatus-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/security/gridstatus-domain-security.yml
+  href: https://artifacts.apis.io/gridstatus/security/gridstatus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gridstatus-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/authentication/gridstatus-authentication.yml
+  href: https://artifacts.apis.io/gridstatus/authentication/gridstatus-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gridstatus-authentication.yml
@@ -174,17 +182,17 @@ common:
   type: Documentation
   url: https://docs.gridstatus.io
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/plans/gridstatus-plans-pricing.yml
+  href: https://artifacts.apis.io/gridstatus/plans/gridstatus-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gridstatus-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/rate-limits/gridstatus-rate-limits.yml
+  href: https://artifacts.apis.io/gridstatus/rate-limits/gridstatus-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gridstatus-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/finops/gridstatus-finops.yml
+  href: https://artifacts.apis.io/gridstatus/finops/gridstatus-finops.yml
   title: ''
   type: FinOps
   url: finops/gridstatus-finops.yml
@@ -212,7 +220,10 @@ modified: '2026-07-11'
 name: Grid Status
 nav: Providers
 network: true
-overview: 'Grid Status publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Info API, API Usage API, Block Pricing Data API, and 8 more. Tagged areas include Day-Ahead Prices, Electricity, Grid Data, Energy Markets, and LMP.
+overview: 'Grid Status publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Info API, API Usage API, Block Pricing Data API, and 9 more. Tagged areas include Day-Ahead Prices, Electricity, Grid Data, Energy Markets, and LMP.
+
+
+  The Grid Status catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Grid Status'' developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
@@ -220,37 +231,50 @@ plans:
 - name: Gridstatus Plans Pricing
   plan_count: 4
   slug: gridstatus-plans-pricing
-random_paper: 20
+random_paper: 18
 rate_limits:
 - limit_count: 7
   name: Gridstatus Rate Limits
   slug: gridstatus-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Grid Status API Rules
+  rule_count: 45
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 2
+    warn: 12
+  slug: gridstatus-rules
 score:
   band: thin
-  composite: 27.5
+  composite: 29.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.7
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 48.1
+    contract_governance: 13.6
+    contract_quality: 49.9
     developer_ergonomics: 31.0
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 35.8
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 11
+      marker_coverage: 50.0
+      total: 24
     mcp: first-party
   regulatory:
     applies: true
@@ -258,14 +282,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/gridstatus/refs/heads/main/screenshots/gridstatus-2026-07-25T220330.png
+screenshot: https://apis.io/screenshots/gridstatus/gridstatus-2026-07-25T220330.png
 security:
 - kind: authentication
   name: Gridstatus Authentication

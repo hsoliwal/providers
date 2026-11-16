@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,9 +36,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -81,47 +85,47 @@ common:
   type: PrivacyPolicy
   url: https://www.onfabric.io/privacy-policy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/packages/onfabric-packages.yml
+  href: https://artifacts.apis.io/onfabric/packages/onfabric-packages.yml
   title: ''
   type: Packages
   url: packages/onfabric-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/packages/onfabric-packages.yml
+  href: https://artifacts.apis.io/onfabric/packages/onfabric-packages.yml
   title: ''
   type: SDKs
   url: packages/onfabric-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/cli/onfabric-cli.yml
+  href: https://artifacts.apis.io/onfabric/cli/onfabric-cli.yml
   title: ''
   type: CLI
   url: cli/onfabric-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/skills/onfabric-context-use.md
+  href: https://artifacts.apis.io/onfabric/skills/onfabric-context-use.md
   title: ''
   type: AgentSkill
   url: skills/onfabric-context-use.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/changelog/onfabric-changelog.yml
+  href: https://artifacts.apis.io/onfabric/changelog/onfabric-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/onfabric-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/llms/onfabric-llms.txt
+  href: https://artifacts.apis.io/onfabric/llms/onfabric-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/onfabric-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/well-known/onfabric-well-known.yml
+  href: https://artifacts.apis.io/onfabric/well-known/onfabric-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/onfabric-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/mcp/onfabric-mcp.yml
+  href: https://artifacts.apis.io/onfabric/mcp/onfabric-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/onfabric-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/conformance/onfabric-conformance.yml
+  href: https://artifacts.apis.io/onfabric/conformance/onfabric-conformance.yml
   title: ''
   type: Conformance
   url: conformance/onfabric-conformance.yml
@@ -130,7 +134,7 @@ common:
   type: Compliance
   url: https://www.onfabric.io/business
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/security/onfabric-domain-security.yml
+  href: https://artifacts.apis.io/onfabric/security/onfabric-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onfabric-domain-security.yml
@@ -150,12 +154,12 @@ overview: 'OnFabric is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   OnFabric''s developer surface includes documentation, getting-started guide, engineering blog, support, signup flow, CLI, changelog, and 15 more developer resources.'
-random_paper: 0
+random_paper: 20
 score:
   band: thin
   composite: 29.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -184,19 +188,23 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/onfabric/refs/heads/main/screenshots/onfabric-2026-08-07T190350.png
+screenshot: https://apis.io/screenshots/onfabric/onfabric-2026-08-07T190350.png
 security:
 - kind: domain-security
   name: Onfabric Domain Security
   slug: onfabric-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 1
+skills:
+- name: context-use
+  slug: onfabric-context-use
 slug: onfabric
 tags:
 - Company

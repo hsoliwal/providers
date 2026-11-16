@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Private platform API host backing the Leal Health patient-matching web application and the Patient Match Optimizer dashboard. Verified live on 2026-07-19: the root path returns HTTP 200 with a {"succe'
@@ -41,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leal-health-fka-trialjectory/refs/heads/main/security/leal-health-fka-trialjectory-domain-security.yml
+  href: https://artifacts.apis.io/leal-health-fka-trialjectory/security/leal-health-fka-trialjectory-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/leal-health-fka-trialjectory-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leal-health-fka-trialjectory/refs/heads/main/conformance/leal-health-fka-trialjectory-conformance.yml
+  href: https://artifacts.apis.io/leal-health-fka-trialjectory/conformance/leal-health-fka-trialjectory-conformance.yml
   title: ''
   type: Conformance
   url: conformance/leal-health-fka-trialjectory-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/leal-health-fka-trialjectory/refs/heads/main/llms/leal-health-fka-trialjectory-llms.txt
+  href: https://artifacts.apis.io/leal-health-fka-trialjectory/llms/leal-health-fka-trialjectory-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/leal-health-fka-trialjectory-llms.txt
@@ -108,7 +112,7 @@ overview: 'Leal Health (fka TrialJectory) is listed with 1 API on the [APIs.io](
 
 
   Leal Health (fka TrialJectory)''s developer surface includes signup flow, support, FAQ, and 10 more developer resources.'
-random_paper: 21
+random_paper: 9
 score:
   band: emerging
   composite: 15.4
@@ -140,14 +144,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/leal-health-fka-trialjectory/refs/heads/main/screenshots/leal-health-fka-trialjectory-2026-07-25T224729.png
+screenshot: https://apis.io/screenshots/leal-health-fka-trialjectory/leal-health-fka-trialjectory-2026-07-25T224729.png
 security:
 - kind: domain-security
   name: Leal Health Fka Trialjectory Domain Security

@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.tiendanube.com/2025-03/
@@ -91,52 +99,52 @@ common:
   type: StatusPage
   url: https://status.nuvemshop.com.br/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/packages/nuvemshop-tiendanube-packages.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/packages/nuvemshop-tiendanube-packages.yml
   title: ''
   type: SDKs
   url: packages/nuvemshop-tiendanube-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/packages/nuvemshop-tiendanube-packages.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/packages/nuvemshop-tiendanube-packages.yml
   title: ''
   type: Packages
   url: packages/nuvemshop-tiendanube-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/cli/nuvemshop-tiendanube-cli.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/cli/nuvemshop-tiendanube-cli.yml
   title: ''
   type: CLI
   url: cli/nuvemshop-tiendanube-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/components/nuvemshop-tiendanube-components.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/components/nuvemshop-tiendanube-components.yml
   title: ''
   type: Components
   url: components/nuvemshop-tiendanube-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/well-known/nuvemshop-tiendanube-security.txt
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/well-known/nuvemshop-tiendanube-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/nuvemshop-tiendanube-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/well-known/nuvemshop-tiendanube-well-known.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/well-known/nuvemshop-tiendanube-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nuvemshop-tiendanube-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/security/nuvemshop-tiendanube-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/security/nuvemshop-tiendanube-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nuvemshop-tiendanube-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/security/nuvemshop-tiendanube-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/security/nuvemshop-tiendanube-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/nuvemshop-tiendanube-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/security/nuvemshop-tiendanube-domain-security.yml
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/security/nuvemshop-tiendanube-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nuvemshop-tiendanube-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/llms/nuvemshop-tiendanube-llms.txt
+  href: https://artifacts.apis.io/nuvemshop-tiendanube/llms/nuvemshop-tiendanube-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nuvemshop-tiendanube-llms.txt
@@ -155,7 +163,7 @@ overview: 'Nuvemshop Tiendanube is listed with 1 API on the [APIs.io](https://ap
 
 
   Nuvemshop Tiendanube''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, CLI, and 14 more developer resources.'
-random_paper: 7
+random_paper: 9
 scopes:
 - name: Nuvemshop Tiendanube Scopes
   scope_count: 12
@@ -163,20 +171,20 @@ scopes:
   summary_line: 12 scopes · authorizationCode
 score:
   band: developing
-  composite: 39.3
+  composite: 41.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.9
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
     contract_quality: 40.6
-    developer_ergonomics: 61.9
+    developer_ergonomics: 71.4
     discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
@@ -194,14 +202,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 33.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nuvemshop-tiendanube/refs/heads/main/screenshots/nuvemshop-tiendanube-2026-08-07T185801.png
+screenshot: https://apis.io/screenshots/nuvemshop-tiendanube/nuvemshop-tiendanube-2026-08-07T185801.png
 security:
 - kind: authentication
   name: Nuvemshop Tiendanube Authentication
@@ -224,9 +232,10 @@ tags:
 - Payments
 - Shipping
 - Webhook
-- Authentication
+- OAuth
 - Latin America
 - Storefront
 - Apps Platform
+- Authentication
 website: https://www.nuvemshop.com.br/
 ---

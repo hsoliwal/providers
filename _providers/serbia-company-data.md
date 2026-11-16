@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -13,7 +16,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 30.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 3
   slug: serbia-company-data-agentic-access
   summary_line: 3 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://serbia-company-x402.vercel.app
   baseurl_source: spec
@@ -56,11 +62,8 @@ apis:
   description: The Search API from Serbia Company Data — 1 operation(s) for search.
   name: Serbia Company Data Search API
   slug: serbia-company-data-search-api
-artifact_total: 16
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Serbia Data Company API
   slug: open-serbia-company-data-company-api
@@ -73,92 +76,92 @@ common:
   type: Website
   url: https://serbia-company-x402.vercel.app/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/security/serbia-company-data-domain-security.yml
+  href: https://artifacts.apis.io/serbia-company-data/security/serbia-company-data-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/serbia-company-data-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/agentic-access/serbia-company-data-agentic-access.yml
+  href: https://artifacts.apis.io/serbia-company-data/agentic-access/serbia-company-data-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/serbia-company-data-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/authentication/serbia-company-data-authentication.yml
+  href: https://artifacts.apis.io/serbia-company-data/authentication/serbia-company-data-authentication.yml
   title: ''
   type: Authentication
   url: authentication/serbia-company-data-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/conventions/serbia-company-data-conventions.yml
+  href: https://artifacts.apis.io/serbia-company-data/conventions/serbia-company-data-conventions.yml
   title: ''
   type: Conventions
   url: conventions/serbia-company-data-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/errors/serbia-company-data-problem-types.yml
+  href: https://artifacts.apis.io/serbia-company-data/errors/serbia-company-data-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/serbia-company-data-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/lifecycle/serbia-company-data-lifecycle.yml
+  href: https://artifacts.apis.io/serbia-company-data/lifecycle/serbia-company-data-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/serbia-company-data-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/conformance/serbia-company-data-conformance.yml
+  href: https://artifacts.apis.io/serbia-company-data/conformance/serbia-company-data-conformance.yml
   title: ''
   type: Conformance
   url: conformance/serbia-company-data-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/data-model/serbia-company-data-data-model.yml
+  href: https://artifacts.apis.io/serbia-company-data/data-model/serbia-company-data-data-model.yml
   title: ''
   type: DataModel
   url: data-model/serbia-company-data-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/sandbox/serbia-company-data-sandbox.yml
+  href: https://artifacts.apis.io/serbia-company-data/sandbox/serbia-company-data-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/serbia-company-data-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/examples/serbia-company-data-sample-response.json
+  href: https://artifacts.apis.io/serbia-company-data/examples/serbia-company-data-sample-response.json
   title: ''
   type: Examples
   url: examples/serbia-company-data-sample-response.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/examples/serbia-company-data-402-payment-required.json
+  href: https://artifacts.apis.io/serbia-company-data/examples/serbia-company-data-402-payment-required.json
   title: ''
   type: Examples
   url: examples/serbia-company-data-402-payment-required.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/json-schema/serbia-company-data-getSerbianCompany-bazaar-schema.json
+  href: https://artifacts.apis.io/serbia-company-data/json-schema/serbia-company-data-getSerbianCompany-bazaar-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/serbia-company-data-getSerbianCompany-bazaar-schema.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/well-known/serbia-company-data-well-known.yml
+  href: https://artifacts.apis.io/serbia-company-data/well-known/serbia-company-data-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/serbia-company-data-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/llms/serbia-company-data-llms.txt
+  href: https://artifacts.apis.io/serbia-company-data/llms/serbia-company-data-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/serbia-company-data-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/overlays/serbia-company-data-openapi-overlay.yaml
+  href: https://artifacts.apis.io/serbia-company-data/overlays/serbia-company-data-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/serbia-company-data-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/mcp/serbia-company-data-mcp.yml
+  href: https://artifacts.apis.io/serbia-company-data/mcp/serbia-company-data-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/serbia-company-data-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/serbia-company-data/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/plans/serbia-company-data-plans-pricing.yml
+  href: https://artifacts.apis.io/serbia-company-data/plans/serbia-company-data-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/serbia-company-data-plans-pricing.yml
@@ -167,12 +170,12 @@ common:
   type: Pricing
   url: https://serbia-company-x402.vercel.app/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/rate-limits/serbia-company-data-rate-limits.yml
+  href: https://artifacts.apis.io/serbia-company-data/rate-limits/serbia-company-data-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/serbia-company-data-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/examples/serbia-company-data-health-response.json
+  href: https://artifacts.apis.io/serbia-company-data/examples/serbia-company-data-health-response.json
   title: ''
   type: Examples
   url: examples/serbia-company-data-health-response.json
@@ -207,48 +210,66 @@ network: true
 overview: 'Serbia Company Data publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Company API and Search API. Tagged areas include Serbia, Company Data, Business Registry, Open Data, and x402.
 
 
+  The Serbia Company Data catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Serbia Company Data''s developer surface includes authentication, sandbox, code examples, pricing, and 18 more developer resources.'
 plans:
 - name: Serbia Company Data Plans Pricing
   plan_count: 0
   slug: serbia-company-data-plans-pricing
-random_paper: 19
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Serbia Company Data Rate Limits
   slug: serbia-company-data-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Serbia Company Data API Rules
+  rule_count: 44
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 1
+  slug: serbia-company-data-rules
 score:
   band: thin
-  composite: 28.0
+  composite: 30.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 29.0
+    artifact_dirs: 26
+    catalog_earned: 33.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 86.0
+    catalog_gap: 81.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.3
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
-    contract_quality: 48.6
+    contract_governance: 18.2
+    contract_quality: 53.7
     developer_ergonomics: 41.1
     discoverability: 51.8
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - serbia
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - cee
     - europe
-  previous_composite: 28.0
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: derived
     skills: derived
@@ -258,13 +279,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/serbia-company-data/refs/heads/main/screenshots/serbia-company-data-2026-09-02T154940.png
+screenshot: https://apis.io/screenshots/serbia-company-data/serbia-company-data-2026-09-02T154940.png
 security:
 - kind: authentication
   name: Serbia Company Data Authentication
@@ -274,6 +295,12 @@ security:
   name: Serbia Company Data Domain Security
   slug: serbia-company-data-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Look up a Serbian company by registration number
+  slug: serbia-company-data-lookup-serbian-company
+- name: Search Serbian companies by name and resolve them in bulk
+  slug: serbia-company-data-search-and-resolve
 slug: serbia-company-data
 tags:
 - Serbia
@@ -284,7 +311,7 @@ tags:
 - base-usdc
 - OpenAPI
 - Financial Statements
-- pay-per-call
+- Pay-per-call
 - Agent-Native
 website: https://serbia-company-x402.vercel.app/
 ---

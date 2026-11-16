@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,32 +73,32 @@ common:
   type: StatusPage
   url: https://status.lais.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/lifecycle/lastro-lifecycle.yml
+  href: https://artifacts.apis.io/lastro/lifecycle/lastro-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lastro-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/mcp/lastro-mcp.yml
+  href: https://artifacts.apis.io/lastro/mcp/lastro-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/lastro-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/llms/lastro-llms.txt
+  href: https://artifacts.apis.io/lastro/llms/lastro-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lastro-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/llms/lastro-lais-llms.txt
+  href: https://artifacts.apis.io/lastro/llms/lastro-lais-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lastro-lais-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/packages/lastro-packages.yml
+  href: https://artifacts.apis.io/lastro/packages/lastro-packages.yml
   title: ''
   type: Packages
   url: packages/lastro-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/security/lastro-domain-security.yml
+  href: https://artifacts.apis.io/lastro/security/lastro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lastro-domain-security.yml
@@ -103,7 +107,7 @@ description: Lastro is a Brazilian proptech company building artificial intellig
 image: https://static.wixstatic.com/media/f95461_58b762df582a4769ac134f3de7a902a9%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/f95461_58b762df582a4769ac134f3de7a902a9%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: Remote MCP server at www.lastro.co over HTTP; 9 tools listed.
+- description: Remote MCP server at www.lastro.co over HTTP; 10 tools listed.
   name: Lastro MCP Server
   slug: lastro
 modified: '2026-07-19'
@@ -114,7 +118,7 @@ overview: 'Lastro is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Lastro''s developer surface includes engineering blog, support, and 12 more developer resources.'
-random_paper: 1
+random_paper: 13
 score:
   band: emerging
   composite: 14.0
@@ -125,7 +129,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
@@ -140,7 +144,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 14.4
+  previous_composite: 14.0
   provenance:
     mcp: platform-generated
   regulatory:
@@ -149,14 +153,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lastro/refs/heads/main/screenshots/lastro-2026-07-25T224549.png
+screenshot: https://apis.io/screenshots/lastro/lastro-2026-07-25T224549.png
 security:
 - kind: domain-security
   name: Lastro Domain Security

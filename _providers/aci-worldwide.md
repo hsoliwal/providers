@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: The core RESTful payment API of the ACI Open Payment Platform (PAY.ON gateway). Server-to-Server integration lets merchants and PSPs run end-to-end payment workflows — preauthorization, debit, capture
@@ -68,7 +71,7 @@ common:
   type: MCPServer
   url: https://docs.aciworldwide.com/integrations/agentic/mcp-server
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/security/aci-worldwide-domain-security.yml
+  href: https://artifacts.apis.io/aci-worldwide/security/aci-worldwide-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aci-worldwide-domain-security.yml
@@ -109,32 +112,32 @@ common:
   type: PrivacyPolicy
   url: https://www.aciworldwide.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/authentication/aci-worldwide-authentication.yml
+  href: https://artifacts.apis.io/aci-worldwide/authentication/aci-worldwide-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aci-worldwide-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/conventions/aci-worldwide-conventions.yml
+  href: https://artifacts.apis.io/aci-worldwide/conventions/aci-worldwide-conventions.yml
   title: ''
   type: Conventions
   url: conventions/aci-worldwide-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/errors/aci-worldwide-result-codes.yml
+  href: https://artifacts.apis.io/aci-worldwide/errors/aci-worldwide-result-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/aci-worldwide-result-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/errors/aci-worldwide-decline-codes.yml
+  href: https://artifacts.apis.io/aci-worldwide/errors/aci-worldwide-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/aci-worldwide-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/asyncapi/aci-worldwide-webhooks.yml
+  href: https://artifacts.apis.io/aci-worldwide/asyncapi/aci-worldwide-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/aci-worldwide-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/lifecycle/aci-worldwide-lifecycle.yml
+  href: https://artifacts.apis.io/aci-worldwide/lifecycle/aci-worldwide-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/aci-worldwide-lifecycle.yml
@@ -143,42 +146,42 @@ common:
   type: ChangeLog
   url: https://docs.aciworldwide.com/reference/release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/changelog/aci-worldwide-changelog.yml
+  href: https://artifacts.apis.io/aci-worldwide/changelog/aci-worldwide-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/aci-worldwide-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/sandbox/aci-worldwide-sandbox.yml
+  href: https://artifacts.apis.io/aci-worldwide/sandbox/aci-worldwide-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/aci-worldwide-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/components/aci-worldwide-components.yml
+  href: https://artifacts.apis.io/aci-worldwide/components/aci-worldwide-components.yml
   title: ''
   type: Components
   url: components/aci-worldwide-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/conformance/aci-worldwide-conformance.yml
+  href: https://artifacts.apis.io/aci-worldwide/conformance/aci-worldwide-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aci-worldwide-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/conformance/aci-worldwide-conformance.yml
+  href: https://artifacts.apis.io/aci-worldwide/conformance/aci-worldwide-conformance.yml
   title: ''
   type: Compliance
   url: conformance/aci-worldwide-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/packages/aci-worldwide-packages.yml
+  href: https://artifacts.apis.io/aci-worldwide/packages/aci-worldwide-packages.yml
   title: ''
   type: Packages
   url: packages/aci-worldwide-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/packages/aci-worldwide-packages.yml
+  href: https://artifacts.apis.io/aci-worldwide/packages/aci-worldwide-packages.yml
   title: ''
   type: SDKs
   url: packages/aci-worldwide-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/llms/aci-worldwide-llms.txt
+  href: https://artifacts.apis.io/aci-worldwide/llms/aci-worldwide-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aci-worldwide-llms.txt
@@ -207,7 +210,7 @@ score:
   band: developing
   composite: 45.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -241,14 +244,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 39.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aci-worldwide/refs/heads/main/screenshots/aci-worldwide-2026-07-25T181458.png
+screenshot: https://apis.io/screenshots/aci-worldwide/aci-worldwide-2026-07-25T181458.png
 security:
 - kind: authentication
   name: Aci Worldwide Authentication

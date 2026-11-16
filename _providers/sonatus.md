@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/rate-limits/sonatus-rate-limits.yml
+  href: https://artifacts.apis.io/sonatus/rate-limits/sonatus-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sonatus-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/security/sonatus-domain-security.yml
+  href: https://artifacts.apis.io/sonatus/security/sonatus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sonatus-domain-security.yml
@@ -97,12 +100,12 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/sonatus_stock/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/plans/sonatus-plans-pricing.yml
+  href: https://artifacts.apis.io/sonatus/plans/sonatus-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sonatus-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/llms/sonatus-llms.txt
+  href: https://artifacts.apis.io/sonatus/llms/sonatus-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sonatus-llms.txt
@@ -136,7 +139,7 @@ plans:
 - name: Sonatus Plans Pricing
   plan_count: 0
   slug: sonatus-plans-pricing
-random_paper: 11
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Sonatus Rate Limits
@@ -145,7 +148,7 @@ score:
   band: minimal
   composite: 10.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -166,14 +169,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/screenshots/sonatus-2026-09-02T160206.png
+screenshot: https://apis.io/screenshots/sonatus/sonatus-2026-09-02T160206.png
 security:
 - kind: domain-security
   name: Sonatus Domain Security

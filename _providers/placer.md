@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-10-17'
+  score: 26.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -85,11 +89,8 @@ apis:
   description: The Visits Reports API from Placer — 7 operation(s) for visits reports.
   name: Placer Visits Reports API
   slug: placer-visits-reports-api
-artifact_total: 21
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: papi Account Info API
   slug: open-placer-account-info-api
@@ -115,6 +116,16 @@ collections:
   name: papi Account Info Visits Reports API
   slug: open-placer-visits-reports-api
 common:
+- group: other
+  href: https://artifacts.apis.io/placer/capabilities/placer-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/placer-capability-edges.yml
+- group: commercial
+  href: https://artifacts.apis.io/placer/plans/placer-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/placer-plans-pricing.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -140,37 +151,37 @@ common:
   type: GettingStarted
   url: https://docs.placer.ai/reference/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/authentication/placer-authentication.yml
+  href: https://artifacts.apis.io/placer/authentication/placer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/placer-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/openapi/_original/placer-papi-openapi.json
+  href: https://artifacts.apis.io/placer/openapi/_original/placer-papi-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/placer-papi-openapi.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/overlays/placer-papi-overlay.yaml
+  href: https://artifacts.apis.io/placer/overlays/placer-papi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/placer-papi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/errors/placer-error-codes.yml
+  href: https://artifacts.apis.io/placer/errors/placer-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/placer-error-codes.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/rate-limits/placer-rate-limits.yml
+  href: https://artifacts.apis.io/placer/rate-limits/placer-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/placer-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/conventions/placer-conventions.yml
+  href: https://artifacts.apis.io/placer/conventions/placer-conventions.yml
   title: ''
   type: Conventions
   url: conventions/placer-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/lifecycle/placer-lifecycle.yml
+  href: https://artifacts.apis.io/placer/lifecycle/placer-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/placer-lifecycle.yml
@@ -183,37 +194,37 @@ common:
   type: ChangeLog
   url: https://docs.placer.ai/changelog
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/conformance/placer-conformance.yml
+  href: https://artifacts.apis.io/placer/conformance/placer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/placer-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/data-model/placer-data-model.yml
+  href: https://artifacts.apis.io/placer/data-model/placer-data-model.yml
   title: ''
   type: DataModel
   url: data-model/placer-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/mcp/placer-mcp.yml
+  href: https://artifacts.apis.io/placer/mcp/placer-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/placer-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/placer/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/agentic-access/placer-agentic-access.yml
+  href: https://artifacts.apis.io/placer/agentic-access/placer-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/placer-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/security/placer-domain-security.yml
+  href: https://artifacts.apis.io/placer/security/placer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/placer-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/llms/placer-llms.txt
+  href: https://artifacts.apis.io/placer/llms/placer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/placer-llms.txt
@@ -243,6 +254,14 @@ common:
   url: https://www.placer.ai/privacy-policy
 created: '2026-07-17'
 description: Placer.ai is a location analytics and foot-traffic intelligence platform that measures visits, trade areas, demographics, and consumer behavior for physical points of interest across retail, CPG, commercial real estate, hospitality, and the public sector. Its public developer surface, the Placer API (PAPI, base https://papi.placer.ai), lets developers and data analysts extract Placer's location analytics programmatically to enrich, filter, or combine it with other data sources for custom dashboards, internal reporting, and competitive analysis. The v1 REST API covers entity/POI search, custom POI and tag management, and a suite of report endpoints spanning visit metrics and trends, trade area (true trade area, drive-time, demographics), ranking, loyalty, and retail sales. Authentication is a static API key sent in the x-api-key header.
+finops:
+- has_sources: true
+  method: derived
+  name: Placer Finops
+  primary_unit: ''
+  service_category: ''
+  slug: placer-finops
+  template: true
 image: https://files.readme.io/338fd63-small-Placer_logo_ai_308px2x.png
 layout: provider
 modified: '2026-10-06'
@@ -252,31 +271,51 @@ network: true
 overview: 'Placer publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Info API, Loyalty Reports API, Manage POIs API, and 5 more. Tagged areas include Company, Location Analytics, Foot Traffic, Geospatial, and Retail Analytics.
 
 
-  Placer''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 21 more developer resources.'
-random_paper: 15
+  The Placer catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Placer''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 23 more developer resources.'
+plans:
+- name: Placer Plans Pricing
+  plan_count: 1
+  slug: placer-plans-pricing
+random_paper: 7
 rate_limits:
 - limit_count: 7
   name: Placer Rate Limits
   slug: placer-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Placer API Rules
+  rule_count: 57
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 2
+    warn: 5
+  slug: placer-rules
 score:
   band: developing
-  composite: 41.3
+  composite: 52.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 28
+    catalog_earned: 61.5
+    catalog_earned_first_party: 20.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 5.4
   facets:
-    access_clarity: 38.2
-    contract_governance: 4.5
+    access_clarity: 59.2
+    contract_governance: 18.2
     contract_quality: 49.9
-    developer_ergonomics: 35.1
+    developer_ergonomics: 54.2
     discoverability: 73.2
-    operational_transparency: 43.4
-  previous_composite: 41.3
+    operational_transparency: 55.3
+  previous_composite: 47.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -293,13 +332,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/placer/refs/heads/main/screenshots/placer-2026-08-17T081250.png
+screenshot: https://apis.io/screenshots/placer/placer-2026-08-17T081250.png
 security:
 - kind: authentication
   name: Placer Authentication
@@ -309,6 +348,14 @@ security:
   name: Placer Domain Security
   slug: placer-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Create and manage custom POIs and tags
+  slug: placer-manage-custom-pois
+- name: Analyze the trade area of a place
+  slug: placer-trade-area
+- name: Pull visit metrics for a place
+  slug: placer-visit-metrics
 slug: placer
 tags:
 - Company

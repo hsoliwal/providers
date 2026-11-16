@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,11 +82,8 @@ apis:
   description: Banking Product endpoints
   name: P&N Bank Banking Products API
   slug: pn-bank-banking-products-api
-artifact_total: 19
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-pn-bank-banking-account-balances-api
@@ -110,7 +111,7 @@ common:
   type: Blog
   url: https://www.pnbank.com.au/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/capabilities/pn-bank-capability-edges.yml
+  href: https://artifacts.apis.io/pn-bank/capabilities/pn-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pn-bank-capability-edges.yml
@@ -119,17 +120,17 @@ common:
   type: StatusPage
   url: https://public.cdr-api.pnbank.com.au/cds-au/v1/discovery/status
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/security/pn-bank-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/pn-bank/security/pn-bank-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/pn-bank-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/security/pn-bank-domain-security.yml
+  href: https://artifacts.apis.io/pn-bank/security/pn-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pn-bank-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/agentic-access/pn-bank-agentic-access.yml
+  href: https://artifacts.apis.io/pn-bank/agentic-access/pn-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pn-bank-agentic-access.yml
@@ -138,62 +139,62 @@ common:
   type: Security
   url: https://www.pnbank.com.au/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/well-known/pn-bank-security.txt
+  href: https://artifacts.apis.io/pn-bank/well-known/pn-bank-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/pn-bank-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/well-known/pn-bank-well-known.yml
+  href: https://artifacts.apis.io/pn-bank/well-known/pn-bank-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pn-bank-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/authentication/pn-bank-authentication.yml
+  href: https://artifacts.apis.io/pn-bank/authentication/pn-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pn-bank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/conventions/pn-bank-conventions.yml
+  href: https://artifacts.apis.io/pn-bank/conventions/pn-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pn-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/errors/pn-bank-problem-types.yml
+  href: https://artifacts.apis.io/pn-bank/errors/pn-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pn-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/conformance/pn-bank-conformance.yml
+  href: https://artifacts.apis.io/pn-bank/conformance/pn-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pn-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/lifecycle/pn-bank-lifecycle.yml
+  href: https://artifacts.apis.io/pn-bank/lifecycle/pn-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pn-bank-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/data-model/pn-bank-data-model.yml
+  href: https://artifacts.apis.io/pn-bank/data-model/pn-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pn-bank-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/mcp/pn-bank-mcp.yml
+  href: https://artifacts.apis.io/pn-bank/mcp/pn-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/pn-bank-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/overlays/pn-bank-cds-banking-products-overlay.yaml
+  href: https://artifacts.apis.io/pn-bank/overlays/pn-bank-cds-banking-products-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pn-bank-cds-banking-products-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/llms/pn-bank-llms.txt
+  href: https://artifacts.apis.io/pn-bank/llms/pn-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pn-bank-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/skills/pn-bank-get-products.md
+  href: https://artifacts.apis.io/pn-bank/skills/pn-bank-get-products.md
   title: ''
   type: AgentSkill
   url: skills/pn-bank-get-products.md
@@ -232,22 +233,38 @@ network: true
 overview: 'P&N Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
+  The P&N Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   P&N Bank''s developer surface includes engineering blog, authentication, documentation, support, and 21 more developer resources.'
-random_paper: 19
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: P&N Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: pn-bank-rules
 score:
   band: thin
-  composite: 32.4
+  composite: 34.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 37.5
     discoverability: 73.2
@@ -259,7 +276,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 31.9
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -280,13 +297,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 24.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pn-bank/refs/heads/main/screenshots/pn-bank-2026-07-21T114741.png
+screenshot: https://apis.io/screenshots/pn-bank/pn-bank-2026-07-21T114741.png
 security:
 - kind: authentication
   name: Pn Bank Authentication
@@ -300,6 +317,10 @@ security:
   name: Pn Bank Vulnerability Disclosure
   slug: pn-bank-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: Look up P&N Bank banking products
+  slug: pn-bank-get-products
 slug: pn-bank
 tags:
 - Finance

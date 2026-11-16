@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-10-17'
+  score: 44.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -97,9 +103,6 @@ apis:
 artifact_total: 28
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Spider Cloud Crawling API
   slug: open-spider-cloud-crawling-api
 - collection_type: open
@@ -139,17 +142,17 @@ common:
   type: License
   url: https://github.com/spider-rs/spider-cloud-mcp-v2/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/agentic-access/spider-cloud-agentic-access.yml
+  href: https://artifacts.apis.io/spider-cloud/agentic-access/spider-cloud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spider-cloud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/security/spider-cloud-domain-security.yml
+  href: https://artifacts.apis.io/spider-cloud/security/spider-cloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spider-cloud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/authentication/spider-cloud-authentication.yml
+  href: https://artifacts.apis.io/spider-cloud/authentication/spider-cloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spider-cloud-authentication.yml
@@ -210,17 +213,17 @@ common:
   type: Support
   url: mailto:support@spider.cloud
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/plans/spider-cloud-plans-pricing.yml
+  href: https://artifacts.apis.io/spider-cloud/plans/spider-cloud-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/spider-cloud-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/rate-limits/spider-cloud-rate-limits.yml
+  href: https://artifacts.apis.io/spider-cloud/rate-limits/spider-cloud-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/spider-cloud-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/finops/spider-cloud-finops.yml
+  href: https://artifacts.apis.io/spider-cloud/finops/spider-cloud-finops.yml
   title: ''
   type: FinOps
   url: finops/spider-cloud-finops.yml
@@ -234,7 +237,7 @@ finops:
 - has_sources: false
   method: generated
   name: Spider Cloud Finops
-  primary_unit: ''
+  primary_unit: GB / compute-minute
   service_category: API
   slug: spider-cloud-finops
   template: true
@@ -251,30 +254,46 @@ network: true
 overview: 'Spider publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Crawling API, Data API, Fetch API, and 7 more. Tagged areas include Crawling, Web Scraping, Data Extraction, URLs, and Artificial Intelligence.
 
 
+  The Spider catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Spider''s developer surface includes authentication, documentation, API reference, pricing, support, engineering blog, and 17 more developer resources.'
 plans:
 - name: Spider Cloud Plans Pricing
   plan_count: 4
   slug: spider-cloud-plans-pricing
-random_paper: 17
+random_paper: 3
 rate_limits:
 - limit_count: 4
   name: Spider Cloud Rate Limits
   slug: spider-cloud-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Spider API Rules
+  rule_count: 69
+  severity_counts:
+    error: 67
+    hint: 0
+    info: 1
+    warn: 1
+  slug: spider-cloud-rules
 score:
   band: thin
-  composite: 31.9
+  composite: 33.4
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 52.4
     discoverability: 68.3
@@ -282,7 +301,7 @@ score:
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 39.4
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
@@ -297,13 +316,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/spider-cloud/refs/heads/main/screenshots/spider-cloud-2026-06-20T194311.png
+screenshot: https://apis.io/screenshots/spider-cloud/spider-cloud-2026-06-20T194311.png
 security:
 - kind: authentication
   name: Spider Cloud Authentication
@@ -323,7 +342,7 @@ tags:
 - Markdown
 - MCP
 - Rust
-- Headless Browser
+- Browser Automation
 - Proxies
 website: https://spider.cloud
 ---

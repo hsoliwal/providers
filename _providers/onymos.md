@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Asynchronous document-image enhancement REST API. POST /api/enhance accepts a base64-encoded image plus a preset (document, auto-crop, photo or watermark) and returns a result_url immediately; GET /ap
@@ -81,57 +84,57 @@ common:
   type: Compliance
   url: https://onymos.com/security/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/packages/onymos-packages.yml
+  href: https://artifacts.apis.io/onymos/packages/onymos-packages.yml
   title: ''
   type: Packages
   url: packages/onymos-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/authentication/onymos-authentication.yml
+  href: https://artifacts.apis.io/onymos/authentication/onymos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/onymos-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/conventions/onymos-conventions.yml
+  href: https://artifacts.apis.io/onymos/conventions/onymos-conventions.yml
   title: ''
   type: Conventions
   url: conventions/onymos-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/conformance/onymos-conformance.yml
+  href: https://artifacts.apis.io/onymos/conformance/onymos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/onymos-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/components/onymos-components.yml
+  href: https://artifacts.apis.io/onymos/components/onymos-components.yml
   title: ''
   type: Components
   url: components/onymos-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/lifecycle/onymos-lifecycle.yml
+  href: https://artifacts.apis.io/onymos/lifecycle/onymos-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/onymos-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/plans/onymos-plans-pricing.yml
+  href: https://artifacts.apis.io/onymos/plans/onymos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/onymos-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/rate-limits/onymos-rate-limits.yml
+  href: https://artifacts.apis.io/onymos/rate-limits/onymos-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/onymos-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/llms/onymos-llms.txt
+  href: https://artifacts.apis.io/onymos/llms/onymos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/onymos-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/security/onymos-trust-center.yml
+  href: https://artifacts.apis.io/onymos/security/onymos-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/onymos-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/security/onymos-domain-security.yml
+  href: https://artifacts.apis.io/onymos/security/onymos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onymos-domain-security.yml
@@ -152,7 +155,7 @@ plans:
 - name: Onymos Plans Pricing
   plan_count: 0
   slug: onymos-plans-pricing
-random_paper: 17
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Onymos Rate Limits
@@ -161,7 +164,7 @@ score:
   band: emerging
   composite: 24.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -185,14 +188,14 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/onymos/refs/heads/main/screenshots/onymos-2026-09-02T150854.png
+screenshot: https://apis.io/screenshots/onymos/onymos-2026-09-02T150854.png
 security:
 - kind: authentication
   name: Onymos Authentication

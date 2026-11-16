@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -72,9 +76,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Claim.MD Claim Status API
   slug: open-claim-md-claim-status-api
 - collection_type: open
@@ -94,22 +95,22 @@ collections:
   slug: open-claim-md
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/capabilities/claim-md-capability-edges.yml
+  href: https://artifacts.apis.io/claim-md/capabilities/claim-md-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/claim-md-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/agentic-access/claim-md-agentic-access.yml
+  href: https://artifacts.apis.io/claim-md/agentic-access/claim-md-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/claim-md-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/security/claim-md-domain-security.yml
+  href: https://artifacts.apis.io/claim-md/security/claim-md-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/claim-md-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/authentication/claim-md-authentication.yml
+  href: https://artifacts.apis.io/claim-md/authentication/claim-md-authentication.yml
   title: ''
   type: Authentication
   url: authentication/claim-md-authentication.yml
@@ -126,17 +127,17 @@ common:
   type: Documentation
   url: https://docs.claim.md/docs/index
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/plans/claim-md-plans-pricing.yml
+  href: https://artifacts.apis.io/claim-md/plans/claim-md-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/claim-md-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/rate-limits/claim-md-rate-limits.yml
+  href: https://artifacts.apis.io/claim-md/rate-limits/claim-md-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/claim-md-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/finops/claim-md-finops.yml
+  href: https://artifacts.apis.io/claim-md/finops/claim-md-finops.yml
   title: ''
   type: FinOps
   url: finops/claim-md-finops.yml
@@ -163,35 +164,51 @@ network: true
 overview: 'Claim.MD publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Claim Status API, Claims API, Eligibility API, and 2 more. Tagged areas include Healthcare, Medical Claims, Clearinghouse, EDI, and X12.
 
 
+  The Claim.MD catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Claim.MD''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Claim Md Plans Pricing
   plan_count: 2
   slug: claim-md-plans-pricing
-random_paper: 2
+random_paper: 4
 rate_limits:
 - limit_count: 4
   name: Claim Md Rate Limits
   slug: claim-md-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Claim.MD API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: claim-md-rules
 score:
-  band: emerging
-  composite: 25.0
+  band: thin
+  composite: 26.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.9
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 31.9
+  previous_composite: 26.6
   provenance:
     agentic_access: derived
     contracts:
@@ -205,13 +222,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 10.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/claim-md/refs/heads/main/screenshots/claim-md-2026-07-25T205451.png
+screenshot: https://apis.io/screenshots/claim-md/claim-md-2026-07-25T205451.png
 security:
 - kind: authentication
   name: Claim Md Authentication

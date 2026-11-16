@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Apiiro product API documented behind authentication.
@@ -41,22 +45,22 @@ apis:
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/mcp/apiiro-mcp.yml
+  href: https://artifacts.apis.io/apiiro/mcp/apiiro-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/apiiro-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/hosts/apiiro-hosts.yml
+  href: https://artifacts.apis.io/apiiro/hosts/apiiro-hosts.yml
   title: ''
   type: Hosts
   url: hosts/apiiro-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/vendors/apiiro-vendors.yml
+  href: https://artifacts.apis.io/apiiro/vendors/apiiro-vendors.yml
   title: ''
   type: Vendors
   url: vendors/apiiro-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/packages/apiiro-packages.yml
+  href: https://artifacts.apis.io/apiiro/packages/apiiro-packages.yml
   title: ''
   type: SDKs
   url: packages/apiiro-packages.yml
@@ -65,12 +69,12 @@ common:
   type: Support
   url: https://support.apiiro.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/security/apiiro-trust-center.yml
+  href: https://artifacts.apis.io/apiiro/security/apiiro-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/apiiro-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/security/apiiro-domain-security.yml
+  href: https://artifacts.apis.io/apiiro/security/apiiro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apiiro-domain-security.yml
@@ -103,12 +107,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/apiiro
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/packages/apiiro-packages.yml
+  href: https://artifacts.apis.io/apiiro/packages/apiiro-packages.yml
   title: ''
   type: Packages
   url: packages/apiiro-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/cli/apiiro-cli.yml
+  href: https://artifacts.apis.io/apiiro/cli/apiiro-cli.yml
   title: ''
   type: CLI
   url: cli/apiiro-cli.yml
@@ -141,35 +145,43 @@ common:
   type: Compliance
   url: https://trust.apiiro.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/well-known/apiiro-security.txt
+  href: https://artifacts.apis.io/apiiro/well-known/apiiro-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/apiiro-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/well-known/apiiro-well-known.yml
+  href: https://artifacts.apis.io/apiiro/well-known/apiiro-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/apiiro-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/llms/apiiro-llms.txt
+  href: https://artifacts.apis.io/apiiro/llms/apiiro-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apiiro-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/lifecycle/apiiro-lifecycle.yml
+  href: https://artifacts.apis.io/apiiro/lifecycle/apiiro-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/apiiro-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/security/apiiro-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apiiro/security/apiiro-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apiiro-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/security/apiiro-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apiiro/security/apiiro-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/apiiro-vulnerability-disclosure.yml
+coverage:
+  checked: '2026-10-05'
+  detail: Documentation redirects to login at identity.apiiro.com requiring authentication.
+  evidence:
+  - status: 307
+    url: https://docs.apiiro.com/openapi.json
+  reason: sales-gate
+  state: gated
 created: '2026-07-17'
 description: Apiiro is an Application Security Posture Management (ASPM) company that helps organizations secure modern and AI-assisted ("agentic") software development. Its AppSec Data Fabric ingests code, cloud, runtime, and pipeline signals to build a Risk Graph and Software Graph, and its Guardian Agent applies AI to triage and remediate risk across AI SAST, AI SCA, AI SPM, AI threat modeling, API security, secrets security, software supply chain security (SSCS), and autofix/prevention workflows. Apiiro is a cybersecurity portfolio company of Greylock. The product API and developer documentation are gated behind an Apiiro identity provider (identity.apiiro.com); this network profile is built from Apiiro's public marketing, security.txt, status, and trust surfaces.
 image: https://www.apiiro.com/
@@ -186,26 +198,26 @@ overview: 'Apiiro is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Apiiro''s developer surface includes support, documentation, API reference, engineering blog, getting-started guide, CLI, signup flow, and 22 more developer resources.'
-random_paper: 6
+random_paper: 20
 score:
   band: emerging
-  composite: 24.9
+  composite: 20.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.9
+  delta: -4.2
   facets:
-    access_clarity: 32.9
+    access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 38.1
+    developer_ergonomics: 22.6
     discoverability: 66.7
     operational_transparency: 28.9
-  previous_composite: 18.0
+  previous_composite: 24.9
   provenance:
     mcp: first-party
   regulatory:
@@ -214,14 +226,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/screenshots/apiiro-2026-07-25T200624.png
+screenshot: https://apis.io/screenshots/apiiro/apiiro-2026-07-25T200624.png
 security:
 - kind: domain-security
   name: Apiiro Domain Security

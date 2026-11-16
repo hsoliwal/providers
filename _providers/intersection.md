@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Intersection's AI-powered Order Management System for out-of-home advertising. Announced 2026-05-11, it is a single API over Intersection's digital screen inventory (LinkNYC and other street, transit,
@@ -87,27 +90,27 @@ common:
   type: Twitter
   url: https://twitter.com/intersection_co
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/packages/intersection-packages.yml
+  href: https://artifacts.apis.io/intersection/packages/intersection-packages.yml
   title: ''
   type: Packages
   url: packages/intersection-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/llms/intersection-llms.txt
+  href: https://artifacts.apis.io/intersection/llms/intersection-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/intersection-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/security/intersection-domain-security.yml
+  href: https://artifacts.apis.io/intersection/security/intersection-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/intersection-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/plans/intersection-plans-pricing.yml
+  href: https://artifacts.apis.io/intersection/plans/intersection-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/intersection-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/rate-limits/intersection-rate-limits.yml
+  href: https://artifacts.apis.io/intersection/rate-limits/intersection-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/intersection-rate-limits.yml
@@ -147,7 +150,7 @@ plans:
 - name: Intersection Plans Pricing
   plan_count: 0
   slug: intersection-plans-pricing
-random_paper: 5
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Intersection Rate Limits
@@ -156,7 +159,7 @@ score:
   band: emerging
   composite: 14.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -187,14 +190,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/intersection/refs/heads/main/screenshots/intersection-2026-09-02T145908.png
+screenshot: https://apis.io/screenshots/intersection/intersection-2026-09-02T145908.png
 security:
 - kind: domain-security
   name: Intersection Domain Security

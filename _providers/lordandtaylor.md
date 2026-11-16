@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -42,22 +47,22 @@ common:
   type: Website
   url: https://lordandtaylor.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/mcp/lordandtaylor-mcp.yml
+  href: https://artifacts.apis.io/lordandtaylor/mcp/lordandtaylor-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/lordandtaylor-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/well-known/lordandtaylor-well-known.yml
+  href: https://artifacts.apis.io/lordandtaylor/well-known/lordandtaylor-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lordandtaylor-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/authentication/lordandtaylor-authentication.yml
+  href: https://artifacts.apis.io/lordandtaylor/authentication/lordandtaylor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lordandtaylor-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/scopes/lordandtaylor-scopes.yml
+  href: https://artifacts.apis.io/lordandtaylor/scopes/lordandtaylor-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lordandtaylor-scopes.yml
@@ -66,12 +71,12 @@ common:
   type: OpenIDConnect
   url: https://www.lordandtaylor.com/.well-known/openid-configuration
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/conformance/lordandtaylor-conformance.yml
+  href: https://artifacts.apis.io/lordandtaylor/conformance/lordandtaylor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lordandtaylor-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/security/lordandtaylor-domain-security.yml
+  href: https://artifacts.apis.io/lordandtaylor/security/lordandtaylor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lordandtaylor-domain-security.yml
@@ -103,7 +108,7 @@ overview: 'Lord & Taylor is profiled on the [APIs.io](https://apis.io/) network.
 
 
   Lord & Taylor''s developer surface includes authentication and 10 more developer resources.'
-random_paper: 21
+random_paper: 15
 scopes:
 - name: Lordandtaylor Scopes
   scope_count: 4
@@ -142,14 +147,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lordandtaylor/refs/heads/main/screenshots/lordandtaylor-2026-08-07T171807.png
+screenshot: https://apis.io/screenshots/lordandtaylor/lordandtaylor-2026-08-07T171807.png
 security:
 - kind: authentication
   name: Lordandtaylor Authentication

@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: partner
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +39,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/security/northrop-grumman-domain-security.yml
+  href: https://artifacts.apis.io/northrop-grumman/security/northrop-grumman-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/northrop-grumman-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/llms/northrop-grumman-llms.txt
+  href: https://artifacts.apis.io/northrop-grumman/llms/northrop-grumman-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/northrop-grumman-llms.txt
@@ -140,12 +147,12 @@ press:
 - date: ''
   title: Artificial Intelligence
   url: https://news.northropgrumman.com/artificial-intelligence
-random_paper: 2
+random_paper: 16
 score:
   band: emerging
   composite: 11.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -175,14 +182,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/northrop-grumman/refs/heads/main/screenshots/northrop-grumman-2026-10-11T111637.png
+screenshot: https://apis.io/screenshots/northrop-grumman/northrop-grumman-2026-10-11T111637.png
 security:
 - kind: domain-security
   name: Northrop Grumman Domain Security

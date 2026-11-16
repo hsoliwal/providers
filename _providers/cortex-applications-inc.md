@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 15.1
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - baseURL: http://cities.internal.my-company.com
@@ -54,52 +68,52 @@ apis:
 artifact_total: 12
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/rules/cortex-applications-inc-rules.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/rules/cortex-applications-inc-rules.yml
   title: ''
   type: Spectral
   url: rules/cortex-applications-inc-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/json-ld/cortex-applications-inc-context.jsonld
+  href: https://artifacts.apis.io/cortex-applications-inc/json-ld/cortex-applications-inc-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cortex-applications-inc-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/vocabulary/cortex-applications-inc-vocabulary.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/vocabulary/cortex-applications-inc-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cortex-applications-inc-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/data-model/cortex-applications-inc-data-model.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/data-model/cortex-applications-inc-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cortex-applications-inc-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/authentication/cortex-applications-inc-authentication.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/authentication/cortex-applications-inc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cortex-applications-inc-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/conformance/cortex-applications-inc-conformance.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/conformance/cortex-applications-inc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cortex-applications-inc-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/llms/cortex-applications-inc-llms.txt
+  href: https://artifacts.apis.io/cortex-applications-inc/llms/cortex-applications-inc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cortex-applications-inc-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/a2a/cortex-applications-inc-a2a.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/a2a/cortex-applications-inc-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/cortex-applications-inc-a2a.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/hosts/cortex-applications-inc-hosts.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/hosts/cortex-applications-inc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cortex-applications-inc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/vendors/cortex-applications-inc-vendors.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/vendors/cortex-applications-inc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cortex-applications-inc-vendors.yml
@@ -148,7 +162,7 @@ common:
   type: APIReference
   url: https://docs.cortex.io/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cortex-applications-inc/refs/heads/main/security/cortex-applications-inc-domain-security.yml
+  href: https://artifacts.apis.io/cortex-applications-inc/security/cortex-applications-inc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cortex-applications-inc-domain-security.yml
@@ -195,7 +209,7 @@ overview: 'Cortex Applications, Inc. is listed with 5 APIs on the [APIs.io](http
 
 
   Cortex Applications, Inc.''s developer surface includes authentication, pricing, engineering blog, getting-started guide, documentation, API reference, and 17 more developer resources.'
-random_paper: 20
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -211,25 +225,27 @@ rules:
   slug: cortex-applications-inc-rules
 score:
   band: thin
-  composite: 37.6
+  composite: 30.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 19
     catalog_earned: 59.8
     catalog_earned_first_party: 0.0
     catalog_gap: 55.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.2
   facets:
-    access_clarity: 31.6
+    access_clarity: 21.1
     contract_governance: 35.6
-    contract_quality: 21.4
-    developer_ergonomics: 52.4
-    discoverability: 80.4
-    operational_transparency: 21.1
+    contract_quality: 20.6
+    developer_ergonomics: 36.9
+    discoverability: 79.5
+    operational_transparency: 10.5
+  previous_composite: 37.4
   provenance:
     conformance: first-party
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 6
       marker_coverage: 100.0
       total: 6
@@ -239,12 +255,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cortex-applications-inc/cortex-applications-inc-2026-11-03T125400.png
 security:
 - kind: authentication
   name: Cortex Applications Inc Authentication

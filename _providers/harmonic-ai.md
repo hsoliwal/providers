@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 58.1
-  scored_at: '2026-10-17'
+  score: 58.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 118
   slug: harmonic-ai-agentic-access
   summary_line: 118 operations · 67 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.harmonic.ai/
   baseurl_source: declared
@@ -52,15 +59,12 @@ apis:
 - description: Hosted, agent-native MCP server exposing 40+ tools for enrichment, search, saved searches, lists, investors, network mapping, batch lookup, custom fields, and team. Listed in the Claude Connector stor
   name: Harmonic MCP Server
   slug: harmonic-mcp-server
-artifact_total: 21
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Harmonic Ai Event Surface
   slug: harmonic-ai-event-surface
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Harmonic.ai Public attachments API
   slug: open-harmonic-ai-attachments-api
@@ -89,12 +93,17 @@ collections:
   name: Harmonic.ai Public search API
   slug: open-harmonic-ai-search-api
 common:
+- group: other
+  href: https://artifacts.apis.io/harmonic-ai/capabilities/harmonic-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/harmonic-ai-capability-edges.yml
 - group: company
   title: ''
   type: Website
   url: https://www.harmonic.ai/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/agentic-access/harmonic-ai-agentic-access.yml
+  href: https://artifacts.apis.io/harmonic-ai/agentic-access/harmonic-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/harmonic-ai-agentic-access.yml
@@ -155,92 +164,100 @@ common:
   type: ChangeLog
   url: https://console.harmonic.ai/docs/changelog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/mcp/harmonic-ai-mcp.yml
+  href: https://artifacts.apis.io/harmonic-ai/mcp/harmonic-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/harmonic-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/llms/harmonic-ai-llms.txt
+  href: https://artifacts.apis.io/harmonic-ai/llms/harmonic-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/harmonic-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/well-known/harmonic-ai-well-known.yml
+  href: https://artifacts.apis.io/harmonic-ai/well-known/harmonic-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/harmonic-ai-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/authentication/harmonic-ai-authentication.yml
+  href: https://artifacts.apis.io/harmonic-ai/authentication/harmonic-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/harmonic-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/scopes/harmonic-ai-scopes.yml
+  href: https://artifacts.apis.io/harmonic-ai/scopes/harmonic-ai-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/harmonic-ai-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/conventions/harmonic-ai-conventions.yml
+  href: https://artifacts.apis.io/harmonic-ai/conventions/harmonic-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/harmonic-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/lifecycle/harmonic-ai-lifecycle.yml
+  href: https://artifacts.apis.io/harmonic-ai/lifecycle/harmonic-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/harmonic-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/conformance/harmonic-ai-conformance.yml
+  href: https://artifacts.apis.io/harmonic-ai/conformance/harmonic-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/harmonic-ai-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/security/harmonic-ai-domain-security.yml
+  href: https://artifacts.apis.io/harmonic-ai/security/harmonic-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/harmonic-ai-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/harmonic-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/packages/harmonic-ai-packages.yml
+  href: https://artifacts.apis.io/harmonic-ai/packages/harmonic-ai-packages.yml
   title: ''
   type: Packages
   url: packages/harmonic-ai-packages.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/rate-limits/harmonic-ai-rate-limits.yml
+  href: https://artifacts.apis.io/harmonic-ai/rate-limits/harmonic-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/harmonic-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/plans/harmonic-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/harmonic-ai/plans/harmonic-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/harmonic-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/changelog/harmonic-ai-changelog.yml
+  href: https://artifacts.apis.io/harmonic-ai/changelog/harmonic-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/harmonic-ai-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/security/harmonic-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/harmonic-ai/security/harmonic-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/harmonic-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/security/harmonic-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/harmonic-ai/security/harmonic-ai-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/harmonic-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/conformance/harmonic-ai-conformance.yml
+  href: https://artifacts.apis.io/harmonic-ai/conformance/harmonic-ai-conformance.yml
   title: ''
   type: Compliance
   url: conformance/harmonic-ai-conformance.yml
 created: '2026-07-22'
 description: Startup discovery and intelligence platform built on a proprietary database of 30M+ companies and 200M+ people, offering real-time funding data, headcount/traction metrics, team composition, and investor relationships via REST, GraphQL, and a hosted MCP server. Used by venture capital, growth equity, corporate development, and go-to-market teams to find, research, and qualify startups programmatically or through the console web app, Chrome extension, bulk data exports (BigQuery/Snowflake/S3), and CRM integrations (Salesforce/HubSpot/Affinity).
+finops:
+- has_sources: true
+  method: derived
+  name: Harmonic Ai Finops
+  primary_unit: ''
+  service_category: ''
+  slug: harmonic-ai-finops
+  template: true
 image: https://cdn.prod.website-files.com/6107b1101d4d3e748743f234/65f31ad2b4ac6cf0cb8bd691_og-img.png
 layout: provider
 mcp_servers:
@@ -254,19 +271,32 @@ network: true
 overview: 'Harmonic.ai publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Harmonic REST & GraphQL API, and 1 more. Tagged areas include Startup Intelligence, Venture Capital, Company Data, People Data, and investor-data.
 
 
-  The Harmonic.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Harmonic.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Harmonic.ai''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
+  Harmonic.ai''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
 plans:
 - name: Harmonic Ai Plans Pricing
   plan_count: 3
   slug: harmonic-ai-plans-pricing
-random_paper: 18
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Harmonic Ai Rate Limits
   slug: harmonic-ai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Harmonic.ai API Rules
+  rule_count: 44
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 3
+    warn: 8
+  slug: harmonic-ai-rules
 scopes:
 - name: Harmonic Ai Scopes
   scope_count: 2
@@ -274,30 +304,30 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 55.1
+  composite: 57.7
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 31
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.0
   facets:
     access_clarity: 77.6
-    contract_governance: 18.2
-    contract_quality: 48.6
+    contract_governance: 31.8
+    contract_quality: 52.7
     developer_ergonomics: 32.7
     discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 55.0
+  previous_composite: 56.7
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 9
     mcp: first-party
     skills: derived
@@ -307,13 +337,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/harmonic-ai/refs/heads/main/screenshots/harmonic-ai-2026-07-25T220821.png
+screenshot: https://apis.io/screenshots/harmonic-ai/harmonic-ai-2026-07-25T220821.png
 security:
 - kind: authentication
   name: Harmonic Ai Authentication
@@ -327,6 +357,16 @@ security:
   name: Harmonic Ai Vulnerability Disclosure
   slug: harmonic-ai-vulnerability-disclosure
   summary_line: Hackerone
+skill_count: 4
+skills:
+- name: Attach a document to an investor record
+  slug: harmonic-ai-attach-a-document-to-an-investor
+- name: Build and populate a company watchlist
+  slug: harmonic-ai-build-and-populate-a-watchlist
+- name: Enrich a company
+  slug: harmonic-ai-enrich-a-company
+- name: Natural-language company search
+  slug: harmonic-ai-natural-language-company-search
 slug: harmonic-ai
 tags:
 - Startup Intelligence

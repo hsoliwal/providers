@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium (free trial) · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
   - '{''url'': ''https://klingai.com'', ''status'': 301, ''note'': ''declared website redirects to https://kling.ai/ — a different registrable domain (klingai.com -> kling.ai), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
-  trial: true
-  try_now: true
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 43.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -89,9 +92,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Kling AI Open Platform Account API
   slug: open-kling-ai-account-api
 - collection_type: open
@@ -119,17 +119,22 @@ collections:
   name: Kling AI Open Platform API
   slug: open-kling-ai
 common:
+- group: other
+  href: https://artifacts.apis.io/kling-ai/capabilities/kling-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kling-ai-capability-edges.yml
 - group: commercial
   title: ''
   type: Pricing
   url: https://kling.ai/dev/pricing
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kling-ai/refs/heads/main/agentic-access/kling-ai-agentic-access.yml
+  href: https://artifacts.apis.io/kling-ai/agentic-access/kling-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kling-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kling-ai/refs/heads/main/authentication/kling-ai-authentication.yml
+  href: https://artifacts.apis.io/kling-ai/authentication/kling-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kling-ai-authentication.yml
@@ -146,17 +151,17 @@ common:
   type: Documentation
   url: https://app.klingai.com/global/dev/document-api/quickStart/productIntroduction/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kling-ai/refs/heads/main/plans/kling-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/kling-ai/plans/kling-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kling-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kling-ai/refs/heads/main/rate-limits/kling-ai-rate-limits.yml
+  href: https://artifacts.apis.io/kling-ai/rate-limits/kling-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kling-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kling-ai/refs/heads/main/finops/kling-ai-finops.yml
+  href: https://artifacts.apis.io/kling-ai/finops/kling-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/kling-ai-finops.yml
@@ -183,35 +188,51 @@ network: true
 overview: 'Kling AI publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Image Generation API, Image-to-Video API, and 5 more. Tagged areas include Video Generation, AI Video, Generative AI, Image-to-Video, and Artificial Intelligence.
 
 
-  Kling AI''s developer surface includes pricing, authentication, documentation, and 6 more developer resources.'
+  The Kling AI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Kling AI''s developer surface includes pricing, authentication, documentation, and 7 more developer resources.'
 plans:
 - name: Kling Ai Plans Pricing
   plan_count: 9
   slug: kling-ai-plans-pricing
-random_paper: 10
+random_paper: 12
 rate_limits:
 - limit_count: 4
   name: Kling Ai Rate Limits
   slug: kling-ai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Kling AI API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: kling-ai-rules
 score:
   band: thin
-  composite: 30.9
+  composite: 32.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 52.0
+    artifact_dirs: 15
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.9
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.1
     developer_ergonomics: 29.8
     discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 32.8
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -226,13 +247,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kling-ai/refs/heads/main/screenshots/kling-ai-2026-07-25T223947.png
+screenshot: https://apis.io/screenshots/kling-ai/kling-ai-2026-07-25T223947.png
 security:
 - kind: authentication
   name: Kling Ai Authentication

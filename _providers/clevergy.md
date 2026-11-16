@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 43
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 83
   slug: clevergy-agentic-access
   summary_line: 83 operations · 43 acting
-api_count: 2
+api_count: 1
 apis:
 - description: Outbound HTTP callbacks that notify an integrator in real time when a Clevergy lifecycle entity changes. Three event surfaces are documented — User, SalesOpportunity and Ticket — with CREATE, UPDATE a
   name: Clevergy Webhooks
@@ -167,19 +170,19 @@ apis:
   description: The Virtual wallet API from Clevergy — 1 operation(s) for virtual wallet.
   name: Clevergy Virtual wallet API
   slug: clevergy-virtual-wallet-api
-artifact_total: 31
+artifact_total: 40
 asyncapis:
 - description: ''
   name: Clevergy Webhooks
   slug: clevergy-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/capabilities/clevergy-capability-edges.yml
+  href: https://artifacts.apis.io/clevergy/capabilities/clevergy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/clevergy-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/overlays/clevergy-connect-api-overlay.yaml
+  href: https://artifacts.apis.io/clevergy/overlays/clevergy-connect-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/clevergy-connect-api-overlay.yaml
@@ -252,83 +255,91 @@ common:
   type: LLMsTxt
   url: https://docs.clever.gy/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/llms/clevergy-llms.txt
+  href: https://artifacts.apis.io/clevergy/llms/clevergy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/clevergy-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/authentication/clevergy-authentication.yml
+  href: https://artifacts.apis.io/clevergy/authentication/clevergy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/clevergy-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/conventions/clevergy-conventions.yml
+  href: https://artifacts.apis.io/clevergy/conventions/clevergy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/clevergy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/errors/clevergy-problem-types.yml
+  href: https://artifacts.apis.io/clevergy/errors/clevergy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/clevergy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/data-model/clevergy-data-model.yml
+  href: https://artifacts.apis.io/clevergy/data-model/clevergy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/clevergy-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/lifecycle/clevergy-lifecycle.yml
+  href: https://artifacts.apis.io/clevergy/lifecycle/clevergy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/clevergy-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/rate-limits/clevergy-rate-limits.yml
+  href: https://artifacts.apis.io/clevergy/rate-limits/clevergy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/clevergy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/plans/clevergy-plans-pricing.yml
+  href: https://artifacts.apis.io/clevergy/plans/clevergy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/clevergy-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/conformance/clevergy-conformance.yml
+  href: https://artifacts.apis.io/clevergy/conformance/clevergy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/clevergy-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/components/clevergy-components.yml
+  href: https://artifacts.apis.io/clevergy/components/clevergy-components.yml
   title: ''
   type: Components
   url: components/clevergy-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/packages/clevergy-packages.yml
+  href: https://artifacts.apis.io/clevergy/packages/clevergy-packages.yml
   title: ''
   type: Packages
   url: packages/clevergy-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/asyncapi/clevergy-webhooks.yml
+  href: https://artifacts.apis.io/clevergy/asyncapi/clevergy-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/clevergy-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/clevergy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/agentic-access/clevergy-agentic-access.yml
+  href: https://artifacts.apis.io/clevergy/agentic-access/clevergy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/clevergy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/security/clevergy-domain-security.yml
+  href: https://artifacts.apis.io/clevergy/security/clevergy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clevergy-domain-security.yml
 created: '2026-08-17'
 description: 'Clevergy (The Clevergy Solution, SL) is a Madrid-based climate-tech SaaS company, founded in 2022, that sells white-label energy-management software to electricity and gas retailers, solar installers and energy advisors. Its platform ingests household consumption data — pulled directly from Spanish distributors and the Datadis smart-meter hub via the CUPS supply-point code, or from connected solar inverters and smart devices — and turns it into consumption analytics, invoice breakdowns, savings recommendations, appliance-level disaggregation, virtual battery and wallet balances, energy-community shares, and sales leads the retailer can act on. Integrators consume it two ways: the Connect API, a Swagger 2.0 REST API on connect.clever.gy with 83 operations spanning users, houses, contracts, invoices, tariffs, equipment, energy telemetry, tickets and sales opportunities; and a catalog of roughly thirty embeddable "microfrontend" web components that drop Clevergy''s end-user experiences
   straight into the retailer''s own app or webview, authenticated with a short-lived per-user JWT. Clevergy raised a €3.2M round in October 2025 co-led by Racine² (Serena and Makesense) and Axon Partners Group, with Satgana, Wayra and Angels participating.'
+finops:
+- has_sources: true
+  method: derived
+  name: Clevergy Finops
+  primary_unit: ''
+  service_category: ''
+  slug: clevergy-finops
+  template: true
 image: https://clever.gy/wp-content/uploads/2024/09/cropped-favicon-isotipo-clevergy.png
 layout: provider
 modified: '2026-08-17'
@@ -338,7 +349,7 @@ network: true
 overview: 'Clevergy publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access control API, Connections API, Contracts API, and 22 more. Tagged areas include Company, Climate Tech, Energy, Energy Management, and Utilities.
 
 
-  The Clevergy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Clevergy catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Clevergy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, FAQ, and 27 more developer resources.'
@@ -346,26 +357,39 @@ plans:
 - name: Clevergy Plans Pricing
   plan_count: 2
   slug: clevergy-plans-pricing
-random_paper: 7
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Clevergy Rate Limits
   slug: clevergy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Clevergy API Rules
+  rule_count: 58
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 15
+  slug: clevergy-rules
 score:
   band: developing
-  composite: 51.0
+  composite: 53.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 45.0
+    artifact_dirs: 28
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.3
   facets:
     access_clarity: 55.3
-    contract_governance: 4.5
-    contract_quality: 57.6
+    contract_governance: 18.2
+    contract_quality: 62.8
     developer_ergonomics: 61.3
     discoverability: 73.2
     operational_transparency: 10.5
@@ -377,14 +401,14 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 51.0
+  previous_composite: 52.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 23
     mcp: derived
     skills: derived
@@ -394,13 +418,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 26.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/screenshots/clevergy-2026-09-02T145107.png
+screenshot: https://apis.io/screenshots/clevergy/clevergy-2026-09-02T145107.png
 security:
 - kind: authentication
   name: Clevergy Authentication
@@ -410,6 +434,22 @@ security:
   name: Clevergy Domain Security
   slug: clevergy-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 7
+skills:
+- name: Embed a Clevergy microfrontend with a user JWT
+  slug: clevergy-embed-microfrontend
+- name: Integrate Clevergy support tickets with a helpdesk or CRM
+  slug: clevergy-integrate-support-tickets
+- name: Onboard a Clevergy client with contracts and invoices
+  slug: clevergy-onboard-client
+- name: Onboard a Clevergy client with a solar installation
+  slug: clevergy-onboard-solar-client
+- name: Retrieve a Clevergy customer's energy data
+  slug: clevergy-retrieve-energy-data
+- name: Monitor and schedule a Clevergy-connected battery
+  slug: clevergy-schedule-battery
+- name: Sync Clevergy sales opportunities into a CRM
+  slug: clevergy-sync-sales-opportunities
 slug: clevergy
 tags:
 - Company

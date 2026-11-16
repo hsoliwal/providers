@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 68
   human_in_the_loop: 1
@@ -124,11 +127,8 @@ apis:
   description: Fetch and manipulate grouping of events (i.e. Views) according to attribute sets (e.g. "uncaught exceptions", "errors from package com.acme")
   name: Overops Views API
   slug: overops-views-api
-artifact_total: 36
+artifact_total: 38
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Services Alerts API
   slug: open-overops-alerts-api
@@ -179,7 +179,7 @@ collections:
   slug: open-overops-views-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/capabilities/overops-capability-edges.yml
+  href: https://artifacts.apis.io/overops/capabilities/overops-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/overops-capability-edges.yml
@@ -192,82 +192,82 @@ common:
   type: Website
   url: https://overops.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/overlays/overops-services-overlay.yaml
+  href: https://artifacts.apis.io/overops/overlays/overops-services-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/overops-services-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/agentic-access/overops-agentic-access.yml
+  href: https://artifacts.apis.io/overops/agentic-access/overops-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/overops-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/security/overops-domain-security.yml
+  href: https://artifacts.apis.io/overops/security/overops-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/overops-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/authentication/overops-authentication.yml
+  href: https://artifacts.apis.io/overops/authentication/overops-authentication.yml
   title: ''
   type: Authentication
   url: authentication/overops-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/packages/overops-packages.yml
+  href: https://artifacts.apis.io/overops/packages/overops-packages.yml
   title: ''
   type: Packages
   url: packages/overops-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/packages/overops-packages.yml
+  href: https://artifacts.apis.io/overops/packages/overops-packages.yml
   title: ''
   type: SDKs
   url: packages/overops-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/well-known/overops-well-known.yml
+  href: https://artifacts.apis.io/overops/well-known/overops-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/overops-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/mcp/overops-mcp.yml
+  href: https://artifacts.apis.io/overops/mcp/overops-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/overops-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/llms/overops-llms.txt
+  href: https://artifacts.apis.io/overops/llms/overops-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/overops-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/conformance/overops-conformance.yml
+  href: https://artifacts.apis.io/overops/conformance/overops-conformance.yml
   title: ''
   type: Conformance
   url: conformance/overops-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/errors/overops-problem-types.yml
+  href: https://artifacts.apis.io/overops/errors/overops-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/overops-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/lifecycle/overops-lifecycle.yml
+  href: https://artifacts.apis.io/overops/lifecycle/overops-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/overops-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/conventions/overops-conventions.yml
+  href: https://artifacts.apis.io/overops/conventions/overops-conventions.yml
   title: ''
   type: Conventions
   url: conventions/overops-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/changelog/overops-changelog.yml
+  href: https://artifacts.apis.io/overops/changelog/overops-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/overops-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/data-model/overops-data-model.yml
+  href: https://artifacts.apis.io/overops/data-model/overops-data-model.yml
   title: ''
   type: DataModel
   url: data-model/overops-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/overops/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -310,27 +310,43 @@ network: true
 overview: 'Overops publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Categories API, Code Redaction API, and 13 more. Tagged areas include Company, Observability, Reliability, Error Monitoring, and Application Performance.
 
 
+  The Overops catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Overops'' developer surface includes authentication, changelog, documentation, API reference, support, and 21 more developer resources.'
-random_paper: 12
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Overops API Rules
+  rule_count: 58
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 12
+  slug: overops-rules
 score:
   band: thin
-  composite: 29.4
+  composite: 33.7
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 2.6
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.1
-    developer_ergonomics: 33.9
+    developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 29.3
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -347,13 +363,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/overops/refs/heads/main/screenshots/overops-2026-08-07T191135.png
+screenshot: https://apis.io/screenshots/overops/overops-2026-08-07T191135.png
 security:
 - kind: authentication
   name: Overops Authentication
@@ -363,6 +379,12 @@ security:
   name: Overops Domain Security
   slug: overops-domain-security
   summary_line: TLSv1.2 · DMARC
+skill_count: 2
+skills:
+- name: Configure OverOps view alerting
+  slug: overops-configure-view-alerting
+- name: Triage production errors with OverOps
+  slug: overops-triage-production-errors
 slug: overops
 tags:
 - Company

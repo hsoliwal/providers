@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,13 +38,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The El Dorado onramp/offramp trading API for converting between Latin American fiat currencies and crypto (USDT on Arbitrum). Create buy/sell quotes and orders, manage KYC, and fetch supported currenc
   name: El Dorado API
   slug: el-dorado-api
-artifact_total: 4
+artifact_total: 6
 asyncapis:
 - description: ''
   name: Eldorado Webhooks
@@ -84,67 +87,67 @@ common:
   type: Support
   url: mailto:api@eldorado.io
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/authentication/eldorado-authentication.yml
+  href: https://artifacts.apis.io/eldorado/authentication/eldorado-authentication.yml
   title: ''
   type: Authentication
   url: authentication/eldorado-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/conventions/eldorado-conventions.yml
+  href: https://artifacts.apis.io/eldorado/conventions/eldorado-conventions.yml
   title: ''
   type: Conventions
   url: conventions/eldorado-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/errors/eldorado-problem-types.yml
+  href: https://artifacts.apis.io/eldorado/errors/eldorado-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/eldorado-problem-types.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/sandbox/eldorado-sandbox.yml
+  href: https://artifacts.apis.io/eldorado/sandbox/eldorado-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/eldorado-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/components/eldorado-components.yml
+  href: https://artifacts.apis.io/eldorado/components/eldorado-components.yml
   title: ''
   type: Components
   url: components/eldorado-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/data-model/eldorado-data-model.yml
+  href: https://artifacts.apis.io/eldorado/data-model/eldorado-data-model.yml
   title: ''
   type: DataModel
   url: data-model/eldorado-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/lifecycle/eldorado-lifecycle.yml
+  href: https://artifacts.apis.io/eldorado/lifecycle/eldorado-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/eldorado-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/asyncapi/eldorado-webhooks.yml
+  href: https://artifacts.apis.io/eldorado/asyncapi/eldorado-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/eldorado-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/conformance/eldorado-conformance.yml
+  href: https://artifacts.apis.io/eldorado/conformance/eldorado-conformance.yml
   title: ''
   type: Conformance
   url: conformance/eldorado-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/mcp/eldorado-mcp.yml
+  href: https://artifacts.apis.io/eldorado/mcp/eldorado-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/eldorado-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/eldorado/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/llms/eldorado-llms.txt
+  href: https://artifacts.apis.io/eldorado/llms/eldorado-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/eldorado-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/security/eldorado-domain-security.yml
+  href: https://artifacts.apis.io/eldorado/security/eldorado-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eldorado-domain-security.yml
@@ -163,7 +166,7 @@ overview: 'Eldorado is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Eldorado''s developer surface includes documentation, API reference, getting-started guide, sandbox, engineering blog, signup flow, support, and 15 more developer resources.'
-random_paper: 6
+random_paper: 2
 score:
   band: emerging
   composite: 24.8
@@ -198,14 +201,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/eldorado/refs/heads/main/screenshots/eldorado-2026-07-25T213057.png
+screenshot: https://apis.io/screenshots/eldorado/eldorado-2026-07-25T213057.png
 security:
 - kind: authentication
   name: Eldorado Authentication
@@ -215,6 +218,12 @@ security:
   name: Eldorado Domain Security
   slug: eldorado-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Buy crypto with local fiat (onramp)
+  slug: eldorado-buy-crypto-onramp
+- name: Sell crypto for local fiat (offramp)
+  slug: eldorado-sell-crypto-offramp
 slug: eldorado
 tags:
 - Company

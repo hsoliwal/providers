@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Feedvisor's External API for exporting configuration reports and importing pricing/repricing feeds. OAuth2 client-credentials auth; asynchronous report/feed jobs are submitted then polled by request_i
@@ -70,22 +74,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/feedvisor
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/feedvisor/refs/heads/main/authentication/feedvisor-authentication.yml
+  href: https://artifacts.apis.io/feedvisor/authentication/feedvisor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/feedvisor-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/feedvisor/refs/heads/main/conventions/feedvisor-conventions.yml
+  href: https://artifacts.apis.io/feedvisor/conventions/feedvisor-conventions.yml
   title: ''
   type: Conventions
   url: conventions/feedvisor-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/feedvisor/refs/heads/main/llms/feedvisor-llms.txt
+  href: https://artifacts.apis.io/feedvisor/llms/feedvisor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/feedvisor-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/feedvisor/refs/heads/main/security/feedvisor-domain-security.yml
+  href: https://artifacts.apis.io/feedvisor/security/feedvisor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/feedvisor-domain-security.yml
@@ -101,12 +105,12 @@ overview: 'Feedvisor is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Feedvisor''s developer surface includes engineering blog, support, authentication, and 8 more developer resources.'
-random_paper: 21
+random_paper: 7
 score:
   band: emerging
   composite: 17.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -127,14 +131,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/feedvisor/refs/heads/main/screenshots/feedvisor-2026-07-25T214318.png
+screenshot: https://apis.io/screenshots/feedvisor/feedvisor-2026-07-25T214318.png
 security:
 - kind: authentication
   name: Feedvisor Authentication

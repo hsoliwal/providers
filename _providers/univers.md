@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The EnOS platform open APIs cover the core platform services — model, device connection, asset, asset tree, alert engine, TSDB time-series data, and data subscription. Applications register in the EnO
@@ -99,52 +102,52 @@ common:
   type: Compliance
   url: https://univers.com/security-compliance/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/security/univers-trust-center.yml
+  href: https://artifacts.apis.io/univers/security/univers-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/univers-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/security/univers-domain-security.yml
+  href: https://artifacts.apis.io/univers/security/univers-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/univers-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/packages/univers-packages.yml
+  href: https://artifacts.apis.io/univers/packages/univers-packages.yml
   title: ''
   type: Packages
   url: packages/univers-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/packages/univers-packages.yml
+  href: https://artifacts.apis.io/univers/packages/univers-packages.yml
   title: ''
   type: SDKs
   url: packages/univers-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/well-known/univers-well-known.yml
+  href: https://artifacts.apis.io/univers/well-known/univers-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/univers-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/llms/univers-llms.txt
+  href: https://artifacts.apis.io/univers/llms/univers-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/univers-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/grpc/univers-enos-subscription-sub.proto
+  href: https://artifacts.apis.io/univers/grpc/univers-enos-subscription-sub.proto
   title: ''
   type: Protobuf
   url: grpc/univers-enos-subscription-sub.proto
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/grpc/univers-enos-subscription-common.proto
+  href: https://artifacts.apis.io/univers/grpc/univers-enos-subscription-common.proto
   title: ''
   type: Protobuf
   url: grpc/univers-enos-subscription-common.proto
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/conformance/univers-conformance.yml
+  href: https://artifacts.apis.io/univers/conformance/univers-conformance.yml
   title: ''
   type: Conformance
   url: conformance/univers-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/authentication/univers-authentication.yml
+  href: https://artifacts.apis.io/univers/authentication/univers-authentication.yml
   title: ''
   type: Authentication
   url: authentication/univers-authentication.yml
@@ -160,12 +163,12 @@ overview: 'Univers is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Univers'' developer surface includes engineering blog, documentation, API reference, support, authentication, and 19 more developer resources.'
-random_paper: 10
+random_paper: 12
 score:
   band: thin
   composite: 32.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -197,14 +200,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/screenshots/univers-2026-09-02T164929.png
+screenshot: https://apis.io/screenshots/univers/univers-2026-09-02T164929.png
 security:
 - kind: authentication
   name: Univers Authentication

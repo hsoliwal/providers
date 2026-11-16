@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -69,11 +75,8 @@ apis:
   description: S3-compatible object upload, download, listing, deletion, and metadata operations within Ceph Object Storage buckets
   name: Rook Objects API
   slug: rook-objects-api
-artifact_total: 31
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rook Ceph Object Storage Buckets API
   slug: open-rook-buckets-api
@@ -88,22 +91,22 @@ collections:
   slug: open-rook-objects-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/plans/rook-plans-pricing.yml
+  href: https://artifacts.apis.io/rook/plans/rook-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rook-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/rate-limits/rook-rate-limits.yml
+  href: https://artifacts.apis.io/rook/rate-limits/rook-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rook-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/finops/rook-finops.yml
+  href: https://artifacts.apis.io/rook/finops/rook-finops.yml
   title: ''
   type: FinOps
   url: finops/rook-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/capabilities/rook-capability-edges.yml
+  href: https://artifacts.apis.io/rook/capabilities/rook-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rook-capability-edges.yml
@@ -128,17 +131,17 @@ common:
   type: License
   url: https://github.com/rook/rook/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/agentic-access/rook-agentic-access.yml
+  href: https://artifacts.apis.io/rook/agentic-access/rook-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rook-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/security/rook-domain-security.yml
+  href: https://artifacts.apis.io/rook/security/rook-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rook-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/authentication/rook-authentication.yml
+  href: https://artifacts.apis.io/rook/authentication/rook-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rook-authentication.yml
@@ -147,42 +150,42 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/rook-security
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/json-schema/rook-ceph-cluster-schema.json
+  href: https://artifacts.apis.io/rook/json-schema/rook-ceph-cluster-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/rook-ceph-cluster-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/json-schema/rook-ceph-block-pool-schema.json
+  href: https://artifacts.apis.io/rook/json-schema/rook-ceph-block-pool-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/rook-ceph-block-pool-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/json-schema/rook-ceph-filesystem-schema.json
+  href: https://artifacts.apis.io/rook/json-schema/rook-ceph-filesystem-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/rook-ceph-filesystem-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/json-schema/rook-ceph-object-store-schema.json
+  href: https://artifacts.apis.io/rook/json-schema/rook-ceph-object-store-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/rook-ceph-object-store-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/json-structure/rook-ceph-cluster-structure.json
+  href: https://artifacts.apis.io/rook/json-structure/rook-ceph-cluster-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/rook-ceph-cluster-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/json-ld/rook-context.jsonld
+  href: https://artifacts.apis.io/rook/json-ld/rook-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/rook-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/vocabulary/rook-vocabulary.yml
+  href: https://artifacts.apis.io/rook/vocabulary/rook-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/rook-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/rules/rook-spectral-rules.yml
+  href: https://artifacts.apis.io/rook/rules/rook-spectral-rules.yml
   title: ''
   type: Rules
   url: rules/rook-spectral-rules.yml
@@ -302,7 +305,7 @@ plans:
 - name: Rook Plans Pricing
   plan_count: 2
   slug: rook-plans-pricing
-random_paper: 3
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Rook Rate Limits
@@ -335,13 +338,13 @@ score:
   band: developing
   composite: 41.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 55.4
     catalog_earned_first_party: 0.0
     catalog_gap: 59.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
@@ -352,7 +355,7 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 42.7
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     contracts:
@@ -366,13 +369,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rook/refs/heads/main/screenshots/rook-2026-06-20T193212.png
+screenshot: https://apis.io/screenshots/rook/rook-2026-06-20T193212.png
 security:
 - kind: authentication
   name: Rook Authentication

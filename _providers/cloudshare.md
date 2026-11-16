@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +25,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.7
-  scored_at: '2026-10-17'
+  score: 31.0
+  scored_at: '2026-11-06'
 api_count: 16
 apis:
 - description: Cloudshare provides a developer API documented at https://docs.cloudshare.com/.
   name: Cloudshare API
-  slug: cloudshare-api-2
+  slug: cloudshare-api
 - description: The Class API from Cloudshare — 10 operation(s) for class.
   name: Cloudshare Class API
   slug: cloudshare-class-api
@@ -77,47 +90,47 @@ apis:
 artifact_total: 18
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/rules/cloudshare-rules.yml
+  href: https://artifacts.apis.io/cloudshare/rules/cloudshare-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudshare-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/conformance/cloudshare-conformance.yml
+  href: https://artifacts.apis.io/cloudshare/conformance/cloudshare-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudshare-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/llms/cloudshare-llms.txt
+  href: https://artifacts.apis.io/cloudshare/llms/cloudshare-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudshare-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/well-known/cloudshare-status-security.txt
+  href: https://artifacts.apis.io/cloudshare/well-known/cloudshare-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cloudshare-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/well-known/cloudshare-well-known.yml
+  href: https://artifacts.apis.io/cloudshare/well-known/cloudshare-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudshare-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/hosts/cloudshare-hosts.yml
+  href: https://artifacts.apis.io/cloudshare/hosts/cloudshare-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudshare-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/vendors/cloudshare-vendors.yml
+  href: https://artifacts.apis.io/cloudshare/vendors/cloudshare-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudshare-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/packages/cloudshare-packages.yml
+  href: https://artifacts.apis.io/cloudshare/packages/cloudshare-packages.yml
   title: ''
   type: SDKs
   url: packages/cloudshare-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/packages/cloudshare-packages.yml
+  href: https://artifacts.apis.io/cloudshare/packages/cloudshare-packages.yml
   title: ''
   type: Packages
   url: packages/cloudshare-packages.yml
@@ -150,7 +163,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/cloudshare
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudshare/refs/heads/main/security/cloudshare-domain-security.yml
+  href: https://artifacts.apis.io/cloudshare/security/cloudshare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudshare-domain-security.yml
@@ -174,7 +187,7 @@ modified: '2026-10-09'
 name: Cloudshare
 nav: Providers
 network: true
-overview: 'Cloudshare is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Class API, Class Analytics API, Cloudfolders API, and 13 more. Tagged areas include Cloud, VirtualLabs, Training, Sandbox, and Enterprise.
+overview: 'Cloudshare is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Class API, Class Analytics API, and 14 more. Tagged areas include Cloud, Virtual Labs, Training, Sandbox, and Enterprise.
 
 
   The Cloudshare catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -197,21 +210,23 @@ rules:
   slug: cloudshare-rules
 score:
   band: emerging
-  composite: 23.4
+  composite: 19.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 39.5
     catalog_earned_first_party: 0.0
     catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.5
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 18.2
     contract_quality: 9.6
-    developer_ergonomics: 23.8
+    developer_ergonomics: 15.5
     discoverability: 69.6
     operational_transparency: 21.1
+  previous_composite: 24.8
   provenance:
     conformance: derived
     contracts:
@@ -225,12 +240,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cloudshare/cloudshare-2026-11-03T124543.png
 security:
 - kind: domain-security
   name: Cloudshare Domain Security
@@ -239,7 +256,7 @@ security:
 slug: cloudshare
 tags:
 - Cloud
-- VirtualLabs
+- Virtual Labs
 - Training
 - Sandbox
 - Enterprise

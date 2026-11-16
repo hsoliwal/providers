@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -63,9 +66,6 @@ apis:
 artifact_total: 12
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SIGNL4 Webhook and REST Events API
   slug: open-signl4-events-api
 - collection_type: open
@@ -76,27 +76,27 @@ collections:
   slug: open-signl4
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/capabilities/signl4-capability-edges.yml
+  href: https://artifacts.apis.io/signl4/capabilities/signl4-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/signl4-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/agentic-access/signl4-agentic-access.yml
+  href: https://artifacts.apis.io/signl4/agentic-access/signl4-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/signl4-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/security/signl4-trust-center.yml
+  href: https://artifacts.apis.io/signl4/security/signl4-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/signl4-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/security/signl4-domain-security.yml
+  href: https://artifacts.apis.io/signl4/security/signl4-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/signl4-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/authentication/signl4-authentication.yml
+  href: https://artifacts.apis.io/signl4/authentication/signl4-authentication.yml
   title: ''
   type: Authentication
   url: authentication/signl4-authentication.yml
@@ -143,27 +143,43 @@ network: true
 overview: 'SIGNL4 publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Webhook API, and 2 more. Tagged areas include Alerting, Incident Management, On-Call, Mobile Alerts, and Notification.
 
 
+  The SIGNL4 catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   SIGNL4''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, GitHub presence, and 6 more developer resources.'
-random_paper: 21
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: SIGNL4 API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: signl4-rules
 score:
   band: thin
-  composite: 36.5
+  composite: 38.2
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 37.0
+    artifact_dirs: 13
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 53.8
     developer_ergonomics: 35.7
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 36.4
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     contracts:
@@ -177,13 +193,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/screenshots/signl4-2026-06-20T193912.png
+screenshot: https://apis.io/screenshots/signl4/signl4-2026-06-20T193912.png
 security:
 - kind: authentication
   name: Signl4 Authentication

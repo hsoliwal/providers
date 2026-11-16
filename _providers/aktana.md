@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/rate-limits/aktana-rate-limits.yml
+  href: https://artifacts.apis.io/aktana/rate-limits/aktana-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aktana-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/security/aktana-domain-security.yml
+  href: https://artifacts.apis.io/aktana/security/aktana-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aktana-domain-security.yml
@@ -63,7 +69,7 @@ common:
   type: Support
   url: https://pharmaforceiq.com/contact/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/security/aktana-trust-center.yml
+  href: https://artifacts.apis.io/aktana/security/aktana-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/aktana-trust-center.yml
@@ -80,12 +86,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/pfiq/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/conformance/aktana-conformance.yml
+  href: https://artifacts.apis.io/aktana/conformance/aktana-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aktana-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/plans/aktana-plans-pricing.yml
+  href: https://artifacts.apis.io/aktana/plans/aktana-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aktana-plans-pricing.yml
@@ -98,7 +104,7 @@ common:
   type: Login
   url: https://app.pharmaforceiq.com/login
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/llms/aktana-llms.txt
+  href: https://artifacts.apis.io/aktana/llms/aktana-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aktana-llms.txt
@@ -133,7 +139,7 @@ plans:
 - name: Aktana Plans Pricing
   plan_count: 1
   slug: aktana-plans-pricing
-random_paper: 8
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Aktana Rate Limits
@@ -142,7 +148,7 @@ score:
   band: emerging
   composite: 21.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
@@ -173,14 +179,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aktana/refs/heads/main/screenshots/aktana-2026-07-25T195518.png
+screenshot: https://apis.io/screenshots/aktana/aktana-2026-07-25T195518.png
 security:
 - kind: domain-security
   name: Aktana Domain Security

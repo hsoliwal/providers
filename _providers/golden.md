@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -13,7 +16,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.5
-  scored_at: '2026-10-17'
+  score: 40.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 8
   slug: golden-agentic-access
   summary_line: 8 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://golden.com/api/v2/public
   baseurl_source: declared
@@ -61,11 +67,8 @@ apis:
   description: The Schema API API from Golden — 4 operation(s) for schema api.
   name: Golden Schema API
   slug: golden-schema-api-api
-artifact_total: 12
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Golden API v2 Entity API API
   slug: open-golden-entity-api-api
@@ -85,7 +88,7 @@ common:
   type: Website
   url: https://www.golden.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/overlays/golden-openapi-overlay.yaml
+  href: https://artifacts.apis.io/golden/overlays/golden-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/golden-openapi-overlay.yaml
@@ -130,77 +133,77 @@ common:
   type: PrivacyPolicy
   url: https://golden.com/about/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/authentication/golden-authentication.yml
+  href: https://artifacts.apis.io/golden/authentication/golden-authentication.yml
   title: ''
   type: Authentication
   url: authentication/golden-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/errors/golden-problem-types.yml
+  href: https://artifacts.apis.io/golden/errors/golden-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/golden-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/conventions/golden-conventions.yml
+  href: https://artifacts.apis.io/golden/conventions/golden-conventions.yml
   title: ''
   type: Conventions
   url: conventions/golden-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/data-model/golden-data-model.yml
+  href: https://artifacts.apis.io/golden/data-model/golden-data-model.yml
   title: ''
   type: DataModel
   url: data-model/golden-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/lifecycle/golden-lifecycle.yml
+  href: https://artifacts.apis.io/golden/lifecycle/golden-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/golden-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/conformance/golden-conformance.yml
+  href: https://artifacts.apis.io/golden/conformance/golden-conformance.yml
   title: ''
   type: Conformance
   url: conformance/golden-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/mcp/golden-mcp.yml
+  href: https://artifacts.apis.io/golden/mcp/golden-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/golden-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/mcp/golden-tool-crosswalk.yml
+  href: https://artifacts.apis.io/golden/mcp/golden-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/golden-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/llms/golden-llms.txt
+  href: https://artifacts.apis.io/golden/llms/golden-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/golden-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/golden/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/packages/golden-packages.yml
+  href: https://artifacts.apis.io/golden/packages/golden-packages.yml
   title: ''
   type: Packages
   url: packages/golden-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/plans/golden-plans-pricing.yml
+  href: https://artifacts.apis.io/golden/plans/golden-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/golden-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/rate-limits/golden-rate-limits.yml
+  href: https://artifacts.apis.io/golden/rate-limits/golden-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/golden-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/agentic-access/golden-agentic-access.yml
+  href: https://artifacts.apis.io/golden/agentic-access/golden-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/golden-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/security/golden-domain-security.yml
+  href: https://artifacts.apis.io/golden/security/golden-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/golden-domain-security.yml
@@ -216,42 +219,58 @@ network: true
 overview: 'Golden publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Entity API, Query API, and Schema API. Tagged areas include Company, Knowledge Graph, Company Data, Data, and Entities.
 
 
+  The Golden catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Golden''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 21 more developer resources.'
 plans:
 - name: Golden Plans Pricing
   plan_count: 4
   slug: golden-plans-pricing
-random_paper: 17
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Golden Rate Limits
   slug: golden-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Golden API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: golden-rules
 score:
-  band: thin
-  composite: 32.6
+  band: developing
+  composite: 40.9
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 25
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 6.7
   facets:
-    access_clarity: 31.6
-    contract_governance: 4.5
-    contract_quality: 49.6
+    access_clarity: 52.6
+    contract_governance: 18.2
+    contract_quality: 55.1
     developer_ergonomics: 28.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 32.0
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: derived
     skills: derived
@@ -260,15 +279,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 22.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/golden/refs/heads/main/screenshots/golden-2026-07-25T220025.png
+screenshot: https://apis.io/screenshots/golden/golden-2026-07-25T220025.png
 security:
 - kind: authentication
   name: Golden Authentication
@@ -278,6 +297,14 @@ security:
   name: Golden Domain Security
   slug: golden-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Explore the Golden schema (entity types and predicates)
+  slug: golden-explore-schema
+- name: Look up an entity and its properties
+  slug: golden-lookup-entity
+- name: Run a Golden Query and read its results
+  slug: golden-run-query
 slug: golden
 tags:
 - Company

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,32 +37,32 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/plans/adaptive-biotechnologies-plans-pricing.yml
+  href: https://artifacts.apis.io/adaptive-biotechnologies/plans/adaptive-biotechnologies-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/adaptive-biotechnologies-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/rate-limits/adaptive-biotechnologies-rate-limits.yml
+  href: https://artifacts.apis.io/adaptive-biotechnologies/rate-limits/adaptive-biotechnologies-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/adaptive-biotechnologies-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/conformance/adaptive-biotechnologies-conformance.yml
+  href: https://artifacts.apis.io/adaptive-biotechnologies/conformance/adaptive-biotechnologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/adaptive-biotechnologies-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/llms/adaptive-biotechnologies-llms.txt
+  href: https://artifacts.apis.io/adaptive-biotechnologies/llms/adaptive-biotechnologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/adaptive-biotechnologies-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/security/adaptive-biotechnologies-domain-security.yml
+  href: https://artifacts.apis.io/adaptive-biotechnologies/security/adaptive-biotechnologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/adaptive-biotechnologies-domain-security.yml
@@ -127,7 +141,7 @@ plans:
 - name: Adaptive Biotechnologies Plans Pricing
   plan_count: 0
   slug: adaptive-biotechnologies-plans-pricing
-random_paper: 3
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Adaptive Biotechnologies Rate Limits
@@ -136,7 +150,7 @@ score:
   band: emerging
   composite: 16.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -163,14 +177,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/adaptive-biotechnologies/refs/heads/main/screenshots/adaptive-biotechnologies-2026-10-11T092737.png
+screenshot: https://apis.io/screenshots/adaptive-biotechnologies/adaptive-biotechnologies-2026-10-11T092737.png
 security:
 - kind: domain-security
   name: Adaptive Biotechnologies Domain Security

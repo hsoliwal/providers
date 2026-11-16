@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 52.3
-  scored_at: '2026-10-17'
+  score: 51.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 553
   human_in_the_loop: 166
@@ -31,7 +45,7 @@ agentic_access:
   operation_count: 1092
   slug: cm-com-agentic-access
   summary_line: 1092 operations · 553 acting · 166 human-in-the-loop
-api_count: 53
+api_count: 52
 apis:
 - baseURL: https://api.cm.com
   baseurl_source: declared
@@ -868,74 +882,79 @@ apis:
   description: The Whats App API from CM.com — 37 operation(s) for whats app.
   name: CM.com Whats App API
   slug: cm-com-whats-app-api
-artifact_total: 320
+artifact_total: 322
 asyncapis:
 - description: ''
   name: Cm Com Webhooks
   slug: cm-com-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/cm-com/plans/cm-com-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cm-com-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/capabilities/cm-com-capability-edges.yml
+  href: https://artifacts.apis.io/cm-com/capabilities/cm-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cm-com-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/scopes/cm-com-scopes.yml
+  href: https://artifacts.apis.io/cm-com/scopes/cm-com-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cm-com-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-status-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-status-security.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/integrations/cm-com-integration-edges.yml
+  href: https://artifacts.apis.io/cm-com/integrations/cm-com-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/cm-com-integration-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-app-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-app-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-app-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/agentic-access/cm-com-agentic-access.yml
+  href: https://artifacts.apis.io/cm-com/agentic-access/cm-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cm-com-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/rules/cm-com-rules.yml
+  href: https://artifacts.apis.io/cm-com/rules/cm-com-rules.yml
   title: ''
   type: Spectral
   url: rules/cm-com-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/json-ld/cm-com-context.jsonld
+  href: https://artifacts.apis.io/cm-com/json-ld/cm-com-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cm-com-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/vocabulary/cm-com-vocabulary.yml
+  href: https://artifacts.apis.io/cm-com/vocabulary/cm-com-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cm-com-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/asyncapi/cm-com-webhooks.yml
+  href: https://artifacts.apis.io/cm-com/asyncapi/cm-com-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cm-com-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/data-model/cm-com-data-model.yml
+  href: https://artifacts.apis.io/cm-com/data-model/cm-com-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cm-com-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/conventions/cm-com-conventions.yml
+  href: https://artifacts.apis.io/cm-com/conventions/cm-com-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cm-com-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/conventions/cm-com-conventions.yml
+  href: https://artifacts.apis.io/cm-com/conventions/cm-com-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cm-com-conventions.yml
@@ -944,62 +963,62 @@ common:
   type: Security
   url: https://app.intigriti.com/programs/cmcom/cmcom/detail
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/errors/cm-com-problem-types.yml
+  href: https://artifacts.apis.io/cm-com/errors/cm-com-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cm-com-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/conformance/cm-com-conformance.yml
+  href: https://artifacts.apis.io/cm-com/conformance/cm-com-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cm-com-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/llms/cm-com-llms.txt
+  href: https://artifacts.apis.io/cm-com/llms/cm-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cm-com-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-releasenotes-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-releasenotes-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-releasenotes-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-login-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-login-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-login-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-jobs-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-jobs-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-jobs-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-docs-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-docs-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-docs-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-api-security.txt
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cm-com-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/well-known/cm-com-well-known.yml
+  href: https://artifacts.apis.io/cm-com/well-known/cm-com-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cm-com-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/hosts/cm-com-hosts.yml
+  href: https://artifacts.apis.io/cm-com/hosts/cm-com-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cm-com-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/vendors/cm-com-vendors.yml
+  href: https://artifacts.apis.io/cm-com/vendors/cm-com-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cm-com-vendors.yml
@@ -1016,17 +1035,17 @@ common:
   type: GettingStarted
   url: https://docs.cm.com/conversational-ai/guides/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/authentication/cm-com-authentication.yml
+  href: https://artifacts.apis.io/cm-com/authentication/cm-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cm-com-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/security/cm-com-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cm-com/security/cm-com-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cm-com-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cm-com/refs/heads/main/security/cm-com-domain-security.yml
+  href: https://artifacts.apis.io/cm-com/security/cm-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cm-com-domain-security.yml
@@ -1100,6 +1119,14 @@ common:
   url: https://www.cm.com/press/
 created: '2026-10-13'
 description: CM.com is a Dutch CPaaS and commerce company providing APIs for business messaging (SMS, WhatsApp, RCS, email), voice, payments, identity verification, electronic signing, live-event ticketing and customer engagement.
+finops:
+- has_sources: true
+  method: derived
+  name: Cm Com Finops
+  primary_unit: ''
+  service_category: ''
+  slug: cm-com-finops
+  template: true
 json_schemas:
 - name: Available Numbers
   property_count: 9
@@ -1144,7 +1171,7 @@ json_schemas:
   property_count: 9
   slug: cm-com-api-phone-number-config-notification
 - name: Phone Number Config Sip
-  property_count: 5
+  property_count: 6
   slug: cm-com-api-phone-number-config-sip
 - name: Phone Number Range
   property_count: 8
@@ -1210,7 +1237,7 @@ json_schemas:
   property_count: 8
   slug: cm-com-call-queued-event
 - name: CardPaymentV2
-  property_count: 0
+  property_count: 9
   slug: cm-com-card-payment-v2
 - name: CM.Data.Core.Profiles.Api.Models.ApiProfileExport
   property_count: 4
@@ -1315,22 +1342,22 @@ json_schemas:
   property_count: 3
   slug: cm-com-create-apikey-response
 - name: CreateDossier
-  property_count: 0
+  property_count: 20
   slug: cm-com-create-dossier
 - name: CreateFeedbackScoreRequest
   property_count: 7
   slug: cm-com-create-feedback-score-request
 - name: Create OTP (Email)
-  property_count: 4
+  property_count: 6
   slug: cm-com-create-otp-email
 - name: Create OTP (Push)
-  property_count: 2
+  property_count: 7
   slug: cm-com-create-otp-push
 - name: Create OTP (Voice)
-  property_count: 9
+  property_count: 11
   slug: cm-com-create-otp-voice
 - name: Create OTP (WhatsApp)
-  property_count: 5
+  property_count: 7
   slug: cm-com-create-otp-whats-app
 - name: CreateRuleDto
   property_count: 21
@@ -1348,7 +1375,7 @@ json_schemas:
   property_count: 2
   slug: cm-com-create-transaction-response
 - name: CreateTransaction
-  property_count: 1
+  property_count: 12
   slug: cm-com-create-transaction
 - name: CultureView
   property_count: 2
@@ -1402,10 +1429,10 @@ json_schemas:
   property_count: 3
   slug: cm-com-health-response
 - name: IdealQRTransaction
-  property_count: 0
+  property_count: 15
   slug: cm-com-ideal-qrtransaction
 - name: IdealTransaction
-  property_count: 0
+  property_count: 20
   slug: cm-com-ideal-transaction
 - name: IdentityMatchMatchResponse
   property_count: 7
@@ -1468,7 +1495,7 @@ json_schemas:
   property_count: 21
   slug: cm-com-request-dtmf-instruction
 - name: RivertyTransaction
-  property_count: 0
+  property_count: 17
   slug: cm-com-riverty-transaction
 - name: RuleDto
   property_count: 22
@@ -1483,7 +1510,7 @@ json_schemas:
   property_count: 2
   slug: cm-com-sim-swap-request
 - name: StatusRequest
-  property_count: 0
+  property_count: 3
   slug: cm-com-status-request
 - name: The results of the information requested.
   property_count: 5
@@ -1504,13 +1531,13 @@ json_schemas:
   property_count: 24
   slug: cm-com-ticket
 - name: TransactionDetail
-  property_count: 0
+  property_count: 6
   slug: cm-com-transaction-detail
 - name: TransactionPage
   property_count: 3
   slug: cm-com-transaction-page
 - name: Transaction request
-  property_count: 0
+  property_count: 3
   slug: cm-com-transaction-request
 - name: Transaction response
   property_count: 3
@@ -1553,8 +1580,12 @@ overview: 'CM.com publishes 167 API contracts indexed on the [APIs.io](https://a
   The CM.com catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  CM.com''s developer surface includes API reference, getting-started guide, authentication, documentation, engineering blog, changelog, signup flow, and 42 more developer resources.'
-random_paper: 0
+  CM.com''s developer surface includes API reference, getting-started guide, authentication, documentation, engineering blog, changelog, signup flow, and 43 more developer resources.'
+plans:
+- name: Cm Com Plans Pricing
+  plan_count: 0
+  slug: cm-com-plans-pricing
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -1574,34 +1605,36 @@ scopes:
   slug: cm-com-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 64.0
+  band: developing
+  composite: 50.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 26
     catalog_earned: 63.8
     catalog_earned_first_party: 0.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -13.5
   facets:
-    access_clarity: 52.6
+    access_clarity: 26.3
     contract_governance: 22.0
-    contract_quality: 71.2
-    developer_ergonomics: 57.1
-    discoverability: 88.3
-    operational_transparency: 55.3
+    contract_quality: 72.3
+    developer_ergonomics: 34.5
+    discoverability: 87.5
+    operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - netherlands
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 64.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 80.7
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 16.2
       total: 167
     mcp: first-party
   regulatory:
@@ -1609,12 +1642,14 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 44.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 38.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/cm-com/cm-com-2026-11-03T124623.png
 security:
 - kind: authentication
   name: Cm Com Authentication

@@ -22,21 +22,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.7
-  scored_at: '2026-10-17'
+  score: 36.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 16
   slug: zencoder-agentic-access
   summary_line: 16 operations · 6 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://app.zencoder.com/api/v2
   baseurl_source: declared
@@ -71,15 +74,12 @@ apis:
   description: Operations for getting reports.
   name: Zencoder Reports API
   slug: zencoder-reports-api
-artifact_total: 15
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Zencoder Notifications Webhooks
   slug: zencoder-notifications-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Zencoder Accounts API
   slug: open-zencoder-accounts-api
@@ -101,12 +101,12 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/brightcove/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/capabilities/zencoder-capability-edges.yml
+  href: https://artifacts.apis.io/zencoder/capabilities/zencoder-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zencoder-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/security/zencoder-domain-security.yml
+  href: https://artifacts.apis.io/zencoder/security/zencoder-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zencoder-domain-security.yml
@@ -159,82 +159,82 @@ common:
   type: StatusPage
   url: https://status.brightcove.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/changelog/zencoder-changelog.yml
+  href: https://artifacts.apis.io/zencoder/changelog/zencoder-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/zencoder-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/packages/zencoder-packages.yml
+  href: https://artifacts.apis.io/zencoder/packages/zencoder-packages.yml
   title: ''
   type: Packages
   url: packages/zencoder-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/packages/zencoder-packages.yml
+  href: https://artifacts.apis.io/zencoder/packages/zencoder-packages.yml
   title: ''
   type: SDKs
   url: packages/zencoder-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/authentication/zencoder-authentication.yml
+  href: https://artifacts.apis.io/zencoder/authentication/zencoder-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zencoder-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/conventions/zencoder-conventions.yml
+  href: https://artifacts.apis.io/zencoder/conventions/zencoder-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zencoder-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/errors/zencoder-error-codes.yml
+  href: https://artifacts.apis.io/zencoder/errors/zencoder-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/zencoder-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/lifecycle/zencoder-lifecycle.yml
+  href: https://artifacts.apis.io/zencoder/lifecycle/zencoder-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zencoder-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/data-model/zencoder-data-model.yml
+  href: https://artifacts.apis.io/zencoder/data-model/zencoder-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zencoder-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/conformance/zencoder-conformance.yml
+  href: https://artifacts.apis.io/zencoder/conformance/zencoder-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zencoder-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/asyncapi/zencoder-notifications-webhooks.yml
+  href: https://artifacts.apis.io/zencoder/asyncapi/zencoder-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zencoder-notifications-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/sandbox/zencoder-sandbox.yml
+  href: https://artifacts.apis.io/zencoder/sandbox/zencoder-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/zencoder-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/mcp/zencoder-mcp.yml
+  href: https://artifacts.apis.io/zencoder/mcp/zencoder-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/zencoder-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zencoder/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/overlays/zencoder-openapi-overlay.yaml
+  href: https://artifacts.apis.io/zencoder/overlays/zencoder-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zencoder-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/agentic-access/zencoder-agentic-access.yml
+  href: https://artifacts.apis.io/zencoder/agentic-access/zencoder-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zencoder-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/llms/zencoder-llms.txt
+  href: https://artifacts.apis.io/zencoder/llms/zencoder-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zencoder-llms.txt
@@ -249,37 +249,50 @@ network: true
 overview: 'Zencoder publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Inputs API, Jobs API, and 2 more. Tagged areas include Company, Video, Video Encoding, Transcoding, and Media.
 
 
-  The Zencoder catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Zencoder catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Zencoder''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, changelog, authentication, and 24 more developer resources.'
-random_paper: 0
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Zencoder API Rules
+  rule_count: 50
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 3
+    warn: 5
+  slug: zencoder-rules
 score:
   band: developing
-  composite: 47.9
+  composite: 50.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 51.3
+    contract_governance: 18.2
+    contract_quality: 56.1
     developer_ergonomics: 70.8
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 47.8
+  previous_composite: 49.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 5
     mcp: derived
     skills: derived
@@ -289,13 +302,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zencoder/refs/heads/main/screenshots/zencoder-2026-08-17T083039.png
+screenshot: https://apis.io/screenshots/zencoder/zencoder-2026-08-17T083039.png
 security:
 - kind: authentication
   name: Zencoder Authentication
@@ -305,6 +318,14 @@ security:
   name: Zencoder Domain Security
   slug: zencoder-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Cancel or resubmit an encoding job
+  slug: zencoder-cancel-and-resubmit
+- name: Encode a video and monitor it to completion
+  slug: zencoder-encode-and-monitor
+- name: Pull Zencoder usage and minutes reports
+  slug: zencoder-usage-reporting
 slug: zencoder
 tags:
 - Company

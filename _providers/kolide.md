@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.kolide.com
@@ -122,15 +125,12 @@ apis:
   description: The Whoami API from Kolide — 1 operation(s) for whoami.
   name: Kolide Whoami API
   slug: kolide-whoami-api
-artifact_total: 41
+artifact_total: 45
 asyncapis:
 - description: ''
   name: Kolide Events
   slug: kolide-events
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: K2 Admin Users API
   slug: open-kolide-admin-users-api
@@ -183,8 +183,12 @@ collections:
   name: K2 Admin Users Whoami API
   slug: open-kolide-whoami-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/kolide/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/capabilities/kolide-capability-edges.yml
+  href: https://artifacts.apis.io/kolide/capabilities/kolide-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kolide-capability-edges.yml
@@ -237,27 +241,27 @@ common:
   type: PrivacyPolicy
   url: https://www.kolide.com/legal/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/authentication/kolide-authentication.yml
+  href: https://artifacts.apis.io/kolide/authentication/kolide-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kolide-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/conventions/kolide-conventions.yml
+  href: https://artifacts.apis.io/kolide/conventions/kolide-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kolide-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/errors/kolide-problem-types.yml
+  href: https://artifacts.apis.io/kolide/errors/kolide-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kolide-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/data-model/kolide-data-model.yml
+  href: https://artifacts.apis.io/kolide/data-model/kolide-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kolide-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/lifecycle/kolide-lifecycle.yml
+  href: https://artifacts.apis.io/kolide/lifecycle/kolide-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kolide-lifecycle.yml
@@ -266,72 +270,72 @@ common:
   type: StatusPage
   url: https://status.1password.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/changelog/kolide-changelog.yml
+  href: https://artifacts.apis.io/kolide/changelog/kolide-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kolide-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/asyncapi/kolide-events.yml
+  href: https://artifacts.apis.io/kolide/asyncapi/kolide-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/kolide-events.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/mcp/kolide-mcp.yml
+  href: https://artifacts.apis.io/kolide/mcp/kolide-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kolide-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kolide/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/packages/kolide-packages.yml
+  href: https://artifacts.apis.io/kolide/packages/kolide-packages.yml
   title: ''
   type: Packages
   url: packages/kolide-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/well-known/kolide-well-known.yml
+  href: https://artifacts.apis.io/kolide/well-known/kolide-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kolide-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/conformance/kolide-conformance.yml
+  href: https://artifacts.apis.io/kolide/conformance/kolide-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kolide-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/conformance/kolide-conformance.yml
+  href: https://artifacts.apis.io/kolide/conformance/kolide-conformance.yml
   title: ''
   type: Compliance
   url: conformance/kolide-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/security/kolide-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kolide/security/kolide-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/kolide-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/security/kolide-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kolide/security/kolide-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kolide-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/security/kolide-trust-center.yml
+  href: https://artifacts.apis.io/kolide/security/kolide-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kolide-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/security/kolide-domain-security.yml
+  href: https://artifacts.apis.io/kolide/security/kolide-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kolide-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/llms/kolide-llms.txt
+  href: https://artifacts.apis.io/kolide/llms/kolide-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kolide-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/overlays/kolide-k2-overlay.yaml
+  href: https://artifacts.apis.io/kolide/overlays/kolide-k2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kolide-k2-overlay.yaml
@@ -351,30 +355,43 @@ network: true
 overview: 'Kolide publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin Users API, Audit Logs API, Auth Logs API, and 14 more. Tagged areas include Company, B2B, Security, Device Trust, and Endpoint Security.
 
 
-  The Kolide catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Kolide catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Kolide''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
-random_paper: 16
+  Kolide''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Kolide API Rules
+  rule_count: 50
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 2
+  slug: kolide-rules
 score:
   band: strong
-  composite: 56.3
+  composite: 58.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.7
   facets:
     access_clarity: 60.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 57.7
-    developer_ergonomics: 55.4
+    developer_ergonomics: 60.1
     discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 56.2
+  previous_composite: 58.1
   provenance:
     conformance: first-party
     contracts:
@@ -390,13 +407,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kolide/refs/heads/main/screenshots/kolide-2026-07-25T224129.png
+screenshot: https://apis.io/screenshots/kolide/kolide-2026-07-25T224129.png
 security:
 - kind: authentication
   name: Kolide Authentication
@@ -414,6 +431,16 @@ security:
   name: Kolide Trust Center
   slug: kolide-trust-center
   summary_line: SOC 2 Type II, GDPR
+skill_count: 4
+skills:
+- name: kolide-access-request-review
+  slug: kolide-access-request-review
+- name: kolide-device-compliance-triage
+  slug: kolide-device-compliance-triage
+- name: kolide-event-subscription
+  slug: kolide-event-subscription
+- name: kolide-fleet-reporting
+  slug: kolide-fleet-reporting
 slug: kolide
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +40,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The HTTP surface exposed by a Dara application. Dara is causaLens'' Apache-2.0 open-source Python framework built on FastAPI; each app serves a documented set of built-in routes (session verification, '
@@ -51,12 +57,12 @@ common:
   type: BlogRSS
   url: https://causalens.com/blogs/feed
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/mcp/causalens-mcp.yml
+  href: https://artifacts.apis.io/causalens/mcp/causalens-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/causalens-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/security/causalens-domain-security.yml
+  href: https://artifacts.apis.io/causalens/security/causalens-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/causalens-domain-security.yml
@@ -109,62 +115,62 @@ common:
   type: StatusPage
   url: https://status.causalens.com
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/packages/causalens-packages.yml
+  href: https://artifacts.apis.io/causalens/packages/causalens-packages.yml
   title: ''
   type: Packages
   url: packages/causalens-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/packages/causalens-packages.yml
+  href: https://artifacts.apis.io/causalens/packages/causalens-packages.yml
   title: ''
   type: SDKs
   url: packages/causalens-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/cli/causalens-cli.yml
+  href: https://artifacts.apis.io/causalens/cli/causalens-cli.yml
   title: ''
   type: CLI
   url: cli/causalens-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/components/causalens-components.yml
+  href: https://artifacts.apis.io/causalens/components/causalens-components.yml
   title: ''
   type: Components
   url: components/causalens-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/changelog/causalens-changelog.yml
+  href: https://artifacts.apis.io/causalens/changelog/causalens-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/causalens-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/lifecycle/causalens-lifecycle.yml
+  href: https://artifacts.apis.io/causalens/lifecycle/causalens-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/causalens-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/authentication/causalens-authentication.yml
+  href: https://artifacts.apis.io/causalens/authentication/causalens-authentication.yml
   title: ''
   type: Authentication
   url: authentication/causalens-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/conventions/causalens-conventions.yml
+  href: https://artifacts.apis.io/causalens/conventions/causalens-conventions.yml
   title: ''
   type: Conventions
   url: conventions/causalens-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/conformance/causalens-conformance.yml
+  href: https://artifacts.apis.io/causalens/conformance/causalens-conformance.yml
   title: ''
   type: Conformance
   url: conformance/causalens-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/well-known/causalens-well-known.yml
+  href: https://artifacts.apis.io/causalens/well-known/causalens-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/causalens-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/llms/causalens-llms.txt
+  href: https://artifacts.apis.io/causalens/llms/causalens-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/causalens-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/causalens/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -184,12 +190,12 @@ overview: 'CausaLens is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   CausaLens'' developer surface includes engineering blog, documentation, API reference, getting-started guide, support, signup flow, CLI, and 21 more developer resources.'
-random_paper: 13
+random_paper: 23
 score:
   band: thin
   composite: 34.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -222,14 +228,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/causalens/refs/heads/main/screenshots/causalens-2026-09-02T145021.png
+screenshot: https://apis.io/screenshots/causalens/causalens-2026-09-02T145021.png
 security:
 - kind: authentication
   name: Causalens Authentication

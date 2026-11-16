@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.9
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.webapp.prod.blv.foodcase-services.com/BLV_WebApp_WS
@@ -59,15 +65,15 @@ apis:
   description: The system configuration API from Swiss Food Composition Database — 1 operation(s) for system configuration.
   name: Swiss Food Composition Database system configuration API
   slug: swiss-food-composition-database-system-configuration-api
-artifact_total: 9
+artifact_total: 13
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/security/swiss-food-composition-database-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/security/swiss-food-composition-database-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/swiss-food-composition-database-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/security/swiss-food-composition-database-domain-security.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/security/swiss-food-composition-database-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/swiss-food-composition-database-domain-security.yml
@@ -100,82 +106,82 @@ common:
   type: ChangeLog
   url: https://naehrwertdaten.ch/en/versions-and-updates/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/well-known/swiss-food-composition-database-well-known.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/well-known/swiss-food-composition-database-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/swiss-food-composition-database-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/well-known/swiss-food-composition-database-security.txt
+  href: https://artifacts.apis.io/swiss-food-composition-database/well-known/swiss-food-composition-database-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/swiss-food-composition-database-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/llms/swiss-food-composition-database-llms.txt
+  href: https://artifacts.apis.io/swiss-food-composition-database/llms/swiss-food-composition-database-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/swiss-food-composition-database-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/packages/swiss-food-composition-database-packages.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/packages/swiss-food-composition-database-packages.yml
   title: ''
   type: Packages
   url: packages/swiss-food-composition-database-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/conventions/swiss-food-composition-database-conventions.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/conventions/swiss-food-composition-database-conventions.yml
   title: ''
   type: Conventions
   url: conventions/swiss-food-composition-database-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/lifecycle/swiss-food-composition-database-lifecycle.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/lifecycle/swiss-food-composition-database-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/swiss-food-composition-database-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/conformance/swiss-food-composition-database-conformance.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/conformance/swiss-food-composition-database-conformance.yml
   title: ''
   type: Conformance
   url: conformance/swiss-food-composition-database-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/changelog/swiss-food-composition-database-changelog.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/changelog/swiss-food-composition-database-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/swiss-food-composition-database-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/plans/swiss-food-composition-database-plans-pricing.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/plans/swiss-food-composition-database-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/swiss-food-composition-database-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/rate-limits/swiss-food-composition-database-rate-limits.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/rate-limits/swiss-food-composition-database-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/swiss-food-composition-database-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/data-model/swiss-food-composition-database-data-model.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/data-model/swiss-food-composition-database-data-model.yml
   title: ''
   type: DataModel
   url: data-model/swiss-food-composition-database-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/mcp/swiss-food-composition-database-mcp.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/mcp/swiss-food-composition-database-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/swiss-food-composition-database-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/security/swiss-food-composition-database-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/security/swiss-food-composition-database-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/swiss-food-composition-database-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/authentication/swiss-food-composition-database-authentication.yml
+  href: https://artifacts.apis.io/swiss-food-composition-database/authentication/swiss-food-composition-database-authentication.yml
   title: ''
   type: Authentication
   url: authentication/swiss-food-composition-database-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/overlays/swiss-food-composition-database-openapi-overlay.yaml
+  href: https://artifacts.apis.io/swiss-food-composition-database/overlays/swiss-food-composition-database-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/swiss-food-composition-database-openapi-overlay.yaml
@@ -191,30 +197,46 @@ network: true
 overview: 'Swiss Food Composition Database publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Stats API, System API, and 1 more. Tagged areas include Food, Nutrition, food-composition, Health, and Open Data.
 
 
+  The Swiss Food Composition Database catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Swiss Food Composition Database''s developer surface includes documentation, API reference, support, changelog, authentication, and 20 more developer resources.'
 plans:
 - name: Swiss Food Composition Database Plans Pricing
   plan_count: 1
   slug: swiss-food-composition-database-plans-pricing
-random_paper: 7
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Swiss Food Composition Database Rate Limits
   slug: swiss-food-composition-database-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 75
+  extends:
+  - spectral:oas
+  name: Swiss Food Composition Database API Rules
+  rule_count: 34
+  severity_counts:
+    error: 27
+    hint: 0
+    info: 1
+    warn: 6
+  slug: swiss-food-composition-database-rules
 score:
-  band: thin
-  composite: 37.8
+  band: developing
+  composite: 39.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 45.0
+    artifact_dirs: 23
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 37.0
     developer_ergonomics: 35.1
     discoverability: 66.1
@@ -227,7 +249,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 37.9
+  previous_composite: 39.5
   provenance:
     conformance: derived
     contracts:
@@ -243,14 +265,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/swiss-food-composition-database/refs/heads/main/screenshots/swiss-food-composition-database-2026-09-02T161420.png
+screenshot: https://apis.io/screenshots/swiss-food-composition-database/swiss-food-composition-database-2026-09-02T161420.png
 security:
 - kind: authentication
   name: Swiss Food Composition Database Authentication
@@ -264,6 +286,14 @@ security:
   name: Swiss Food Composition Database Vulnerability Disclosure
   slug: swiss-food-composition-database-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: swiss-food-composition-find-foods-by-nutrient
+  slug: swiss-food-composition-database-find-foods-by-nutrient
+- name: swiss-food-composition-look-up-a-food
+  slug: swiss-food-composition-database-look-up-a-food
+- name: swiss-food-composition-trace-value-provenance
+  slug: swiss-food-composition-database-trace-value-provenance
 slug: swiss-food-composition-database
 tags:
 - Food

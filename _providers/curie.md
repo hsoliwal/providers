@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,16 +31,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 49.4
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://chat.curie.app
   baseurl_source: declared
@@ -47,11 +55,8 @@ apis:
   description: The Products API from Curie — 6 operation(s) for products.
   name: Curie Products API
   slug: curie-products-api
-artifact_total: 9
+artifact_total: 11
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Curie 3D Product Commerce Catalog API
   slug: open-curie-catalog-api
@@ -88,72 +93,72 @@ common:
   type: PrivacyPolicy
   url: https://chat.curie.app/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/mcp/curie-mcp.yml
+  href: https://artifacts.apis.io/curie/mcp/curie-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/curie-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/llms/curie-llms.txt
+  href: https://artifacts.apis.io/curie/llms/curie-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/curie-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/well-known/curie-well-known.yml
+  href: https://artifacts.apis.io/curie/well-known/curie-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/curie-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/authentication/curie-authentication.yml
+  href: https://artifacts.apis.io/curie/authentication/curie-authentication.yml
   title: ''
   type: Authentication
   url: authentication/curie-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/scopes/curie-scopes.yml
+  href: https://artifacts.apis.io/curie/scopes/curie-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/curie-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/security/curie-domain-security.yml
+  href: https://artifacts.apis.io/curie/security/curie-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/curie-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/errors/curie-problem-types.yml
+  href: https://artifacts.apis.io/curie/errors/curie-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/curie-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/conventions/curie-conventions.yml
+  href: https://artifacts.apis.io/curie/conventions/curie-conventions.yml
   title: ''
   type: Conventions
   url: conventions/curie-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/data-model/curie-data-model.yml
+  href: https://artifacts.apis.io/curie/data-model/curie-data-model.yml
   title: ''
   type: DataModel
   url: data-model/curie-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/conformance/curie-conformance.yml
+  href: https://artifacts.apis.io/curie/conformance/curie-conformance.yml
   title: ''
   type: Conformance
   url: conformance/curie-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/lifecycle/curie-lifecycle.yml
+  href: https://artifacts.apis.io/curie/lifecycle/curie-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/curie-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/overlays/curie-overlay.yaml
+  href: https://artifacts.apis.io/curie/overlays/curie-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/curie-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/components/curie-components.yml
+  href: https://artifacts.apis.io/curie/components/curie-components.yml
   title: ''
   type: Components
   url: components/curie-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/curie/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -172,8 +177,24 @@ network: true
 overview: 'Curie publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Catalog API and Products API. Tagged areas include Company, Commerce, E-Commerce, Shopify, and Artificial Intelligence.
 
 
+  The Curie catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Curie''s developer surface includes engineering blog, documentation, pricing, authentication, and 17 more developer resources.'
 random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Curie API Rules
+  rule_count: 60
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 1
+  slug: curie-rules
 scopes:
 - name: Curie Scopes
   scope_count: 1
@@ -181,29 +202,29 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 40.0
+  composite: 43.1
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.5
   facets:
     access_clarity: 31.6
-    contract_governance: 18.2
-    contract_quality: 52.0
+    contract_governance: 31.8
+    contract_quality: 57.8
     developer_ergonomics: 42.3
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 39.4
+  previous_composite: 41.6
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: first-party
     skills: derived
@@ -213,14 +234,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/curie/refs/heads/main/screenshots/curie-2026-07-25T210955.png
+screenshot: https://apis.io/screenshots/curie/curie-2026-07-25T210955.png
 security:
 - kind: authentication
   name: Curie Authentication
@@ -230,6 +251,12 @@ security:
   name: Curie Domain Security
   slug: curie-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Shop and check out via the Curie MCP server
+  slug: curie-agentic-commerce
+- name: Discover Curie products and 3D models
+  slug: curie-discover-products
 slug: curie
 tags:
 - Company

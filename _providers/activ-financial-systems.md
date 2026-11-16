@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   - '{''url'': ''https://www.activfinancial.com'', ''status'': 302, ''note'': ''declared website redirects to https://www.options-it.com/ — a different registrable domain (activfinancial.com -> options-it.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: WebSocket/WebAssembly JavaScript API for the ACTIV OnePlatform (Options Atlas), delivering real-time streaming subscriptions, snapshots, queries, and time-series (tick, intraday bar, history bar) mark
@@ -63,7 +68,7 @@ common:
   type: GettingStarted
   url: https://weboneapi.activfinancial.com/tutorials
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/sandbox/activ-financial-systems-sandbox.yml
+  href: https://artifacts.apis.io/activ-financial-systems/sandbox/activ-financial-systems-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/activ-financial-systems-sandbox.yml
@@ -88,47 +93,47 @@ common:
   type: StatusPage
   url: https://status.options-it.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/lifecycle/activ-financial-systems-lifecycle.yml
+  href: https://artifacts.apis.io/activ-financial-systems/lifecycle/activ-financial-systems-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/activ-financial-systems-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/packages/activ-financial-systems-packages.yml
+  href: https://artifacts.apis.io/activ-financial-systems/packages/activ-financial-systems-packages.yml
   title: ''
   type: Packages
   url: packages/activ-financial-systems-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/packages/activ-financial-systems-packages.yml
+  href: https://artifacts.apis.io/activ-financial-systems/packages/activ-financial-systems-packages.yml
   title: ''
   type: SDKs
   url: packages/activ-financial-systems-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/components/activ-financial-systems-components.yml
+  href: https://artifacts.apis.io/activ-financial-systems/components/activ-financial-systems-components.yml
   title: ''
   type: Components
   url: components/activ-financial-systems-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/errors/activ-financial-systems-error-codes.yml
+  href: https://artifacts.apis.io/activ-financial-systems/errors/activ-financial-systems-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/activ-financial-systems-error-codes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/authentication/activ-financial-systems-authentication.yml
+  href: https://artifacts.apis.io/activ-financial-systems/authentication/activ-financial-systems-authentication.yml
   title: ''
   type: Authentication
   url: authentication/activ-financial-systems-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/well-known/activ-financial-systems-well-known.yml
+  href: https://artifacts.apis.io/activ-financial-systems/well-known/activ-financial-systems-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/activ-financial-systems-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/llms/activ-financial-systems-llms.txt
+  href: https://artifacts.apis.io/activ-financial-systems/llms/activ-financial-systems-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/activ-financial-systems-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/security/activ-financial-systems-domain-security.yml
+  href: https://artifacts.apis.io/activ-financial-systems/security/activ-financial-systems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/activ-financial-systems-domain-security.yml
@@ -144,12 +149,12 @@ overview: 'ACTIV Financial Systems is listed with 1 API on the [APIs.io](https:/
 
 
   ACTIV Financial Systems'' developer surface includes documentation, API reference, getting-started guide, sandbox, support, engineering blog, authentication, and 13 more developer resources.'
-random_paper: 18
+random_paper: 22
 score:
   band: emerging
   composite: 24.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -170,14 +175,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/activ-financial-systems/refs/heads/main/screenshots/activ-financial-systems-2026-07-22T202115.png
+screenshot: https://apis.io/screenshots/activ-financial-systems/activ-financial-systems-2026-07-22T202115.png
 security:
 - kind: authentication
   name: Activ Financial Systems Authentication

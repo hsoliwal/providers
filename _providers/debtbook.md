@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/security/debtbook-domain-security.yml
+  href: https://artifacts.apis.io/debtbook/security/debtbook-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/debtbook-domain-security.yml
@@ -92,7 +95,7 @@ common:
   type: ChangeLog
   url: https://www.debtbook.com/release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/changelog/debtbook-changelog.yml
+  href: https://artifacts.apis.io/debtbook/changelog/debtbook-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/debtbook-changelog.yml
@@ -117,47 +120,47 @@ common:
   type: Compliance
   url: https://trust.debtbook.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/security/debtbook-trust-center.yml
+  href: https://artifacts.apis.io/debtbook/security/debtbook-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/debtbook-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/security/debtbook-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/debtbook/security/debtbook-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/debtbook-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/lifecycle/debtbook-lifecycle.yml
+  href: https://artifacts.apis.io/debtbook/lifecycle/debtbook-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/debtbook-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/conformance/debtbook-conformance.yml
+  href: https://artifacts.apis.io/debtbook/conformance/debtbook-conformance.yml
   title: ''
   type: Conformance
   url: conformance/debtbook-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/well-known/debtbook-well-known.yml
+  href: https://artifacts.apis.io/debtbook/well-known/debtbook-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/debtbook-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/well-known/debtbook-openid-configuration.json
+  href: https://artifacts.apis.io/debtbook/well-known/debtbook-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/debtbook-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/authentication/debtbook-authentication.yml
+  href: https://artifacts.apis.io/debtbook/authentication/debtbook-authentication.yml
   title: ''
   type: Authentication
   url: authentication/debtbook-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/llms/debtbook-llms.txt
+  href: https://artifacts.apis.io/debtbook/llms/debtbook-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/debtbook-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/packages/debtbook-packages.yml
+  href: https://artifacts.apis.io/debtbook/packages/debtbook-packages.yml
   title: ''
   type: Packages
   url: packages/debtbook-packages.yml
@@ -174,12 +177,12 @@ overview: 'DebtBook is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   DebtBook''s developer surface includes support, engineering blog, pricing, signup flow, legal docs, changelog, authentication, and 21 more developer resources.'
-random_paper: 6
+random_paper: 2
 score:
   band: thin
   composite: 30.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -202,14 +205,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/debtbook/refs/heads/main/screenshots/debtbook-2026-08-07T164221.png
+screenshot: https://apis.io/screenshots/debtbook/debtbook-2026-08-07T164221.png
 security:
 - kind: authentication
   name: Debtbook Authentication

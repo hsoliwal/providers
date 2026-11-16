@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Client-side JavaScript API for embedding interactive Desmos calculators (Graphing, 3D, Geometry, Scientific, Four-Function) into web pages and apps, controlled through a browser object model.
@@ -80,7 +83,7 @@ common:
   type: StatusPage
   url: https://status.desmos.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/lifecycle/desmos-lifecycle.yml
+  href: https://artifacts.apis.io/desmos/lifecycle/desmos-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/desmos-lifecycle.yml
@@ -101,32 +104,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/desmosinc
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/components/desmos-components.yml
+  href: https://artifacts.apis.io/desmos/components/desmos-components.yml
   title: ''
   type: Components
   url: components/desmos-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/authentication/desmos-authentication.yml
+  href: https://artifacts.apis.io/desmos/authentication/desmos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/desmos-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/sandbox/desmos-sandbox.yml
+  href: https://artifacts.apis.io/desmos/sandbox/desmos-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/desmos-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/lifecycle/desmos-lifecycle.yml
+  href: https://artifacts.apis.io/desmos/lifecycle/desmos-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/desmos-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/security/desmos-domain-security.yml
+  href: https://artifacts.apis.io/desmos/security/desmos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/desmos-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/llms/desmos-llms.txt
+  href: https://artifacts.apis.io/desmos/llms/desmos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/desmos-llms.txt
@@ -142,12 +145,12 @@ overview: 'Desmos is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Desmos'' developer surface includes documentation, API reference, getting-started guide, signup flow, changelog, engineering blog, authentication, and 13 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: thin
   composite: 30.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -168,14 +171,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/desmos/refs/heads/main/screenshots/desmos-2026-07-25T211755.png
+screenshot: https://apis.io/screenshots/desmos/desmos-2026-07-25T211755.png
 security:
 - kind: authentication
   name: Desmos Authentication

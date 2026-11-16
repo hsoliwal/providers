@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://services.azuga.com
@@ -31,39 +46,39 @@ apis:
   description: The Azuga Ws Oauth API from Azuga — 4 operation(s) for azuga ws oauth.
   name: Azuga Azuga Ws Oauth API
   slug: azuga-azuga-ws-oauth-api
-artifact_total: 9
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Azuga Webhooks
   slug: azuga-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/plans/azuga-plans-pricing.yml
+  href: https://artifacts.apis.io/azuga/plans/azuga-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/azuga-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/rules/azuga-rules.yml
+  href: https://artifacts.apis.io/azuga/rules/azuga-rules.yml
   title: ''
   type: Spectral
   url: rules/azuga-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/json-ld/azuga-context.jsonld
+  href: https://artifacts.apis.io/azuga/json-ld/azuga-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/azuga-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/vocabulary/azuga-vocabulary.yml
+  href: https://artifacts.apis.io/azuga/vocabulary/azuga-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/azuga-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/asyncapi/azuga-webhooks.yml
+  href: https://artifacts.apis.io/azuga/asyncapi/azuga-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/azuga-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/data-model/azuga-data-model.yml
+  href: https://artifacts.apis.io/azuga/data-model/azuga-data-model.yml
   title: ''
   type: DataModel
   url: data-model/azuga-data-model.yml
@@ -72,27 +87,27 @@ common:
   type: Compliance
   url: https://www.azuga.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/authentication/azuga-authentication.yml
+  href: https://artifacts.apis.io/azuga/authentication/azuga-authentication.yml
   title: ''
   type: Authentication
   url: authentication/azuga-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/conformance/azuga-conformance.yml
+  href: https://artifacts.apis.io/azuga/conformance/azuga-conformance.yml
   title: ''
   type: Conformance
   url: conformance/azuga-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/llms/azuga-llms.txt
+  href: https://artifacts.apis.io/azuga/llms/azuga-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/azuga-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/hosts/azuga-hosts.yml
+  href: https://artifacts.apis.io/azuga/hosts/azuga-hosts.yml
   title: ''
   type: Hosts
   url: hosts/azuga-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/vendors/azuga-vendors.yml
+  href: https://artifacts.apis.io/azuga/vendors/azuga-vendors.yml
   title: ''
   type: Vendors
   url: vendors/azuga-vendors.yml
@@ -141,12 +156,12 @@ common:
   type: DeveloperPortal
   url: https://developer.azugaeld.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/security/azuga-trust-center.yml
+  href: https://artifacts.apis.io/azuga/security/azuga-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/azuga-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azuga/refs/heads/main/security/azuga-domain-security.yml
+  href: https://artifacts.apis.io/azuga/security/azuga-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/azuga-domain-security.yml
@@ -164,6 +179,14 @@ coverage:
   state: unreadable
 created: '2026-10-13'
 description: Azuga provides comprehensive fleet management software and GPS tracking solutions, delivering an end‑to‑end platform that includes AI‑powered dashcams, insurance tools, telematics, driver safety analytics, and customizable reporting. The service helps businesses of all sizes maximize vehicle ROI, reduce operational costs, ensure regulatory compliance, and improve driver behavior through real‑time insights and automated alerts.
+finops:
+- has_sources: true
+  method: derived
+  name: Azuga Finops
+  primary_unit: seat
+  service_category: ''
+  slug: azuga-finops
+  template: false
 image: https://cdn.prod.website-files.com/5bc4b66f898dce69ebbe7ca9/68112a7cb6955eddec782950_Opengraph%20Thumbnail%20New%20UI.webp
 json_schemas:
 - name: PostAzugaWsOauthV3AssetsCreateResponse
@@ -190,6 +213,9 @@ plans:
 - name: Azuga Plans Pricing
   plan_count: 4
   slug: azuga-plans-pricing
+- name: Azuga Price Estimates
+  plan_count: 0
+  slug: azuga-price-estimates
 random_paper: 8
 rules:
 - authorship: generated
@@ -205,22 +231,24 @@ rules:
     warn: 1
   slug: azuga-rules
 score:
-  band: developing
-  composite: 47.3
+  band: thin
+  composite: 39.0
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 65.2
+    artifact_dirs: 22
+    catalog_earned: 68.2
     catalog_earned_first_party: 12.0
-    catalog_gap: 49.9
+    catalog_gap: 46.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.8
   facets:
-    access_clarity: 68.4
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 26.9
-    developer_ergonomics: 57.1
-    discoverability: 75.0
-    operational_transparency: 34.2
+    developer_ergonomics: 34.5
+    discoverability: 74.1
+    operational_transparency: 21.1
+  previous_composite: 48.8
   provenance:
     conformance: derived
     contracts:
@@ -234,12 +262,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/azuga/azuga-2026-11-03T121457.png
 security:
 - kind: authentication
   name: Azuga Authentication

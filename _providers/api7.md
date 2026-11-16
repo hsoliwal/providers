@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 api_count: 17
 apis:
 - description: API7 Enterprise Developer Portal APIs allow creation and management of developer portal resources.
@@ -109,54 +125,54 @@ apis:
   description: The Chat Completions API from API7.ai — 1 operation(s) for chat completions.
   name: API7.ai Chat Completions API
   slug: api7-chat-completions-api
-artifact_total: 31
+artifact_total: 32
 asyncapis:
 - description: ''
   name: Api7 Webhooks
   slug: api7-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/rate-limits/api7-rate-limits.yml
+  href: https://artifacts.apis.io/api7/rate-limits/api7-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/api7-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/plans/api7-plans-pricing.yml
+  href: https://artifacts.apis.io/api7/plans/api7-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/api7-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/rules/api7-rules.yml
+  href: https://artifacts.apis.io/api7/rules/api7-rules.yml
   title: ''
   type: Spectral
   url: rules/api7-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/json-ld/api7-context.jsonld
+  href: https://artifacts.apis.io/api7/json-ld/api7-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/api7-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/vocabulary/api7-vocabulary.yml
+  href: https://artifacts.apis.io/api7/vocabulary/api7-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/api7-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/asyncapi/api7-webhooks.yml
+  href: https://artifacts.apis.io/api7/asyncapi/api7-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/api7-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/data-model/api7-data-model.yml
+  href: https://artifacts.apis.io/api7/data-model/api7-data-model.yml
   title: ''
   type: DataModel
   url: data-model/api7-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/cli/api7-cli.yml
+  href: https://artifacts.apis.io/api7/cli/api7-cli.yml
   title: ''
   type: CLI
   url: cli/api7-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/changelog/api7-changelog.yml
+  href: https://artifacts.apis.io/api7/changelog/api7-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/api7-changelog.yml
@@ -165,27 +181,27 @@ common:
   type: Compliance
   url: https://api7.ai/trust
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/authentication/api7-authentication.yml
+  href: https://artifacts.apis.io/api7/authentication/api7-authentication.yml
   title: ''
   type: Authentication
   url: authentication/api7-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/conformance/api7-conformance.yml
+  href: https://artifacts.apis.io/api7/conformance/api7-conformance.yml
   title: ''
   type: Conformance
   url: conformance/api7-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/llms/api7-llms.txt
+  href: https://artifacts.apis.io/api7/llms/api7-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/api7-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/hosts/api7-hosts.yml
+  href: https://artifacts.apis.io/api7/hosts/api7-hosts.yml
   title: ''
   type: Hosts
   url: hosts/api7-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/vendors/api7-vendors.yml
+  href: https://artifacts.apis.io/api7/vendors/api7-vendors.yml
   title: ''
   type: Vendors
   url: vendors/api7-vendors.yml
@@ -218,12 +234,12 @@ common:
   type: Documentation
   url: https://docs.api7.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/security/api7-trust-center.yml
+  href: https://artifacts.apis.io/api7/security/api7-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/api7-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/api7/refs/heads/main/security/api7-domain-security.yml
+  href: https://artifacts.apis.io/api7/security/api7-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/api7-domain-security.yml
@@ -241,6 +257,14 @@ coverage:
   state: unreadable
 created: '2026-10-15'
 description: API7.ai provides an enterprise‑grade API gateway and AI gateway platform, enabling organizations to manage, secure, and monitor APIs as well as LLM and AI‑agent traffic. Built by the original creators of Apache APISIX, the solution offers features such as traffic routing, rate‑limiting, observability, and AI‑native capabilities through its AISIX product. The company offers cloud‑hosted and on‑premises deployments, comprehensive documentation, pricing plans, and a developer portal for integration.
+finops:
+- has_sources: true
+  method: derived
+  name: Api7 Finops
+  primary_unit: ''
+  service_category: ''
+  slug: api7-finops
+  template: true
 image: https://static.api7.ai/uploads/2023/03/28/hnmYHcii_api7.ai.webp
 json_schemas:
 - name: GetAnythingJohndoeHelloResponse
@@ -282,7 +306,7 @@ plans:
 - name: Api7 Plans Pricing
   plan_count: 2
   slug: api7-plans-pricing
-random_paper: 17
+random_paper: 9
 rate_limits:
 - limit_count: 2
   name: Api7 Rate Limits
@@ -302,21 +326,23 @@ rules:
   slug: api7-rules
 score:
   band: developing
-  composite: 50.1
+  composite: 42.8
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 26
     catalog_earned: 81.8
     catalog_earned_first_party: 16.0
     catalog_gap: 33.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.3
   facets:
-    access_clarity: 68.4
+    access_clarity: 48.7
     contract_governance: 35.6
     contract_quality: 33.3
-    developer_ergonomics: 42.9
-    discoverability: 80.4
+    developer_ergonomics: 31.0
+    discoverability: 79.5
     operational_transparency: 44.7
+  previous_composite: 50.1
   provenance:
     conformance: first-party
     contracts:
@@ -334,12 +360,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/api7/api7-2026-11-03T120933.png
 security:
 - kind: authentication
   name: Api7 Authentication

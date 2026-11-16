@@ -5,7 +5,11 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/security/world-fuel-services-domain-security.yml
+  href: https://artifacts.apis.io/world-fuel-services/security/world-fuel-services-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/world-fuel-services-domain-security.yml
@@ -70,37 +77,37 @@ common:
   type: Login
   url: https://myworld.wfscorp.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/well-known/world-fuel-services-well-known.yml
+  href: https://artifacts.apis.io/world-fuel-services/well-known/world-fuel-services-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/world-fuel-services-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/authentication/world-fuel-services-authentication.yml
+  href: https://artifacts.apis.io/world-fuel-services/authentication/world-fuel-services-authentication.yml
   title: ''
   type: Authentication
   url: authentication/world-fuel-services-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/scopes/world-fuel-services-scopes.yml
+  href: https://artifacts.apis.io/world-fuel-services/scopes/world-fuel-services-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/world-fuel-services-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/conformance/world-fuel-services-conformance.yml
+  href: https://artifacts.apis.io/world-fuel-services/conformance/world-fuel-services-conformance.yml
   title: ''
   type: Conformance
   url: conformance/world-fuel-services-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/llms/world-fuel-services-llms.txt
+  href: https://artifacts.apis.io/world-fuel-services/llms/world-fuel-services-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/world-fuel-services-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/plans/world-fuel-services-plans-pricing.yml
+  href: https://artifacts.apis.io/world-fuel-services/plans/world-fuel-services-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/world-fuel-services-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/rate-limits/world-fuel-services-rate-limits.yml
+  href: https://artifacts.apis.io/world-fuel-services/rate-limits/world-fuel-services-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/world-fuel-services-rate-limits.yml
@@ -153,7 +160,7 @@ press:
 - date: ''
   title: World Fuel Services Corporation Names Sharda Cherwoo to the ...
   url: https://ir.world-kinect.com/news-releases/news-release-details/world-fuel-services-corporation-names-sharda-cherwoo-board
-random_paper: 2
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: World Fuel Services Rate Limits
@@ -167,7 +174,7 @@ score:
   band: emerging
   composite: 20.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -197,14 +204,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/world-fuel-services/refs/heads/main/screenshots/world-fuel-services-2026-10-11T194753.png
+screenshot: https://apis.io/screenshots/world-fuel-services/world-fuel-services-2026-10-11T194753.png
 security:
 - kind: authentication
   name: World Fuel Services Authentication

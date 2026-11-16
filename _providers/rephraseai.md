@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -66,47 +74,47 @@ apis:
 artifact_total: 16
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/agentic-access/rephraseai-agentic-access.yml
+  href: https://artifacts.apis.io/rephraseai/agentic-access/rephraseai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rephraseai-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/rules/rephraseai-rules.yml
+  href: https://artifacts.apis.io/rephraseai/rules/rephraseai-rules.yml
   title: ''
   type: Spectral
   url: rules/rephraseai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/json-ld/rephraseai-context.jsonld
+  href: https://artifacts.apis.io/rephraseai/json-ld/rephraseai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/rephraseai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/vocabulary/rephraseai-vocabulary.yml
+  href: https://artifacts.apis.io/rephraseai/vocabulary/rephraseai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/rephraseai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/data-model/rephraseai-data-model.yml
+  href: https://artifacts.apis.io/rephraseai/data-model/rephraseai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rephraseai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/conformance/rephraseai-conformance.yml
+  href: https://artifacts.apis.io/rephraseai/conformance/rephraseai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rephraseai-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/hosts/rephraseai-hosts.yml
+  href: https://artifacts.apis.io/rephraseai/hosts/rephraseai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/rephraseai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/vendors/rephraseai-vendors.yml
+  href: https://artifacts.apis.io/rephraseai/vendors/rephraseai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/rephraseai-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/security/rephraseai-domain-security.yml
+  href: https://artifacts.apis.io/rephraseai/security/rephraseai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rephraseai-domain-security.yml
@@ -123,27 +131,27 @@ common:
   type: APIReference
   url: https://studio-rephrase-api.readme.io/reference/documentation
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/authentication/rephraseai-authentication.yml
+  href: https://artifacts.apis.io/rephraseai/authentication/rephraseai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rephraseai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/scopes/rephraseai-scopes.yml
+  href: https://artifacts.apis.io/rephraseai/scopes/rephraseai-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/rephraseai-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/conventions/rephraseai-conventions.yml
+  href: https://artifacts.apis.io/rephraseai/conventions/rephraseai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rephraseai-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/mcp/rephraseai-mcp.yml
+  href: https://artifacts.apis.io/rephraseai/mcp/rephraseai-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rephraseai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/well-known/rephraseai-well-known.yml
+  href: https://artifacts.apis.io/rephraseai/well-known/rephraseai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rephraseai-well-known.yml
@@ -207,7 +215,7 @@ scopes:
   summary_line: 1 scope
 score:
   band: thin
-  composite: 27.0
+  composite: 29.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 62.8
@@ -215,12 +223,12 @@ score:
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 15.8
+  delta: 2.8
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
-    contract_quality: 53.7
-    developer_ergonomics: 20.2
+    contract_quality: 58.1
+    developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
@@ -230,7 +238,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 11.2
+  previous_composite: 27.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -246,13 +254,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rephraseai/refs/heads/main/screenshots/rephraseai-2026-09-02T153504.png
+screenshot: https://apis.io/screenshots/rephraseai/rephraseai-2026-09-02T153504.png
 security:
 - kind: authentication
   name: Rephraseai Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: UK food hygiene rating data API
@@ -41,12 +45,12 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/food-standards-agency/refs/heads/main/security/food-standards-agency-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/food-standards-agency/security/food-standards-agency-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/food-standards-agency-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/food-standards-agency/refs/heads/main/security/food-standards-agency-domain-security.yml
+  href: https://artifacts.apis.io/food-standards-agency/security/food-standards-agency-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/food-standards-agency-domain-security.yml
@@ -67,10 +71,10 @@ name: Food Standards Agency
 nav: Providers
 network: true
 overview: Food Standards Agency is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Government and Public APIs.
-random_paper: 19
+random_paper: 21
 score:
   band: minimal
-  composite: 4.4
+  composite: 5.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 22.0
@@ -85,22 +89,22 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 46.4
-    operational_transparency: 0.0
-  previous_composite: 4.4
+    operational_transparency: 10.5
+  previous_composite: 5.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/food-standards-agency/refs/heads/main/screenshots/food-standards-agency-2026-06-20T181401.png
+screenshot: https://apis.io/screenshots/food-standards-agency/food-standards-agency-2026-06-20T181401.png
 security:
 - kind: domain-security
   name: Food Standards Agency Domain Security

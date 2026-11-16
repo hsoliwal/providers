@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.9
-  scored_at: '2026-10-17'
+  score: 41.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 351
   slug: deribit-agentic-access
   summary_line: 351 operations
-api_count: 5
+api_count: 3
 apis:
 - description: JSON-RPC over WebSocket interface for real-time bidirectional communication with the Deribit exchange. Recommended for most use cases, supporting real-time market data subscriptions, trading operation
   name: Deribit WebSocket API
@@ -111,11 +114,8 @@ apis:
   description: The Wallet API from Deribit — 21 operation(s) for wallet.
   name: Deribit Wallet API
   slug: deribit-wallet-api
-artifact_total: 607
+artifact_total: 606
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Deribit Account Management API
   slug: open-deribit-account-management-api
@@ -169,17 +169,17 @@ collections:
   slug: open-deribit-websocket-only-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/deribit/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/deribit/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/deribit/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -192,17 +192,17 @@ common:
   type: Website
   url: https://www.deribit.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/agentic-access/deribit-agentic-access.yml
+  href: https://artifacts.apis.io/deribit/agentic-access/deribit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/deribit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/security/deribit-domain-security.yml
+  href: https://artifacts.apis.io/deribit/security/deribit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deribit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/authentication/deribit-authentication.yml
+  href: https://artifacts.apis.io/deribit/authentication/deribit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/deribit-authentication.yml
@@ -780,7 +780,7 @@ json_schemas:
   property_count: 2
   slug: ErrorResponse
 - name: Getlistcustodyaccounts200Response
-  property_count: 0
+  property_count: 1
   slug: GetlistCustodyAccounts200response
 - name: Getunsubscribe200Response
   property_count: 3
@@ -1692,7 +1692,7 @@ json_schemas:
   property_count: 6
   slug: position_move_trade
 - name: Position With Elp
-  property_count: 0
+  property_count: 2
   slug: position_with_elp
 - name: Post Only
   property_count: 0
@@ -1997,7 +1997,7 @@ plans:
 - name: Plans
   plan_count: 7
   slug: plans
-random_paper: 13
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -2016,29 +2016,29 @@ rules:
   slug: deribit-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 38.2
+  composite: 39.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 49.3
     catalog_earned_first_party: 0.0
     catalog_gap: 65.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 0.9
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 59.0
+    contract_quality: 62.7
     developer_ergonomics: 45.2
     discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 43.9
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 91.7
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 75.0
       total: 12
   regulatory:
     applies: true
@@ -2046,14 +2046,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 28.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/deribit/refs/heads/main/screenshots/deribit-2026-06-20T175930.png
+screenshot: https://apis.io/screenshots/deribit/deribit-2026-06-20T175930.png
 security:
 - kind: authentication
   name: Deribit Authentication

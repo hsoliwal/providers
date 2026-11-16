@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 31.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -52,11 +55,8 @@ apis:
   description: 'The Populations API from Oracle Health Data Intelligence — population-scoped read access to a patient''s aggregated allergy record within the longitudinal patient record. Two operations, listAllergies '
   name: Oracle Health Data Intelligence Populations API
   slug: oracle-health-data-intelligence-populations-api
-artifact_total: 13
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Oracle Health Data Intelligence - Allergy Populations API
   slug: open-oracle-health-data-intelligence-populations-api
@@ -69,17 +69,17 @@ common:
   type: Website
   url: https://www.oracle.com/health/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/agentic-access/oracle-health-data-intelligence-agentic-access.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/agentic-access/oracle-health-data-intelligence-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/oracle-health-data-intelligence-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/security/oracle-health-data-intelligence-domain-security.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/security/oracle-health-data-intelligence-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oracle-health-data-intelligence-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/authentication/oracle-health-data-intelligence-authentication.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/authentication/oracle-health-data-intelligence-authentication.yml
   title: ''
   type: Authentication
   url: authentication/oracle-health-data-intelligence-authentication.yml
@@ -124,98 +124,98 @@ common:
   type: Compliance
   url: https://www.oracle.com/corporate/cloud-compliance/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/security/oracle-health-data-intelligence-trust-center.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/security/oracle-health-data-intelligence-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/oracle-health-data-intelligence-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/security/oracle-health-data-intelligence-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/security/oracle-health-data-intelligence-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/oracle-health-data-intelligence-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/security/oracle-health-data-intelligence-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/security/oracle-health-data-intelligence-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/oracle-health-data-intelligence-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/conformance/oracle-health-data-intelligence-conformance.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/conformance/oracle-health-data-intelligence-conformance.yml
   title: ''
   type: Conformance
   url: conformance/oracle-health-data-intelligence-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/errors/oracle-health-data-intelligence-problem-types.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/errors/oracle-health-data-intelligence-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/oracle-health-data-intelligence-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/lifecycle/oracle-health-data-intelligence-lifecycle.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/lifecycle/oracle-health-data-intelligence-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/oracle-health-data-intelligence-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/lifecycle/oracle-health-data-intelligence-lifecycle.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/lifecycle/oracle-health-data-intelligence-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/oracle-health-data-intelligence-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/conventions/oracle-health-data-intelligence-conventions.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/conventions/oracle-health-data-intelligence-conventions.yml
   title: ''
   type: Conventions
   url: conventions/oracle-health-data-intelligence-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/sandbox/oracle-health-data-intelligence-sandbox.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/sandbox/oracle-health-data-intelligence-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/oracle-health-data-intelligence-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/packages/oracle-health-data-intelligence-packages.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/packages/oracle-health-data-intelligence-packages.yml
   title: ''
   type: Packages
   url: packages/oracle-health-data-intelligence-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/components/oracle-health-data-intelligence-components.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/components/oracle-health-data-intelligence-components.yml
   title: ''
   type: Components
   url: components/oracle-health-data-intelligence-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/data-model/oracle-health-data-intelligence-data-model.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/data-model/oracle-health-data-intelligence-data-model.yml
   title: ''
   type: DataModel
   url: data-model/oracle-health-data-intelligence-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/llms/oracle-health-data-intelligence-llms.txt
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/llms/oracle-health-data-intelligence-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/oracle-health-data-intelligence-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/plans/oracle-health-data-intelligence-plans-pricing.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/plans/oracle-health-data-intelligence-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/oracle-health-data-intelligence-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/rate-limits/oracle-health-data-intelligence-rate-limits.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/rate-limits/oracle-health-data-intelligence-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/oracle-health-data-intelligence-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/finops/oracle-health-data-intelligence-finops.yml
+  href: https://artifacts.apis.io/oracle-health-data-intelligence/finops/oracle-health-data-intelligence-finops.yml
   title: ''
   type: FinOps
   url: finops/oracle-health-data-intelligence-finops.yml
 created: '2025-01-07'
 description: 'Oracle Health Data Intelligence, formerly Cerner HealtheIntent, is a tenant-scoped population health platform that aggregates data from electronic health records, claims, genomic sources and patient-generated data into a single longitudinal record per patient, then computes intelligence over it — registries, risk scores, hierarchical condition categories, quality measures and care plans. Its public developer portal documents roughly sixty REST APIs spanning the longitudinal record, data ingestion, analytics and syndication, consumer engagement and clinical intelligence. Access is business-to-business and customer-scoped: an Oracle system account is requested through the Cerner Central portal and granted per-API authorization in the Health Data Intelligence Console, authenticating with a bearer token or two-legged OAuth 1.0a. Oracle publishes no machine-readable contract, no SDKs and, by a documented and reasoned decision, no FHIR APIs for this platform.'
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Oracle Health Data Intelligence Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: oracle-health-data-intelligence-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oracle-health-data-intelligence.png
@@ -227,35 +227,51 @@ network: true
 overview: 'Oracle Health Data Intelligence publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Populations API, and 1 more. Tagged areas include Genomic, Health Records, Healthcare, Population Health, and Longitudinal Record.
 
 
+  The Oracle Health Data Intelligence catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Oracle Health Data Intelligence''s developer surface includes authentication, documentation, API reference, getting-started guide, support, sandbox, and 25 more developer resources.'
 plans:
 - name: Oracle Health Data Intelligence Plans Pricing
   plan_count: 0
   slug: oracle-health-data-intelligence-plans-pricing
-random_paper: 14
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Oracle Health Data Intelligence Rate Limits
   slug: oracle-health-data-intelligence-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Oracle Health Data Intelligence API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: oracle-health-data-intelligence-rules
 score:
   band: developing
-  composite: 46.4
+  composite: 48.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 47.8
     developer_ergonomics: 55.4
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 47.9
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -272,14 +288,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/oracle-health-data-intelligence/refs/heads/main/screenshots/oracle-health-data-intelligence-2026-06-20T191145.png
+screenshot: https://apis.io/screenshots/oracle-health-data-intelligence/oracle-health-data-intelligence-2026-06-20T191145.png
 security:
 - kind: authentication
   name: Oracle Health Data Intelligence Authentication
@@ -297,6 +313,10 @@ security:
   name: Oracle Health Data Intelligence Trust Center
   slug: oracle-health-data-intelligence-trust-center
   summary_line: HIPAA, HITRUST CSF, SOC 2, ISO/IEC 27001, FedRAMP, PCI DSS
+skill_count: 1
+skills:
+- name: retrieve-patient-allergies
+  slug: oracle-health-data-intelligence-retrieve-patient-allergies
 slug: oracle-health-data-intelligence
 tags:
 - Genomic

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 23.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.buxfer.com/api
@@ -62,11 +65,8 @@ apis:
   description: Create, edit, delete, list and import transactions.
   name: Buxfer Transactions API
   slug: buxfer-transactions-api
-artifact_total: 14
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Buxfer Accounts API
   slug: open-buxfer-accounts-api
@@ -92,12 +92,12 @@ common:
   type: Website
   url: https://www.buxfer.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/overlays/buxfer-openapi-overlay.yaml
+  href: https://artifacts.apis.io/buxfer/overlays/buxfer-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/buxfer-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/security/buxfer-trust-center.yml
+  href: https://artifacts.apis.io/buxfer/security/buxfer-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/buxfer-trust-center.yml
@@ -106,7 +106,7 @@ common:
   type: Compliance
   url: https://www.buxfer.com/help/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/well-known/buxfer-well-known.yml
+  href: https://artifacts.apis.io/buxfer/well-known/buxfer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/buxfer-well-known.yml
@@ -151,52 +151,52 @@ common:
   type: PrivacyPolicy
   url: https://www.buxfer.com/privacy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/authentication/buxfer-authentication.yml
+  href: https://artifacts.apis.io/buxfer/authentication/buxfer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/buxfer-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/conventions/buxfer-conventions.yml
+  href: https://artifacts.apis.io/buxfer/conventions/buxfer-conventions.yml
   title: ''
   type: Conventions
   url: conventions/buxfer-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/data-model/buxfer-data-model.yml
+  href: https://artifacts.apis.io/buxfer/data-model/buxfer-data-model.yml
   title: ''
   type: DataModel
   url: data-model/buxfer-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/errors/buxfer-problem-types.yml
+  href: https://artifacts.apis.io/buxfer/errors/buxfer-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/buxfer-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/conformance/buxfer-conformance.yml
+  href: https://artifacts.apis.io/buxfer/conformance/buxfer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/buxfer-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/lifecycle/buxfer-lifecycle.yml
+  href: https://artifacts.apis.io/buxfer/lifecycle/buxfer-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/buxfer-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/mcp/buxfer-mcp.yml
+  href: https://artifacts.apis.io/buxfer/mcp/buxfer-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/buxfer-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/llms/buxfer-llms.txt
+  href: https://artifacts.apis.io/buxfer/llms/buxfer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/buxfer-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/buxfer/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/security/buxfer-domain-security.yml
+  href: https://artifacts.apis.io/buxfer/security/buxfer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/buxfer-domain-security.yml
@@ -211,27 +211,43 @@ network: true
 overview: 'Buxfer publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Organization API, and 2 more. Tagged areas include Company, Personal Finance, Money Management, Budgeting, and Banking.
 
 
+  The Buxfer catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Buxfer''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
-random_paper: 14
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Buxfer API Rules
+  rule_count: 63
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 1
+  slug: buxfer-rules
 score:
   band: thin
-  composite: 32.5
+  composite: 34.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 60.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 13.5
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 32.5
+  previous_composite: 34.2
   provenance:
     conformance: derived
     contracts:
@@ -247,13 +263,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/buxfer/refs/heads/main/screenshots/buxfer-2026-07-25T204124.png
+screenshot: https://apis.io/screenshots/buxfer/buxfer-2026-07-25T204124.png
 security:
 - kind: authentication
   name: Buxfer Authentication
@@ -267,6 +283,14 @@ security:
   name: Buxfer Trust Center
   slug: buxfer-trust-center
   summary_line: ISO 27001, PCI DSS
+skill_count: 3
+skills:
+- name: Import a bank statement into Buxfer
+  slug: buxfer-import-statement
+- name: Record an expense in Buxfer
+  slug: buxfer-record-expense
+- name: Review Buxfer budgets and recent spending
+  slug: buxfer-review-budgets
 slug: buxfer
 tags:
 - Company

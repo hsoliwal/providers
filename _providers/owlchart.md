@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.2
-  scored_at: '2026-10-17'
+  score: 37.8
+  scored_at: '2026-11-06'
 api_count: 27
 apis:
 - description: Live market data API providing OHLCV candles, real‑time order‑book data, symbol search and analytics.
@@ -114,47 +127,47 @@ common:
   type: BlogRSS
   url: https://owlchart.com/feed.xml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/rules/owlchart-rules.yml
+  href: https://artifacts.apis.io/owlchart/rules/owlchart-rules.yml
   title: ''
   type: Spectral
   url: rules/owlchart-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/json-ld/owlchart-context.jsonld
+  href: https://artifacts.apis.io/owlchart/json-ld/owlchart-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/owlchart-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/vocabulary/owlchart-vocabulary.yml
+  href: https://artifacts.apis.io/owlchart/vocabulary/owlchart-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/owlchart-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/data-model/owlchart-data-model.yml
+  href: https://artifacts.apis.io/owlchart/data-model/owlchart-data-model.yml
   title: ''
   type: DataModel
   url: data-model/owlchart-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/conformance/owlchart-conformance.yml
+  href: https://artifacts.apis.io/owlchart/conformance/owlchart-conformance.yml
   title: ''
   type: Conformance
   url: conformance/owlchart-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/llms/owlchart-llms.txt
+  href: https://artifacts.apis.io/owlchart/llms/owlchart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/owlchart-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/well-known/owlchart-well-known.yml
+  href: https://artifacts.apis.io/owlchart/well-known/owlchart-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/owlchart-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/hosts/owlchart-hosts.yml
+  href: https://artifacts.apis.io/owlchart/hosts/owlchart-hosts.yml
   title: ''
   type: Hosts
   url: hosts/owlchart-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/vendors/owlchart-vendors.yml
+  href: https://artifacts.apis.io/owlchart/vendors/owlchart-vendors.yml
   title: ''
   type: Vendors
   url: vendors/owlchart-vendors.yml
@@ -163,7 +176,7 @@ common:
   type: PrivacyPolicy
   url: https://owlchart.com/privacy.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/security/owlchart-domain-security.yml
+  href: https://artifacts.apis.io/owlchart/security/owlchart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/owlchart-domain-security.yml
@@ -226,7 +239,7 @@ overview: 'OwlChart is listed with 27 APIs on the [APIs.io](https://apis.io/) ne
 
 
   OwlChart''s developer surface includes documentation, API reference, and 13 more developer resources.'
-random_paper: 10
+random_paper: 4
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -242,20 +255,20 @@ rules:
   slug: owlchart-rules
 score:
   band: emerging
-  composite: 20.9
+  composite: 17.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.0
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 23.1
-    developer_ergonomics: 16.7
+    developer_ergonomics: 8.3
     discoverability: 69.6
     operational_transparency: 0.0
   previous_composite: 20.9
@@ -272,14 +285,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/owlchart/refs/heads/main/screenshots/owlchart-2026-10-11T112231.png
+screenshot: https://apis.io/screenshots/owlchart/owlchart-2026-10-11T112231.png
 security:
 - kind: domain-security
   name: Owlchart Domain Security

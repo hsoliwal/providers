@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 22.1
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://api.carium.com
@@ -68,62 +81,62 @@ asyncapis:
   slug: carium-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/rules/carium-rules.yml
+  href: https://artifacts.apis.io/carium/rules/carium-rules.yml
   title: ''
   type: Spectral
   url: rules/carium-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/json-ld/carium-context.jsonld
+  href: https://artifacts.apis.io/carium/json-ld/carium-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/carium-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/vocabulary/carium-vocabulary.yml
+  href: https://artifacts.apis.io/carium/vocabulary/carium-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/carium-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/asyncapi/carium-webhooks.yml
+  href: https://artifacts.apis.io/carium/asyncapi/carium-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/carium-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/data-model/carium-data-model.yml
+  href: https://artifacts.apis.io/carium/data-model/carium-data-model.yml
   title: ''
   type: DataModel
   url: data-model/carium-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/cli/carium-cli.yml
+  href: https://artifacts.apis.io/carium/cli/carium-cli.yml
   title: ''
   type: CLI
   url: cli/carium-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/conformance/carium-conformance.yml
+  href: https://artifacts.apis.io/carium/conformance/carium-conformance.yml
   title: ''
   type: Conformance
   url: conformance/carium-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/llms/carium-llms.txt
+  href: https://artifacts.apis.io/carium/llms/carium-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/carium-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/well-known/carium-status-security.txt
+  href: https://artifacts.apis.io/carium/well-known/carium-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/carium-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/well-known/carium-well-known.yml
+  href: https://artifacts.apis.io/carium/well-known/carium-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/carium-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/hosts/carium-hosts.yml
+  href: https://artifacts.apis.io/carium/hosts/carium-hosts.yml
   title: ''
   type: Hosts
   url: hosts/carium-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/vendors/carium-vendors.yml
+  href: https://artifacts.apis.io/carium/vendors/carium-vendors.yml
   title: ''
   type: Vendors
   url: vendors/carium-vendors.yml
@@ -156,7 +169,7 @@ common:
   type: Blog
   url: https://www.go.carium.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carium/refs/heads/main/security/carium-domain-security.yml
+  href: https://artifacts.apis.io/carium/security/carium-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carium-domain-security.yml
@@ -227,14 +240,14 @@ modified: '2026-10-07'
 name: Carium
 nav: Providers
 network: true
-overview: 'Carium is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Caredb API, Carium API, Carium Inc API, and 4 more. Tagged areas include Healthcare, VirtualCare, Remote Monitoring, Patient Engagement, and Health Tech.
+overview: 'Carium is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Caredb API, Carium API, Carium Inc API, and 4 more. Tagged areas include Healthcare, Virtual Care, Remote Monitoring, Patient Engagement, and Health Tech.
 
 
   The Carium catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
   Carium''s developer surface includes CLI, engineering blog, documentation, support, API reference, getting-started guide, and 19 more developer resources.'
-random_paper: 3
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -249,22 +262,24 @@ rules:
     warn: 1
   slug: carium-rules
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 31.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.6
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 35.3
-    developer_ergonomics: 52.4
-    discoverability: 80.4
-    operational_transparency: 23.7
+    developer_ergonomics: 29.8
+    discoverability: 79.5
+    operational_transparency: 26.3
+  previous_composite: 41.0
   provenance:
     conformance: derived
     contracts:
@@ -278,12 +293,14 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 11.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/carium/carium-2026-11-03T123357.png
 security:
 - kind: domain-security
   name: Carium Domain Security
@@ -292,7 +309,7 @@ security:
 slug: carium
 tags:
 - Healthcare
-- VirtualCare
+- Virtual Care
 - Remote Monitoring
 - Patient Engagement
 - Health Tech

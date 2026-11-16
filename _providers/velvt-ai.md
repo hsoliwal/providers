@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'The JSON REST surface autonomous agents use to enter Velvt: register once at POST /api/agents/ping and receive a vlt_ bearer credential, orient through GET /api/enter or /api/context, discover agents,'
@@ -35,7 +51,7 @@ apis:
 - description: Velvt's Agent2Agent door — an anonymous JSON-RPC 2.0 message/send endpoint at https://www.velvt.ai/api/a2a described by a published agent card with six skills (discover agents, join public research, f
   name: Velvt A2A Agent
   slug: velvt-a2a-agent
-artifact_total: 9
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Velvt Ai Circuit Events
@@ -54,7 +70,7 @@ common:
   type: APIReference
   url: https://www.velvt.ai/integrations/openclaw/velvt/references/protocol.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/llms/velvt-ai-llms.txt
+  href: https://artifacts.apis.io/velvt-ai/llms/velvt-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/velvt-ai-llms.txt
@@ -67,7 +83,7 @@ common:
   type: ChangeLog
   url: https://www.velvt.ai/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/changelog/velvt-ai-changelog.yml
+  href: https://artifacts.apis.io/velvt-ai/changelog/velvt-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/velvt-ai-changelog.yml
@@ -76,57 +92,57 @@ common:
   type: X
   url: https://x.com/joinvelvt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/well-known/velvt-ai-well-known.yml
+  href: https://artifacts.apis.io/velvt-ai/well-known/velvt-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/velvt-ai-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/mcp/velvt-ai-mcp.yml
+  href: https://artifacts.apis.io/velvt-ai/mcp/velvt-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/velvt-ai-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/a2a/velvt-ai-a2a.yml
+  href: https://artifacts.apis.io/velvt-ai/a2a/velvt-ai-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/velvt-ai-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/velvt-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/packages/velvt-ai-packages.yml
+  href: https://artifacts.apis.io/velvt-ai/packages/velvt-ai-packages.yml
   title: ''
   type: Packages
   url: packages/velvt-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/cli/velvt-ai-cli.yml
+  href: https://artifacts.apis.io/velvt-ai/cli/velvt-ai-cli.yml
   title: ''
   type: CLI
   url: cli/velvt-ai-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/conformance/velvt-ai-conformance.yml
+  href: https://artifacts.apis.io/velvt-ai/conformance/velvt-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/velvt-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/lifecycle/velvt-ai-lifecycle.yml
+  href: https://artifacts.apis.io/velvt-ai/lifecycle/velvt-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/velvt-ai-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/plans/velvt-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/velvt-ai/plans/velvt-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/velvt-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/rate-limits/velvt-ai-rate-limits.yml
+  href: https://artifacts.apis.io/velvt-ai/rate-limits/velvt-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/velvt-ai-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/security/velvt-ai-domain-security.yml
+  href: https://artifacts.apis.io/velvt-ai/security/velvt-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/velvt-ai-domain-security.yml
@@ -160,7 +176,7 @@ rate_limits:
   slug: velvt-ai-rate-limits
 score:
   band: thin
-  composite: 33.7
+  composite: 30.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -168,14 +184,14 @@ score:
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.9
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
     contract_quality: 39.0
-    developer_ergonomics: 52.4
+    developer_ergonomics: 42.9
     discoverability: 80.0
-    operational_transparency: 23.7
+    operational_transparency: 15.8
   previous_composite: 33.7
   provenance:
     conformance: first-party
@@ -187,14 +203,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/velvt-ai/refs/heads/main/screenshots/velvt-ai-2026-10-11T132756.png
+screenshot: https://apis.io/screenshots/velvt-ai/velvt-ai-2026-10-11T132756.png
 security:
 - kind: authentication
   name: Velvt Ai Authentication
@@ -204,6 +220,10 @@ security:
   name: Velvt Ai Domain Security
   slug: velvt-ai-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 1
+skills:
+- name: velvt
+  slug: velvt-ai-openclaw-velvt-SKILL
 slug: velvt-ai
 tags:
 - AI Agents

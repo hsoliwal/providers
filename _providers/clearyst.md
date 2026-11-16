@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,47 +38,47 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/rate-limits/clearyst-rate-limits.yml
+  href: https://artifacts.apis.io/clearyst/rate-limits/clearyst-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/clearyst-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/plans/clearyst-plans-pricing.yml
+  href: https://artifacts.apis.io/clearyst/plans/clearyst-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/clearyst-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/conformance/clearyst-conformance.yml
+  href: https://artifacts.apis.io/clearyst/conformance/clearyst-conformance.yml
   title: ''
   type: Conformance
   url: conformance/clearyst-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/llms/clearyst-llms.txt
+  href: https://artifacts.apis.io/clearyst/llms/clearyst-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/clearyst-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/well-known/clearyst-help-security.txt
+  href: https://artifacts.apis.io/clearyst/well-known/clearyst-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/clearyst-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/well-known/clearyst-well-known.yml
+  href: https://artifacts.apis.io/clearyst/well-known/clearyst-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/clearyst-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/hosts/clearyst-hosts.yml
+  href: https://artifacts.apis.io/clearyst/hosts/clearyst-hosts.yml
   title: ''
   type: Hosts
   url: hosts/clearyst-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/vendors/clearyst-vendors.yml
+  href: https://artifacts.apis.io/clearyst/vendors/clearyst-vendors.yml
   title: ''
   type: Vendors
   url: vendors/clearyst-vendors.yml
@@ -88,7 +103,7 @@ common:
   type: Documentation
   url: https://help.clearyst.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clearyst/refs/heads/main/security/clearyst-domain-security.yml
+  href: https://artifacts.apis.io/clearyst/security/clearyst-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clearyst-domain-security.yml
@@ -120,28 +135,30 @@ plans:
 - name: Clearyst Plans Pricing
   plan_count: 2
   slug: clearyst-plans-pricing
-random_paper: 13
+random_paper: 7
 rate_limits:
 - limit_count: 2
   name: Clearyst Rate Limits
   slug: clearyst-rate-limits
 score:
   band: emerging
-  composite: 24.7
+  composite: 20.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 43.0
     catalog_earned_first_party: 16.0
     catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.3
   facets:
-    access_clarity: 42.1
+    access_clarity: 31.6
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 26.2
+    developer_ergonomics: 13.1
     discoverability: 55.4
-    operational_transparency: 21.1
+    operational_transparency: 31.6
+  previous_composite: 26.0
   provenance:
     conformance: first-party
     mcp: unknown
@@ -156,13 +173,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/clearyst/clearyst-2026-11-03T124354.png
 security:
 - kind: domain-security
   name: Clearyst Domain Security

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 23.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.auswidebank.com.au/openbanking/cds-au/v1
@@ -71,11 +75,8 @@ apis:
   description: Banking Product endpoints
   name: Auswide Bank Banking Products API
   slug: auswide-bank-banking-products-api
-artifact_total: 18
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-auswide-bank-banking-account-balances-api
@@ -99,72 +100,72 @@ collections:
   slug: open-auswide-bank-banking-products-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/capabilities/auswide-bank-capability-edges.yml
+  href: https://artifacts.apis.io/auswide-bank/capabilities/auswide-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/auswide-bank-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/security/auswide-bank-domain-security.yml
+  href: https://artifacts.apis.io/auswide-bank/security/auswide-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/auswide-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/authentication/auswide-bank-authentication.yml
+  href: https://artifacts.apis.io/auswide-bank/authentication/auswide-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/auswide-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/scopes/auswide-bank-scopes.yml
+  href: https://artifacts.apis.io/auswide-bank/scopes/auswide-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/auswide-bank-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/conformance/auswide-bank-conformance.yml
+  href: https://artifacts.apis.io/auswide-bank/conformance/auswide-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/auswide-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/errors/auswide-bank-problem-types.yml
+  href: https://artifacts.apis.io/auswide-bank/errors/auswide-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/auswide-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/lifecycle/auswide-bank-lifecycle.yml
+  href: https://artifacts.apis.io/auswide-bank/lifecycle/auswide-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/auswide-bank-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/lifecycle/auswide-bank-lifecycle.yml
+  href: https://artifacts.apis.io/auswide-bank/lifecycle/auswide-bank-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/auswide-bank-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/conventions/auswide-bank-conventions.yml
+  href: https://artifacts.apis.io/auswide-bank/conventions/auswide-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/auswide-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/data-model/auswide-bank-data-model.yml
+  href: https://artifacts.apis.io/auswide-bank/data-model/auswide-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/auswide-bank-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/overlays/auswide-bank-cds-banking-products-overlay.yaml
+  href: https://artifacts.apis.io/auswide-bank/overlays/auswide-bank-cds-banking-products-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/auswide-bank-cds-banking-products-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/llms/auswide-bank-llms.txt
+  href: https://artifacts.apis.io/auswide-bank/llms/auswide-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/auswide-bank-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/mcp/auswide-bank-mcp.yml
+  href: https://artifacts.apis.io/auswide-bank/mcp/auswide-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/auswide-bank-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/skills/auswide-bank-product-lookup.md
+  href: https://artifacts.apis.io/auswide-bank/skills/auswide-bank-product-lookup.md
   title: ''
   type: AgentSkill
   url: skills/auswide-bank-product-lookup.md
@@ -203,8 +204,24 @@ network: true
 overview: 'Auswide Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
+  The Auswide Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Auswide Bank''s developer surface includes authentication, documentation, support, and 17 more developer resources.'
-random_paper: 1
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Auswide Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: auswide-bank-rules
 scopes:
 - name: Auswide Bank Scopes
   scope_count: 5
@@ -212,18 +229,18 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.2
+  composite: 34.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 35.1
     discoverability: 73.2
@@ -235,7 +252,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 33.2
+  previous_composite: 34.9
   provenance:
     conformance: derived
     contracts:
@@ -255,13 +272,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/auswide-bank/refs/heads/main/screenshots/auswide-bank-2026-07-21T114702.png
+screenshot: https://apis.io/screenshots/auswide-bank/auswide-bank-2026-07-21T114702.png
 security:
 - kind: authentication
   name: Auswide Bank Authentication
@@ -271,6 +288,10 @@ security:
   name: Auswide Bank Domain Security
   slug: auswide-bank-domain-security
   summary_line: TLSv1.2 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Look up Auswide Bank banking products
+  slug: auswide-bank-product-lookup
 slug: auswide-bank
 tags:
 - Finance

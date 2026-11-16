@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
+  - rate-limits
+  - security
   - '{''url'': ''https://betapage.co/'', ''status'': 301, ''note'': ''declared website redirects to https://pitchwall.co/ — a different registrable domain (betapage.co -> pitchwall.co), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 16
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betapage/refs/heads/main/security/betapage-domain-security.yml
+  href: https://artifacts.apis.io/betapage/security/betapage-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/betapage-domain-security.yml
@@ -79,17 +85,17 @@ common:
   type: Pricing
   url: https://pitchwall.co/pages/advertise
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/betapage/refs/heads/main/plans/betapage-plans-pricing.yml
+  href: https://artifacts.apis.io/betapage/plans/betapage-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/betapage-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/betapage/refs/heads/main/rate-limits/betapage-rate-limits.yml
+  href: https://artifacts.apis.io/betapage/rate-limits/betapage-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/betapage-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/betapage/refs/heads/main/regulatory/betapage-regulatory-posture.yml
+  href: https://artifacts.apis.io/betapage/regulatory/betapage-regulatory-posture.yml
   title: ''
   type: RegulatoryPosture
   url: regulatory/betapage-regulatory-posture.yml
@@ -165,7 +171,7 @@ plans:
 - name: Betapage Plans Pricing
   plan_count: 4
   slug: betapage-plans-pricing
-random_paper: 11
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Betapage Rate Limits
@@ -174,13 +180,13 @@ score:
   band: emerging
   composite: 20.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 63.2
     contract_governance: 0.0
@@ -188,21 +194,21 @@ score:
     developer_ergonomics: 10.7
     discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 20.2
+  previous_composite: 20.3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/betapage/refs/heads/main/screenshots/betapage-2026-06-20T173155.png
+screenshot: https://apis.io/screenshots/betapage/betapage-2026-06-20T173155.png
 security:
 - kind: domain-security
   name: Betapage Domain Security

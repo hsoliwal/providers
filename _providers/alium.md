@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,20 +28,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.6
-  scored_at: '2026-10-17'
+  score: 41.1
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: Alium API provides access to AI‑synthesized interview data and insights for brands.
+- baseURL: https://app.alium.io
+  baseurl_source: spec
+  description: Alium API provides access to AI‑synthesized interview data and insights for brands.
   name: Alium API
-  slug: alium-api-2
+  slug: alium-api
 - baseURL: https://app.alium.io
   baseurl_source: declared
   description: The Alium API API from Alium — 2 operation(s) for alium api.
@@ -43,37 +60,37 @@ apis:
 artifact_total: 7
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/rate-limits/alium-rate-limits.yml
+  href: https://artifacts.apis.io/alium/rate-limits/alium-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/alium-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/rules/alium-rules.yml
+  href: https://artifacts.apis.io/alium/rules/alium-rules.yml
   title: ''
   type: Spectral
   url: rules/alium-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/authentication/alium-authentication.yml
+  href: https://artifacts.apis.io/alium/authentication/alium-authentication.yml
   title: ''
   type: Authentication
   url: authentication/alium-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/conformance/alium-conformance.yml
+  href: https://artifacts.apis.io/alium/conformance/alium-conformance.yml
   title: ''
   type: Conformance
   url: conformance/alium-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/well-known/alium-well-known.yml
+  href: https://artifacts.apis.io/alium/well-known/alium-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/alium-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/hosts/alium-hosts.yml
+  href: https://artifacts.apis.io/alium/hosts/alium-hosts.yml
   title: ''
   type: Hosts
   url: hosts/alium-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/vendors/alium-vendors.yml
+  href: https://artifacts.apis.io/alium/vendors/alium-vendors.yml
   title: ''
   type: Vendors
   url: vendors/alium-vendors.yml
@@ -98,7 +115,7 @@ common:
   type: Documentation
   url: https://docs.alium.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alium/refs/heads/main/security/alium-domain-security.yml
+  href: https://artifacts.apis.io/alium/security/alium-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alium-domain-security.yml
@@ -122,7 +139,7 @@ modified: '2026-09-24'
 name: Alium
 nav: Providers
 network: true
-overview: 'Alium is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Alium API, Vendors API, and 1 more. Tagged areas include Vendor research, Marketing intelligence, E-Commerce, and Enterprise tech.
+overview: 'Alium is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Alium API, Vendors API, and 1 more. Tagged areas include Vendor research, Marketing Intelligence, E-Commerce, and Enterprise tech.
 
 
   The Alium catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -149,23 +166,23 @@ rules:
   slug: alium-rules
 score:
   band: emerging
-  composite: 25.2
+  composite: 21.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 17
     catalog_earned: 46.5
     catalog_earned_first_party: 12.0
     catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 24.9
+  delta: -4.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 18.2
     contract_quality: 11.9
-    developer_ergonomics: 23.8
-    discoverability: 55.4
+    developer_ergonomics: 17.9
+    discoverability: 54.5
     operational_transparency: 31.6
-  previous_composite: 0.3
+  previous_composite: 25.2
   provenance:
     conformance: derived
     contracts:
@@ -179,14 +196,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/alium/alium-2026-11-03T120630.png
 security:
 - kind: authentication
   name: Alium Authentication
@@ -199,7 +217,7 @@ security:
 slug: alium
 tags:
 - Vendor research
-- Marketing intelligence
+- Marketing Intelligence
 - E-Commerce
 - Enterprise tech
 website: https://www.alium.io/

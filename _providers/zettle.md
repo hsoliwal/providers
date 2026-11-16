@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   - '{''url'': ''https://www.zettle.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.paypal.com/us/business/pos-system — a different registrable domain (zettle.com -> paypal.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 36.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -73,11 +80,8 @@ apis:
   description: The payout API from Zettle — 1 operation(s) for payout.
   name: Zettle Payout API
   slug: zettle-payout-api
-artifact_total: 26
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Finance accounts API
   slug: open-zettle-accounts-api
@@ -86,22 +90,22 @@ collections:
   slug: open-zettle-payout-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/agentic-access/zettle-agentic-access.yml
+  href: https://artifacts.apis.io/zettle/agentic-access/zettle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zettle-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/security/zettle-domain-security.yml
+  href: https://artifacts.apis.io/zettle/security/zettle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zettle-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/authentication/zettle-authentication.yml
+  href: https://artifacts.apis.io/zettle/authentication/zettle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zettle-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/scopes/zettle-scopes.yml
+  href: https://artifacts.apis.io/zettle/scopes/zettle-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zettle-scopes.yml
@@ -138,17 +142,17 @@ common:
   type: X
   url: https://x.com/Zettle
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/plans/zettle-plans-pricing.yml
+  href: https://artifacts.apis.io/zettle/plans/zettle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zettle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/rate-limits/zettle-rate-limits.yml
+  href: https://artifacts.apis.io/zettle/rate-limits/zettle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zettle-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/finops/zettle-finops.yml
+  href: https://artifacts.apis.io/zettle/finops/zettle-finops.yml
   title: ''
   type: FinOps
   url: finops/zettle-finops.yml
@@ -204,7 +208,7 @@ plans:
 - name: Zettle Plans Pricing
   plan_count: 1
   slug: zettle-plans-pricing
-random_paper: 4
+random_paper: 16
 rate_limits:
 - limit_count: 6
   name: Zettle Rate Limits
@@ -228,27 +232,27 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 35.0
+  composite: 34.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 53.3
     catalog_earned_first_party: 0.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.0
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 55.6
+    contract_quality: 52.6
     developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 42.0
+  previous_composite: 34.3
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 2
@@ -258,14 +262,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 24.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/zettle/refs/heads/main/screenshots/zettle-2026-06-20T201853.png
+screenshot: https://apis.io/screenshots/zettle/zettle-2026-06-20T201853.png
 security:
 - kind: authentication
   name: Zettle Authentication

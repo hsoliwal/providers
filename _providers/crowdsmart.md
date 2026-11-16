@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
-- description: API for CrowdSmart Labs platform, providing trust layer for AI collective intelligence.
+- baseURL: https://csgcip.onrender.com
+  baseurl_source: spec
+  description: API for CrowdSmart Labs platform, providing trust layer for AI collective intelligence.
   name: CrowdSmart API
-  slug: crowdsmart-api-2
+  slug: crowdsmart-api
 - baseURL: https://csgcip.onrender.com
   baseurl_source: declared
   description: The Agents API from CrowdSmart — 2 operation(s) for agents.
@@ -37,37 +52,37 @@ apis:
 artifact_total: 7
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/rules/crowdsmart-rules.yml
+  href: https://artifacts.apis.io/crowdsmart/rules/crowdsmart-rules.yml
   title: ''
   type: Spectral
   url: rules/crowdsmart-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/json-ld/crowdsmart-context.jsonld
+  href: https://artifacts.apis.io/crowdsmart/json-ld/crowdsmart-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/crowdsmart-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/vocabulary/crowdsmart-vocabulary.yml
+  href: https://artifacts.apis.io/crowdsmart/vocabulary/crowdsmart-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/crowdsmart-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/data-model/crowdsmart-data-model.yml
+  href: https://artifacts.apis.io/crowdsmart/data-model/crowdsmart-data-model.yml
   title: ''
   type: DataModel
   url: data-model/crowdsmart-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/conformance/crowdsmart-conformance.yml
+  href: https://artifacts.apis.io/crowdsmart/conformance/crowdsmart-conformance.yml
   title: ''
   type: Conformance
   url: conformance/crowdsmart-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/hosts/crowdsmart-hosts.yml
+  href: https://artifacts.apis.io/crowdsmart/hosts/crowdsmart-hosts.yml
   title: ''
   type: Hosts
   url: hosts/crowdsmart-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/vendors/crowdsmart-vendors.yml
+  href: https://artifacts.apis.io/crowdsmart/vendors/crowdsmart-vendors.yml
   title: ''
   type: Vendors
   url: vendors/crowdsmart-vendors.yml
@@ -80,7 +95,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/crowdsmart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdsmart/refs/heads/main/security/crowdsmart-domain-security.yml
+  href: https://artifacts.apis.io/crowdsmart/security/crowdsmart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/crowdsmart-domain-security.yml
@@ -131,14 +146,14 @@ modified: '2026-10-11'
 name: CrowdSmart
 nav: Providers
 network: true
-overview: 'CrowdSmart is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Agents API, and 1 more. Tagged areas include Artificial Intelligence, Governance, TrustLayer, CollectiveIntelligence, and Platform.
+overview: 'CrowdSmart is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Agents API, and 1 more. Tagged areas include Artificial Intelligence, Governance, TrustLayer, Collective Intelligence, and Platform.
 
 
   The CrowdSmart catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   CrowdSmart''s developer surface includes engineering blog, documentation, API reference, getting-started guide, and 11 more developer resources.'
-random_paper: 16
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -154,21 +169,23 @@ rules:
   slug: crowdsmart-rules
 score:
   band: emerging
-  composite: 20.7
+  composite: 16.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 49.8
     catalog_earned_first_party: 0.0
     catalog_gap: 65.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.4
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 21.4
-    developer_ergonomics: 40.5
+    developer_ergonomics: 20.2
     discoverability: 53.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 20.7
   provenance:
     conformance: derived
     contracts:
@@ -183,11 +200,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/crowdsmart/crowdsmart-2026-11-03T125657.png
 security:
 - kind: domain-security
   name: Crowdsmart Domain Security
@@ -198,7 +217,7 @@ tags:
 - Artificial Intelligence
 - Governance
 - TrustLayer
-- CollectiveIntelligence
+- Collective Intelligence
 - Platform
 website: https://crowdsmart.ai/
 ---

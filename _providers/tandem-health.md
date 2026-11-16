@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-health/refs/heads/main/plans/tandem-health-plans-pricing.yml
+  href: https://artifacts.apis.io/tandem-health/plans/tandem-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tandem-health-plans-pricing.yml
@@ -82,7 +87,7 @@ common:
   type: ChangeLog
   url: https://tandemhealth.ai/resources/release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-health/refs/heads/main/changelog/tandem-health-changelog.yml
+  href: https://artifacts.apis.io/tandem-health/changelog/tandem-health-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tandem-health-changelog.yml
@@ -95,17 +100,17 @@ common:
   type: TrustCenter
   url: https://trust.tandemhealth.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-health/refs/heads/main/security/tandem-health-trust-center.yml
+  href: https://artifacts.apis.io/tandem-health/security/tandem-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tandem-health-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-health/refs/heads/main/conformance/tandem-health-conformance.yml
+  href: https://artifacts.apis.io/tandem-health/conformance/tandem-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tandem-health-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-health/refs/heads/main/security/tandem-health-domain-security.yml
+  href: https://artifacts.apis.io/tandem-health/security/tandem-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tandem-health-domain-security.yml
@@ -125,18 +130,18 @@ plans:
 - name: Tandem Health Plans Pricing
   plan_count: 3
   slug: tandem-health-plans-pricing
-random_paper: 10
+random_paper: 12
 score:
   band: thin
   composite: 27.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
@@ -149,7 +154,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 20.8
+  previous_composite: 27.2
   provenance:
     conformance: first-party
   regulatory:
@@ -162,14 +167,14 @@ score:
     regime: Health
     regime_id: health
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tandem-health/refs/heads/main/screenshots/tandem-health-2026-09-02T162518.png
+screenshot: https://apis.io/screenshots/tandem-health/tandem-health-2026-09-02T162518.png
 security:
 - kind: domain-security
   name: Tandem Health Domain Security

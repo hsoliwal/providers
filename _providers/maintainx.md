@@ -1,16 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 113
   human_in_the_loop: 0
@@ -190,15 +197,22 @@ apis:
   description: Operations on Work Requests
   name: MaintainX Work Requests API
   slug: maintainx-work-requests-api
-artifact_total: 65
+- baseURL: https://api.getmaintainx.com/v1
+  baseurl_source: declared
+  description: Operations on Customers
+  name: MaintainX Customers API
+  slug: maintainx-customers-api
+- baseURL: https://api.getmaintainx.com/v1
+  baseurl_source: declared
+  description: Operations on Rotation Schedules (custom work rotations)
+  name: MaintainX Rotation Schedules API
+  slug: maintainx-rotation-schedules-api
+artifact_total: 72
 asyncapis:
 - description: ''
   name: Maintainx Webhooks
   slug: maintainx-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: MaintainX Asset Criticalities API
   slug: open-maintainx-asset-criticalities-api
@@ -287,8 +301,17 @@ collections:
   name: MaintainX Asset Criticalities Work Requests API
   slug: open-maintainx-work-requests-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/maintainx/plans/maintainx-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/maintainx-plans-pricing.yml
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/maintainx/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/capabilities/maintainx-capability-edges.yml
+  href: https://artifacts.apis.io/maintainx/capabilities/maintainx-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/maintainx-capability-edges.yml
@@ -349,7 +372,7 @@ common:
   type: StatusPage
   url: https://status.getmaintainx.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/changelog/maintainx-changelog.yml
+  href: https://artifacts.apis.io/maintainx/changelog/maintainx-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/maintainx-changelog.yml
@@ -366,122 +389,150 @@ common:
   type: Compliance
   url: https://www.getmaintainx.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/llms/maintainx-llms.txt
+  href: https://artifacts.apis.io/maintainx/llms/maintainx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/maintainx-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/rate-limits/maintainx-rate-limits.yml
+  href: https://artifacts.apis.io/maintainx/rate-limits/maintainx-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/maintainx-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/asyncapi/maintainx-webhooks.yml
+  href: https://artifacts.apis.io/maintainx/asyncapi/maintainx-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/maintainx-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/mcp/maintainx-mcp.yml
+  href: https://artifacts.apis.io/maintainx/mcp/maintainx-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/maintainx-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/conventions/maintainx-conventions.yml
+  href: https://artifacts.apis.io/maintainx/conventions/maintainx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/maintainx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/errors/maintainx-problem-types.yml
+  href: https://artifacts.apis.io/maintainx/errors/maintainx-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/maintainx-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/lifecycle/maintainx-lifecycle.yml
+  href: https://artifacts.apis.io/maintainx/lifecycle/maintainx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/maintainx-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/conformance/maintainx-conformance.yml
+  href: https://artifacts.apis.io/maintainx/conformance/maintainx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/maintainx-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/data-model/maintainx-data-model.yml
+  href: https://artifacts.apis.io/maintainx/data-model/maintainx-data-model.yml
   title: ''
   type: DataModel
   url: data-model/maintainx-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/overlays/maintainx-openapi-overlay.yaml
+  href: https://artifacts.apis.io/maintainx/overlays/maintainx-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/maintainx-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/maintainx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/security/maintainx-domain-security.yml
+  href: https://artifacts.apis.io/maintainx/security/maintainx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/maintainx-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/agentic-access/maintainx-agentic-access.yml
+  href: https://artifacts.apis.io/maintainx/agentic-access/maintainx-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/maintainx-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/authentication/maintainx-authentication.yml
+  href: https://artifacts.apis.io/maintainx/authentication/maintainx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/maintainx-authentication.yml
 created: '2026-07-17'
 description: MaintainX is a mobile-first computerized maintenance management system (CMMS) and enterprise asset management (EAM) platform for the industrial and frontline workforce. Teams use it to manage work orders, work requests, assets, parts inventory, purchase orders, meters, preventive maintenance plans, procedures, inspections, and vendors. The MaintainX REST API v1 (https://api.getmaintainx.com/v1) exposes all of these entities programmatically with Bearer (JWT) API-key authentication, cursor pagination, timestamp-based change polling, documented rate limits, and 46 webhook event types for real-time integration. Backed by Bain Capital Ventures and Bessemer Venture Partners.
+finops:
+- has_sources: true
+  method: derived
+  name: Maintainx Finops
+  primary_unit: user
+  service_category: ''
+  slug: maintainx-finops
+  template: false
 image: https://cdn.prod.website-files.com/65ae6673d2c6ecb99ee249d1/682cc13bc85b61fe2f91f274_Website%20Open%20Graph%20Image%20(1).webp
 layout: provider
 modified: '2026-07-20'
 name: MaintainX
 nav: Providers
 network: true
-overview: 'MaintainX publishes 29 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset Criticalities API, Asset Custom Statuses API, Asset Statuses API, and 26 more. Tagged areas include Company, Physical AI, Maintenance, CMMS, and Asset Management.
+overview: 'MaintainX publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset Criticalities API, Asset Custom Statuses API, Asset Statuses API, and 28 more. Tagged areas include Company, Physical AI, Maintenance, CMMS, and Asset Management.
 
 
-  The MaintainX catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The MaintainX catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  MaintainX''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
-random_paper: 1
+  MaintainX''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
+plans:
+- name: Maintainx Plans Pricing
+  plan_count: 4
+  slug: maintainx-plans-pricing
+- name: Maintainx Price Estimates
+  plan_count: 0
+  slug: maintainx-price-estimates
+random_paper: 9
 rate_limits:
 - limit_count: 6
   name: Maintainx Rate Limits
   slug: maintainx-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: MaintainX API Rules
+  rule_count: 68
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 10
+  slug: maintainx-rules
 score:
-  band: strong
-  composite: 55.8
+  band: exemplar
+  composite: 73.4
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 30
+    catalog_earned: 68.5
+    catalog_earned_first_party: 24.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.7
   facets:
-    access_clarity: 53.9
-    contract_governance: 4.5
-    contract_quality: 59.9
-    developer_ergonomics: 54.2
+    access_clarity: 93.4
+    contract_governance: 18.2
+    contract_quality: 62.6
+    developer_ergonomics: 55.4
     discoverability: 73.2
-    operational_transparency: 76.3
-  previous_composite: 55.7
+    operational_transparency: 84.2
+  previous_composite: 71.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 29
+      marker_coverage: 51.7
+      total: 60
     mcp: derived
     skills: derived
   regulatory:
@@ -494,13 +545,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/maintainx/refs/heads/main/screenshots/maintainx-2026-07-25T225951.png
+    score: 61.1
+screenshot: https://apis.io/screenshots/maintainx/maintainx-2026-07-25T225951.png
 security:
 - kind: authentication
   name: Maintainx Authentication
@@ -514,6 +565,12 @@ security:
   name: Maintainx Trust Center
   slug: maintainx-trust-center
   summary_line: SOC 2 Type II, ISO/IEC 27001:2022, GDPR
+skill_count: 2
+skills:
+- name: Create and track a MaintainX work order
+  slug: maintainx-create-work-order
+- name: Subscribe to MaintainX webhooks and verify payloads
+  slug: maintainx-subscribe-webhooks
 slug: maintainx
 tags:
 - Company
@@ -522,7 +579,7 @@ tags:
 - CMMS
 - Asset Management
 - Work Orders
-- Field Service
+- Field Service Management
 - Manufacturing
 - Preventive Maintenance
 - IoT

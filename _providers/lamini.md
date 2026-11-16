@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +23,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 29.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -47,34 +50,36 @@ api_count: 1
 apis:
 - baseURL: https://api.lamini.ai
   baseurl_source: declared
-  description: LLM classifier classification and prediction endpoints.
-  name: Lamini Classify API
-  slug: lamini-classify-api
-- baseURL: https://api.lamini.ai
-  baseurl_source: declared
   description: Text embedding generation.
   name: Lamini Embeddings API
   slug: lamini-embeddings-api
 - baseURL: https://api.lamini.ai
   baseurl_source: declared
-  description: Tuning and Memory Tuning job submission and management.
-  name: Lamini Fine-Tuning API
-  slug: lamini-fine-tuning-api
+  description: Classify text into categories.
+  name: Lamini Classifier API
+  slug: lamini-classifier-api
 - baseURL: https://api.lamini.ai
   baseurl_source: declared
-  description: Text completion and streaming generation endpoints.
-  name: Lamini Inference API
-  slug: lamini-inference-api
+  description: Run inference on your tuned models or base open source models.
+  name: Lamini Completions API
+  slug: lamini-completions-api
 - baseURL: https://api.lamini.ai
   baseurl_source: declared
-  description: Version and platform metadata endpoints.
-  name: Lamini Platform API
-  slug: lamini-platform-api
-artifact_total: 18
+  description: The memory rag API from Lamini — 5 operation(s) for memory rag.
+  name: Lamini memory rag API
+  slug: lamini-memory-rag-api
+- baseURL: https://api.lamini.ai
+  baseurl_source: declared
+  description: Manages models stored on your Lamini Platform.
+  name: Lamini model management API
+  slug: lamini-model-management-api
+- baseURL: https://api.lamini.ai
+  baseurl_source: declared
+  description: Create and manage model training jobs.
+  name: Lamini Train API
+  slug: lamini-train-api
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Lamini Platform Classify API
   slug: open-lamini-classify-api
@@ -95,22 +100,22 @@ collections:
   slug: open-lamini
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/capabilities/lamini-capability-edges.yml
+  href: https://artifacts.apis.io/lamini/capabilities/lamini-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lamini-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/agentic-access/lamini-agentic-access.yml
+  href: https://artifacts.apis.io/lamini/agentic-access/lamini-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lamini-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/security/lamini-domain-security.yml
+  href: https://artifacts.apis.io/lamini/security/lamini-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lamini-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/authentication/lamini-authentication.yml
+  href: https://artifacts.apis.io/lamini/authentication/lamini-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lamini-authentication.yml
@@ -131,17 +136,17 @@ common:
   type: Documentation
   url: https://docs.lamini.ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/plans/lamini-plans-pricing.yml
+  href: https://artifacts.apis.io/lamini/plans/lamini-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lamini-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/rate-limits/lamini-rate-limits.yml
+  href: https://artifacts.apis.io/lamini/rate-limits/lamini-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lamini-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/finops/lamini-finops.yml
+  href: https://artifacts.apis.io/lamini/finops/lamini-finops.yml
   title: ''
   type: FinOps
   url: finops/lamini-finops.yml
@@ -161,7 +166,10 @@ modified: '2026-06-20'
 name: Lamini
 nav: Providers
 network: true
-overview: 'Lamini publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Classify API, Embeddings API, Fine-Tuning API, and 2 more. Tagged areas include Artificial Intelligence, LLM, Fine-Tuning, Memory Tuning, and Inference.
+overview: 'Lamini publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Embeddings API, Classifier API, Completions API, and 3 more. Tagged areas include Artificial Intelligence, LLM, Fine-Tuning, Memory Tuning, and Inference.
+
+
+  The Lamini catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Lamini''s developer surface includes authentication, documentation, and 9 more developer resources.'
@@ -169,50 +177,63 @@ plans:
 - name: Lamini Plans Pricing
   plan_count: 2
   slug: lamini-plans-pricing
-random_paper: 18
+random_paper: 10
 rate_limits:
 - limit_count: 4
   name: Lamini Rate Limits
   slug: lamini-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Lamini API Rules
+  rule_count: 56
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 9
+  slug: lamini-rules
 score:
-  band: emerging
-  composite: 25.7
+  band: thin
+  composite: 27.5
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 16
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.6
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 48.2
+    contract_governance: 13.6
+    contract_quality: 48.9
     developer_ergonomics: 29.8
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.6
+  previous_composite: 26.9
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 50.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 50.0
+      total: 12
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lamini/refs/heads/main/screenshots/lamini-2026-06-20T184254.png
+screenshot: https://apis.io/screenshots/lamini/lamini-2026-06-20T184254.png
 security:
 - kind: authentication
   name: Lamini Authentication

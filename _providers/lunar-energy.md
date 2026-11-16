@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 21.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 1
@@ -112,11 +116,8 @@ apis:
   description: Record on-site visits for installation or service
   name: Lunar Energy Visits API
   slug: lunar-energy-visits-api
-artifact_total: 68
+artifact_total: 67
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Gridshare Customer API
   slug: open-gridshare-customer-api
@@ -164,27 +165,27 @@ collections:
   slug: open-lunar-energy-visits-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/agentic-access/lunar-energy-agentic-access.yml
+  href: https://artifacts.apis.io/lunar-energy/agentic-access/lunar-energy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lunar-energy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/security/lunar-energy-trust-center.yml
+  href: https://artifacts.apis.io/lunar-energy/security/lunar-energy-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lunar-energy-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/security/lunar-energy-domain-security.yml
+  href: https://artifacts.apis.io/lunar-energy/security/lunar-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lunar-energy-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/authentication/lunar-energy-authentication.yml
+  href: https://artifacts.apis.io/lunar-energy/authentication/lunar-energy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lunar-energy-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/scopes/lunar-energy-scopes.yml
+  href: https://artifacts.apis.io/lunar-energy/scopes/lunar-energy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lunar-energy-scopes.yml
@@ -281,17 +282,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/lunarenergy
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/plans/lunar-energy-plans-pricing.yml
+  href: https://artifacts.apis.io/lunar-energy/plans/lunar-energy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lunar-energy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/rate-limits/lunar-energy-rate-limits.yml
+  href: https://artifacts.apis.io/lunar-energy/rate-limits/lunar-energy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lunar-energy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/finops/lunar-energy-finops.yml
+  href: https://artifacts.apis.io/lunar-energy/finops/lunar-energy-finops.yml
   title: ''
   type: FinOps
   url: finops/lunar-energy-finops.yml
@@ -367,7 +368,7 @@ plans:
 - name: Lunar Energy Plans Pricing
   plan_count: 4
   slug: lunar-energy-plans-pricing
-random_paper: 9
+random_paper: 17
 rate_limits:
 - limit_count: 3
   name: Lunar Energy Rate Limits
@@ -403,20 +404,20 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 37.3
+  composite: 38.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 50.5
     catalog_earned_first_party: 0.0
     catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -11.0
+  delta: 1.2
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
     contract_quality: 51.8
-    developer_ergonomics: 44.0
+    developer_ergonomics: 50.0
     discoverability: 57.1
     operational_transparency: 10.5
   jurisdiction:
@@ -426,7 +427,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.3
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     contracts:
@@ -440,13 +441,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 32.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lunar-energy/refs/heads/main/screenshots/lunar-energy-2026-06-20T184758.png
+screenshot: https://apis.io/screenshots/lunar-energy/lunar-energy-2026-06-20T184758.png
 security:
 - kind: authentication
   name: Lunar Energy Authentication

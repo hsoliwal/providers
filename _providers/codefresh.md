@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 21.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 3
@@ -50,19 +53,9 @@ apis:
   slug: rest-api
 - baseURL: https://g.codefresh.io/api
   baseurl_source: declared
-  description: The Access Control API from Codefresh — 4 operation(s) for access control.
-  name: Codefresh Access Control API
-  slug: codefresh-access-control-api
-- baseURL: https://g.codefresh.io/api
-  baseurl_source: declared
   description: The Accounts API from Codefresh — 1 operation(s) for accounts.
   name: Codefresh Accounts API
   slug: codefresh-accounts-api
-- baseURL: https://g.codefresh.io/api
-  baseurl_source: declared
-  description: The Admin API from Codefresh — 2 operation(s) for admin.
-  name: Codefresh Admin API
-  slug: codefresh-admin-api
 - baseURL: https://g.codefresh.io/api
   baseurl_source: declared
   description: The Annotations API from Codefresh — 1 operation(s) for annotations.
@@ -73,11 +66,6 @@ apis:
   description: The Audit API from Codefresh — 1 operation(s) for audit.
   name: Codefresh Audit API
   slug: codefresh-audit-api
-- baseURL: https://g.codefresh.io/api
-  baseurl_source: declared
-  description: The Auth API from Codefresh — 2 operation(s) for auth.
-  name: Codefresh Auth API
-  slug: codefresh-auth-api
 - baseURL: https://g.codefresh.io/api
   baseurl_source: declared
   description: The Builds API from Codefresh — 2 operation(s) for builds.
@@ -110,14 +98,276 @@ apis:
   slug: codefresh-helm-api
 - baseURL: https://g.codefresh.io/api
   baseurl_source: declared
-  description: The Workflows API from Codefresh — 1 operation(s) for workflows.
-  name: Codefresh Workflows API
-  slug: codefresh-workflows-api
-artifact_total: 32
+  description: abac
+  name: Codefresh Abac API
+  slug: codefresh-abac-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The account API from Codefresh — 1 operation(s) for account.
+  name: Codefresh Account API
+  slug: codefresh-account-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The accounts.getArchiveList API from Codefresh — 1 operation(s) for accounts.getarchivelist.
+  name: Codefresh Accounts.get Archive List API
+  slug: codefresh-accounts-getarchivelist-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: Manage and serve Codefresh Runners
+  name: Codefresh Agents API
+  slug: codefresh-agents-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The analytic API from Codefresh — 1 operation(s) for analytic.
+  name: Codefresh Analytic API
+  slug: codefresh-analytic-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: Approval
+  name: Codefresh Approval API
+  slug: codefresh-approval-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The charts API from Codefresh — 1 operation(s) for charts.
+  name: Codefresh Charts API
+  slug: codefresh-charts-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: compositions
+  name: Codefresh Compositions API
+  slug: codefresh-compositions-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The customer API from Codefresh — 3 operation(s) for customer.
+  name: Codefresh Customer API
+  slug: codefresh-customer-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The customers API from Codefresh — 10 operation(s) for customers.
+  name: Codefresh Customers API
+  slug: codefresh-customers-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The download API from Codefresh — 1 operation(s) for download.
+  name: Codefresh Download API
+  slug: codefresh-download-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: environments v2
+  name: Codefresh Environments V2 API
+  slug: codefresh-environments-v2-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: Execution Contexts
+  name: Codefresh Execution Contexts API
+  slug: codefresh-execution-contexts-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The favorites API from Codefresh — 3 operation(s) for favorites.
+  name: Codefresh Favorites API
+  slug: codefresh-favorites-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The form-metadata API from Codefresh — 4 operation(s) for form-metadata.
+  name: Codefresh Form Metadata API
+  slug: codefresh-form-metadata-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: Gitops
+  name: Codefresh Gitops API
+  slug: codefresh-gitops-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The gitops-application API from Codefresh — 5 operation(s) for gitops-application.
+  name: Codefresh Gitops Application API
+  slug: codefresh-gitops-application-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The helm.board-pipelines-config API from Codefresh — 1 operation(s) for helm.board-pipelines-config.
+  name: Codefresh Helm.board Pipelines Config API
+  slug: codefresh-helm-board-pipelines-config-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: helm.boards
+  name: Codefresh Helm Boards API
+  slug: codefresh-helm-boards-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: helm.charts
+  name: Codefresh Helm Charts API
+  slug: codefresh-helm-charts-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: helm.cluster-config
+  name: Codefresh Helm Cluster Configs API
+  slug: codefresh-helm-cluster-configs-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The helm.release-config API from Codefresh — 1 operation(s) for helm.release-config.
+  name: Codefresh Helm.release Config API
+  slug: codefresh-helm-release-config-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: helm.releases
+  name: Codefresh Helm Releases API
+  slug: codefresh-helm-releases-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: helm.repos
+  name: Codefresh Helm Repos API
+  slug: codefresh-helm-repos-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: helm.sections
+  name: Codefresh Helm Sections API
+  slug: codefresh-helm-sections-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The idp API from Codefresh — 3 operation(s) for idp.
+  name: Codefresh Idp API
+  slug: codefresh-idp-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: images
+  name: Codefresh Images API
+  slug: codefresh-images-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: kubernetes
+  name: Codefresh Kubernetes API
+  slug: codefresh-kubernetes-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: OpenID Connect (OIDC)
+  name: Codefresh OIDC API
+  slug: codefresh-oidc-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: pipelines
+  name: Codefresh Pipelines API
+  slug: codefresh-pipelines-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: Platform Analytics
+  name: Codefresh Platform Analytics API
+  slug: codefresh-platform-analytics-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: progress
+  name: Codefresh Progress API
+  slug: codefresh-progress-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: projects
+  name: Codefresh Projects API
+  slug: codefresh-projects-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: providers
+  name: Codefresh Providers API
+  slug: codefresh-providers-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: registries
+  name: Codefresh Registries API
+  slug: codefresh-registries-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: repos
+  name: Codefresh Repos API
+  slug: codefresh-repos-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The runner-installation API from Codefresh — 2 operation(s) for runner-installation.
+  name: Codefresh Runner Installation API
+  slug: codefresh-runner-installation-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: onPrem.runtimeEnvs.account
+  name: Codefresh Runtime Environments (Account) API
+  slug: codefresh-runtime-environments-account-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: runtimeEnvs
+  name: Codefresh Runtime Environments API
+  slug: codefresh-runtime-environments-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: onPrem.runtimeEnvs.plan
+  name: Codefresh Runtime Environments (Plan) API
+  slug: codefresh-runtime-environments-plan-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: onPrem.runtimeEnvs.system
+  name: Codefresh Runtime Environments (System) API
+  slug: codefresh-runtime-environments-system-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The runtimeEnvs.health-check API from Codefresh — 1 operation(s) for runtimeenvs.health-check.
+  name: Codefresh Runtime Envs.health Check API
+  slug: codefresh-runtimeenvs-health-check-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The segment API from Codefresh — 1 operation(s) for segment.
+  name: Codefresh Segment API
+  slug: codefresh-segment-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The service-users API from Codefresh — 3 operation(s) for service-users.
+  name: Codefresh Service Users API
+  slug: codefresh-service-users-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: step-types
+  name: Codefresh Step Types API
+  slug: codefresh-step-types-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: teams
+  name: Codefresh Teams API
+  slug: codefresh-teams-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: tokens
+  name: Codefresh Tokens API
+  slug: codefresh-tokens-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: Only for registry, helm and cron triggers
+  name: Codefresh Triggers API
+  slug: codefresh-triggers-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: triggers.events
+  name: Codefresh Triggers Events API
+  slug: codefresh-triggers-events-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: triggers.types
+  name: Codefresh Triggers Types API
+  slug: codefresh-triggers-types-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The user API from Codefresh — 6 operation(s) for user.
+  name: Codefresh User API
+  slug: codefresh-user-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The verification API from Codefresh — 2 operation(s) for verification.
+  name: Codefresh Verification API
+  slug: codefresh-verification-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: views
+  name: Codefresh Views API
+  slug: codefresh-views-api
+- baseURL: https://g.codefresh.io/api
+  baseurl_source: declared
+  description: The whereami API from Codefresh — 1 operation(s) for whereami.
+  name: Codefresh Whereami API
+  slug: codefresh-whereami-api
+artifact_total: 82
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Codefresh REST Access Control API
   slug: open-codefresh-access-control-api
@@ -162,22 +412,22 @@ collections:
   slug: open-codefresh
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/capabilities/codefresh-capability-edges.yml
+  href: https://artifacts.apis.io/codefresh/capabilities/codefresh-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/codefresh-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/agentic-access/codefresh-agentic-access.yml
+  href: https://artifacts.apis.io/codefresh/agentic-access/codefresh-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/codefresh-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/security/codefresh-domain-security.yml
+  href: https://artifacts.apis.io/codefresh/security/codefresh-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codefresh-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/authentication/codefresh-authentication.yml
+  href: https://artifacts.apis.io/codefresh/authentication/codefresh-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codefresh-authentication.yml
@@ -221,50 +471,66 @@ modified: '2026-05-11'
 name: Codefresh
 nav: Providers
 network: true
-overview: 'Codefresh publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Control API, Accounts API, Admin API, and 11 more. Tagged areas include CI/CD, Continuous Delivery, GitOps, Argo, and Kubernetes.
+overview: 'Codefresh publishes 64 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Annotations API, Audit API, and 61 more. Tagged areas include CI/CD, Continuous Delivery, GitOps, Argo, and Kubernetes.
+
+
+  The Codefresh catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Codefresh''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 7 more developer resources.'
-random_paper: 1
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Codefresh API Rules
+  rule_count: 57
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 14
+  slug: codefresh-rules
 score:
   band: thin
-  composite: 28.7
+  composite: 33.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 37.0
+    artifact_dirs: 14
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.0
   facets:
     access_clarity: 23.7
-    contract_governance: 0.0
-    contract_quality: 45.3
+    contract_governance: 13.6
+    contract_quality: 49.3
     developer_ergonomics: 31.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.6
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 13
+      marker_coverage: 81.8
+      total: 77
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/screenshots/codefresh-2026-06-20T174700.png
+    score: 22.2
+screenshot: https://apis.io/screenshots/codefresh/codefresh-2026-06-20T174700.png
 security:
 - kind: authentication
   name: Codefresh Authentication

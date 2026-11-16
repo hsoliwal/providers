@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -28,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +40,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 52
   human_in_the_loop: 0
@@ -91,11 +95,6 @@ apis:
   description: The Conduit Demo Cdk G3 API from Conduit — 1 operation(s) for conduit demo cdk g3.
   name: Conduit Demo Cdk G3 API
   slug: conduit-conduit-demo-cdk-g3-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
-  description: The Cypher Testnet Uvgtmiptr7 API from Conduit — 1 operation(s) for cypher testnet uvgtmiptr7.
-  name: Conduit Cypher Testnet Uvgtmiptr7 API
-  slug: conduit-cypher-testnet-uvgtmiptr7-api
 - baseURL: https://mpp.conduit.xyz
   baseurl_source: declared
   description: The Dia Lasernet Mainnet N208gs8dc3 API from Conduit — 1 operation(s) for dia lasernet mainnet n208gs8dc3.
@@ -158,11 +157,6 @@ apis:
   slug: conduit-katana-bokuto-api
 - baseURL: https://mpp.conduit.xyz
   baseurl_source: declared
-  description: The Kewi Green Svxeewxcc5 API from Conduit — 1 operation(s) for kewi green svxeewxcc5.
-  name: Conduit Kewi Green Svxeewxcc5 API
-  slug: conduit-kewi-green-svxeewxcc5-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
   description: The Lyra Mainnet 0 API from Conduit — 1 operation(s) for lyra mainnet 0.
   name: Conduit Lyra Mainnet 0 API
   slug: conduit-lyra-mainnet-0-api
@@ -186,11 +180,6 @@ apis:
   description: The Mode Sepolia Vtnhnpim72 API from Conduit — 1 operation(s) for mode sepolia vtnhnpim72.
   name: Conduit Mode Sepolia Vtnhnpim72 API
   slug: conduit-mode-sepolia-vtnhnpim72-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
-  description: The Onyx 6l1k4gho61 API from Conduit — 1 operation(s) for onyx 6l1k4gho61.
-  name: Conduit Onyx 6l1k4gho61 API
-  slug: conduit-onyx-6l1k4gho61-api
 - baseURL: https://mpp.conduit.xyz
   baseurl_source: declared
   description: The Orderly L2 4460 Sepolia 8tc3sd7dvy API from Conduit — 1 operation(s) for orderly l2 4460 sepolia 8tc3sd7dvy.
@@ -223,11 +212,6 @@ apis:
   slug: conduit-plume-testnet-1-api
 - baseURL: https://mpp.conduit.xyz
   baseurl_source: declared
-  description: The Powerloom Mainnet V2 V52tbqo4if API from Conduit — 1 operation(s) for powerloom mainnet v2 v52tbqo4if.
-  name: Conduit Powerloom Mainnet V2 V52tbqo4if API
-  slug: conduit-powerloom-mainnet-v2-v52tbqo4if-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
   description: The Prod Testnet 0eakp60405 API from Conduit — 1 operation(s) for prod testnet 0eakp60405.
   name: Conduit Prod Testnet 0eakp60405 API
   slug: conduit-prod-testnet-0eakp60405-api
@@ -246,26 +230,6 @@ apis:
   description: The Sepolia Superseed 826s35710w API from Conduit — 1 operation(s) for sepolia superseed 826s35710w.
   name: Conduit Sepolia Superseed 826s35710w API
   slug: conduit-sepolia-superseed-826s35710w-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
-  description: The Sheer Tan Crawdad Ggq0xy4dvx API from Conduit — 1 operation(s) for sheer tan crawdad ggq0xy4dvx.
-  name: Conduit Sheer Tan Crawdad Ggq0xy4dvx API
-  slug: conduit-sheer-tan-crawdad-ggq0xy4dvx-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
-  description: The Stratostack 8h1p47v0ck API from Conduit — 1 operation(s) for stratostack 8h1p47v0ck.
-  name: Conduit Stratostack 8h1p47v0ck API
-  slug: conduit-stratostack-8h1p47v0ck-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
-  description: The Stratostack Dpd6y4jwnm API from Conduit — 1 operation(s) for stratostack dpd6y4jwnm.
-  name: Conduit Stratostack Dpd6y4jwnm API
-  slug: conduit-stratostack-dpd6y4jwnm-api
-- baseURL: https://mpp.conduit.xyz
-  baseurl_source: declared
-  description: The Superposition 1v9rjalnat API from Conduit — 1 operation(s) for superposition 1v9rjalnat.
-  name: Conduit Superposition 1v9rjalnat API
-  slug: conduit-superposition-1v9rjalnat-api
 - baseURL: https://mpp.conduit.xyz
   baseurl_source: declared
   description: The Superseed Mainnet 0 API from Conduit — 1 operation(s) for superseed mainnet 0.
@@ -306,11 +270,38 @@ apis:
   description: The Zora Sepolia 0thyhxtf5e API from Conduit — 1 operation(s) for zora sepolia 0thyhxtf5e.
   name: Conduit Zora Sepolia 0thyhxtf5e API
   slug: conduit-zora-sepolia-0thyhxtf5e-api
-artifact_total: 112
+- baseURL: https://mpp.conduit.xyz
+  baseurl_source: declared
+  description: The Edu Chain Mainnet API from Conduit — 1 operation(s) for edu chain mainnet.
+  name: Conduit Edu Chain Mainnet API
+  slug: conduit-edu-chain-mainnet-api
+- baseURL: https://mpp.conduit.xyz
+  baseurl_source: declared
+  description: The Edu Chain Testnet API from Conduit — 1 operation(s) for edu chain testnet.
+  name: Conduit Edu Chain Testnet API
+  slug: conduit-edu-chain-testnet-api
+- baseURL: https://mpp.conduit.xyz
+  baseurl_source: declared
+  description: The Elysium Testnet API from Conduit — 1 operation(s) for elysium testnet.
+  name: Conduit Elysium Testnet API
+  slug: conduit-elysium-testnet-api
+- baseURL: https://mpp.conduit.xyz
+  baseurl_source: declared
+  description: The Reya Cronos API from Conduit — 1 operation(s) for reya cronos.
+  name: Conduit Reya Cronos API
+  slug: conduit-reya-cronos-api
+- baseURL: https://mpp.conduit.xyz
+  baseurl_source: declared
+  description: The Reya Network API from Conduit — 1 operation(s) for reya network.
+  name: Conduit Reya Network API
+  slug: conduit-reya-network-api
+- baseURL: https://mpp.conduit.xyz
+  baseurl_source: declared
+  description: The Zircuit Mainnet API from Conduit — 1 operation(s) for zircuit mainnet.
+  name: Conduit Zircuit Mainnet API
+  slug: conduit-zircuit-mainnet-api
+artifact_total: 114
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Conduit Nodes Aevo Mainnet Prod 0 API
   slug: open-conduit-aevo-mainnet-prod-0-api
@@ -468,6 +459,16 @@ collections:
   name: Conduit Nodes Aevo Mainnet Prod 0 Zora Sepolia 0thyhxtf5e API
   slug: open-conduit-zora-sepolia-0thyhxtf5e-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/conduit/plans/conduit-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/conduit-plans-pricing.yml
+- group: other
+  href: https://artifacts.apis.io/conduit/capabilities/conduit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/conduit-capability-edges.yml
 - group: company
   title: ''
   type: Blog
@@ -477,7 +478,7 @@ common:
   type: BlogRSS
   url: https://www.conduit.xyz/blog/rss/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/overlays/conduit-nodes-overlay.yaml
+  href: https://artifacts.apis.io/conduit/overlays/conduit-nodes-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/conduit-nodes-overlay.yaml
@@ -538,82 +539,82 @@ common:
   type: Compliance
   url: https://www.conduit.xyz/compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/authentication/conduit-authentication.yml
+  href: https://artifacts.apis.io/conduit/authentication/conduit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/conduit-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/errors/conduit-rpc-errors.yml
+  href: https://artifacts.apis.io/conduit/errors/conduit-rpc-errors.yml
   title: ''
   type: ErrorCatalog
   url: errors/conduit-rpc-errors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/conventions/conduit-conventions.yml
+  href: https://artifacts.apis.io/conduit/conventions/conduit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/conduit-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/rate-limits/conduit-rate-limits.yml
+  href: https://artifacts.apis.io/conduit/rate-limits/conduit-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/conduit-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/lifecycle/conduit-lifecycle.yml
+  href: https://artifacts.apis.io/conduit/lifecycle/conduit-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/conduit-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/changelog/conduit-changelog.yml
+  href: https://artifacts.apis.io/conduit/changelog/conduit-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/conduit-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/packages/conduit-packages.yml
+  href: https://artifacts.apis.io/conduit/packages/conduit-packages.yml
   title: ''
   type: Packages
   url: packages/conduit-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/packages/conduit-packages.yml
+  href: https://artifacts.apis.io/conduit/packages/conduit-packages.yml
   title: ''
   type: SDKs
   url: packages/conduit-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/sandbox/conduit-sandbox.yml
+  href: https://artifacts.apis.io/conduit/sandbox/conduit-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/conduit-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/conformance/conduit-conformance.yml
+  href: https://artifacts.apis.io/conduit/conformance/conduit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/conduit-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/mcp/conduit-mcp.yml
+  href: https://artifacts.apis.io/conduit/mcp/conduit-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/conduit-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/skills/conduit-rpc-gateway.md
+  href: https://artifacts.apis.io/conduit/skills/conduit-rpc-gateway.md
   title: ''
   type: AgentSkill
   url: skills/conduit-rpc-gateway.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/well-known/conduit-well-known.yml
+  href: https://artifacts.apis.io/conduit/well-known/conduit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/conduit-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/well-known/conduit-security.txt
+  href: https://artifacts.apis.io/conduit/well-known/conduit-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/conduit-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/llms/conduit-llms.txt
+  href: https://artifacts.apis.io/conduit/llms/conduit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/conduit-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/agentic-access/conduit-agentic-access.yml
+  href: https://artifacts.apis.io/conduit/agentic-access/conduit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/conduit-agentic-access.yml
@@ -622,17 +623,17 @@ common:
   type: Security
   url: https://www.conduit.xyz/compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/security/conduit-trust-center.yml
+  href: https://artifacts.apis.io/conduit/security/conduit-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/conduit-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/security/conduit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/conduit/security/conduit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/conduit-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/security/conduit-domain-security.yml
+  href: https://artifacts.apis.io/conduit/security/conduit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/conduit-domain-security.yml
@@ -642,6 +643,14 @@ common:
   url: https://conduit.xyz
 created: '2026-07-17'
 description: Conduit is a blockchain infrastructure provider that lets teams design, deploy, and operate production-grade rollups (OP Stack, Arbitrum Orbit, Agglayer CDK) without running the chain themselves — "you build the product, we run the chain." It offers self-serve rollup deployment, the G3 sequencer, managed high-performance RPC nodes across 60+ networks, a bundled block explorer, account-abstraction bundlers, gas sponsorship, and bridged USDC. Developers reach the JSON-RPC endpoints with an API key appended to the RPC URL, or through the agentic Machine Payments Protocol (MPP) gateway at mpp.conduit.xyz that authenticates with USDC payment channels on Tempo. Conduit powers chains for Aevo, Zora, Mode, and others, and is backed by Paradigm.
+finops:
+- has_sources: true
+  method: derived
+  name: Conduit Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: conduit-finops
+  template: false
 image: https://cdn.prod.website-files.com/66697b36164b98f5f5be828b/68556c0d0fcffff1c39b51c8_conduit-og_image-home.png
 layout: provider
 mcp_servers:
@@ -652,42 +661,65 @@ modified: '2026-10-06'
 name: Conduit
 nav: Providers
 network: true
-overview: 'Conduit publishes 52 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aevo Mainnet Prod 0 API, Aevo Testnet K1zx5a2ajj API, Bob Mainnet 0 API, and 49 more. Tagged areas include Company, Crypto Infrastructure, Blockchain, Rollup, and RPC Nodes.
+overview: 'Conduit publishes 50 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aevo Mainnet Prod 0 API, Aevo Testnet K1zx5a2ajj API, Bob Mainnet 0 API, and 47 more. Tagged areas include Company, Crypto Infrastructure, Blockchain, Rollup, and RPC Nodes.
 
 
-  Conduit''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 31 more developer resources.'
-random_paper: 10
+  The Conduit catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Conduit''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 33 more developer resources.'
+plans:
+- name: Conduit Plans Pricing
+  plan_count: 11
+  slug: conduit-plans-pricing
+- name: Conduit Price Estimates
+  plan_count: 0
+  slug: conduit-price-estimates
+random_paper: 14
 rate_limits:
 - limit_count: 3
   name: Conduit Rate Limits
   slug: conduit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 61
+  extends:
+  - spectral:oas
+  name: Conduit API Rules
+  rule_count: 20
+  severity_counts:
+    error: 18
+    hint: 0
+    info: 1
+    warn: 1
+  slug: conduit-rules
 score:
-  band: developing
-  composite: 53.3
+  band: strong
+  composite: 63.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 29
+    catalog_earned: 68.5
+    catalog_earned_first_party: 24.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.5
   facets:
-    access_clarity: 47.4
-    contract_governance: 18.2
-    contract_quality: 33.7
+    access_clarity: 86.8
+    contract_governance: 31.8
+    contract_quality: 35.5
     developer_ergonomics: 69.0
     discoverability: 71.7
     operational_transparency: 76.3
-  previous_composite: 53.2
+  previous_composite: 62.8
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 52
+      marker_coverage: 49.0
+      total: 102
     mcp: first-party
     skills: first-party
   regulatory:
@@ -696,13 +728,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/conduit/refs/heads/main/screenshots/conduit-2026-07-25T210242.png
+screenshot: https://apis.io/screenshots/conduit/conduit-2026-07-25T210242.png
 security:
 - kind: authentication
   name: Conduit Authentication
@@ -720,6 +752,10 @@ security:
   name: Conduit Trust Center
   slug: conduit-trust-center
   summary_line: SOC 2 Type 1
+skill_count: 1
+skills:
+- name: conduit-rpc-gateway
+  slug: conduit-rpc-gateway
 slug: conduit
 tags:
 - Company

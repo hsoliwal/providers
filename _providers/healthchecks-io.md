@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 17.6
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - description: Programmatically manage checks and integrations via a RESTful API. Supports creating, updating, pausing, resuming, and deleting checks.
@@ -69,30 +83,30 @@ apis:
   description: The Your Uuid Here API from Healthchecks.io — 1 operation(s) for your uuid here.
   name: Healthchecks.io Your Uuid Here API
   slug: healthchecks-io-your-uuid-here-api
-artifact_total: 20
+artifact_total: 22
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/plans/healthchecks-io-plans-pricing.yml
+  href: https://artifacts.apis.io/healthchecks-io/plans/healthchecks-io-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/healthchecks-io-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/rules/healthchecks-io-rules.yml
+  href: https://artifacts.apis.io/healthchecks-io/rules/healthchecks-io-rules.yml
   title: ''
   type: Spectral
   url: rules/healthchecks-io-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/json-ld/healthchecks-io-context.jsonld
+  href: https://artifacts.apis.io/healthchecks-io/json-ld/healthchecks-io-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/healthchecks-io-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/vocabulary/healthchecks-io-vocabulary.yml
+  href: https://artifacts.apis.io/healthchecks-io/vocabulary/healthchecks-io-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/healthchecks-io-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/data-model/healthchecks-io-data-model.yml
+  href: https://artifacts.apis.io/healthchecks-io/data-model/healthchecks-io-data-model.yml
   title: ''
   type: DataModel
   url: data-model/healthchecks-io-data-model.yml
@@ -101,32 +115,32 @@ common:
   type: Security
   url: https://healthchecks.io/faq/#bug-bounty
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/conformance/healthchecks-io-conformance.yml
+  href: https://artifacts.apis.io/healthchecks-io/conformance/healthchecks-io-conformance.yml
   title: ''
   type: Conformance
   url: conformance/healthchecks-io-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/well-known/healthchecks-io-security.txt
+  href: https://artifacts.apis.io/healthchecks-io/well-known/healthchecks-io-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/healthchecks-io-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/well-known/healthchecks-io-well-known.yml
+  href: https://artifacts.apis.io/healthchecks-io/well-known/healthchecks-io-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/healthchecks-io-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/hosts/healthchecks-io-hosts.yml
+  href: https://artifacts.apis.io/healthchecks-io/hosts/healthchecks-io-hosts.yml
   title: ''
   type: Hosts
   url: hosts/healthchecks-io-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/packages/healthchecks-io-packages.yml
+  href: https://artifacts.apis.io/healthchecks-io/packages/healthchecks-io-packages.yml
   title: ''
   type: SDKs
   url: packages/healthchecks-io-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/packages/healthchecks-io-packages.yml
+  href: https://artifacts.apis.io/healthchecks-io/packages/healthchecks-io-packages.yml
   title: ''
   type: Packages
   url: packages/healthchecks-io-packages.yml
@@ -151,12 +165,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/healthchecks
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/security/healthchecks-io-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/healthchecks-io/security/healthchecks-io-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/healthchecks-io-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/healthchecks-io/refs/heads/main/security/healthchecks-io-domain-security.yml
+  href: https://artifacts.apis.io/healthchecks-io/security/healthchecks-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/healthchecks-io-domain-security.yml
@@ -197,6 +211,14 @@ coverage:
   state: unreadable
 created: '2026-10-13'
 description: Healthchecks.io provides simple, effective cron job and background task monitoring. Users create unique ping URLs for each job, and Healthchecks.io tracks execution, sending alerts via email, Slack, webhooks, and many other integrations when jobs fail to run on schedule. The service offers a free tier for up to 20 checks, detailed dashboards, tagging, and configurable grace periods, supporting integrations with popular platforms like Prometheus, PagerDuty, and GitHub Actions.
+finops:
+- has_sources: true
+  method: derived
+  name: Healthchecks Io Finops
+  primary_unit: ''
+  service_category: ''
+  slug: healthchecks-io-finops
+  template: true
 image: https://healthchecks.io/static/img/twitter-card.jpg
 json_schemas:
 - name: DeleteApiV3Checks7918B17BA7454Db185759D2E07C97F79Response
@@ -238,7 +260,10 @@ plans:
 - name: Healthchecks Io Plans Pricing
   plan_count: 2
   slug: healthchecks-io-plans-pricing
-random_paper: 20
+- name: Healthchecks Io Price Estimates
+  plan_count: 0
+  slug: healthchecks-io-price-estimates
+random_paper: 4
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -253,22 +278,24 @@ rules:
     warn: 1
   slug: healthchecks-io-rules
 score:
-  band: developing
-  composite: 43.6
+  band: thin
+  composite: 32.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 20
     catalog_earned: 73.8
     catalog_earned_first_party: 8.0
     catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.7
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 22.0
     contract_quality: 28.9
-    developer_ergonomics: 42.9
+    developer_ergonomics: 25.0
     discoverability: 71.4
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 43.6
   provenance:
     conformance: derived
     contracts:
@@ -282,12 +309,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/healthchecks-io/healthchecks-io-2026-11-03T133319.png
 security:
 - kind: domain-security
   name: Healthchecks Io Domain Security

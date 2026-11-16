@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -37,12 +40,12 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rsa-insurance/refs/heads/main/security/rsa-insurance-domain-security.yml
+  href: https://artifacts.apis.io/rsa-insurance/security/rsa-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rsa-insurance-domain-security.yml
@@ -103,22 +106,22 @@ common:
   type: Compliance
   url: https://www.rsainsurance.co.uk/regulation/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rsa-insurance/refs/heads/main/authentication/rsa-insurance-authentication.yml
+  href: https://artifacts.apis.io/rsa-insurance/authentication/rsa-insurance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rsa-insurance-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rsa-insurance/refs/heads/main/conformance/rsa-insurance-conformance.yml
+  href: https://artifacts.apis.io/rsa-insurance/conformance/rsa-insurance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rsa-insurance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rsa-insurance/refs/heads/main/lifecycle/rsa-insurance-lifecycle.yml
+  href: https://artifacts.apis.io/rsa-insurance/lifecycle/rsa-insurance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rsa-insurance-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rsa-insurance/refs/heads/main/llms/rsa-insurance-llms.txt
+  href: https://artifacts.apis.io/rsa-insurance/llms/rsa-insurance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rsa-insurance-llms.txt
@@ -183,14 +186,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rsa-insurance/refs/heads/main/screenshots/rsa-insurance-2026-09-02T154150.png
+screenshot: https://apis.io/screenshots/rsa-insurance/rsa-insurance-2026-09-02T154150.png
 security:
 - kind: authentication
   name: Rsa Insurance Authentication

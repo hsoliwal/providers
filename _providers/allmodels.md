@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.9
-  scored_at: '2026-10-17'
+  score: 23.6
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://api.allmodels.io
@@ -64,62 +79,62 @@ apis:
 artifact_total: 18
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/plans/allmodels-plans-pricing.yml
+  href: https://artifacts.apis.io/allmodels/plans/allmodels-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/allmodels-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/rules/allmodels-rules.yml
+  href: https://artifacts.apis.io/allmodels/rules/allmodels-rules.yml
   title: ''
   type: Spectral
   url: rules/allmodels-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/json-ld/allmodels-context.jsonld
+  href: https://artifacts.apis.io/allmodels/json-ld/allmodels-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/allmodels-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/vocabulary/allmodels-vocabulary.yml
+  href: https://artifacts.apis.io/allmodels/vocabulary/allmodels-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/allmodels-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/data-model/allmodels-data-model.yml
+  href: https://artifacts.apis.io/allmodels/data-model/allmodels-data-model.yml
   title: ''
   type: DataModel
   url: data-model/allmodels-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/conventions/allmodels-conventions.yml
+  href: https://artifacts.apis.io/allmodels/conventions/allmodels-conventions.yml
   title: ''
   type: Conventions
   url: conventions/allmodels-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/authentication/allmodels-authentication.yml
+  href: https://artifacts.apis.io/allmodels/authentication/allmodels-authentication.yml
   title: ''
   type: Authentication
   url: authentication/allmodels-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/conformance/allmodels-conformance.yml
+  href: https://artifacts.apis.io/allmodels/conformance/allmodels-conformance.yml
   title: ''
   type: Conformance
   url: conformance/allmodels-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/llms/allmodels-llms.txt
+  href: https://artifacts.apis.io/allmodels/llms/allmodels-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/allmodels-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/well-known/allmodels-well-known.yml
+  href: https://artifacts.apis.io/allmodels/well-known/allmodels-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/allmodels-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/hosts/allmodels-hosts.yml
+  href: https://artifacts.apis.io/allmodels/hosts/allmodels-hosts.yml
   title: ''
   type: Hosts
   url: hosts/allmodels-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/vendors/allmodels-vendors.yml
+  href: https://artifacts.apis.io/allmodels/vendors/allmodels-vendors.yml
   title: ''
   type: Vendors
   url: vendors/allmodels-vendors.yml
@@ -144,7 +159,7 @@ common:
   type: APIReference
   url: https://allmodels.io/docs/api-reference
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allmodels/refs/heads/main/security/allmodels-domain-security.yml
+  href: https://artifacts.apis.io/allmodels/security/allmodels-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/allmodels-domain-security.yml
@@ -205,7 +220,7 @@ modified: '2026-10-15'
 name: Allmodels
 nav: Providers
 network: true
-overview: 'Allmodels is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Allmodels API, Custom Voices API, and 4 more. Tagged areas include Company, VoiceAI, TextToSpeech, SpeechToText, and Real-Time.
+overview: 'Allmodels is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Allmodels API, Custom Voices API, and 4 more. Tagged areas include Company, Voice AI, Text-to-Speech, Speech-to-Text, and Real-Time.
 
 
   The Allmodels catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -216,7 +231,7 @@ plans:
 - name: Allmodels Plans Pricing
   plan_count: 2
   slug: allmodels-plans-pricing
-random_paper: 11
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -232,21 +247,23 @@ rules:
   slug: allmodels-rules
 score:
   band: thin
-  composite: 35.3
+  composite: 28.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 73.8
     catalog_earned_first_party: 8.0
     catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.1
   facets:
-    access_clarity: 52.6
+    access_clarity: 36.8
     contract_governance: 22.0
     contract_quality: 25.8
-    developer_ergonomics: 35.7
+    developer_ergonomics: 23.8
     discoverability: 78.6
     operational_transparency: 0.0
+  previous_composite: 34.9
   provenance:
     conformance: derived
     contracts:
@@ -257,15 +274,17 @@ score:
     mcp: unknown
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/allmodels/allmodels-2026-11-03T120641.png
 security:
 - kind: authentication
   name: Allmodels Authentication
@@ -278,9 +297,9 @@ security:
 slug: allmodels
 tags:
 - Company
-- VoiceAI
-- TextToSpeech
-- SpeechToText
+- Voice AI
+- Text-to-Speech
+- Speech-to-Text
 - Real-Time
 website: https://allmodels.io
 ---

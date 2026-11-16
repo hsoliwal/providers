@@ -1,12 +1,18 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.1
-  scored_at: '2026-10-17'
+  score: 44.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 88
   human_in_the_loop: 2
@@ -139,39 +148,49 @@ apis:
   description: This tag is for operations related to transactions
   name: Pliant Transactions API
   slug: pliant-transactions-api
-artifact_total: 26
+artifact_total: 32
 asyncapis:
 - description: ''
   name: Pliant Callbacks Webhooks
   slug: pliant-callbacks-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/pliant/capabilities/pliant-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pliant-capability-edges.yml
+- group: commercial
+  href: https://artifacts.apis.io/pliant/plans/pliant-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/pliant-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/agentic-access/pliant-agentic-access.yml
+  href: https://artifacts.apis.io/pliant/agentic-access/pliant-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pliant-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/rules/pliant-rules.yml
+  href: https://artifacts.apis.io/pliant/rules/pliant-rules.yml
   title: ''
   type: Spectral
   url: rules/pliant-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/vocabulary/pliant-vocabulary.yml
+  href: https://artifacts.apis.io/pliant/vocabulary/pliant-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pliant-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/errors/pliant-problem-types.yml
+  href: https://artifacts.apis.io/pliant/errors/pliant-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pliant-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/hosts/pliant-hosts.yml
+  href: https://artifacts.apis.io/pliant/hosts/pliant-hosts.yml
   title: ''
   type: Hosts
   url: hosts/pliant-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/vendors/pliant-vendors.yml
+  href: https://artifacts.apis.io/pliant/vendors/pliant-vendors.yml
   title: ''
   type: Vendors
   url: vendors/pliant-vendors.yml
@@ -180,7 +199,7 @@ common:
   type: Newsroom
   url: https://www.getpliant.com/en-us/press
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/security/pliant-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/pliant/security/pliant-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/pliant-vulnerability-disclosure.yml
@@ -189,12 +208,12 @@ common:
   type: Security
   url: https://www.getpliant.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/well-known/pliant-security.txt
+  href: https://artifacts.apis.io/pliant/well-known/pliant-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/pliant-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/well-known/pliant-well-known.yml
+  href: https://artifacts.apis.io/pliant/well-known/pliant-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pliant-well-known.yml
@@ -255,77 +274,85 @@ common:
   type: ChangeLog
   url: https://customer-api.getpliant.com/changelog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/mcp/pliant-mcp.yml
+  href: https://artifacts.apis.io/pliant/mcp/pliant-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pliant-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/authentication/pliant-authentication.yml
+  href: https://artifacts.apis.io/pliant/authentication/pliant-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pliant-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/asyncapi/pliant-callbacks-webhooks.yml
+  href: https://artifacts.apis.io/pliant/asyncapi/pliant-callbacks-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/pliant-callbacks-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/sandbox/pliant-sandbox.yml
+  href: https://artifacts.apis.io/pliant/sandbox/pliant-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pliant-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/conventions/pliant-conventions.yml
+  href: https://artifacts.apis.io/pliant/conventions/pliant-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pliant-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/errors/pliant-error-codes.yml
+  href: https://artifacts.apis.io/pliant/errors/pliant-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/pliant-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/lifecycle/pliant-lifecycle.yml
+  href: https://artifacts.apis.io/pliant/lifecycle/pliant-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pliant-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/data-model/pliant-data-model.yml
+  href: https://artifacts.apis.io/pliant/data-model/pliant-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pliant-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/conformance/pliant-conformance.yml
+  href: https://artifacts.apis.io/pliant/conformance/pliant-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pliant-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/conformance/pliant-conformance.yml
+  href: https://artifacts.apis.io/pliant/conformance/pliant-conformance.yml
   title: ''
   type: Compliance
   url: conformance/pliant-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/components/pliant-components.yml
+  href: https://artifacts.apis.io/pliant/components/pliant-components.yml
   title: ''
   type: Components
   url: components/pliant-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pliant/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/llms/pliant-llms.txt
+  href: https://artifacts.apis.io/pliant/llms/pliant-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pliant-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/security/pliant-domain-security.yml
+  href: https://artifacts.apis.io/pliant/security/pliant-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pliant-domain-security.yml
 created: '2026-07-17'
 description: Pliant is a Berlin-based financial technology company offering a business credit card and spend-management platform, plus Cards-as-a-Service (CaaS) and Banking-as-a-Service (BaaS) infrastructure for banks and platforms. Its Pro API lets customers programmatically issue physical, virtual, single-use and specialized cards (travel, fleet, benefits, insurance-claim), apply card controls and advanced limits, retrieve transactions and accounting data, manage receipts, projects, teams and statements, and subscribe to real-time callbacks. Pliant is PCI DSS certified, ISO/IEC 27001:2022 certified and holds an EU e-money license, with customers including BMW, Decathlon, Deutsche Telekom and Commerzbank.
+finops:
+- has_sources: true
+  method: derived
+  name: Pliant Finops
+  primary_unit: ''
+  service_category: ''
+  slug: pliant-finops
+  template: true
 image: https://a.storyblok.com/f/169635/1200x630/92b10eaf7c/pliant-og-image.png
 layout: provider
 mcp_servers:
@@ -342,8 +369,12 @@ overview: 'Pliant publishes 19 API contracts indexed on the [APIs.io](https://ap
   The Pliant catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Pliant''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, signup flow, and 32 more developer resources.'
-random_paper: 10
+  Pliant''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, signup flow, and 34 more developer resources.'
+plans:
+- name: Pliant Plans Pricing
+  plan_count: 3
+  slug: pliant-plans-pricing
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -358,23 +389,23 @@ rules:
     warn: 4
   slug: pliant-rules
 score:
-  band: strong
-  composite: 56.3
+  band: exemplar
+  composite: 67.1
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 42.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 72.3
+    artifact_dirs: 30
+    catalog_earned: 54.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 60.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 12.4
+  delta: 4.5
   facets:
-    access_clarity: 42.1
+    access_clarity: 73.7
     contract_governance: 35.6
-    contract_quality: 57.8
-    developer_ergonomics: 47.0
-    discoverability: 76.7
-    operational_transparency: 32.9
+    contract_quality: 63.2
+    developer_ergonomics: 57.7
+    discoverability: 75.8
+    operational_transparency: 40.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -383,7 +414,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 43.9
+  previous_composite: 62.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -400,13 +431,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 35.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/pliant/refs/heads/main/screenshots/pliant-2026-08-17T081307.png
+screenshot: https://apis.io/screenshots/pliant/pliant-2026-08-17T081307.png
 security:
 - kind: authentication
   name: Pliant Authentication
@@ -420,6 +451,16 @@ security:
   name: Pliant Vulnerability Disclosure
   slug: pliant-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 4
+skills:
+- name: Issue a travel virtual card with controls
+  slug: pliant-issue-travel-card
+- name: Onboard a cardholder
+  slug: pliant-onboard-cardholder
+- name: Reconcile transactions and attach receipts
+  slug: pliant-reconcile-transactions
+- name: Subscribe to real-time callbacks
+  slug: pliant-subscribe-callbacks
 slug: pliant
 tags:
 - Company

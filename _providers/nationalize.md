@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.4
-  scored_at: '2026-10-17'
+  score: 46.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,27 +56,28 @@ apis:
   description: Operations for predicting nationality from names
   name: Nationalize.io Nationality API
   slug: nationalize-nationality-api
-artifact_total: 16
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Nationalize.io Nationality API
   slug: open-nationalize-nationality-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/nationalizeio/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationalize/refs/heads/main/agentic-access/nationalize-agentic-access.yml
+  href: https://artifacts.apis.io/nationalize/agentic-access/nationalize-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nationalize-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationalize/refs/heads/main/security/nationalize-domain-security.yml
+  href: https://artifacts.apis.io/nationalize/security/nationalize-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nationalize-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationalize/refs/heads/main/authentication/nationalize-authentication.yml
+  href: https://artifacts.apis.io/nationalize/authentication/nationalize-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nationalize-authentication.yml
@@ -163,12 +170,12 @@ overview: 'Nationalize.io publishes 1 API contract indexed on the [APIs.io](http
   The Nationalize.io catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Nationalize.io''s developer surface includes authentication, documentation, pricing, FAQ, signup flow, and 9 more developer resources.'
+  Nationalize.io''s developer surface includes authentication, documentation, pricing, FAQ, signup flow, and 10 more developer resources.'
 plans:
 - name: Nationalize Plans Pricing
   plan_count: 4
   slug: nationalize-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Nationalize Rate Limits
@@ -187,27 +194,27 @@ rules:
   slug: nationalize-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.6
+  composite: 37.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.0
   facets:
     access_clarity: 46.1
     contract_governance: 9.8
-    contract_quality: 50.5
-    developer_ergonomics: 21.4
+    contract_quality: 53.6
+    developer_ergonomics: 22.6
     discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 44.8
+  previous_composite: 37.6
   provenance:
     agentic_access: derived
     contracts:
-      callable: 0.0
+      callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 1
@@ -218,14 +225,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/nationalize/refs/heads/main/screenshots/nationalize-2026-06-20T190047.png
+screenshot: https://apis.io/screenshots/nationalize/nationalize-2026-06-20T190047.png
 security:
 - kind: authentication
   name: Nationalize Authentication

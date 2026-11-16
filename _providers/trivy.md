@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -61,11 +67,8 @@ apis:
   description: Server metadata and version information
   name: Trivy Server API
   slug: trivy-server-api
-artifact_total: 23
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Trivy Server Health API
   slug: open-trivy-health-api
@@ -77,17 +80,17 @@ collections:
   slug: open-trivy-server
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/plans/trivy-plans-pricing.yml
+  href: https://artifacts.apis.io/trivy/plans/trivy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/trivy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/rate-limits/trivy-rate-limits.yml
+  href: https://artifacts.apis.io/trivy/rate-limits/trivy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/trivy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/finops/trivy-finops.yml
+  href: https://artifacts.apis.io/trivy/finops/trivy-finops.yml
   title: ''
   type: FinOps
   url: finops/trivy-finops.yml
@@ -112,17 +115,17 @@ common:
   type: License
   url: https://github.com/aquasecurity/trivy-operator/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/agentic-access/trivy-agentic-access.yml
+  href: https://artifacts.apis.io/trivy/agentic-access/trivy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/trivy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/security/trivy-domain-security.yml
+  href: https://artifacts.apis.io/trivy/security/trivy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trivy-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/authentication/trivy-authentication.yml
+  href: https://artifacts.apis.io/trivy/authentication/trivy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/trivy-authentication.yml
@@ -171,37 +174,37 @@ common:
   type: ReleaseNotes
   url: https://github.com/aquasecurity/trivy/releases
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/openapi/_original/trivy-server-openapi.yml
+  href: https://artifacts.apis.io/trivy/openapi/_original/trivy-server-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/trivy-server-openapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/json-schema/trivy-vulnerability-report-schema.json
+  href: https://artifacts.apis.io/trivy/json-schema/trivy-vulnerability-report-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/trivy-vulnerability-report-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/json-schema/trivy-scan-result-schema.json
+  href: https://artifacts.apis.io/trivy/json-schema/trivy-scan-result-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/trivy-scan-result-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/json-structure/trivy-scan-structure.json
+  href: https://artifacts.apis.io/trivy/json-structure/trivy-scan-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/trivy-scan-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/json-ld/trivy-context.jsonld
+  href: https://artifacts.apis.io/trivy/json-ld/trivy-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/trivy-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/rules/trivy-rules.yml
+  href: https://artifacts.apis.io/trivy/rules/trivy-rules.yml
   title: ''
   type: SpectralRules
   url: rules/trivy-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/vocabulary/trivy-vocabulary.yml
+  href: https://artifacts.apis.io/trivy/vocabulary/trivy-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/trivy-vocabulary.yml
@@ -211,29 +214,29 @@ common:
   url: https://github.com/aquasecurity/trivy-mcp
 crds:
 - name: aquasecurity.github.io clustercompliancereports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_clustercompliancereports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_clustercompliancereports.yaml
 - name: aquasecurity.github.io clusterconfigauditreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_clusterconfigauditreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_clusterconfigauditreports.yaml
 - name: aquasecurity.github.io clusterinfraassessmentreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_clusterinfraassessmentreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_clusterinfraassessmentreports.yaml
 - name: aquasecurity.github.io clusterrbacassessmentreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_clusterrbacassessmentreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_clusterrbacassessmentreports.yaml
 - name: aquasecurity.github.io clustersbomreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_clustersbomreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_clustersbomreports.yaml
 - name: aquasecurity.github.io clustervulnerabilityreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_clustervulnerabilityreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_clustervulnerabilityreports.yaml
 - name: aquasecurity.github.io configauditreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_configauditreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_configauditreports.yaml
 - name: aquasecurity.github.io exposedsecretreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_exposedsecretreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_exposedsecretreports.yaml
 - name: aquasecurity.github.io infraassessmentreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_infraassessmentreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_infraassessmentreports.yaml
 - name: aquasecurity.github.io rbacassessmentreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_rbacassessmentreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_rbacassessmentreports.yaml
 - name: aquasecurity.github.io sbomreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_sbomreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_sbomreports.yaml
 - name: aquasecurity.github.io vulnerabilityreports
-  url: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/crd/aquasecurity.github.io_vulnerabilityreports.yaml
+  url: https://artifacts.apis.io/trivy/crd/aquasecurity.github.io_vulnerabilityreports.yaml
 created: '2026-03-26'
 description: Trivy is a comprehensive and versatile open-source security scanner from Aqua Security that finds vulnerabilities, misconfigurations, secrets, and SBOM in containers, Kubernetes, code repositories, clouds, and more. Trivy runs as a CLI tool, in client/server mode with an HTTP API, and as a Kubernetes Operator (trivy-operator) that continuously scans clusters and generates security reports as native Kubernetes Custom Resources.
 examples:
@@ -247,7 +250,7 @@ finops:
 - has_sources: false
   method: generated
   name: Trivy Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: trivy-finops
   template: true
@@ -288,7 +291,7 @@ plans:
 - name: Trivy Plans Pricing
   plan_count: 3
   slug: trivy-plans-pricing
-random_paper: 2
+random_paper: 22
 rate_limits:
 - limit_count: 5
   name: Trivy Rate Limits
@@ -321,13 +324,13 @@ score:
   band: thin
   composite: 32.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 51.8
     catalog_earned_first_party: 0.0
     catalog_gap: 63.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 17.4
@@ -338,7 +341,7 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 34.2
+  previous_composite: 32.8
   provenance:
     agentic_access: derived
     contracts:
@@ -352,14 +355,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/trivy/refs/heads/main/screenshots/trivy-2026-06-20T195737.png
+screenshot: https://apis.io/screenshots/trivy/trivy-2026-06-20T195737.png
 security:
 - kind: authentication
   name: Trivy Authentication

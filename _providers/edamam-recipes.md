@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 14
   slug: edamam-recipes-agentic-access
   summary_line: 14 operations · 7 acting
-api_count: 5
+api_count: 4
 apis:
 - baseURL: https://api.edamam.com/api/recipes/v2
   baseurl_source: declared
@@ -94,11 +97,8 @@ apis:
   description: Daily values
   name: Edamam Values API
   slug: edamam-recipes-values-api
-artifact_total: 78
+artifact_total: 77
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Food Database API
   slug: open-edamam-food-database-v2
@@ -143,7 +143,7 @@ collections:
   slug: open-edamam-recipes-values-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/finops/edamam-recipes-finops.yml
+  href: https://artifacts.apis.io/edamam-recipes/finops/edamam-recipes-finops.yml
   title: ''
   type: FinOps
   url: finops/edamam-recipes-finops.yml
@@ -156,17 +156,17 @@ common:
   type: BlogRSS
   url: https://www.edamam.com/blog/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/agentic-access/edamam-recipes-agentic-access.yml
+  href: https://artifacts.apis.io/edamam-recipes/agentic-access/edamam-recipes-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/edamam-recipes-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/security/edamam-recipes-domain-security.yml
+  href: https://artifacts.apis.io/edamam-recipes/security/edamam-recipes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/edamam-recipes-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/authentication/edamam-recipes-authentication.yml
+  href: https://artifacts.apis.io/edamam-recipes/authentication/edamam-recipes-authentication.yml
   title: ''
   type: Authentication
   url: authentication/edamam-recipes-authentication.yml
@@ -207,27 +207,27 @@ common:
   type: PrivacyPolicy
   url: https://www.edamam.com/page/privacy-policy
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/plans/edamam-recipes-plans-pricing.yml
+  href: https://artifacts.apis.io/edamam-recipes/plans/edamam-recipes-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/edamam-recipes-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/rate-limits/edamam-recipes-rate-limits.yml
+  href: https://artifacts.apis.io/edamam-recipes/rate-limits/edamam-recipes-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/edamam-recipes-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/rules/edamam-recipes-rules.yml
+  href: https://artifacts.apis.io/edamam-recipes/rules/edamam-recipes-rules.yml
   title: ''
   type: SpectralRules
   url: rules/edamam-recipes-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/vocabulary/edamam-recipes-vocabulary.yml
+  href: https://artifacts.apis.io/edamam-recipes/vocabulary/edamam-recipes-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/edamam-recipes-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/json-ld/edamam-recipes-context.jsonld
+  href: https://artifacts.apis.io/edamam-recipes/json-ld/edamam-recipes-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/edamam-recipes-context.jsonld
@@ -243,6 +243,10 @@ common:
   title: ''
   type: Tools
   url: ''
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/edamam
 created: '2026-05-28'
 description: Edamam is a food and nutrition data platform powering recipe search, NLP-based nutrition analysis, food database lookup (keyword / brand / UPC / AI Vision), and personalized meal planning. The flagship Recipe Search API v2 covers a 2M+ recipe index with 30+ filters across diet, health, cuisine, meal, dish, nutrients, time, glycemic index, and CO2 emissions class.
 examples:
@@ -348,12 +352,12 @@ overview: 'Edamam publishes 10 API contracts indexed on the [APIs.io](https://ap
   The Edamam catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Edamam''s developer surface includes engineering blog, authentication, documentation, signup flow, FAQ, support, tooling, and 15 more developer resources.'
+  Edamam''s developer surface includes engineering blog, authentication, documentation, signup flow, FAQ, support, tooling, and 16 more developer resources.'
 plans:
 - name: Edamam Recipes Plans Pricing
   plan_count: 0
   slug: edamam-recipes-plans-pricing
-random_paper: 19
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Edamam Recipes Rate Limits
@@ -384,29 +388,29 @@ rules:
   slug: edamam-recipes-rules
 score:
   band: thin
-  composite: 37.9
+  composite: 38.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 69.0
     catalog_earned_first_party: 0.0
     catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.2
   facets:
     access_clarity: 17.1
     contract_governance: 27.3
-    contract_quality: 61.3
+    contract_quality: 62.3
     developer_ergonomics: 40.5
     discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 38.9
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 20.0
       total: 10
   regulatory:
     applies: true
@@ -414,13 +418,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/screenshots/edamam-recipes-2026-06-20T180448.png
+screenshot: https://apis.io/screenshots/edamam-recipes/edamam-recipes-2026-06-20T180448.png
 security:
 - kind: authentication
   name: Edamam Recipes Authentication
@@ -460,6 +464,9 @@ tags:
 - Sustainability
 - Carbon Footprint
 - Public APIs
+- Restaurant
+- Food
+- UPC
 use_cases:
 - description: Build consumer recipe search and discovery apps with rich filtering.
   name: Recipe Discovery Apps

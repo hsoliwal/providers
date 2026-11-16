@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Partner-gated · Halo Cloud subscription + practice pairing
+  confidence: low
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
-  - documentation
+  - security
+  - sandbox
   - '{''url'': ''https://bpsoftware.net/'', ''status'': 301, ''note'': ''declared website redirects to https://bestpracticesoftware.com/ — a different registrable domain (bpsoftware.net -> bestpracticesoftware.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 26.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -70,7 +74,7 @@ apis:
   description: Obtain authorization tokens for desktop applications to authenticate API requests.
   name: Best Practice Software Tokens API
   slug: best-practice-tokens-api
-artifact_total: 11
+artifact_total: 15
 asyncapis:
 - description: ''
   name: Best Practice Webhooks
@@ -84,22 +88,22 @@ collections:
   slug: open-haloconnect-integrator
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/capabilities/best-practice-capability-edges.yml
+  href: https://artifacts.apis.io/best-practice/capabilities/best-practice-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/best-practice-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/agentic-access/best-practice-agentic-access.yml
+  href: https://artifacts.apis.io/best-practice/agentic-access/best-practice-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/best-practice-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/security/best-practice-domain-security.yml
+  href: https://artifacts.apis.io/best-practice/security/best-practice-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/best-practice-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/authentication/best-practice-authentication.yml
+  href: https://artifacts.apis.io/best-practice/authentication/best-practice-authentication.yml
   title: ''
   type: Authentication
   url: authentication/best-practice-authentication.yml
@@ -144,77 +148,77 @@ common:
   type: PrivacyPolicy
   url: https://bpsoftware.net/privacy-policy/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/conventions/best-practice-conventions.yml
+  href: https://artifacts.apis.io/best-practice/conventions/best-practice-conventions.yml
   title: ''
   type: Conventions
   url: conventions/best-practice-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/errors/best-practice-problem-types.yml
+  href: https://artifacts.apis.io/best-practice/errors/best-practice-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/best-practice-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/lifecycle/best-practice-lifecycle.yml
+  href: https://artifacts.apis.io/best-practice/lifecycle/best-practice-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/best-practice-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/lifecycle/best-practice-lifecycle.yml
+  href: https://artifacts.apis.io/best-practice/lifecycle/best-practice-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/best-practice-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/conformance/best-practice-conformance.yml
+  href: https://artifacts.apis.io/best-practice/conformance/best-practice-conformance.yml
   title: ''
   type: Conformance
   url: conformance/best-practice-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/data-model/best-practice-data-model.yml
+  href: https://artifacts.apis.io/best-practice/data-model/best-practice-data-model.yml
   title: ''
   type: DataModel
   url: data-model/best-practice-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/well-known/best-practice-well-known.yml
+  href: https://artifacts.apis.io/best-practice/well-known/best-practice-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/best-practice-well-known.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/sandbox/best-practice-sandbox.yml
+  href: https://artifacts.apis.io/best-practice/sandbox/best-practice-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/best-practice-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/changelog/best-practice-changelog.yml
+  href: https://artifacts.apis.io/best-practice/changelog/best-practice-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/best-practice-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/asyncapi/best-practice-webhooks.yml
+  href: https://artifacts.apis.io/best-practice/asyncapi/best-practice-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/best-practice-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/mcp/best-practice-mcp.yml
+  href: https://artifacts.apis.io/best-practice/mcp/best-practice-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/best-practice-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/llms/best-practice-llms.txt
+  href: https://artifacts.apis.io/best-practice/llms/best-practice-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/best-practice-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/overlays/best-practice-integrator-overlay.yaml
+  href: https://artifacts.apis.io/best-practice/overlays/best-practice-integrator-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/best-practice-integrator-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/overlays/best-practice-desktop-overlay.yaml
+  href: https://artifacts.apis.io/best-practice/overlays/best-practice-desktop-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/best-practice-desktop-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/best-practice/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -230,25 +234,38 @@ network: true
 overview: 'Best Practice Software publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including FHIR API, Registered Queries API, Sites API, and 2 more. Tagged areas include Healthcare, Australia, Electronic Health Records, FHIR, and HL7.
 
 
-  The Best Practice Software catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Best Practice Software catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Best Practice Software''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, support, sandbox, and 22 more developer resources.'
-random_paper: 20
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Best Practice Software API Rules
+  rule_count: 61
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 4
+    warn: 7
+  slug: best-practice-rules
 score:
   band: developing
-  composite: 48.0
+  composite: 49.6
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 59.2
     developer_ergonomics: 66.1
     discoverability: 73.2
@@ -260,7 +277,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 47.9
+  previous_composite: 49.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -277,13 +294,13 @@ score:
     regime: Health
     regime_id: health
     score: 24.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/best-practice/refs/heads/main/screenshots/best-practice-2026-07-25T202754.png
+screenshot: https://apis.io/screenshots/best-practice/best-practice-2026-07-25T202754.png
 security:
 - kind: authentication
   name: Best Practice Authentication
@@ -293,6 +310,14 @@ security:
   name: Best Practice Domain Security
   slug: best-practice-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Run an async SQL Passthrough query and page results
+  slug: best-practice-async-sql-query
+- name: FHIR patient lookup and summary (Bp Premier)
+  slug: best-practice-fhir-patient-lookup
+- name: Register a recurring query and receive webhook notifications
+  slug: best-practice-registered-query-webhook
 slug: best-practice
 tags:
 - Healthcare

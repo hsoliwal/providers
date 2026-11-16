@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-10-17'
+  score: 19.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -56,9 +60,6 @@ apis:
 artifact_total: 11
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: General Dynamics Mission Systems API
   slug: open-general-dynamics-mission-systems-api
 - collection_type: open
@@ -69,27 +70,27 @@ collections:
   slug: open-general-dynamics-systems-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/plans/general-dynamics-plans-pricing.yml
+  href: https://artifacts.apis.io/general-dynamics/plans/general-dynamics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/general-dynamics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/rate-limits/general-dynamics-rate-limits.yml
+  href: https://artifacts.apis.io/general-dynamics/rate-limits/general-dynamics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/general-dynamics-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/finops/general-dynamics-finops.yml
+  href: https://artifacts.apis.io/general-dynamics/finops/general-dynamics-finops.yml
   title: ''
   type: FinOps
   url: finops/general-dynamics-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/agentic-access/general-dynamics-agentic-access.yml
+  href: https://artifacts.apis.io/general-dynamics/agentic-access/general-dynamics-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/general-dynamics-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/security/general-dynamics-domain-security.yml
+  href: https://artifacts.apis.io/general-dynamics/security/general-dynamics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/general-dynamics-domain-security.yml
@@ -120,7 +121,10 @@ modified: '2026-05-19'
 name: General Dynamics
 nav: Providers
 network: true
-overview: 'General Dynamics publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Products API and Systems API. Tagged areas include Aerospace, Defense, Mission Systems, Government, and Fortune 100.'
+overview: 'General Dynamics publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Products API and Systems API. Tagged areas include Aerospace, Defense, Mission Systems, Government, and Fortune 100.
+
+
+  The General Dynamics catalog on APIs.io includes 1 Spectral governance ruleset.'
 plans:
 - name: General Dynamics Plans Pricing
   plan_count: 1
@@ -141,25 +145,38 @@ press:
 - date: ''
   title: 'General Motors: Iconic Vehicles for Every Drive'
   url: https://www.gm.com/
-random_paper: 7
+random_paper: 3
 rate_limits:
 - limit_count: 1
   name: General Dynamics Rate Limits
   slug: general-dynamics-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: General Dynamics API Rules
+  rule_count: 44
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 1
+  slug: general-dynamics-rules
 score:
   band: emerging
-  composite: 19.5
+  composite: 21.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 15
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 41.6
     developer_ergonomics: 9.5
     discoverability: 66.1
@@ -171,7 +188,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.5
+  previous_composite: 21.2
   provenance:
     agentic_access: derived
     contracts:
@@ -185,14 +202,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/screenshots/general-dynamics-2026-06-20T181724.png
+screenshot: https://apis.io/screenshots/general-dynamics/general-dynamics-2026-06-20T181724.png
 security:
 - kind: domain-security
   name: General Dynamics Domain Security

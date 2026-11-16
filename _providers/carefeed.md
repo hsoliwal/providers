@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carefeed/refs/heads/main/vendors/carefeed-vendors.yml
+  href: https://artifacts.apis.io/carefeed/vendors/carefeed-vendors.yml
   title: ''
   type: Vendors
   url: vendors/carefeed-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carefeed/refs/heads/main/well-known/carefeed-help-security.txt
+  href: https://artifacts.apis.io/carefeed/well-known/carefeed-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/carefeed-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carefeed/refs/heads/main/well-known/carefeed-well-known.yml
+  href: https://artifacts.apis.io/carefeed/well-known/carefeed-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/carefeed-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carefeed/refs/heads/main/hosts/carefeed-hosts.yml
+  href: https://artifacts.apis.io/carefeed/hosts/carefeed-hosts.yml
   title: ''
   type: Hosts
   url: hosts/carefeed-hosts.yml
@@ -68,7 +81,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Carefeed
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carefeed/refs/heads/main/security/carefeed-domain-security.yml
+  href: https://artifacts.apis.io/carefeed/security/carefeed-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carefeed-domain-security.yml
@@ -92,28 +105,30 @@ modified: '2026-10-07'
 name: Carefeed
 nav: Providers
 network: true
-overview: 'Carefeed is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include senior‑living, Software-as-a-Service, Healthcare, admissions, and Artificial Intelligence.
+overview: 'Carefeed is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Senior Living, Software-as-a-Service, Healthcare, Admissions, and Artificial Intelligence.
 
 
   Carefeed''s developer surface includes support, documentation, and 9 more developer resources.'
-random_paper: 1
+random_paper: 23
 score:
-  band: emerging
-  composite: 11.3
+  band: minimal
+  composite: 8.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.0
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 23.8
+    developer_ergonomics: 11.9
     discoverability: 44.6
-    operational_transparency: 5.3
+    operational_transparency: 13.2
+  previous_composite: 12.7
   provenance:
     mcp: unknown
   regulatory:
@@ -121,13 +136,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 5.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/carefeed/carefeed-2026-11-03T123324.png
 security:
 - kind: domain-security
   name: Carefeed Domain Security
@@ -135,10 +152,10 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: carefeed
 tags:
-- senior‑living
+- Senior Living
 - Software-as-a-Service
 - Healthcare
-- admissions
+- Admissions
 - Artificial Intelligence
 website: https://www.carefeed.com/
 ---

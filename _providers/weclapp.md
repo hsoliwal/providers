@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium (free trial) · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
-  trial: true
-  try_now: true
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -82,9 +86,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: weclapp REST Article API
   slug: open-weclapp-article-api
 - collection_type: open
@@ -118,22 +119,22 @@ common:
   type: Pricing
   url: https://www.weclapp.com/en/pricing/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/capabilities/weclapp-capability-edges.yml
+  href: https://artifacts.apis.io/weclapp/capabilities/weclapp-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/weclapp-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/agentic-access/weclapp-agentic-access.yml
+  href: https://artifacts.apis.io/weclapp/agentic-access/weclapp-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/weclapp-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/security/weclapp-domain-security.yml
+  href: https://artifacts.apis.io/weclapp/security/weclapp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/weclapp-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/authentication/weclapp-authentication.yml
+  href: https://artifacts.apis.io/weclapp/authentication/weclapp-authentication.yml
   title: ''
   type: Authentication
   url: authentication/weclapp-authentication.yml
@@ -150,17 +151,17 @@ common:
   type: Documentation
   url: https://www.weclapp.com/api/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/plans/weclapp-plans-pricing.yml
+  href: https://artifacts.apis.io/weclapp/plans/weclapp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/weclapp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/rate-limits/weclapp-rate-limits.yml
+  href: https://artifacts.apis.io/weclapp/rate-limits/weclapp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/weclapp-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/finops/weclapp-finops.yml
+  href: https://artifacts.apis.io/weclapp/finops/weclapp-finops.yml
   title: ''
   type: FinOps
   url: finops/weclapp-finops.yml
@@ -183,6 +184,9 @@ network: true
 overview: 'weclapp publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Article API, Customer API, Purchase Order API, and 4 more. Tagged areas include ERP, CRM, Cloud ERP, Accounting, and Inventory.
 
 
+  The weclapp catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   weclapp''s developer surface includes engineering blog, pricing, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Weclapp Plans Pricing
@@ -191,25 +195,38 @@ plans:
 - name: Weclapp Price Estimates
   plan_count: 0
   slug: weclapp-price-estimates
-random_paper: 0
+random_paper: 4
 rate_limits:
 - limit_count: 2
   name: Weclapp Rate Limits
   slug: weclapp-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: weclapp API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: weclapp-rules
 score:
   band: thin
-  composite: 32.8
+  composite: 33.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 51.0
+    artifact_dirs: 16
+    catalog_earned: 55.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 64.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.9
+  delta: -1.1
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 47.6
     developer_ergonomics: 32.1
     discoverability: 66.1
@@ -222,7 +239,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 35.7
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -236,13 +253,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/weclapp/refs/heads/main/screenshots/weclapp-2026-09-02T170543.png
+screenshot: https://apis.io/screenshots/weclapp/weclapp-2026-09-02T170543.png
 security:
 - kind: authentication
   name: Weclapp Authentication

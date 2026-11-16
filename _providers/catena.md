@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Catena's banking and governance API for AI agents - agent identity, custodial and non-custodial accounts, fiat and stablecoin payments, yield, and policy-enforced spending controls. Currently in Priva
@@ -41,7 +45,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/security/catena-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/catena/security/catena-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/catena-vulnerability-disclosure.yml
@@ -50,7 +54,7 @@ common:
   type: Security
   url: https://catena.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/security/catena-domain-security.yml
+  href: https://artifacts.apis.io/catena/security/catena-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/catena-domain-security.yml
@@ -91,37 +95,37 @@ common:
   type: Support
   url: mailto:hello@catena.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/llms/catena-llms.txt
+  href: https://artifacts.apis.io/catena/llms/catena-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/catena-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/well-known/catena-well-known.yml
+  href: https://artifacts.apis.io/catena/well-known/catena-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/catena-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/well-known/catena-security.txt
+  href: https://artifacts.apis.io/catena/well-known/catena-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/catena-security.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/packages/catena-packages.yml
+  href: https://artifacts.apis.io/catena/packages/catena-packages.yml
   title: ''
   type: Packages
   url: packages/catena-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/packages/catena-packages.yml
+  href: https://artifacts.apis.io/catena/packages/catena-packages.yml
   title: ''
   type: SDKs
   url: packages/catena-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/cli/catena-cli.yml
+  href: https://artifacts.apis.io/catena/cli/catena-cli.yml
   title: ''
   type: CLI
   url: cli/catena-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/mcp/catena-mcp.yml
+  href: https://artifacts.apis.io/catena/mcp/catena-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/catena-mcp.yml
@@ -141,12 +145,12 @@ overview: 'Catena is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Catena''s developer surface includes engineering blog, signup flow, support, CLI, and 15 more developer resources.'
-random_paper: 4
+random_paper: 20
 score:
   band: emerging
   composite: 16.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -169,14 +173,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/catena/refs/heads/main/screenshots/catena-2026-07-25T204808.png
+screenshot: https://apis.io/screenshots/catena/catena-2026-07-25T204808.png
 security:
 - kind: domain-security
   name: Catena Domain Security

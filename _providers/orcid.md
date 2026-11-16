@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -124,9 +128,6 @@ apis:
 artifact_total: 37
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: ORCID Public Address API
   slug: open-orcid-address-api
 - collection_type: open
@@ -173,32 +174,32 @@ collections:
   slug: open-orcid
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/plans/orcid-plans-pricing.yml
+  href: https://artifacts.apis.io/orcid/plans/orcid-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/orcid-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/rate-limits/orcid-rate-limits.yml
+  href: https://artifacts.apis.io/orcid/rate-limits/orcid-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/orcid-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/finops/orcid-finops.yml
+  href: https://artifacts.apis.io/orcid/finops/orcid-finops.yml
   title: ''
   type: FinOps
   url: finops/orcid-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/capabilities/orcid-capability-edges.yml
+  href: https://artifacts.apis.io/orcid/capabilities/orcid-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/orcid-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/agentic-access/orcid-agentic-access.yml
+  href: https://artifacts.apis.io/orcid/agentic-access/orcid-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/orcid-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/security/orcid-domain-security.yml
+  href: https://artifacts.apis.io/orcid/security/orcid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/orcid-domain-security.yml
@@ -256,7 +257,7 @@ finops:
 - has_sources: false
   method: generated
   name: Orcid Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: orcid-finops
   template: true
@@ -269,6 +270,9 @@ network: true
 overview: 'ORCID is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Address API, Educations API, Email API, and 13 more. Tagged areas include Academic, Identity, Researchers, ORCID, and Research Data.
 
 
+  The ORCID catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   ORCID''s developer surface includes developer portal, documentation, getting-started guide, authentication, signup flow, support, and 12 more developer resources.'
 plans:
 - name: Orcid Plans Pricing
@@ -279,25 +283,38 @@ rate_limits:
 - limit_count: 5
   name: Orcid Rate Limits
   slug: orcid-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 68
+  extends:
+  - spectral:oas
+  name: ORCID API Rules
+  rule_count: 27
+  severity_counts:
+    error: 25
+    hint: 0
+    info: 1
+    warn: 1
+  slug: orcid-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 33.9
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 46.0
+    artifact_dirs: 16
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 25.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 38.6
     developer_ergonomics: 47.6
     discoverability: 71.4
     operational_transparency: 10.5
-  previous_composite: 33.8
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     contracts:
@@ -311,14 +328,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/orcid/refs/heads/main/screenshots/orcid-2026-06-20T191203.png
+screenshot: https://apis.io/screenshots/orcid/orcid-2026-06-20T191203.png
 security:
 - kind: domain-security
   name: Orcid Domain Security

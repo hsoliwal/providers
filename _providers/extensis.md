@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -60,11 +63,8 @@ apis:
   description: The Search API from Extensis — 1 operation(s) for search.
   name: Extensis Search API
   slug: extensis-search-api
-artifact_total: 23
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Extensis Portfolio Assets API
   slug: open-extensis-assets-api
@@ -80,22 +80,22 @@ common:
   type: IssueTracker
   url: https://github.com/wags/PortfolioRestToken/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/agentic-access/extensis-agentic-access.yml
+  href: https://artifacts.apis.io/extensis/agentic-access/extensis-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/extensis-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/security/extensis-trust-center.yml
+  href: https://artifacts.apis.io/extensis/security/extensis-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/extensis-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/security/extensis-domain-security.yml
+  href: https://artifacts.apis.io/extensis/security/extensis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/extensis-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/authentication/extensis-authentication.yml
+  href: https://artifacts.apis.io/extensis/authentication/extensis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/extensis-authentication.yml
@@ -140,17 +140,17 @@ common:
   type: Support
   url: https://www.extensis.com/help-and-support
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/plans/extensis-plans-pricing.yml
+  href: https://artifacts.apis.io/extensis/plans/extensis-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/extensis-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/rate-limits/extensis-rate-limits.yml
+  href: https://artifacts.apis.io/extensis/rate-limits/extensis-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/extensis-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/finops/extensis-finops.yml
+  href: https://artifacts.apis.io/extensis/finops/extensis-finops.yml
   title: ''
   type: FinOps
   url: finops/extensis-finops.yml
@@ -209,7 +209,7 @@ plans:
 - name: Extensis Plans Pricing
   plan_count: 3
   slug: extensis-plans-pricing
-random_paper: 3
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Extensis Rate Limits
@@ -230,13 +230,13 @@ score:
   band: thin
   composite: 33.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 46.3
     catalog_earned_first_party: 0.0
     catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -244,7 +244,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 58.0
     operational_transparency: 13.2
-  previous_composite: 38.6
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -258,14 +258,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/extensis/refs/heads/main/screenshots/extensis-2026-06-20T180946.png
+screenshot: https://apis.io/screenshots/extensis/extensis-2026-06-20T180946.png
 security:
 - kind: authentication
   name: Extensis Authentication

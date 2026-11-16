@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 22.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -82,9 +89,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Extensiv 3PL Warehouse Manager API (modeled) Authentication API
   slug: open-extensiv-authentication-api
 - collection_type: open
@@ -110,27 +114,27 @@ collections:
   slug: open-extensiv
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/capabilities/extensiv-capability-edges.yml
+  href: https://artifacts.apis.io/extensiv/capabilities/extensiv-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/extensiv-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/agentic-access/extensiv-agentic-access.yml
+  href: https://artifacts.apis.io/extensiv/agentic-access/extensiv-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/extensiv-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/security/extensiv-trust-center.yml
+  href: https://artifacts.apis.io/extensiv/security/extensiv-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/extensiv-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/security/extensiv-domain-security.yml
+  href: https://artifacts.apis.io/extensiv/security/extensiv-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/extensiv-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/authentication/extensiv-authentication.yml
+  href: https://artifacts.apis.io/extensiv/authentication/extensiv-authentication.yml
   title: ''
   type: Authentication
   url: authentication/extensiv-authentication.yml
@@ -147,17 +151,17 @@ common:
   type: Documentation
   url: https://help.extensiv.com/en_US/rest-api
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/plans/extensiv-plans-pricing.yml
+  href: https://artifacts.apis.io/extensiv/plans/extensiv-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/extensiv-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/rate-limits/extensiv-rate-limits.yml
+  href: https://artifacts.apis.io/extensiv/rate-limits/extensiv-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/extensiv-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/finops/extensiv-finops.yml
+  href: https://artifacts.apis.io/extensiv/finops/extensiv-finops.yml
   title: ''
   type: FinOps
   url: finops/extensiv-finops.yml
@@ -196,35 +200,51 @@ network: true
 overview: 'Extensiv publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Customers API, Inventory API, and 4 more. Tagged areas include 3PL, Warehouse Management, WMS, Order Management, and Inventory.
 
 
+  The Extensiv catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Extensiv''s developer surface includes authentication, documentation, engineering blog, and 12 more developer resources.'
 plans:
 - name: Extensiv Plans Pricing
   plan_count: 4
   slug: extensiv-plans-pricing
-random_paper: 6
+random_paper: 22
 rate_limits:
 - limit_count: 3
   name: Extensiv Rate Limits
   slug: extensiv-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Extensiv API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: extensiv-rules
 score:
   band: thin
-  composite: 28.7
+  composite: 30.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.6
+  delta: -0.3
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.8
     developer_ergonomics: 31.0
     discoverability: 66.1
-    operational_transparency: 13.2
-  previous_composite: 36.3
+    operational_transparency: 10.5
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     contracts:
@@ -238,13 +258,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/extensiv/refs/heads/main/screenshots/extensiv-2026-07-25T213952.png
+screenshot: https://apis.io/screenshots/extensiv/extensiv-2026-07-25T213952.png
 security:
 - kind: authentication
   name: Extensiv Authentication

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -104,11 +107,8 @@ apis:
   description: The Targets API from Oden Technologies — 2 operation(s) for targets.
   name: Oden Technologies Targets API
   slug: oden-technologies-targets-api
-artifact_total: 28
+artifact_total: 31
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Oden Dashboards API
   slug: open-oden-technologies-dashboards-api
@@ -147,17 +147,17 @@ collections:
   slug: open-oden-technologies-targets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/capabilities/oden-technologies-capability-edges.yml
+  href: https://artifacts.apis.io/oden-technologies/capabilities/oden-technologies-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/oden-technologies-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/mcp/oden-technologies-mcp.yml
+  href: https://artifacts.apis.io/oden-technologies/mcp/oden-technologies-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/oden-technologies-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/overlays/oden-technologies-nexa-overlay.yaml
+  href: https://artifacts.apis.io/oden-technologies/overlays/oden-technologies-nexa-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/oden-technologies-nexa-overlay.yaml
@@ -206,52 +206,52 @@ common:
   type: PrivacyPolicy
   url: https://oden.io/privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/authentication/oden-technologies-authentication.yml
+  href: https://artifacts.apis.io/oden-technologies/authentication/oden-technologies-authentication.yml
   title: ''
   type: Authentication
   url: authentication/oden-technologies-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/conventions/oden-technologies-conventions.yml
+  href: https://artifacts.apis.io/oden-technologies/conventions/oden-technologies-conventions.yml
   title: ''
   type: Conventions
   url: conventions/oden-technologies-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/errors/oden-technologies-problem-types.yml
+  href: https://artifacts.apis.io/oden-technologies/errors/oden-technologies-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/oden-technologies-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/lifecycle/oden-technologies-lifecycle.yml
+  href: https://artifacts.apis.io/oden-technologies/lifecycle/oden-technologies-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/oden-technologies-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/conformance/oden-technologies-conformance.yml
+  href: https://artifacts.apis.io/oden-technologies/conformance/oden-technologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/oden-technologies-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/data-model/oden-technologies-data-model.yml
+  href: https://artifacts.apis.io/oden-technologies/data-model/oden-technologies-data-model.yml
   title: ''
   type: DataModel
   url: data-model/oden-technologies-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/llms/oden-technologies-llms.txt
+  href: https://artifacts.apis.io/oden-technologies/llms/oden-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/oden-technologies-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/agentic-access/oden-technologies-agentic-access.yml
+  href: https://artifacts.apis.io/oden-technologies/agentic-access/oden-technologies-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/oden-technologies-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/security/oden-technologies-domain-security.yml
+  href: https://artifacts.apis.io/oden-technologies/security/oden-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oden-technologies-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/oden-technologies/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -266,23 +266,39 @@ network: true
 overview: 'Oden Technologies publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dashboards API, Intervals API, Machine Groups API, and 9 more. Tagged areas include Company, Manufacturing, Industrial IoT, Analytics, and Artificial Intelligence.
 
 
+  The Oden Technologies catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Oden Technologies'' developer surface includes documentation, API reference, engineering blog, support, authentication, and 19 more developer resources.'
-random_paper: 13
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Oden Technologies API Rules
+  rule_count: 61
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 2
+    warn: 5
+  slug: oden-technologies-rules
 score:
   band: developing
-  composite: 43.0
+  composite: 43.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 53.2
+    contract_governance: 18.2
+    contract_quality: 50.1
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 2.6
@@ -293,12 +309,12 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 42.9
+  previous_composite: 43.8
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 12
@@ -310,13 +326,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/screenshots/oden-technologies-2026-08-07T190003.png
+screenshot: https://apis.io/screenshots/oden-technologies/oden-technologies-2026-08-07T190003.png
 security:
 - kind: authentication
   name: Oden Technologies Authentication
@@ -326,6 +342,14 @@ security:
   name: Oden Technologies Domain Security
   slug: oden-technologies-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Explore the Oden factory hierarchy
+  slug: oden-technologies-explore-hierarchy
+- name: Query factory analytics with OQL and dashboards
+  slug: oden-technologies-query-analytics
+- name: Record production intervals and scrap/yield
+  slug: oden-technologies-record-production
 slug: oden-technologies
 tags:
 - Company

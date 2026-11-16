@@ -1,11 +1,16 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: templated
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The callable surface a deployed Kana pipeline ("skill") exposes on the Kana application host. POST /skill/{pipelineid} starts a run and returns a runid; GET /run/{runid}/status reports progress and qu
@@ -68,17 +76,17 @@ common:
   type: Compliance
   url: https://www.kana.ai/legal
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/conformance/kana-conformance.yml
+  href: https://artifacts.apis.io/kana/conformance/kana-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kana-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/llms/kana-llms.txt
+  href: https://artifacts.apis.io/kana/llms/kana-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kana-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/security/kana-domain-security.yml
+  href: https://artifacts.apis.io/kana/security/kana-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kana-domain-security.yml
@@ -95,52 +103,52 @@ common:
   type: HelpCenter
   url: https://www.kana.ai/faq
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/well-known/kana-well-known.yml
+  href: https://artifacts.apis.io/kana/well-known/kana-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kana-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/authentication/kana-authentication.yml
+  href: https://artifacts.apis.io/kana/authentication/kana-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kana-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/scopes/kana-scopes.yml
+  href: https://artifacts.apis.io/kana/scopes/kana-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/kana-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/mcp/kana-mcp.yml
+  href: https://artifacts.apis.io/kana/mcp/kana-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kana-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/conventions/kana-conventions.yml
+  href: https://artifacts.apis.io/kana/conventions/kana-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kana-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/errors/kana-problem-types.yml
+  href: https://artifacts.apis.io/kana/errors/kana-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kana-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/lifecycle/kana-lifecycle.yml
+  href: https://artifacts.apis.io/kana/lifecycle/kana-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kana-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/plans/kana-plans-pricing.yml
+  href: https://artifacts.apis.io/kana/plans/kana-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kana-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/rate-limits/kana-rate-limits.yml
+  href: https://artifacts.apis.io/kana/rate-limits/kana-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kana-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/packages/kana-packages.yml
+  href: https://artifacts.apis.io/kana/packages/kana-packages.yml
   title: ''
   type: Packages
   url: packages/kana-packages.yml
@@ -165,7 +173,7 @@ plans:
 - name: Kana Plans Pricing
   plan_count: 3
   slug: kana-plans-pricing
-random_paper: 15
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Kana Rate Limits
@@ -179,13 +187,13 @@ score:
   band: thin
   composite: 32.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: 0.0
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
@@ -193,7 +201,7 @@ score:
     developer_ergonomics: 31.0
     discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 30.4
+  previous_composite: 32.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -207,14 +215,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kana/refs/heads/main/screenshots/kana-2026-07-25T223445.png
+screenshot: https://apis.io/screenshots/kana/kana-2026-07-25T223445.png
 security:
 - kind: authentication
   name: Kana Authentication

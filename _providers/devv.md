@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/devv/refs/heads/main/plans/devv-plans-pricing.yml
+  href: https://artifacts.apis.io/devv/plans/devv-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/devv-plans-pricing.yml
@@ -74,20 +79,24 @@ common:
   type: ChangeLog
   url: https://hub.devv.ai/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/devv/refs/heads/main/changelog/devv-changelog.yml
+  href: https://artifacts.apis.io/devv/changelog/devv-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/devv-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/devv/refs/heads/main/llms/devv-llms.txt
+  href: https://artifacts.apis.io/devv/llms/devv-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/devv-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/devv/refs/heads/main/security/devv-domain-security.yml
+  href: https://artifacts.apis.io/devv/security/devv-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/devv-domain-security.yml
+- group: start
+  title: ''
+  type: DeveloperPortal
+  url: https://devv.ai/tools
 created: '2026-07-17'
 description: 'Devv (devv.ai) is an AI coding agent and instant-backend platform that lets indie builders, small teams, and non-technical creators ship full-stack, AI-powered web applications from natural-language prompts. It began as a developer-focused AI search engine and was rebuilt as Devv 2.0 into a no-code app builder with a three-step workflow. The platform pairs code generation with built-in backend integrations — authentication, database, email, LLM chat, image and audio generation — plus third-party connectors such as OpenRouter, Replicate, and ElevenLabs, alongside web search and web reader tooling. Devv is a product company rather than a public API provider: it publishes docs, a dated changelog, and an llms.txt, but exposes no public REST API, OpenAPI specification, SDKs, or hosted MCP server at this time. Backed by DCM Ventures.'
 image: https://devv.ai/en/opengraph-image.png
@@ -99,45 +108,45 @@ network: true
 overview: 'Devv is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Frontier Tech, Artificial Intelligence, AI Coding Agents, and Developer Tools.
 
 
-  Devv''s developer surface includes documentation, getting-started guide, pricing, support, changelog, and 7 more developer resources.'
+  Devv''s developer surface includes documentation, getting-started guide, pricing, support, changelog, and 8 more developer resources.'
 plans:
 - name: Devv Plans Pricing
   plan_count: 7
   slug: devv-plans-pricing
-random_paper: 19
+random_paper: 5
 score:
   band: emerging
-  composite: 21.5
+  composite: 22.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.9
   facets:
     access_clarity: 48.7
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 26.2
+    developer_ergonomics: 31.0
     discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 15.1
+  previous_composite: 21.5
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/devv/refs/heads/main/screenshots/devv-2026-07-25T211830.png
+screenshot: https://apis.io/screenshots/devv/devv-2026-07-25T211830.png
 security:
 - kind: domain-security
   name: Devv Domain Security
@@ -153,5 +162,7 @@ tags:
 - Application Development
 - No-Code
 - Backend-as-a-Service
+- Coding Agents
+- Startups
 website: https://devv.ai/
 ---

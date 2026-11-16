@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
+  confidence: low
+  label: Unknown
   onboarding: unknown
-  pricing: freemium
+  pricing: unknown
   public: false
   source:
-  - plans
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The DSG Sports Data API exposes live scores, statistics, historical data, player and team information, fixtures, results, and odds across 80-plus sports through a per-sport documentation tree at dsg-a
@@ -42,12 +47,12 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/finops/dsg-sports-analytics-finops.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/finops/dsg-sports-analytics-finops.yml
   title: ''
   type: FinOps
   url: finops/dsg-sports-analytics-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/security/dsg-sports-analytics-domain-security.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/security/dsg-sports-analytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dsg-sports-analytics-domain-security.yml
@@ -92,62 +97,62 @@ common:
   type: TermsOfService
   url: https://datasportsgroup.com/imprint/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/authentication/dsg-sports-analytics-authentication.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/authentication/dsg-sports-analytics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dsg-sports-analytics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/conventions/dsg-sports-analytics-conventions.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/conventions/dsg-sports-analytics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dsg-sports-analytics-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/errors/dsg-sports-analytics-problem-types.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/errors/dsg-sports-analytics-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dsg-sports-analytics-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/data-model/dsg-sports-analytics-data-model.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/data-model/dsg-sports-analytics-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dsg-sports-analytics-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/rate-limits/dsg-sports-analytics-rate-limits.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/rate-limits/dsg-sports-analytics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dsg-sports-analytics-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/plans/dsg-sports-analytics-plans-pricing.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/plans/dsg-sports-analytics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dsg-sports-analytics-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/lifecycle/dsg-sports-analytics-lifecycle.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/lifecycle/dsg-sports-analytics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dsg-sports-analytics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/conformance/dsg-sports-analytics-conformance.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/conformance/dsg-sports-analytics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dsg-sports-analytics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/components/dsg-sports-analytics-components.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/components/dsg-sports-analytics-components.yml
   title: ''
   type: Components
   url: components/dsg-sports-analytics-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/packages/dsg-sports-analytics-packages.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/packages/dsg-sports-analytics-packages.yml
   title: ''
   type: Packages
   url: packages/dsg-sports-analytics-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/mcp/dsg-sports-analytics-mcp.yml
+  href: https://artifacts.apis.io/dsg-sports-analytics/mcp/dsg-sports-analytics-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/dsg-sports-analytics-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/llms/dsg-sports-analytics-llms.txt
+  href: https://artifacts.apis.io/dsg-sports-analytics/llms/dsg-sports-analytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dsg-sports-analytics-llms.txt
@@ -175,7 +180,7 @@ plans:
 - name: Dsg Sports Analytics Plans Pricing
   plan_count: 0
   slug: dsg-sports-analytics-plans-pricing
-random_paper: 13
+random_paper: 19
 rate_limits:
 - limit_count: 1
   name: Dsg Sports Analytics Rate Limits
@@ -184,13 +189,13 @@ score:
   band: emerging
   composite: 22.5
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
@@ -198,7 +203,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 24.0
+  previous_composite: 22.5
   provenance:
     conformance: derived
     mcp: derived
@@ -208,14 +213,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dsg-sports-analytics/refs/heads/main/screenshots/dsg-sports-analytics-2026-06-20T180255.png
+screenshot: https://apis.io/screenshots/dsg-sports-analytics/dsg-sports-analytics-2026-06-20T180255.png
 security:
 - kind: authentication
   name: Dsg Sports Analytics Authentication

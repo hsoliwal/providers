@@ -1,10 +1,25 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
@@ -15,15 +30,25 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-10-17'
+  score: 26.1
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 2
+  human_in_the_loop: 0
+  name: Blazepizza Agentic Access
+  operation_count: 7
+  slug: blazepizza-agentic-access
+  summary_line: 7 operations · 2 acting
 api_count: 5
 apis:
 - baseURL: https://your-worker.dev
@@ -51,74 +76,79 @@ apis:
   description: The Image API from Blazepizza — 1 operation(s) for image.
   name: Blazepizza Image API
   slug: blazepizza-image-api
-artifact_total: 11
+artifact_total: 12
 asyncapis:
 - description: ''
   name: Blazepizza Webhooks
   slug: blazepizza-webhooks
 common:
+- group: agent
+  href: https://artifacts.apis.io/blazepizza/agentic-access/blazepizza-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/blazepizza-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/rules/blazepizza-rules.yml
+  href: https://artifacts.apis.io/blazepizza/rules/blazepizza-rules.yml
   title: ''
   type: Spectral
   url: rules/blazepizza-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/json-ld/blazepizza-context.jsonld
+  href: https://artifacts.apis.io/blazepizza/json-ld/blazepizza-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/blazepizza-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/vocabulary/blazepizza-vocabulary.yml
+  href: https://artifacts.apis.io/blazepizza/vocabulary/blazepizza-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/blazepizza-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/asyncapi/blazepizza-webhooks.yml
+  href: https://artifacts.apis.io/blazepizza/asyncapi/blazepizza-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/blazepizza-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/data-model/blazepizza-data-model.yml
+  href: https://artifacts.apis.io/blazepizza/data-model/blazepizza-data-model.yml
   title: ''
   type: DataModel
   url: data-model/blazepizza-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/changelog/blazepizza-changelog.yml
+  href: https://artifacts.apis.io/blazepizza/changelog/blazepizza-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/blazepizza-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/sandbox/blazepizza-sandbox.yml
+  href: https://artifacts.apis.io/blazepizza/sandbox/blazepizza-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/blazepizza-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/authentication/blazepizza-authentication.yml
+  href: https://artifacts.apis.io/blazepizza/authentication/blazepizza-authentication.yml
   title: ''
   type: Authentication
   url: authentication/blazepizza-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/conformance/blazepizza-conformance.yml
+  href: https://artifacts.apis.io/blazepizza/conformance/blazepizza-conformance.yml
   title: ''
   type: Conformance
   url: conformance/blazepizza-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/a2a/blazepizza-a2a.yml
+  href: https://artifacts.apis.io/blazepizza/a2a/blazepizza-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/blazepizza-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/well-known/blazepizza-well-known.yml
+  href: https://artifacts.apis.io/blazepizza/well-known/blazepizza-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blazepizza-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/hosts/blazepizza-hosts.yml
+  href: https://artifacts.apis.io/blazepizza/hosts/blazepizza-hosts.yml
   title: ''
   type: Hosts
   url: hosts/blazepizza-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/vendors/blazepizza-vendors.yml
+  href: https://artifacts.apis.io/blazepizza/vendors/blazepizza-vendors.yml
   title: ''
   type: Vendors
   url: vendors/blazepizza-vendors.yml
@@ -127,7 +157,7 @@ common:
   type: GettingStarted
   url: https://docs.thanx.com/consumer/best-practices/onboarding-authentication
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blazepizza/refs/heads/main/security/blazepizza-domain-security.yml
+  href: https://artifacts.apis.io/blazepizza/security/blazepizza-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blazepizza-domain-security.yml
@@ -185,44 +215,45 @@ overview: 'Blazepizza is listed with 5 APIs on the [APIs.io](https://apis.io/) n
   The Blazepizza catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Blazepizza''s developer surface includes changelog, sandbox, authentication, getting-started guide, documentation, and 16 more developer resources.'
-random_paper: 6
+  Blazepizza''s developer surface includes changelog, sandbox, authentication, getting-started guide, documentation, and 17 more developer resources.'
+random_paper: 4
 rules:
 - authorship: generated
-  effective_rule_count: 49
+  effective_rule_count: 79
   extends:
   - spectral:oas
   name: Blazepizza API Rules
-  rule_count: 8
+  rule_count: 38
   severity_counts:
-    error: 6
+    error: 36
     hint: 0
     info: 1
     warn: 1
   slug: blazepizza-rules
 score:
   band: thin
-  composite: 33.8
+  composite: 27.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 22
     catalog_earned: 54.2
     catalog_earned_first_party: 0.0
     catalog_gap: 60.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -11.0
+  delta: -5.8
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
-    contract_quality: 25.6
-    developer_ergonomics: 50.0
+    contract_quality: 24.8
+    developer_ergonomics: 34.5
     discoverability: 67.9
     operational_transparency: 23.7
-  previous_composite: 44.8
+  previous_composite: 33.6
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 6
       marker_coverage: 100.0
       total: 6
@@ -232,13 +263,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/blazepizza/blazepizza-2026-11-03T121913.png
 security:
 - kind: authentication
   name: Blazepizza Authentication

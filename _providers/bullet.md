@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -92,11 +97,8 @@ arazzos:
 - description: Discover markets then pull the order book, 24h ticker, and recent trades for a symbol.
   name: Bullet market-data snapshot
   slug: bullet-market-data-snapshot
-artifact_total: 23
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Bullet Trading Account API
   slug: open-bullet-account-api
@@ -126,7 +128,7 @@ collections:
   slug: open-bullet-user-data-beta-api
 common:
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/openapi/_original/bullet-trading-api-openapi.json
+  href: https://artifacts.apis.io/bullet/openapi/_original/bullet-trading-api-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/bullet-trading-api-openapi.json
@@ -147,37 +149,37 @@ common:
   type: GettingStarted
   url: https://tradingapi.bullet.xyz/docs/getting-started.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/authentication/bullet-authentication.yml
+  href: https://artifacts.apis.io/bullet/authentication/bullet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bullet-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/packages/bullet-packages.yml
+  href: https://artifacts.apis.io/bullet/packages/bullet-packages.yml
   title: ''
   type: Packages
   url: packages/bullet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/packages/bullet-packages.yml
+  href: https://artifacts.apis.io/bullet/packages/bullet-packages.yml
   title: ''
   type: SDKs
   url: packages/bullet-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/sandbox/bullet-sandbox.yml
+  href: https://artifacts.apis.io/bullet/sandbox/bullet-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bullet-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/conventions/bullet-conventions.yml
+  href: https://artifacts.apis.io/bullet/conventions/bullet-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bullet-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/errors/bullet-problem-types.yml
+  href: https://artifacts.apis.io/bullet/errors/bullet-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bullet-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/lifecycle/bullet-lifecycle.yml
+  href: https://artifacts.apis.io/bullet/lifecycle/bullet-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bullet-lifecycle.yml
@@ -186,52 +188,52 @@ common:
   type: StatusPage
   url: https://status.bullet.xyz/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/conformance/bullet-conformance.yml
+  href: https://artifacts.apis.io/bullet/conformance/bullet-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bullet-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/data-model/bullet-data-model.yml
+  href: https://artifacts.apis.io/bullet/data-model/bullet-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bullet-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/mcp/bullet-mcp.yml
+  href: https://artifacts.apis.io/bullet/mcp/bullet-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bullet-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/llms/bullet-llms.txt
+  href: https://artifacts.apis.io/bullet/llms/bullet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bullet-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/overlays/bullet-trading-api-overlay.yaml
+  href: https://artifacts.apis.io/bullet/overlays/bullet-trading-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bullet-trading-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bullet/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/arazzo/bullet-market-data-snapshot.yml
+  href: https://artifacts.apis.io/bullet/arazzo/bullet-market-data-snapshot.yml
   title: ''
   type: Arazzo
   url: arazzo/bullet-market-data-snapshot.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/well-known/bullet-well-known.yml
+  href: https://artifacts.apis.io/bullet/well-known/bullet-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bullet-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/security/bullet-domain-security.yml
+  href: https://artifacts.apis.io/bullet/security/bullet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bullet-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/agentic-access/bullet-agentic-access.yml
+  href: https://artifacts.apis.io/bullet/agentic-access/bullet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bullet-agentic-access.yml
@@ -286,27 +288,43 @@ network: true
 overview: 'Bullet publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Address API, Health API, and 6 more. Tagged areas include Company, DeFi, Solana, Cryptocurrency, and Derivatives.
 
 
+  The Bullet catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bullet''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, support, pricing, and 26 more developer resources.'
-random_paper: 10
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Bullet API Rules
+  rule_count: 53
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 3
+    warn: 8
+  slug: bullet-rules
 score:
   band: developing
-  composite: 43.1
+  composite: 44.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.5
     developer_ergonomics: 70.8
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 43.1
+  previous_composite: 44.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -323,13 +341,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bullet/refs/heads/main/screenshots/bullet-2026-07-25T204059.png
+screenshot: https://apis.io/screenshots/bullet/bullet-2026-07-25T204059.png
 security:
 - kind: authentication
   name: Bullet Authentication
@@ -339,6 +357,12 @@ security:
   name: Bullet Domain Security
   slug: bullet-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Monitor a Bullet account
+  slug: bullet-account-monitoring
+- name: Pull Bullet market data
+  slug: bullet-market-data
 slug: bullet
 tags:
 - Company

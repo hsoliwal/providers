@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Open source distributed load testing tool. Tests are written in Python by defining User classes and tasks; tests can be run from a web UI, the command line, or embedded as a library.
@@ -42,17 +46,17 @@ apis:
 artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/locust/refs/heads/main/plans/locust-plans-pricing.yml
+  href: https://artifacts.apis.io/locust/plans/locust-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/locust-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/locust/refs/heads/main/rate-limits/locust-rate-limits.yml
+  href: https://artifacts.apis.io/locust/rate-limits/locust-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/locust-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/locust/refs/heads/main/finops/locust-finops.yml
+  href: https://artifacts.apis.io/locust/finops/locust-finops.yml
   title: ''
   type: FinOps
   url: finops/locust-finops.yml
@@ -73,7 +77,7 @@ common:
   type: ContributionGuide
   url: https://github.com/locustio/locust/blob/master/.github/CONTRIBUTING.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/locust/refs/heads/main/security/locust-domain-security.yml
+  href: https://artifacts.apis.io/locust/security/locust-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/locust-domain-security.yml
@@ -107,7 +111,7 @@ finops:
 - has_sources: false
   method: generated
   name: Locust Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: locust-finops
   template: true
@@ -125,7 +129,7 @@ plans:
 - name: Locust Plans Pricing
   plan_count: 3
   slug: locust-plans-pricing
-random_paper: 6
+random_paper: 18
 rate_limits:
 - limit_count: 5
   name: Locust Rate Limits
@@ -140,7 +144,7 @@ score:
     catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -151,21 +155,21 @@ score:
   open_source:
     applies: true
     score: 85.0
-  previous_composite: 25.1
+  previous_composite: 23.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/locust/refs/heads/main/screenshots/locust-2026-06-20T184648.png
+screenshot: https://apis.io/screenshots/locust/locust-2026-06-20T184648.png
 security:
 - kind: domain-security
   name: Locust Domain Security

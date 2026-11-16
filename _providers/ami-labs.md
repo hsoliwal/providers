@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/plans/ami-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/ami-labs/plans/ami-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ami-labs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/rate-limits/ami-labs-rate-limits.yml
+  href: https://artifacts.apis.io/ami-labs/rate-limits/ami-labs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ami-labs-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/packages/ami-labs-packages.yml
+  href: https://artifacts.apis.io/ami-labs/packages/ami-labs-packages.yml
   title: ''
   type: Packages
   url: packages/ami-labs-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/security/ami-labs-domain-security.yml
+  href: https://artifacts.apis.io/ami-labs/security/ami-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ami-labs-domain-security.yml
@@ -65,7 +70,7 @@ common:
   type: Blog
   url: https://amilabs.xyz/updates
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/llms/ami-labs-llms.txt
+  href: https://artifacts.apis.io/ami-labs/llms/ami-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ami-labs-llms.txt
@@ -112,7 +117,7 @@ plans:
 - name: Ami Labs Plans Pricing
   plan_count: 0
   slug: ami-labs-plans-pricing
-random_paper: 4
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Ami Labs Rate Limits
@@ -121,13 +126,13 @@ score:
   band: minimal
   composite: 4.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -135,21 +140,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 4.7
+  previous_composite: 4.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/screenshots/ami-labs-2026-07-25T200053.png
+screenshot: https://apis.io/screenshots/ami-labs/ami-labs-2026-07-25T200053.png
 security:
 - kind: domain-security
   name: Ami Labs Domain Security

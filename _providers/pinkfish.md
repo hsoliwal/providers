@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.3
-  scored_at: '2026-10-17'
+  score: 41.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -55,11 +62,8 @@ apis:
   description: Execute published workflows via API and webhook triggers
   name: Pinkfish Triggers API
   slug: pinkfish-triggers-api
-artifact_total: 10
+artifact_total: 11
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AI Workflow Runs API
   slug: open-pinkfish-runs-api
@@ -68,7 +72,7 @@ collections:
   slug: open-pinkfish-triggers-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/plans/pinkfish-plans-pricing.yml
+  href: https://artifacts.apis.io/pinkfish/plans/pinkfish-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pinkfish-plans-pricing.yml
@@ -77,7 +81,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/genesys/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/overlays/pinkfish-triggers-overlay.yaml
+  href: https://artifacts.apis.io/pinkfish/overlays/pinkfish-triggers-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pinkfish-triggers-overlay.yaml
@@ -130,57 +134,57 @@ common:
   type: GitHubOrganization
   url: https://github.com/pinkfish-ai
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/mcp/pinkfish-mcp.yml
+  href: https://artifacts.apis.io/pinkfish/mcp/pinkfish-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pinkfish-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/llms/pinkfish-llms.txt
+  href: https://artifacts.apis.io/pinkfish/llms/pinkfish-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pinkfish-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/authentication/pinkfish-authentication.yml
+  href: https://artifacts.apis.io/pinkfish/authentication/pinkfish-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pinkfish-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/conventions/pinkfish-conventions.yml
+  href: https://artifacts.apis.io/pinkfish/conventions/pinkfish-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pinkfish-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/errors/pinkfish-problem-types.yml
+  href: https://artifacts.apis.io/pinkfish/errors/pinkfish-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pinkfish-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/lifecycle/pinkfish-lifecycle.yml
+  href: https://artifacts.apis.io/pinkfish/lifecycle/pinkfish-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pinkfish-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/conformance/pinkfish-conformance.yml
+  href: https://artifacts.apis.io/pinkfish/conformance/pinkfish-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pinkfish-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/data-model/pinkfish-data-model.yml
+  href: https://artifacts.apis.io/pinkfish/data-model/pinkfish-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pinkfish-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/security/pinkfish-domain-security.yml
+  href: https://artifacts.apis.io/pinkfish/security/pinkfish-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pinkfish-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/agentic-access/pinkfish-agentic-access.yml
+  href: https://artifacts.apis.io/pinkfish/agentic-access/pinkfish-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pinkfish-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pinkfish/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -203,31 +207,47 @@ network: true
 overview: 'Pinkfish publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Runs API and Triggers API. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic Workflows, and Automation.
 
 
+  The Pinkfish catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pinkfish''s developer surface includes documentation, API reference, engineering blog, pricing, signup flow, changelog, authentication, and 20 more developer resources.'
 plans:
 - name: Pinkfish Plans Pricing
   plan_count: 4
   slug: pinkfish-plans-pricing
-random_paper: 2
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Pinkfish API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: pinkfish-rules
 score:
   band: thin
-  composite: 28.9
+  composite: 30.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 49.0
+    artifact_dirs: 25
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 24.8
     developer_ergonomics: 39.9
     discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 22.5
+  previous_composite: 30.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -244,13 +264,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/screenshots/pinkfish-2026-08-17T081239.png
+screenshot: https://apis.io/screenshots/pinkfish/pinkfish-2026-08-17T081239.png
 security:
 - kind: authentication
   name: Pinkfish Authentication
@@ -260,6 +280,10 @@ security:
   name: Pinkfish Domain Security
   slug: pinkfish-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Trigger a Pinkfish workflow and get results
+  slug: pinkfish-trigger-and-poll
 slug: pinkfish
 tags:
 - Company

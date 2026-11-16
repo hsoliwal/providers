@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 1
@@ -310,24 +313,24 @@ apis:
   description: The Graph QL API from Routefusion — 1 operation(s) for graph ql.
   name: Routefusion Graph QL API
   slug: routefusion-graph-ql-api
-artifact_total: 58
+artifact_total: 60
 asyncapis:
 - description: ''
   name: Routefusion Webhooks
   slug: routefusion-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/agentic-access/routefusion-agentic-access.yml
+  href: https://artifacts.apis.io/routefusion/agentic-access/routefusion-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/routefusion-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/rules/routefusion-rules.yml
+  href: https://artifacts.apis.io/routefusion/rules/routefusion-rules.yml
   title: ''
   type: Spectral
   url: rules/routefusion-rules.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/vendors/routefusion-vendors.yml
+  href: https://artifacts.apis.io/routefusion/vendors/routefusion-vendors.yml
   title: ''
   type: Vendors
   url: vendors/routefusion-vendors.yml
@@ -384,82 +387,82 @@ common:
   type: Postman
   url: https://documenter.getpostman.com/view/2597780/TzCV3Q8u
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/packages/routefusion-packages.yml
+  href: https://artifacts.apis.io/routefusion/packages/routefusion-packages.yml
   title: ''
   type: SDKs
   url: packages/routefusion-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/packages/routefusion-packages.yml
+  href: https://artifacts.apis.io/routefusion/packages/routefusion-packages.yml
   title: ''
   type: Packages
   url: packages/routefusion-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/asyncapi/routefusion-webhooks.yml
+  href: https://artifacts.apis.io/routefusion/asyncapi/routefusion-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/routefusion-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/authentication/routefusion-authentication.yml
+  href: https://artifacts.apis.io/routefusion/authentication/routefusion-authentication.yml
   title: ''
   type: Authentication
   url: authentication/routefusion-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/sandbox/routefusion-sandbox.yml
+  href: https://artifacts.apis.io/routefusion/sandbox/routefusion-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/routefusion-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/conventions/routefusion-conventions.yml
+  href: https://artifacts.apis.io/routefusion/conventions/routefusion-conventions.yml
   title: ''
   type: Conventions
   url: conventions/routefusion-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/errors/routefusion-problem-types.yml
+  href: https://artifacts.apis.io/routefusion/errors/routefusion-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/routefusion-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/lifecycle/routefusion-lifecycle.yml
+  href: https://artifacts.apis.io/routefusion/lifecycle/routefusion-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/routefusion-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/lifecycle/routefusion-lifecycle.yml
+  href: https://artifacts.apis.io/routefusion/lifecycle/routefusion-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/routefusion-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/data-model/routefusion-data-model.yml
+  href: https://artifacts.apis.io/routefusion/data-model/routefusion-data-model.yml
   title: ''
   type: DataModel
   url: data-model/routefusion-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/conformance/routefusion-conformance.yml
+  href: https://artifacts.apis.io/routefusion/conformance/routefusion-conformance.yml
   title: ''
   type: Conformance
   url: conformance/routefusion-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/mcp/routefusion-mcp.yml
+  href: https://artifacts.apis.io/routefusion/mcp/routefusion-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/routefusion-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/llms/routefusion-llms.txt
+  href: https://artifacts.apis.io/routefusion/llms/routefusion-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/routefusion-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/well-known/routefusion-well-known.yml
+  href: https://artifacts.apis.io/routefusion/well-known/routefusion-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/routefusion-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/security/routefusion-domain-security.yml
+  href: https://artifacts.apis.io/routefusion/security/routefusion-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/routefusion-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/routefusion/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -478,7 +481,7 @@ overview: 'Routefusion publishes 53 API contracts indexed on the [APIs.io](https
 
 
   Routefusion''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 25 more developer resources.'
-random_paper: 9
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -494,23 +497,23 @@ rules:
   slug: routefusion-rules
 score:
   band: developing
-  composite: 43.9
+  composite: 47.1
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 41.5
     catalog_earned_first_party: 0.0
     catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 5.2
+  delta: 3.2
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 55.7
-    developer_ergonomics: 58.9
+    contract_quality: 61.0
+    developer_ergonomics: 68.5
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 38.7
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -527,13 +530,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/routefusion/refs/heads/main/screenshots/routefusion-2026-08-17T081642.png
+screenshot: https://apis.io/screenshots/routefusion/routefusion-2026-08-17T081642.png
 security:
 - kind: authentication
   name: Routefusion Authentication
@@ -543,6 +546,12 @@ security:
   name: Routefusion Domain Security
   slug: routefusion-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Send your first cross-border payment
+  slug: routefusion-send-first-payment
+- name: Subscribe to and verify webhooks
+  slug: routefusion-webhooks-setup
 slug: routefusion
 tags:
 - Company

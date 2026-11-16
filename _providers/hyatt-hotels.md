@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/security/hyatt-hotels-domain-security.yml
+  href: https://artifacts.apis.io/hyatt-hotels/security/hyatt-hotels-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hyatt-hotels-domain-security.yml
@@ -58,7 +63,7 @@ common:
   type: Website
   url: https://about.hyatt.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/security/hyatt-hotels-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hyatt-hotels/security/hyatt-hotels-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hyatt-hotels-vulnerability-disclosure.yml
@@ -67,22 +72,22 @@ common:
   type: Security
   url: https://hackerone.com/hyatt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/llms/hyatt-hotels-llms.txt
+  href: https://artifacts.apis.io/hyatt-hotels/llms/hyatt-hotels-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hyatt-hotels-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/packages/hyatt-hotels-packages.yml
+  href: https://artifacts.apis.io/hyatt-hotels/packages/hyatt-hotels-packages.yml
   title: ''
   type: Packages
   url: packages/hyatt-hotels-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/plans/hyatt-hotels-plans-pricing.yml
+  href: https://artifacts.apis.io/hyatt-hotels/plans/hyatt-hotels-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hyatt-hotels-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/rate-limits/hyatt-hotels-rate-limits.yml
+  href: https://artifacts.apis.io/hyatt-hotels/rate-limits/hyatt-hotels-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hyatt-hotels-rate-limits.yml
@@ -128,7 +133,7 @@ press:
 - date: ''
   title: 'Transforming Hospitality: AI''s Game-Changing Role in Hotels'
   url: https://transformhospitality.com/blog/transforming-hospitality-ais-game-changing-role-in-hotels/
-random_paper: 0
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Hyatt Hotels Rate Limits
@@ -137,7 +142,7 @@ score:
   band: minimal
   composite: 6.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -165,14 +170,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hyatt-hotels/refs/heads/main/screenshots/hyatt-hotels-2026-10-11T190449.png
+screenshot: https://apis.io/screenshots/hyatt-hotels/hyatt-hotels-2026-10-11T190449.png
 security:
 - kind: domain-security
   name: Hyatt Hotels Domain Security

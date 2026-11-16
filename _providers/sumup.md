@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.2
-  scored_at: '2026-10-17'
+  score: 54.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -98,9 +105,6 @@ apis:
 artifact_total: 143
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SumUp REST Checkouts API
   slug: open-sumup-checkouts-api
 - collection_type: open
@@ -132,7 +136,7 @@ collections:
   slug: open-sumup-transactions-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/capabilities/sumup-capability-edges.yml
+  href: https://artifacts.apis.io/sumup/capabilities/sumup-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sumup-capability-edges.yml
@@ -153,27 +157,27 @@ common:
   type: License
   url: https://github.com/sumup/sumup-openapi/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/agentic-access/sumup-agentic-access.yml
+  href: https://artifacts.apis.io/sumup/agentic-access/sumup-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sumup-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/security/sumup-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sumup/security/sumup-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sumup-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/security/sumup-domain-security.yml
+  href: https://artifacts.apis.io/sumup/security/sumup-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sumup-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/authentication/sumup-authentication.yml
+  href: https://artifacts.apis.io/sumup/authentication/sumup-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sumup-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/scopes/sumup-scopes.yml
+  href: https://artifacts.apis.io/sumup/scopes/sumup-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sumup-scopes.yml
@@ -210,17 +214,17 @@ common:
   type: X
   url: https://x.com/SumUp
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/plans/sumup-plans-pricing.yml
+  href: https://artifacts.apis.io/sumup/plans/sumup-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sumup-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/rate-limits/sumup-rate-limits.yml
+  href: https://artifacts.apis.io/sumup/rate-limits/sumup-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sumup-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/finops/sumup-finops.yml
+  href: https://artifacts.apis.io/sumup/finops/sumup-finops.yml
   title: ''
   type: FinOps
   url: finops/sumup-finops.yml
@@ -275,13 +279,13 @@ examples:
   name: Refundtransaction Request
   slug: refundtransaction-request
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Sumup Finops
-  primary_unit: ''
+  primary_unit: in-person transaction
   service_category: ''
   slug: sumup-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sumup.png
 json_schemas:
 - name: Address
@@ -327,7 +331,7 @@ json_schemas:
   property_count: 11
   slug: checkoutcreaterequest
 - name: Checkout Success
-  property_count: 0
+  property_count: 5
   slug: checkoutsuccess
 - name: ClassicMerchantIdentifiers
   property_count: 1
@@ -384,7 +388,7 @@ json_schemas:
   property_count: 2
   slug: error
 - name: Error Extended
-  property_count: 0
+  property_count: 1
   slug: errorextended
 - name: Error Forbidden
   property_count: 3
@@ -456,7 +460,7 @@ json_schemas:
   property_count: 1
   slug: membershipuserclassic
 - name: Merchant
-  property_count: 0
+  property_count: 15
   slug: merchant
 - name: Meta
   property_count: 0
@@ -558,10 +562,10 @@ json_schemas:
   property_count: 8
   slug: transactionevent
 - name: Transaction Full
-  property_count: 0
+  property_count: 25
   slug: transactionfull
 - name: Transaction History
-  property_count: 0
+  property_count: 8
   slug: transactionhistory
 - name: Transaction ID
   property_count: 0
@@ -599,9 +603,12 @@ overview: 'SumUp publishes 10 API contracts indexed on the [APIs.io](https://api
   SumUp''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 18 more developer resources.'
 plans:
 - name: Sumup Plans Pricing
-  plan_count: 5
+  plan_count: 7
   slug: sumup-plans-pricing
-random_paper: 20
+- name: Sumup Price Estimates
+  plan_count: 0
+  slug: sumup-price-estimates
+random_paper: 18
 rate_limits:
 - limit_count: 1
   name: Sumup Rate Limits
@@ -625,32 +632,32 @@ scopes:
   summary_line: 10 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 39.3
+  composite: 46.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 69.8
+    artifact_dirs: 23
+    catalog_earned: 57.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.7
+  delta: 1.3
   facets:
-    access_clarity: 18.4
+    access_clarity: 50.0
     contract_governance: 9.8
-    contract_quality: 55.1
+    contract_quality: 60.9
     developer_ergonomics: 28.6
     discoverability: 68.3
     operational_transparency: 52.6
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 46.0
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 10
     mcp: first-party
   regulatory:
@@ -659,13 +666,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/screenshots/sumup-2026-06-20T194647.png
+screenshot: https://apis.io/screenshots/sumup/sumup-2026-06-20T194647.png
 security:
 - kind: authentication
   name: Sumup Authentication

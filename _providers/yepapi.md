@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - baseURL: https://api.yepapi.com
@@ -54,52 +68,52 @@ apis:
 artifact_total: 15
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/rules/yepapi-rules.yml
+  href: https://artifacts.apis.io/yepapi/rules/yepapi-rules.yml
   title: ''
   type: Spectral
   url: rules/yepapi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/json-ld/yepapi-context.jsonld
+  href: https://artifacts.apis.io/yepapi/json-ld/yepapi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/yepapi-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/vocabulary/yepapi-vocabulary.yml
+  href: https://artifacts.apis.io/yepapi/vocabulary/yepapi-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/yepapi-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/data-model/yepapi-data-model.yml
+  href: https://artifacts.apis.io/yepapi/data-model/yepapi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/yepapi-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/authentication/yepapi-authentication.yml
+  href: https://artifacts.apis.io/yepapi/authentication/yepapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/yepapi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/conformance/yepapi-conformance.yml
+  href: https://artifacts.apis.io/yepapi/conformance/yepapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/yepapi-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/llms/yepapi-llms.txt
+  href: https://artifacts.apis.io/yepapi/llms/yepapi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yepapi-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/well-known/yepapi-well-known.yml
+  href: https://artifacts.apis.io/yepapi/well-known/yepapi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/yepapi-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/hosts/yepapi-hosts.yml
+  href: https://artifacts.apis.io/yepapi/hosts/yepapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/yepapi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/vendors/yepapi-vendors.yml
+  href: https://artifacts.apis.io/yepapi/vendors/yepapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/yepapi-vendors.yml
@@ -140,7 +154,7 @@ common:
   type: APIReference
   url: https://docs.yepapi.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yepapi/refs/heads/main/security/yepapi-domain-security.yml
+  href: https://artifacts.apis.io/yepapi/security/yepapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yepapi-domain-security.yml
@@ -184,14 +198,14 @@ modified: '2026-10-08'
 name: YepAPI
 nav: Providers
 network: true
-overview: 'YepAPI is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Email API, Maps API, Seo API, and 2 more. Tagged areas include SEO, SERP, WebScraping, AIModels, and Marketing.
+overview: 'YepAPI is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Email API, Maps API, Seo API, and 2 more. Tagged areas include SEO, SERP, Web Scraping, AI Models, and Marketing.
 
 
   The YepAPI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   YepAPI''s developer surface includes authentication, pricing, changelog, engineering blog, getting-started guide, API reference, documentation, and 15 more developer resources.'
-random_paper: 10
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -207,21 +221,23 @@ rules:
   slug: yepapi-rules
 score:
   band: thin
-  composite: 38.1
+  composite: 27.9
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.8
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 22.0
     contract_quality: 24.0
-    developer_ergonomics: 42.9
+    developer_ergonomics: 27.4
     discoverability: 78.6
-    operational_transparency: 26.3
+    operational_transparency: 13.2
+  previous_composite: 37.7
   provenance:
     conformance: derived
     contracts:
@@ -232,15 +248,17 @@ score:
     mcp: unknown
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/yepapi/yepapi-2026-11-03T150348.png
 security:
 - kind: authentication
   name: Yepapi Authentication
@@ -254,8 +272,8 @@ slug: yepapi
 tags:
 - SEO
 - SERP
-- WebScraping
-- AIModels
+- Web Scraping
+- AI Models
 - Marketing
 website: https://www.yepapi.com/
 ---

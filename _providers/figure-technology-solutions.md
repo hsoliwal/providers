@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 36
   slug: figure-technology-solutions-agentic-access
   summary_line: 36 operations · 14 acting
-api_count: 5
+api_count: 3
 apis:
 - baseURL: https://api.figure.com
   baseurl_source: declared
@@ -85,15 +88,12 @@ apis:
   description: The Payment History V2 API from Figure Technology Solutions — 1 operation(s) for payment history v2.
   name: Figure Technology Solutions Payment History V2 API
   slug: figure-technology-solutions-payment-history-v2-api
-artifact_total: 21
+artifact_total: 23
 asyncapis:
 - description: ''
   name: Figure Technology Solutions Webhooks
   slug: figure-technology-solutions-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HELOC Inquiries Encryption API
   slug: open-figure-technology-solutions-encryption-api
@@ -124,22 +124,22 @@ common:
   type: Login
   url: https://www.figure.com/leadportal/login/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/capabilities/figure-technology-solutions-capability-edges.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/capabilities/figure-technology-solutions-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/figure-technology-solutions-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/security/figure-technology-solutions-domain-security.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/security/figure-technology-solutions-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/figure-technology-solutions-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/agentic-access/figure-technology-solutions-agentic-access.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/agentic-access/figure-technology-solutions-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/figure-technology-solutions-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/authentication/figure-technology-solutions-authentication.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/authentication/figure-technology-solutions-authentication.yml
   title: ''
   type: Authentication
   url: authentication/figure-technology-solutions-authentication.yml
@@ -188,82 +188,82 @@ common:
   type: PrivacyPolicy
   url: https://www.figure.com/privacy/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/lifecycle/figure-technology-solutions-lifecycle.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/lifecycle/figure-technology-solutions-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/figure-technology-solutions-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/lifecycle/figure-technology-solutions-lifecycle.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/lifecycle/figure-technology-solutions-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/figure-technology-solutions-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/conventions/figure-technology-solutions-conventions.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/conventions/figure-technology-solutions-conventions.yml
   title: ''
   type: Conventions
   url: conventions/figure-technology-solutions-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/sandbox/figure-technology-solutions-sandbox.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/sandbox/figure-technology-solutions-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/figure-technology-solutions-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/errors/figure-technology-solutions-problem-types.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/errors/figure-technology-solutions-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/figure-technology-solutions-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/conformance/figure-technology-solutions-conformance.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/conformance/figure-technology-solutions-conformance.yml
   title: ''
   type: Conformance
   url: conformance/figure-technology-solutions-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/mcp/figure-technology-solutions-mcp.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/mcp/figure-technology-solutions-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/figure-technology-solutions-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/data-model/figure-technology-solutions-data-model.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/data-model/figure-technology-solutions-data-model.yml
   title: ''
   type: DataModel
   url: data-model/figure-technology-solutions-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/well-known/figure-technology-solutions-well-known.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/well-known/figure-technology-solutions-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/figure-technology-solutions-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/llms/figure-technology-solutions-llms.txt
+  href: https://artifacts.apis.io/figure-technology-solutions/llms/figure-technology-solutions-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/figure-technology-solutions-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/asyncapi/figure-technology-solutions-webhooks.yml
+  href: https://artifacts.apis.io/figure-technology-solutions/asyncapi/figure-technology-solutions-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/figure-technology-solutions-webhooks.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/overlays/figure-technology-solutions-heloc-inquiries-overlay.yaml
+  href: https://artifacts.apis.io/figure-technology-solutions/overlays/figure-technology-solutions-heloc-inquiries-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/figure-technology-solutions-heloc-inquiries-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/overlays/figure-technology-solutions-heloc-pre-qualification-overlay.yaml
+  href: https://artifacts.apis.io/figure-technology-solutions/overlays/figure-technology-solutions-heloc-pre-qualification-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/figure-technology-solutions-heloc-pre-qualification-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/overlays/figure-technology-solutions-portfolio-manager-overlay.yaml
+  href: https://artifacts.apis.io/figure-technology-solutions/overlays/figure-technology-solutions-portfolio-manager-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/figure-technology-solutions-portfolio-manager-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/skills/figure-technology-solutions-run-heloc-inquiry.md
+  href: https://artifacts.apis.io/figure-technology-solutions/skills/figure-technology-solutions-run-heloc-inquiry.md
   title: ''
   type: AgentSkill
   url: skills/figure-technology-solutions-run-heloc-inquiry.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/skills/figure-technology-solutions-prequalify-heloc.md
+  href: https://artifacts.apis.io/figure-technology-solutions/skills/figure-technology-solutions-prequalify-heloc.md
   title: ''
   type: AgentSkill
   url: skills/figure-technology-solutions-prequalify-heloc.md
@@ -278,37 +278,50 @@ network: true
 overview: 'Figure Technology Solutions publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Encryption API, HELOC application requests API, HELOC Offers API, and 5 more. Tagged areas include Company, Fintech, Lending, HELOC, and Home Equity.
 
 
-  The Figure Technology Solutions catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Figure Technology Solutions catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Figure Technology Solutions'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, sandbox, and 25 more developer resources.'
-random_paper: 8
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Figure Technology Solutions API Rules
+  rule_count: 45
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 4
+  slug: figure-technology-solutions-rules
 score:
   band: developing
-  composite: 41.9
+  composite: 44.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 25
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.5
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 50.3
+    contract_governance: 18.2
+    contract_quality: 52.6
     developer_ergonomics: 56.5
     discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 41.8
+  previous_composite: 43.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 50.0
       total: 8
     mcp: derived
     skills: derived
@@ -318,13 +331,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/figure-technology-solutions/refs/heads/main/screenshots/figure-technology-solutions-2026-07-25T214442.png
+screenshot: https://apis.io/screenshots/figure-technology-solutions/figure-technology-solutions-2026-07-25T214442.png
 security:
 - kind: authentication
   name: Figure Technology Solutions Authentication
@@ -334,6 +347,12 @@ security:
   name: Figure Technology Solutions Domain Security
   slug: figure-technology-solutions-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Pre-qualify a HELOC lead
+  slug: figure-technology-solutions-prequalify-heloc
+- name: Run a Figure HELOC inquiry end to end
+  slug: figure-technology-solutions-run-heloc-inquiry
 slug: figure-technology-solutions
 tags:
 - Company

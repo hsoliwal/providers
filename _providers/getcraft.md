@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/getcraft/refs/heads/main/security/getcraft-domain-security.yml
+  href: https://artifacts.apis.io/getcraft/security/getcraft-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/getcraft-domain-security.yml
@@ -66,12 +70,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/GetCraft
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/getcraft/refs/heads/main/security/getcraft-security-policy.yml
+  href: https://artifacts.apis.io/getcraft/security/getcraft-security-policy.yml
   title: ''
   type: SecurityPolicy
   url: security/getcraft-security-policy.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/getcraft/refs/heads/main/llms/getcraft-llms.txt
+  href: https://artifacts.apis.io/getcraft/llms/getcraft-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/getcraft-llms.txt
@@ -101,12 +105,12 @@ overview: 'GetCraft is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   GetCraft''s developer surface includes engineering blog, signup flow, and 7 more developer resources.'
-random_paper: 12
+random_paper: 8
 score:
   band: minimal
   composite: 9.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -134,14 +138,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/getcraft/refs/heads/main/screenshots/getcraft-2026-10-11T185344.png
+screenshot: https://apis.io/screenshots/getcraft/getcraft-2026-10-11T185344.png
 security:
 - kind: domain-security
   name: Getcraft Domain Security

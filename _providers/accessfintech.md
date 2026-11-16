@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The API surface behind Synergy, AccessFintech's post-trade collaboration network. The shipped web client calls a GraphQL endpoint at https://api.accessfintech.com/gql (operation name mirrored into the
@@ -68,42 +71,42 @@ common:
   type: GitHubOrganization
   url: https://github.com/accessfintech
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/authentication/accessfintech-authentication.yml
+  href: https://artifacts.apis.io/accessfintech/authentication/accessfintech-authentication.yml
   title: ''
   type: Authentication
   url: authentication/accessfintech-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/scopes/accessfintech-scopes.yml
+  href: https://artifacts.apis.io/accessfintech/scopes/accessfintech-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/accessfintech-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/well-known/accessfintech-well-known.yml
+  href: https://artifacts.apis.io/accessfintech/well-known/accessfintech-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/accessfintech-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/conformance/accessfintech-conformance.yml
+  href: https://artifacts.apis.io/accessfintech/conformance/accessfintech-conformance.yml
   title: ''
   type: Conformance
   url: conformance/accessfintech-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/conventions/accessfintech-conventions.yml
+  href: https://artifacts.apis.io/accessfintech/conventions/accessfintech-conventions.yml
   title: ''
   type: Conventions
   url: conventions/accessfintech-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/packages/accessfintech-packages.yml
+  href: https://artifacts.apis.io/accessfintech/packages/accessfintech-packages.yml
   title: ''
   type: Packages
   url: packages/accessfintech-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/llms/accessfintech-llms.txt
+  href: https://artifacts.apis.io/accessfintech/llms/accessfintech-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/accessfintech-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/security/accessfintech-domain-security.yml
+  href: https://artifacts.apis.io/accessfintech/security/accessfintech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/accessfintech-domain-security.yml
@@ -135,7 +138,7 @@ overview: 'AccessFintech is listed with 1 API on the [APIs.io](https://apis.io/)
 
 
   AccessFintech''s developer surface includes engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 21
+random_paper: 19
 scopes:
 - name: Accessfintech Scopes
   scope_count: 7
@@ -145,7 +148,7 @@ score:
   band: emerging
   composite: 18.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -168,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/accessfintech/refs/heads/main/screenshots/accessfintech-2026-08-07T160758.png
+screenshot: https://apis.io/screenshots/accessfintech/accessfintech-2026-08-07T160758.png
 security:
 - kind: authentication
   name: Accessfintech Authentication

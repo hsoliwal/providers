@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: CyberConnect is CyberCube's API layer for integrating its cyber risk models, analytics and signals into a customer's own systems. CyberCube advertises API capabilities across catastrophe risk manageme
@@ -72,27 +75,27 @@ common:
   type: Compliance
   url: https://www.cybcube.com/news/2020/07/cybercube-completes-soc-2-type-ii-certification-demonstrating-level-of-customer-data-security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cybercube/refs/heads/main/conformance/cybercube-conformance.yml
+  href: https://artifacts.apis.io/cybercube/conformance/cybercube-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cybercube-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cybercube/refs/heads/main/security/cybercube-domain-security.yml
+  href: https://artifacts.apis.io/cybercube/security/cybercube-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cybercube-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cybercube/refs/heads/main/llms/cybercube-llms.txt
+  href: https://artifacts.apis.io/cybercube/llms/cybercube-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cybercube-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cybercube/refs/heads/main/plans/cybercube-plans-pricing.yml
+  href: https://artifacts.apis.io/cybercube/plans/cybercube-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cybercube-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cybercube/refs/heads/main/rate-limits/cybercube-rate-limits.yml
+  href: https://artifacts.apis.io/cybercube/rate-limits/cybercube-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cybercube-rate-limits.yml
@@ -127,7 +130,7 @@ plans:
 - name: Cybercube Plans Pricing
   plan_count: 0
   slug: cybercube-plans-pricing
-random_paper: 2
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Cybercube Rate Limits
@@ -136,7 +139,7 @@ score:
   band: emerging
   composite: 17.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -159,14 +162,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cybercube/refs/heads/main/screenshots/cybercube-2026-09-02T145213.png
+screenshot: https://apis.io/screenshots/cybercube/cybercube-2026-09-02T145213.png
 security:
 - kind: domain-security
   name: Cybercube Domain Security

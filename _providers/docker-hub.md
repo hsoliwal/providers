@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: verified
+    error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -95,11 +101,8 @@ apis:
   description: SCIM is a provisioning system that lets you manage users within your identity provider (IdP). For more information, see [System for Cross-domain Identity management](https://docs.docker.com/security/f
   name: Docker Hub SCIM API
   slug: docker-hub-scim-api
-artifact_total: 29
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Docker HUB access-tokens API
   slug: open-docker-hub-access-tokens-api
@@ -135,42 +138,42 @@ collections:
   slug: open-docker-hub
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/plans/docker-hub-plans-pricing.yml
+  href: https://artifacts.apis.io/docker-hub/plans/docker-hub-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/docker-hub-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/rate-limits/docker-hub-rate-limits.yml
+  href: https://artifacts.apis.io/docker-hub/rate-limits/docker-hub-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/docker-hub-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/finops/docker-hub-finops.yml
+  href: https://artifacts.apis.io/docker-hub/finops/docker-hub-finops.yml
   title: ''
   type: FinOps
   url: finops/docker-hub-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/capabilities/docker-hub-capability-edges.yml
+  href: https://artifacts.apis.io/docker-hub/capabilities/docker-hub-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/docker-hub-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/agentic-access/docker-hub-agentic-access.yml
+  href: https://artifacts.apis.io/docker-hub/agentic-access/docker-hub-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/docker-hub-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/security/docker-hub-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/docker-hub/security/docker-hub-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/docker-hub-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/security/docker-hub-domain-security.yml
+  href: https://artifacts.apis.io/docker-hub/security/docker-hub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/docker-hub-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/authentication/docker-hub-authentication.yml
+  href: https://artifacts.apis.io/docker-hub/authentication/docker-hub-authentication.yml
   title: ''
   type: Authentication
   url: authentication/docker-hub-authentication.yml
@@ -245,13 +248,13 @@ common:
 created: '2024-01-01'
 description: Docker Hub is the world's largest container image registry, providing a cloud-based service for finding, storing, sharing, and managing container images. It offers public and private repositories, automated builds, webhooks, and integrations with Docker tooling and CI/CD pipelines.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Docker Hub Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: user/month (monthly plan)
+  service_category: ''
   slug: docker-hub-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/docker-hub.png
 layout: provider
 modified: '2026-09-16'
@@ -261,55 +264,74 @@ network: true
 overview: 'Docker Hub publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Tokens API, Audit Logs API, Authentication API, and 7 more. Tagged areas include Containers, DevOps, Docker, and Registry.
 
 
+  The Docker Hub catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Docker Hub''s developer surface includes authentication, documentation, signup flow, pricing, changelog, engineering blog, support, and 18 more developer resources.'
 plans:
 - name: Docker Hub Plans Pricing
-  plan_count: 3
+  plan_count: 9
   slug: docker-hub-plans-pricing
-random_paper: 6
+- name: Docker Hub Price Estimates
+  plan_count: 0
+  slug: docker-hub-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 5
   name: Docker Hub Rate Limits
   slug: docker-hub-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Docker Hub API Rules
+  rule_count: 46
+  severity_counts:
+    error: 30
+    hint: 0
+    info: 3
+    warn: 13
+  slug: docker-hub-rules
 score:
   band: developing
-  composite: 42.1
+  composite: 46.7
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 35.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    artifact_dirs: 18
+    catalog_earned: 51.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.2
   facets:
-    access_clarity: 52.6
-    contract_governance: 0.0
-    contract_quality: 53.1
+    access_clarity: 84.2
+    contract_governance: 13.6
+    contract_quality: 34.2
     developer_ergonomics: 28.6
     discoverability: 58.9
-    operational_transparency: 44.7
-  previous_composite: 43.6
+    operational_transparency: 55.3
+  previous_composite: 46.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 56.8
       derived: 0
-      marker_coverage: 0.0
-      total: 10
+      marker_coverage: 27.0
+      total: 37
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/screenshots/docker-hub-2026-06-20T180106.png
+screenshot: https://apis.io/screenshots/docker-hub/docker-hub-2026-06-20T180106.png
 security:
 - kind: authentication
   name: Docker Hub Authentication

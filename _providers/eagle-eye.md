@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -36,27 +50,27 @@ common:
   type: Compliance
   url: https://eagleeye.com/legal/security-compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/authentication/eagle-eye-authentication.yml
+  href: https://artifacts.apis.io/eagle-eye/authentication/eagle-eye-authentication.yml
   title: ''
   type: Authentication
   url: authentication/eagle-eye-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/llms/eagle-eye-llms.txt
+  href: https://artifacts.apis.io/eagle-eye/llms/eagle-eye-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/eagle-eye-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/well-known/eagle-eye-well-known.yml
+  href: https://artifacts.apis.io/eagle-eye/well-known/eagle-eye-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/eagle-eye-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/hosts/eagle-eye-hosts.yml
+  href: https://artifacts.apis.io/eagle-eye/hosts/eagle-eye-hosts.yml
   title: ''
   type: Hosts
   url: hosts/eagle-eye-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/vendors/eagle-eye-vendors.yml
+  href: https://artifacts.apis.io/eagle-eye/vendors/eagle-eye-vendors.yml
   title: ''
   type: Vendors
   url: vendors/eagle-eye-vendors.yml
@@ -65,12 +79,12 @@ common:
   type: StatusPage
   url: https://status.eagleeye.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/security/eagle-eye-trust-center.yml
+  href: https://artifacts.apis.io/eagle-eye/security/eagle-eye-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/eagle-eye-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eagle-eye/refs/heads/main/security/eagle-eye-domain-security.yml
+  href: https://artifacts.apis.io/eagle-eye/security/eagle-eye-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eagle-eye-domain-security.yml
@@ -126,36 +140,40 @@ overview: 'Eagle Eye is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Eagle Eye''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, and 12 more developer resources.'
-random_paper: 20
+random_paper: 14
 score:
-  band: thin
-  composite: 26.6
+  band: emerging
+  composite: 17.3
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.3
   facets:
-    access_clarity: 36.8
+    access_clarity: 22.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 57.1
+    developer_ergonomics: 34.5
     discoverability: 55.4
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 26.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/eagle-eye/eagle-eye-2026-11-03T131201.png
 security:
 - kind: authentication
   name: Eagle Eye Authentication

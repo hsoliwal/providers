@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -16,7 +19,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/gilead-sciences/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arresto-biosciences/refs/heads/main/llms/arresto-biosciences-llms.txt
+  href: https://artifacts.apis.io/arresto-biosciences/llms/arresto-biosciences-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arresto-biosciences-llms.txt
@@ -29,7 +32,7 @@ name: Arresto Biosciences
 nav: Providers
 network: true
 overview: Arresto Biosciences is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Biotechnology, Biopharmaceutical, and Life Sciences.
-random_paper: 14
+random_paper: 4
 slug: arresto-biosciences
 tags:
 - Company

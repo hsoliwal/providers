@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://app.super.mx
@@ -43,11 +46,8 @@ apis:
   description: The Quotes API from Super Seguros — 1 operation(s) for quotes.
   name: Super Seguros Quotes API
   slug: super-seguros-quotes-api
-artifact_total: 5
+artifact_total: 6
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Super Seguros Quotes API
   slug: open-super-seguros-quotes-api
@@ -57,17 +57,17 @@ common:
   type: Blog
   url: https://www.super.mx/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/capabilities/super-seguros-capability-edges.yml
+  href: https://artifacts.apis.io/super-seguros/capabilities/super-seguros-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/super-seguros-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/security/super-seguros-domain-security.yml
+  href: https://artifacts.apis.io/super-seguros/security/super-seguros-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/super-seguros-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/authentication/super-seguros-authentication.yml
+  href: https://artifacts.apis.io/super-seguros/authentication/super-seguros-authentication.yml
   title: ''
   type: Authentication
   url: authentication/super-seguros-authentication.yml
@@ -92,52 +92,52 @@ common:
   type: APIReference
   url: https://developers.super.mx/reference/bobbywebapiv2quotecontrollerindex
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/llms/super-seguros-llms.txt
+  href: https://artifacts.apis.io/super-seguros/llms/super-seguros-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/super-seguros-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/mcp/super-seguros-mcp.yml
+  href: https://artifacts.apis.io/super-seguros/mcp/super-seguros-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/super-seguros-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/overlays/super-seguros-openapi-overlay.yaml
+  href: https://artifacts.apis.io/super-seguros/overlays/super-seguros-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/super-seguros-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/errors/super-seguros-problem-types.yml
+  href: https://artifacts.apis.io/super-seguros/errors/super-seguros-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/super-seguros-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/conventions/super-seguros-conventions.yml
+  href: https://artifacts.apis.io/super-seguros/conventions/super-seguros-conventions.yml
   title: ''
   type: Conventions
   url: conventions/super-seguros-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/lifecycle/super-seguros-lifecycle.yml
+  href: https://artifacts.apis.io/super-seguros/lifecycle/super-seguros-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/super-seguros-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/conformance/super-seguros-conformance.yml
+  href: https://artifacts.apis.io/super-seguros/conformance/super-seguros-conformance.yml
   title: ''
   type: Conformance
   url: conformance/super-seguros-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/sandbox/super-seguros-sandbox.yml
+  href: https://artifacts.apis.io/super-seguros/sandbox/super-seguros-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/super-seguros-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/data-model/super-seguros-data-model.yml
+  href: https://artifacts.apis.io/super-seguros/data-model/super-seguros-data-model.yml
   title: ''
   type: DataModel
   url: data-model/super-seguros-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/super-seguros/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -152,24 +152,40 @@ network: true
 overview: 'Super Seguros publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Quotes API. Tagged areas include Company, Insurance, Insurtech, Life Insurance, and Quotes.
 
 
+  The Super Seguros catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Super Seguros'' developer surface includes engineering blog, authentication, documentation, getting-started guide, API reference, sandbox, and 13 more developer resources.'
-random_paper: 16
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Super Seguros API Rules
+  rule_count: 48
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 1
+  slug: super-seguros-rules
 score:
   band: thin
-  composite: 27.8
+  composite: 31.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.7
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.6
-    developer_ergonomics: 42.3
+    developer_ergonomics: 50.6
     discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
@@ -179,7 +195,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 27.3
+  previous_composite: 29.4
   provenance:
     conformance: derived
     contracts:
@@ -195,13 +211,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 14.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/super-seguros/refs/heads/main/screenshots/super-seguros-2026-09-02T161203.png
+screenshot: https://apis.io/screenshots/super-seguros/super-seguros-2026-09-02T161203.png
 security:
 - kind: authentication
   name: Super Seguros Authentication
@@ -211,6 +227,10 @@ security:
   name: Super Seguros Domain Security
   slug: super-seguros-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 1
+skills:
+- name: Get insurance quotes for a customer
+  slug: super-seguros-get-insurance-quotes
 slug: super-seguros
 tags:
 - Company

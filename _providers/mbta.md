@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -108,9 +114,6 @@ apis:
 artifact_total: 32
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: MBTA V3 Alerts API
   slug: open-mbta-alerts-api
 - collection_type: open
@@ -151,17 +154,17 @@ collections:
   slug: open-mbta-vehicles-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/plans/mbta-plans-pricing.yml
+  href: https://artifacts.apis.io/mbta/plans/mbta-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mbta-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/rate-limits/mbta-rate-limits.yml
+  href: https://artifacts.apis.io/mbta/rate-limits/mbta-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mbta-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/finops/mbta-finops.yml
+  href: https://artifacts.apis.io/mbta/finops/mbta-finops.yml
   title: ''
   type: FinOps
   url: finops/mbta-finops.yml
@@ -170,17 +173,17 @@ common:
   type: Website
   url: https://www.mbta.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/agentic-access/mbta-agentic-access.yml
+  href: https://artifacts.apis.io/mbta/agentic-access/mbta-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mbta-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/security/mbta-domain-security.yml
+  href: https://artifacts.apis.io/mbta/security/mbta-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mbta-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/authentication/mbta-authentication.yml
+  href: https://artifacts.apis.io/mbta/authentication/mbta-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mbta-authentication.yml
@@ -214,7 +217,7 @@ finops:
 - has_sources: false
   method: generated
   name: Mbta Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: mbta-finops
   template: true
@@ -227,35 +230,51 @@ network: true
 overview: 'MBTA publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Facilities API, Lines API, and 9 more. Tagged areas include Boston, Massachusetts, Public Transportation, Real-Time, and Transit.
 
 
+  The MBTA catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   MBTA''s developer surface includes authentication, developer portal, signup flow, engineering blog, and 9 more developer resources.'
 plans:
 - name: Mbta Plans Pricing
   plan_count: 3
   slug: mbta-plans-pricing
-random_paper: 2
+random_paper: 12
 rate_limits:
 - limit_count: 5
   name: Mbta Rate Limits
   slug: mbta-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: MBTA API Rules
+  rule_count: 48
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 1
+  slug: mbta-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 37.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.1
     developer_ergonomics: 52.4
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.6
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -269,14 +288,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/mbta/refs/heads/main/screenshots/mbta-2026-06-20T185053.png
+screenshot: https://apis.io/screenshots/mbta/mbta-2026-06-20T185053.png
 security:
 - kind: authentication
   name: Mbta Authentication

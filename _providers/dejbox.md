@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public OAuth2 / OpenID Connect authorization server (Ory-style) backing the Refectory (Dejbox) consumer and B2B applications. Advertises a standards-compliant OpenID discovery document with authorizat
@@ -46,7 +51,7 @@ common:
   type: Blog
   url: https://www.refectory.fr/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/security/dejbox-domain-security.yml
+  href: https://artifacts.apis.io/dejbox/security/dejbox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dejbox-domain-security.yml
@@ -59,27 +64,27 @@ common:
   type: Support
   url: mailto:hello@refectory.fr
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/llms/dejbox-llms.txt
+  href: https://artifacts.apis.io/dejbox/llms/dejbox-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dejbox-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/well-known/dejbox-well-known.yml
+  href: https://artifacts.apis.io/dejbox/well-known/dejbox-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dejbox-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/authentication/dejbox-authentication.yml
+  href: https://artifacts.apis.io/dejbox/authentication/dejbox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dejbox-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/scopes/dejbox-scopes.yml
+  href: https://artifacts.apis.io/dejbox/scopes/dejbox-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/dejbox-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/conformance/dejbox-conformance.yml
+  href: https://artifacts.apis.io/dejbox/conformance/dejbox-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dejbox-conformance.yml
@@ -95,7 +100,7 @@ overview: 'Dejbox (Refectory) is listed with 1 API on the [APIs.io](https://apis
 
 
   Dejbox (Refectory)''s developer surface includes engineering blog, support, authentication, and 6 more developer resources.'
-random_paper: 20
+random_paper: 12
 scopes:
 - name: Dejbox Scopes
   scope_count: 3
@@ -111,7 +116,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
@@ -127,7 +132,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 12.8
+  previous_composite: 13.4
   provenance:
     conformance: derived
   regulatory:
@@ -136,14 +141,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dejbox/refs/heads/main/screenshots/dejbox-2026-07-25T211637.png
+screenshot: https://apis.io/screenshots/dejbox/dejbox-2026-07-25T211637.png
 security:
 - kind: authentication
   name: Dejbox Authentication
@@ -162,6 +167,7 @@ tags:
 - B2B
 - France
 - Meal Delivery
+- OAuth
 - Authentication
 website: https://www.refectory.fr/
 ---

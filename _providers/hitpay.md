@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: half
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.2
-  scored_at: '2026-10-17'
+  score: 41.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 0
@@ -45,7 +48,7 @@ agentic_access:
   operation_count: 92
   slug: hitpay-agentic-access
   summary_line: 92 operations · 49 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.hit-pay.com/v1
   baseurl_source: declared
@@ -124,11 +127,6 @@ apis:
   slug: hitpay-refund-api
 - baseURL: https://api.hit-pay.com/v1
   baseurl_source: declared
-  description: Refund completed PayNow or card charges.
-  name: HitPay Refunds API
-  slug: hitpay-refunds-api
-- baseURL: https://api.hit-pay.com/v1
-  baseurl_source: declared
   description: The Remitters API from HitPay — 2 operation(s) for remitters.
   name: HitPay Remitters API
   slug: hitpay-remitters-api
@@ -149,11 +147,6 @@ apis:
   slug: hitpay-subscription-plan-api
 - baseURL: https://api.hit-pay.com/v1
   baseurl_source: declared
-  description: Reusable recurring-billing plan templates.
-  name: HitPay Subscription Plans API
-  slug: hitpay-subscription-plans-api
-- baseURL: https://api.hit-pay.com/v1
-  baseurl_source: declared
   description: The Transfers API from HitPay — 3 operation(s) for transfers.
   name: HitPay Transfers API
   slug: hitpay-transfers-api
@@ -167,7 +160,17 @@ apis:
   description: The Webhook Events API from HitPay — 2 operation(s) for webhook events.
   name: HitPay Webhook Events API
   slug: hitpay-webhook-events-api
-artifact_total: 83
+- baseURL: https://api.hit-pay.com/v1
+  baseurl_source: declared
+  description: The Location API from HitPay — 2 operation(s) for location.
+  name: HitPay Location API
+  slug: hitpay-location-api
+- baseURL: https://api.hit-pay.com/v1
+  baseurl_source: declared
+  description: The Payouts API from HitPay — 3 operation(s) for payouts.
+  name: HitPay Payouts API
+  slug: hitpay-payouts-api
+artifact_total: 88
 asyncapis:
 - description: ''
   name: Hitpay Events Webhooks
@@ -246,9 +249,6 @@ collections:
   name: HitPay Account Status Webhook Events API
   slug: postman-hitpay-webhook-events-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: HitPay Account Status API
   slug: open-hitpay-account-status-api
 - collection_type: open
@@ -322,7 +322,7 @@ collections:
   slug: open-hitpay-webhook-events-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/capabilities/hitpay-capability-edges.yml
+  href: https://artifacts.apis.io/hitpay/capabilities/hitpay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hitpay-capability-edges.yml
@@ -331,27 +331,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/hitpay/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/agentic-access/hitpay-agentic-access.yml
+  href: https://artifacts.apis.io/hitpay/agentic-access/hitpay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hitpay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/security/hitpay-trust-center.yml
+  href: https://artifacts.apis.io/hitpay/security/hitpay-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hitpay-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/security/hitpay-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hitpay/security/hitpay-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hitpay-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/security/hitpay-domain-security.yml
+  href: https://artifacts.apis.io/hitpay/security/hitpay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hitpay-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/authentication/hitpay-authentication.yml
+  href: https://artifacts.apis.io/hitpay/authentication/hitpay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hitpay-authentication.yml
@@ -372,17 +372,17 @@ common:
   type: Documentation
   url: https://docs.hitpayapp.com/apis
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/plans/hitpay-plans-pricing.yml
+  href: https://artifacts.apis.io/hitpay/plans/hitpay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hitpay-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/rate-limits/hitpay-rate-limits.yml
+  href: https://artifacts.apis.io/hitpay/rate-limits/hitpay-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hitpay-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/finops/hitpay-finops.yml
+  href: https://artifacts.apis.io/hitpay/finops/hitpay-finops.yml
   title: ''
   type: FinOps
   url: finops/hitpay-finops.yml
@@ -391,52 +391,52 @@ common:
   type: Blog
   url: https://www.hitpayapp.com/blog
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/openapi/_original/hitpay-openapi-original.json
+  href: https://artifacts.apis.io/hitpay/openapi/_original/hitpay-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/hitpay-openapi-original.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/mcp/hitpay-mcp.yml
+  href: https://artifacts.apis.io/hitpay/mcp/hitpay-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hitpay-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/llms/hitpay-llms.txt
+  href: https://artifacts.apis.io/hitpay/llms/hitpay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hitpay-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/packages/hitpay-packages.yml
+  href: https://artifacts.apis.io/hitpay/packages/hitpay-packages.yml
   title: ''
   type: Packages
   url: packages/hitpay-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/cli/hitpay-cli.yml
+  href: https://artifacts.apis.io/hitpay/cli/hitpay-cli.yml
   title: ''
   type: CLI
   url: cli/hitpay-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/sandbox/hitpay-sandbox.yml
+  href: https://artifacts.apis.io/hitpay/sandbox/hitpay-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/hitpay-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/conventions/hitpay-conventions.yml
+  href: https://artifacts.apis.io/hitpay/conventions/hitpay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hitpay-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/changelog/hitpay-changelog.yml
+  href: https://artifacts.apis.io/hitpay/changelog/hitpay-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hitpay-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/lifecycle/hitpay-lifecycle.yml
+  href: https://artifacts.apis.io/hitpay/lifecycle/hitpay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hitpay-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/conformance/hitpay-conformance.yml
+  href: https://artifacts.apis.io/hitpay/conformance/hitpay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hitpay-conformance.yml
@@ -445,32 +445,32 @@ common:
   type: Compliance
   url: https://www.hitpayapp.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/components/hitpay-components.yml
+  href: https://artifacts.apis.io/hitpay/components/hitpay-components.yml
   title: ''
   type: Components
   url: components/hitpay-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/data-model/hitpay-data-model.yml
+  href: https://artifacts.apis.io/hitpay/data-model/hitpay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hitpay-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/errors/hitpay-problem-types.yml
+  href: https://artifacts.apis.io/hitpay/errors/hitpay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hitpay-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/asyncapi/hitpay-events-webhooks.yml
+  href: https://artifacts.apis.io/hitpay/asyncapi/hitpay-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/hitpay-events-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hitpay/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/overlays/hitpay-openapi-overlay.yaml
+  href: https://artifacts.apis.io/hitpay/overlays/hitpay-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hitpay-openapi-overlay.yaml
@@ -506,16 +506,16 @@ created: '2026-07-17'
 description: HitPay is a Singapore-headquartered all-in-one payments platform for small and medium businesses across Asia-Pacific, unifying online checkout, point of sale, and B2B billing. Its REST API creates hosted Payment Requests, runs Recurring Billing on saved cards, and issues Refunds, with first-class Southeast Asian local methods (PayNow, GrabPay, WeChat Pay, Alipay, ShopeePay, Atome) alongside cards. Requests authenticate with the X-BUSINESS-API-KEY header.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Hitpay Finops
-  primary_unit: ''
-  service_category: Financial Services
+  primary_unit: transaction
+  service_category: ''
   slug: hitpay-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hitpay.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at hitpay-mcp.vercel.app over HTTP; 20 tools listed.
+- description: Remote MCP server at hitpay-mcp.vercel.app over HTTP; 39 tools listed.
   name: HitPay MCP Server
   slug: hitpay-api
 modified: '2026-07-17'
@@ -525,37 +525,53 @@ network: true
 overview: 'HitPay publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Status API, Balances API, Beneficiaries API, and 21 more. Tagged areas include Payments, Fintech, PayNow, Southeast Asia, and Small Business.
 
 
-  The HitPay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The HitPay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   HitPay''s developer surface includes authentication, documentation, engineering blog, CLI, sandbox, changelog, getting-started guide, and 32 more developer resources.'
 plans:
 - name: Hitpay Plans Pricing
-  plan_count: 3
+  plan_count: 12
   slug: hitpay-plans-pricing
-random_paper: 17
+- name: Hitpay Price Estimates
+  plan_count: 0
+  slug: hitpay-price-estimates
+random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Hitpay Rate Limits
   slug: hitpay-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: HitPay API Rules
+  rule_count: 50
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 5
+    warn: 8
+  slug: hitpay-rules
 score:
   band: strong
-  composite: 55.9
+  composite: 65.4
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 42.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    artifact_dirs: 34
+    catalog_earned: 58.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.5
+  delta: 0.6
   facets:
-    access_clarity: 47.4
-    contract_governance: 18.2
-    contract_quality: 57.5
+    access_clarity: 78.9
+    contract_governance: 31.8
+    contract_quality: 58.3
     developer_ergonomics: 69.6
     discoverability: 75.0
-    operational_transparency: 31.6
+    operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -563,15 +579,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 63.4
+  previous_composite: 64.8
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 24
+      marker_coverage: 48.0
+      total: 50
     mcp: first-party
     skills: derived
   regulatory:
@@ -580,13 +596,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 34.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/screenshots/hitpay-2026-07-25T221304.png
+screenshot: https://apis.io/screenshots/hitpay/hitpay-2026-07-25T221304.png
 security:
 - kind: authentication
   name: Hitpay Authentication
@@ -604,6 +620,16 @@ security:
   name: Hitpay Trust Center
   slug: hitpay-trust-center
   summary_line: PCI DSS, MAS Major Payment Institution (MPI)
+skill_count: 4
+skills:
+- name: Collect a payment with HitPay
+  slug: hitpay-collect-payment
+- name: Set up HitPay recurring billing
+  slug: hitpay-recurring-billing
+- name: Refund a HitPay charge
+  slug: hitpay-refund-charge
+- name: Verify a HitPay webhook
+  slug: hitpay-verify-webhook
 slug: hitpay
 tags:
 - Payments

@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -55,27 +58,27 @@ common:
   type: Blog
   url: https://www.gridwiz.com/en/media/media.php
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridwiz/refs/heads/main/llms/gridwiz-llms.txt
+  href: https://artifacts.apis.io/gridwiz/llms/gridwiz-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gridwiz-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridwiz/refs/heads/main/security/gridwiz-domain-security.yml
+  href: https://artifacts.apis.io/gridwiz/security/gridwiz-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gridwiz-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gridwiz/refs/heads/main/conformance/gridwiz-conformance.yml
+  href: https://artifacts.apis.io/gridwiz/conformance/gridwiz-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gridwiz-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gridwiz/refs/heads/main/plans/gridwiz-plans-pricing.yml
+  href: https://artifacts.apis.io/gridwiz/plans/gridwiz-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gridwiz-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gridwiz/refs/heads/main/rate-limits/gridwiz-rate-limits.yml
+  href: https://artifacts.apis.io/gridwiz/rate-limits/gridwiz-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gridwiz-rate-limits.yml
@@ -111,7 +114,7 @@ plans:
 - name: Gridwiz Plans Pricing
   plan_count: 0
   slug: gridwiz-plans-pricing
-random_paper: 20
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Gridwiz Rate Limits
@@ -150,14 +153,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/gridwiz/refs/heads/main/screenshots/gridwiz-2026-09-02T145638.png
+screenshot: https://apis.io/screenshots/gridwiz/gridwiz-2026-09-02T145638.png
 security:
 - kind: domain-security
   name: Gridwiz Domain Security

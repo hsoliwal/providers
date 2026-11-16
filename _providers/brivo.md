@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Brivo API provides capabilities to build physical security applications for access control, video surveillance, and visitor management.
@@ -32,37 +45,37 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/well-known/brivo-status-security.txt
+  href: https://artifacts.apis.io/brivo/well-known/brivo-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/brivo-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/security/brivo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/brivo/security/brivo-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/brivo-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/llms/brivo-llms.txt
+  href: https://artifacts.apis.io/brivo/llms/brivo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brivo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/well-known/brivo-careers-security.txt
+  href: https://artifacts.apis.io/brivo/well-known/brivo-careers-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/brivo-careers-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/well-known/brivo-well-known.yml
+  href: https://artifacts.apis.io/brivo/well-known/brivo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brivo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/hosts/brivo-hosts.yml
+  href: https://artifacts.apis.io/brivo/hosts/brivo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/brivo-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/vendors/brivo-vendors.yml
+  href: https://artifacts.apis.io/brivo/vendors/brivo-vendors.yml
   title: ''
   type: Vendors
   url: vendors/brivo-vendors.yml
@@ -107,12 +120,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/brivo
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/security/brivo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/brivo/security/brivo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/brivo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brivo/refs/heads/main/security/brivo-domain-security.yml
+  href: https://artifacts.apis.io/brivo/security/brivo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brivo-domain-security.yml
@@ -136,28 +149,30 @@ modified: '2026-10-06'
 name: Brivo
 nav: Providers
 network: true
-overview: 'Brivo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Access Control, VideoSurveillance, and Cloud.
+overview: 'Brivo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Access Control, Video Surveillance, and Cloud.
 
 
   Brivo''s developer surface includes support, engineering blog, documentation, and 17 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 24.4
+  composite: 16.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.1
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 26.2
-    discoverability: 66.1
-    operational_transparency: 31.6
+    developer_ergonomics: 13.1
+    discoverability: 65.2
+    operational_transparency: 21.1
+  previous_composite: 24.4
   provenance:
     mcp: unknown
   regulatory:
@@ -165,13 +180,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/brivo/brivo-2026-11-03T122655.png
 security:
 - kind: domain-security
   name: Brivo Domain Security
@@ -186,7 +203,7 @@ tags:
 - Company
 - Security
 - Access Control
-- VideoSurveillance
+- Video Surveillance
 - Cloud
 website: https://www.brivo.com/
 ---

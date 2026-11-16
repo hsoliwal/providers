@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: true
+    well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 32.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 1
@@ -31,7 +47,7 @@ agentic_access:
   operation_count: 24
   slug: logius-agentic-access
   summary_line: 24 operations · 13 acting · 1 human-in-the-loop
-api_count: 6
+api_count: 3
 apis:
 - description: Digipoort is the Logius electronic post office for exchanging messages between businesses and Dutch government bodies (e.g. Belastingdienst, SBR filings). Its WUS 2.0 SOAP interface for businesses off
   name: Digipoort WUS 2.0 voor bedrijven
@@ -96,160 +112,158 @@ apis:
   description: The .well Known API from Logius — 1 operation(s) for .well known.
   name: Logius .well Known API
   slug: logius-well-known-api
-artifact_total: 34
+artifact_total: 37
 common:
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/well-known/logius-www-security.txt
+- group: commercial
+  href: https://artifacts.apis.io/logius/finops/logius-finops.yml
   title: ''
-  type: SecurityTxt
-  url: well-known/logius-www-security.txt
+  type: FinOps
+  url: finops/logius-finops.yml
+- group: commercial
+  title: ''
+  type: TermsOfService
+  url: https://schema.org/docs/terms.html
+- group: start
+  title: ''
+  type: SignUp
+  url: https://schema.org/RegisterAction
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/agentic-access/logius-agentic-access.yml
+  href: https://artifacts.apis.io/logius/agentic-access/logius-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/logius-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/plans/logius-plans-pricing.yml
+  href: https://artifacts.apis.io/logius/plans/logius-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/logius-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/rules/logius-rules.yml
+  href: https://artifacts.apis.io/logius/rules/logius-rules.yml
   title: ''
   type: Spectral
   url: rules/logius-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/rules/logius-publicatie-preview-spectral-rules.yml
-  title: ''
-  type: Spectral
-  url: rules/logius-publicatie-preview-spectral-rules.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/rules/logius-publicatie-preview-api-design-rules-release-2-2-media-linte-spectral-rules.yml
-  title: ''
-  type: Spectral
-  url: rules/logius-publicatie-preview-api-design-rules-release-2-2-media-linte-spectral-rules.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/rules/logius-api-design-rules-spectral-rules.yml
+  href: https://artifacts.apis.io/logius/rules/logius-api-design-rules-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/logius-api-design-rules-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/json-ld/logius-context.jsonld
+  href: https://artifacts.apis.io/logius/json-ld/logius-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/logius-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/vocabulary/logius-vocabulary.yml
+  href: https://artifacts.apis.io/logius/vocabulary/logius-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/logius-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/logius/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/data-model/logius-data-model.yml
+  href: https://artifacts.apis.io/logius/data-model/logius-data-model.yml
   title: ''
   type: DataModel
   url: data-model/logius-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/components/logius-components.yml
+  href: https://artifacts.apis.io/logius/components/logius-components.yml
   title: ''
   type: Components
   url: components/logius-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/changelog/logius-changelog.yml
+  href: https://artifacts.apis.io/logius/changelog/logius-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/logius-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/conventions/logius-conventions.yml
+  href: https://artifacts.apis.io/logius/conventions/logius-conventions.yml
   title: ''
   type: Conventions
   url: conventions/logius-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/sandbox/logius-sandbox.yml
+  href: https://artifacts.apis.io/logius/sandbox/logius-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/logius-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/lifecycle/logius-lifecycle.yml
+  href: https://artifacts.apis.io/logius/lifecycle/logius-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/logius-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/lifecycle/logius-lifecycle.yml
+  href: https://artifacts.apis.io/logius/lifecycle/logius-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/logius-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/errors/logius-error-codes.yml
+  href: https://artifacts.apis.io/logius/errors/logius-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/logius-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/errors/logius-problem-types.yml
+  href: https://artifacts.apis.io/logius/errors/logius-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/logius-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/conformance/logius-conformance.yml
+  href: https://artifacts.apis.io/logius/conformance/logius-conformance.yml
   title: ''
   type: Conformance
   url: conformance/logius-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/overlays/logius-fsc-manager-overlay.yaml
+  href: https://artifacts.apis.io/logius/overlays/logius-fsc-manager-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/logius-fsc-manager-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/well-known/logius-security.txt
+  href: https://artifacts.apis.io/logius/well-known/logius-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/logius-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/well-known/logius-logius-security.txt
+  href: https://artifacts.apis.io/logius/well-known/logius-logius-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/logius-logius-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/well-known/logius-well-known.yml
+  href: https://artifacts.apis.io/logius/well-known/logius-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/logius-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/hosts/logius-hosts.yml
+  href: https://artifacts.apis.io/logius/hosts/logius-hosts.yml
   title: ''
   type: Hosts
   url: hosts/logius-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/vendors/logius-vendors.yml
+  href: https://artifacts.apis.io/logius/vendors/logius-vendors.yml
   title: ''
   type: Vendors
   url: vendors/logius-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/packages/logius-packages.yml
+  href: https://artifacts.apis.io/logius/packages/logius-packages.yml
   title: ''
   type: SDKs
   url: packages/logius-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/packages/logius-packages.yml
+  href: https://artifacts.apis.io/logius/packages/logius-packages.yml
   title: ''
   type: Packages
   url: packages/logius-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/authentication/logius-authentication.yml
+  href: https://artifacts.apis.io/logius/authentication/logius-authentication.yml
   title: ''
   type: Authentication
   url: authentication/logius-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/security/logius-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/logius/security/logius-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/logius-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/security/logius-domain-security.yml
+  href: https://artifacts.apis.io/logius/security/logius-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/logius-domain-security.yml
@@ -311,6 +325,14 @@ common:
   url: https://github.com/Logius-standaarden/API-Design-Rules/blob/27297e8e45282aeeddb31c011965b5e377b02d6f/media/linter.yaml
 created: '2026-10-09'
 description: Logius is the digital government service organisation of the Dutch Ministry of the Interior and Kingdom Relations (Ministerie van Binnenlandse Zaken en Koninkrijksrelaties). It provides the shared ICT infrastructure and standards used by Dutch public service providers, including DigiD, eHerkenning, MijnOverheid, Digipoort, Digikoppeling, PKIoverheid and Standard Business Reporting, and it maintains the NL GOV REST API Design Rules and related API standards (with a Spectral linter ruleset) for the Dutch public sector.
+finops:
+- has_sources: true
+  method: derived
+  name: Logius Finops
+  primary_unit: ''
+  service_category: ''
+  slug: logius-finops
+  template: true
 image: https://www.logius.nl/themes/custom/logius/logo.svg
 json_schemas:
 - name: contractContent
@@ -344,7 +366,7 @@ json_schemas:
   property_count: 10
   slug: logius-subscription-request
 - name: Subscription
-  property_count: 0
+  property_count: 12
   slug: logius-subscription
 - name: TerugMelding
   property_count: 2
@@ -365,12 +387,12 @@ overview: 'Logius publishes 13 API contracts indexed on the [APIs.io](https://ap
   The Logius catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Logius'' developer surface includes changelog, sandbox, authentication, documentation, engineering blog, support, pricing, and 38 more developer resources.'
+  Logius'' developer surface includes signup flow, changelog, sandbox, authentication, documentation, engineering blog, support, and 38 more developer resources.'
 plans:
 - name: Logius Plans Pricing
   plan_count: 4
   slug: logius-plans-pricing
-random_paper: 21
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Logius Rate Limits
@@ -389,35 +411,35 @@ rules:
     warn: 0
   slug: logius-api-design-rules-spectral-rules
 - authorship: generated
-  effective_rule_count: 50
+  effective_rule_count: 94
   extends:
   - spectral:oas
   name: Logius API Rules
-  rule_count: 9
+  rule_count: 53
   severity_counts:
-    error: 4
+    error: 38
     hint: 0
-    info: 3
-    warn: 2
+    info: 6
+    warn: 9
   slug: logius-rules
 score:
-  band: strong
-  composite: 58.7
+  band: developing
+  composite: 53.0
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 91.3
-    catalog_earned_first_party: 30.0
-    catalog_gap: 23.8
+    artifact_dirs: 34
+    catalog_earned: 77.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: -5.7
   facets:
-    access_clarity: 52.6
-    contract_governance: 76.5
+    access_clarity: 65.8
+    contract_governance: 35.6
     contract_quality: 57.9
-    developer_ergonomics: 44.6
+    developer_ergonomics: 36.3
     discoverability: 71.4
-    operational_transparency: 55.3
+    operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -426,7 +448,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 59.0
+  previous_composite: 58.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -442,14 +464,14 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 28.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/logius/refs/heads/main/screenshots/logius-2026-10-11T110547.png
+screenshot: https://apis.io/screenshots/logius/logius-2026-10-11T110547.png
 security:
 - kind: authentication
   name: Logius Authentication
@@ -463,6 +485,12 @@ security:
   name: Logius Vulnerability Disclosure
   slug: logius-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 2
+skills:
+- name: logius-fsc-contract-lifecycle
+  slug: logius-fsc-contract-lifecycle
+- name: logius-notification-subscriptions
+  slug: logius-notification-subscriptions
 slug: logius
 tags:
 - Company

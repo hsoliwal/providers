@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: true
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Unified API platform offering REST and GraphQL endpoints with authentication and rate limiting.
@@ -34,45 +52,45 @@ apis:
   description: The Anything API from EchoAPI — 1 operation(s) for anything.
   name: EchoAPI Anything API
   slug: echoapi-anything-api
-artifact_total: 6
+artifact_total: 8
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/plans/echoapi-plans-pricing.yml
+  href: https://artifacts.apis.io/echoapi/plans/echoapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/echoapi-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/rules/echoapi-rules.yml
+  href: https://artifacts.apis.io/echoapi/rules/echoapi-rules.yml
   title: ''
   type: Spectral
   url: rules/echoapi-rules.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/cli/echoapi-cli.yml
+  href: https://artifacts.apis.io/echoapi/cli/echoapi-cli.yml
   title: ''
   type: CLI
   url: cli/echoapi-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/changelog/echoapi-changelog.yml
+  href: https://artifacts.apis.io/echoapi/changelog/echoapi-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/echoapi-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/authentication/echoapi-authentication.yml
+  href: https://artifacts.apis.io/echoapi/authentication/echoapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/echoapi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/conformance/echoapi-conformance.yml
+  href: https://artifacts.apis.io/echoapi/conformance/echoapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/echoapi-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/hosts/echoapi-hosts.yml
+  href: https://artifacts.apis.io/echoapi/hosts/echoapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/echoapi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/vendors/echoapi-vendors.yml
+  href: https://artifacts.apis.io/echoapi/vendors/echoapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/echoapi-vendors.yml
@@ -85,7 +103,7 @@ common:
   type: ChangeLog
   url: https://www.echoapi.com/wiki/docs/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echoapi/refs/heads/main/security/echoapi-domain-security.yml
+  href: https://artifacts.apis.io/echoapi/security/echoapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/echoapi-domain-security.yml
@@ -134,13 +152,21 @@ coverage:
   state: unreadable
 created: '2026-10-16'
 description: EchoAPI provides a unified API platform that enables developers to integrate multiple services through a single, consistent interface. It offers robust authentication, rate limiting, and comprehensive documentation, allowing seamless connectivity to various data sources and functionalities. The platform is designed for scalability, security, and ease of use, supporting both RESTful and GraphQL endpoints, and includes SDKs for popular programming languages. EchoAPI aims to simplify API consumption and accelerate development cycles for businesses of all sizes.
+finops:
+- has_sources: true
+  method: derived
+  name: Echoapi Finops
+  primary_unit: seat
+  service_category: ''
+  slug: echoapi-finops
+  template: false
 image: https://assets.echoapi.com/assets/new_banner.png
 layout: provider
 modified: '2026-10-16'
 name: EchoAPI
 nav: Providers
 network: true
-overview: 'EchoAPI is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Anything API, and 1 more. Tagged areas include Company, API Platform, Integration, Developer Tools, and AI-powered.
+overview: 'EchoAPI is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Anything API, and 1 more. Tagged areas include Company, API Platform, Integration, Developer Tools, and AI-Powered.
 
 
   The EchoAPI catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -151,7 +177,10 @@ plans:
 - name: Echoapi Plans Pricing
   plan_count: 7
   slug: echoapi-plans-pricing
-random_paper: 3
+- name: Echoapi Price Estimates
+  plan_count: 0
+  slug: echoapi-price-estimates
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -166,22 +195,24 @@ rules:
     warn: 1
   slug: echoapi-rules
 score:
-  band: developing
-  composite: 39.3
+  band: thin
+  composite: 31.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 48.5
+    artifact_dirs: 19
+    catalog_earned: 51.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.5
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.6
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 18.2
     contract_quality: 10.7
-    developer_ergonomics: 50.0
+    developer_ergonomics: 34.5
     discoverability: 57.1
-    operational_transparency: 21.1
+    operational_transparency: 10.5
+  previous_composite: 40.9
   provenance:
     conformance: derived
     contracts:
@@ -195,12 +226,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/echoapi/echoapi-2026-11-03T131302.png
 security:
 - kind: authentication
   name: Echoapi Authentication
@@ -216,7 +249,7 @@ tags:
 - API Platform
 - Integration
 - Developer Tools
-- AI-powered
+- AI-Powered
 - Documentation
 website: https://www.echoapi.com/
 ---

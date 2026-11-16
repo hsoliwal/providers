@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-10-17'
+  score: 33.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.quartr.com
@@ -31,44 +45,44 @@ apis:
   description: The Public API from Quartr — 3 operation(s) for public.
   name: Quartr Public API
   slug: quartr-public-api
-artifact_total: 10
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Quartr Webhooks
   slug: quartr-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/plans/quartr-plans-pricing.yml
+  href: https://artifacts.apis.io/quartr/plans/quartr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quartr-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/rules/quartr-rules.yml
+  href: https://artifacts.apis.io/quartr/rules/quartr-rules.yml
   title: ''
   type: Spectral
   url: rules/quartr-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/json-ld/quartr-context.jsonld
+  href: https://artifacts.apis.io/quartr/json-ld/quartr-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/quartr-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/vocabulary/quartr-vocabulary.yml
+  href: https://artifacts.apis.io/quartr/vocabulary/quartr-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/quartr-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/asyncapi/quartr-webhooks.yml
+  href: https://artifacts.apis.io/quartr/asyncapi/quartr-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/quartr-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/data-model/quartr-data-model.yml
+  href: https://artifacts.apis.io/quartr/data-model/quartr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/quartr-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/changelog/quartr-changelog.yml
+  href: https://artifacts.apis.io/quartr/changelog/quartr-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/quartr-changelog.yml
@@ -77,32 +91,32 @@ common:
   type: Security
   url: https://quartr.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/conformance/quartr-conformance.yml
+  href: https://artifacts.apis.io/quartr/conformance/quartr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/quartr-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/llms/quartr-llms.txt
+  href: https://artifacts.apis.io/quartr/llms/quartr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/quartr-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/well-known/quartr-security.txt
+  href: https://artifacts.apis.io/quartr/well-known/quartr-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/quartr-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/well-known/quartr-well-known.yml
+  href: https://artifacts.apis.io/quartr/well-known/quartr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/quartr-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/hosts/quartr-hosts.yml
+  href: https://artifacts.apis.io/quartr/hosts/quartr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/quartr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/vendors/quartr-vendors.yml
+  href: https://artifacts.apis.io/quartr/vendors/quartr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/quartr-vendors.yml
@@ -111,12 +125,12 @@ common:
   type: StatusPage
   url: https://status.quartr.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/security/quartr-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/quartr/security/quartr-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/quartr-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quartr/refs/heads/main/security/quartr-domain-security.yml
+  href: https://artifacts.apis.io/quartr/security/quartr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quartr-domain-security.yml
@@ -182,6 +196,14 @@ coverage:
   state: unreadable
 created: '2026-10-15'
 description: Quartr provides AI-powered infrastructure for company research, delivering real-time first‑party data from public companies to investment professionals, research platforms, and financial AI applications. Their platform aggregates earnings calls, transcripts, filings, and slides, enabling rapid insight extraction, trend detection, and automated analysis across over 16,000 companies. Quartr partners with OpenAI’s ChatGPT for Financial Services and serves major financial firms, offering both proprietary data engines and API access for seamless integration into analytics pipelines.
+finops:
+- has_sources: true
+  method: derived
+  name: Quartr Finops
+  primary_unit: ''
+  service_category: ''
+  slug: quartr-finops
+  template: true
 image: https://a.storyblok.com/f/182663/9850/bf56850515/variant-12-standard_og-home.png/m/1200x630
 json_schemas:
 - name: GetPublicV3CompaniesIdSegmentsResponse
@@ -214,7 +236,7 @@ plans:
 - name: Quartr Plans Pricing
   plan_count: 2
   slug: quartr-plans-pricing
-random_paper: 11
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -229,26 +251,28 @@ rules:
     warn: 1
   slug: quartr-rules
 score:
-  band: developing
-  composite: 48.9
+  band: thin
+  composite: 36.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 21
     catalog_earned: 64.8
     catalog_earned_first_party: 8.0
     catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -12.1
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 22.0
-    contract_quality: 29.9
-    developer_ergonomics: 50.0
+    contract_quality: 29.0
+    developer_ergonomics: 25.0
     discoverability: 73.2
-    operational_transparency: 55.3
+    operational_transparency: 39.5
+  previous_composite: 48.7
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 2
       marker_coverage: 100.0
       total: 2
@@ -258,13 +282,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/quartr/quartr-2026-11-03T141829.png
 security:
 - kind: domain-security
   name: Quartr Domain Security

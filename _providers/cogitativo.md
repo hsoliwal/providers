@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API surface referenced by host api.cogitativo.com but no machine-readable contract found.
@@ -32,41 +45,45 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/well-known/cogitativo-clarity-security.txt
+  href: https://artifacts.apis.io/cogitativo/well-known/cogitativo-clarity-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cogitativo-clarity-security.txt
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://cogitativo.com/privacy.html
 - group: auth
   title: ''
   type: Security
   url: https://clarity.com/vdp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/llms/cogitativo-llms.txt
+  href: https://artifacts.apis.io/cogitativo/llms/cogitativo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cogitativo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/well-known/cogitativo-security.txt
+  href: https://artifacts.apis.io/cogitativo/well-known/cogitativo-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cogitativo-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/well-known/cogitativo-well-known.yml
+  href: https://artifacts.apis.io/cogitativo/well-known/cogitativo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cogitativo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/hosts/cogitativo-hosts.yml
+  href: https://artifacts.apis.io/cogitativo/hosts/cogitativo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cogitativo-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/security/cogitativo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cogitativo/security/cogitativo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cogitativo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cogitativo/refs/heads/main/security/cogitativo-domain-security.yml
+  href: https://artifacts.apis.io/cogitativo/security/cogitativo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cogitativo-domain-security.yml
@@ -92,24 +109,26 @@ name: Cogitativo
 nav: Providers
 network: true
 overview: Cogitativo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health Tech, Artificial Intelligence, Healthcare, and Analytics.
-random_paper: 3
+random_paper: 1
 score:
   band: minimal
-  composite: 7.3
+  composite: 9.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: 1.9
   facets:
-    access_clarity: 0.0
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 64.3
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 7.3
   provenance:
     mcp: derived
   regulatory:
@@ -117,13 +136,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 8.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 11.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cogitativo/cogitativo-2026-11-03T124746.png
 security:
 - kind: domain-security
   name: Cogitativo Domain Security

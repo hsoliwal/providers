@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,10 +53,10 @@ apis:
 - description: 'Two unauthenticated JSON endpoints published in BrightAI''s llms.txt: /api/public/industries returns live worldwide aggregates and per-vertical addressable annual impact from the Global Observability D'
   name: BrightAI Public Observatory Data API
   slug: public-data
-artifact_total: 7
+artifact_total: 10
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/security/brightai-domain-security.yml
+  href: https://artifacts.apis.io/brightai/security/brightai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brightai-domain-security.yml
@@ -66,52 +69,52 @@ common:
   type: Documentation
   url: https://public.stateful.world/start.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/llms/brightai-llms.txt
+  href: https://artifacts.apis.io/brightai/llms/brightai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brightai-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/authentication/brightai-authentication.yml
+  href: https://artifacts.apis.io/brightai/authentication/brightai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/brightai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/conventions/brightai-conventions.yml
+  href: https://artifacts.apis.io/brightai/conventions/brightai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/brightai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/errors/brightai-problem-types.yml
+  href: https://artifacts.apis.io/brightai/errors/brightai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/brightai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/data-model/brightai-data-model.yml
+  href: https://artifacts.apis.io/brightai/data-model/brightai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brightai-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/agentic-access/brightai-agentic-access.yml
+  href: https://artifacts.apis.io/brightai/agentic-access/brightai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/brightai-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/brightai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/conformance/brightai-conformance.yml
+  href: https://artifacts.apis.io/brightai/conformance/brightai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brightai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/lifecycle/brightai-lifecycle.yml
+  href: https://artifacts.apis.io/brightai/lifecycle/brightai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/brightai-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/security/brightai-trust-center.yml
+  href: https://artifacts.apis.io/brightai/security/brightai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/brightai-trust-center.yml
@@ -147,7 +150,7 @@ overview: 'BrightAI is listed with 2 APIs on the [APIs.io](https://apis.io/) net
 
 
   BrightAI''s developer surface includes documentation, authentication, support, signup flow, and 13 more developer resources.'
-random_paper: 6
+random_paper: 2
 score:
   band: emerging
   composite: 24.4
@@ -178,14 +181,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/brightai/refs/heads/main/screenshots/brightai-2026-09-02T144947.png
+screenshot: https://apis.io/screenshots/brightai/brightai-2026-09-02T144947.png
 security:
 - kind: authentication
   name: Brightai Authentication
@@ -199,6 +202,14 @@ security:
   name: Brightai Trust Center
   slug: brightai-trust-center
   summary_line: SOC 2
+skill_count: 3
+skills:
+- name: Assess an infrastructure operator against BrightAI's database
+  slug: brightai-assess-an-operator
+- name: Brief a visitor on BrightAI accurately
+  slug: brightai-brief-on-brightai
+- name: Size an essential-services vertical and its observability problems
+  slug: brightai-size-a-vertical
 slug: brightai
 tags:
 - Company

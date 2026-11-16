@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL API for Shelly IoT platform
@@ -40,22 +53,22 @@ common:
   type: BlogRSS
   url: https://www.shelly.com/blogs/articles.atom
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shelly/refs/heads/main/llms/shelly-llms.txt
+  href: https://artifacts.apis.io/shelly/llms/shelly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shelly-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shelly/refs/heads/main/well-known/shelly-well-known.yml
+  href: https://artifacts.apis.io/shelly/well-known/shelly-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/shelly-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shelly/refs/heads/main/hosts/shelly-hosts.yml
+  href: https://artifacts.apis.io/shelly/hosts/shelly-hosts.yml
   title: ''
   type: Hosts
   url: hosts/shelly-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shelly/refs/heads/main/vendors/shelly-vendors.yml
+  href: https://artifacts.apis.io/shelly/vendors/shelly-vendors.yml
   title: ''
   type: Vendors
   url: vendors/shelly-vendors.yml
@@ -72,7 +85,7 @@ common:
   type: DeveloperPortal
   url: https://portal.shelly.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shelly/refs/heads/main/security/shelly-domain-security.yml
+  href: https://artifacts.apis.io/shelly/security/shelly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shelly-domain-security.yml
@@ -92,26 +105,26 @@ overview: 'Shelly is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Shelly''s developer surface includes engineering blog, documentation, and 9 more developer resources.'
-random_paper: 19
+random_paper: 9
 score:
-  band: emerging
-  composite: 12.9
+  band: minimal
+  composite: 9.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: -3.2
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 21.4
+    developer_ergonomics: 11.9
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 12.4
+  previous_composite: 12.9
   provenance:
     mcp: derived
   regulatory:
@@ -119,15 +132,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/shelly/refs/heads/main/screenshots/shelly-2026-10-11T125823.png
+screenshot: https://apis.io/screenshots/shelly/shelly-2026-10-11T125823.png
 security:
 - kind: domain-security
   name: Shelly Domain Security

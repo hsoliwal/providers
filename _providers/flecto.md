@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,7 +69,7 @@ common:
   type: PrivacyPolicy
   url: https://flecto.io/legal/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flecto/refs/heads/main/security/flecto-domain-security.yml
+  href: https://artifacts.apis.io/flecto/security/flecto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flecto-domain-security.yml
@@ -81,7 +85,7 @@ overview: 'Flecto is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Flecto''s developer surface includes signup flow, support, and 6 more developer resources.'
-random_paper: 21
+random_paper: 13
 score:
   band: minimal
   composite: 7.6
@@ -107,14 +111,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 8.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flecto/refs/heads/main/screenshots/flecto-2026-07-25T214726.png
+screenshot: https://apis.io/screenshots/flecto/flecto-2026-07-25T214726.png
 security:
 - kind: domain-security
   name: Flecto Domain Security

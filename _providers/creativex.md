@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: CreativeX provides a marketing analytics API (no public contract discovered).
@@ -36,12 +49,12 @@ common:
   type: Compliance
   url: https://trust.creativex.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/creativex/refs/heads/main/hosts/creativex-hosts.yml
+  href: https://artifacts.apis.io/creativex/hosts/creativex-hosts.yml
   title: ''
   type: Hosts
   url: hosts/creativex-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/creativex/refs/heads/main/vendors/creativex-vendors.yml
+  href: https://artifacts.apis.io/creativex/vendors/creativex-vendors.yml
   title: ''
   type: Vendors
   url: vendors/creativex-vendors.yml
@@ -70,12 +83,12 @@ common:
   type: Blog
   url: https://www.creativex.com/resources/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/creativex/refs/heads/main/security/creativex-trust-center.yml
+  href: https://artifacts.apis.io/creativex/security/creativex-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/creativex-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/creativex/refs/heads/main/security/creativex-domain-security.yml
+  href: https://artifacts.apis.io/creativex/security/creativex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/creativex-domain-security.yml
@@ -103,24 +116,26 @@ overview: 'CreativeX is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   CreativeX''s developer surface includes support, engineering blog, and 10 more developer resources.'
-random_paper: 3
+random_paper: 11
 score:
   band: emerging
-  composite: 17.8
+  composite: 11.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.9
   facets:
-    access_clarity: 50.0
+    access_clarity: 28.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
-    discoverability: 58.9
+    developer_ergonomics: 3.6
+    discoverability: 58.0
     operational_transparency: 0.0
+  previous_composite: 17.8
   provenance:
     mcp: unknown
   regulatory:
@@ -128,13 +143,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/creativex/creativex-2026-11-03T125534.png
 security:
 - kind: domain-security
   name: Creativex Domain Security

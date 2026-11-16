@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.1
-  scored_at: '2026-10-17'
+  score: 43.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -91,9 +94,6 @@ apis:
 artifact_total: 25
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Freshservice API v2 Agents API
   slug: open-freshservice-agents-api
 - collection_type: open
@@ -122,32 +122,32 @@ collections:
   slug: open-freshservice
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/capabilities/freshservice-capability-edges.yml
+  href: https://artifacts.apis.io/freshservice/capabilities/freshservice-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/freshservice-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/agentic-access/freshservice-agentic-access.yml
+  href: https://artifacts.apis.io/freshservice/agentic-access/freshservice-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/freshservice-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/security/freshservice-trust-center.yml
+  href: https://artifacts.apis.io/freshservice/security/freshservice-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/freshservice-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/security/freshservice-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/freshservice/security/freshservice-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/freshservice-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/security/freshservice-domain-security.yml
+  href: https://artifacts.apis.io/freshservice/security/freshservice-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/freshservice-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/authentication/freshservice-authentication.yml
+  href: https://artifacts.apis.io/freshservice/authentication/freshservice-authentication.yml
   title: ''
   type: Authentication
   url: authentication/freshservice-authentication.yml
@@ -198,27 +198,43 @@ network: true
 overview: 'Freshservice publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Assets API, Changes API, and 6 more. Tagged areas include ITSM, Help Desk, Ticketing, Asset Management, and Change Management.
 
 
+  The Freshservice catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Freshservice''s developer surface includes authentication, documentation, signup flow, pricing, support, and 9 more developer resources.'
-random_paper: 13
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Freshservice API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: freshservice-rules
 score:
   band: thin
-  composite: 33.2
+  composite: 36.2
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 37.0
+    artifact_dirs: 12
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.7
     developer_ergonomics: 35.7
     discoverability: 68.3
-    operational_transparency: 2.6
-  previous_composite: 33.1
+    operational_transparency: 13.2
+  previous_composite: 36.2
   provenance:
     agentic_access: derived
     contracts:
@@ -233,13 +249,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/screenshots/freshservice-2026-06-20T181545.png
+screenshot: https://apis.io/screenshots/freshservice/freshservice-2026-06-20T181545.png
 security:
 - kind: authentication
   name: Freshservice Authentication

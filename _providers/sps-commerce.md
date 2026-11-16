@@ -1,8 +1,22 @@
 ---
+access_model:
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
-    agent_card: false
+    agent_card: conformant
     agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 37.9
-  scored_at: '2026-10-17'
+  score: 44.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -54,50 +71,70 @@ apis:
   description: The Import API from SPS Commerce — 1 operation(s) for import.
   name: SPS Commerce Import API
   slug: sps-commerce-import-api
-artifact_total: 19
+artifact_total: 21
 common:
+- group: other
+  href: https://artifacts.apis.io/sps-commerce/a2a/sps-commerce-a2a.yml
+  title: ''
+  type: AgentCard
+  url: a2a/sps-commerce-a2a.yml
+- group: auth
+  href: https://artifacts.apis.io/sps-commerce/well-known/sps-commerce-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/sps-commerce-status-security.txt
+- group: build
+  href: https://artifacts.apis.io/sps-commerce/integrations/sps-commerce-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/sps-commerce-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/sps-commerce/capabilities/sps-commerce-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sps-commerce-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/agentic-access/sps-commerce-agentic-access.yml
+  href: https://artifacts.apis.io/sps-commerce/agentic-access/sps-commerce-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sps-commerce-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/rate-limits/sps-commerce-rate-limits.yml
+  href: https://artifacts.apis.io/sps-commerce/rate-limits/sps-commerce-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sps-commerce-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/rules/sps-commerce-rules.yml
+  href: https://artifacts.apis.io/sps-commerce/rules/sps-commerce-rules.yml
   title: ''
   type: Spectral
   url: rules/sps-commerce-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/json-ld/sps-commerce-context.jsonld
+  href: https://artifacts.apis.io/sps-commerce/json-ld/sps-commerce-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sps-commerce-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/vocabulary/sps-commerce-vocabulary.yml
+  href: https://artifacts.apis.io/sps-commerce/vocabulary/sps-commerce-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sps-commerce-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sps-commerce/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/data-model/sps-commerce-data-model.yml
+  href: https://artifacts.apis.io/sps-commerce/data-model/sps-commerce-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sps-commerce-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/conventions/sps-commerce-conventions.yml
+  href: https://artifacts.apis.io/sps-commerce/conventions/sps-commerce-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sps-commerce-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/sandbox/sps-commerce-sandbox.yml
+  href: https://artifacts.apis.io/sps-commerce/sandbox/sps-commerce-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/sps-commerce-sandbox.yml
@@ -106,52 +143,47 @@ common:
   type: Compliance
   url: https://trust.spscommerce.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/lifecycle/sps-commerce-lifecycle.yml
+  href: https://artifacts.apis.io/sps-commerce/lifecycle/sps-commerce-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/sps-commerce-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/lifecycle/sps-commerce-lifecycle.yml
+  href: https://artifacts.apis.io/sps-commerce/lifecycle/sps-commerce-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sps-commerce-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/errors/sps-commerce-problem-types.yml
+  href: https://artifacts.apis.io/sps-commerce/errors/sps-commerce-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sps-commerce-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/conformance/sps-commerce-conformance.yml
+  href: https://artifacts.apis.io/sps-commerce/conformance/sps-commerce-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sps-commerce-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/overlays/sps-commerce-inventory-api-overlay.yaml
+  href: https://artifacts.apis.io/sps-commerce/overlays/sps-commerce-inventory-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sps-commerce-inventory-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/llms/sps-commerce-llms.txt
+  href: https://artifacts.apis.io/sps-commerce/llms/sps-commerce-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sps-commerce-llms.txt
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/well-known/sps-commerce-status-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/sps-commerce-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/well-known/sps-commerce-well-known.yml
+  href: https://artifacts.apis.io/sps-commerce/well-known/sps-commerce-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sps-commerce-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/hosts/sps-commerce-hosts.yml
+  href: https://artifacts.apis.io/sps-commerce/hosts/sps-commerce-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sps-commerce-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/vendors/sps-commerce-vendors.yml
+  href: https://artifacts.apis.io/sps-commerce/vendors/sps-commerce-vendors.yml
   title: ''
   type: Vendors
   url: vendors/sps-commerce-vendors.yml
@@ -164,17 +196,17 @@ common:
   type: Newsroom
   url: https://www.spscommerce.com/press/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/authentication/sps-commerce-authentication.yml
+  href: https://artifacts.apis.io/sps-commerce/authentication/sps-commerce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sps-commerce-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/security/sps-commerce-trust-center.yml
+  href: https://artifacts.apis.io/sps-commerce/security/sps-commerce-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/sps-commerce-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/security/sps-commerce-domain-security.yml
+  href: https://artifacts.apis.io/sps-commerce/security/sps-commerce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sps-commerce-domain-security.yml
@@ -276,55 +308,60 @@ overview: 'SPS Commerce publishes 5 API contracts indexed on the [APIs.io](https
   The SPS Commerce catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  SPS Commerce''s developer surface includes sandbox, authentication, getting-started guide, documentation, signup flow, support, engineering blog, and 33 more developer resources.'
+  SPS Commerce''s developer surface includes sandbox, authentication, getting-started guide, documentation, signup flow, support, engineering blog, and 36 more developer resources.'
 plans:
 - name: Sps Commerce Plans Pricing
   plan_count: 0
   slug: sps-commerce-plans-pricing
-random_paper: 20
+random_paper: 6
 rate_limits:
 - limit_count: 1
   name: Sps Commerce Rate Limits
   slug: sps-commerce-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 58
+  effective_rule_count: 96
   extends:
   - spectral:oas
   name: SPS Commerce API Rules
-  rule_count: 17
+  rule_count: 55
   severity_counts:
-    error: 15
+    error: 51
     hint: 0
-    info: 1
+    info: 3
     warn: 1
   slug: sps-commerce-rules
 score:
-  band: strong
-  composite: 58.5
+  band: developing
+  composite: 49.1
   coverage:
-    artifact_dirs: 28
+    artifact_dirs: 33
     catalog_earned: 70.8
     catalog_earned_first_party: 8.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -10.7
   facets:
-    access_clarity: 50.0
+    access_clarity: 25.0
     contract_governance: 35.6
-    contract_quality: 67.9
-    developer_ergonomics: 58.9
-    discoverability: 75.0
+    contract_quality: 69.9
+    developer_ergonomics: 39.9
+    discoverability: 74.1
     operational_transparency: 50.0
-  previous_composite: 58.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 59.8
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 33.3
       total: 3
     mcp: derived
     skills: derived
@@ -333,14 +370,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sps-commerce/refs/heads/main/screenshots/sps-commerce-2026-10-11T130252.png
+screenshot: https://apis.io/screenshots/sps-commerce/sps-commerce-2026-10-11T130252.png
 security:
 - kind: authentication
   name: Sps Commerce Authentication
@@ -354,6 +391,12 @@ security:
   name: Sps Commerce Trust Center
   slug: sps-commerce-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018
+skill_count: 2
+skills:
+- name: sps-commerce-community-vendor-submission
+  slug: sps-commerce-community-vendor-submission
+- name: sps-commerce-inventory-lookup
+  slug: sps-commerce-inventory-lookup
 slug: sps-commerce
 tags:
 - Company

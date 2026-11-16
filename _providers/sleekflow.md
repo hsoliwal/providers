@@ -1,16 +1,17 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -83,9 +87,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SleekFlow Platform Companies API
   slug: open-sleekflow-companies-api
 - collection_type: open
@@ -115,22 +116,22 @@ common:
   type: Pricing
   url: https://sleekflow.io/whatsapp-pricing-calculator
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/capabilities/sleekflow-capability-edges.yml
+  href: https://artifacts.apis.io/sleekflow/capabilities/sleekflow-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sleekflow-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/agentic-access/sleekflow-agentic-access.yml
+  href: https://artifacts.apis.io/sleekflow/agentic-access/sleekflow-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sleekflow-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/security/sleekflow-domain-security.yml
+  href: https://artifacts.apis.io/sleekflow/security/sleekflow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sleekflow-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/authentication/sleekflow-authentication.yml
+  href: https://artifacts.apis.io/sleekflow/authentication/sleekflow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sleekflow-authentication.yml
@@ -147,17 +148,17 @@ common:
   type: Documentation
   url: https://apidoc.sleekflow.io/docs/platform-api/nijbjgxrs4s50-sleek-flow-platform-api
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/plans/sleekflow-plans-pricing.yml
+  href: https://artifacts.apis.io/sleekflow/plans/sleekflow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sleekflow-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/rate-limits/sleekflow-rate-limits.yml
+  href: https://artifacts.apis.io/sleekflow/rate-limits/sleekflow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sleekflow-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/finops/sleekflow-finops.yml
+  href: https://artifacts.apis.io/sleekflow/finops/sleekflow-finops.yml
   title: ''
   type: FinOps
   url: finops/sleekflow-finops.yml
@@ -184,6 +185,9 @@ network: true
 overview: 'SleekFlow publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Companies API, Contacts API, Conversations API, and 4 more. Tagged areas include Messaging, Omnichannel, WhatsApp, Customer Engagement, and Social Commerce.
 
 
+  The SleekFlow catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   SleekFlow''s developer surface includes pricing, authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Sleekflow Plans Pricing
@@ -192,30 +196,43 @@ plans:
 - name: Sleekflow Price Estimates
   plan_count: 0
   slug: sleekflow-price-estimates
-random_paper: 4
+random_paper: 12
 rate_limits:
 - limit_count: 1
   name: Sleekflow Rate Limits
   slug: sleekflow-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: SleekFlow API Rules
+  rule_count: 64
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 2
+    warn: 2
+  slug: sleekflow-rules
 score:
   band: thin
-  composite: 37.2
+  composite: 37.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 57.0
+    artifact_dirs: 16
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -1.1
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 47.8
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 38.7
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     contracts:
@@ -229,13 +246,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/sleekflow/refs/heads/main/screenshots/sleekflow-2026-06-20T194028.png
+screenshot: https://apis.io/screenshots/sleekflow/sleekflow-2026-06-20T194028.png
 security:
 - kind: authentication
   name: Sleekflow Authentication

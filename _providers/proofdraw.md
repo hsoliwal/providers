@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -29,16 +32,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 34.6
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://proofdraw.com/api/v1
   baseurl_source: declared
@@ -65,7 +71,7 @@ apis:
   description: Public, unauthenticated artifacts used to verify a draw.
   name: ProofDraw Verification API
   slug: proofdraw-verification-api
-artifact_total: 12
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Proofdraw Webhooks
@@ -84,7 +90,7 @@ common:
   type: License
   url: https://github.com/proofdraw/verifier/blob/main/LICENSE
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/overlays/proofdraw-api-overlay.yaml
+  href: https://artifacts.apis.io/proofdraw/overlays/proofdraw-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/proofdraw-api-overlay.yaml
@@ -145,72 +151,72 @@ common:
   type: SourceCode
   url: https://github.com/proofdraw/verifier
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/security/proofdraw-domain-security.yml
+  href: https://artifacts.apis.io/proofdraw/security/proofdraw-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/proofdraw-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/authentication/proofdraw-authentication.yml
+  href: https://artifacts.apis.io/proofdraw/authentication/proofdraw-authentication.yml
   title: ''
   type: Authentication
   url: authentication/proofdraw-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/conventions/proofdraw-conventions.yml
+  href: https://artifacts.apis.io/proofdraw/conventions/proofdraw-conventions.yml
   title: ''
   type: Conventions
   url: conventions/proofdraw-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/errors/proofdraw-problem-types.yml
+  href: https://artifacts.apis.io/proofdraw/errors/proofdraw-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/proofdraw-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/lifecycle/proofdraw-lifecycle.yml
+  href: https://artifacts.apis.io/proofdraw/lifecycle/proofdraw-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/proofdraw-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/conformance/proofdraw-conformance.yml
+  href: https://artifacts.apis.io/proofdraw/conformance/proofdraw-conformance.yml
   title: ''
   type: Conformance
   url: conformance/proofdraw-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/data-model/proofdraw-data-model.yml
+  href: https://artifacts.apis.io/proofdraw/data-model/proofdraw-data-model.yml
   title: ''
   type: DataModel
   url: data-model/proofdraw-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/asyncapi/proofdraw-webhooks.yml
+  href: https://artifacts.apis.io/proofdraw/asyncapi/proofdraw-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/proofdraw-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/sandbox/proofdraw-sandbox.yml
+  href: https://artifacts.apis.io/proofdraw/sandbox/proofdraw-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/proofdraw-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/plans/proofdraw-plans-pricing.yml
+  href: https://artifacts.apis.io/proofdraw/plans/proofdraw-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/proofdraw-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/rate-limits/proofdraw-rate-limits.yml
+  href: https://artifacts.apis.io/proofdraw/rate-limits/proofdraw-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/proofdraw-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/llms/proofdraw-llms.txt
+  href: https://artifacts.apis.io/proofdraw/llms/proofdraw-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/proofdraw-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/proofdraw/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/security/proofdraw-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/proofdraw/security/proofdraw-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/proofdraw-vulnerability-disclosure.yml
@@ -229,7 +235,7 @@ network: true
 overview: 'ProofDraw publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Auth API, Draws API, and 2 more. Tagged areas include Randomness, Provably Fair, Drand, Verifiable Randomness, and Cryptography.
 
 
-  The ProofDraw catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The ProofDraw catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   ProofDraw''s developer surface includes pricing, documentation, API reference, support, signup flow, authentication, sandbox, and 25 more developer resources.'
@@ -237,30 +243,43 @@ plans:
 - name: Proofdraw Plans Pricing
   plan_count: 2
   slug: proofdraw-plans-pricing
-random_paper: 12
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Proofdraw Rate Limits
   slug: proofdraw-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: ProofDraw API Rules
+  rule_count: 60
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 5
+    warn: 3
+  slug: proofdraw-rules
 score:
-  band: thin
-  composite: 36.5
+  band: developing
+  composite: 43.6
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 25
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: 5.4
   facets:
-    access_clarity: 38.2
-    contract_governance: 4.5
+    access_clarity: 43.4
+    contract_governance: 18.2
     contract_quality: 54.4
-    developer_ergonomics: 20.8
+    developer_ergonomics: 36.3
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 34.3
+    operational_transparency: 15.8
+  previous_composite: 38.2
   provenance:
     conformance: derived
     contracts:
@@ -275,14 +294,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/proofdraw/refs/heads/main/screenshots/proofdraw-2026-08-17T081348.png
+screenshot: https://apis.io/screenshots/proofdraw/proofdraw-2026-08-17T081348.png
 security:
 - kind: authentication
   name: Proofdraw Authentication
@@ -296,6 +315,14 @@ security:
   name: Proofdraw Vulnerability Disclosure
   slug: proofdraw-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 3
+skills:
+- name: Run a verifiable draw
+  slug: proofdraw-run-verifiable-draw
+- name: Schedule a draw and collect the result asynchronously
+  slug: proofdraw-schedule-a-draw
+- name: Independently verify a ProofDraw result
+  slug: proofdraw-verify-a-draw
 slug: proofdraw
 tags:
 - Randomness
@@ -304,7 +331,7 @@ tags:
 - Verifiable Randomness
 - Cryptography
 - raffle
-- Giveaway
+- Giveaways
 - Sweepstakes
 - Lottery
 - Verification

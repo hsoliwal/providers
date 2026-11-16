@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -46,49 +53,56 @@ api_count: 1
 apis:
 - baseURL: https://codeberg.org/api/v1
   baseurl_source: declared
-  description: Read and write repository files, list commits, and read the Git tree.
-  name: Codeberg Git Content API
-  slug: codeberg-git-content-api
-- baseURL: https://codeberg.org/api/v1
-  baseurl_source: declared
-  description: List, search, create, get, edit, and comment on issues.
-  name: Codeberg Issues API
-  slug: codeberg-issues-api
-- baseURL: https://codeberg.org/api/v1
-  baseurl_source: declared
   description: Server metadata.
   name: Codeberg Miscellaneous API
   slug: codeberg-miscellaneous-api
 - baseURL: https://codeberg.org/api/v1
   baseurl_source: declared
-  description: Get and manage organizations and their repositories.
-  name: Codeberg Organizations API
-  slug: codeberg-organizations-api
+  description: The activitypub API from Codeberg — 11 operation(s) for activitypub.
+  name: Codeberg Activitypub API
+  slug: codeberg-activitypub-api
 - baseURL: https://codeberg.org/api/v1
   baseurl_source: declared
-  description: List, create, get, update, and merge pull requests.
-  name: Codeberg Pull Requests API
-  slug: codeberg-pull-requests-api
+  description: The admin API from Codeberg — 34 operation(s) for admin.
+  name: Codeberg Admin API
+  slug: codeberg-admin-api
 - baseURL: https://codeberg.org/api/v1
   baseurl_source: declared
-  description: Manage repository releases attached to Git tags.
-  name: Codeberg Releases API
-  slug: codeberg-releases-api
+  description: The issue API from Codeberg — 33 operation(s) for issue.
+  name: Codeberg Issue API
+  slug: codeberg-issue-api
 - baseURL: https://codeberg.org/api/v1
   baseurl_source: declared
-  description: Create, search, get, edit, and delete repositories and their branches and tags.
-  name: Codeberg Repositories API
-  slug: codeberg-repositories-api
+  description: The notification API from Codeberg — 4 operation(s) for notification.
+  name: Codeberg Notification API
+  slug: codeberg-notification-api
 - baseURL: https://codeberg.org/api/v1
   baseurl_source: declared
-  description: Look up and search users and the authenticated account.
-  name: Codeberg Users API
-  slug: codeberg-users-api
-artifact_total: 24
+  description: The organization API from Codeberg — 42 operation(s) for organization.
+  name: Codeberg Organization API
+  slug: codeberg-organization-api
+- baseURL: https://codeberg.org/api/v1
+  baseurl_source: declared
+  description: The package API from Codeberg — 5 operation(s) for package.
+  name: Codeberg Package API
+  slug: codeberg-package-api
+- baseURL: https://codeberg.org/api/v1
+  baseurl_source: declared
+  description: The repository API from Codeberg — 126 operation(s) for repository.
+  name: Codeberg Repository API
+  slug: codeberg-repository-api
+- baseURL: https://codeberg.org/api/v1
+  baseurl_source: declared
+  description: The settings API from Codeberg — 4 operation(s) for settings.
+  name: Codeberg Settings API
+  slug: codeberg-settings-api
+- baseURL: https://codeberg.org/api/v1
+  baseurl_source: declared
+  description: The user API from Codeberg — 54 operation(s) for user.
+  name: Codeberg User API
+  slug: codeberg-user-api
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Codeberg API (Forgejo) Git Content API
   slug: open-codeberg-git-content-api
@@ -118,22 +132,22 @@ collections:
   slug: open-codeberg
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/capabilities/codeberg-capability-edges.yml
+  href: https://artifacts.apis.io/codeberg/capabilities/codeberg-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/codeberg-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/agentic-access/codeberg-agentic-access.yml
+  href: https://artifacts.apis.io/codeberg/agentic-access/codeberg-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/codeberg-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/security/codeberg-domain-security.yml
+  href: https://artifacts.apis.io/codeberg/security/codeberg-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codeberg-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/authentication/codeberg-authentication.yml
+  href: https://artifacts.apis.io/codeberg/authentication/codeberg-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codeberg-authentication.yml
@@ -154,17 +168,17 @@ common:
   type: Documentation
   url: https://docs.codeberg.org
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/plans/codeberg-plans-pricing.yml
+  href: https://artifacts.apis.io/codeberg/plans/codeberg-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/codeberg-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/rate-limits/codeberg-rate-limits.yml
+  href: https://artifacts.apis.io/codeberg/rate-limits/codeberg-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/codeberg-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/finops/codeberg-finops.yml
+  href: https://artifacts.apis.io/codeberg/finops/codeberg-finops.yml
   title: ''
   type: FinOps
   url: finops/codeberg-finops.yml
@@ -188,7 +202,10 @@ modified: '2026-07-12'
 name: Codeberg
 nav: Providers
 network: true
-overview: 'Codeberg publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Git Content API, Issues API, Miscellaneous API, and 5 more. Tagged areas include Code Hosting, Git, Git Hosting, Version Control, and Repositories.
+overview: 'Codeberg publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Miscellaneous API, Activitypub API, Admin API, and 7 more. Tagged areas include Code Hosting, Version Control, Git Hosting, Repositories, and Pull Requests.
+
+
+  The Codeberg catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Codeberg''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
@@ -196,50 +213,63 @@ plans:
 - name: Codeberg Plans Pricing
   plan_count: 2
   slug: codeberg-plans-pricing
-random_paper: 13
+random_paper: 11
 rate_limits:
 - limit_count: 3
   name: Codeberg Rate Limits
   slug: codeberg-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Codeberg API Rules
+  rule_count: 58
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 4
+    warn: 15
+  slug: codeberg-rules
 score:
-  band: emerging
-  composite: 25.3
+  band: thin
+  composite: 29.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 16
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.6
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 44.1
+    contract_governance: 13.6
+    contract_quality: 44.7
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.2
+  previous_composite: 28.7
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 47.4
       derived: 0
-      marker_coverage: 0.0
-      total: 8
+      marker_coverage: 52.6
+      total: 19
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/codeberg/refs/heads/main/screenshots/codeberg-2026-07-25T205910.png
+    score: 22.2
+screenshot: https://apis.io/screenshots/codeberg/codeberg-2026-07-25T205910.png
 security:
 - kind: authentication
   name: Codeberg Authentication
@@ -252,9 +282,8 @@ security:
 slug: codeberg
 tags:
 - Code Hosting
-- Git
-- Git Hosting
 - Version Control
+- Git Hosting
 - Repositories
 - Pull Requests
 - Issue Tracking

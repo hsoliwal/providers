@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 28.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 16
   slug: bybe-agentic-access
   summary_line: 16 operations · 3 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.bybe.io
   baseurl_source: declared
@@ -80,15 +83,15 @@ apis:
   description: A store represents a specific retail location of a retailer.
   name: BYBE Stores API
   slug: bybe-stores-api
-artifact_total: 12
+artifact_total: 16
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/capabilities/bybe-capability-edges.yml
+  href: https://artifacts.apis.io/bybe/capabilities/bybe-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bybe-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/overlays/bybe-api-overlay.yaml
+  href: https://artifacts.apis.io/bybe/overlays/bybe-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bybe-api-overlay.yaml
@@ -141,77 +144,77 @@ common:
   type: StatusPage
   url: https://status.bybe.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/authentication/bybe-authentication.yml
+  href: https://artifacts.apis.io/bybe/authentication/bybe-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bybe-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/agentic-access/bybe-agentic-access.yml
+  href: https://artifacts.apis.io/bybe/agentic-access/bybe-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bybe-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/security/bybe-domain-security.yml
+  href: https://artifacts.apis.io/bybe/security/bybe-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bybe-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/conventions/bybe-conventions.yml
+  href: https://artifacts.apis.io/bybe/conventions/bybe-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bybe-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/conventions/bybe-conventions.yml
+  href: https://artifacts.apis.io/bybe/conventions/bybe-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/bybe-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/errors/bybe-problem-types.yml
+  href: https://artifacts.apis.io/bybe/errors/bybe-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bybe-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/lifecycle/bybe-lifecycle.yml
+  href: https://artifacts.apis.io/bybe/lifecycle/bybe-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bybe-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/conformance/bybe-conformance.yml
+  href: https://artifacts.apis.io/bybe/conformance/bybe-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bybe-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/data-model/bybe-data-model.yml
+  href: https://artifacts.apis.io/bybe/data-model/bybe-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bybe-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/packages/bybe-packages.yml
+  href: https://artifacts.apis.io/bybe/packages/bybe-packages.yml
   title: ''
   type: Packages
   url: packages/bybe-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/plans/bybe-plans-pricing.yml
+  href: https://artifacts.apis.io/bybe/plans/bybe-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bybe-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/rate-limits/bybe-rate-limits.yml
+  href: https://artifacts.apis.io/bybe/rate-limits/bybe-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bybe-rate-limits.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/sandbox/bybe-sandbox.yml
+  href: https://artifacts.apis.io/bybe/sandbox/bybe-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bybe-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bybe/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/llms/bybe-llms.txt
+  href: https://artifacts.apis.io/bybe/llms/bybe-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bybe-llms.txt
@@ -226,42 +229,58 @@ network: true
 overview: 'BYBE publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clips API, Consumers API, Manufacturers API, and 4 more. Tagged areas include Company, Alcohol, Beverages, Promotions, and Rebates.
 
 
+  The BYBE catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   BYBE''s developer surface includes documentation, API reference, getting-started guide, pricing, support, authentication, sandbox, and 22 more developer resources.'
 plans:
 - name: Bybe Plans Pricing
   plan_count: 2
   slug: bybe-plans-pricing
-random_paper: 0
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Bybe Rate Limits
   slug: bybe-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: BYBE API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: bybe-rules
 score:
   band: thin
-  composite: 33.3
+  composite: 36.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 45.0
+    artifact_dirs: 25
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 44.6
+    contract_governance: 18.2
+    contract_quality: 49.6
     developer_ergonomics: 42.3
     discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 33.3
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: derived
     skills: derived
@@ -271,13 +290,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bybe/refs/heads/main/screenshots/bybe-2026-07-25T204132.png
+screenshot: https://apis.io/screenshots/bybe/bybe-2026-07-25T204132.png
 security:
 - kind: authentication
   name: Bybe Authentication
@@ -287,6 +306,14 @@ security:
   name: Bybe Domain Security
   slug: bybe-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Clip a BYBE offer for a shopper
+  slug: bybe-clip-an-offer
+- name: Submit purchases to BYBE and pay a shopper back
+  slug: bybe-submit-redemption
+- name: Sync the BYBE product and manufacturer catalog
+  slug: bybe-sync-catalog
 slug: bybe
 tags:
 - Company

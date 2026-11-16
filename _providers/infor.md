@@ -18,24 +18,27 @@ agent_readiness:
     agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: negotiable
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: documented
+    delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: derived
+    error_semantics: verified
     event_surface_described: derived
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-10-17'
+  score: 33.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -54,44 +57,70 @@ apis:
 - description: Infor CloudSuite Financials APIs provide integration with general ledger, accounts payable, accounts receivable, cash management, and financial reporting for enterprise finance operations.
   name: Infor CloudSuite Financials API
   slug: infor-cloudsuite-financials-api
-- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/IONSERVICES
-  baseurl_source: declared
-  description: ION document routing and processing
-  name: Infor ION Documents API
-  phrasing_intents:
-  - id: listIonDocuments
-    intent: List ION business documents and their routing
-    question: Which ION business documents have been routed between my Infor applications lately?
-  - id: getIonDocument
-    intent: Get one ION document with its payload
-    question: How do I see the full payload of a single ION document?
-  phrasing_ops: 2
-  slug: infor-ion-documents-api
-- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
-  baseurl_source: declared
-  description: Infor M3 business API programs
-  name: Infor M3 API
-  phrasing_intents:
-  - id: callM3ApiGet
-    intent: Read data from an Infor M3 MI transaction
-    question: How do I pull customer basic data out of Infor M3 through the ION API Gateway?
-  - id: callM3ApiPost
-    intent: Write to Infor M3 with an MI Add/Change/Delete
-    question: How do I add or change a customer record in Infor M3 via an MI transaction?
-  phrasing_ops: 2
-  slug: infor-m3-api-api
 - description: The Infor Document Management REST API, published on the Infor Developer Portal at developer.infor.com/api and served through the ION API Gateway under the IDM suite path. It covers the content reposi
   name: Infor Document Management (IDM) API
   slug: infor-idm-api
-artifact_total: 23
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Contents API from Infor — 7 operation(s) for contents.
+  name: Infor Contents API
+  slug: infor-contents-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The ICUA API from Infor — 5 operation(s) for icua.
+  name: Infor ICUA API
+  slug: infor-icua-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Languages API from Infor — 1 operation(s) for languages.
+  name: Infor Languages API
+  slug: infor-languages-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Products API from Infor — 18 operation(s) for products.
+  name: Infor Products API
+  slug: infor-products-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The RecentTopics API from Infor — 2 operation(s) for recenttopics.
+  name: Infor Recent Topics API
+  slug: infor-recenttopics-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The S3 Docs API from Infor — 1 operation(s) for s3 docs.
+  name: Infor S3 Docs API
+  slug: infor-s3-docs-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Search API from Infor — 6 operation(s) for search.
+  name: Infor Search API
+  slug: infor-search-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Security API from Infor — 4 operation(s) for security.
+  name: Infor Security API
+  slug: infor-security-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Solutions API from Infor — 3 operation(s) for solutions.
+  name: Infor Solutions API
+  slug: infor-solutions-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The UserFavorites API from Infor — 7 operation(s) for userfavorites.
+  name: Infor User Favorites API
+  slug: infor-userfavorites-api
+- baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
+  baseurl_source: declared
+  description: The Web API from Infor — 12 operation(s) for web.
+  name: Infor Web API
+  slug: infor-web-api
+artifact_total: 33
 asyncapis:
 - description: Infor ION event framework AsyncAPI specification for event-driven integrations with Infor CloudSuite applications. The ION Event Hub publishes business events when transactions occur in Infor applicat
   name: Infor ION Events
   slug: infor-ion-events-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Infor ION API Gateway
   slug: open-infor-ion-api-gateway
@@ -102,32 +131,42 @@ collections:
   name: Infor ION API Gateway ION Documents M3 API API
   slug: open-infor-m3-api-api
 common:
+- group: other
+  href: https://artifacts.apis.io/infor/overlays/infor-ion-documents-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/infor-ion-documents-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/infor/overlays/infor-m3-api-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/infor-m3-api-api-overlay.yaml
 - group: commercial
   title: ''
   type: Pricing
   url: https://www.infor.com/products
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/agentic-access/infor-agentic-access.yml
+  href: https://artifacts.apis.io/infor/agentic-access/infor-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/infor-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/security/infor-trust-center.yml
+  href: https://artifacts.apis.io/infor/security/infor-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/infor-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/security/infor-domain-security.yml
+  href: https://artifacts.apis.io/infor/security/infor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infor-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/authentication/infor-authentication.yml
+  href: https://artifacts.apis.io/infor/authentication/infor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infor-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/scopes/infor-scopes.yml
+  href: https://artifacts.apis.io/infor/scopes/infor-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/infor-scopes.yml
@@ -176,127 +215,127 @@ common:
   type: SDKs
   url: https://github.com/infor-cloud/ion-api-sdk
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/openapi/_original/infor-ion-api-gateway-openapi.yml
+  href: https://artifacts.apis.io/infor/openapi/_original/infor-ion-api-gateway-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/infor-ion-api-gateway-openapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/json-schema/infor-m3-customer-schema.json
+  href: https://artifacts.apis.io/infor/json-schema/infor-m3-customer-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/infor-m3-customer-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/json-ld/infor-context.jsonld
+  href: https://artifacts.apis.io/infor/json-ld/infor-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/infor-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/asyncapi/infor-ion-events-asyncapi.yml
+  href: https://artifacts.apis.io/infor/asyncapi/infor-ion-events-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/infor-ion-events-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/llms/infor-llms.txt
+  href: https://artifacts.apis.io/infor/llms/infor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/infor-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/packages/infor-packages.yml
+  href: https://artifacts.apis.io/infor/packages/infor-packages.yml
   title: ''
   type: Packages
   url: packages/infor-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/packages/infor-packages.yml
+  href: https://artifacts.apis.io/infor/packages/infor-packages.yml
   title: ''
   type: SDKs
   url: packages/infor-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/cli/infor-cli.yml
+  href: https://artifacts.apis.io/infor/cli/infor-cli.yml
   title: ''
   type: CLI
   url: cli/infor-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/components/infor-components.yml
+  href: https://artifacts.apis.io/infor/components/infor-components.yml
   title: ''
   type: Components
   url: components/infor-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/mcp/infor-mcp.yml
+  href: https://artifacts.apis.io/infor/mcp/infor-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/infor-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/mcp/infor-tool-crosswalk.yml
+  href: https://artifacts.apis.io/infor/mcp/infor-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/infor-tool-crosswalk.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/conventions/infor-conventions.yml
+  href: https://artifacts.apis.io/infor/conventions/infor-conventions.yml
   title: ''
   type: Conventions
   url: conventions/infor-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/errors/infor-problem-types.yml
+  href: https://artifacts.apis.io/infor/errors/infor-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/infor-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/lifecycle/infor-lifecycle.yml
+  href: https://artifacts.apis.io/infor/lifecycle/infor-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/infor-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/lifecycle/infor-lifecycle.yml
+  href: https://artifacts.apis.io/infor/lifecycle/infor-lifecycle.yml
   title: ''
   type: StatusPage
   url: lifecycle/infor-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/conformance/infor-conformance.yml
+  href: https://artifacts.apis.io/infor/conformance/infor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/infor-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/conformance/infor-conformance.yml
+  href: https://artifacts.apis.io/infor/conformance/infor-conformance.yml
   title: ''
   type: Compliance
   url: conformance/infor-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/data-model/infor-data-model.yml
+  href: https://artifacts.apis.io/infor/data-model/infor-data-model.yml
   title: ''
   type: DataModel
   url: data-model/infor-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/changelog/infor-changelog.yml
+  href: https://artifacts.apis.io/infor/changelog/infor-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/infor-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/infor/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/asyncapi/infor-ion-events-asyncapi.yml
+  href: https://artifacts.apis.io/infor/asyncapi/infor-ion-events-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/infor-ion-events-asyncapi.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/plans/infor-plans-pricing.yml
+  href: https://artifacts.apis.io/infor/plans/infor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/infor-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/rate-limits/infor-rate-limits.yml
+  href: https://artifacts.apis.io/infor/rate-limits/infor-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/infor-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/finops/infor-finops.yml
+  href: https://artifacts.apis.io/infor/finops/infor-finops.yml
   title: ''
   type: FinOps
   url: finops/infor-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/rules/infor-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/infor/rules/infor-jsonschema-spectral-rules.yml
   title: ''
   type: Rules
   url: rules/infor-jsonschema-spectral-rules.yml
@@ -336,12 +375,12 @@ created: '2026-04-28'
 description: Infor provides industry-specific cloud ERP platforms including CloudSuite Industrial (M3), CloudSuite Financials, and Infor LN. The Infor ION API Gateway enables OAuth 2.0-based integration across Infor applications and third-party systems. SDKs are available via the infor-cloud GitHub organization for Java, .NET, Go, and HTML5 development.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Infor Finops
   primary_unit: ''
-  service_category: Enterprise Software
+  service_category: ''
   slug: infor-finops
-  template: false
+  template: true
 image: https://www.infor.com/logo-infor.png
 json_schemas:
 - name: Infor M3 Customer
@@ -357,13 +396,13 @@ modified: '2026-09-16'
 name: Infor
 nav: Providers
 network: true
-overview: 'Infor publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including ION Documents API, M3 API, and 4 more. Tagged areas include ERP, Manufacturing, Supply Chain, Cloud, and Integration.
+overview: 'Infor publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contents API, ICUA API, Languages API, and 12 more. Tagged areas include ERP, Manufacturing, Supply Chain, Cloud, and Integration.
 
 
   The Infor catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Infor''s developer surface includes pricing, authentication, developer portal, documentation, engineering blog, CLI, changelog, and 43 more developer resources.'
+  Infor''s developer surface includes pricing, authentication, developer portal, documentation, engineering blog, CLI, changelog, and 45 more developer resources.'
 plans:
 - name: Infor Plans Pricing
   plan_count: 1
@@ -404,31 +443,31 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: exemplar
-  composite: 68.7
+  composite: 69.3
   coverage:
-    artifact_dirs: 31
+    artifact_dirs: 33
     catalog_earned: 65.5
     catalog_earned_first_party: 16.0
     catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: -0.1
   facets:
-    access_clarity: 75.0
+    access_clarity: 69.7
     contract_governance: 31.8
-    contract_quality: 59.6
+    contract_quality: 61.9
     developer_ergonomics: 82.7
     discoverability: 73.2
     operational_transparency: 63.2
-  previous_composite: 68.1
+  previous_composite: 69.4
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 2
+      marker_coverage: 78.6
+      total: 14
     mcp: derived
     skills: derived
   regulatory:
@@ -437,13 +476,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/infor/refs/heads/main/screenshots/infor-2026-06-20T183339.png
+    score: 11.1
+screenshot: https://apis.io/screenshots/infor/infor-2026-06-20T183339.png
 security:
 - kind: authentication
   name: Infor Authentication
@@ -457,6 +496,12 @@ security:
   name: Infor Trust Center
   slug: infor-trust-center
   summary_line: SOC 2, ISO 27001, HIPAA, FedRAMP, GDPR
+skill_count: 2
+skills:
+- name: infor-call-m3-business-api
+  slug: infor-call-m3-business-api
+- name: infor-read-ion-documents
+  slug: infor-read-ion-documents
 slug: infor
 tags:
 - ERP

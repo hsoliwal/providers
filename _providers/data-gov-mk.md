@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: CKAN Action API for data.gov.mk, a consistent JSON-over-HTTP interface over the national catalog. Standard actions include package_search, package_show, package_list, organization_list, group_list, an
@@ -49,7 +52,7 @@ common:
   type: Documentation
   url: https://docs.ckan.org/en/latest/api/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/data-gov-mk/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/data-gov-mk/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -65,7 +68,7 @@ overview: 'data.gov.mk is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   data.gov.mk''s developer surface includes documentation and 2 more developer resources.'
-random_paper: 14
+random_paper: 16
 score:
   band: minimal
   composite: 6.5
@@ -86,6 +89,8 @@ score:
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - north-macedonia
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
@@ -102,14 +107,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/data-gov-mk/refs/heads/main/screenshots/data-gov-mk-2026-10-11T103540.png
+screenshot: https://apis.io/screenshots/data-gov-mk/data-gov-mk-2026-10-11T103540.png
 slug: data-gov-mk
 tags:
 - Open Data

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Aptimiz provides digital solutions for agricultural time‑tracking and farm management. Documentation is available at the website but no machine‑readable contract was found.
@@ -32,12 +45,12 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aptimiz/refs/heads/main/vendors/aptimiz-vendors.yml
+  href: https://artifacts.apis.io/aptimiz/vendors/aptimiz-vendors.yml
   title: ''
   type: Vendors
   url: vendors/aptimiz-vendors.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aptimiz/refs/heads/main/hosts/aptimiz-hosts.yml
+  href: https://artifacts.apis.io/aptimiz/hosts/aptimiz-hosts.yml
   title: ''
   type: Hosts
   url: hosts/aptimiz-hosts.yml
@@ -46,7 +59,7 @@ common:
   type: Documentation
   url: https://dev.aptimiz.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aptimiz/refs/heads/main/security/aptimiz-domain-security.yml
+  href: https://artifacts.apis.io/aptimiz/security/aptimiz-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aptimiz-domain-security.yml
@@ -93,10 +106,10 @@ overview: 'Aptimiz is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Aptimiz''s developer surface includes documentation, getting-started guide, support, pricing, and 6 more developer resources.'
-random_paper: 18
+random_paper: 22
 score:
-  band: emerging
-  composite: 16.7
+  band: minimal
+  composite: 10.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 30.0
@@ -104,15 +117,15 @@ score:
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -6.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 26.2
+    developer_ergonomics: 13.1
     discoverability: 53.6
     operational_transparency: 0.0
-  previous_composite: 16.6
+  previous_composite: 16.7
   provenance:
     mcp: derived
   regulatory:
@@ -120,15 +133,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aptimiz/refs/heads/main/screenshots/aptimiz-2026-10-11T100056.png
+screenshot: https://apis.io/screenshots/aptimiz/aptimiz-2026-10-11T100056.png
 security:
 - kind: domain-security
   name: Aptimiz Domain Security

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -32,22 +45,22 @@ common:
   type: Compliance
   url: https://www.breachlock.com/compliance/vendor-assessment/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/breachlock/refs/heads/main/llms/breachlock-llms.txt
+  href: https://artifacts.apis.io/breachlock/llms/breachlock-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/breachlock-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/breachlock/refs/heads/main/well-known/breachlock-well-known.yml
+  href: https://artifacts.apis.io/breachlock/well-known/breachlock-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/breachlock-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/breachlock/refs/heads/main/hosts/breachlock-hosts.yml
+  href: https://artifacts.apis.io/breachlock/hosts/breachlock-hosts.yml
   title: ''
   type: Hosts
   url: hosts/breachlock-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/breachlock/refs/heads/main/vendors/breachlock-vendors.yml
+  href: https://artifacts.apis.io/breachlock/vendors/breachlock-vendors.yml
   title: ''
   type: Vendors
   url: vendors/breachlock-vendors.yml
@@ -68,12 +81,12 @@ common:
   type: Leadership
   url: https://www.breachlock.com/about/leadership/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/breachlock/refs/heads/main/security/breachlock-trust-center.yml
+  href: https://artifacts.apis.io/breachlock/security/breachlock-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/breachlock-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/breachlock/refs/heads/main/security/breachlock-domain-security.yml
+  href: https://artifacts.apis.io/breachlock/security/breachlock-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/breachlock-domain-security.yml
@@ -104,43 +117,44 @@ modified: '2026-10-03'
 name: BreachLock
 nav: Providers
 network: true
-overview: 'BreachLock is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Security, Penetration-Testing, Attack-Surface-Management, Red-Team, and Software-as-a-Service.
+overview: 'BreachLock is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Security, Penetration Testing, Attack Surface Management, Red Team, and Software-as-a-Service.
 
 
   BreachLock''s developer surface includes documentation, getting-started guide, support, pricing, and 12 more developer resources.'
-random_paper: 4
+random_paper: 6
 score:
   band: emerging
-  composite: 21.7
+  composite: 14.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.0
+  delta: -7.7
   facets:
-    access_clarity: 47.4
+    access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 26.2
-    discoverability: 55.4
+    developer_ergonomics: 13.1
+    discoverability: 53.6
     operational_transparency: 0.0
-  previous_composite: 20.7
+  previous_composite: 21.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 18.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/breachlock/breachlock-2026-11-03T122526.png
 security:
 - kind: domain-security
   name: Breachlock Domain Security
@@ -153,9 +167,9 @@ security:
 slug: breachlock
 tags:
 - Security
-- Penetration-Testing
-- Attack-Surface-Management
-- Red-Team
+- Penetration Testing
+- Attack Surface Management
+- Red Team
 - Software-as-a-Service
 website: https://www.breachlock.com/
 ---

@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Free
+  onboarding: unknown
+  pricing: free
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.vigil.wtf
@@ -36,25 +51,25 @@ apis:
   description: Send a score from 1 to 5 for one of your proxied calls, keyed by Vigil's request id (POST /v1/feedback); a later score for the same request replaces the earlier one.
   name: Vigil Feedback API
   slug: vigil-wtf-feedback-api
-artifact_total: 5
+artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vigil-wtf/refs/heads/main/plans/vigil-wtf-plans-pricing.yml
+  href: https://artifacts.apis.io/vigil-wtf/plans/vigil-wtf-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vigil-wtf-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vigil-wtf/refs/heads/main/authentication/vigil-wtf-authentication.yml
+  href: https://artifacts.apis.io/vigil-wtf/authentication/vigil-wtf-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vigil-wtf-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vigil-wtf/refs/heads/main/hosts/vigil-wtf-hosts.yml
+  href: https://artifacts.apis.io/vigil-wtf/hosts/vigil-wtf-hosts.yml
   title: ''
   type: Hosts
   url: hosts/vigil-wtf-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vigil-wtf/refs/heads/main/vendors/vigil-wtf-vendors.yml
+  href: https://artifacts.apis.io/vigil-wtf/vendors/vigil-wtf-vendors.yml
   title: ''
   type: Vendors
   url: vendors/vigil-wtf-vendors.yml
@@ -79,7 +94,7 @@ common:
   type: Blog
   url: https://www.vigil.wtf/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vigil-wtf/refs/heads/main/security/vigil-wtf-domain-security.yml
+  href: https://artifacts.apis.io/vigil-wtf/security/vigil-wtf-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vigil-wtf-domain-security.yml
@@ -122,36 +137,52 @@ network: true
 overview: 'Vigil publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Proxy and Feedback API. Tagged areas include Monitoring, AI Middleware, Security, and Analytics.
 
 
+  The Vigil catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Vigil''s developer surface includes authentication, pricing, engineering blog, documentation, changelog, and 10 more developer resources.'
 plans:
 - name: Vigil Wtf Plans Pricing
   plan_count: 1
   slug: vigil-wtf-plans-pricing
-random_paper: 19
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Vigil API Rules
+  rule_count: 46
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 2
+  slug: vigil-wtf-rules
 score:
   band: thin
-  composite: 38.5
+  composite: 35.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 40.0
+    artifact_dirs: 15
+    catalog_earned: 44.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 17.9
+  delta: -6.0
   facets:
-    access_clarity: 65.8
-    contract_governance: 0.0
-    contract_quality: 44.4
-    developer_ergonomics: 23.8
+    access_clarity: 43.4
+    contract_governance: 13.6
+    contract_quality: 49.3
+    developer_ergonomics: 17.9
     discoverability: 75.0
-    operational_transparency: 15.8
-  previous_composite: 20.6
+    operational_transparency: 18.4
+  previous_composite: 41.5
   provenance:
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: unknown
   regulatory:
@@ -159,14 +190,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/vigil-wtf/refs/heads/main/screenshots/vigil-wtf-2026-10-11T133003.png
+screenshot: https://apis.io/screenshots/vigil-wtf/vigil-wtf-2026-10-11T133003.png
 security:
 - kind: authentication
   name: Vigil Wtf Authentication

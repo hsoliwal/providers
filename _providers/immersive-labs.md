@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Immersive platform V1 API — a single GraphQL endpoint exposing organizational data (achievements, assignable content, labs, collections, cyber roles, viewer account, workforce scenarios, and OIDC '
@@ -47,7 +50,7 @@ common:
   type: BlogRSS
   url: https://www.immersivelabs.com/resources/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/security/immersive-labs-domain-security.yml
+  href: https://artifacts.apis.io/immersive-labs/security/immersive-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/immersive-labs-domain-security.yml
@@ -112,42 +115,42 @@ common:
   type: Compliance
   url: https://www.immersivelabs.com/company/legal/security-and-privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/authentication/immersive-labs-authentication.yml
+  href: https://artifacts.apis.io/immersive-labs/authentication/immersive-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/immersive-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/conventions/immersive-labs-conventions.yml
+  href: https://artifacts.apis.io/immersive-labs/conventions/immersive-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/immersive-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/lifecycle/immersive-labs-lifecycle.yml
+  href: https://artifacts.apis.io/immersive-labs/lifecycle/immersive-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/immersive-labs-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/lifecycle/immersive-labs-lifecycle.yml
+  href: https://artifacts.apis.io/immersive-labs/lifecycle/immersive-labs-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/immersive-labs-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/conformance/immersive-labs-conformance.yml
+  href: https://artifacts.apis.io/immersive-labs/conformance/immersive-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/immersive-labs-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/llms/immersive-labs-llms.txt
+  href: https://artifacts.apis.io/immersive-labs/llms/immersive-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/immersive-labs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/mcp/immersive-labs-mcp.yml
+  href: https://artifacts.apis.io/immersive-labs/mcp/immersive-labs-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/immersive-labs-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/security/immersive-labs-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/immersive-labs/security/immersive-labs-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/immersive-labs-vulnerability-disclosure.yml
@@ -156,7 +159,7 @@ common:
   type: Security
   url: https://www.immersivelabs.com/company/legal/security-and-privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/security/immersive-labs-trust-center.yml
+  href: https://artifacts.apis.io/immersive-labs/security/immersive-labs-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/immersive-labs-trust-center.yml
@@ -172,12 +175,12 @@ overview: 'Immersive Labs is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Immersive Labs'' developer surface includes API reference, documentation, getting-started guide, support, engineering blog, signup flow, authentication, and 20 more developer resources.'
-random_paper: 10
+random_paper: 0
 score:
   band: thin
   composite: 38.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -205,14 +208,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/immersive-labs/refs/heads/main/screenshots/immersive-labs-2026-07-25T222128.png
+screenshot: https://apis.io/screenshots/immersive-labs/immersive-labs-2026-07-25T222128.png
 security:
 - kind: authentication
   name: Immersive Labs Authentication

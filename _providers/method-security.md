@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 34.6
-  scored_at: '2026-10-17'
+  score: 32.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 2
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 18
   slug: method-security-agentic-access
   summary_line: 18 operations · 7 acting · 2 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://your-instance.method.delivery/method-api-gateway/api
   baseurl_source: declared
@@ -94,15 +97,22 @@ apis:
   description: The targets API from Method Security — 3 operation(s) for targets.
   name: Method Security Targets API
   slug: method-security-targets-api
-artifact_total: 28
+- baseURL: https://your-instance.method.delivery/method-api-gateway/api
+  baseurl_source: declared
+  description: The finding_definitions API from Method Security — 3 operation(s) for finding_definitions.
+  name: Method Security Finding Definitions API
+  slug: method-security-finding-definitions-api
+- baseURL: https://your-instance.method.delivery/method-api-gateway/api
+  baseurl_source: declared
+  description: The findings API from Method Security — 2 operation(s) for findings.
+  name: Method Security Findings API
+  slug: method-security-findings-api
+artifact_total: 34
 asyncapis:
 - description: ''
   name: Method Security Webhooks
   slug: method-security-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: API Reference audit API
   slug: open-method-security-audit-api
@@ -135,7 +145,12 @@ collections:
   slug: open-method-security-targets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/overlays/method-security-openapi-overlay.yaml
+  href: https://artifacts.apis.io/method-security/capabilities/method-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/method-security-capability-edges.yml
+- group: other
+  href: https://artifacts.apis.io/method-security/overlays/method-security-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/method-security-openapi-overlay.yaml
@@ -176,97 +191,97 @@ common:
   type: PrivacyPolicy
   url: https://method.security/legal/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/authentication/method-security-authentication.yml
+  href: https://artifacts.apis.io/method-security/authentication/method-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/method-security-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/agentic-access/method-security-agentic-access.yml
+  href: https://artifacts.apis.io/method-security/agentic-access/method-security-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/method-security-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/mcp/method-security-mcp.yml
+  href: https://artifacts.apis.io/method-security/mcp/method-security-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/method-security-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/llms/method-security-llms.txt
+  href: https://artifacts.apis.io/method-security/llms/method-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/method-security-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/well-known/method-security-well-known.yml
+  href: https://artifacts.apis.io/method-security/well-known/method-security-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/method-security-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/well-known/method-security-api-catalog.json
+  href: https://artifacts.apis.io/method-security/well-known/method-security-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/method-security-api-catalog.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/packages/method-security-packages.yml
+  href: https://artifacts.apis.io/method-security/packages/method-security-packages.yml
   title: ''
   type: Packages
   url: packages/method-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/packages/method-security-packages.yml
+  href: https://artifacts.apis.io/method-security/packages/method-security-packages.yml
   title: ''
   type: SDKs
   url: packages/method-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/cli/method-security-cli.yml
+  href: https://artifacts.apis.io/method-security/cli/method-security-cli.yml
   title: ''
   type: CLI
   url: cli/method-security-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/conventions/method-security-conventions.yml
+  href: https://artifacts.apis.io/method-security/conventions/method-security-conventions.yml
   title: ''
   type: Conventions
   url: conventions/method-security-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/errors/method-security-problem-types.yml
+  href: https://artifacts.apis.io/method-security/errors/method-security-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/method-security-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/lifecycle/method-security-lifecycle.yml
+  href: https://artifacts.apis.io/method-security/lifecycle/method-security-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/method-security-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/changelog/method-security-changelog.yml
+  href: https://artifacts.apis.io/method-security/changelog/method-security-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/method-security-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/data-model/method-security-data-model.yml
+  href: https://artifacts.apis.io/method-security/data-model/method-security-data-model.yml
   title: ''
   type: DataModel
   url: data-model/method-security-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/conformance/method-security-conformance.yml
+  href: https://artifacts.apis.io/method-security/conformance/method-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/method-security-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/asyncapi/method-security-webhooks.yml
+  href: https://artifacts.apis.io/method-security/asyncapi/method-security-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/method-security-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/method-security/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/security/method-security-domain-security.yml
+  href: https://artifacts.apis.io/method-security/security/method-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/method-security-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/security/method-security-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/method-security/security/method-security-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/method-security-vulnerability-disclosure.yml
@@ -275,12 +290,12 @@ common:
   type: Security
   url: https://docs.method.security/platform/security-governance/reporting-security-concerns
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/security/method-security-trust-center.yml
+  href: https://artifacts.apis.io/method-security/security/method-security-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/method-security-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/security/method-security-trust-center.yml
+  href: https://artifacts.apis.io/method-security/security/method-security-trust-center.yml
   title: ''
   type: Compliance
   url: security/method-security-trust-center.yml
@@ -297,33 +312,46 @@ modified: '2026-07-20'
 name: Method Security
 nav: Providers
 network: true
-overview: 'Method Security publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit API, Auth API, Blueprints API, and 7 more. Tagged areas include Company, Security, Cybersecurity, Offensive Security, and Exposure Management.
+overview: 'Method Security publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit API, Auth API, Blueprints API, and 9 more. Tagged areas include Company, Security, Cybersecurity, Offensive Security, and Exposure Management.
 
 
-  The Method Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Method Security catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Method Security''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, CLI, changelog, and 25 more developer resources.'
-random_paper: 12
+  Method Security''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, CLI, changelog, and 26 more developer resources.'
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Method Security API Rules
+  rule_count: 45
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 1
+    warn: 9
+  slug: method-security-rules
 score:
   band: developing
-  composite: 49.9
+  composite: 51.8
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.3
   facets:
     access_clarity: 36.8
-    contract_governance: 18.2
-    contract_quality: 48.3
+    contract_governance: 31.8
+    contract_quality: 49.6
     developer_ergonomics: 68.5
     discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 49.9
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -331,7 +359,7 @@ score:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 10
+      total: 23
     mcp: first-party
     skills: derived
   regulatory:
@@ -340,13 +368,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/method-security/refs/heads/main/screenshots/method-security-2026-08-07T172708.png
+screenshot: https://apis.io/screenshots/method-security/method-security-2026-08-07T172708.png
 security:
 - kind: authentication
   name: Method Security Authentication
@@ -364,6 +392,16 @@ security:
   name: Method Security Trust Center
   slug: method-security-trust-center
   summary_line: SOC 2
+skill_count: 4
+skills:
+- name: Manage agent skills
+  slug: method-security-manage-agent-skills
+- name: Search and review targeting runs
+  slug: method-security-review-targeting-runs
+- name: Create an environment and run a blueprint
+  slug: method-security-run-a-blueprint
+- name: Triage and close a Method Issue
+  slug: method-security-triage-and-close-issue
 slug: method-security
 tags:
 - Company

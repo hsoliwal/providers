@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'tekton.dev/v1 kind=Task — defines a series of steps that launch specific build or delivery tools, ingest specific inputs (params, workspaces, resources), and produce specific outputs (results). Tasks '
@@ -99,17 +103,14 @@ apis:
 - description: The Tekton Catalog hosts community-curated, versioned Task and Pipeline definitions consumed via the Hub or directly by the Git resolver.
   name: Tekton Catalog
   slug: tekton-catalog-api
-artifact_total: 27
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Tekton
   slug: open-tekton-pipeline
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tekton/refs/heads/main/security/tekton-domain-security.yml
+  href: https://artifacts.apis.io/tekton/security/tekton-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tekton-domain-security.yml
@@ -198,17 +199,17 @@ common:
   type: RoadMap
   url: https://github.com/tektoncd/pipeline/blob/main/roadmap.md
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tekton/refs/heads/main/plans/tekton-plans-pricing.yml
+  href: https://artifacts.apis.io/tekton/plans/tekton-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tekton-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tekton/refs/heads/main/rate-limits/tekton-rate-limits.yml
+  href: https://artifacts.apis.io/tekton/rate-limits/tekton-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tekton-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tekton/refs/heads/main/finops/tekton-finops.yml
+  href: https://artifacts.apis.io/tekton/finops/tekton-finops.yml
   title: ''
   type: FinOps
   url: finops/tekton-finops.yml
@@ -236,7 +237,7 @@ plans:
 - name: Tekton Plans Pricing
   plan_count: 2
   slug: tekton-plans-pricing
-random_paper: 1
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Tekton Rate Limits
@@ -245,13 +246,13 @@ score:
   band: emerging
   composite: 20.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 0.0
@@ -259,21 +260,21 @@ score:
     developer_ergonomics: 31.0
     discoverability: 48.2
     operational_transparency: 31.6
-  previous_composite: 22.3
+  previous_composite: 20.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/tekton/refs/heads/main/screenshots/tekton-2026-06-20T195017.png
+screenshot: https://apis.io/screenshots/tekton/tekton-2026-06-20T195017.png
 security:
 - kind: domain-security
   name: Tekton Domain Security

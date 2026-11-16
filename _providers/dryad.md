@@ -1,16 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 31.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 25
   slug: dryad-agentic-access
   summary_line: 25 operations · 9 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
@@ -80,11 +86,8 @@ apis:
   description: Operations on individual versions of a dataset
   name: Dryad Versions API
   slug: dryad-versions-api
-artifact_total: 74
+artifact_total: 73
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dryad datasets API
   slug: open-dryad-datasets-api
@@ -108,17 +111,17 @@ collections:
   slug: open-dryad-versions-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/dryad/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/dryad/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/dryad/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -127,7 +130,7 @@ common:
   type: Website
   url: https://www.datadryad.org/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/capabilities/dryad-capability-edges.yml
+  href: https://artifacts.apis.io/dryad/capabilities/dryad-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dryad-capability-edges.yml
@@ -140,17 +143,17 @@ common:
   type: License
   url: https://github.com/datadryad/dryad-app/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/agentic-access/dryad-agentic-access.yml
+  href: https://artifacts.apis.io/dryad/agentic-access/dryad-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dryad-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/security/dryad-domain-security.yml
+  href: https://artifacts.apis.io/dryad/security/dryad-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dryad-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/authentication/dryad-authentication.yml
+  href: https://artifacts.apis.io/dryad/authentication/dryad-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dryad-authentication.yml
@@ -234,7 +237,7 @@ json_schemas:
   property_count: 9
   slug: author
 - name: Dataset
-  property_count: 0
+  property_count: 6
   slug: dataset
 - name: Dataset Links
   property_count: 1
@@ -261,7 +264,7 @@ json_schemas:
   property_count: 1
   slug: embedded_versions
 - name: File
-  property_count: 0
+  property_count: 7
   slug: file
 - name: File Links
   property_count: 1
@@ -300,7 +303,7 @@ json_schemas:
   property_count: 4
   slug: hal_page_links
 - name: Hal Paged Response
-  property_count: 0
+  property_count: 1
   slug: hal_paged_response
 - name: Hal Self Link
   property_count: 1
@@ -312,7 +315,7 @@ json_schemas:
   property_count: 2
   slug: paging_counts
 - name: Processor Result
-  property_count: 0
+  property_count: 9
   slug: processor_result
 - name: Processor Results
   property_count: 0
@@ -348,7 +351,7 @@ json_schemas:
   property_count: 1
   slug: url_json
 - name: Version
-  property_count: 0
+  property_count: 7
   slug: version
 - name: Version Links
   property_count: 1
@@ -400,29 +403,29 @@ rules:
   slug: dryad-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.4
+  composite: 44.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 61.2
     catalog_earned_first_party: 0.0
     catalog_gap: 53.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 1.4
   facets:
     access_clarity: 52.6
     contract_governance: 23.5
-    contract_quality: 60.2
+    contract_quality: 65.8
     developer_ergonomics: 19.0
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 49.0
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
   regulatory:
     applies: true
@@ -430,13 +433,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/screenshots/dryad-2026-06-20T180256.png
+screenshot: https://apis.io/screenshots/dryad/dryad-2026-06-20T180256.png
 security:
 - kind: authentication
   name: Dryad Authentication

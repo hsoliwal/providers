@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 28.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -53,17 +56,14 @@ arazzos:
 - description: Post a batch of freight loads to the TruckSmarter load board via the partner Load Posting API, then remove them by loadId once they are covered or cancelled.
   name: Post loads to TruckSmarter and remove them once covered
   slug: trucksmarter-post-and-remove-loads
-artifact_total: 7
+artifact_total: 8
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: TruckSmarter Load Posting Loads API
   slug: open-trucksmarter-loads-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/overlays/trucksmarter-load-posting-overlay.yaml
+  href: https://artifacts.apis.io/trucksmarter/overlays/trucksmarter-load-posting-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/trucksmarter-load-posting-overlay.yaml
@@ -112,72 +112,72 @@ common:
   type: GitHubOrganization
   url: https://github.com/TruckSmarter
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/authentication/trucksmarter-authentication.yml
+  href: https://artifacts.apis.io/trucksmarter/authentication/trucksmarter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/trucksmarter-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/llms/trucksmarter-llms.txt
+  href: https://artifacts.apis.io/trucksmarter/llms/trucksmarter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/trucksmarter-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/mcp/trucksmarter-mcp.yml
+  href: https://artifacts.apis.io/trucksmarter/mcp/trucksmarter-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/trucksmarter-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/conventions/trucksmarter-conventions.yml
+  href: https://artifacts.apis.io/trucksmarter/conventions/trucksmarter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/trucksmarter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/conventions/trucksmarter-conventions.yml
+  href: https://artifacts.apis.io/trucksmarter/conventions/trucksmarter-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/trucksmarter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/errors/trucksmarter-problem-types.yml
+  href: https://artifacts.apis.io/trucksmarter/errors/trucksmarter-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/trucksmarter-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/data-model/trucksmarter-data-model.yml
+  href: https://artifacts.apis.io/trucksmarter/data-model/trucksmarter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/trucksmarter-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/conformance/trucksmarter-conformance.yml
+  href: https://artifacts.apis.io/trucksmarter/conformance/trucksmarter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/trucksmarter-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/lifecycle/trucksmarter-lifecycle.yml
+  href: https://artifacts.apis.io/trucksmarter/lifecycle/trucksmarter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/trucksmarter-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/packages/trucksmarter-packages.yml
+  href: https://artifacts.apis.io/trucksmarter/packages/trucksmarter-packages.yml
   title: ''
   type: Packages
   url: packages/trucksmarter-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/trucksmarter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/arazzo/trucksmarter-post-and-remove-loads.yml
+  href: https://artifacts.apis.io/trucksmarter/arazzo/trucksmarter-post-and-remove-loads.yml
   title: ''
   type: Arazzo
   url: arazzo/trucksmarter-post-and-remove-loads.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/agentic-access/trucksmarter-agentic-access.yml
+  href: https://artifacts.apis.io/trucksmarter/agentic-access/trucksmarter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/trucksmarter-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/security/trucksmarter-domain-security.yml
+  href: https://artifacts.apis.io/trucksmarter/security/trucksmarter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trucksmarter-domain-security.yml
@@ -192,27 +192,43 @@ network: true
 overview: 'TruckSmarter publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Loads API. Tagged areas include Trucking, Freight, Logistics, Load Board, and Transportation.
 
 
+  The TruckSmarter catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   TruckSmarter''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
-random_paper: 21
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: TruckSmarter API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: trucksmarter-rules
 score:
   band: thin
-  composite: 29.1
+  composite: 30.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 15.1
     developer_ergonomics: 37.5
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 29.0
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -229,13 +245,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/screenshots/trucksmarter-2026-08-17T082446.png
+screenshot: https://apis.io/screenshots/trucksmarter/trucksmarter-2026-08-17T082446.png
 security:
 - kind: authentication
   name: Trucksmarter Authentication
@@ -245,6 +261,10 @@ security:
   name: Trucksmarter Domain Security
   slug: trucksmarter-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Post and manage loads on TruckSmarter
+  slug: trucksmarter-post-and-manage-loads
 slug: trucksmarter
 tags:
 - Trucking

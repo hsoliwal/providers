@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -41,17 +45,17 @@ common:
   type: Website
   url: https://mentorcloud.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mentorcloud/refs/heads/main/security/mentorcloud-domain-security.yml
+  href: https://artifacts.apis.io/mentorcloud/security/mentorcloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mentorcloud-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mentorcloud/refs/heads/main/llms/mentorcloud-llms.txt
+  href: https://artifacts.apis.io/mentorcloud/llms/mentorcloud-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mentorcloud-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mentorcloud/refs/heads/main/changelog/mentorcloud-changelog.yml
+  href: https://artifacts.apis.io/mentorcloud/changelog/mentorcloud-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mentorcloud-changelog.yml
@@ -95,12 +99,12 @@ overview: 'MentorCloud is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   MentorCloud''s developer surface includes changelog, release notes, engineering blog, pricing, and 7 more developer resources.'
-random_paper: 8
+random_paper: 20
 score:
   band: emerging
   composite: 15.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -121,14 +125,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mentorcloud/refs/heads/main/screenshots/mentorcloud-2026-08-07T172536.png
+screenshot: https://apis.io/screenshots/mentorcloud/mentorcloud-2026-08-07T172536.png
 security:
 - kind: domain-security
   name: Mentorcloud Domain Security

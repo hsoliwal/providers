@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.9
-  scored_at: '2026-10-17'
+  score: 34.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -61,11 +67,8 @@ apis:
   description: The Project API from Newforma — 4 operation(s) for project.
   name: Newforma Project API
   slug: newforma-project-api
-artifact_total: 12
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Newforma Konekt Hub API
   slug: open-newforma-hub-api
@@ -81,7 +84,7 @@ common:
   type: BlogRSS
   url: https://www.newforma.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/capabilities/newforma-capability-edges.yml
+  href: https://artifacts.apis.io/newforma/capabilities/newforma-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/newforma-capability-edges.yml
@@ -126,82 +129,82 @@ common:
   type: Deprecation
   url: https://konekt.help.newforma.com/4408494681869-integrations-api/360008491831-api/360041452712-newforma-konekt-rest-api/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/openapi/_original/newforma-konekt-openapi-original.json
+  href: https://artifacts.apis.io/newforma/openapi/_original/newforma-konekt-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/newforma-konekt-openapi-original.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/security/newforma-domain-security.yml
+  href: https://artifacts.apis.io/newforma/security/newforma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/newforma-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/agentic-access/newforma-agentic-access.yml
+  href: https://artifacts.apis.io/newforma/agentic-access/newforma-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/newforma-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/authentication/newforma-authentication.yml
+  href: https://artifacts.apis.io/newforma/authentication/newforma-authentication.yml
   title: ''
   type: Authentication
   url: authentication/newforma-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/scopes/newforma-scopes.yml
+  href: https://artifacts.apis.io/newforma/scopes/newforma-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/newforma-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/well-known/newforma-well-known.yml
+  href: https://artifacts.apis.io/newforma/well-known/newforma-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/newforma-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/mcp/newforma-mcp.yml
+  href: https://artifacts.apis.io/newforma/mcp/newforma-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/newforma-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/llms/newforma-llms.txt
+  href: https://artifacts.apis.io/newforma/llms/newforma-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/newforma-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/overlays/newforma-konekt-overlay.yaml
+  href: https://artifacts.apis.io/newforma/overlays/newforma-konekt-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/newforma-konekt-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/conformance/newforma-conformance.yml
+  href: https://artifacts.apis.io/newforma/conformance/newforma-conformance.yml
   title: ''
   type: Conformance
   url: conformance/newforma-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/errors/newforma-problem-types.yml
+  href: https://artifacts.apis.io/newforma/errors/newforma-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/newforma-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/lifecycle/newforma-lifecycle.yml
+  href: https://artifacts.apis.io/newforma/lifecycle/newforma-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/newforma-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/conventions/newforma-conventions.yml
+  href: https://artifacts.apis.io/newforma/conventions/newforma-conventions.yml
   title: ''
   type: Conventions
   url: conventions/newforma-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/data-model/newforma-data-model.yml
+  href: https://artifacts.apis.io/newforma/data-model/newforma-data-model.yml
   title: ''
   type: DataModel
   url: data-model/newforma-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/sandbox/newforma-sandbox.yml
+  href: https://artifacts.apis.io/newforma/sandbox/newforma-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/newforma-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/newforma/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -216,32 +219,48 @@ network: true
 overview: 'Newforma publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Hub API, Issue API, Project API, and 1 more. Tagged areas include Company, AEC, Construction, Architecture, and Engineering.
 
 
+  The Newforma catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Newforma''s developer surface includes documentation, API reference, getting-started guide, support, changelog, authentication, sandbox, and 21 more developer resources.'
-random_paper: 5
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Newforma API Rules
+  rule_count: 46
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 4
+    warn: 3
+  slug: newforma-rules
 scopes:
 - name: Newforma Scopes
   scope_count: 14
   slug: newforma-scopes
   summary_line: 14 scopes · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 36.8
+  band: developing
+  composite: 41.2
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.7
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.2
-    developer_ergonomics: 48.2
+    developer_ergonomics: 56.5
     discoverability: 73.2
-    operational_transparency: 31.6
-  previous_composite: 36.8
+    operational_transparency: 39.5
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -258,13 +277,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/newforma/refs/heads/main/screenshots/newforma-2026-08-07T185104.png
+screenshot: https://apis.io/screenshots/newforma/newforma-2026-08-07T185104.png
 security:
 - kind: authentication
   name: Newforma Authentication
@@ -274,6 +293,10 @@ security:
   name: Newforma Domain Security
   slug: newforma-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Triage Newforma Konekt project issues
+  slug: newforma-triage-issues
 slug: newforma
 tags:
 - Company

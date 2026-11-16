@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +35,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xembly/refs/heads/main/llms/xembly-llms.txt
+  href: https://artifacts.apis.io/xembly/llms/xembly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/xembly-llms.txt
@@ -50,7 +53,7 @@ name: Xembly
 nav: Providers
 network: true
 overview: Xembly is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Executive Assistant, Meetings, and Scheduling.
-random_paper: 19
+random_paper: 9
 score:
   band: minimal
   composite: 0.0
@@ -90,8 +93,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

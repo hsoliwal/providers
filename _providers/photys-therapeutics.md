@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Wix-platform Site MCP server Photys serves from its own production host. Nine tools over public site content — business details, in-site search, site API docs discovery, an anonymous visitor-token
@@ -44,7 +50,7 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/security/photys-therapeutics-domain-security.yml
+  href: https://artifacts.apis.io/photys-therapeutics/security/photys-therapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/photys-therapeutics-domain-security.yml
@@ -57,37 +63,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/photys
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/mcp/photys-therapeutics-mcp.yml
+  href: https://artifacts.apis.io/photys-therapeutics/mcp/photys-therapeutics-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/photys-therapeutics-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/llms/photys-therapeutics-llms.txt
+  href: https://artifacts.apis.io/photys-therapeutics/llms/photys-therapeutics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/photys-therapeutics-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/authentication/photys-therapeutics-authentication.yml
+  href: https://artifacts.apis.io/photys-therapeutics/authentication/photys-therapeutics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/photys-therapeutics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/conformance/photys-therapeutics-conformance.yml
+  href: https://artifacts.apis.io/photys-therapeutics/conformance/photys-therapeutics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/photys-therapeutics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/conventions/photys-therapeutics-conventions.yml
+  href: https://artifacts.apis.io/photys-therapeutics/conventions/photys-therapeutics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/photys-therapeutics-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/plans/photys-therapeutics-plans-pricing.yml
+  href: https://artifacts.apis.io/photys-therapeutics/plans/photys-therapeutics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/photys-therapeutics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/rate-limits/photys-therapeutics-rate-limits.yml
+  href: https://artifacts.apis.io/photys-therapeutics/rate-limits/photys-therapeutics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/photys-therapeutics-rate-limits.yml
@@ -97,7 +103,7 @@ description: 'Photys Therapeutics is a clinical-stage biopharmaceutical company 
 image: https://static.wixstatic.com/ficons/2079da_8b1665acced14f96aa889139336df6ad%7Emv2.ico
 layout: provider
 mcp_servers:
-- description: Remote MCP server at www.photys.com; 9 tools listed.
+- description: Remote MCP server at www.photys.com; 10 tools listed.
   name: Site Visitor Assistant for site "Photys"
   slug: site-visitor-assistant-for-site-photys
 modified: '2026-08-26'
@@ -112,7 +118,7 @@ plans:
 - name: Photys Therapeutics Plans Pricing
   plan_count: 0
   slug: photys-therapeutics-plans-pricing
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Photys Therapeutics Rate Limits
@@ -127,7 +133,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
@@ -135,7 +141,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 12.5
+  previous_composite: 12.6
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -145,14 +151,14 @@ score:
     regime: Health
     regime_id: health
     score: 13.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/photys-therapeutics/refs/heads/main/screenshots/photys-therapeutics-2026-09-02T151200.png
+screenshot: https://apis.io/screenshots/photys-therapeutics/photys-therapeutics-2026-09-02T151200.png
 security:
 - kind: authentication
   name: Photys Therapeutics Authentication

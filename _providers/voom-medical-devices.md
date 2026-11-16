@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voom-medical-devices/refs/heads/main/security/voom-medical-devices-domain-security.yml
+  href: https://artifacts.apis.io/voom-medical-devices/security/voom-medical-devices-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/voom-medical-devices-domain-security.yml
@@ -65,12 +78,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/voomdevices
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voom-medical-devices/refs/heads/main/conformance/voom-medical-devices-conformance.yml
+  href: https://artifacts.apis.io/voom-medical-devices/conformance/voom-medical-devices-conformance.yml
   title: ''
   type: Conformance
   url: conformance/voom-medical-devices-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voom-medical-devices/refs/heads/main/llms/voom-medical-devices-llms.txt
+  href: https://artifacts.apis.io/voom-medical-devices/llms/voom-medical-devices-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/voom-medical-devices-llms.txt
@@ -100,12 +113,12 @@ overview: 'Voom Medical Devices is profiled on the [APIs.io](https://apis.io/) n
 
 
   Voom Medical Devices'' developer surface includes support and 10 more developer resources.'
-random_paper: 17
+random_paper: 5
 score:
   band: emerging
   composite: 14.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -133,14 +146,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/voom-medical-devices/refs/heads/main/screenshots/voom-medical-devices-2026-10-11T133143.png
+screenshot: https://apis.io/screenshots/voom-medical-devices/voom-medical-devices-2026-10-11T133143.png
 security:
 - kind: domain-security
   name: Voom Medical Devices Domain Security

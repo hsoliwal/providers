@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -25,16 +26,19 @@ agent_readiness:
     error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: false
+    mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 35.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -112,7 +116,7 @@ arazzos:
 - description: Resolve a workspace, then list its tables and its saved searches together.
   name: Azure Log Analytics Workspace Inventory Report
   slug: azure-log-analytics-workspace-inventory-report-workflow
-artifact_total: 81
+artifact_total: 85
 collections:
 - collection_type: postman
   name: Azure Log Analytics Ingestion API
@@ -123,9 +127,6 @@ collections:
 - collection_type: postman
   name: Azure Log Analytics Query API
   slug: postman-azure-log-analytics-query-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Azure Log Analytics Ingestion API
   slug: open-azure-log-analytics-ingestion-api
@@ -142,13 +143,120 @@ collections:
   name: Azure Log Analytics Ingestion Workspaces API
   slug: open-azure-log-analytics-workspaces-api
 common:
+- group: operate
+  href: https://artifacts.apis.io/azure-log-analytics/rate-limits/azure-log-analytics-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/azure-log-analytics-rate-limits.yml
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/rules/azure-log-analytics-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/azure-log-analytics-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/rules/azure-log-analytics-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/azure-log-analytics-rules.yml
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/rules/azure-log-analytics-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/azure-log-analytics-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/json-ld/azure-log-analytics-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/azure-log-analytics-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/vocabulary/azure-log-analytics-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/azure-log-analytics-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/data-model/azure-log-analytics-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/azure-log-analytics-data-model.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.microsoft.com/en-us/trust-center
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/errors/azure-log-analytics-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/azure-log-analytics-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/azure-log-analytics/conformance/azure-log-analytics-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/azure-log-analytics-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/azure-log-analytics/llms/azure-log-analytics-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/azure-log-analytics-llms.txt
+- group: build
+  href: https://artifacts.apis.io/azure-log-analytics/mcp/azure-log-analytics-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/azure-log-analytics-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/azure-log-analytics/mcp/azure-log-analytics-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/azure-log-analytics-mcp.yml
+- group: auth
+  href: https://artifacts.apis.io/azure-log-analytics/well-known/azure-log-analytics-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/azure-log-analytics-security.txt
+- group: agent
+  href: https://artifacts.apis.io/azure-log-analytics/well-known/azure-log-analytics-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/azure-log-analytics-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/azure-log-analytics/hosts/azure-log-analytics-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/azure-log-analytics-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/azure-log-analytics/vendors/azure-log-analytics-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/azure-log-analytics-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/azure-log-analytics/packages/azure-log-analytics-packages.yml
+  title: ''
+  type: Packages
+  url: packages/azure-log-analytics-packages.yml
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
+- group: company
+  title: ''
+  type: Blog
+  url: https://techcommunity.microsoft.com/category/azure/blog/analyticsonazure
+- group: auth
+  href: https://artifacts.apis.io/azure-log-analytics/security/azure-log-analytics-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/azure-log-analytics-trust-center.yml
+- group: auth
+  href: https://artifacts.apis.io/azure-log-analytics/security/azure-log-analytics-vulnerability-disclosure.yml
+  title: ''
+  type: VulnerabilityDisclosure
+  url: security/azure-log-analytics-vulnerability-disclosure.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/plans/azure-log-analytics-plans-pricing.yml
+  href: https://artifacts.apis.io/azure-log-analytics/plans/azure-log-analytics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/azure-log-analytics-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/finops/azure-log-analytics-finops.yml
+  href: https://artifacts.apis.io/azure-log-analytics/finops/azure-log-analytics-finops.yml
   title: ''
   type: FinOps
   url: finops/azure-log-analytics-finops.yml
@@ -181,22 +289,22 @@ common:
   type: License
   url: https://github.com/Azure/azure-rest-api-specs/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/agentic-access/azure-log-analytics-agentic-access.yml
+  href: https://artifacts.apis.io/azure-log-analytics/agentic-access/azure-log-analytics-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/azure-log-analytics-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/security/azure-log-analytics-domain-security.yml
+  href: https://artifacts.apis.io/azure-log-analytics/security/azure-log-analytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/azure-log-analytics-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/authentication/azure-log-analytics-authentication.yml
+  href: https://artifacts.apis.io/azure-log-analytics/authentication/azure-log-analytics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/azure-log-analytics-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/scopes/azure-log-analytics-scopes.yml
+  href: https://artifacts.apis.io/azure-log-analytics/scopes/azure-log-analytics-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/azure-log-analytics-scopes.yml
@@ -205,72 +313,72 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/azure-log-analytics/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-audit-and-cleanup-saved-search-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-audit-and-cleanup-saved-search-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-audit-and-cleanup-saved-search-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-create-workspace-and-baseline-table-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-create-workspace-and-baseline-table-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-create-workspace-and-baseline-table-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-cross-workspace-query-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-cross-workspace-query-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-cross-workspace-query-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-discover-and-query-workspace-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-discover-and-query-workspace-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-discover-and-query-workspace-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-ingest-and-verify-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-ingest-and-verify-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-ingest-and-verify-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-list-saved-searches-and-run-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-list-saved-searches-and-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-list-saved-searches-and-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-list-tables-then-query-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-list-tables-then-query-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-list-tables-then-query-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-promote-query-to-saved-search-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-promote-query-to-saved-search-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-promote-query-to-saved-search-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-provision-table-and-ingest-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-provision-table-and-ingest-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-provision-table-and-ingest-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-query-workspace-by-name-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-query-workspace-by-name-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-query-workspace-by-name-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-resolve-workspace-and-run-kql-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-resolve-workspace-and-run-kql-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-resolve-workspace-and-run-kql-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-saved-search-to-query-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-saved-search-to-query-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-saved-search-to-query-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-update-workspace-retention-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-update-workspace-retention-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-update-workspace-retention-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/arazzo/azure-log-analytics-workspace-inventory-report-workflow.yml
+  href: https://artifacts.apis.io/azure-log-analytics/arazzo/azure-log-analytics-workspace-inventory-report-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/azure-log-analytics-workspace-inventory-report-workflow.yml
@@ -298,10 +406,6 @@ common:
   title: ''
   type: Support
   url: https://azure.microsoft.com/en-us/support/
-- group: company
-  title: ''
-  type: Blog
-  url: https://azure.microsoft.com/en-us/blog/tag/azure-log-analytics/
 - group: commercial
   title: ''
   type: TermsOfService
@@ -347,12 +451,12 @@ common:
   type: RateLimits
   url: https://learn.microsoft.com/en-us/azure/azure-monitor/service-limits#query-api
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/rules/azure-log-analytics-spectral-rules.yml
+  href: https://artifacts.apis.io/azure-log-analytics/rules/azure-log-analytics-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/azure-log-analytics-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/vocabulary/azure-log-analytics-vocabulary.yaml
+  href: https://artifacts.apis.io/azure-log-analytics/vocabulary/azure-log-analytics-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/azure-log-analytics-vocabulary.yaml
@@ -397,10 +501,10 @@ features:
   name: Data Export
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Azure Log Analytics Finops
-  primary_unit: ''
-  service_category: Observability
+  primary_unit: gb
+  service_category: ''
   slug: azure-log-analytics-finops
   template: false
 image: /assets/icons/azure-log-analytics.png
@@ -458,6 +562,10 @@ json_structures:
   property_count: 2
   slug: query-api-query-results-structure
 jsonld:
+- class_count: 24
+  name: Azure Log Analytics Context
+  property_count: 62
+  slug: azure-log-analytics-context
 - class_count: 3
   name: Azure Log Analytics Ingestion Api Context
   property_count: 10
@@ -471,6 +579,10 @@ jsonld:
   property_count: 11
   slug: azure-log-analytics-query-api-context
 layout: provider
+mcp_servers:
+- description: ''
+  name: Azure MCP Server (Azure Monitor tools)
+  slug: azure-mcp-server-azure-monitor-tools
 modified: '2026-05-19'
 name: Azure Log Analytics
 nav: Providers
@@ -478,15 +590,15 @@ network: true
 overview: 'Azure Log Analytics is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Ingestion API, Query API, Saved Searches API, and 2 more. Tagged areas include Analytics, Microsoft Azure, Cloud, Logging, and Monitoring.
 
 
-  The Azure Log Analytics catalog on APIs.io includes 3 JSON-LD contexts and 2 Spectral governance rulesets.
+  The Azure Log Analytics catalog on APIs.io includes 4 JSON-LD contexts and 3 Spectral governance rulesets.
 
 
-  Azure Log Analytics'' developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, support, engineering blog, and 41 more developer resources.'
+  Azure Log Analytics'' developer surface includes engineering blog, authentication, developer portal, documentation, getting-started guide, pricing, support, and 62 more developer resources.'
 plans:
 - name: Azure Log Analytics Plans Pricing
-  plan_count: 4
+  plan_count: 2
   slug: azure-log-analytics-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 19
   name: Azure Log Analytics Rate Limits
@@ -503,6 +615,18 @@ rules:
     info: 2
     warn: 3
   slug: azure-log-analytics-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 117
+  extends:
+  - spectral:oas
+  name: Azure Log Analytics API Rules
+  rule_count: 76
+  severity_counts:
+    error: 69
+    hint: 0
+    info: 4
+    warn: 3
+  slug: azure-log-analytics-rules
 - authorship: generated
   effective_rule_count: 86
   extends:
@@ -521,47 +645,49 @@ scopes:
   slug: azure-log-analytics-scopes
   summary_line: 1 scope · implicit
 score:
-  band: strong
-  composite: 58.9
+  band: exemplar
+  composite: 67.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 75.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 40.0
+    artifact_dirs: 32
+    catalog_earned: 83.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 32.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 4.9
   facets:
-    access_clarity: 39.5
-    contract_governance: 27.3
+    access_clarity: 76.3
+    contract_governance: 31.8
     contract_quality: 30.5
     developer_ergonomics: 79.8
-    discoverability: 78.6
+    discoverability: 78.3
     operational_transparency: 52.6
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 60.3
+  previous_composite: 62.7
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 8
       marker_coverage: 100.0
       total: 8
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 45.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/azure-log-analytics/refs/heads/main/screenshots/azure-log-analytics-2026-07-25T202128.png
+screenshot: https://apis.io/screenshots/azure-log-analytics/azure-log-analytics-2026-07-25T202128.png
 security:
 - kind: authentication
   name: Azure Log Analytics Authentication
@@ -571,6 +697,14 @@ security:
   name: Azure Log Analytics Domain Security
   slug: azure-log-analytics-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+- kind: vulnerability-disclosure
+  name: Azure Log Analytics Vulnerability Disclosure
+  slug: azure-log-analytics-vulnerability-disclosure
+  summary_line: security.txt · contact published
+- kind: trust-center
+  name: Azure Log Analytics Trust Center
+  slug: azure-log-analytics-trust-center
+  summary_line: GDPR
 slug: azure-log-analytics
 tags:
 - Analytics

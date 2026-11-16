@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: QwikCilver / Woohoo gift card and prepaid commerce API for browsing brand catalogs, placing gift card orders, activating and redeeming cards, checking balances, and running reward programs. OAuth2 cli
@@ -45,12 +49,12 @@ common:
   type: BlogRSS
   url: https://blog.woohoo.in/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwikcilver/refs/heads/main/security/qwikcilver-domain-security.yml
+  href: https://artifacts.apis.io/qwikcilver/security/qwikcilver-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qwikcilver-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qwikcilver/refs/heads/main/well-known/qwikcilver-well-known.yml
+  href: https://artifacts.apis.io/qwikcilver/well-known/qwikcilver-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qwikcilver-well-known.yml
@@ -94,12 +98,12 @@ overview: 'QwikCilver is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   QwikCilver''s developer surface includes engineering blog, support, and 8 more developer resources.'
-random_paper: 11
+random_paper: 9
 score:
   band: emerging
   composite: 13.6
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -127,14 +131,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/qwikcilver/refs/heads/main/screenshots/qwikcilver-2026-09-02T152726.png
+screenshot: https://apis.io/screenshots/qwikcilver/qwikcilver-2026-09-02T152726.png
 security:
 - kind: domain-security
   name: Qwikcilver Domain Security

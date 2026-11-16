@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The VNPAY-QR payment gateway (vpcpay) processes card, QR, ATM/bank-account and international-card payments via a browser redirect plus server-to-server IPN callback. Requests carry vnp_ parameters sig
@@ -42,7 +47,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/security/vnlife-domain-security.yml
+  href: https://artifacts.apis.io/vnlife/security/vnlife-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vnlife-domain-security.yml
@@ -75,42 +80,42 @@ common:
   type: GettingStarted
   url: https://sandbox.vnpayment.vn/apis/docs/huong-dan-tich-hop/
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/sandbox/vnlife-sandbox.yml
+  href: https://artifacts.apis.io/vnlife/sandbox/vnlife-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/vnlife-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/authentication/vnlife-authentication.yml
+  href: https://artifacts.apis.io/vnlife/authentication/vnlife-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vnlife-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/conventions/vnlife-conventions.yml
+  href: https://artifacts.apis.io/vnlife/conventions/vnlife-conventions.yml
   title: ''
   type: Conventions
   url: conventions/vnlife-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/conventions/vnlife-conventions.yml
+  href: https://artifacts.apis.io/vnlife/conventions/vnlife-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/vnlife-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/errors/vnlife-problem-types.yml
+  href: https://artifacts.apis.io/vnlife/errors/vnlife-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/vnlife-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/errors/vnlife-decline-codes.yml
+  href: https://artifacts.apis.io/vnlife/errors/vnlife-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/vnlife-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/lifecycle/vnlife-lifecycle.yml
+  href: https://artifacts.apis.io/vnlife/lifecycle/vnlife-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/vnlife-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/conformance/vnlife-conformance.yml
+  href: https://artifacts.apis.io/vnlife/conformance/vnlife-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vnlife-conformance.yml
@@ -119,17 +124,17 @@ common:
   type: Compliance
   url: https://sandbox.vnpayment.vn/apis/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/changelog/vnlife-changelog.yml
+  href: https://artifacts.apis.io/vnlife/changelog/vnlife-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/vnlife-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/mcp/vnlife-mcp.yml
+  href: https://artifacts.apis.io/vnlife/mcp/vnlife-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/vnlife-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/llms/vnlife-llms.txt
+  href: https://artifacts.apis.io/vnlife/llms/vnlife-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vnlife-llms.txt
@@ -145,7 +150,7 @@ overview: 'VNLIFE is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   VNLIFE''s developer surface includes documentation, API reference, support, engineering blog, getting-started guide, sandbox, authentication, and 13 more developer resources.'
-random_paper: 6
+random_paper: 20
 score:
   band: emerging
   composite: 21.7
@@ -181,14 +186,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/vnlife/refs/heads/main/screenshots/vnlife-2026-09-02T170159.png
+screenshot: https://apis.io/screenshots/vnlife/vnlife-2026-09-02T170159.png
 security:
 - kind: authentication
   name: Vnlife Authentication

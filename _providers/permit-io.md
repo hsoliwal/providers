@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-10-17'
+  score: 33.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 146
   human_in_the_loop: 3
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 258
   slug: permit-io-agentic-access
   summary_line: 258 operations · 146 acting · 3 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.permit.io
   baseurl_source: declared
@@ -263,9 +269,6 @@ apis:
 artifact_total: 96
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Permit.io Access Requests (EAP) Access Requests (EAP) Access Requests (EAP) API
   slug: open-permit-io-access-requests-eap-api
 - collection_type: open
@@ -399,47 +402,47 @@ collections:
   slug: open-permit-io
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/rate-limits/permit-io-rate-limits.yml
+  href: https://artifacts.apis.io/permit-io/rate-limits/permit-io-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/permit-io-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/finops/permit-io-finops.yml
+  href: https://artifacts.apis.io/permit-io/finops/permit-io-finops.yml
   title: ''
   type: FinOps
   url: finops/permit-io-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/plans/permit-io-plans-pricing.yml
+  href: https://artifacts.apis.io/permit-io/plans/permit-io-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/permit-io-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/capabilities/permit-io-capability-edges.yml
+  href: https://artifacts.apis.io/permit-io/capabilities/permit-io-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/permit-io-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/agentic-access/permit-io-agentic-access.yml
+  href: https://artifacts.apis.io/permit-io/agentic-access/permit-io-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/permit-io-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/security/permit-io-trust-center.yml
+  href: https://artifacts.apis.io/permit-io/security/permit-io-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/permit-io-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/security/permit-io-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/permit-io/security/permit-io-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/permit-io-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/security/permit-io-domain-security.yml
+  href: https://artifacts.apis.io/permit-io/security/permit-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/permit-io-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/authentication/permit-io-authentication.yml
+  href: https://artifacts.apis.io/permit-io/authentication/permit-io-authentication.yml
   title: ''
   type: Authentication
   url: authentication/permit-io-authentication.yml
@@ -482,11 +485,11 @@ common:
 created: '2025-02-08'
 description: Permit.io is an authorization-as-a-service platform that helps developers build, manage, and enforce fine-grained access control in their applications. It provides a Policy Decision Point (PDP), management API, REST API, and permission query APIs for role-based, attribute-based, and relationship-based access control with support for bulk checks, data filtering, and URL-based enforcement.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Permit Io Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: permit-io-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/permit-io.png
@@ -498,41 +501,57 @@ network: true
 overview: 'Permit.io publishes 43 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Requests (EAP) API, Activity Log API, API History API, and 40 more. Tagged areas include Access Control, Authorization, Identity, Policy, and Security.
 
 
+  The Permit.io catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Permit.io''s developer surface includes authentication, documentation, API reference, signup flow, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Permit Io Plans Pricing
   plan_count: 2
   slug: permit-io-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Permit Io Rate Limits
   slug: permit-io-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Permit.io API Rules
+  rule_count: 58
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 2
+    warn: 16
+  slug: permit-io-rules
 score:
   band: developing
-  composite: 42.3
+  composite: 46.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 48.0
+    artifact_dirs: 17
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.3
   facets:
     access_clarity: 52.6
-    contract_governance: 0.0
-    contract_quality: 50.1
+    contract_governance: 13.6
+    contract_quality: 55.3
     developer_ergonomics: 31.0
     discoverability: 66.1
-    operational_transparency: 21.1
-  previous_composite: 43.8
+    operational_transparency: 31.6
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 43
   regulatory:
     applies: true
@@ -540,13 +559,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/permit-io/refs/heads/main/screenshots/permit-io-2026-06-20T191609.png
+screenshot: https://apis.io/screenshots/permit-io/permit-io-2026-06-20T191609.png
 security:
 - kind: authentication
   name: Permit Io Authentication

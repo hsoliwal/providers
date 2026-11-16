@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -29,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: RESTful enterprise API for real-time private market data across 6,000+ companies - Notice Price, verified trades and indications of interest - retrievable up to once per minute. Sold as a 12-month ent
@@ -53,7 +59,7 @@ common:
   type: Pricing
   url: https://learn.notice.co/en/articles/8422141-how-does-the-notice-api-work
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/security/notice-domain-security.yml
+  href: https://artifacts.apis.io/notice/security/notice-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/notice-domain-security.yml
@@ -74,62 +80,62 @@ common:
   type: GitHubOrganization
   url: https://github.com/notice-co
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/llms/notice-llms.txt
+  href: https://artifacts.apis.io/notice/llms/notice-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/notice-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/well-known/notice-well-known.yml
+  href: https://artifacts.apis.io/notice/well-known/notice-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/notice-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/mcp/notice-mcp.yml
+  href: https://artifacts.apis.io/notice/mcp/notice-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/notice-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/authentication/notice-authentication.yml
+  href: https://artifacts.apis.io/notice/authentication/notice-authentication.yml
   title: ''
   type: Authentication
   url: authentication/notice-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/scopes/notice-scopes.yml
+  href: https://artifacts.apis.io/notice/scopes/notice-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/notice-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/conformance/notice-conformance.yml
+  href: https://artifacts.apis.io/notice/conformance/notice-conformance.yml
   title: ''
   type: Conformance
   url: conformance/notice-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/conventions/notice-conventions.yml
+  href: https://artifacts.apis.io/notice/conventions/notice-conventions.yml
   title: ''
   type: Conventions
   url: conventions/notice-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/lifecycle/notice-lifecycle.yml
+  href: https://artifacts.apis.io/notice/lifecycle/notice-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/notice-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/changelog/notice-changelog.yml
+  href: https://artifacts.apis.io/notice/changelog/notice-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/notice-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/plans/notice-plans-pricing.yml
+  href: https://artifacts.apis.io/notice/plans/notice-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/notice-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/rate-limits/notice-rate-limits.yml
+  href: https://artifacts.apis.io/notice/rate-limits/notice-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/notice-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/components/notice-components.yml
+  href: https://artifacts.apis.io/notice/components/notice-components.yml
   title: ''
   type: Components
   url: components/notice-components.yml
@@ -152,7 +158,7 @@ plans:
 - name: Notice Plans Pricing
   plan_count: 3
   slug: notice-plans-pricing
-random_paper: 4
+random_paper: 18
 rate_limits:
 - limit_count: 1
   name: Notice Rate Limits
@@ -172,7 +178,7 @@ score:
     catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
@@ -185,7 +191,7 @@ score:
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 27.5
+  previous_composite: 29.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -195,14 +201,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 30.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/notice/refs/heads/main/screenshots/notice-2026-09-02T150805.png
+screenshot: https://apis.io/screenshots/notice/notice-2026-09-02T150805.png
 security:
 - kind: authentication
   name: Notice Authentication

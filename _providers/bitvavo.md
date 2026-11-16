@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 34.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -87,67 +101,67 @@ asyncapis:
   slug: bitvavo-market-data-pro-asyncapi
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/agentic-access/bitvavo-agentic-access.yml
+  href: https://artifacts.apis.io/bitvavo/agentic-access/bitvavo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bitvavo-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/rules/bitvavo-rules.yml
+  href: https://artifacts.apis.io/bitvavo/rules/bitvavo-rules.yml
   title: ''
   type: Spectral
   url: rules/bitvavo-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/vocabulary/bitvavo-vocabulary.yml
+  href: https://artifacts.apis.io/bitvavo/vocabulary/bitvavo-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/bitvavo-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/conventions/bitvavo-conventions.yml
+  href: https://artifacts.apis.io/bitvavo/conventions/bitvavo-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/bitvavo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/conventions/bitvavo-conventions.yml
+  href: https://artifacts.apis.io/bitvavo/conventions/bitvavo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bitvavo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/errors/bitvavo-problem-types.yml
+  href: https://artifacts.apis.io/bitvavo/errors/bitvavo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bitvavo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/conformance/bitvavo-conformance.yml
+  href: https://artifacts.apis.io/bitvavo/conformance/bitvavo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitvavo-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/well-known/bitvavo-www-security.txt
+  href: https://artifacts.apis.io/bitvavo/well-known/bitvavo-www-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bitvavo-www-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/well-known/bitvavo-well-known.yml
+  href: https://artifacts.apis.io/bitvavo/well-known/bitvavo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bitvavo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/hosts/bitvavo-hosts.yml
+  href: https://artifacts.apis.io/bitvavo/hosts/bitvavo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bitvavo-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/vendors/bitvavo-vendors.yml
+  href: https://artifacts.apis.io/bitvavo/vendors/bitvavo-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bitvavo-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/packages/bitvavo-packages.yml
+  href: https://artifacts.apis.io/bitvavo/packages/bitvavo-packages.yml
   title: ''
   type: SDKs
   url: packages/bitvavo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/packages/bitvavo-packages.yml
+  href: https://artifacts.apis.io/bitvavo/packages/bitvavo-packages.yml
   title: ''
   type: Packages
   url: packages/bitvavo-packages.yml
@@ -160,7 +174,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/bitvavo
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/authentication/bitvavo-authentication.yml
+  href: https://artifacts.apis.io/bitvavo/authentication/bitvavo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bitvavo-authentication.yml
@@ -173,7 +187,7 @@ common:
   type: Documentation
   url: https://docs.bitvavo.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/llms/bitvavo-llms.txt
+  href: https://artifacts.apis.io/bitvavo/llms/bitvavo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitvavo-llms.txt
@@ -182,7 +196,7 @@ common:
   type: Portal
   url: https://account.bitvavo.com/user/api
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitvavo/refs/heads/main/security/bitvavo-domain-security.yml
+  href: https://artifacts.apis.io/bitvavo/security/bitvavo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitvavo-domain-security.yml
@@ -200,7 +214,7 @@ overview: 'Bitvavo publishes 10 API contracts indexed on the [APIs.io](https://a
 
 
   Bitvavo''s developer surface includes API reference, authentication, documentation, developer portal, and 17 more developer resources.'
-random_paper: 15
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -216,21 +230,22 @@ rules:
   slug: bitvavo-rules
 score:
   band: thin
-  composite: 31.3
+  composite: 30.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 35.8
     catalog_earned_first_party: 0.0
     catalog_gap: 79.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.0
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 57.3
-    developer_ergonomics: 45.2
+    developer_ergonomics: 36.9
     discoverability: 60.7
-    operational_transparency: 5.3
+    operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -239,6 +254,7 @@ score:
     regions:
     - benelux
     - europe
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -254,11 +270,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/bitvavo/bitvavo-2026-11-03T121825.png
 security:
 - kind: authentication
   name: Bitvavo Authentication

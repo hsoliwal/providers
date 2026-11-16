@@ -1,16 +1,22 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.2
-  scored_at: '2026-10-17'
+  score: 39.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 111
   human_in_the_loop: 19
@@ -218,11 +227,8 @@ apis:
   description: Workspaces and workspace membership.
   name: tessl.io Workspaces API
   slug: tesslio-workspaces-api
-artifact_total: 76
+artifact_total: 79
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Tessl Admin Keys API
   slug: open-tesslio-admin-keys-api
@@ -325,52 +331,52 @@ common:
   type: BlogRSS
   url: https://tessl.io/blog/feed
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/plans/tesslio-plans-pricing.yml
+  href: https://artifacts.apis.io/tesslio/plans/tesslio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tesslio-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/capabilities/tesslio-capability-edges.yml
+  href: https://artifacts.apis.io/tesslio/capabilities/tesslio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tesslio-capability-edges.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/openapi/_original/tesslio-openapi-original.json
+  href: https://artifacts.apis.io/tesslio/openapi/_original/tesslio-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/tesslio-openapi-original.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/overlays/tesslio-openapi-overlay.yaml
+  href: https://artifacts.apis.io/tesslio/overlays/tesslio-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tesslio-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/authentication/tesslio-authentication.yml
+  href: https://artifacts.apis.io/tesslio/authentication/tesslio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tesslio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/conventions/tesslio-conventions.yml
+  href: https://artifacts.apis.io/tesslio/conventions/tesslio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tesslio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/errors/tesslio-problem-types.yml
+  href: https://artifacts.apis.io/tesslio/errors/tesslio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/tesslio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/data-model/tesslio-data-model.yml
+  href: https://artifacts.apis.io/tesslio/data-model/tesslio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tesslio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/conformance/tesslio-conformance.yml
+  href: https://artifacts.apis.io/tesslio/conformance/tesslio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tesslio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/lifecycle/tesslio-lifecycle.yml
+  href: https://artifacts.apis.io/tesslio/lifecycle/tesslio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tesslio-lifecycle.yml
@@ -383,52 +389,52 @@ common:
   type: Deprecation
   url: https://docs.tessl.io/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/changelog/tesslio-changelog.yml
+  href: https://artifacts.apis.io/tesslio/changelog/tesslio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tesslio-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/cli/tesslio-cli.yml
+  href: https://artifacts.apis.io/tesslio/cli/tesslio-cli.yml
   title: ''
   type: CLI
   url: cli/tesslio-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/packages/tesslio-packages.yml
+  href: https://artifacts.apis.io/tesslio/packages/tesslio-packages.yml
   title: ''
   type: Packages
   url: packages/tesslio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/packages/tesslio-packages.yml
+  href: https://artifacts.apis.io/tesslio/packages/tesslio-packages.yml
   title: ''
   type: SDKs
   url: packages/tesslio-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/mcp/tesslio-mcp.yml
+  href: https://artifacts.apis.io/tesslio/mcp/tesslio-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/tesslio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tesslio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/agentic-access/tesslio-agentic-access.yml
+  href: https://artifacts.apis.io/tesslio/agentic-access/tesslio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tesslio-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/well-known/tesslio-well-known.yml
+  href: https://artifacts.apis.io/tesslio/well-known/tesslio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tesslio-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/well-known/tesslio-security.txt
+  href: https://artifacts.apis.io/tesslio/well-known/tesslio-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/tesslio-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/security/tesslio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tesslio/security/tesslio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tesslio-vulnerability-disclosure.yml
@@ -437,7 +443,7 @@ common:
   type: Security
   url: https://tessl.io/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/security/tesslio-domain-security.yml
+  href: https://artifacts.apis.io/tesslio/security/tesslio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tesslio-domain-security.yml
@@ -462,7 +468,7 @@ common:
   type: GettingStarted
   url: https://docs.tessl.io/introduction-to-tessl/set-up-tessl
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/llms/tesslio-llms.txt
+  href: https://artifacts.apis.io/tesslio/llms/tesslio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tesslio-llms.txt
@@ -496,6 +502,14 @@ common:
   url: https://tessl.io
 created: '2026-07-17'
 description: Tessl is an agent-enablement platform for spec-driven and agentic software development. It provides a registry of versioned "tiles"/plugins (10,000+ library docs) and 3,000+ searchable Agent Skills, a CLI for authoring, linting, reviewing, and publishing skills and plugins, server-side quality reviews and Snyk-powered security scanning, eval/scenario tooling to prove a skill changes agent behavior, org/workspace governance with install policies, and a first-party Model Context Protocol (MCP) server plus a workspace MCP gateway so AI coding agents can discover and install the right context. Backed by Index Ventures. The public REST API (api.tessl.io) exposes 225 operations across tiles, skills, workspaces, orgs, projects, evals, and integrations.
+finops:
+- has_sources: true
+  method: derived
+  name: Tesslio Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: tesslio-finops
+  template: false
 image: https://cdn.sanity.io/images/ojuglg5y/production/fa12cfb35dd51f280b764adf7122a6c0f7911e12-2400x1260.png?w=1200&fit=max&auto=format
 layout: provider
 mcp_servers:
@@ -509,6 +523,9 @@ network: true
 overview: 'tessl.io publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin Keys API, Agent Logs API, API Keys API, and 32 more. Tagged areas include Company, Artificial Intelligence, Agent Enablement, Agentic Development, and Developer Tools.
 
 
+  The tessl.io catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   tessl.io''s developer surface includes authentication, changelog, CLI, documentation, API reference, getting-started guide, support, and 31 more developer resources.'
 plans:
 - name: Tesslio Plans Pricing
@@ -517,26 +534,39 @@ plans:
 - name: Tesslio Price Estimates
   plan_count: 0
   slug: tesslio-price-estimates
-random_paper: 1
+random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: tessl.io API Rules
+  rule_count: 44
+  severity_counts:
+    error: 29
+    hint: 0
+    info: 2
+    warn: 13
+  slug: tesslio-rules
 score:
   band: strong
-  composite: 56.3
+  composite: 59.5
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.2
+  delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 4.5
+    access_clarity: 57.9
+    contract_governance: 18.2
     contract_quality: 47.8
     developer_ergonomics: 73.2
     discoverability: 71.7
     operational_transparency: 47.4
-  previous_composite: 56.5
+  previous_composite: 59.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -553,13 +583,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tesslio/refs/heads/main/screenshots/tesslio-2026-08-17T082329.png
+screenshot: https://apis.io/screenshots/tesslio/tesslio-2026-08-17T082329.png
 security:
 - kind: authentication
   name: Tesslio Authentication
@@ -577,6 +607,12 @@ security:
   name: Tesslio Trust Center
   slug: tesslio-trust-center
   summary_line: trust center published
+skill_count: 2
+skills:
+- name: Search and install plugins from the Tessl registry
+  slug: tesslio-manage-registry-plugins
+- name: Author and publish a Tessl skill
+  slug: tesslio-publish-a-skill
 slug: tesslio
 tags:
 - Company

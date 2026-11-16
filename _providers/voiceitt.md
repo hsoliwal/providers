@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.2
-  scored_at: '2026-10-17'
+  score: 19.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://web.voiceitt.com/socket.io
@@ -52,15 +55,12 @@ apis:
   description: The Rec API from Voiceitt — 1 operation(s) for rec.
   name: Voiceitt Rec API
   slug: voiceitt-rec-api
-artifact_total: 9
+artifact_total: 11
 asyncapis:
 - description: Socket.IO WebSockets API for real-time speech recognition of non-standard speech. Clients authenticate with a JWT (token + refresh_token in the Socket.IO auth option, obtained from the Voiceitt HTTP A
   name: Voiceitt WebSockets API
   slug: voiceitt-websockets-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: REST Auth API
   slug: open-voiceitt-auth-api
@@ -113,32 +113,32 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/voiceitt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/llms/voiceitt-llms.txt
+  href: https://artifacts.apis.io/voiceitt/llms/voiceitt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/voiceitt-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/authentication/voiceitt-authentication.yml
+  href: https://artifacts.apis.io/voiceitt/authentication/voiceitt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/voiceitt-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/well-known/voiceitt-well-known.yml
+  href: https://artifacts.apis.io/voiceitt/well-known/voiceitt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/voiceitt-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/mcp/voiceitt-mcp.yml
+  href: https://artifacts.apis.io/voiceitt/mcp/voiceitt-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/voiceitt-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/overlays/voiceitt-rest-api-overlay.yaml
+  href: https://artifacts.apis.io/voiceitt/overlays/voiceitt-rest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/voiceitt-rest-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/conformance/voiceitt-conformance.yml
+  href: https://artifacts.apis.io/voiceitt/conformance/voiceitt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/voiceitt-conformance.yml
@@ -147,37 +147,37 @@ common:
   type: Compliance
   url: https://www.voiceitt.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/errors/voiceitt-problem-types.yml
+  href: https://artifacts.apis.io/voiceitt/errors/voiceitt-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/voiceitt-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/lifecycle/voiceitt-lifecycle.yml
+  href: https://artifacts.apis.io/voiceitt/lifecycle/voiceitt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/voiceitt-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/conventions/voiceitt-conventions.yml
+  href: https://artifacts.apis.io/voiceitt/conventions/voiceitt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/voiceitt-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/data-model/voiceitt-data-model.yml
+  href: https://artifacts.apis.io/voiceitt/data-model/voiceitt-data-model.yml
   title: ''
   type: DataModel
   url: data-model/voiceitt-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/asyncapi/voiceitt-websockets-asyncapi.yml
+  href: https://artifacts.apis.io/voiceitt/asyncapi/voiceitt-websockets-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/voiceitt-websockets-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/voiceitt/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/security/voiceitt-domain-security.yml
+  href: https://artifacts.apis.io/voiceitt/security/voiceitt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/voiceitt-domain-security.yml
@@ -192,30 +192,43 @@ network: true
 overview: 'Voiceitt publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: WebSockets API, Auth API, and Rec API. Tagged areas include Speech Recognition, Speech-to-Text, Voice, Accessibility, and Assistive Technology.
 
 
-  The Voiceitt catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Voiceitt catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Voiceitt''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 18 more developer resources.'
-random_paper: 13
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Voiceitt API Rules
+  rule_count: 42
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 1
+  slug: voiceitt-rules
 score:
-  band: thin
-  composite: 38.1
+  band: developing
+  composite: 41.6
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.9
   facets:
     access_clarity: 39.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 48.3
-    developer_ergonomics: 37.5
+    developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 38.0
+  previous_composite: 39.7
   provenance:
     conformance: first-party
     contracts:
@@ -231,13 +244,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/voiceitt/refs/heads/main/screenshots/voiceitt-2026-08-17T082826.png
+screenshot: https://apis.io/screenshots/voiceitt/voiceitt-2026-08-17T082826.png
 security:
 - kind: authentication
   name: Voiceitt Authentication
@@ -247,6 +260,12 @@ security:
   name: Voiceitt Domain Security
   slug: voiceitt-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Stream live captions over Voiceitt WebSockets
+  slug: voiceitt-stream-live-captions
+- name: Transcribe an audio file with Voiceitt
+  slug: voiceitt-transcribe-audio-file
 slug: voiceitt
 tags:
 - Speech Recognition

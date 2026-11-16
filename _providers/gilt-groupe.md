@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gilt-groupe/refs/heads/main/security/gilt-groupe-domain-security.yml
+  href: https://artifacts.apis.io/gilt-groupe/security/gilt-groupe-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gilt-groupe-domain-security.yml
@@ -46,7 +50,7 @@ common:
   type: Website
   url: https://www.gilt.com
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gilt-groupe/refs/heads/main/packages/gilt-groupe-packages.yml
+  href: https://artifacts.apis.io/gilt-groupe/packages/gilt-groupe-packages.yml
   title: ''
   type: Packages
   url: packages/gilt-groupe-packages.yml
@@ -63,7 +67,7 @@ name: Gilt Groupe
 nav: Providers
 network: true
 overview: Gilt Groupe is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Retail, E-Commerce, and Fashion.
-random_paper: 13
+random_paper: 7
 score:
   band: minimal
   composite: 3.4
@@ -96,14 +100,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/gilt-groupe/refs/heads/main/screenshots/gilt-groupe-2026-10-11T190244.png
+screenshot: https://apis.io/screenshots/gilt-groupe/gilt-groupe-2026-10-11T190244.png
 security:
 - kind: domain-security
   name: Gilt Groupe Domain Security

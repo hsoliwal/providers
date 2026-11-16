@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.4
-  scored_at: '2026-10-17'
+  score: 34.8
+  scored_at: '2026-11-06'
 api_count: 10
 apis:
 - description: Technical reference of Conta Simples API endpoints.
@@ -77,57 +94,57 @@ apis:
 artifact_total: 13
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/rules/contasimples-rules.yml
+  href: https://artifacts.apis.io/contasimples/rules/contasimples-rules.yml
   title: ''
   type: Spectral
   url: rules/contasimples-rules.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/changelog/contasimples-changelog.yml
+  href: https://artifacts.apis.io/contasimples/changelog/contasimples-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/contasimples-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/conventions/contasimples-conventions.yml
+  href: https://artifacts.apis.io/contasimples/conventions/contasimples-conventions.yml
   title: ''
   type: Conventions
   url: conventions/contasimples-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/authentication/contasimples-authentication.yml
+  href: https://artifacts.apis.io/contasimples/authentication/contasimples-authentication.yml
   title: ''
   type: Authentication
   url: authentication/contasimples-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/lifecycle/contasimples-lifecycle.yml
+  href: https://artifacts.apis.io/contasimples/lifecycle/contasimples-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/contasimples-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/lifecycle/contasimples-lifecycle.yml
+  href: https://artifacts.apis.io/contasimples/lifecycle/contasimples-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/contasimples-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/conformance/contasimples-conformance.yml
+  href: https://artifacts.apis.io/contasimples/conformance/contasimples-conformance.yml
   title: ''
   type: Conformance
   url: conformance/contasimples-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/llms/contasimples-llms.txt
+  href: https://artifacts.apis.io/contasimples/llms/contasimples-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/contasimples-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/well-known/contasimples-well-known.yml
+  href: https://artifacts.apis.io/contasimples/well-known/contasimples-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/contasimples-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/hosts/contasimples-hosts.yml
+  href: https://artifacts.apis.io/contasimples/hosts/contasimples-hosts.yml
   title: ''
   type: Hosts
   url: hosts/contasimples-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/vendors/contasimples-vendors.yml
+  href: https://artifacts.apis.io/contasimples/vendors/contasimples-vendors.yml
   title: ''
   type: Vendors
   url: vendors/contasimples-vendors.yml
@@ -148,7 +165,7 @@ common:
   type: Documentation
   url: https://developers.contasimples.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contasimples/refs/heads/main/security/contasimples-domain-security.yml
+  href: https://artifacts.apis.io/contasimples/security/contasimples-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/contasimples-domain-security.yml
@@ -178,7 +195,7 @@ overview: 'Contasimples is listed with 10 APIs on the [APIs.io](https://apis.io/
 
 
   Contasimples'' developer surface includes changelog, authentication, API reference, getting-started guide, documentation, and 12 more developer resources.'
-random_paper: 0
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -194,21 +211,23 @@ rules:
   slug: contasimples-rules
 score:
   band: emerging
-  composite: 22.4
+  composite: 18.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 32.5
     catalog_earned_first_party: 0.0
     catalog_gap: 82.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.9
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
     contract_quality: 15.3
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 57.1
-    operational_transparency: 23.7
+    operational_transparency: 15.8
+  previous_composite: 22.4
   provenance:
     conformance: derived
     contracts:
@@ -223,11 +242,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/contasimples/contasimples-2026-11-03T125203.png
 security:
 - kind: authentication
   name: Contasimples Authentication

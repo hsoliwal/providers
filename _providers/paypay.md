@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 31.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -55,15 +58,12 @@ apis:
   description: The Payments API from PayPay — 1 operation(s) for payments.
   name: PayPay Payments API
   slug: paypay-payments-api
-artifact_total: 9
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Paypay Webhooks
   slug: paypay-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dynamic QR Payment API
   slug: open-paypay-payment-api
@@ -76,7 +76,7 @@ common:
   type: BlogRSS
   url: https://blog.paypay.ne.jp/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/capabilities/paypay-capability-edges.yml
+  href: https://artifacts.apis.io/paypay/capabilities/paypay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/paypay-capability-edges.yml
@@ -113,107 +113,107 @@ common:
   type: GitHubOrganization
   url: https://github.com/paypay
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/openapi/_original/paypay-opa-openapi-original.json
+  href: https://artifacts.apis.io/paypay/openapi/_original/paypay-opa-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/paypay-opa-openapi-original.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/overlays/paypay-opa-overlay.yaml
+  href: https://artifacts.apis.io/paypay/overlays/paypay-opa-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/paypay-opa-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/authentication/paypay-authentication.yml
+  href: https://artifacts.apis.io/paypay/authentication/paypay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/paypay-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/packages/paypay-packages.yml
+  href: https://artifacts.apis.io/paypay/packages/paypay-packages.yml
   title: ''
   type: Packages
   url: packages/paypay-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/packages/paypay-packages.yml
+  href: https://artifacts.apis.io/paypay/packages/paypay-packages.yml
   title: ''
   type: SDKs
   url: packages/paypay-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/conventions/paypay-conventions.yml
+  href: https://artifacts.apis.io/paypay/conventions/paypay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/paypay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/conventions/paypay-conventions.yml
+  href: https://artifacts.apis.io/paypay/conventions/paypay-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/paypay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/errors/paypay-problem-types.yml
+  href: https://artifacts.apis.io/paypay/errors/paypay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/paypay-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/errors/paypay-decline-codes.yml
+  href: https://artifacts.apis.io/paypay/errors/paypay-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/paypay-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/lifecycle/paypay-lifecycle.yml
+  href: https://artifacts.apis.io/paypay/lifecycle/paypay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/paypay-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/lifecycle/paypay-lifecycle.yml
+  href: https://artifacts.apis.io/paypay/lifecycle/paypay-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/paypay-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/changelog/paypay-changelog.yml
+  href: https://artifacts.apis.io/paypay/changelog/paypay-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/paypay-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/data-model/paypay-data-model.yml
+  href: https://artifacts.apis.io/paypay/data-model/paypay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/paypay-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/asyncapi/paypay-webhooks.yml
+  href: https://artifacts.apis.io/paypay/asyncapi/paypay-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/paypay-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/mcp/paypay-mcp.yml
+  href: https://artifacts.apis.io/paypay/mcp/paypay-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/paypay-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/conformance/paypay-conformance.yml
+  href: https://artifacts.apis.io/paypay/conformance/paypay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/paypay-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/sandbox/paypay-sandbox.yml
+  href: https://artifacts.apis.io/paypay/sandbox/paypay-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/paypay-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/paypay/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/llms/paypay-llms.txt
+  href: https://artifacts.apis.io/paypay/llms/paypay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/paypay-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/security/paypay-domain-security.yml
+  href: https://artifacts.apis.io/paypay/security/paypay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paypay-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/agentic-access/paypay-agentic-access.yml
+  href: https://artifacts.apis.io/paypay/agentic-access/paypay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/paypay-agentic-access.yml
@@ -228,25 +228,38 @@ network: true
 overview: 'PayPay publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Payment API and Payments API. Tagged areas include Company, Fintech, Payments, Mobile Payments, and QR Code Payments.
 
 
-  The PayPay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The PayPay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   PayPay''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, changelog, and 24 more developer resources.'
-random_paper: 0
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: PayPay API Rules
+  rule_count: 46
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 7
+  slug: paypay-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 35.5
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 28
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 52.1
     developer_ergonomics: 49.4
     discoverability: 73.2
@@ -258,7 +271,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 33.8
+  previous_composite: 35.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -275,13 +288,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/paypay/refs/heads/main/screenshots/paypay-2026-08-07T191649.png
+screenshot: https://apis.io/screenshots/paypay/paypay-2026-08-07T191649.png
 security:
 - kind: authentication
   name: Paypay Authentication
@@ -291,6 +304,12 @@ security:
   name: Paypay Domain Security
   slug: paypay-domain-security
   summary_line: TLSv1.3
+skill_count: 2
+skills:
+- name: Collect a payment with a PayPay dynamic QR code
+  slug: paypay-collect-qr-payment
+- name: Pre-authorize and capture a PayPay payment
+  slug: paypay-preauth-capture
 slug: paypay
 tags:
 - Company

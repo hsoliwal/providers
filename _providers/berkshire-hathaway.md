@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
+  label: Paid
   onboarding: unknown
-  pricing: freemium
+  pricing: paid
   public: false
   source:
-  - plans
+  - finops
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The BNSF API Center provides customer APIs for programmatic integration with BNSF Railway freight shipping operations. APIs enable real-time shipment tracing, intermodal hub operations, pricing and ra
@@ -42,7 +47,7 @@ apis:
 artifact_total: 16
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/security/berkshire-hathaway-domain-security.yml
+  href: https://artifacts.apis.io/berkshire-hathaway/security/berkshire-hathaway-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/berkshire-hathaway-domain-security.yml
@@ -79,32 +84,32 @@ common:
   type: TermsOfService
   url: https://www.berkshirehathaway.com/disclaimer.html
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/well-known/berkshire-hathaway-well-known.yml
+  href: https://artifacts.apis.io/berkshire-hathaway/well-known/berkshire-hathaway-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/berkshire-hathaway-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/regulatory/berkshire-hathaway-regulatory-posture.yml
+  href: https://artifacts.apis.io/berkshire-hathaway/regulatory/berkshire-hathaway-regulatory-posture.yml
   title: ''
   type: RegulatoryPosture
   url: regulatory/berkshire-hathaway-regulatory-posture.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/llms/berkshire-hathaway-llms.txt
+  href: https://artifacts.apis.io/berkshire-hathaway/llms/berkshire-hathaway-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/berkshire-hathaway-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/plans/berkshire-hathaway-plans-pricing.yml
+  href: https://artifacts.apis.io/berkshire-hathaway/plans/berkshire-hathaway-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/berkshire-hathaway-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/rate-limits/berkshire-hathaway-rate-limits.yml
+  href: https://artifacts.apis.io/berkshire-hathaway/rate-limits/berkshire-hathaway-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/berkshire-hathaway-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/finops/berkshire-hathaway-finops.yml
+  href: https://artifacts.apis.io/berkshire-hathaway/finops/berkshire-hathaway-finops.yml
   title: ''
   type: FinOps
   url: finops/berkshire-hathaway-finops.yml
@@ -149,7 +154,7 @@ finops:
 - has_sources: false
   method: generated
   name: Berkshire Hathaway Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: berkshire-hathaway-finops
   template: true
@@ -194,13 +199,13 @@ score:
   band: emerging
   composite: 23.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
@@ -213,21 +218,21 @@ score:
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 25.5
+  previous_composite: 23.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 8.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/screenshots/berkshire-hathaway-2026-06-20T173143.png
+screenshot: https://apis.io/screenshots/berkshire-hathaway/berkshire-hathaway-2026-06-20T173143.png
 security:
 - kind: domain-security
   name: Berkshire Hathaway Domain Security

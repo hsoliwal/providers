@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
+  onboarding: self-serve
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 19.7
+  scored_at: '2026-11-06'
 api_count: 19
 apis:
 - description: API for communicating with a Camunda 8 cluster.
@@ -119,39 +137,39 @@ apis:
   description: The Chat Completions API from Camunda Services — 1 operation(s) for chat completions.
   name: Camunda Services Chat Completions API
   slug: camunda-services-chat-completions-api
-artifact_total: 35
+artifact_total: 36
 common:
 - group: docs
   title: ''
   type: APIReference
   url: https://camunda.com/bpmn/reference/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/plans/camunda-services-plans-pricing.yml
+  href: https://artifacts.apis.io/camunda-services/plans/camunda-services-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/camunda-services-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/rules/camunda-services-rules.yml
+  href: https://artifacts.apis.io/camunda-services/rules/camunda-services-rules.yml
   title: ''
   type: Spectral
   url: rules/camunda-services-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/json-ld/camunda-services-context.jsonld
+  href: https://artifacts.apis.io/camunda-services/json-ld/camunda-services-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/camunda-services-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/vocabulary/camunda-services-vocabulary.yml
+  href: https://artifacts.apis.io/camunda-services/vocabulary/camunda-services-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/camunda-services-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/data-model/camunda-services-data-model.yml
+  href: https://artifacts.apis.io/camunda-services/data-model/camunda-services-data-model.yml
   title: ''
   type: DataModel
   url: data-model/camunda-services-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/changelog/camunda-services-changelog.yml
+  href: https://artifacts.apis.io/camunda-services/changelog/camunda-services-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/camunda-services-changelog.yml
@@ -160,42 +178,42 @@ common:
   type: Compliance
   url: https://trust.camunda.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/authentication/camunda-services-authentication.yml
+  href: https://artifacts.apis.io/camunda-services/authentication/camunda-services-authentication.yml
   title: ''
   type: Authentication
   url: authentication/camunda-services-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/conformance/camunda-services-conformance.yml
+  href: https://artifacts.apis.io/camunda-services/conformance/camunda-services-conformance.yml
   title: ''
   type: Conformance
   url: conformance/camunda-services-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/llms/camunda-services-llms.txt
+  href: https://artifacts.apis.io/camunda-services/llms/camunda-services-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/camunda-services-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/well-known/camunda-services-well-known.yml
+  href: https://artifacts.apis.io/camunda-services/well-known/camunda-services-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/camunda-services-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/hosts/camunda-services-hosts.yml
+  href: https://artifacts.apis.io/camunda-services/hosts/camunda-services-hosts.yml
   title: ''
   type: Hosts
   url: hosts/camunda-services-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/vendors/camunda-services-vendors.yml
+  href: https://artifacts.apis.io/camunda-services/vendors/camunda-services-vendors.yml
   title: ''
   type: Vendors
   url: vendors/camunda-services-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/packages/camunda-services-packages.yml
+  href: https://artifacts.apis.io/camunda-services/packages/camunda-services-packages.yml
   title: ''
   type: SDKs
   url: packages/camunda-services-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/packages/camunda-services-packages.yml
+  href: https://artifacts.apis.io/camunda-services/packages/camunda-services-packages.yml
   title: ''
   type: Packages
   url: packages/camunda-services-packages.yml
@@ -232,17 +250,17 @@ common:
   type: DeveloperPortal
   url: https://docs.camunda.io/build-with-camunda/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/security/camunda-services-trust-center.yml
+  href: https://artifacts.apis.io/camunda-services/security/camunda-services-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/camunda-services-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/security/camunda-services-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/camunda-services/security/camunda-services-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/camunda-services-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/camunda-services/refs/heads/main/security/camunda-services-domain-security.yml
+  href: https://artifacts.apis.io/camunda-services/security/camunda-services-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/camunda-services-domain-security.yml
@@ -283,6 +301,14 @@ coverage:
   state: unreadable
 created: '2026-10-06'
 description: Camunda Services provides an open platform for workflow and decision automation, offering the Camunda Platform to design, execute, and monitor business processes. It supports BPMN, DMN, and CMMN standards, delivering scalable solutions for enterprises and developers. The company offers cloud and self‑hosted options, extensive tooling, and a vibrant community, enabling organizations to orchestrate complex workflows efficiently.
+finops:
+- has_sources: true
+  method: derived
+  name: Camunda Services Finops
+  primary_unit: ''
+  service_category: ''
+  slug: camunda-services-finops
+  template: true
 json_schemas:
 - name: GetApiV1InfoResponse
   property_count: 6
@@ -330,9 +356,9 @@ overview: 'Camunda Services is listed with 19 APIs on the [APIs.io](https://apis
   Camunda Services'' developer surface includes API reference, changelog, authentication, documentation, getting-started guide, engineering blog, pricing, and 26 more developer resources.'
 plans:
 - name: Camunda Services Plans Pricing
-  plan_count: 4
+  plan_count: 3
   slug: camunda-services-plans-pricing
-random_paper: 14
+random_paper: 10
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -348,21 +374,23 @@ rules:
   slug: camunda-services-rules
 score:
   band: developing
-  composite: 53.7
+  composite: 46.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 24
     catalog_earned: 70.8
     catalog_earned_first_party: 12.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.0
   facets:
-    access_clarity: 92.1
+    access_clarity: 81.6
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 64.3
-    discoverability: 69.6
-    operational_transparency: 31.6
+    developer_ergonomics: 47.6
+    discoverability: 67.9
+    operational_transparency: 23.7
+  previous_composite: 53.7
   provenance:
     conformance: derived
     contracts:
@@ -376,12 +404,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 32.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/camunda-services/camunda-services-2026-11-03T123109.png
 security:
 - kind: authentication
   name: Camunda Services Authentication

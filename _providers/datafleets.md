@@ -1,11 +1,12 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
   trial: false
   try_now: false
 api_count: 0
@@ -23,7 +24,7 @@ plans:
 - name: Datafleets Plans Pricing
   plan_count: 7
   slug: datafleets-plans-pricing
-random_paper: 19
+random_paper: 21
 slug: datafleets
 tags:
 - Company

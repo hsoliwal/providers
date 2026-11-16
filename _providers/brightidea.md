@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Brightidea Developer Portal provides API documentation for the Brightidea innovation management platform.
@@ -36,22 +49,22 @@ common:
   type: Compliance
   url: https://www.brightidea.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/well-known/brightidea-status-security.txt
+  href: https://artifacts.apis.io/brightidea/well-known/brightidea-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/brightidea-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/well-known/brightidea-well-known.yml
+  href: https://artifacts.apis.io/brightidea/well-known/brightidea-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brightidea-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/hosts/brightidea-hosts.yml
+  href: https://artifacts.apis.io/brightidea/hosts/brightidea-hosts.yml
   title: ''
   type: Hosts
   url: hosts/brightidea-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/vendors/brightidea-vendors.yml
+  href: https://artifacts.apis.io/brightidea/vendors/brightidea-vendors.yml
   title: ''
   type: Vendors
   url: vendors/brightidea-vendors.yml
@@ -76,17 +89,17 @@ common:
   type: DeveloperPortal
   url: https://developer.brightidea.com/_documentation
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/security/brightidea-trust-center.yml
+  href: https://artifacts.apis.io/brightidea/security/brightidea-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/brightidea-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/security/brightidea-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/brightidea/security/brightidea-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/brightidea-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightidea/refs/heads/main/security/brightidea-domain-security.yml
+  href: https://artifacts.apis.io/brightidea/security/brightidea-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brightidea-domain-security.yml
@@ -141,36 +154,40 @@ overview: 'Brightidea is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Brightidea''s developer surface includes documentation, engineering blog, support, pricing, getting-started guide, and 16 more developer resources.'
-random_paper: 9
+random_paper: 11
 score:
-  band: thin
-  composite: 28.5
+  band: emerging
+  composite: 17.4
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 30.0
     catalog_earned_first_party: 0.0
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.1
   facets:
-    access_clarity: 47.4
+    access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 38.1
-    discoverability: 55.4
-    operational_transparency: 34.2
+    developer_ergonomics: 19.0
+    discoverability: 54.5
+    operational_transparency: 17.1
+  previous_composite: 28.5
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/brightidea/brightidea-2026-11-03T122622.png
 security:
 - kind: domain-security
   name: Brightidea Domain Security

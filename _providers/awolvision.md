@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -32,22 +45,22 @@ common:
   type: BlogRSS
   url: https://awolvision.com/blogs/news.atom
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/llms/awolvision-llms.txt
+  href: https://artifacts.apis.io/awolvision/llms/awolvision-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/awolvision-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/well-known/awolvision-well-known.yml
+  href: https://artifacts.apis.io/awolvision/well-known/awolvision-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/awolvision-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/hosts/awolvision-hosts.yml
+  href: https://artifacts.apis.io/awolvision/hosts/awolvision-hosts.yml
   title: ''
   type: Hosts
   url: hosts/awolvision-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/vendors/awolvision-vendors.yml
+  href: https://artifacts.apis.io/awolvision/vendors/awolvision-vendors.yml
   title: ''
   type: Vendors
   url: vendors/awolvision-vendors.yml
@@ -72,7 +85,7 @@ common:
   type: Blog
   url: https://awolvision.com/blogs/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/security/awolvision-domain-security.yml
+  href: https://artifacts.apis.io/awolvision/security/awolvision-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/awolvision-domain-security.yml
@@ -96,28 +109,28 @@ modified: '2026-10-06'
 name: Awolvision
 nav: Providers
 network: true
-overview: 'Awolvision is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, HomeTheater, Projectors, E-Commerce, and Consumer Electronics.
+overview: 'Awolvision is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Home-Theater, Projectors, E-Commerce, and Consumer Electronics.
 
 
   Awolvision''s developer surface includes support, engineering blog, and 10 more developer resources.'
-random_paper: 21
+random_paper: 19
 score:
-  band: emerging
-  composite: 11.1
+  band: minimal
+  composite: 7.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.4
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
-    discoverability: 57.1
+    developer_ergonomics: 3.6
+    discoverability: 56.3
     operational_transparency: 0.0
   previous_composite: 11.1
   provenance:
@@ -127,15 +140,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/awolvision/refs/heads/main/screenshots/awolvision-2026-10-11T101222.png
+screenshot: https://apis.io/screenshots/awolvision/awolvision-2026-10-11T101222.png
 security:
 - kind: domain-security
   name: Awolvision Domain Security
@@ -144,7 +157,7 @@ security:
 slug: awolvision
 tags:
 - Company
-- HomeTheater
+- Home-Theater
 - Projectors
 - E-Commerce
 - Consumer Electronics

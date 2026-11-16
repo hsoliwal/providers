@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.3
-  scored_at: '2026-10-17'
+  score: 41.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Remote Model Context Protocol server exposing the Deeplead API as tools to Claude, ChatGPT, Cursor and other agents. Sign in with OAuth (dynamic client registration supported) or pass an API key as a '
@@ -59,30 +74,35 @@ apis:
   description: The Persons API from Deeplead — 5 operation(s) for persons.
   name: Deeplead Persons API
   slug: deeplead-persons-api
-artifact_total: 10
+artifact_total: 13
 common:
+- group: other
+  href: https://artifacts.apis.io/deeplead/capabilities/deeplead-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/deeplead-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/plans/deeplead-plans-pricing.yml
+  href: https://artifacts.apis.io/deeplead/plans/deeplead-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/deeplead-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/mcp/deeplead-mcp.yml
+  href: https://artifacts.apis.io/deeplead/mcp/deeplead-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/deeplead-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/well-known/deeplead-well-known.yml
+  href: https://artifacts.apis.io/deeplead/well-known/deeplead-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/deeplead-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/hosts/deeplead-hosts.yml
+  href: https://artifacts.apis.io/deeplead/hosts/deeplead-hosts.yml
   title: ''
   type: Hosts
   url: hosts/deeplead-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/vendors/deeplead-vendors.yml
+  href: https://artifacts.apis.io/deeplead/vendors/deeplead-vendors.yml
   title: ''
   type: Vendors
   url: vendors/deeplead-vendors.yml
@@ -91,7 +111,7 @@ common:
   type: Support
   url: https://www.deeplead.io/help
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/security/deeplead-domain-security.yml
+  href: https://artifacts.apis.io/deeplead/security/deeplead-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deeplead-domain-security.yml
@@ -120,7 +140,7 @@ common:
   type: APICatalog
   url: https://www.deeplead.io/.well-known/api-catalog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/llms/deeplead-llms.txt
+  href: https://artifacts.apis.io/deeplead/llms/deeplead-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/deeplead-llms.txt
@@ -150,6 +170,14 @@ common:
   url: https://www.deeplead.io/privacy-policy
 created: '2026-09-27'
 description: Deeplead finds B2B customers and runs cold email outreach to them. It searches local businesses, companies and people, finds decision makers with verified work emails and phone numbers, and sends personalized campaigns from warmed-up inboxes with one inbox for every reply. The same data is available to developers and AI agents through a REST API with an OpenAPI 3.1 contract and a remote MCP server, both authenticated with an API key or OAuth.
+finops:
+- has_sources: true
+  method: derived
+  name: Deeplead Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: deeplead-finops
+  template: false
 image: https://deeplead.io/opengraph-image
 layout: provider
 mcp_servers:
@@ -163,51 +191,70 @@ network: true
 overview: 'Deeplead publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Businesses API, Contacts API, and 4 more. Tagged areas include Company, Lead Generation, Cold Email, Artificial Intelligence, and Sales Automation.
 
 
-  Deeplead''s developer surface includes support, documentation, API reference, getting-started guide, signup flow, engineering blog, pricing, and 13 more developer resources.'
+  The Deeplead catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Deeplead''s developer surface includes support, documentation, API reference, getting-started guide, signup flow, engineering blog, pricing, and 14 more developer resources.'
 plans:
 - name: Deeplead Plans Pricing
-  plan_count: 1
+  plan_count: 2
   slug: deeplead-plans-pricing
-random_paper: 6
+- name: Deeplead Price Estimates
+  plan_count: 0
+  slug: deeplead-price-estimates
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Deeplead API Rules
+  rule_count: 52
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 2
+    warn: 1
+  slug: deeplead-rules
 score:
-  band: developing
-  composite: 40.5
+  band: thin
+  composite: 37.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 45.0
+    artifact_dirs: 18
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 16.4
+  delta: -7.3
   facets:
-    access_clarity: 65.8
-    contract_governance: 0.0
-    contract_quality: 47.8
-    developer_ergonomics: 35.7
+    access_clarity: 51.3
+    contract_governance: 13.6
+    contract_quality: 53.1
+    developer_ergonomics: 17.9
     discoverability: 85.0
-    operational_transparency: 0.0
-  previous_composite: 24.1
+    operational_transparency: 10.5
+  previous_composite: 45.1
   provenance:
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 6
-    mcp: unknown
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 14.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/deeplead/refs/heads/main/screenshots/deeplead-2026-10-11T103638.png
+screenshot: https://apis.io/screenshots/deeplead/deeplead-2026-10-11T103638.png
 security:
 - kind: domain-security
   name: Deeplead Domain Security

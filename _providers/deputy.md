@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -18,21 +21,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: documented
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.5
-  scored_at: '2026-10-17'
+  score: 34.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 785
   human_in_the_loop: 230
@@ -40,7 +46,7 @@ agentic_access:
   operation_count: 1500
   slug: deputy-agentic-access
   summary_line: 1500 operations · 785 acting · 230 human-in-the-loop
-api_count: 8
+api_count: 9
 apis:
 - description: REST API for managing employees, schedules, timesheets, locations, leave, tasks, and sales metrics in the Deputy workforce management platform. Authentication is handled via OAuth 2.0 or a permanent a
   name: Deputy Public API
@@ -1125,35 +1131,40 @@ apis:
   description: Operations on the CustomField resource
   name: Deputy Custom Field API
   slug: deputy-custom-field-api
-artifact_total: 253
+artifact_total: 256
 common:
+- group: commercial
+  href: https://artifacts.apis.io/deputy/plans/deputy-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/deputy-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/capabilities/deputy-capability-edges.yml
+  href: https://artifacts.apis.io/deputy/capabilities/deputy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/deputy-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/agentic-access/deputy-agentic-access.yml
+  href: https://artifacts.apis.io/deputy/agentic-access/deputy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/deputy-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/rules/deputy-rules.yml
+  href: https://artifacts.apis.io/deputy/rules/deputy-rules.yml
   title: ''
   type: Spectral
   url: rules/deputy-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/json-ld/deputy-context.jsonld
+  href: https://artifacts.apis.io/deputy/json-ld/deputy-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/deputy-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/vocabulary/deputy-vocabulary.yml
+  href: https://artifacts.apis.io/deputy/vocabulary/deputy-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/deputy-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/data-model/deputy-data-model.yml
+  href: https://artifacts.apis.io/deputy/data-model/deputy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/deputy-data-model.yml
@@ -1162,47 +1173,47 @@ common:
   type: Compliance
   url: https://trust.deputy.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/errors/deputy-problem-types.yml
+  href: https://artifacts.apis.io/deputy/errors/deputy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/deputy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/conformance/deputy-conformance.yml
+  href: https://artifacts.apis.io/deputy/conformance/deputy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/deputy-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/llms/deputy-llms.txt
+  href: https://artifacts.apis.io/deputy/llms/deputy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/deputy-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/well-known/deputy-status-security.txt
+  href: https://artifacts.apis.io/deputy/well-known/deputy-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/deputy-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/well-known/deputy-security.txt
+  href: https://artifacts.apis.io/deputy/well-known/deputy-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/deputy-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/well-known/deputy-well-known.yml
+  href: https://artifacts.apis.io/deputy/well-known/deputy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/deputy-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/hosts/deputy-hosts.yml
+  href: https://artifacts.apis.io/deputy/hosts/deputy-hosts.yml
   title: ''
   type: Hosts
   url: hosts/deputy-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/integrations/deputy-integration-edges.yml
+  href: https://artifacts.apis.io/deputy/integrations/deputy-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/deputy-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/vendors/deputy-vendors.yml
+  href: https://artifacts.apis.io/deputy/vendors/deputy-vendors.yml
   title: ''
   type: Vendors
   url: vendors/deputy-vendors.yml
@@ -1219,27 +1230,27 @@ common:
   type: Leadership
   url: https://www.deputy.com/about/leadership
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/scopes/deputy-scopes.yml
+  href: https://artifacts.apis.io/deputy/scopes/deputy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/deputy-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/authentication/deputy-authentication.yml
+  href: https://artifacts.apis.io/deputy/authentication/deputy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/deputy-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/security/deputy-trust-center.yml
+  href: https://artifacts.apis.io/deputy/security/deputy-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/deputy-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/security/deputy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/deputy/security/deputy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/deputy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/security/deputy-domain-security.yml
+  href: https://artifacts.apis.io/deputy/security/deputy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deputy-domain-security.yml
@@ -1301,6 +1312,14 @@ common:
   url: https://developer.deputy.com/llms.txt
 created: '2026-05-11'
 description: Deputy is an API-first workforce management platform that handles employee scheduling, time and attendance tracking, timesheets, leave management, task delegation, and team communications for businesses with hourly workers. The platform integrates with payroll, HR, and point of sale systems and exposes most of its product surface area via a public REST API. The Deputy API uses OAuth 2.0 or permanent token authentication and provides JSON endpoints for employees, schedules, timesheets, locations, sales metrics, and more.
+finops:
+- has_sources: true
+  method: derived
+  name: Deputy Finops
+  primary_unit: user
+  service_category: ''
+  slug: deputy-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/deputy.png
 json_schemas:
 - name: AddNewWorkplaceRequest
@@ -1403,8 +1422,15 @@ overview: 'Deputy publishes 217 API contracts indexed on the [APIs.io](https://a
   The Deputy catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Deputy''s developer surface includes authentication, getting-started guide, pricing, support, engineering blog, and 33 more developer resources.'
-random_paper: 7
+  Deputy''s developer surface includes authentication, getting-started guide, pricing, support, engineering blog, and 34 more developer resources.'
+plans:
+- name: Deputy Plans Pricing
+  plan_count: 8
+  slug: deputy-plans-pricing
+- name: Deputy Price Estimates
+  plan_count: 0
+  slug: deputy-price-estimates
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -1425,22 +1451,22 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 56.7
+  composite: 66.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 65.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 49.3
+    artifact_dirs: 26
+    catalog_earned: 80.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 33.0
+  delta: 1.6
   facets:
-    access_clarity: 43.4
+    access_clarity: 78.9
     contract_governance: 22.0
-    contract_quality: 60.0
-    developer_ergonomics: 28.6
-    discoverability: 82.1
-    operational_transparency: 28.9
+    contract_quality: 65.1
+    developer_ergonomics: 40.5
+    discoverability: 80.4
+    operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -1448,7 +1474,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 23.7
+  previous_composite: 64.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1456,21 +1482,21 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 100.0
-      total: 216
+      total: 228
     mcp: derived
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Employment & Payroll
     regime_id: employment_payroll
-    score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 38.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 100.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/deputy/refs/heads/main/screenshots/deputy-2026-06-20T180004.png
+screenshot: https://apis.io/screenshots/deputy/deputy-2026-06-20T180004.png
 security:
 - kind: authentication
   name: Deputy Authentication

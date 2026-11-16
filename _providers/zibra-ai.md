@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zibra-ai/refs/heads/main/security/zibra-ai-domain-security.yml
+  href: https://artifacts.apis.io/zibra-ai/security/zibra-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zibra-ai-domain-security.yml
@@ -74,17 +78,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/ZibraAI
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zibra-ai/refs/heads/main/packages/zibra-ai-packages.yml
+  href: https://artifacts.apis.io/zibra-ai/packages/zibra-ai-packages.yml
   title: ''
   type: Packages
   url: packages/zibra-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zibra-ai/refs/heads/main/packages/zibra-ai-packages.yml
+  href: https://artifacts.apis.io/zibra-ai/packages/zibra-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/zibra-ai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zibra-ai/refs/heads/main/llms/zibra-ai-llms.txt
+  href: https://artifacts.apis.io/zibra-ai/llms/zibra-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zibra-ai-llms.txt
@@ -100,12 +104,12 @@ overview: 'Zibra AI is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Zibra AI''s developer surface includes documentation, engineering blog, pricing, support, and 8 more developer resources.'
-random_paper: 13
+random_paper: 15
 score:
   band: emerging
   composite: 14.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -131,14 +135,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zibra-ai/refs/heads/main/screenshots/zibra-ai-2026-09-02T171728.png
+screenshot: https://apis.io/screenshots/zibra-ai/zibra-ai-2026-09-02T171728.png
 security:
 - kind: domain-security
   name: Zibra Ai Domain Security

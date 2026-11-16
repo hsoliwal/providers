@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artelon/refs/heads/main/llms/artelon-llms.txt
+  href: https://artifacts.apis.io/artelon/llms/artelon-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/artelon-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/artelon/refs/heads/main/hosts/artelon-hosts.yml
+  href: https://artifacts.apis.io/artelon/hosts/artelon-hosts.yml
   title: ''
   type: Hosts
   url: hosts/artelon-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/artelon/refs/heads/main/vendors/artelon-vendors.yml
+  href: https://artifacts.apis.io/artelon/vendors/artelon-vendors.yml
   title: ''
   type: Vendors
   url: vendors/artelon-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artelon/refs/heads/main/security/artelon-domain-security.yml
+  href: https://artifacts.apis.io/artelon/security/artelon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/artelon-domain-security.yml
@@ -68,7 +81,7 @@ name: Artelon
 nav: Providers
 network: true
 overview: Artelon is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Orthopedic, Medical Devices, Synthetic Implants, and FlexBand.
-random_paper: 9
+random_paper: 13
 score:
   band: minimal
   composite: 4.4
@@ -96,14 +109,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/artelon/refs/heads/main/screenshots/artelon-2026-10-11T100410.png
+screenshot: https://apis.io/screenshots/artelon/artelon-2026-10-11T100410.png
 security:
 - kind: domain-security
   name: Artelon Domain Security

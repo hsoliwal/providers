@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.1
-  scored_at: '2026-10-17'
+  score: 38.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -48,80 +63,85 @@ apis:
   description: The Utilities API from TonePerfect (Pronunciation Assessment API) — 3 operation(s) for utilities.
   name: TonePerfect (Pronunciation Assessment API) Utilities API
   slug: toneperfect-utilities-api
-artifact_total: 13
+artifact_total: 15
 common:
+- group: other
+  href: https://artifacts.apis.io/toneperfect/capabilities/toneperfect-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/toneperfect-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/agentic-access/toneperfect-agentic-access.yml
+  href: https://artifacts.apis.io/toneperfect/agentic-access/toneperfect-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/toneperfect-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/plans/toneperfect-plans-pricing.yml
+  href: https://artifacts.apis.io/toneperfect/plans/toneperfect-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/toneperfect-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/rules/toneperfect-rules.yml
+  href: https://artifacts.apis.io/toneperfect/rules/toneperfect-rules.yml
   title: ''
   type: Spectral
   url: rules/toneperfect-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/json-ld/toneperfect-context.jsonld
+  href: https://artifacts.apis.io/toneperfect/json-ld/toneperfect-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/toneperfect-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/vocabulary/toneperfect-vocabulary.yml
+  href: https://artifacts.apis.io/toneperfect/vocabulary/toneperfect-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/toneperfect-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/data-model/toneperfect-data-model.yml
+  href: https://artifacts.apis.io/toneperfect/data-model/toneperfect-data-model.yml
   title: ''
   type: DataModel
   url: data-model/toneperfect-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/conventions/toneperfect-conventions.yml
+  href: https://artifacts.apis.io/toneperfect/conventions/toneperfect-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/toneperfect-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/conventions/toneperfect-conventions.yml
+  href: https://artifacts.apis.io/toneperfect/conventions/toneperfect-conventions.yml
   title: ''
   type: Conventions
   url: conventions/toneperfect-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/authentication/toneperfect-authentication.yml
+  href: https://artifacts.apis.io/toneperfect/authentication/toneperfect-authentication.yml
   title: ''
   type: Authentication
   url: authentication/toneperfect-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/errors/toneperfect-problem-types.yml
+  href: https://artifacts.apis.io/toneperfect/errors/toneperfect-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/toneperfect-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/conformance/toneperfect-conformance.yml
+  href: https://artifacts.apis.io/toneperfect/conformance/toneperfect-conformance.yml
   title: ''
   type: Conformance
   url: conformance/toneperfect-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/llms/toneperfect-llms.txt
+  href: https://artifacts.apis.io/toneperfect/llms/toneperfect-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/toneperfect-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/hosts/toneperfect-hosts.yml
+  href: https://artifacts.apis.io/toneperfect/hosts/toneperfect-hosts.yml
   title: ''
   type: Hosts
   url: hosts/toneperfect-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/vendors/toneperfect-vendors.yml
+  href: https://artifacts.apis.io/toneperfect/vendors/toneperfect-vendors.yml
   title: ''
   type: Vendors
   url: vendors/toneperfect-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/packages/toneperfect-packages.yml
+  href: https://artifacts.apis.io/toneperfect/packages/toneperfect-packages.yml
   title: ''
   type: Packages
   url: packages/toneperfect-packages.yml
@@ -166,7 +186,7 @@ common:
   type: GettingStarted
   url: https://api.toneperfect.app/quickstart/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toneperfect/refs/heads/main/security/toneperfect-domain-security.yml
+  href: https://artifacts.apis.io/toneperfect/security/toneperfect-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/toneperfect-domain-security.yml
@@ -180,6 +200,14 @@ common:
   url: https://api.toneperfect.app/docs
 created: '2026-10-08'
 description: TonePerfect offers an AI‑powered pronunciation assessment API for language learning applications. It supports ten languages and provides a single endpoint that returns a detailed score (0‑100) for the whole sentence, each word, and individual sounds, including tone information for Mandarin. The service includes free tier credits, transparent pricing, and robust error handling, making it suitable for developers integrating speech evaluation into apps.
+finops:
+- has_sources: true
+  method: derived
+  name: Toneperfect Finops
+  primary_unit: seat
+  service_category: ''
+  slug: toneperfect-finops
+  template: false
 image: https://api.toneperfect.app/static/og-image.png
 json_schemas:
 - name: Assessment
@@ -204,18 +232,21 @@ modified: '2026-10-08'
 name: TonePerfect (Pronunciation Assessment API)
 nav: Providers
 network: true
-overview: 'TonePerfect (Pronunciation Assessment API) publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Assessment API, Capabilities API, and Utilities API. Tagged areas include Company, Artificial Intelligence, Speech, Language-Learning, and Pronunciation.
+overview: 'TonePerfect (Pronunciation Assessment API) publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Assessment API, Capabilities API, and Utilities API. Tagged areas include Company, Artificial Intelligence, Speech, Language Learning, and Pronunciation.
 
 
   The TonePerfect (Pronunciation Assessment API) catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  TonePerfect (Pronunciation Assessment API)''s developer surface includes authentication, pricing, changelog, engineering blog, getting-started guide, documentation, and 22 more developer resources.'
+  TonePerfect (Pronunciation Assessment API)''s developer surface includes authentication, pricing, changelog, engineering blog, getting-started guide, documentation, and 23 more developer resources.'
 plans:
 - name: Toneperfect Plans Pricing
   plan_count: 3
   slug: toneperfect-plans-pricing
-random_paper: 17
+- name: Toneperfect Price Estimates
+  plan_count: 0
+  slug: toneperfect-price-estimates
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -230,27 +261,29 @@ rules:
     warn: 1
   slug: toneperfect-rules
 score:
-  band: strong
-  composite: 54.7
+  band: developing
+  composite: 45.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 69.8
+    artifact_dirs: 25
+    catalog_earned: 72.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 45.3
+    catalog_gap: 42.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.1
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
-    contract_quality: 63.6
-    developer_ergonomics: 42.9
+    contract_quality: 60.5
+    developer_ergonomics: 31.0
     discoverability: 64.3
-    operational_transparency: 42.1
+    operational_transparency: 21.1
+  previous_composite: 55.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 3
@@ -260,12 +293,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/toneperfect/toneperfect-2026-11-03T144851.png
 security:
 - kind: authentication
   name: Toneperfect Authentication
@@ -280,7 +315,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Speech
-- Language-Learning
+- Language Learning
 - Pronunciation
 website: https://api.toneperfect.app
 ---

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -22,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 33.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -46,24 +53,46 @@ api_count: 1
 apis:
 - baseURL: https://hcti.io/v1
   baseurl_source: declared
-  description: The Image Generation API from HTML/CSS to Image — 5 operation(s) for image generation.
-  name: HTML/CSS to Image Generation API
-  slug: htmlcsstoimage-image-generation-api
-- baseURL: https://hcti.io/v1
-  baseurl_source: declared
-  description: The Signed URLs API from HTML/CSS to Image — 1 operation(s) for signed urls.
-  name: HTML/CSS to Image Signed URLs API
-  slug: htmlcsstoimage-signed-urls-api
-- baseURL: https://hcti.io/v1
-  baseurl_source: declared
   description: The Templates API from HTML/CSS to Image — 4 operation(s) for templates.
   name: HTML/CSS to Image Templates API
   slug: htmlcsstoimage-templates-api
-artifact_total: 14
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The API Keys API from HTML/CSS to Image — 2 operation(s) for api keys.
+  name: HTML/CSS to Image API Keys API
+  slug: htmlcsstoimage-api-keys-api
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The feedback API from HTML/CSS to Image — 1 operation(s) for feedback.
+  name: HTML/CSS to Image Feedback API
+  slug: htmlcsstoimage-feedback-api
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The Images API from HTML/CSS to Image — 10 operation(s) for images.
+  name: HTML/CSS to Image Images API
+  slug: htmlcsstoimage-images-api
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The OG Configs API from HTML/CSS to Image — 2 operation(s) for og configs.
+  name: HTML/CSS to Image OG Configs API
+  slug: htmlcsstoimage-og-configs-api
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The Proxies API from HTML/CSS to Image — 2 operation(s) for proxies.
+  name: HTML/CSS to Image Proxies API
+  slug: htmlcsstoimage-proxies-api
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The Storage Destinations API from HTML/CSS to Image — 3 operation(s) for storage destinations.
+  name: HTML/CSS to Image Storage Destinations API
+  slug: htmlcsstoimage-storage-destinations-api
+- baseURL: https://hcti.io/v1
+  baseurl_source: declared
+  description: The Usage API from HTML/CSS to Image — 1 operation(s) for usage.
+  name: HTML/CSS to Image Usage API
+  slug: htmlcsstoimage-usage-api
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HTML/CSS to Image Image Generation API
   slug: open-htmlcsstoimage-image-generation-api
@@ -86,17 +115,17 @@ common:
   type: BlogRSS
   url: https://htmlcsstoimage.com/blog/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/agentic-access/htmlcsstoimage-agentic-access.yml
+  href: https://artifacts.apis.io/htmlcsstoimage/agentic-access/htmlcsstoimage-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/htmlcsstoimage-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/security/htmlcsstoimage-domain-security.yml
+  href: https://artifacts.apis.io/htmlcsstoimage/security/htmlcsstoimage-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/htmlcsstoimage-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/authentication/htmlcsstoimage-authentication.yml
+  href: https://artifacts.apis.io/htmlcsstoimage/authentication/htmlcsstoimage-authentication.yml
   title: ''
   type: Authentication
   url: authentication/htmlcsstoimage-authentication.yml
@@ -117,17 +146,17 @@ common:
   type: Documentation
   url: https://docs.htmlcsstoimage.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/plans/htmlcsstoimage-plans-pricing.yml
+  href: https://artifacts.apis.io/htmlcsstoimage/plans/htmlcsstoimage-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/htmlcsstoimage-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/rate-limits/htmlcsstoimage-rate-limits.yml
+  href: https://artifacts.apis.io/htmlcsstoimage/rate-limits/htmlcsstoimage-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/htmlcsstoimage-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/finops/htmlcsstoimage-finops.yml
+  href: https://artifacts.apis.io/htmlcsstoimage/finops/htmlcsstoimage-finops.yml
   title: ''
   type: FinOps
   url: finops/htmlcsstoimage-finops.yml
@@ -147,7 +176,10 @@ modified: '2026-10-06'
 name: HTML/CSS to Image
 nav: Providers
 network: true
-overview: 'HTML/CSS to Image publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Generation API, Signed URLs API, and Templates API. Tagged areas include Image Generation, HTML to Image, CSS to Image, Rendering, and Screenshots.
+overview: 'HTML/CSS to Image publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Templates API, API Keys API, Feedback API, and 5 more. Tagged areas include Image Generation, HTML to Image, CSS to Image, Rendering, and Screenshots.
+
+
+  The HTML/CSS to Image catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   HTML/CSS to Image''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
@@ -155,50 +187,63 @@ plans:
 - name: Htmlcsstoimage Plans Pricing
   plan_count: 12
   slug: htmlcsstoimage-plans-pricing
-random_paper: 12
+random_paper: 20
 rate_limits:
 - limit_count: 3
   name: Htmlcsstoimage Rate Limits
   slug: htmlcsstoimage-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: HTML/CSS to Image API Rules
+  rule_count: 53
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 2
+    warn: 8
+  slug: htmlcsstoimage-rules
 score:
   band: thin
-  composite: 27.3
+  composite: 30.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.9
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 51.8
+    contract_governance: 13.6
+    contract_quality: 57.4
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 35.5
+  previous_composite: 29.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 3
+      marker_coverage: 66.7
+      total: 12
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/htmlcsstoimage/refs/heads/main/screenshots/htmlcsstoimage-2026-06-20T182903.png
+screenshot: https://apis.io/screenshots/htmlcsstoimage/htmlcsstoimage-2026-06-20T182903.png
 security:
 - kind: authentication
   name: Htmlcsstoimage Authentication

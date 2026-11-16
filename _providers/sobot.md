@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 27.0
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://sg.sobot.io
@@ -62,15 +65,12 @@ apis:
   description: The OpenAPI Plant Store API from Sobot — 0 operation(s) for openapi plant store.
   name: Sobot OpenAPI Plant Store API
   slug: sobot-openapi-plant-store-api
-artifact_total: 13
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Sobot Voice Webhooks
   slug: sobot-voice-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OpenAPI Plant Store Agent API
   slug: open-sobot-agent-api
@@ -93,17 +93,17 @@ common:
   type: Website
   url: https://www.sobot.io/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/capabilities/sobot-capability-edges.yml
+  href: https://artifacts.apis.io/sobot/capabilities/sobot-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sobot-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/authentication/sobot-authentication.yml
+  href: https://artifacts.apis.io/sobot/authentication/sobot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sobot-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/security/sobot-domain-security.yml
+  href: https://artifacts.apis.io/sobot/security/sobot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sobot-domain-security.yml
@@ -148,82 +148,82 @@ common:
   type: PrivacyPolicy
   url: https://www.sobot.io/privacy-protection-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/llms/sobot-llms.txt
+  href: https://artifacts.apis.io/sobot/llms/sobot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sobot-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/packages/sobot-packages.yml
+  href: https://artifacts.apis.io/sobot/packages/sobot-packages.yml
   title: ''
   type: Packages
   url: packages/sobot-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/packages/sobot-packages.yml
+  href: https://artifacts.apis.io/sobot/packages/sobot-packages.yml
   title: ''
   type: SDKs
   url: packages/sobot-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/conventions/sobot-conventions.yml
+  href: https://artifacts.apis.io/sobot/conventions/sobot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sobot-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/errors/sobot-error-codes.yml
+  href: https://artifacts.apis.io/sobot/errors/sobot-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/sobot-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/lifecycle/sobot-lifecycle.yml
+  href: https://artifacts.apis.io/sobot/lifecycle/sobot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sobot-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/changelog/sobot-changelog.yml
+  href: https://artifacts.apis.io/sobot/changelog/sobot-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/sobot-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/asyncapi/sobot-voice-webhooks.yml
+  href: https://artifacts.apis.io/sobot/asyncapi/sobot-voice-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/sobot-voice-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sobot/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/data-model/sobot-data-model.yml
+  href: https://artifacts.apis.io/sobot/data-model/sobot-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sobot-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/conformance/sobot-conformance.yml
+  href: https://artifacts.apis.io/sobot/conformance/sobot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sobot-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/components/sobot-components.yml
+  href: https://artifacts.apis.io/sobot/components/sobot-components.yml
   title: ''
   type: Components
   url: components/sobot-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/mcp/sobot-mcp.yml
+  href: https://artifacts.apis.io/sobot/mcp/sobot-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/sobot-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/overlays/sobot-online-overlay.yaml
+  href: https://artifacts.apis.io/sobot/overlays/sobot-online-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sobot-online-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/overlays/sobot-basic-overlay.yaml
+  href: https://artifacts.apis.io/sobot/overlays/sobot-basic-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sobot-basic-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/overlays/sobot-voice-overlay.yaml
+  href: https://artifacts.apis.io/sobot/overlays/sobot-voice-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sobot-voice-overlay.yaml
@@ -238,30 +238,43 @@ network: true
 overview: 'Sobot publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent API, basic-public/service/坐席信息管理 API, Exts API, and 2 more. Tagged areas include Company, Enterprise, Contact Center, Customer Service, and Live Chat.
 
 
-  The Sobot catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Sobot catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Sobot''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 24 more developer resources.'
-random_paper: 1
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Sobot API Rules
+  rule_count: 41
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 1
+    warn: 4
+  slug: sobot-rules
 score:
   band: thin
-  composite: 34.9
+  composite: 38.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 25
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 1.3
   facets:
-    access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 49.1
+    access_clarity: 34.2
+    contract_governance: 18.2
+    contract_quality: 51.4
     developer_ergonomics: 28.0
     discoverability: 78.6
     operational_transparency: 23.7
-  previous_composite: 35.2
+  previous_composite: 37.1
   provenance:
     conformance: derived
     contracts:
@@ -277,13 +290,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sobot/refs/heads/main/screenshots/sobot-2026-08-17T082001.png
+screenshot: https://apis.io/screenshots/sobot/sobot-2026-08-17T082001.png
 security:
 - kind: authentication
   name: Sobot Authentication
@@ -293,6 +306,14 @@ security:
   name: Sobot Domain Security
   slug: sobot-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Provision and manage Sobot agents
+  slug: sobot-manage-agents
+- name: Handle a Sobot online chat conversation
+  slug: sobot-online-chat
+- name: Manage Sobot voice extensions
+  slug: sobot-voice-extensions
 slug: sobot
 tags:
 - Company

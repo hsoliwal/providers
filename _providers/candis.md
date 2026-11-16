@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.3
-  scored_at: '2026-10-17'
+  score: 54.2
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.candis.io
@@ -66,11 +72,8 @@ apis:
   description: The Reimbursements API from Candis — 1 operation(s) for reimbursements.
   name: Candis Reimbursements API
   slug: candis-reimbursements-api
-artifact_total: 18
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Candis Core Data API
   slug: open-candis-core-data-api
@@ -91,7 +94,7 @@ collections:
   slug: open-candis-reimbursements-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/capabilities/candis-capability-edges.yml
+  href: https://artifacts.apis.io/candis/capabilities/candis-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/candis-capability-edges.yml
@@ -144,92 +147,92 @@ common:
   type: ChangeLog
   url: https://developer.candis.io/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/changelog/candis-changelog.yml
+  href: https://artifacts.apis.io/candis/changelog/candis-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/candis-changelog.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/openapi/_original/candis-openapi.json
+  href: https://artifacts.apis.io/candis/openapi/_original/candis-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/candis-openapi.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/mcp/candis-mcp.yml
+  href: https://artifacts.apis.io/candis/mcp/candis-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/candis-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/llms/candis-llms.txt
+  href: https://artifacts.apis.io/candis/llms/candis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/candis-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/authentication/candis-authentication.yml
+  href: https://artifacts.apis.io/candis/authentication/candis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/candis-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/scopes/candis-scopes.yml
+  href: https://artifacts.apis.io/candis/scopes/candis-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/candis-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/well-known/candis-well-known.yml
+  href: https://artifacts.apis.io/candis/well-known/candis-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/candis-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/conventions/candis-conventions.yml
+  href: https://artifacts.apis.io/candis/conventions/candis-conventions.yml
   title: ''
   type: Conventions
   url: conventions/candis-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/conventions/candis-conventions.yml
+  href: https://artifacts.apis.io/candis/conventions/candis-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/candis-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/rate-limits/candis-rate-limits.yml
+  href: https://artifacts.apis.io/candis/rate-limits/candis-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/candis-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/lifecycle/candis-lifecycle.yml
+  href: https://artifacts.apis.io/candis/lifecycle/candis-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/candis-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/errors/candis-error-codes.yml
+  href: https://artifacts.apis.io/candis/errors/candis-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/candis-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/conformance/candis-conformance.yml
+  href: https://artifacts.apis.io/candis/conformance/candis-conformance.yml
   title: ''
   type: Conformance
   url: conformance/candis-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/data-model/candis-data-model.yml
+  href: https://artifacts.apis.io/candis/data-model/candis-data-model.yml
   title: ''
   type: DataModel
   url: data-model/candis-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/security/candis-domain-security.yml
+  href: https://artifacts.apis.io/candis/security/candis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/candis-domain-security.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/overlays/candis-openapi-overlay.yaml
+  href: https://artifacts.apis.io/candis/overlays/candis-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/candis-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/skills/candis-export-approved-invoices.md
+  href: https://artifacts.apis.io/candis/skills/candis-export-approved-invoices.md
   title: ''
   type: AgentSkill
   url: skills/candis-export-approved-invoices.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/skills/candis-import-core-data.md
+  href: https://artifacts.apis.io/candis/skills/candis-import-core-data.md
   title: ''
   type: AgentSkill
   url: skills/candis-import-core-data.md
@@ -238,7 +241,7 @@ description: Candis is a Berlin-based fintech (founded 2015) offering an AI-driv
 image: https://assets.my.candis.io/open_graph/CANDIS-UI.jpg
 layout: provider
 mcp_servers:
-- description: Remote MCP server at developer.candis.io over HTTP; 16 tools listed.
+- description: Remote MCP server at developer.candis.io over HTTP; 5 tools listed.
   name: Candis MCP Server
   slug: candis
 modified: '2026-07-18'
@@ -248,12 +251,28 @@ network: true
 overview: 'Candis publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Core Data API, Exports API, Invoices API, and 3 more. Tagged areas include Company, Fintech, Accounts Payable, Spend Management, and Invoice Management.
 
 
+  The Candis catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Candis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 24 more developer resources.'
-random_paper: 10
+random_paper: 2
 rate_limits:
 - limit_count: 1
   name: Candis Rate Limits
   slug: candis-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Candis API Rules
+  rule_count: 59
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 2
+  slug: candis-rules
 scopes:
 - name: Candis Scopes
   scope_count: 13
@@ -261,22 +280,22 @@ scopes:
   summary_line: 13 scopes · authorizationCode
 score:
   band: developing
-  composite: 43.3
+  composite: 51.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 25
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 6.3
   facets:
     access_clarity: 17.1
-    contract_governance: 18.2
-    contract_quality: 50.8
-    developer_ergonomics: 39.9
+    contract_governance: 31.8
+    contract_quality: 56.5
+    developer_ergonomics: 58.9
     discoverability: 75.0
-    operational_transparency: 39.5
+    operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -285,7 +304,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 43.2
+  previous_composite: 44.9
   provenance:
     conformance: first-party
     contracts:
@@ -301,13 +320,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/screenshots/candis-2026-07-25T204341.png
+screenshot: https://apis.io/screenshots/candis/candis-2026-07-25T204341.png
 security:
 - kind: authentication
   name: Candis Authentication
@@ -317,6 +336,12 @@ security:
   name: Candis Domain Security
   slug: candis-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Export approved invoices and download the files
+  slug: candis-export-approved-invoices
+- name: Import and update master core data (idempotent upsert)
+  slug: candis-import-core-data
 slug: candis
 tags:
 - Company

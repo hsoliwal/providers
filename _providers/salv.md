@@ -1,12 +1,18 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.5
-  scored_at: '2026-10-17'
+  score: 40.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -119,15 +128,12 @@ apis:
   description: Endpoints to check if given entity has anything unresolved
   name: Salv Unresolved Alerts API
   slug: salv-unresolved-alerts-api
-artifact_total: 38
+artifact_total: 41
 asyncapis:
 - description: ''
   name: Salv Webhooks
   slug: salv-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Salv AML alert API
   slug: open-salv-alert-api
@@ -179,12 +185,12 @@ common:
   type: BlogRSS
   url: https://salv.com/feed
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/capabilities/salv-capability-edges.yml
+  href: https://artifacts.apis.io/salv/capabilities/salv-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/salv-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/overlays/salv-aml-overlay.yaml
+  href: https://artifacts.apis.io/salv/overlays/salv-aml-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/salv-aml-overlay.yaml
@@ -217,82 +223,82 @@ common:
   type: PrivacyPolicy
   url: https://salv.com/privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/authentication/salv-authentication.yml
+  href: https://artifacts.apis.io/salv/authentication/salv-authentication.yml
   title: ''
   type: Authentication
   url: authentication/salv-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/scopes/salv-scopes.yml
+  href: https://artifacts.apis.io/salv/scopes/salv-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/salv-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/mcp/salv-mcp.yml
+  href: https://artifacts.apis.io/salv/mcp/salv-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/salv-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/salv/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/llms/salv-llms.txt
+  href: https://artifacts.apis.io/salv/llms/salv-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/salv-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/well-known/salv-well-known.yml
+  href: https://artifacts.apis.io/salv/well-known/salv-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/salv-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/well-known/salv-security.txt
+  href: https://artifacts.apis.io/salv/well-known/salv-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/salv-security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/asyncapi/salv-webhooks.yml
+  href: https://artifacts.apis.io/salv/asyncapi/salv-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/salv-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/conventions/salv-conventions.yml
+  href: https://artifacts.apis.io/salv/conventions/salv-conventions.yml
   title: ''
   type: Conventions
   url: conventions/salv-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/errors/salv-problem-types.yml
+  href: https://artifacts.apis.io/salv/errors/salv-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/salv-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/data-model/salv-data-model.yml
+  href: https://artifacts.apis.io/salv/data-model/salv-data-model.yml
   title: ''
   type: DataModel
   url: data-model/salv-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/lifecycle/salv-lifecycle.yml
+  href: https://artifacts.apis.io/salv/lifecycle/salv-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/salv-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/lifecycle/salv-lifecycle.yml
+  href: https://artifacts.apis.io/salv/lifecycle/salv-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/salv-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/rate-limits/salv-rate-limits.yml
+  href: https://artifacts.apis.io/salv/rate-limits/salv-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/salv-rate-limits.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/sandbox/salv-sandbox.yml
+  href: https://artifacts.apis.io/salv/sandbox/salv-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/salv-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/conformance/salv-conformance.yml
+  href: https://artifacts.apis.io/salv/conformance/salv-conformance.yml
   title: ''
   type: Conformance
   url: conformance/salv-conformance.yml
@@ -301,12 +307,12 @@ common:
   type: Compliance
   url: https://salv.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/agentic-access/salv-agentic-access.yml
+  href: https://artifacts.apis.io/salv/agentic-access/salv-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/salv-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/security/salv-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/salv/security/salv-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/salv-vulnerability-disclosure.yml
@@ -315,7 +321,7 @@ common:
   type: Security
   url: https://salv.com/bug-bounty/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/security/salv-domain-security.yml
+  href: https://artifacts.apis.io/salv/security/salv-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/salv-domain-security.yml
@@ -334,15 +340,28 @@ network: true
 overview: 'Salv publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alert API, Alerts API, Aml API, and 12 more. Tagged areas include Company, AML, Financial Crime, Compliance, and RegTech.
 
 
-  The Salv catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Salv catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Salv''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 25 more developer resources.'
-random_paper: 20
+random_paper: 6
 rate_limits:
 - limit_count: 1
   name: Salv Rate Limits
   slug: salv-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Salv API Rules
+  rule_count: 52
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 4
+    warn: 3
+  slug: salv-rules
 scopes:
 - name: Salv Scopes
   scope_count: 1
@@ -350,18 +369,18 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 42.2
+  composite: 43.8
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 45.0
+    artifact_dirs: 26
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 56.0
     developer_ergonomics: 28.0
     discoverability: 73.2
@@ -371,7 +390,7 @@ score:
     countries:
     - estonia
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 42.1
+  previous_composite: 43.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -392,13 +411,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/screenshots/salv-2026-08-17T081716.png
+screenshot: https://apis.io/screenshots/salv/salv-2026-08-17T081716.png
 security:
 - kind: authentication
   name: Salv Authentication
@@ -412,6 +431,14 @@ security:
   name: Salv Vulnerability Disclosure
   slug: salv-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: Manage a custom screening list
+  slug: salv-manage-custom-list
+- name: Monitor a transaction and handle the alert
+  slug: salv-monitor-transaction
+- name: Screen a person against sanctions, PEP and adverse-media lists
+  slug: salv-screen-person
 slug: salv
 tags:
 - Company

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -78,9 +81,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Respond.io Developer Comments API
   slug: open-respond-comments-api
 - collection_type: open
@@ -107,27 +107,27 @@ common:
   type: Pricing
   url: https://respond.io/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/capabilities/respond-capability-edges.yml
+  href: https://artifacts.apis.io/respond/capabilities/respond-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/respond-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/agentic-access/respond-agentic-access.yml
+  href: https://artifacts.apis.io/respond/agentic-access/respond-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/respond-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/security/respond-trust-center.yml
+  href: https://artifacts.apis.io/respond/security/respond-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/respond-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/security/respond-domain-security.yml
+  href: https://artifacts.apis.io/respond/security/respond-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/respond-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/authentication/respond-authentication.yml
+  href: https://artifacts.apis.io/respond/authentication/respond-authentication.yml
   title: ''
   type: Authentication
   url: authentication/respond-authentication.yml
@@ -144,17 +144,17 @@ common:
   type: Documentation
   url: https://developers.respond.io/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/plans/respond-plans-pricing.yml
+  href: https://artifacts.apis.io/respond/plans/respond-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/respond-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/rate-limits/respond-rate-limits.yml
+  href: https://artifacts.apis.io/respond/rate-limits/respond-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/respond-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/finops/respond-finops.yml
+  href: https://artifacts.apis.io/respond/finops/respond-finops.yml
   title: ''
   type: FinOps
   url: finops/respond-finops.yml
@@ -181,35 +181,51 @@ network: true
 overview: 'Respond.io publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Comments API, Contacts API, Conversations API, and 3 more. Tagged areas include Messaging, Omnichannel, Customer Conversations, WhatsApp, and Artificial Intelligence.
 
 
+  The Respond.io catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Respond.io''s developer surface includes pricing, authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Respond Plans Pricing
   plan_count: 4
   slug: respond-plans-pricing
-random_paper: 15
+random_paper: 19
 rate_limits:
 - limit_count: 3
   name: Respond Rate Limits
   slug: respond-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Respond.io API Rules
+  rule_count: 63
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 2
+  slug: respond-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 39.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 52.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.1
+  delta: -1.1
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
+    access_clarity: 44.7
+    contract_governance: 13.6
     contract_quality: 54.1
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 43.3
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
@@ -223,13 +239,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/respond/refs/heads/main/screenshots/respond-2026-06-20T192954.png
+screenshot: https://apis.io/screenshots/respond/respond-2026-06-20T192954.png
 security:
 - kind: authentication
   name: Respond Authentication

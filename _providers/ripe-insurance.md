@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.1
-  scored_at: '2026-10-17'
+  score: 42.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -55,7 +58,7 @@ apis:
   description: The Media API from Ripe Insurance — 8 operation(s) for media.
   name: Ripe Insurance Media API
   slug: ripe-insurance-media-api
-artifact_total: 8
+artifact_total: 11
 collections:
 - collection_type: open
   name: Umbraco Delivery API
@@ -65,92 +68,92 @@ collections:
   slug: open-ripe-insurance-umbraco-content-delivery
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/overlays/ripe-insurance-umbraco-content-delivery-overlay.yaml
+  href: https://artifacts.apis.io/ripe-insurance/overlays/ripe-insurance-umbraco-content-delivery-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ripe-insurance-umbraco-content-delivery-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/overlays/ripe-insurance-cycleplan-content-delivery-overlay.yaml
+  href: https://artifacts.apis.io/ripe-insurance/overlays/ripe-insurance-cycleplan-content-delivery-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ripe-insurance-cycleplan-content-delivery-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/agentic-access/ripe-insurance-agentic-access.yml
+  href: https://artifacts.apis.io/ripe-insurance/agentic-access/ripe-insurance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ripe-insurance-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/security/ripe-insurance-domain-security.yml
+  href: https://artifacts.apis.io/ripe-insurance/security/ripe-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ripe-insurance-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/authentication/ripe-insurance-authentication.yml
+  href: https://artifacts.apis.io/ripe-insurance/authentication/ripe-insurance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ripe-insurance-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/scopes/ripe-insurance-scopes.yml
+  href: https://artifacts.apis.io/ripe-insurance/scopes/ripe-insurance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/ripe-insurance-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/conventions/ripe-insurance-conventions.yml
+  href: https://artifacts.apis.io/ripe-insurance/conventions/ripe-insurance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ripe-insurance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/conformance/ripe-insurance-conformance.yml
+  href: https://artifacts.apis.io/ripe-insurance/conformance/ripe-insurance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ripe-insurance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/lifecycle/ripe-insurance-lifecycle.yml
+  href: https://artifacts.apis.io/ripe-insurance/lifecycle/ripe-insurance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ripe-insurance-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/errors/ripe-insurance-problem-types.yml
+  href: https://artifacts.apis.io/ripe-insurance/errors/ripe-insurance-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ripe-insurance-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/data-model/ripe-insurance-data-model.yml
+  href: https://artifacts.apis.io/ripe-insurance/data-model/ripe-insurance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ripe-insurance-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/well-known/ripe-insurance-well-known.yml
+  href: https://artifacts.apis.io/ripe-insurance/well-known/ripe-insurance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ripe-insurance-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/packages/ripe-insurance-packages.yml
+  href: https://artifacts.apis.io/ripe-insurance/packages/ripe-insurance-packages.yml
   title: ''
   type: Packages
   url: packages/ripe-insurance-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/llms/ripe-insurance-llms.txt
+  href: https://artifacts.apis.io/ripe-insurance/llms/ripe-insurance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ripe-insurance-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ripe-insurance/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/mcp/ripe-insurance-mcp.yml
+  href: https://artifacts.apis.io/ripe-insurance/mcp/ripe-insurance-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ripe-insurance-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/mcp/ripe-insurance-tool-crosswalk.yml
+  href: https://artifacts.apis.io/ripe-insurance/mcp/ripe-insurance-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/ripe-insurance-tool-crosswalk.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/well-known/ripe-insurance-openid-configuration.json
+  href: https://artifacts.apis.io/ripe-insurance/well-known/ripe-insurance-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/ripe-insurance-openid-configuration.json
@@ -226,8 +229,24 @@ network: true
 overview: 'Ripe Insurance publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Content API and Media API. Tagged areas include Insurance, United Kingdom, Insurtech, Managing General Agent, and Specialist Insurance.
 
 
+  The Ripe Insurance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ripe Insurance''s developer surface includes authentication, support, product news, engineering blog, and 29 more developer resources.'
-random_paper: 15
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 76
+  extends:
+  - spectral:oas
+  name: Ripe Insurance API Rules
+  rule_count: 35
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ripe-insurance-rules
 scopes:
 - name: Ripe Insurance Scopes
   scope_count: 2
@@ -235,18 +254,18 @@ scopes:
   summary_line: 2 scopes · authorizationCode/clientCredentials/refreshToken
 score:
   band: developing
-  composite: 40.0
+  composite: 41.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 57.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 39.2
     developer_ergonomics: 37.5
     discoverability: 74.1
@@ -259,7 +278,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 40.0
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -276,14 +295,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 36.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ripe-insurance/refs/heads/main/screenshots/ripe-insurance-2026-09-02T153839.png
+screenshot: https://apis.io/screenshots/ripe-insurance/ripe-insurance-2026-09-02T153839.png
 security:
 - kind: authentication
   name: Ripe Insurance Authentication
@@ -293,6 +312,12 @@ security:
   name: Ripe Insurance Domain Security
   slug: ripe-insurance-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Read Ripe brand website content
+  slug: ripe-insurance-read-brand-content
+- name: Read Ripe brand media assets
+  slug: ripe-insurance-read-brand-media
 slug: ripe-insurance
 tags:
 - Insurance

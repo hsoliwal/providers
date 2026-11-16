@@ -1,6 +1,7 @@
 ---
 access_model:
   confidence: medium
+  gated_conflict: 'x-api-posture: private but 25 published API entries'
   label: Requires approval
   onboarding: approval
   pricing: unknown
@@ -30,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.3
-  scored_at: '2026-10-17'
+  score: 54.2
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.ev.energy/v2
@@ -166,24 +170,24 @@ apis:
   description: Endpoints for configuring and managing webhooks.
   name: ev.energy Webhooks API
   slug: ev-energy-webhooks-api
-artifact_total: 33
+artifact_total: 38
 asyncapis:
 - description: ''
   name: Ev Energy Webhooks
   slug: ev-energy-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/rate-limits/ev-energy-rate-limits.yml
+  href: https://artifacts.apis.io/ev-energy/rate-limits/ev-energy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ev-energy-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/capabilities/ev-energy-capability-edges.yml
+  href: https://artifacts.apis.io/ev-energy/capabilities/ev-energy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ev-energy-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/overlays/ev-energy-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/ev-energy/overlays/ev-energy-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ev-energy-api-v2-overlay.yaml
@@ -228,57 +232,65 @@ common:
   type: PrivacyPolicy
   url: https://www.ev.energy/privacy
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/plans/ev-energy-plans-pricing.yml
+  href: https://artifacts.apis.io/ev-energy/plans/ev-energy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ev-energy-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/llms/ev-energy-llms.txt
+  href: https://artifacts.apis.io/ev-energy/llms/ev-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ev-energy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/mcp/ev-energy-mcp.yml
+  href: https://artifacts.apis.io/ev-energy/mcp/ev-energy-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ev-energy-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/mcp/ev-energy-tool-crosswalk.yml
+  href: https://artifacts.apis.io/ev-energy/mcp/ev-energy-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/ev-energy-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ev-energy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/well-known/ev-energy-well-known.yml
+  href: https://artifacts.apis.io/ev-energy/well-known/ev-energy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ev-energy-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/well-known/ev-energy-security.txt
+  href: https://artifacts.apis.io/ev-energy/well-known/ev-energy-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ev-energy-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/security/ev-energy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ev-energy/security/ev-energy-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/ev-energy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/security/ev-energy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ev-energy/security/ev-energy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ev-energy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/security/ev-energy-domain-security.yml
+  href: https://artifacts.apis.io/ev-energy/security/ev-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ev-energy-domain-security.yml
 created: '2026-08-12'
 description: ev.energy is a London- and Palo-Alto-based smart electric-vehicle charging platform. Its cloud software connects EV drivers, vehicles, EVSEs (chargers), home batteries, solar inverters and utility programs so charging can be shifted to cheaper, greener periods and aggregated as grid flexibility. The company operates a consumer driver app across the UK, EU, US and Canada, a white-label platform for utilities and e-mobility businesses, an EV Flex virtual power plant product, and the Smart Charge API — a public OpenAPI 3.1 REST contract at api.ev.energy covering vehicles, EVSEs, charging sessions, schedules, tariffs, solar, home batteries, VPP dispatch, rebates and utility program enrollment.
+finops:
+- has_sources: true
+  method: derived
+  name: Ev Energy Finops
+  primary_unit: ''
+  service_category: ''
+  slug: ev-energy-finops
+  template: true
 image: https://cdn.prod.website-files.com/6278ea1f9c10c9550411fdd7/627a9ce3111e36661da5018c_ev-logo-256px.png
 layout: provider
 mcp_servers:
@@ -292,7 +304,7 @@ network: true
 overview: 'ev.energy publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Boundary Meters API, Carbon API, and 22 more. Tagged areas include Company, Energy, Electric Vehicles, EV Charging, and Smart Charging.
 
 
-  The ev.energy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The ev.energy catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   ev.energy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, and 18 more developer resources.'
@@ -300,11 +312,24 @@ plans:
 - name: Ev Energy Plans Pricing
   plan_count: 0
   slug: ev-energy-plans-pricing
-random_paper: 12
+random_paper: 2
 rate_limits:
 - limit_count: 1
   name: Ev Energy Rate Limits
   slug: ev-energy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 117
+  extends:
+  - spectral:oas
+  name: ev.energy API Rules
+  rule_count: 76
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 5
+    warn: 18
+  slug: ev-energy-rules
 scopes:
 - name: Ev Energy Scopes
   scope_count: 35
@@ -312,23 +337,23 @@ scopes:
   summary_line: 35 scopes
 score:
   band: developing
-  composite: 52.3
+  composite: 53.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 45.0
+    artifact_dirs: 27
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 58.9
     developer_ergonomics: 66.1
     discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 52.2
+  previous_composite: 53.9
   provenance:
     conformance: first-party
     contracts:
@@ -344,13 +369,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 43.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/ev-energy/refs/heads/main/screenshots/ev-energy-2026-08-17T080920.png
+screenshot: https://apis.io/screenshots/ev-energy/ev-energy-2026-08-17T080920.png
 security:
 - kind: authentication
   name: Ev Energy Authentication
@@ -364,6 +389,14 @@ security:
   name: Ev Energy Vulnerability Disclosure
   slug: ev-energy-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 3
+skills:
+- name: ev-energy-dispatch-vpp-event
+  slug: ev-energy-dispatch-vpp-event
+- name: ev-energy-onboard-driver-vehicle
+  slug: ev-energy-onboard-driver-vehicle
+- name: ev-energy-read-charging-sessions
+  slug: ev-energy-read-charging-sessions
 slug: ev-energy
 tags:
 - Company

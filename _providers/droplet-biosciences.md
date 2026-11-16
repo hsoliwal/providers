@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The WordPress core REST API served from the company''s marketing site. It is live, anonymous for published content, and self-describing: the discovery document at /wp-json/ lists 472 routes across 19 n'
@@ -85,52 +88,52 @@ common:
   type: Compliance
   url: https://dropletbiosci.com/certificates-licenses/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/mcp/droplet-biosciences-mcp.yml
+  href: https://artifacts.apis.io/droplet-biosciences/mcp/droplet-biosciences-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/droplet-biosciences-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/authentication/droplet-biosciences-authentication.yml
+  href: https://artifacts.apis.io/droplet-biosciences/authentication/droplet-biosciences-authentication.yml
   title: ''
   type: Authentication
   url: authentication/droplet-biosciences-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/scopes/droplet-biosciences-scopes.yml
+  href: https://artifacts.apis.io/droplet-biosciences/scopes/droplet-biosciences-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/droplet-biosciences-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/conventions/droplet-biosciences-conventions.yml
+  href: https://artifacts.apis.io/droplet-biosciences/conventions/droplet-biosciences-conventions.yml
   title: ''
   type: Conventions
   url: conventions/droplet-biosciences-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/errors/droplet-biosciences-problem-types.yml
+  href: https://artifacts.apis.io/droplet-biosciences/errors/droplet-biosciences-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/droplet-biosciences-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/conformance/droplet-biosciences-conformance.yml
+  href: https://artifacts.apis.io/droplet-biosciences/conformance/droplet-biosciences-conformance.yml
   title: ''
   type: Conformance
   url: conformance/droplet-biosciences-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/rate-limits/droplet-biosciences-rate-limits.yml
+  href: https://artifacts.apis.io/droplet-biosciences/rate-limits/droplet-biosciences-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/droplet-biosciences-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/plans/droplet-biosciences-plans-pricing.yml
+  href: https://artifacts.apis.io/droplet-biosciences/plans/droplet-biosciences-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/droplet-biosciences-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/security/droplet-biosciences-domain-security.yml
+  href: https://artifacts.apis.io/droplet-biosciences/security/droplet-biosciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/droplet-biosciences-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/llms/droplet-biosciences-llms.txt
+  href: https://artifacts.apis.io/droplet-biosciences/llms/droplet-biosciences-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/droplet-biosciences-llms.txt
@@ -155,7 +158,7 @@ plans:
 - name: Droplet Biosciences Plans Pricing
   plan_count: 0
   slug: droplet-biosciences-plans-pricing
-random_paper: 8
+random_paper: 22
 rate_limits:
 - limit_count: 0
   name: Droplet Biosciences Rate Limits
@@ -175,7 +178,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -183,7 +186,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 69.2
     operational_transparency: 0.0
-  previous_composite: 20.9
+  previous_composite: 21.0
   provenance:
     conformance: first-party
     mcp: site-plugin
@@ -193,14 +196,14 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/droplet-biosciences/refs/heads/main/screenshots/droplet-biosciences-2026-09-02T145315.png
+screenshot: https://apis.io/screenshots/droplet-biosciences/droplet-biosciences-2026-09-02T145315.png
 security:
 - kind: authentication
   name: Droplet Biosciences Authentication

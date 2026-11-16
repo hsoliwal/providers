@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cuyana/refs/heads/main/security/cuyana-domain-security.yml
+  href: https://artifacts.apis.io/cuyana/security/cuyana-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cuyana-domain-security.yml
@@ -67,22 +72,22 @@ common:
   type: PrivacyPolicy
   url: https://cuyana.com/policies/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cuyana/refs/heads/main/well-known/cuyana-well-known.yml
+  href: https://artifacts.apis.io/cuyana/well-known/cuyana-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cuyana-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cuyana/refs/heads/main/mcp/cuyana-mcp.yml
+  href: https://artifacts.apis.io/cuyana/mcp/cuyana-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cuyana-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cuyana/refs/heads/main/authentication/cuyana-authentication.yml
+  href: https://artifacts.apis.io/cuyana/authentication/cuyana-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cuyana-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cuyana/refs/heads/main/scopes/cuyana-scopes.yml
+  href: https://artifacts.apis.io/cuyana/scopes/cuyana-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cuyana-scopes.yml
@@ -102,7 +107,7 @@ overview: 'Cuyana is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Cuyana''s developer surface includes support, engineering blog, authentication, and 8 more developer resources.'
-random_paper: 3
+random_paper: 17
 scopes:
 - name: Cuyana Scopes
   scope_count: 4
@@ -112,7 +117,7 @@ score:
   band: emerging
   composite: 16.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -142,14 +147,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cuyana/refs/heads/main/screenshots/cuyana-2026-08-07T164003.png
+screenshot: https://apis.io/screenshots/cuyana/cuyana-2026-08-07T164003.png
 security:
 - kind: authentication
   name: Cuyana Authentication

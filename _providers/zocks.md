@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/plans/zocks-plans-pricing.yml
+  href: https://artifacts.apis.io/zocks/plans/zocks-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zocks-plans-pricing.yml
@@ -82,7 +87,7 @@ common:
   type: PrivacyPolicy
   url: https://www.zocks.io/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/mcp/zocks-mcp.yml
+  href: https://artifacts.apis.io/zocks/mcp/zocks-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/zocks-mcp.yml
@@ -91,22 +96,22 @@ common:
   type: Compliance
   url: https://www.zocks.io/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/conformance/zocks-conformance.yml
+  href: https://artifacts.apis.io/zocks/conformance/zocks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zocks-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/security/zocks-domain-security.yml
+  href: https://artifacts.apis.io/zocks/security/zocks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zocks-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/well-known/zocks-well-known.yml
+  href: https://artifacts.apis.io/zocks/well-known/zocks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zocks-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/llms/zocks-llms.txt
+  href: https://artifacts.apis.io/zocks/llms/zocks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zocks-llms.txt
@@ -130,18 +135,18 @@ plans:
 - name: Zocks Plans Pricing
   plan_count: 8
   slug: zocks-plans-pricing
-random_paper: 4
+random_paper: 2
 score:
   band: thin
   composite: 29.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
@@ -149,7 +154,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 55.0
     operational_transparency: 0.0
-  previous_composite: 23.6
+  previous_composite: 29.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -159,14 +164,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zocks/refs/heads/main/screenshots/zocks-2026-09-02T171817.png
+screenshot: https://apis.io/screenshots/zocks/zocks-2026-09-02T171817.png
 security:
 - kind: domain-security
   name: Zocks Domain Security

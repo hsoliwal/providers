@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -54,32 +57,32 @@ common:
   type: PrivacyPolicy
   url: https://www.polaris.com/en-us/privacy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/security/polaris-industries-domain-security.yml
+  href: https://artifacts.apis.io/polaris-industries/security/polaris-industries-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/polaris-industries-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/well-known/polaris-industries-well-known.yml
+  href: https://artifacts.apis.io/polaris-industries/well-known/polaris-industries-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/polaris-industries-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/authentication/polaris-industries-authentication.yml
+  href: https://artifacts.apis.io/polaris-industries/authentication/polaris-industries-authentication.yml
   title: ''
   type: Authentication
   url: authentication/polaris-industries-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/scopes/polaris-industries-scopes.yml
+  href: https://artifacts.apis.io/polaris-industries/scopes/polaris-industries-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/polaris-industries-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/conformance/polaris-industries-conformance.yml
+  href: https://artifacts.apis.io/polaris-industries/conformance/polaris-industries-conformance.yml
   title: ''
   type: Conformance
   url: conformance/polaris-industries-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/llms/polaris-industries-llms.txt
+  href: https://artifacts.apis.io/polaris-industries/llms/polaris-industries-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/polaris-industries-llms.txt
@@ -127,7 +130,7 @@ press:
 - date: ''
   title: Polaris Industries is selling Indian Motorcycle
   url: https://www.ktiv.com/2025/10/14/polaris-industries-is-selling-indian-motorcycle/
-random_paper: 13
+random_paper: 9
 scopes:
 - name: Polaris Industries Scopes
   scope_count: 14
@@ -167,8 +170,8 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,31 +68,28 @@ apis:
 - description: 'The CloudEventSource and ClusterCloudEventSource custom resources define HTTP or Azure Event Grid destinations where KEDA delivers CloudEvents when scaling events occur. Events follow the CloudEvents '
   name: KEDA CloudEventSource API
   slug: keda-cloud-event-source-api
-artifact_total: 19
+artifact_total: 18
 asyncapis:
 - description: 'KEDA emits CloudEvents to configured HTTP or Azure Event Grid destinations when scaling events occur. The CloudEventSource and ClusterCloudEventSource custom resources define the destination endpoint '
   name: KEDA CloudEvent Source
   slug: keda-cloud-events-asyncapi
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: KEDA Metrics API
   slug: open-keda-metrics-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/plans/keda-plans-pricing.yml
+  href: https://artifacts.apis.io/keda/plans/keda-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/keda-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/rate-limits/keda-rate-limits.yml
+  href: https://artifacts.apis.io/keda/rate-limits/keda-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/keda-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/finops/keda-finops.yml
+  href: https://artifacts.apis.io/keda/finops/keda-finops.yml
   title: ''
   type: FinOps
   url: finops/keda-finops.yml
@@ -111,17 +114,17 @@ common:
   type: License
   url: https://github.com/kedacore/keda/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/agentic-access/keda-agentic-access.yml
+  href: https://artifacts.apis.io/keda/agentic-access/keda-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/keda-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/security/keda-domain-security.yml
+  href: https://artifacts.apis.io/keda/security/keda-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/keda-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/authentication/keda-authentication.yml
+  href: https://artifacts.apis.io/keda/authentication/keda-authentication.yml
   title: ''
   type: Authentication
   url: authentication/keda-authentication.yml
@@ -170,22 +173,22 @@ common:
   type: StackOverflow
   url: https://stackoverflow.com/questions/tagged/keda
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/keda-context.jsonld
+  href: https://artifacts.apis.io/keda/keda-context.jsonld
   title: ''
   type: JSONLD
   url: keda-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/json-ld/keda-context.jsonld
+  href: https://artifacts.apis.io/keda/json-ld/keda-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/keda-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/json-schema/keda-scaled-object-schema.json
+  href: https://artifacts.apis.io/keda/json-schema/keda-scaled-object-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/keda-scaled-object-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/json-schema/keda-cloud-event-schema.json
+  href: https://artifacts.apis.io/keda/json-schema/keda-cloud-event-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/keda-cloud-event-schema.json
@@ -228,7 +231,7 @@ plans:
 - name: Keda Plans Pricing
   plan_count: 1
   slug: keda-plans-pricing
-random_paper: 9
+random_paper: 21
 rate_limits:
 - limit_count: 2
   name: Keda Rate Limits
@@ -261,13 +264,13 @@ score:
   band: developing
   composite: 45.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 60.5
     catalog_earned_first_party: 0.0
     catalog_gap: 54.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 13.6
@@ -278,7 +281,7 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 46.9
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     contracts:
@@ -292,14 +295,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/keda/refs/heads/main/screenshots/keda-2026-06-20T183939.png
+screenshot: https://apis.io/screenshots/keda/keda-2026-06-20T183939.png
 security:
 - kind: authentication
   name: Keda Authentication

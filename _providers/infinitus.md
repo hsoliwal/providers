@@ -5,7 +5,11 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The customer-gated Infinitus backend API. Infinitus' own AI Agent Security Guide instructs customers to allowlist https://api.infinitusai.com on TCP 443 for "portal and backend API access". Probing co
@@ -77,22 +84,22 @@ common:
   type: Compliance
   url: https://www.infinitus.ai/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/security/infinitus-trust-center.yml
+  href: https://artifacts.apis.io/infinitus/security/infinitus-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/infinitus-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/security/infinitus-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/infinitus/security/infinitus-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/infinitus-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/security/infinitus-domain-security.yml
+  href: https://artifacts.apis.io/infinitus/security/infinitus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infinitus-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/llms/infinitus-llms.txt
+  href: https://artifacts.apis.io/infinitus/llms/infinitus-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/infinitus-llms.txt
@@ -109,52 +116,52 @@ common:
   type: Login
   url: https://customer.infinitusai.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/well-known/infinitus-well-known.yml
+  href: https://artifacts.apis.io/infinitus/well-known/infinitus-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/infinitus-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/mcp/infinitus-mcp.yml
+  href: https://artifacts.apis.io/infinitus/mcp/infinitus-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/infinitus-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/authentication/infinitus-authentication.yml
+  href: https://artifacts.apis.io/infinitus/authentication/infinitus-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infinitus-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/scopes/infinitus-scopes.yml
+  href: https://artifacts.apis.io/infinitus/scopes/infinitus-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/infinitus-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/conformance/infinitus-conformance.yml
+  href: https://artifacts.apis.io/infinitus/conformance/infinitus-conformance.yml
   title: ''
   type: Conformance
   url: conformance/infinitus-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/conventions/infinitus-conventions.yml
+  href: https://artifacts.apis.io/infinitus/conventions/infinitus-conventions.yml
   title: ''
   type: Conventions
   url: conventions/infinitus-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/lifecycle/infinitus-lifecycle.yml
+  href: https://artifacts.apis.io/infinitus/lifecycle/infinitus-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/infinitus-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/packages/infinitus-packages.yml
+  href: https://artifacts.apis.io/infinitus/packages/infinitus-packages.yml
   title: ''
   type: Packages
   url: packages/infinitus-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/plans/infinitus-plans-pricing.yml
+  href: https://artifacts.apis.io/infinitus/plans/infinitus-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/infinitus-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/rate-limits/infinitus-rate-limits.yml
+  href: https://artifacts.apis.io/infinitus/rate-limits/infinitus-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/infinitus-rate-limits.yml
@@ -179,7 +186,7 @@ plans:
 - name: Infinitus Plans Pricing
   plan_count: 0
   slug: infinitus-plans-pricing
-random_paper: 17
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Infinitus Rate Limits
@@ -193,7 +200,7 @@ score:
   band: thin
   composite: 31.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -223,14 +230,14 @@ score:
     regime: Health
     regime_id: health
     score: 39.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/infinitus/refs/heads/main/screenshots/infinitus-2026-07-25T222407.png
+screenshot: https://apis.io/screenshots/infinitus/infinitus-2026-07-25T222407.png
 security:
 - kind: authentication
   name: Infinitus Authentication

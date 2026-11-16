@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
-    rate_limit_signal: verified
-    reversibility_documented: false
+    rate_limit_signal: derived
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 26.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -77,19 +80,121 @@ apis:
   slug: aurora-solar-proposals-api
 - baseURL: https://api.aurorasolar.com
   baseurl_source: declared
-  description: Tenant, users, roles, teams, and SSO.
-  name: Aurora Solar Users & Tenants API
-  slug: aurora-solar-users-tenants-api
-- baseURL: https://api.aurorasolar.com
-  baseurl_source: declared
   description: Event notification subscriptions.
   name: Aurora Solar Webhooks API
   slug: aurora-solar-webhooks-api
-artifact_total: 24
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The AI Roof API from Aurora Solar — 3 operation(s) for ai roof.
+  name: Aurora Solar AI Roof API
+  slug: aurora-solar-ai-roof-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Bill Summaries API from Aurora Solar — 2 operation(s) for bill summaries.
+  name: Aurora Solar Bill Summaries API
+  slug: aurora-solar-bill-summaries-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The CAD Screenshot API from Aurora Solar — 2 operation(s) for cad screenshot.
+  name: Aurora Solar CAD Screenshot API
+  slug: aurora-solar-cad-screenshot-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Components API from Aurora Solar — 6 operation(s) for components.
+  name: Aurora Solar Components API
+  slug: aurora-solar-components-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Design Assets API from Aurora Solar — 2 operation(s) for design assets.
+  name: Aurora Solar Design Assets API
+  slug: aurora-solar-design-assets-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Design Requests API from Aurora Solar — 3 operation(s) for design requests.
+  name: Aurora Solar Design Requests API
+  slug: aurora-solar-design-requests-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The LIDAR Status API from Aurora Solar — 1 operation(s) for lidar status.
+  name: Aurora Solar LIDAR Status API
+  slug: aurora-solar-lidar-status-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Milestones API from Aurora Solar — 1 operation(s) for milestones.
+  name: Aurora Solar Milestones API
+  slug: aurora-solar-milestones-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Orders API from Aurora Solar — 6 operation(s) for orders.
+  name: Aurora Solar Orders API
+  slug: aurora-solar-orders-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Partner Logo API from Aurora Solar — 1 operation(s) for partner logo.
+  name: Aurora Solar Partner Logo API
+  slug: aurora-solar-partner-logo-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Partner Users API from Aurora Solar — 1 operation(s) for partner users.
+  name: Aurora Solar Partner Users API
+  slug: aurora-solar-partner-users-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Partners API from Aurora Solar — 2 operation(s) for partners.
+  name: Aurora Solar Partners API
+  slug: aurora-solar-partners-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Plan Sets API from Aurora Solar — 3 operation(s) for plan sets.
+  name: Aurora Solar Plan Sets API
+  slug: aurora-solar-plan-sets-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Pricing API from Aurora Solar — 5 operation(s) for pricing.
+  name: Aurora Solar Pricing API
+  slug: aurora-solar-pricing-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Project Notes API from Aurora Solar — 2 operation(s) for project notes.
+  name: Aurora Solar Project Notes API
+  slug: aurora-solar-project-notes-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Shared Projects API from Aurora Solar — 1 operation(s) for shared projects.
+  name: Aurora Solar Shared Projects API
+  slug: aurora-solar-shared-projects-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Site Surveys API from Aurora Solar — 8 operation(s) for site surveys.
+  name: Aurora Solar Site Surveys API
+  slug: aurora-solar-site-surveys-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Teams API from Aurora Solar — 1 operation(s) for teams.
+  name: Aurora Solar Teams API
+  slug: aurora-solar-teams-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Tenants API from Aurora Solar — 1 operation(s) for tenants.
+  name: Aurora Solar Tenants API
+  slug: aurora-solar-tenants-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Users API from Aurora Solar — 7 operation(s) for users.
+  name: Aurora Solar Users API
+  slug: aurora-solar-users-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Utility Bills API from Aurora Solar — 4 operation(s) for utility bills.
+  name: Aurora Solar Utility Bills API
+  slug: aurora-solar-utility-bills-api
+- baseURL: https://api.aurorasolar.com
+  baseurl_source: declared
+  description: The Versions API from Aurora Solar — 3 operation(s) for versions.
+  name: Aurora Solar Versions API
+  slug: aurora-solar-versions-api
+artifact_total: 45
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Aurora Solar Agreements API
   slug: open-aurora-solar-agreements-api
@@ -123,22 +228,22 @@ common:
   type: BlogRSS
   url: https://aurorasolar.com/blog/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/capabilities/aurora-solar-capability-edges.yml
+  href: https://artifacts.apis.io/aurora-solar/capabilities/aurora-solar-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/aurora-solar-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/agentic-access/aurora-solar-agentic-access.yml
+  href: https://artifacts.apis.io/aurora-solar/agentic-access/aurora-solar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/aurora-solar-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/security/aurora-solar-domain-security.yml
+  href: https://artifacts.apis.io/aurora-solar/security/aurora-solar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aurora-solar-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/authentication/aurora-solar-authentication.yml
+  href: https://artifacts.apis.io/aurora-solar/authentication/aurora-solar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aurora-solar-authentication.yml
@@ -159,17 +264,17 @@ common:
   type: Documentation
   url: https://docs.aurorasolar.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/plans/aurora-solar-plans-pricing.yml
+  href: https://artifacts.apis.io/aurora-solar/plans/aurora-solar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aurora-solar-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/rate-limits/aurora-solar-rate-limits.yml
+  href: https://artifacts.apis.io/aurora-solar/rate-limits/aurora-solar-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aurora-solar-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/finops/aurora-solar-finops.yml
+  href: https://artifacts.apis.io/aurora-solar/finops/aurora-solar-finops.yml
   title: ''
   type: FinOps
   url: finops/aurora-solar-finops.yml
@@ -193,7 +298,10 @@ modified: '2026-10-06'
 name: Aurora Solar
 nav: Providers
 network: true
-overview: 'Aurora Solar publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agreements API, Consumption Profiles API, Designs API, and 5 more. Tagged areas include Solar, Solar Design, PV, Proposals, and Cleantech.
+overview: 'Aurora Solar publishes 29 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agreements API, Consumption Profiles API, Designs API, and 26 more. Tagged areas include Solar, Solar Design, PV, Proposals, and Cleantech.
+
+
+  The Aurora Solar catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Aurora Solar''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
@@ -201,50 +309,63 @@ plans:
 - name: Aurora Solar Plans Pricing
   plan_count: 5
   slug: aurora-solar-plans-pricing
-random_paper: 8
+random_paper: 16
 rate_limits:
 - limit_count: 3
   name: Aurora Solar Rate Limits
   slug: aurora-solar-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Aurora Solar API Rules
+  rule_count: 60
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 10
+  slug: aurora-solar-rules
 score:
-  band: emerging
-  composite: 25.7
+  band: thin
+  composite: 31.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 2.8
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 50.4
-    developer_ergonomics: 23.8
+    contract_governance: 13.6
+    contract_quality: 57.0
+    developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 34.0
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 8
+      marker_coverage: 76.3
+      total: 38
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/aurora-solar/refs/heads/main/screenshots/aurora-solar-2026-07-25T201754.png
+    score: 11.1
+screenshot: https://apis.io/screenshots/aurora-solar/aurora-solar-2026-07-25T201754.png
 security:
 - kind: authentication
   name: Aurora Solar Authentication

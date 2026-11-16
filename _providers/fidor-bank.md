@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Fidor''s REST API for Customers, Accounts, Transfers, Transactions and Account Information, secured with OAuth2 (authorization-code flow). Now retired: the sandbox (*.sandbox.fidor.com) and production '
@@ -58,22 +64,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/fidor
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fidor-bank/refs/heads/main/packages/fidor-bank-packages.yml
+  href: https://artifacts.apis.io/fidor-bank/packages/fidor-bank-packages.yml
   title: ''
   type: Packages
   url: packages/fidor-bank-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fidor-bank/refs/heads/main/packages/fidor-bank-packages.yml
+  href: https://artifacts.apis.io/fidor-bank/packages/fidor-bank-packages.yml
   title: ''
   type: SDKs
   url: packages/fidor-bank-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fidor-bank/refs/heads/main/authentication/fidor-bank-authentication.yml
+  href: https://artifacts.apis.io/fidor-bank/authentication/fidor-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fidor-bank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fidor-bank/refs/heads/main/lifecycle/fidor-bank-lifecycle.yml
+  href: https://artifacts.apis.io/fidor-bank/lifecycle/fidor-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fidor-bank-lifecycle.yml
@@ -89,12 +95,12 @@ overview: 'Fidor Bank is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Fidor Bank''s developer surface includes authentication and 7 more developer resources.'
-random_paper: 21
+random_paper: 5
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -130,14 +136,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fidor-bank/refs/heads/main/screenshots/fidor-bank-2026-07-25T214428.png
+screenshot: https://apis.io/screenshots/fidor-bank/fidor-bank-2026-07-25T214428.png
 security:
 - kind: authentication
   name: Fidor Bank Authentication

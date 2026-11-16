@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: documented
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.0
-  scored_at: '2026-10-17'
+  score: 37.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -158,49 +161,49 @@ apis:
 - description: NHS login provides a single, secure way for citizens to access NHS digital services. The NHS login API enables relying parties to authenticate users, verify identity to a known level of assurance, and
   name: NHS Login API
   slug: nhs-login
-artifact_total: 30
+artifact_total: 35
 asyncapis:
 - description: ''
   name: Nhs England Webhooks
   slug: nhs-england-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/capabilities/nhs-england-capability-edges.yml
+  href: https://artifacts.apis.io/nhs-england/capabilities/nhs-england-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nhs-england-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-e-referral-service-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-e-referral-service-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-e-referral-service-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-booking-and-referral-fhir-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-booking-and-referral-fhir-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-booking-and-referral-fhir-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-immunisation-history-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-immunisation-history-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-immunisation-history-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-organisation-data-service-fhir-r4-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-organisation-data-service-fhir-r4-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-organisation-data-service-fhir-r4-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-app-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-app-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-app-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-communications-manager-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-communications-manager-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-communications-manager-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/overlays/nhs-service-search-overlay.yaml
+  href: https://artifacts.apis.io/nhs-england/overlays/nhs-service-search-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nhs-service-search-overlay.yaml
@@ -225,22 +228,22 @@ common:
   type: ContributionGuide
   url: https://github.com/NHSDigital/e-referrals-service-api/blob/develop/CONTRIBUTING.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/agentic-access/nhs-england-agentic-access.yml
+  href: https://artifacts.apis.io/nhs-england/agentic-access/nhs-england-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nhs-england-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/security/nhs-england-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nhs-england/security/nhs-england-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nhs-england-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/security/nhs-england-domain-security.yml
+  href: https://artifacts.apis.io/nhs-england/security/nhs-england-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nhs-england-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/authentication/nhs-england-authentication.yml
+  href: https://artifacts.apis.io/nhs-england/authentication/nhs-england-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nhs-england-authentication.yml
@@ -265,12 +268,12 @@ common:
   type: Support
   url: https://digital.nhs.uk/developer/help-and-support
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/well-known/nhs-england-security.txt
+  href: https://artifacts.apis.io/nhs-england/well-known/nhs-england-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/nhs-england-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/well-known/nhs-england-well-known.yml
+  href: https://artifacts.apis.io/nhs-england/well-known/nhs-england-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nhs-england-well-known.yml
@@ -279,22 +282,22 @@ common:
   type: Security
   url: https://www.england.nhs.uk/security-vulnerability-disclosure/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/mcp/nhs-england-mcp.yml
+  href: https://artifacts.apis.io/nhs-england/mcp/nhs-england-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nhs-england-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/mcp/nhs-england-tool-crosswalk.yml
+  href: https://artifacts.apis.io/nhs-england/mcp/nhs-england-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/nhs-england-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/llms/nhs-england-llms.txt
+  href: https://artifacts.apis.io/nhs-england/llms/nhs-england-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nhs-england-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/conformance/nhs-england-conformance.yml
+  href: https://artifacts.apis.io/nhs-england/conformance/nhs-england-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nhs-england-conformance.yml
@@ -303,12 +306,12 @@ common:
   type: Compliance
   url: https://www.england.nhs.uk/long-read/digital-clinical-safety-assurance/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/errors/nhs-england-problem-types.yml
+  href: https://artifacts.apis.io/nhs-england/errors/nhs-england-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nhs-england-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/lifecycle/nhs-england-lifecycle.yml
+  href: https://artifacts.apis.io/nhs-england/lifecycle/nhs-england-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nhs-england-lifecycle.yml
@@ -317,27 +320,27 @@ common:
   type: Deprecation
   url: https://digital.nhs.uk/services/e-referral-service/api/updates-and-releases/sunsetting-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/conventions/nhs-england-conventions.yml
+  href: https://artifacts.apis.io/nhs-england/conventions/nhs-england-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nhs-england-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/asyncapi/nhs-england-webhooks.yml
+  href: https://artifacts.apis.io/nhs-england/asyncapi/nhs-england-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/nhs-england-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/sandbox/nhs-england-sandbox.yml
+  href: https://artifacts.apis.io/nhs-england/sandbox/nhs-england-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/nhs-england-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/data-model/nhs-england-data-model.yml
+  href: https://artifacts.apis.io/nhs-england/data-model/nhs-england-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nhs-england-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/nhs-england/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -365,25 +368,38 @@ network: true
 overview: 'NHS England publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Booking API, Callbacks API, Channels API, and 22 more. Tagged areas include Healthcare, United Kingdom, National Health System, FHIR, and HL7.
 
 
-  The NHS England catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The NHS England catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   NHS England''s developer surface includes authentication, API reference, support, sandbox, documentation, getting-started guide, engineering blog, and 34 more developer resources.'
-random_paper: 3
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: NHS England API Rules
+  rule_count: 49
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 3
+    warn: 10
+  slug: nhs-england-rules
 score:
   band: developing
-  composite: 46.1
+  composite: 47.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 35.0
+    artifact_dirs: 23
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 55.9
     developer_ergonomics: 66.1
     discoverability: 69.6
@@ -396,7 +412,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 46.1
+  previous_composite: 47.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -413,13 +429,13 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nhs-england/refs/heads/main/screenshots/nhs-england-2026-08-07T185240.png
+screenshot: https://apis.io/screenshots/nhs-england/nhs-england-2026-08-07T185240.png
 security:
 - kind: authentication
   name: Nhs England Authentication
@@ -433,6 +449,16 @@ security:
   name: Nhs England Vulnerability Disclosure
   slug: nhs-england-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 4
+skills:
+- name: Book an appointment with the Booking and Referral Standard
+  slug: nhs-england-book-appointment-bars
+- name: Find NHS services and organisations
+  slug: nhs-england-find-nhs-services
+- name: Look up a patient's NHS immunisation history
+  slug: nhs-england-lookup-immunisation-history
+- name: Notify a citizen through the NHS App
+  slug: nhs-england-notify-citizen
 slug: nhs-england
 tags:
 - Healthcare

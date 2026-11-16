@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/security/21shares-domain-security.yml
+  href: https://artifacts.apis.io/21shares/security/21shares-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/21shares-domain-security.yml
@@ -81,27 +95,27 @@ common:
   type: YouTube
   url: https://www.youtube.com/@21shares/videos
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/conformance/21shares-conformance.yml
+  href: https://artifacts.apis.io/21shares/conformance/21shares-conformance.yml
   title: ''
   type: Conformance
   url: conformance/21shares-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/packages/21shares-packages.yml
+  href: https://artifacts.apis.io/21shares/packages/21shares-packages.yml
   title: ''
   type: Packages
   url: packages/21shares-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/plans/21shares-plans-pricing.yml
+  href: https://artifacts.apis.io/21shares/plans/21shares-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/21shares-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/rate-limits/21shares-rate-limits.yml
+  href: https://artifacts.apis.io/21shares/rate-limits/21shares-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/21shares-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/llms/21shares-llms.txt
+  href: https://artifacts.apis.io/21shares/llms/21shares-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/21shares-llms.txt
@@ -137,7 +151,7 @@ plans:
 - name: 21Shares Plans Pricing
   plan_count: 0
   slug: 21shares-plans-pricing
-random_paper: 19
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: 21Shares Rate Limits
@@ -146,13 +160,13 @@ score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -168,7 +182,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 11.2
+  previous_composite: 11.3
   provenance:
     conformance: first-party
   regulatory:
@@ -177,14 +191,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/21shares/refs/heads/main/screenshots/21shares-2026-10-11T092023.png
+screenshot: https://apis.io/screenshots/21shares/21shares-2026-10-11T092023.png
 security:
 - kind: domain-security
   name: 21Shares Domain Security

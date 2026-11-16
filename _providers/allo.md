@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,42 +37,42 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/plans/allo-plans-pricing.yml
+  href: https://artifacts.apis.io/allo/plans/allo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/allo-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/conformance/allo-conformance.yml
+  href: https://artifacts.apis.io/allo/conformance/allo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/allo-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/llms/allo-llms.txt
+  href: https://artifacts.apis.io/allo/llms/allo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/allo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/well-known/allo-security.txt
+  href: https://artifacts.apis.io/allo/well-known/allo-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/allo-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/well-known/allo-well-known.yml
+  href: https://artifacts.apis.io/allo/well-known/allo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/allo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/hosts/allo-hosts.yml
+  href: https://artifacts.apis.io/allo/hosts/allo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/allo-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/vendors/allo-vendors.yml
+  href: https://artifacts.apis.io/allo/vendors/allo-vendors.yml
   title: ''
   type: Vendors
   url: vendors/allo-vendors.yml
@@ -95,12 +109,12 @@ common:
   type: Documentation
   url: https://dev.allo.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/security/allo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/allo/security/allo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/allo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allo/refs/heads/main/security/allo-domain-security.yml
+  href: https://artifacts.apis.io/allo/security/allo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/allo-domain-security.yml
@@ -133,26 +147,26 @@ plans:
 - name: Allo Plans Pricing
   plan_count: 4
   slug: allo-plans-pricing
-random_paper: 6
+random_paper: 16
 score:
-  band: thin
-  composite: 28.4
+  band: emerging
+  composite: 21.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 11
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 28.1
+  delta: -7.2
   facets:
-    access_clarity: 52.6
+    access_clarity: 42.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 38.1
+    developer_ergonomics: 19.0
     discoverability: 55.4
-    operational_transparency: 10.5
-  previous_composite: 0.3
+    operational_transparency: 5.3
+  previous_composite: 28.4
   provenance:
     conformance: first-party
   regulatory:
@@ -160,14 +174,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/allo/allo-2026-11-03T120757.png
 security:
 - kind: domain-security
   name: Allo Domain Security

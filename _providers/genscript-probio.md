@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/genscript-probio/refs/heads/main/security/genscript-probio-domain-security.yml
+  href: https://artifacts.apis.io/genscript-probio/security/genscript-probio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/genscript-probio-domain-security.yml
@@ -75,12 +78,12 @@ common:
   type: PrivacyPolicy
   url: https://www.probiocdmo.com/privacy_policy.html
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/genscript-probio/refs/heads/main/llms/genscript-probio-llms.txt
+  href: https://artifacts.apis.io/genscript-probio/llms/genscript-probio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/genscript-probio-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/genscript-probio/refs/heads/main/plans/genscript-probio-plans-pricing.yml
+  href: https://artifacts.apis.io/genscript-probio/plans/genscript-probio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/genscript-probio-plans-pricing.yml
@@ -89,7 +92,7 @@ common:
   type: TrustCenter
   url: https://www.probiocdmo.com/information-security.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/genscript-probio/refs/heads/main/security/genscript-probio-trust-center.yml
+  href: https://artifacts.apis.io/genscript-probio/security/genscript-probio-trust-center.yml
   title: ''
   type: Compliance
   url: security/genscript-probio-trust-center.yml
@@ -126,7 +129,7 @@ plans:
 - name: Genscript Probio Plans Pricing
   plan_count: 0
   slug: genscript-probio-plans-pricing
-random_paper: 21
+random_paper: 15
 score:
   band: emerging
   composite: 17.4
@@ -137,7 +140,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
@@ -145,21 +148,21 @@ score:
     developer_ergonomics: 7.1
     discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 17.3
+  previous_composite: 17.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/genscript-probio/refs/heads/main/screenshots/genscript-probio-2026-09-02T145557.png
+screenshot: https://apis.io/screenshots/genscript-probio/genscript-probio-2026-09-02T145557.png
 security:
 - kind: domain-security
   name: Genscript Probio Domain Security

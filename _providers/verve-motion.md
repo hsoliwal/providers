@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -102,12 +105,12 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/verve-motion_stock/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verve-motion/refs/heads/main/security/verve-motion-domain-security.yml
+  href: https://artifacts.apis.io/verve-motion/security/verve-motion-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/verve-motion-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verve-motion/refs/heads/main/llms/verve-motion-llms.txt
+  href: https://artifacts.apis.io/verve-motion/llms/verve-motion-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/verve-motion-llms.txt
@@ -137,12 +140,12 @@ overview: 'Verve Motion is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Verve Motion''s developer surface includes FAQ, engineering blog, YouTube channel, and 15 more developer resources.'
-random_paper: 5
+random_paper: 11
 score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -163,14 +166,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/verve-motion/refs/heads/main/screenshots/verve-motion-2026-09-02T165809.png
+screenshot: https://apis.io/screenshots/verve-motion/verve-motion-2026-09-02T165809.png
 security:
 - kind: domain-security
   name: Verve Motion Domain Security

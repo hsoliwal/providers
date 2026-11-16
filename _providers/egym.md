@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.3
-  scored_at: '2026-10-17'
+  score: 50.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 0
@@ -45,7 +48,7 @@ agentic_access:
   operation_count: 117
   slug: egym-agentic-access
   summary_line: 117 operations · 62 acting
-api_count: 16
+api_count: 8
 apis:
 - description: Authorization-and-capture API for booking platforms. A Wellpass member generates a single-use booking code in the Wellpass app for a specific gym; the partner platform validates the code (dryRun true)
   name: EGYM Pay with Wellpass API
@@ -233,7 +236,7 @@ apis:
   description: The OAuth API from EGYM — 2 operation(s) for oauth.
   name: EGYM O Auth API
   slug: egym-oauth-api
-artifact_total: 55
+artifact_total: 62
 asyncapis:
 - description: ''
   name: Egym Events Webhooks
@@ -268,42 +271,42 @@ collections:
   slug: open-egym-user-connect
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/capabilities/egym-capability-edges.yml
+  href: https://artifacts.apis.io/egym/capabilities/egym-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/egym-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-mms-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-mms-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-mms-api-v2-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-data-hub-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-data-hub-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-data-hub-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-data-export-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-data-export-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-data-export-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-equipment-vendor-standalone-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-equipment-vendor-standalone-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-equipment-vendor-standalone-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-equipment-vendor-server-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-equipment-vendor-server-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-equipment-vendor-server-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-user-connect-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-user-connect-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-user-connect-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/agentic-access/egym-agentic-access.yml
+  href: https://artifacts.apis.io/egym/agentic-access/egym-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/egym-agentic-access.yml
@@ -364,153 +367,161 @@ common:
   type: ChangeLog
   url: https://developer.egym.com/mms-api-v2/change-log
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/llms/egym-llms.txt
+  href: https://artifacts.apis.io/egym/llms/egym-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/egym-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/authentication/egym-authentication.yml
+  href: https://artifacts.apis.io/egym/authentication/egym-authentication.yml
   title: ''
   type: Authentication
   url: authentication/egym-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/scopes/egym-scopes.yml
+  href: https://artifacts.apis.io/egym/scopes/egym-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/egym-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/conventions/egym-conventions.yml
+  href: https://artifacts.apis.io/egym/conventions/egym-conventions.yml
   title: ''
   type: Conventions
   url: conventions/egym-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/rate-limits/egym-rate-limits.yml
+  href: https://artifacts.apis.io/egym/rate-limits/egym-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/egym-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/plans/egym-plans-pricing.yml
+  href: https://artifacts.apis.io/egym/plans/egym-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/egym-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/errors/egym-problem-types.yml
+  href: https://artifacts.apis.io/egym/errors/egym-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/egym-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/errors/egym-error-codes.yml
+  href: https://artifacts.apis.io/egym/errors/egym-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/egym-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/lifecycle/egym-lifecycle.yml
+  href: https://artifacts.apis.io/egym/lifecycle/egym-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/egym-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/lifecycle/egym-lifecycle.yml
+  href: https://artifacts.apis.io/egym/lifecycle/egym-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/egym-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/changelog/egym-changelog.yml
+  href: https://artifacts.apis.io/egym/changelog/egym-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/egym-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/asyncapi/egym-events-webhooks.yml
+  href: https://artifacts.apis.io/egym/asyncapi/egym-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/egym-events-webhooks.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/asyncapi/egym-mms-events-asyncapi.yml
+  href: https://artifacts.apis.io/egym/asyncapi/egym-mms-events-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/egym-mms-events-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/conformance/egym-conformance.yml
+  href: https://artifacts.apis.io/egym/conformance/egym-conformance.yml
   title: ''
   type: Conformance
   url: conformance/egym-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/data-model/egym-data-model.yml
+  href: https://artifacts.apis.io/egym/data-model/egym-data-model.yml
   title: ''
   type: DataModel
   url: data-model/egym-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/packages/egym-packages.yml
+  href: https://artifacts.apis.io/egym/packages/egym-packages.yml
   title: ''
   type: Packages
   url: packages/egym-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/packages/egym-packages.yml
+  href: https://artifacts.apis.io/egym/packages/egym-packages.yml
   title: ''
   type: SDKs
   url: packages/egym-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/components/egym-components.yml
+  href: https://artifacts.apis.io/egym/components/egym-components.yml
   title: ''
   type: Components
   url: components/egym-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/well-known/egym-well-known.yml
+  href: https://artifacts.apis.io/egym/well-known/egym-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/egym-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/security/egym-domain-security.yml
+  href: https://artifacts.apis.io/egym/security/egym-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/egym-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/egym/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/conventions/egym-conventions.yml
+  href: https://artifacts.apis.io/egym/conventions/egym-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/egym-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/sandbox/egym-sandbox.yml
+  href: https://artifacts.apis.io/egym/sandbox/egym-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/egym-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/errors/egym-decline-codes.yml
+  href: https://artifacts.apis.io/egym/errors/egym-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/egym-decline-codes.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-mms-api-v1-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-mms-api-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-mms-api-v1-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/overlays/egym-canonical-groupx-classes-overlay.yaml
+  href: https://artifacts.apis.io/egym/overlays/egym-canonical-groupx-classes-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/egym-canonical-groupx-classes-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/mcp/egym-mcp.yml
+  href: https://artifacts.apis.io/egym/mcp/egym-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/egym-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/mcp/egym-tool-crosswalk.yml
+  href: https://artifacts.apis.io/egym/mcp/egym-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/egym-tool-crosswalk.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/openapi/_original/egym-mms-api-v2-openapi.yml
+  href: https://artifacts.apis.io/egym/openapi/_original/egym-mms-api-v2-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/egym-mms-api-v2-openapi.yml
 created: '2026-08-12'
 description: 'EGYM is a Munich-headquartered fitness and health technology company that builds the connected-gym platform used by commercial fitness operators worldwide: Smart Strength and Smart Flex networked equipment, the EGYM Genius AI training engine, the EGYM Fitness Hub and Trainer apps, and the EGYM Wellpass / Corporate Fitness membership network that lets employers give staff access to thousands of partner venues. For developers, EGYM operates a public developer portal at developer.egym.com covering eight machine-readable APIs across three integration audiences — member-management-system (MMS) vendors syncing members, memberships, RFID/NFC credentials, check-ins, products and trainer tasks into EGYM Cloud; equipment vendors submitting body, cardio and flexibility measurements from devices or backends; and analytics consumers exporting workout and measurement data. EGYM also publishes an official documentation MCP server, an llms.txt, a written AI-agent instruction page, a dated
   change log, published rate limits and a documented webhook event catalog.'
+finops:
+- has_sources: true
+  method: derived
+  name: Egym Finops
+  primary_unit: ''
+  service_category: ''
+  slug: egym-finops
+  template: true
 image: https://developer.egym.com/assets/egym-logo.60dd444402b44525ca41f7a89573481ea8fffc6f40134e177d7b3a7f13d6e6b2.9c1bb791.svg
 layout: provider
 mcp_servers:
@@ -524,7 +535,7 @@ network: true
 overview: 'EGYM publishes 38 API contracts indexed on the [APIs.io](https://apis.io/) network, including 1. Cardio Measurements API, 2. Workouts API, Alive API, and 35 more. Tagged areas include Company, Fitness, Health, Wellness, and Corporate Wellness.
 
 
-  The EGYM catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The EGYM catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   EGYM''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 44 more developer resources.'
@@ -532,11 +543,24 @@ plans:
 - name: Egym Plans Pricing
   plan_count: 0
   slug: egym-plans-pricing
-random_paper: 16
+random_paper: 2
 rate_limits:
 - limit_count: 1
   name: Egym Rate Limits
   slug: egym-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 111
+  extends:
+  - spectral:oas
+  name: EGYM API Rules
+  rule_count: 70
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 6
+    warn: 26
+  slug: egym-rules
 scopes:
 - name: Egym Scopes
   scope_count: 0
@@ -544,18 +568,18 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 58.7
+  composite: 60.4
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 43.0
+    artifact_dirs: 32
+    catalog_earned: 47.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 60.9
     developer_ergonomics: 73.2
     discoverability: 71.7
@@ -568,7 +592,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 58.7
+  previous_composite: 60.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -585,13 +609,13 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/egym/refs/heads/main/screenshots/egym-2026-08-17T080915.png
+screenshot: https://apis.io/screenshots/egym/egym-2026-08-17T080915.png
 security:
 - kind: authentication
   name: Egym Authentication
@@ -601,6 +625,18 @@ security:
   name: Egym Domain Security
   slug: egym-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 5
+skills:
+- name: Export EGYM workout, measurement and analytics data
+  slug: egym-export-analytics-data
+- name: Authenticate a member at equipment and submit measurements
+  slug: egym-submit-equipment-measurements
+- name: Subscribe to EGYM gym and equipment events
+  slug: egym-subscribe-to-events
+- name: Sync gym members into EGYM Cloud
+  slug: egym-sync-member-accounts
+- name: Onboard and admit an EGYM Wellpass corporate-fitness member
+  slug: egym-wellpass-checkin
 slug: egym
 tags:
 - Company

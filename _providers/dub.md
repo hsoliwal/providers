@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 23.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -100,11 +104,6 @@ apis:
   slug: dub-links-api
 - baseURL: https://api.dub.co
   baseurl_source: declared
-  description: The Partner Applications API from Dub — 3 operation(s) for partner applications.
-  name: Dub Partner Applications API
-  slug: dub-partner-applications-api
-- baseURL: https://api.dub.co
-  baseurl_source: declared
   description: The Partners API from Dub — 6 operation(s) for partners.
   name: Dub Partners API
   slug: dub-partners-api
@@ -128,7 +127,17 @@ apis:
   description: The Track API from Dub — 3 operation(s) for track.
   name: Dub Track API
   slug: dub-track-api
-artifact_total: 68
+- baseURL: https://api.dub.co
+  baseurl_source: declared
+  description: The Discount Codes API from Dub — 2 operation(s) for discount codes.
+  name: Dub Discount Codes API
+  slug: dub-discount-codes-api
+- baseURL: https://api.dub.co
+  baseurl_source: declared
+  description: The Program Applications API from Dub — 3 operation(s) for program applications.
+  name: Dub Program Applications API
+  slug: dub-program-applications-api
+artifact_total: 69
 collections:
 - collection_type: postman
   name: Dub Analytics API
@@ -176,9 +185,6 @@ collections:
   name: Dub Analytics Track API
   slug: postman-dub-track-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Dub Analytics API
   slug: open-dub-analytics-api
 - collection_type: open
@@ -225,7 +231,7 @@ collections:
   slug: open-dub-track-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/capabilities/dub-capability-edges.yml
+  href: https://artifacts.apis.io/dub/capabilities/dub-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dub-capability-edges.yml
@@ -234,27 +240,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/dub/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/agentic-access/dub-agentic-access.yml
+  href: https://artifacts.apis.io/dub/agentic-access/dub-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dub-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/security/dub-trust-center.yml
+  href: https://artifacts.apis.io/dub/security/dub-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/dub-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/security/dub-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dub/security/dub-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dub-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/security/dub-domain-security.yml
+  href: https://artifacts.apis.io/dub/security/dub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dub-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/authentication/dub-authentication.yml
+  href: https://artifacts.apis.io/dub/authentication/dub-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dub-authentication.yml
@@ -319,32 +325,32 @@ common:
   type: SDKPHP
   url: https://github.com/dubinc/dub-php
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/plans/dub-plans-pricing.yml
+  href: https://artifacts.apis.io/dub/plans/dub-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dub-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/rate-limits/dub-rate-limits.yml
+  href: https://artifacts.apis.io/dub/rate-limits/dub-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dub-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/finops/dub-finops.yml
+  href: https://artifacts.apis.io/dub/finops/dub-finops.yml
   title: ''
   type: FinOps
   url: finops/dub-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/vocabulary/dub-vocabulary.yml
+  href: https://artifacts.apis.io/dub/vocabulary/dub-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dub-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/json-ld/dub-context.jsonld
+  href: https://artifacts.apis.io/dub/json-ld/dub-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/dub-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/json-schema/dub-folder-schema.json
+  href: https://artifacts.apis.io/dub/json-schema/dub-folder-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/dub-folder-schema.json
@@ -365,10 +371,10 @@ examples:
   slug: dub-track-sale-example
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Dub Finops
-  primary_unit: ''
-  service_category: SaaS / Link Management
+  primary_unit: subscription
+  service_category: ''
   slug: dub-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dub.png
@@ -398,7 +404,7 @@ modified: '2026-06-12'
 name: Dub
 nav: Providers
 network: true
-overview: 'Dub publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Bounties API, Commissions API, and 15 more. Tagged areas include Link Management, URL Shorteners, Analytics, Conversion Tracking, and Affiliate Programs.
+overview: 'Dub publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Bounties API, Commissions API, and 16 more. Tagged areas include Link Management, URL Shorteners, Analytics, Conversion Tracking, and Affiliate Programs.
 
 
   The Dub catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -407,9 +413,12 @@ overview: 'Dub publishes 18 API contracts indexed on the [APIs.io](https://apis.
   Dub''s developer surface includes authentication, documentation, API reference, engineering blog, changelog, pricing, and 22 more developer resources.'
 plans:
 - name: Dub Plans Pricing
-  plan_count: 5
+  plan_count: 3
   slug: dub-plans-pricing
-random_paper: 7
+- name: Dub Price Estimates
+  plan_count: 0
+  slug: dub-price-estimates
+random_paper: 3
 rate_limits:
 - limit_count: 8
   name: Dub Rate Limits
@@ -427,44 +436,44 @@ rules:
     warn: 3
   slug: dub-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 51.3
+  band: strong
+  composite: 59.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 70.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 44.3
+    artifact_dirs: 21
+    catalog_earned: 82.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 32.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.7
   facets:
-    access_clarity: 26.3
+    access_clarity: 57.9
     contract_governance: 23.5
-    contract_quality: 69.9
+    contract_quality: 72.7
     developer_ergonomics: 32.1
     discoverability: 66.1
-    operational_transparency: 42.1
-  previous_composite: 59.6
+    operational_transparency: 52.6
+  previous_composite: 59.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 15
+      marker_coverage: 50.0
+      total: 32
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/dub/refs/heads/main/screenshots/dub-2026-06-20T180305.png
+screenshot: https://apis.io/screenshots/dub/dub-2026-06-20T180305.png
 security:
 - kind: authentication
   name: Dub Authentication

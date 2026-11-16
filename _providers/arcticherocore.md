@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,40 +25,43 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcticherocore/refs/heads/main/hosts/arcticherocore-hosts.yml
+  href: https://artifacts.apis.io/arcticherocore/hosts/arcticherocore-hosts.yml
   title: ''
   type: Hosts
   url: hosts/arcticherocore-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcticherocore/refs/heads/main/vendors/arcticherocore-vendors.yml
+  href: https://artifacts.apis.io/arcticherocore/vendors/arcticherocore-vendors.yml
   title: ''
   type: Vendors
   url: vendors/arcticherocore-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcticherocore/refs/heads/main/security/arcticherocore-domain-security.yml
+  href: https://artifacts.apis.io/arcticherocore/security/arcticherocore-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arcticherocore-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcticherocore/refs/heads/main/mcp/arcticherocore-mcp.yml
+  href: https://artifacts.apis.io/arcticherocore/mcp/arcticherocore-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/arcticherocore-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcticherocore/refs/heads/main/well-known/arcticherocore-well-known.yml
+  href: https://artifacts.apis.io/arcticherocore/well-known/arcticherocore-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arcticherocore-well-known.yml
@@ -60,7 +73,7 @@ created: '2026-09-25'
 description: Arcticherocore is a stub company identified in the API Evangelist secondary-market harvest. It currently lacks a publicly accessible website or detailed public information. The company appears in equity and investment listings but its own domain does not resolve, and no official API documentation or developer portal is discoverable. This entry serves as a placeholder for future enrichment as more data becomes available.
 layout: provider
 mcp_servers:
-- description: Remote MCP server at api.bouncewatch.com requiring OAuth.
+- description: Remote MCP server at api.bouncewatch.com requiring OAuth; 10 tools listed.
   name: Arcticherocore MCP Server
   slug: arcticherocore-mcp-yml
 modified: '2026-09-25'
@@ -68,7 +81,7 @@ name: Arcticherocore
 nav: Providers
 network: true
 overview: Arcticherocore is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Technology, Finance, Startups, and Arctic.
-random_paper: 11
+random_paper: 21
 score:
   band: minimal
   composite: 4.3
@@ -95,21 +108,21 @@ score:
       reason: venue_as_website
   previous_composite: 4.3
   provenance:
-    mcp: unknown
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/arcticherocore/refs/heads/main/screenshots/arcticherocore-2026-10-11T100211.png
+screenshot: https://apis.io/screenshots/arcticherocore/arcticherocore-2026-10-11T100211.png
 security:
 - kind: domain-security
   name: Arcticherocore Domain Security

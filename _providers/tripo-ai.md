@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - description: 'Unified task API for all Tripo generative 3D operations. A single POST creates an asynchronous task keyed by task_type (text_to_model, image_to_model, multiview_to_model, texture_model, refine_model, '
@@ -66,17 +70,17 @@ apis:
 artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tripo-ai/refs/heads/main/plans/tripo-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/tripo-ai/plans/tripo-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tripo-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tripo-ai/refs/heads/main/rate-limits/tripo-ai-rate-limits.yml
+  href: https://artifacts.apis.io/tripo-ai/rate-limits/tripo-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tripo-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tripo-ai/refs/heads/main/finops/tripo-ai-finops.yml
+  href: https://artifacts.apis.io/tripo-ai/finops/tripo-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/tripo-ai-finops.yml
@@ -93,7 +97,7 @@ common:
   type: License
   url: https://github.com/VAST-AI-Research/tripo-python-sdk/blob/master/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tripo-ai/refs/heads/main/security/tripo-ai-domain-security.yml
+  href: https://artifacts.apis.io/tripo-ai/security/tripo-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tripo-ai-domain-security.yml
@@ -162,13 +166,13 @@ score:
   band: emerging
   composite: 16.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.9
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
@@ -179,21 +183,21 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 22.0
+  previous_composite: 16.1
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tripo-ai/refs/heads/main/screenshots/tripo-ai-2026-06-20T195733.png
+screenshot: https://apis.io/screenshots/tripo-ai/tripo-ai-2026-06-20T195733.png
 security:
 - kind: domain-security
   name: Tripo Ai Domain Security

@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +28,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.4
-  scored_at: '2026-10-17'
+  score: 51.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 506
   human_in_the_loop: 20
@@ -67,11 +82,6 @@ apis:
   description: The Agents API from APIClaw — 1 operation(s) for agents.
   name: APIClaw Agents API
   slug: apiclaw-agents-api
-- baseURL: https://apiclaw.biz/v1/
-  baseurl_source: declared
-  description: The anthropic_passthrough API from APIClaw — 3 operation(s) for anthropic_passthrough.
-  name: APIClaw Anthropic Passthrough API
-  slug: apiclaw-anthropic-passthrough-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
   description: The anthropic_skills API from APIClaw — 2 operation(s) for anthropic_skills.
@@ -314,11 +324,6 @@ apis:
   slug: apiclaw-internal-user-management-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
-  description: The jwt_mappings API from APIClaw — 5 operation(s) for jwt_mappings.
-  name: APIClaw JWT Mappings API
-  slug: apiclaw-jwt-mappings-api
-- baseURL: https://apiclaw.biz/v1/
-  baseurl_source: declared
   description: The key management API from APIClaw — 15 operation(s) for key management.
   name: APIClaw key management API
   slug: apiclaw-key-management-api
@@ -339,11 +344,6 @@ apis:
   slug: apiclaw-litellm-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
-  description: The llm_passthrough API from APIClaw — 24 operation(s) for llm_passthrough.
-  name: APIClaw Llm Passthrough API
-  slug: apiclaw-llm-passthrough-api
-- baseURL: https://apiclaw.biz/v1/
-  baseurl_source: declared
   description: The llm utils API from APIClaw — 3 operation(s) for llm utils.
   name: APIClaw llm utils API
   slug: apiclaw-llm-utils-api
@@ -357,11 +357,6 @@ apis:
   description: The Mcp API from APIClaw — 51 operation(s) for mcp.
   name: APIClaw MCP API
   slug: apiclaw-mcp-api
-- baseURL: https://apiclaw.biz/v1/
-  baseurl_source: declared
-  description: The mcp_rest API from APIClaw — 4 operation(s) for mcp_rest.
-  name: APIClaw MCP Rest API
-  slug: apiclaw-mcp-rest-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
   description: The memory management API from APIClaw — 2 operation(s) for memory management.
@@ -479,11 +474,6 @@ apis:
   slug: apiclaw-rust-control-plane-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
-  description: The scim API from APIClaw — 12 operation(s) for scim.
-  name: APIClaw SCIM API
-  slug: apiclaw-scim-api
-- baseURL: https://apiclaw.biz/v1/
-  baseurl_source: declared
   description: The search API from APIClaw — 6 operation(s) for search.
   name: APIClaw Search API
   slug: apiclaw-search-api
@@ -544,11 +534,6 @@ apis:
   slug: apiclaw-ui-theme-settings-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
-  description: The usage_ai API from APIClaw — 1 operation(s) for usage_ai.
-  name: APIClaw Usage AI API
-  slug: apiclaw-usage-ai-api
-- baseURL: https://apiclaw.biz/v1/
-  baseurl_source: declared
   description: The user agent analytics API from APIClaw — 6 operation(s) for user agent analytics.
   name: APIClaw user agent analytics API
   slug: apiclaw-user-agent-analytics-api
@@ -594,10 +579,205 @@ apis:
   slug: apiclaw-workflow-management-api
 - baseURL: https://apiclaw.biz/v1/
   baseurl_source: declared
-  description: The Passthrough API from APIClaw — 1 operation(s) for passthrough.
+  description: The agent tracing API from APIClaw — 6 operation(s) for agent tracing.
+  name: APIClaw agent tracing API
+  slug: apiclaw-agent-tracing-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Amazon Transcribe Pass-through API from APIClaw — 2 operation(s) for amazon transcribe pass-through.
+  name: APIClaw Amazon Transcribe Pass-through API
+  slug: apiclaw-amazon-transcribe-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Anthropic Pass-through API from APIClaw — 1 operation(s) for anthropic pass-through.
+  name: APIClaw Anthropic Pass-through API
+  slug: apiclaw-anthropic-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The APIClaw Partners API from APIClaw — 5 operation(s) for apiclaw partners.
+  name: APIClaw APIClaw Partners API
+  slug: apiclaw-apiclaw-partners-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The AssemblyAI EU Pass-through API from APIClaw — 1 operation(s) for assemblyai eu pass-through.
+  name: APIClaw AssemblyAI EU Pass-through API
+  slug: apiclaw-assemblyai-eu-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The AssemblyAI Pass-through API from APIClaw — 1 operation(s) for assemblyai pass-through.
+  name: APIClaw AssemblyAI Pass-through API
+  slug: apiclaw-assemblyai-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The AWS Comprehend Medical Pass-through API from APIClaw — 2 operation(s) for aws comprehend medical pass-through.
+  name: APIClaw AWS Comprehend Medical Pass-through API
+  slug: apiclaw-aws-comprehend-medical-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Azure AI Pass-through API from APIClaw — 1 operation(s) for azure ai pass-through.
+  name: APIClaw Azure AI Pass-through API
+  slug: apiclaw-azure-ai-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Azure AI Speech Pass-through API from APIClaw — 1 operation(s) for azure ai speech pass-through.
+  name: APIClaw Azure AI Speech Pass-through API
+  slug: apiclaw-azure-ai-speech-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Azure Pass-through API from APIClaw — 1 operation(s) for azure pass-through.
+  name: APIClaw Azure Pass-through API
+  slug: apiclaw-azure-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Bedrock Pass-through API from APIClaw — 1 operation(s) for bedrock pass-through.
+  name: APIClaw Bedrock Pass-through API
+  slug: apiclaw-bedrock-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The [beta] Anthropic Event Logging API from APIClaw — 1 operation(s) for [beta] anthropic event logging.
+  name: APIClaw [beta] Anthropic Event Logging API
+  slug: apiclaw-beta-anthropic-event-logging-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The [beta] Anthropic Messages Token Counting API from APIClaw — 1 operation(s) for [beta] anthropic messages token counting.
+  name: APIClaw [beta] Anthropic Messages Token Counting API
+  slug: apiclaw-beta-anthropic-messages-token-counting-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The [beta] Anthropic `/v1/messages` API from APIClaw — 1 operation(s) for [beta] anthropic `/v1/messages`.
+  name: APIClaw [beta] Anthropic `/v1/messages` API
+  slug: apiclaw-beta-anthropic-v1-messages-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Cohere Pass-through API from APIClaw — 1 operation(s) for cohere pass-through.
+  name: APIClaw Cohere Pass-through API
+  slug: apiclaw-cohere-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Cost Optimization API from APIClaw — 1 operation(s) for cost optimization.
+  name: APIClaw Cost Optimization API
+  slug: apiclaw-cost-optimization-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Cursor Pass-through API from APIClaw — 1 operation(s) for cursor pass-through.
+  name: APIClaw Cursor Pass-through API
+  slug: apiclaw-cursor-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The decisions API from APIClaw — 4 operation(s) for decisions.
+  name: APIClaw Decisions API
+  slug: apiclaw-decisions-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Fal AI Pass-through API from APIClaw — 1 operation(s) for fal ai pass-through.
+  name: APIClaw Fal AI Pass-through API
+  slug: apiclaw-fal-ai-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Gigachat Pass-through API from APIClaw — 1 operation(s) for gigachat pass-through.
+  name: APIClaw Gigachat Pass-through API
+  slug: apiclaw-gigachat-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Google AI Studio Pass-through API from APIClaw — 1 operation(s) for google ai studio pass-through.
+  name: APIClaw Google AI Studio Pass-through API
+  slug: apiclaw-google-ai-studio-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Indexes API from APIClaw — 1 operation(s) for indexes.
+  name: APIClaw Indexes API
+  slug: apiclaw-indexes-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The JWT Key Mapping API from APIClaw — 5 operation(s) for jwt key mapping.
+  name: APIClaw JWT Key Mapping API
+  slug: apiclaw-jwt-key-mapping-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Lens API from APIClaw — 20 operation(s) for lens.
+  name: APIClaw Lens API
+  slug: apiclaw-lens-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Milvus Pass-through API from APIClaw — 1 operation(s) for milvus pass-through.
+  name: APIClaw Milvus Pass-through API
+  slug: apiclaw-milvus-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Mistral Pass-through API from APIClaw — 1 operation(s) for mistral pass-through.
+  name: APIClaw Mistral Pass-through API
+  slug: apiclaw-mistral-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The model insights API from APIClaw — 2 operation(s) for model insights.
+  name: APIClaw model insights API
+  slug: apiclaw-model-insights-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The NVIDIA NIM Pass-through API from APIClaw — 1 operation(s) for nvidia nim pass-through.
+  name: APIClaw NVIDIA NIM Pass-through API
+  slug: apiclaw-nvidia-nim-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The OpenRouter Pass-through API from APIClaw — 1 operation(s) for openrouter pass-through.
+  name: APIClaw OpenRouter Pass-through API
+  slug: apiclaw-openrouter-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The policy management API from APIClaw — 9 operation(s) for policy management.
+  name: APIClaw policy management API
+  slug: apiclaw-policy-management-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The roi calculator API from APIClaw — 7 operation(s) for roi calculator.
+  name: APIClaw roi calculator API
+  slug: apiclaw-roi-calculator-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The ✨ SCIM v2 (Enterprise Only) API from APIClaw — 12 operation(s) for ✨ scim v2 (enterprise only).
+  name: APIClaw ✨ SCIM v2 (Enterprise Only) API
+  slug: apiclaw-scim-v2-enterprise-only-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The TinyFish Pass-through API from APIClaw — 1 operation(s) for tinyfish pass-through.
+  name: APIClaw TinyFish Pass-through API
+  slug: apiclaw-tinyfish-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The TypeSafe AI Pass-through API from APIClaw — 1 operation(s) for typesafe ai pass-through.
+  name: APIClaw TypeSafe AI Pass-through API
+  slug: apiclaw-typesafe-ai-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The UI Session API from APIClaw — 1 operation(s) for ui session.
+  name: APIClaw UI Session API
+  slug: apiclaw-ui-session-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The vector_store_files API from APIClaw — 6 operation(s) for vector_store_files.
+  name: APIClaw Vector Store Files API
+  slug: apiclaw-vector-store-files-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Vertex AI Pass-through API from APIClaw — 2 operation(s) for vertex ai pass-through.
+  name: APIClaw Vertex AI Pass-through API
+  slug: apiclaw-vertex-ai-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The VLLM Pass-through API from APIClaw — 1 operation(s) for vllm pass-through.
+  name: APIClaw VLLM Pass-through API
+  slug: apiclaw-vllm-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Watsonx Pass-through API from APIClaw — 1 operation(s) for watsonx pass-through.
+  name: APIClaw Watsonx Pass-through API
+  slug: apiclaw-watsonx-pass-through-api
+- baseURL: https://apiclaw.biz/v1/
+  baseurl_source: declared
+  description: The Passthrough API from APIClaw — 28 operation(s) for passthrough.
   name: APIClaw Passthrough API
   slug: apiclaw-passthrough-api
-artifact_total: 121
+artifact_total: 159
 asyncapis:
 - description: ''
   name: Apiclaw Webhooks
@@ -608,7 +788,7 @@ common:
   type: Pricing
   url: https://apiclaw.biz/#pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/capabilities/apiclaw-capability-edges.yml
+  href: https://artifacts.apis.io/apiclaw/capabilities/apiclaw-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/apiclaw-capability-edges.yml
@@ -617,82 +797,82 @@ common:
   type: GettingStarted
   url: https://apiclaw.biz/claude-code-api-setup/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/agentic-access/apiclaw-agentic-access.yml
+  href: https://artifacts.apis.io/apiclaw/agentic-access/apiclaw-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apiclaw-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/plans/apiclaw-plans-pricing.yml
+  href: https://artifacts.apis.io/apiclaw/plans/apiclaw-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apiclaw-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/rules/apiclaw-rules.yml
+  href: https://artifacts.apis.io/apiclaw/rules/apiclaw-rules.yml
   title: ''
   type: Spectral
   url: rules/apiclaw-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/json-ld/apiclaw-context.jsonld
+  href: https://artifacts.apis.io/apiclaw/json-ld/apiclaw-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/apiclaw-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/vocabulary/apiclaw-vocabulary.yml
+  href: https://artifacts.apis.io/apiclaw/vocabulary/apiclaw-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/apiclaw-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/apiclaw/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/asyncapi/apiclaw-webhooks.yml
+  href: https://artifacts.apis.io/apiclaw/asyncapi/apiclaw-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/apiclaw-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/data-model/apiclaw-data-model.yml
+  href: https://artifacts.apis.io/apiclaw/data-model/apiclaw-data-model.yml
   title: ''
   type: DataModel
   url: data-model/apiclaw-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/authentication/apiclaw-authentication.yml
+  href: https://artifacts.apis.io/apiclaw/authentication/apiclaw-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apiclaw-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/errors/apiclaw-problem-types.yml
+  href: https://artifacts.apis.io/apiclaw/errors/apiclaw-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/apiclaw-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/conformance/apiclaw-conformance.yml
+  href: https://artifacts.apis.io/apiclaw/conformance/apiclaw-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apiclaw-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/llms/apiclaw-llms.txt
+  href: https://artifacts.apis.io/apiclaw/llms/apiclaw-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apiclaw-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/mcp/apiclaw-mcp.yml
+  href: https://artifacts.apis.io/apiclaw/mcp/apiclaw-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/apiclaw-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/well-known/apiclaw-well-known.yml
+  href: https://artifacts.apis.io/apiclaw/well-known/apiclaw-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/apiclaw-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/hosts/apiclaw-hosts.yml
+  href: https://artifacts.apis.io/apiclaw/hosts/apiclaw-hosts.yml
   title: ''
   type: Hosts
   url: hosts/apiclaw-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/security/apiclaw-domain-security.yml
+  href: https://artifacts.apis.io/apiclaw/security/apiclaw-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apiclaw-domain-security.yml
@@ -734,6 +914,14 @@ coverage:
   state: unreadable
 created: '2026-09-27'
 description: APIClaw provides a unified API access to multiple large language models including Claude, GPT, Gemini, and DeepSeek. Users can obtain an OpenAI‑compatible key for a flat‑rate subscription starting at $19 per month, with no per‑token billing or usage caps. The platform offers a developer portal, comprehensive documentation, pricing plans, and a blog, targeting AI developers and businesses seeking cost‑effective multi‑model access.
+finops:
+- has_sources: true
+  method: derived
+  name: Apiclaw Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: apiclaw-finops
+  template: false
 image: https://apiclaw.biz/favicon.ico
 jsonld:
 - class_count: 120
@@ -749,7 +937,7 @@ modified: '2026-09-27'
 name: APIClaw
 nav: Providers
 network: true
-overview: 'APIClaw publishes 113 API contracts indexed on the [APIs.io](https://apis.io/) network, including A2a API, A2a Registration API, Access Groups API, and 110 more. Tagged areas include Company, Artificial Intelligence, LLM, Software-as-a-Service, and Platform.
+overview: 'APIClaw publishes 146 API contracts indexed on the [APIs.io](https://apis.io/) network, including A2a API, A2a Registration API, Access Groups API, and 143 more. Tagged areas include Company, Artificial Intelligence, LLM, Software-as-a-Service, and Platform.
 
 
   The APIClaw catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
@@ -760,7 +948,10 @@ plans:
 - name: Apiclaw Plans Pricing
   plan_count: 7
   slug: apiclaw-plans-pricing
-random_paper: 11
+- name: Apiclaw Price Estimates
+  plan_count: 0
+  slug: apiclaw-price-estimates
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -775,24 +966,24 @@ rules:
     warn: 5
   slug: apiclaw-rules
 score:
-  band: strong
-  composite: 54.6
+  band: developing
+  composite: 49.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 65.8
+    artifact_dirs: 25
+    catalog_earned: 68.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 49.3
+    catalog_gap: 46.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: -7.0
   facets:
-    access_clarity: 55.3
+    access_clarity: 51.3
     contract_governance: 22.0
-    contract_quality: 60.5
-    developer_ergonomics: 58.9
+    contract_quality: 60.2
+    developer_ergonomics: 36.3
     discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 52.4
+  previous_composite: 56.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -800,7 +991,7 @@ score:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 112
+      total: 257
     mcp: first-party
     skills: derived
   regulatory:
@@ -809,13 +1000,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/apiclaw/refs/heads/main/screenshots/apiclaw-2026-10-11T095928.png
+screenshot: https://apis.io/screenshots/apiclaw/apiclaw-2026-10-11T095928.png
 security:
 - kind: authentication
   name: Apiclaw Authentication
@@ -825,6 +1016,14 @@ security:
   name: Apiclaw Domain Security
   slug: apiclaw-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: apiclaw-billing-purchase-plan
+  slug: apiclaw-billing-purchase-plan
+- name: apiclaw-create-and-retrieve-response
+  slug: apiclaw-create-and-retrieve-response
+- name: apiclaw-customer-management
+  slug: apiclaw-customer-management
 slug: apiclaw
 tags:
 - Company

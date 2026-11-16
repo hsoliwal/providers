@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.2
-  scored_at: '2026-10-17'
+  score: 35.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -65,7 +71,7 @@ apis:
   description: Utility endpoints for connectivity testing.
   name: Runa Utilities API
   slug: runa-utilities-api
-artifact_total: 28
+artifact_total: 27
 collections:
 - collection_type: postman
   name: Runa Payouts Balance API
@@ -79,9 +85,6 @@ collections:
 - collection_type: postman
   name: Runa Payouts Balance Utilities API
   slug: postman-runa-utilities-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Runa Payouts Balance API
   slug: open-runa-balance-api
@@ -99,17 +102,17 @@ collections:
   slug: open-runa-utilities-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/plans/runa-plans-pricing.yml
+  href: https://artifacts.apis.io/runa/plans/runa-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/runa-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/rate-limits/runa-rate-limits.yml
+  href: https://artifacts.apis.io/runa/rate-limits/runa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/runa-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/finops/runa-finops.yml
+  href: https://artifacts.apis.io/runa/finops/runa-finops.yml
   title: ''
   type: FinOps
   url: finops/runa-finops.yml
@@ -122,22 +125,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/runa/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/agentic-access/runa-agentic-access.yml
+  href: https://artifacts.apis.io/runa/agentic-access/runa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/runa-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/security/runa-trust-center.yml
+  href: https://artifacts.apis.io/runa/security/runa-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/runa-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/security/runa-domain-security.yml
+  href: https://artifacts.apis.io/runa/security/runa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/runa-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/authentication/runa-authentication.yml
+  href: https://artifacts.apis.io/runa/authentication/runa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/runa-authentication.yml
@@ -190,7 +193,7 @@ finops:
 - has_sources: false
   method: generated
   name: Runa Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: runa-finops
   template: true
@@ -224,7 +227,7 @@ plans:
 - name: Runa Plans Pricing
   plan_count: 3
   slug: runa-plans-pricing
-random_paper: 20
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Runa Rate Limits
@@ -257,13 +260,13 @@ score:
   band: thin
   composite: 38.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 58.5
     catalog_earned_first_party: 0.0
     catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 13.6
@@ -271,7 +274,7 @@ score:
     developer_ergonomics: 41.7
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 40.3
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     contracts:
@@ -285,13 +288,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/runa/refs/heads/main/screenshots/runa-2026-06-20T193249.png
+screenshot: https://apis.io/screenshots/runa/runa-2026-06-20T193249.png
 security:
 - kind: authentication
   name: Runa Authentication

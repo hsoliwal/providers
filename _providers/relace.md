@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
@@ -13,6 +14,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.4
-  scored_at: '2026-10-17'
+  score: 38.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -55,11 +60,8 @@ apis:
   description: The Repo API from Relace — 5 operation(s) for repo.
   name: Relace Repo API
   slug: relace-repo-api
-artifact_total: 10
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Relace Code API
   slug: open-relace-code-api
@@ -68,12 +70,12 @@ collections:
   slug: open-relace-repo-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/plans/relace-plans-pricing.yml
+  href: https://artifacts.apis.io/relace/plans/relace-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/relace-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/capabilities/relace-capability-edges.yml
+  href: https://artifacts.apis.io/relace/capabilities/relace-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/relace-capability-edges.yml
@@ -130,82 +132,82 @@ common:
   type: Compliance
   url: https://relace.ai/pricing
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/authentication/relace-authentication.yml
+  href: https://artifacts.apis.io/relace/authentication/relace-authentication.yml
   title: ''
   type: Authentication
   url: authentication/relace-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/openapi/_original/relace-openapi-original.json
+  href: https://artifacts.apis.io/relace/openapi/_original/relace-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/relace-openapi-original.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/mcp/relace-mcp.yml
+  href: https://artifacts.apis.io/relace/mcp/relace-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/relace-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/packages/relace-packages.yml
+  href: https://artifacts.apis.io/relace/packages/relace-packages.yml
   title: ''
   type: Packages
   url: packages/relace-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/packages/relace-packages.yml
+  href: https://artifacts.apis.io/relace/packages/relace-packages.yml
   title: ''
   type: SDKs
   url: packages/relace-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/relace/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/llms/relace-llms.txt
+  href: https://artifacts.apis.io/relace/llms/relace-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/relace-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/errors/relace-error-codes.yml
+  href: https://artifacts.apis.io/relace/errors/relace-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/relace-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/lifecycle/relace-lifecycle.yml
+  href: https://artifacts.apis.io/relace/lifecycle/relace-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/relace-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/conventions/relace-conventions.yml
+  href: https://artifacts.apis.io/relace/conventions/relace-conventions.yml
   title: ''
   type: Conventions
   url: conventions/relace-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/conformance/relace-conformance.yml
+  href: https://artifacts.apis.io/relace/conformance/relace-conformance.yml
   title: ''
   type: Conformance
   url: conformance/relace-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/data-model/relace-data-model.yml
+  href: https://artifacts.apis.io/relace/data-model/relace-data-model.yml
   title: ''
   type: DataModel
   url: data-model/relace-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/sandbox/relace-sandbox.yml
+  href: https://artifacts.apis.io/relace/sandbox/relace-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/relace-sandbox.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/overlays/relace-overlay.yaml
+  href: https://artifacts.apis.io/relace/overlays/relace-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/relace-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/agentic-access/relace-agentic-access.yml
+  href: https://artifacts.apis.io/relace/agentic-access/relace-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/relace-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/security/relace-domain-security.yml
+  href: https://artifacts.apis.io/relace/security/relace-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/relace-domain-security.yml
@@ -215,6 +217,14 @@ common:
   url: https://relace.ai
 created: '2026-07-17'
 description: Relace builds purpose-built AI models and infrastructure for coding agents. Its hosted API exposes fast, specialized models — Instant Apply (relace-apply-3) for merging LLM code edits at over 10k tok/s, a Code Reranker (relace-rank) and code embeddings for semantic codebase retrieval, and Compact for compressing agent traces — alongside Relace Repos, a "GitHub for AI agents" source-control layer with built-in two-stage retrieval and Fast Agentic Search. Authentication is a Bearer API key (rlc- prefix); official Python and TypeScript SDKs and an MCP server are published, and enterprise SOC 2, on-premise, and VPC-isolated deployments are offered. Backed by Matrix Partners and Y Combinator.
+finops:
+- has_sources: true
+  method: derived
+  name: Relace Finops
+  primary_unit: million input tokens
+  service_category: ''
+  slug: relace-finops
+  template: false
 image: https://framerusercontent.com/images/D6XFBAXygf3ZHyjrXSmLmItnPI.png
 layout: provider
 mcp_servers:
@@ -228,31 +238,47 @@ network: true
 overview: 'Relace publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Code API and Repo API. Tagged areas include Company, Artificial Intelligence, Coding Agents, Code Generation, and Developer Tools.
 
 
+  The Relace catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Relace''s developer surface includes documentation, API reference, getting-started guide, quickstart, signup flow, pricing, engineering blog, and 25 more developer resources.'
 plans:
 - name: Relace Plans Pricing
   plan_count: 6
   slug: relace-plans-pricing
-random_paper: 4
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Relace API Rules
+  rule_count: 63
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 4
+  slug: relace-rules
 score:
-  band: developing
-  composite: 52.4
+  band: strong
+  composite: 55.6
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.0
+  delta: 0.0
   facets:
-    access_clarity: 71.1
-    contract_governance: 18.2
+    access_clarity: 78.9
+    contract_governance: 31.8
     contract_quality: 50.8
     developer_ergonomics: 68.5
     discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 46.4
+  previous_composite: 55.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -269,13 +295,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/screenshots/relace-2026-08-17T081505.png
+screenshot: https://apis.io/screenshots/relace/relace-2026-08-17T081505.png
 security:
 - kind: authentication
   name: Relace Authentication
@@ -285,6 +311,14 @@ security:
   name: Relace Domain Security
   slug: relace-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Retrieve relevant files from a codebase with Relace
+  slug: relace-code-retrieval
+- name: Apply LLM code edits with Relace Instant Apply
+  slug: relace-instant-apply
+- name: Manage a Relace Repo lifecycle
+  slug: relace-repos-lifecycle
 slug: relace
 tags:
 - Company

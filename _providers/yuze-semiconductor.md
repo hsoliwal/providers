@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yuze-semiconductor/refs/heads/main/security/yuze-semiconductor-domain-security.yml
+  href: https://artifacts.apis.io/yuze-semiconductor/security/yuze-semiconductor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yuze-semiconductor-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yuze-semiconductor/refs/heads/main/llms/yuze-semiconductor-llms.txt
+  href: https://artifacts.apis.io/yuze-semiconductor/llms/yuze-semiconductor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yuze-semiconductor-llms.txt
@@ -73,12 +86,12 @@ overview: 'Yuze Semiconductor is profiled on the [APIs.io](https://apis.io/) net
 
 
   Yuze Semiconductor''s developer surface includes engineering blog, support, and 3 more developer resources.'
-random_paper: 21
+random_paper: 17
 score:
   band: minimal
   composite: 5.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -106,8 +119,8 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

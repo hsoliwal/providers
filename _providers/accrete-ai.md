@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -82,32 +85,32 @@ common:
   type: Security
   url: https://trust.accrete.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/security/accrete-ai-trust-center.yml
+  href: https://artifacts.apis.io/accrete-ai/security/accrete-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/accrete-ai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/security/accrete-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/accrete-ai/security/accrete-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/accrete-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/security/accrete-ai-domain-security.yml
+  href: https://artifacts.apis.io/accrete-ai/security/accrete-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/accrete-ai-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/conformance/accrete-ai-conformance.yml
+  href: https://artifacts.apis.io/accrete-ai/conformance/accrete-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/accrete-ai-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/well-known/accrete-ai-robots.txt
+  href: https://artifacts.apis.io/accrete-ai/well-known/accrete-ai-robots.txt
   title: ''
   type: ContentSignal
   url: well-known/accrete-ai-robots.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/llms/accrete-ai-llms.txt
+  href: https://artifacts.apis.io/accrete-ai/llms/accrete-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/accrete-ai-llms.txt
@@ -124,12 +127,12 @@ overview: 'Accrete is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Accrete''s developer surface includes engineering blog, support, and 15 more developer resources.'
-random_paper: 6
+random_paper: 14
 score:
   band: emerging
   composite: 20.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -152,14 +155,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/accrete-ai/refs/heads/main/screenshots/accrete-ai-2026-08-07T160807.png
+screenshot: https://apis.io/screenshots/accrete-ai/accrete-ai-2026-08-07T160807.png
 security:
 - kind: domain-security
   name: Accrete Ai Domain Security

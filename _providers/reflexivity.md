@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Reflexivity's institutional REST API. Documented by the company as "JSON REST based services" whose requests are authenticated with an OAuth 2.0 Bearer token obtained from the Reflexivity OAuth servic
@@ -45,7 +48,7 @@ apis:
 artifact_total: 6
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/rate-limits/reflexivity-rate-limits.yml
+  href: https://artifacts.apis.io/reflexivity/rate-limits/reflexivity-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/reflexivity-rate-limits.yml
@@ -90,42 +93,42 @@ common:
   type: Pricing
   url: https://reflexivity.com/en#solutions
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/well-known/reflexivity-well-known.yml
+  href: https://artifacts.apis.io/reflexivity/well-known/reflexivity-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/reflexivity-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/lifecycle/reflexivity-lifecycle.yml
+  href: https://artifacts.apis.io/reflexivity/lifecycle/reflexivity-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/reflexivity-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/conformance/reflexivity-conformance.yml
+  href: https://artifacts.apis.io/reflexivity/conformance/reflexivity-conformance.yml
   title: ''
   type: Conformance
   url: conformance/reflexivity-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/conformance/reflexivity-conformance.yml
+  href: https://artifacts.apis.io/reflexivity/conformance/reflexivity-conformance.yml
   title: ''
   type: Compliance
   url: conformance/reflexivity-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/security/reflexivity-domain-security.yml
+  href: https://artifacts.apis.io/reflexivity/security/reflexivity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/reflexivity-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/llms/reflexivity-llms.txt
+  href: https://artifacts.apis.io/reflexivity/llms/reflexivity-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/reflexivity-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/plans/reflexivity-plans-pricing.yml
+  href: https://artifacts.apis.io/reflexivity/plans/reflexivity-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/reflexivity-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/packages/reflexivity-packages.yml
+  href: https://artifacts.apis.io/reflexivity/packages/reflexivity-packages.yml
   title: ''
   type: Packages
   url: packages/reflexivity-packages.yml
@@ -161,7 +164,7 @@ plans:
 - name: Reflexivity Plans Pricing
   plan_count: 0
   slug: reflexivity-plans-pricing
-random_paper: 1
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Reflexivity Rate Limits
@@ -175,7 +178,7 @@ score:
   band: thin
   composite: 30.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -199,14 +202,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 39.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/screenshots/reflexivity-2026-09-02T153231.png
+screenshot: https://apis.io/screenshots/reflexivity/reflexivity-2026-09-02T153231.png
 security:
 - kind: authentication
   name: Reflexivity Authentication

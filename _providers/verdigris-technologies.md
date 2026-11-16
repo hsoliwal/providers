@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-10-17'
+  score: 36.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.verdigris.co/data/v4
@@ -86,11 +93,8 @@ apis:
   description: Endpoints that return weather data
   name: Verdigris Technologies Weather API
   slug: verdigris-technologies-weather-api
-artifact_total: 25
+artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Data Control API
   slug: open-verdigris-technologies-control-api
@@ -127,22 +131,22 @@ common:
   type: Website
   url: https://www.verdigris.co/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/capabilities/verdigris-technologies-capability-edges.yml
+  href: https://artifacts.apis.io/verdigris-technologies/capabilities/verdigris-technologies-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/verdigris-technologies-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/security/verdigris-technologies-trust-center.yml
+  href: https://artifacts.apis.io/verdigris-technologies/security/verdigris-technologies-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/verdigris-technologies-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/security/verdigris-technologies-domain-security.yml
+  href: https://artifacts.apis.io/verdigris-technologies/security/verdigris-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/verdigris-technologies-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/scopes/verdigris-technologies-scopes.yml
+  href: https://artifacts.apis.io/verdigris-technologies/scopes/verdigris-technologies-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/verdigris-technologies-scopes.yml
@@ -163,7 +167,7 @@ common:
   type: GettingStarted
   url: https://docs.verdigris.co/reference/getting-started-with-your-api
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/authentication/verdigris-technologies-authentication.yml
+  href: https://artifacts.apis.io/verdigris-technologies/authentication/verdigris-technologies-authentication.yml
   title: ''
   type: Authentication
   url: authentication/verdigris-technologies-authentication.yml
@@ -188,27 +192,27 @@ common:
   type: Login
   url: https://admin.verdigris.co
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/llms/verdigris-technologies-llms.txt
+  href: https://artifacts.apis.io/verdigris-technologies/llms/verdigris-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/verdigris-technologies-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/well-known/verdigris-technologies-well-known.yml
+  href: https://artifacts.apis.io/verdigris-technologies/well-known/verdigris-technologies-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/verdigris-technologies-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/mcp/verdigris-technologies-mcp.yml
+  href: https://artifacts.apis.io/verdigris-technologies/mcp/verdigris-technologies-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/verdigris-technologies-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/overlays/verdigris-technologies-data-v4-overlay.yaml
+  href: https://artifacts.apis.io/verdigris-technologies/overlays/verdigris-technologies-data-v4-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/verdigris-technologies-data-v4-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/conformance/verdigris-technologies-conformance.yml
+  href: https://artifacts.apis.io/verdigris-technologies/conformance/verdigris-technologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/verdigris-technologies-conformance.yml
@@ -217,27 +221,27 @@ common:
   type: Compliance
   url: https://trust.verdigris.co/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/errors/verdigris-technologies-problem-types.yml
+  href: https://artifacts.apis.io/verdigris-technologies/errors/verdigris-technologies-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/verdigris-technologies-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/lifecycle/verdigris-technologies-lifecycle.yml
+  href: https://artifacts.apis.io/verdigris-technologies/lifecycle/verdigris-technologies-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/verdigris-technologies-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/conventions/verdigris-technologies-conventions.yml
+  href: https://artifacts.apis.io/verdigris-technologies/conventions/verdigris-technologies-conventions.yml
   title: ''
   type: Conventions
   url: conventions/verdigris-technologies-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/data-model/verdigris-technologies-data-model.yml
+  href: https://artifacts.apis.io/verdigris-technologies/data-model/verdigris-technologies-data-model.yml
   title: ''
   type: DataModel
   url: data-model/verdigris-technologies-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/verdigris-technologies/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -252,32 +256,48 @@ network: true
 overview: 'Verdigris Technologies publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Control API, Current API, Energy API, and 7 more. Tagged areas include Company, Energy, Energy Management, Building Automation, and Smart Buildings.
 
 
+  The Verdigris Technologies catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Verdigris Technologies'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, and 20 more developer resources.'
-random_paper: 16
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Verdigris Technologies API Rules
+  rule_count: 58
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 3
+  slug: verdigris-technologies-rules
 scopes:
 - name: Verdigris Technologies Scopes
   scope_count: 0
   slug: verdigris-technologies-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 36.5
+  band: developing
+  composite: 41.0
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.9
   facets:
     access_clarity: 25.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 50.5
-    developer_ergonomics: 39.9
+    developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.5
+  previous_composite: 38.1
   provenance:
     conformance: derived
     contracts:
@@ -293,14 +313,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 31.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/verdigris-technologies/refs/heads/main/screenshots/verdigris-technologies-2026-08-17T082727.png
+screenshot: https://apis.io/screenshots/verdigris-technologies/verdigris-technologies-2026-08-17T082727.png
 security:
 - kind: authentication
   name: Verdigris Technologies Authentication
@@ -314,6 +334,14 @@ security:
   name: Verdigris Technologies Trust Center
   slug: verdigris-technologies-trust-center
   summary_line: SOC 2
+skill_count: 3
+skills:
+- name: Pull building energy from Verdigris
+  slug: verdigris-technologies-building-energy
+- name: Break down building power to circuits with Verdigris
+  slug: verdigris-technologies-circuit-power-breakdown
+- name: Compare Verdigris energy forecast against weather
+  slug: verdigris-technologies-forecast-vs-weather
 slug: verdigris-technologies
 tags:
 - Company

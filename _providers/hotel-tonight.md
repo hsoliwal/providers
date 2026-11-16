@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Auth-gated partner/agent API portal for HotelTonight hotel supply and booking operations. Requires partner-agent credentials; no public OpenAPI is published.
@@ -69,22 +74,22 @@ common:
   type: Compliance
   url: https://www.hoteltonight.com/terms-of-use/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotel-tonight/refs/heads/main/security/hotel-tonight-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hotel-tonight/security/hotel-tonight-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hotel-tonight-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotel-tonight/refs/heads/main/security/hotel-tonight-domain-security.yml
+  href: https://artifacts.apis.io/hotel-tonight/security/hotel-tonight-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hotel-tonight-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hotel-tonight/refs/heads/main/conformance/hotel-tonight-conformance.yml
+  href: https://artifacts.apis.io/hotel-tonight/conformance/hotel-tonight-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hotel-tonight-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hotel-tonight/refs/heads/main/llms/hotel-tonight-llms.txt
+  href: https://artifacts.apis.io/hotel-tonight/llms/hotel-tonight-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hotel-tonight-llms.txt
@@ -101,7 +106,7 @@ common:
   type: SignUp
   url: https://www.hoteltonight.com/hotel-partners
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotel-tonight/refs/heads/main/authentication/hotel-tonight-authentication.yml
+  href: https://artifacts.apis.io/hotel-tonight/authentication/hotel-tonight-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hotel-tonight-authentication.yml
@@ -117,12 +122,12 @@ overview: 'Hotel Tonight is listed with 1 API on the [APIs.io](https://apis.io/)
 
 
   Hotel Tonight''s developer surface includes support, documentation, signup flow, authentication, and 11 more developer resources.'
-random_paper: 8
+random_paper: 6
 score:
   band: thin
   composite: 31.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -145,14 +150,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hotel-tonight/refs/heads/main/screenshots/hotel-tonight-2026-07-25T221516.png
+screenshot: https://apis.io/screenshots/hotel-tonight/hotel-tonight-2026-07-25T221516.png
 security:
 - kind: authentication
   name: Hotel Tonight Authentication

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Messages API from UGC Agent — 1 operation(s) for messages.
@@ -32,32 +46,32 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/plans/ugcagent-plans-pricing.yml
+  href: https://artifacts.apis.io/ugcagent/plans/ugcagent-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ugcagent-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/rules/ugcagent-rules.yml
+  href: https://artifacts.apis.io/ugcagent/rules/ugcagent-rules.yml
   title: ''
   type: Spectral
   url: rules/ugcagent-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/conformance/ugcagent-conformance.yml
+  href: https://artifacts.apis.io/ugcagent/conformance/ugcagent-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ugcagent-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/llms/ugcagent-llms.txt
+  href: https://artifacts.apis.io/ugcagent/llms/ugcagent-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ugcagent-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/hosts/ugcagent-hosts.yml
+  href: https://artifacts.apis.io/ugcagent/hosts/ugcagent-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ugcagent-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/vendors/ugcagent-vendors.yml
+  href: https://artifacts.apis.io/ugcagent/vendors/ugcagent-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ugcagent-vendors.yml
@@ -66,7 +80,7 @@ common:
   type: DeveloperPortal
   url: https://ugcagent.app/developers/api/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ugcagent/refs/heads/main/security/ugcagent-domain-security.yml
+  href: https://artifacts.apis.io/ugcagent/security/ugcagent-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ugcagent-domain-security.yml
@@ -124,7 +138,7 @@ plans:
 - name: Ugcagent Plans Pricing
   plan_count: 4
   slug: ugcagent-plans-pricing
-random_paper: 10
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -139,22 +153,24 @@ rules:
     warn: 1
   slug: ugcagent-rules
 score:
-  band: thin
-  composite: 29.1
+  band: emerging
+  composite: 22.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 48.5
     catalog_earned_first_party: 12.0
     catalog_gap: 66.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.6
   facets:
-    access_clarity: 63.2
+    access_clarity: 47.4
     contract_governance: 18.2
     contract_quality: 9.4
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 64.3
     operational_transparency: 0.0
+  previous_composite: 29.1
   provenance:
     conformance: derived
     contracts:
@@ -168,12 +184,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/ugcagent/ugcagent-2026-11-03T145345.png
 security:
 - kind: domain-security
   name: Ugcagent Domain Security

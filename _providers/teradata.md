@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -15,7 +18,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 28.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 93
   human_in_the_loop: 3
@@ -134,7 +140,7 @@ arazzos:
 - description: Create a query session, verify it is active, then close it.
   name: Teradata Session Lifecycle
   slug: teradata-session-lifecycle-workflow
-artifact_total: 107
+artifact_total: 110
 collections:
 - collection_type: postman
   name: Teradata Query Service API
@@ -142,9 +148,6 @@ collections:
 - collection_type: postman
   name: Teradata QueryGrid Manager API
   slug: postman-teradata-querygrid-manager-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Teradata Query Service API Info API
   slug: open-teradata-api-info-api
@@ -180,17 +183,17 @@ collections:
   slug: open-teradata-users-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/plans/teradata-plans-pricing.yml
+  href: https://artifacts.apis.io/teradata/plans/teradata-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/teradata-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/rate-limits/teradata-rate-limits.yml
+  href: https://artifacts.apis.io/teradata/rate-limits/teradata-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/teradata-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/finops/teradata-finops.yml
+  href: https://artifacts.apis.io/teradata/finops/teradata-finops.yml
   title: ''
   type: FinOps
   url: finops/teradata-finops.yml
@@ -199,17 +202,17 @@ common:
   type: Website
   url: https://www.teradata.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/agentic-access/teradata-agentic-access.yml
+  href: https://artifacts.apis.io/teradata/agentic-access/teradata-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/teradata-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/security/teradata-domain-security.yml
+  href: https://artifacts.apis.io/teradata/security/teradata-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/teradata-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/authentication/teradata-authentication.yml
+  href: https://artifacts.apis.io/teradata/authentication/teradata-authentication.yml
   title: ''
   type: Authentication
   url: authentication/teradata-authentication.yml
@@ -218,57 +221,57 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/teradata/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-auto-install-node-software-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-auto-install-node-software-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-auto-install-node-software-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-build-data-fabric-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-build-data-fabric-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-build-data-fabric-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-cancel-running-query-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-cancel-running-query-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-cancel-running-query-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-import-and-verify-system-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-import-and-verify-system-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-import-and-verify-system-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-poll-query-results-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-poll-query-results-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-poll-query-results-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-provision-cross-system-link-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-provision-cross-system-link-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-provision-cross-system-link-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-register-system-in-datacenter-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-register-system-in-datacenter-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-register-system-in-datacenter-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-review-environment-health-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-review-environment-health-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-review-environment-health-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-run-connectivity-diagnostic-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-run-connectivity-diagnostic-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-run-connectivity-diagnostic-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-run-query-session-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-run-query-session-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-run-query-session-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/arazzo/teradata-session-lifecycle-workflow.yml
+  href: https://artifacts.apis.io/teradata/arazzo/teradata-session-lifecycle-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/teradata-session-lifecycle-workflow.yml
@@ -349,12 +352,12 @@ common:
   type: Tools
   url: https://github.com/Teradata/teradata-qg-mcp-server
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/rules/teradata-spectral-rules.yml
+  href: https://artifacts.apis.io/teradata/rules/teradata-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/teradata-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/vocabulary/teradata-vocabulary.yaml
+  href: https://artifacts.apis.io/teradata/vocabulary/teradata-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/teradata-vocabulary.yaml
@@ -401,7 +404,7 @@ finops:
 - has_sources: false
   method: generated
   name: Teradata Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: teradata-finops
   template: true
@@ -589,7 +592,7 @@ press:
 - date: ''
   title: Teradata Accelerates AI Innovation with More than 150 Enterprise AI Engagements in 2025
   url: https://www.teradata.com/press-releases/2026/teradata-accelerates-150-enterprise-ai-engage
-random_paper: 2
+random_paper: 22
 rate_limits:
 - limit_count: 5
   name: Teradata Rate Limits
@@ -632,23 +635,23 @@ rules:
   slug: teradata-spectral-rules
 score:
   band: developing
-  composite: 49.7
+  composite: 51.1
   coverage:
-    artifact_dirs: 33
+    artifact_dirs: 35
     catalog_earned: 63.0
     catalog_earned_first_party: 0.0
     catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.3
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 31.8
     contract_quality: 52.2
     developer_ergonomics: 75.0
     discoverability: 80.4
-    operational_transparency: 10.5
-  previous_composite: 55.0
+    operational_transparency: 21.1
+  previous_composite: 51.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -665,13 +668,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/screenshots/teradata-2026-06-20T195123.png
+screenshot: https://apis.io/screenshots/teradata/teradata-2026-06-20T195123.png
 security:
 - kind: authentication
   name: Teradata Authentication
@@ -685,6 +688,16 @@ security:
   name: Teradata Vulnerability Disclosure
   slug: teradata-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 4
+skills:
+- name: teradata-import-system
+  slug: teradata-import-system
+- name: teradata-issues-manage
+  slug: teradata-issues-manage
+- name: teradata-run-query
+  slug: teradata-run-query
+- name: teradata-session-lifecycle
+  slug: teradata-session-lifecycle
 slug: teradata
 tags:
 - Analytics

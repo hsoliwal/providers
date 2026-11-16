@@ -1,12 +1,18 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
-  onboarding: unknown
-  pricing: freemium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
+  onboarding: self-serve
+  pricing: paid
   public: false
   source:
   - plans
+  - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +31,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: FDX-aligned REST endpoints returning the list of a consumer's permissioned accounts and detailed account information (account identifiers, type, status, nickname, and product details) for the accounts
@@ -132,27 +141,27 @@ common:
   type: FDX Standard
   url: https://financialdataexchange.org/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/security/akoya-trust-center.yml
+  href: https://artifacts.apis.io/akoya/security/akoya-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/akoya-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/security/akoya-domain-security.yml
+  href: https://artifacts.apis.io/akoya/security/akoya-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/akoya-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/plans/akoya-plans-pricing.yml
+  href: https://artifacts.apis.io/akoya/plans/akoya-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/akoya-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/rate-limits/akoya-rate-limits.yml
+  href: https://artifacts.apis.io/akoya/rate-limits/akoya-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/akoya-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/finops/akoya-finops.yml
+  href: https://artifacts.apis.io/akoya/finops/akoya-finops.yml
   title: ''
   type: FinOps
   url: finops/akoya-finops.yml
@@ -177,27 +186,27 @@ common:
   type: Login
   url: https://recipient.ddp.akoya.com/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/authentication/akoya-authentication.yml
+  href: https://artifacts.apis.io/akoya/authentication/akoya-authentication.yml
   title: ''
   type: Authentication
   url: authentication/akoya-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/conventions/akoya-conventions.yml
+  href: https://artifacts.apis.io/akoya/conventions/akoya-conventions.yml
   title: ''
   type: Conventions
   url: conventions/akoya-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/sandbox/akoya-sandbox.yml
+  href: https://artifacts.apis.io/akoya/sandbox/akoya-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/akoya-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/lifecycle/akoya-lifecycle.yml
+  href: https://artifacts.apis.io/akoya/lifecycle/akoya-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/akoya-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/conformance/akoya-conformance.yml
+  href: https://artifacts.apis.io/akoya/conformance/akoya-conformance.yml
   title: ''
   type: Conformance
   url: conformance/akoya-conformance.yml
@@ -206,17 +215,17 @@ common:
   type: Compliance
   url: https://akoya.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/errors/akoya-problem-types.yml
+  href: https://artifacts.apis.io/akoya/errors/akoya-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/akoya-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/asyncapi/akoya-notifications-webhooks.yml
+  href: https://artifacts.apis.io/akoya/asyncapi/akoya-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/akoya-notifications-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/llms/akoya-llms.txt
+  href: https://artifacts.apis.io/akoya/llms/akoya-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/akoya-llms.txt
@@ -225,12 +234,12 @@ description: Akoya operates a tokenized, consumer-permissioned data-access netwo
   client-credentials, auth-code, and account-fetch flows. There is no publicly downloadable OpenAPI/Postman artifact — production access requires a network membership agreement.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Akoya Finops
   primary_unit: ''
-  service_category: Open Banking
+  service_category: ''
   slug: akoya-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akoya.png
 layout: provider
 modified: '2026-10-06'
@@ -255,17 +264,17 @@ rate_limits:
   slug: akoya-rate-limits
 score:
   band: developing
-  composite: 50.4
+  composite: 53.6
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 44.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    artifact_dirs: 18
+    catalog_earned: 50.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 65.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
-    access_clarity: 59.2
+    access_clarity: 75.0
     contract_governance: 18.2
     contract_quality: 39.0
     developer_ergonomics: 64.3
@@ -278,7 +287,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.0
+  previous_composite: 53.6
   provenance:
     conformance: first-party
   regulatory:
@@ -287,14 +296,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/akoya/refs/heads/main/screenshots/akoya-2026-06-20T171457.png
+screenshot: https://apis.io/screenshots/akoya/akoya-2026-06-20T171457.png
 security:
 - kind: authentication
   name: Akoya Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/security/dow-chemical-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dow-chemical/security/dow-chemical-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dow-chemical-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/security/dow-chemical-domain-security.yml
+  href: https://artifacts.apis.io/dow-chemical/security/dow-chemical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dow-chemical-domain-security.yml
@@ -55,22 +59,22 @@ common:
   type: Website
   url: https://www.dow.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/well-known/dow-chemical-well-known.yml
+  href: https://artifacts.apis.io/dow-chemical/well-known/dow-chemical-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dow-chemical-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/well-known/dow-chemical-security.txt
+  href: https://artifacts.apis.io/dow-chemical/well-known/dow-chemical-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/dow-chemical-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/security/dow-chemical-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dow-chemical/security/dow-chemical-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/dow-chemical-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/llms/dow-chemical-llms.txt
+  href: https://artifacts.apis.io/dow-chemical/llms/dow-chemical-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dow-chemical-llms.txt
@@ -142,7 +146,7 @@ press:
 - date: ''
   title: Dow launches Transform to Outperform to raise the ...
   url: https://www.prnewswire.com/news-releases/dow-launches-transform-to-outperform-to-raise-the-competitive-industry-benchmark-for-productivity-and-growth-to-enable-improved-returns-302673865.html
-random_paper: 9
+random_paper: 21
 score:
   band: emerging
   composite: 15.7
@@ -173,14 +177,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dow-chemical/refs/heads/main/screenshots/dow-chemical-2026-06-20T180207.png
+screenshot: https://apis.io/screenshots/dow-chemical/dow-chemical-2026-06-20T180207.png
 security:
 - kind: domain-security
   name: Dow Chemical Domain Security

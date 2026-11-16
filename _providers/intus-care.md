@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -87,32 +90,32 @@ common:
   type: Twitter
   url: https://x.com/intus_care
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/conformance/intus-care-conformance.yml
+  href: https://artifacts.apis.io/intus-care/conformance/intus-care-conformance.yml
   title: ''
   type: Conformance
   url: conformance/intus-care-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/conformance/intus-care-conformance.yml
+  href: https://artifacts.apis.io/intus-care/conformance/intus-care-conformance.yml
   title: ''
   type: Compliance
   url: conformance/intus-care-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/security/intus-care-domain-security.yml
+  href: https://artifacts.apis.io/intus-care/security/intus-care-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/intus-care-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/plans/intus-care-plans-pricing.yml
+  href: https://artifacts.apis.io/intus-care/plans/intus-care-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/intus-care-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/rate-limits/intus-care-rate-limits.yml
+  href: https://artifacts.apis.io/intus-care/rate-limits/intus-care-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/intus-care-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/llms/intus-care-llms.txt
+  href: https://artifacts.apis.io/intus-care/llms/intus-care-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/intus-care-llms.txt
@@ -148,7 +151,7 @@ plans:
 - name: Intus Care Plans Pricing
   plan_count: 0
   slug: intus-care-plans-pricing
-random_paper: 7
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Intus Care Rate Limits
@@ -157,7 +160,7 @@ score:
   band: emerging
   composite: 11.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -180,14 +183,14 @@ score:
     regime: Health
     regime_id: health
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/intus-care/refs/heads/main/screenshots/intus-care-2026-09-02T145915.png
+screenshot: https://apis.io/screenshots/intus-care/intus-care-2026-09-02T145915.png
 security:
 - kind: domain-security
   name: Intus Care Domain Security

@@ -1,6 +1,19 @@
 ---
+access_model:
+  confidence: high
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-10-17'
+  score: 29.2
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://api.cloudsmith.io
@@ -41,69 +57,74 @@ apis:
   description: The User API from Cloudsmithio — 2 operation(s) for user.
   name: Cloudsmithio User API
   slug: cloudsmithio-user-api
-artifact_total: 12
+artifact_total: 15
 asyncapis:
 - description: ''
   name: Cloudsmithio Webhooks
   slug: cloudsmithio-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/cloudsmithio/plans/cloudsmithio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cloudsmithio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/rate-limits/cloudsmithio-rate-limits.yml
+  href: https://artifacts.apis.io/cloudsmithio/rate-limits/cloudsmithio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudsmithio-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/rules/cloudsmithio-rules.yml
+  href: https://artifacts.apis.io/cloudsmithio/rules/cloudsmithio-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudsmithio-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/json-ld/cloudsmithio-context.jsonld
+  href: https://artifacts.apis.io/cloudsmithio/json-ld/cloudsmithio-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloudsmithio-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/vocabulary/cloudsmithio-vocabulary.yml
+  href: https://artifacts.apis.io/cloudsmithio/vocabulary/cloudsmithio-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cloudsmithio-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/asyncapi/cloudsmithio-webhooks.yml
+  href: https://artifacts.apis.io/cloudsmithio/asyncapi/cloudsmithio-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cloudsmithio-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/data-model/cloudsmithio-data-model.yml
+  href: https://artifacts.apis.io/cloudsmithio/data-model/cloudsmithio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudsmithio-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/authentication/cloudsmithio-authentication.yml
+  href: https://artifacts.apis.io/cloudsmithio/authentication/cloudsmithio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudsmithio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/conformance/cloudsmithio-conformance.yml
+  href: https://artifacts.apis.io/cloudsmithio/conformance/cloudsmithio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudsmithio-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/llms/cloudsmithio-llms.txt
+  href: https://artifacts.apis.io/cloudsmithio/llms/cloudsmithio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudsmithio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/well-known/cloudsmithio-well-known.yml
+  href: https://artifacts.apis.io/cloudsmithio/well-known/cloudsmithio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudsmithio-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/hosts/cloudsmithio-hosts.yml
+  href: https://artifacts.apis.io/cloudsmithio/hosts/cloudsmithio-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudsmithio-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/vendors/cloudsmithio-vendors.yml
+  href: https://artifacts.apis.io/cloudsmithio/vendors/cloudsmithio-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudsmithio-vendors.yml
@@ -152,7 +173,7 @@ common:
   type: Documentation
   url: https://docs.cloudsmith.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsmithio/refs/heads/main/security/cloudsmithio-domain-security.yml
+  href: https://artifacts.apis.io/cloudsmithio/security/cloudsmithio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudsmithio-domain-security.yml
@@ -170,6 +191,14 @@ coverage:
   state: unreadable
 created: '2026-10-09'
 description: Cloudsmith is a fully-managed artifact management, software supply chain security, and software distribution platform. It provides secure, scalable, developer‑friendly solutions for managing packages, containers, and ML models, with features like vulnerability scanning, policy enforcement, and detailed observability. The service supports a wide range of formats and integrates with CI/CD pipelines, helping organizations protect their software supply chain from attacks and compliance issues.
+finops:
+- has_sources: true
+  method: derived
+  name: Cloudsmithio Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: cloudsmithio-finops
+  template: false
 image: https://cloudsmith.com/images/opengraph.png
 json_schemas:
 - name: GetUserSelfResponse
@@ -197,8 +226,15 @@ overview: 'Cloudsmithio is listed with 3 APIs on the [APIs.io](https://apis.io/)
   The Cloudsmithio catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Cloudsmithio''s developer surface includes authentication, support, changelog, engineering blog, getting-started guide, documentation, and 19 more developer resources.'
-random_paper: 2
+  Cloudsmithio''s developer surface includes authentication, support, changelog, engineering blog, getting-started guide, documentation, and 20 more developer resources.'
+plans:
+- name: Cloudsmithio Plans Pricing
+  plan_count: 5
+  slug: cloudsmithio-plans-pricing
+- name: Cloudsmithio Price Estimates
+  plan_count: 0
+  slug: cloudsmithio-price-estimates
+random_paper: 4
 rate_limits:
 - limit_count: 6
   name: Cloudsmithio Rate Limits
@@ -218,21 +254,23 @@ rules:
   slug: cloudsmithio-rules
 score:
   band: developing
-  composite: 39.9
+  composite: 41.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 71.8
-    catalog_earned_first_party: 12.0
-    catalog_gap: 43.3
+    artifact_dirs: 22
+    catalog_earned: 86.8
+    catalog_earned_first_party: 24.0
+    catalog_gap: 28.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.7
   facets:
-    access_clarity: 7.9
+    access_clarity: 43.4
     contract_governance: 22.0
     contract_quality: 29.3
-    developer_ergonomics: 40.5
-    discoverability: 80.4
-    operational_transparency: 86.8
+    developer_ergonomics: 31.0
+    discoverability: 79.5
+    operational_transparency: 59.2
+  previous_composite: 47.8
   provenance:
     conformance: derived
     contracts:
@@ -246,13 +284,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/cloudsmithio/cloudsmithio-2026-11-03T124558.png
 security:
 - kind: authentication
   name: Cloudsmithio Authentication

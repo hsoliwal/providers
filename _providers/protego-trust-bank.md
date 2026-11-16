@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/protego-trust-bank/refs/heads/main/plans/protego-trust-bank-plans-pricing.yml
+  href: https://artifacts.apis.io/protego-trust-bank/plans/protego-trust-bank-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/protego-trust-bank-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/protego-trust-bank/refs/heads/main/rate-limits/protego-trust-bank-rate-limits.yml
+  href: https://artifacts.apis.io/protego-trust-bank/rate-limits/protego-trust-bank-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/protego-trust-bank-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/protego-trust-bank/refs/heads/main/security/protego-trust-bank-domain-security.yml
+  href: https://artifacts.apis.io/protego-trust-bank/security/protego-trust-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/protego-trust-bank-domain-security.yml
@@ -125,8 +128,8 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

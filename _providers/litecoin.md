@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 22.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -95,9 +102,6 @@ apis:
 artifact_total: 35
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Litecoin Core JSON-RPC Addresses API
   slug: open-litecoin-addresses-api
 - collection_type: open
@@ -126,17 +130,17 @@ collections:
   slug: open-litecoin-utxo-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/plans/litecoin-core-json-rpc.yml
+  href: https://artifacts.apis.io/litecoin/plans/litecoin-core-json-rpc.yml
   title: ''
   type: Plans
   url: plans/litecoin-core-json-rpc.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/rate-limits/litecoin-core-json-rpc.yml
+  href: https://artifacts.apis.io/litecoin/rate-limits/litecoin-core-json-rpc.yml
   title: ''
   type: RateLimits
   url: rate-limits/litecoin-core-json-rpc.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/finops/litecoin-core-json-rpc.yml
+  href: https://artifacts.apis.io/litecoin/finops/litecoin-core-json-rpc.yml
   title: ''
   type: FinOps
   url: finops/litecoin-core-json-rpc.yml
@@ -145,17 +149,17 @@ common:
   type: License
   url: https://github.com/litecoin-project/litecoin/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/agentic-access/litecoin-agentic-access.yml
+  href: https://artifacts.apis.io/litecoin/agentic-access/litecoin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/litecoin-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/security/litecoin-domain-security.yml
+  href: https://artifacts.apis.io/litecoin/security/litecoin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/litecoin-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/authentication/litecoin-authentication.yml
+  href: https://artifacts.apis.io/litecoin/authentication/litecoin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/litecoin-authentication.yml
@@ -231,6 +235,9 @@ network: true
 overview: 'Litecoin publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Addresses API, Blockchain API, Blocks API, and 7 more. Tagged areas include Cryptocurrency, Blockchain, Litecoin, LTC, and Payments.
 
 
+  The Litecoin catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Litecoin''s developer surface includes authentication, engineering blog, changelog, and 12 more developer resources.'
 plans:
 - name: Litecoin Core Json Rpc
@@ -245,7 +252,7 @@ plans:
 - name: Litecoin Space Websocket
   plan_count: 2
   slug: litecoin-space-websocket
-random_paper: 19
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Litecoin Core Json Rpc
@@ -259,25 +266,38 @@ rate_limits:
 - limit_count: 0
   name: Litecoin Space Websocket
   slug: litecoin-space-websocket
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Litecoin API Rules
+  rule_count: 58
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 3
+    warn: 5
+  slug: litecoin-rules
 score:
   band: emerging
-  composite: 23.6
+  composite: 25.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 37.0
+    artifact_dirs: 17
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.1
     developer_ergonomics: 22.6
     discoverability: 62.5
     operational_transparency: 21.1
-  previous_composite: 27.8
+  previous_composite: 25.2
   provenance:
     agentic_access: derived
     contracts:
@@ -291,13 +311,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/litecoin/refs/heads/main/screenshots/litecoin-2026-06-20T184600.png
+screenshot: https://apis.io/screenshots/litecoin/litecoin-2026-06-20T184600.png
 security:
 - kind: authentication
   name: Litecoin Authentication

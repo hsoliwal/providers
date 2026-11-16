@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: partner
+  gated_source:
+  - apis
   label: Paid · Requires approval
   onboarding: approval
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: Provision and manage employees in an Awardco instance. Awardco's public documentation names Create User, Import Users (bulk), and Reset User Password endpoints, all flagged as sensitive and permission
@@ -55,7 +62,7 @@ apis:
 artifact_total: 9
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/awardco/refs/heads/main/security/awardco-domain-security.yml
+  href: https://artifacts.apis.io/awardco/security/awardco-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/awardco-domain-security.yml
@@ -76,17 +83,17 @@ common:
   type: Authentication
   url: https://awardco.my.site.com/Customerhelp/s/article/Managing-API-Keys
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/awardco/refs/heads/main/plans/awardco-plans-pricing.yml
+  href: https://artifacts.apis.io/awardco/plans/awardco-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/awardco-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/awardco/refs/heads/main/rate-limits/awardco-rate-limits.yml
+  href: https://artifacts.apis.io/awardco/rate-limits/awardco-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/awardco-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/awardco/refs/heads/main/finops/awardco-finops.yml
+  href: https://artifacts.apis.io/awardco/finops/awardco-finops.yml
   title: ''
   type: FinOps
   url: finops/awardco-finops.yml
@@ -94,6 +101,10 @@ common:
   title: ''
   type: Blog
   url: https://www.awardco.com/blog
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://help.awardco.com/
 created: '2026-07-10'
 description: Awardco is an all-in-one employee recognition, rewards, and engagement platform built around a global rewards marketplace that includes a native Amazon Business integration, gift cards, service awards, and swag. Awardco exposes a documented public REST API at https://api.awardco.com/api for administrators and integration partners - callers authenticate with a permission-scoped API key passed as a request header, all responses are JSON with a success flag, and all timestamps are ISO 8601. The API is not open self-serve - it is gated behind an Awardco account and the API Key Management permission, and partners additionally send an X-Partner-Id header. Documented capabilities cover user provisioning (create, import, reset password), recognizing employees and awarding points, and retrieving or scheduling reports. Awardco also ships prebuilt HRIS, SSO/SAML, Slack, and Microsoft Teams integrations plus Awardco Connect for custom flows. Exact request and response schemas for individual
   methods are not published on the open web, so the API surfaces below are modeled from Awardco's public documentation and help center rather than a released OpenAPI definition.
@@ -118,12 +129,12 @@ network: true
 overview: 'Awardco is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Employee Recognition, Rewards, Engagement, Human Resources, and Incentives.
 
 
-  Awardco''s developer surface includes documentation, authentication, engineering blog, and 6 more developer resources.'
+  Awardco''s developer surface includes documentation, authentication, engineering blog, and 7 more developer resources.'
 plans:
 - name: Awardco Plans Pricing
   plan_count: 6
   slug: awardco-plans-pricing
-random_paper: 11
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Awardco Rate Limits
@@ -138,7 +149,7 @@ score:
     catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -146,7 +157,7 @@ score:
     developer_ergonomics: 17.9
     discoverability: 73.3
     operational_transparency: 0.0
-  previous_composite: 17.1
+  previous_composite: 11.4
   provenance:
     mcp: first-party
   regulatory:
@@ -155,14 +166,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/awardco/refs/heads/main/screenshots/awardco-2026-07-25T202020.png
+screenshot: https://apis.io/screenshots/awardco/awardco-2026-07-25T202020.png
 security:
 - kind: domain-security
   name: Awardco Domain Security
@@ -177,5 +188,8 @@ tags:
 - Incentives
 - Points
 - Loyalty & Incentives
+- Software-as-a-Service
+- Employee Engagement
+- Recognition
 website: https://www.awardco.com
 ---

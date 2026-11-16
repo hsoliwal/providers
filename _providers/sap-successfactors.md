@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -95,9 +99,6 @@ apis:
 artifact_total: 26
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SAP SuccessFactors HXM Suite OData EmpEmployment API
   slug: open-sap-successfactors-empemployment-api
 - collection_type: open
@@ -126,7 +127,7 @@ collections:
   slug: open-sap-successfactors
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/capabilities/sap-successfactors-capability-edges.yml
+  href: https://artifacts.apis.io/sap-successfactors/capabilities/sap-successfactors-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sap-successfactors-capability-edges.yml
@@ -135,27 +136,27 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/sap/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/agentic-access/sap-successfactors-agentic-access.yml
+  href: https://artifacts.apis.io/sap-successfactors/agentic-access/sap-successfactors-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sap-successfactors-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/security/sap-successfactors-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sap-successfactors/security/sap-successfactors-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sap-successfactors-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/security/sap-successfactors-domain-security.yml
+  href: https://artifacts.apis.io/sap-successfactors/security/sap-successfactors-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sap-successfactors-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/authentication/sap-successfactors-authentication.yml
+  href: https://artifacts.apis.io/sap-successfactors/authentication/sap-successfactors-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sap-successfactors-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/scopes/sap-successfactors-scopes.yml
+  href: https://artifacts.apis.io/sap-successfactors/scopes/sap-successfactors-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sap-successfactors-scopes.yml
@@ -202,8 +203,24 @@ network: true
 overview: 'SAP SuccessFactors publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including EmpEmployment API, EmpJob API, FOCompany API, and 8 more. Tagged areas include HCM, Human Resources, Talent Management, Payroll, and Enterprise.
 
 
+  The SAP SuccessFactors catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   SAP SuccessFactors'' developer surface includes authentication, documentation, API reference, and 12 more developer resources.'
-random_paper: 14
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: SAP SuccessFactors API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: sap-successfactors-rules
 scopes:
 - name: Sap Successfactors Scopes
   scope_count: 0
@@ -211,23 +228,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 23.1
+  composite: 26.1
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 37.0
+    artifact_dirs: 13
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.7
     developer_ergonomics: 11.9
     discoverability: 66.1
-    operational_transparency: 2.6
-  previous_composite: 23.1
+    operational_transparency: 13.2
+  previous_composite: 26.1
   provenance:
     agentic_access: derived
     contracts:
@@ -241,13 +258,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/screenshots/sap-successfactors-2026-06-20T193430.png
+screenshot: https://apis.io/screenshots/sap-successfactors/sap-successfactors-2026-06-20T193430.png
 security:
 - kind: authentication
   name: Sap Successfactors Authentication

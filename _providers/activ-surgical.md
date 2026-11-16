@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -70,7 +76,7 @@ common:
   type: Compliance
   url: https://www.activsurgical.com/compliance
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/activ-surgical/refs/heads/main/conformance/activ-surgical-conformance.yml
+  href: https://artifacts.apis.io/activ-surgical/conformance/activ-surgical-conformance.yml
   title: ''
   type: Conformance
   url: conformance/activ-surgical-conformance.yml
@@ -87,12 +93,12 @@ common:
   type: Twitter
   url: https://twitter.com/ActivSurgical
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/activ-surgical/refs/heads/main/security/activ-surgical-domain-security.yml
+  href: https://artifacts.apis.io/activ-surgical/security/activ-surgical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/activ-surgical-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/activ-surgical/refs/heads/main/llms/activ-surgical-llms.txt
+  href: https://artifacts.apis.io/activ-surgical/llms/activ-surgical-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/activ-surgical-llms.txt
@@ -113,12 +119,12 @@ overview: 'Activ Surgical is profiled on the [APIs.io](https://apis.io/) network
 
 
   Activ Surgical''s developer surface includes engineering blog, support, and 13 more developer resources.'
-random_paper: 8
+random_paper: 22
 score:
   band: emerging
   composite: 13.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -141,14 +147,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/activ-surgical/refs/heads/main/screenshots/activ-surgical-2026-08-07T160853.png
+screenshot: https://apis.io/screenshots/activ-surgical/activ-surgical-2026-08-07T160853.png
 security:
 - kind: domain-security
   name: Activ Surgical Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -49,7 +53,7 @@ common:
   type: Twitter
   url: https://x.com/8sec_games
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/8sec/refs/heads/main/security/8sec-domain-security.yml
+  href: https://artifacts.apis.io/8sec/security/8sec-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/8sec-domain-security.yml
@@ -79,7 +83,7 @@ name: 8sec
 nav: Providers
 network: true
 overview: 8sec is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Games, Mobile Games, Game Studio, and Hyper-Casual.
-random_paper: 19
+random_paper: 11
 score:
   band: minimal
   composite: 0.0
@@ -114,8 +118,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

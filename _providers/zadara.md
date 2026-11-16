@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.1
-  scored_at: '2026-10-17'
+  score: 41.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 495
   human_in_the_loop: 42
@@ -32,7 +46,7 @@ agentic_access:
   operation_count: 794
   slug: zadara-agentic-access
   summary_line: 794 operations · 495 acting · 42 human-in-the-loop
-api_count: 8
+api_count: 4
 apis:
 - baseURL: https://{vpsa-host}/api
   baseurl_source: declared
@@ -324,30 +338,35 @@ apis:
   description: Vpsas Description
   name: Zadara Vpsas API
   slug: zadara-vpsas-api
-artifact_total: 63
+artifact_total: 65
 common:
+- group: commercial
+  href: https://artifacts.apis.io/zadara/plans/zadara-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/zadara-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/capabilities/zadara-capability-edges.yml
+  href: https://artifacts.apis.io/zadara/capabilities/zadara-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zadara-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/agentic-access/zadara-agentic-access.yml
+  href: https://artifacts.apis.io/zadara/agentic-access/zadara-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zadara-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/rules/zadara-rules.yml
+  href: https://artifacts.apis.io/zadara/rules/zadara-rules.yml
   title: ''
   type: Spectral
   url: rules/zadara-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/vocabulary/zadara-vocabulary.yml
+  href: https://artifacts.apis.io/zadara/vocabulary/zadara-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/zadara-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/data-model/zadara-data-model.yml
+  href: https://artifacts.apis.io/zadara/data-model/zadara-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zadara-data-model.yml
@@ -356,47 +375,47 @@ common:
   type: Compliance
   url: https://www.zadara.com/edge-cloud/compliance/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/errors/zadara-problem-types.yml
+  href: https://artifacts.apis.io/zadara/errors/zadara-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zadara-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/conformance/zadara-conformance.yml
+  href: https://artifacts.apis.io/zadara/conformance/zadara-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zadara-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/llms/zadara-llms.txt
+  href: https://artifacts.apis.io/zadara/llms/zadara-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zadara-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/well-known/zadara-well-known.yml
+  href: https://artifacts.apis.io/zadara/well-known/zadara-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zadara-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/hosts/zadara-hosts.yml
+  href: https://artifacts.apis.io/zadara/hosts/zadara-hosts.yml
   title: ''
   type: Hosts
   url: hosts/zadara-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/vendors/zadara-vendors.yml
+  href: https://artifacts.apis.io/zadara/vendors/zadara-vendors.yml
   title: ''
   type: Vendors
   url: vendors/zadara-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/authentication/zadara-authentication.yml
+  href: https://artifacts.apis.io/zadara/authentication/zadara-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zadara-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/security/zadara-trust-center.yml
+  href: https://artifacts.apis.io/zadara/security/zadara-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zadara-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zadara/refs/heads/main/security/zadara-domain-security.yml
+  href: https://artifacts.apis.io/zadara/security/zadara-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zadara-domain-security.yml
@@ -442,6 +461,14 @@ common:
   url: https://www.zadara.com/resources/terms/
 created: '2026-10-13'
 description: Zadara is an edge cloud and storage-as-a-service provider offering zStorage (VPSA Storage Array and Flash Array block/file storage, VPSA Object Storage) and zCompute, delivered fully managed in its own and partner data centers. Its public API documentation at api-doc.zadara.com publishes Swagger 2.0 contracts for the VPSA Storage Array, Object Storage, Command Center and Provisioning Portal REST APIs, each authenticated with an X-Access-Key header.
+finops:
+- has_sources: true
+  method: derived
+  name: Zadara Finops
+  primary_unit: ''
+  service_category: ''
+  slug: zadara-finops
+  template: true
 image: https://www.zadara.com/wp-content/uploads/poster2.jpg
 layout: provider
 modified: '2026-10-13'
@@ -454,8 +481,12 @@ overview: 'Zadara publishes 58 API contracts indexed on the [APIs.io](https://ap
   The Zadara catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Zadara''s developer surface includes authentication, API reference, documentation, engineering blog, pricing, and 20 more developer resources.'
-random_paper: 11
+  Zadara''s developer surface includes authentication, API reference, documentation, engineering blog, pricing, and 21 more developer resources.'
+plans:
+- name: Zadara Plans Pricing
+  plan_count: 0
+  slug: zadara-plans-pricing
+random_paper: 3
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -470,22 +501,24 @@ rules:
     warn: 1
   slug: zadara-rules
 score:
-  band: developing
-  composite: 43.3
+  band: thin
+  composite: 34.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 22
     catalog_earned: 45.8
     catalog_earned_first_party: 0.0
     catalog_gap: 69.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.6
   facets:
-    access_clarity: 60.5
+    access_clarity: 34.2
     contract_governance: 22.0
     contract_quality: 44.2
-    developer_ergonomics: 31.0
-    discoverability: 80.4
-    operational_transparency: 5.3
+    developer_ergonomics: 21.4
+    discoverability: 79.5
+    operational_transparency: 2.6
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -500,12 +533,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 11.1
+screenshot: https://apis.io/screenshots/zadara/zadara-2026-11-03T150410.png
 security:
 - kind: authentication
   name: Zadara Authentication

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 29.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 0
@@ -150,15 +153,12 @@ apis:
   description: The wiki API from Inthegame — 5 operation(s) for wiki.
   name: Inthegame Wiki API
   slug: inthegame-wiki-api
-artifact_total: 48
+artifact_total: 52
 asyncapis:
 - description: Real-time viewer-engagement events pushed over Socket.IO. The socket traces server messages to the app, keeping viewer state in sync when admins inject polls, ratings, trivia, offers and wikis, and st
   name: Inthegame Realtime (Socket.IO)
   slug: inthegame-socket-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Inthegame admin API
   slug: open-inthegame-admin-api
@@ -236,82 +236,82 @@ common:
   type: Postman
   url: https://www.postman.com/crimson-space-371128/workspace/inthegame-s-public-workspace
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/openapi/_original/inthegame-openapi.yml
+  href: https://artifacts.apis.io/inthegame/openapi/_original/inthegame-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/inthegame-openapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/asyncapi/inthegame-socket-asyncapi.yml
+  href: https://artifacts.apis.io/inthegame/asyncapi/inthegame-socket-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/inthegame-socket-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/asyncapi/inthegame-socket-asyncapi.yml
+  href: https://artifacts.apis.io/inthegame/asyncapi/inthegame-socket-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/inthegame-socket-asyncapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/authentication/inthegame-authentication.yml
+  href: https://artifacts.apis.io/inthegame/authentication/inthegame-authentication.yml
   title: ''
   type: Authentication
   url: authentication/inthegame-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/conventions/inthegame-conventions.yml
+  href: https://artifacts.apis.io/inthegame/conventions/inthegame-conventions.yml
   title: ''
   type: Conventions
   url: conventions/inthegame-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/errors/inthegame-problem-types.yml
+  href: https://artifacts.apis.io/inthegame/errors/inthegame-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/inthegame-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/conformance/inthegame-conformance.yml
+  href: https://artifacts.apis.io/inthegame/conformance/inthegame-conformance.yml
   title: ''
   type: Conformance
   url: conformance/inthegame-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/data-model/inthegame-data-model.yml
+  href: https://artifacts.apis.io/inthegame/data-model/inthegame-data-model.yml
   title: ''
   type: DataModel
   url: data-model/inthegame-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/examples/inthegame-examples.json
+  href: https://artifacts.apis.io/inthegame/examples/inthegame-examples.json
   title: ''
   type: Examples
   url: examples/inthegame-examples.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/overlays/inthegame-openapi-overlay.yaml
+  href: https://artifacts.apis.io/inthegame/overlays/inthegame-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/inthegame-openapi-overlay.yaml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/sandbox/inthegame-sandbox.yml
+  href: https://artifacts.apis.io/inthegame/sandbox/inthegame-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/inthegame-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/mcp/inthegame-mcp.yml
+  href: https://artifacts.apis.io/inthegame/mcp/inthegame-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/inthegame-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/inthegame/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/llms/inthegame-llms.txt
+  href: https://artifacts.apis.io/inthegame/llms/inthegame-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/inthegame-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/agentic-access/inthegame-agentic-access.yml
+  href: https://artifacts.apis.io/inthegame/agentic-access/inthegame-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/inthegame-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/security/inthegame-domain-security.yml
+  href: https://artifacts.apis.io/inthegame/security/inthegame-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/inthegame-domain-security.yml
@@ -350,30 +350,43 @@ network: true
 overview: 'Inthegame publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Analytics API, Category API, and 18 more. Tagged areas include Company, Streaming, CTV, OTT, and Video.
 
 
-  The Inthegame catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Inthegame catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Inthegame''s developer surface includes documentation, API reference, authentication, code examples, sandbox, engineering blog, support, and 17 more developer resources.'
-random_paper: 0
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Inthegame API Rules
+  rule_count: 57
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 6
+  slug: inthegame-rules
 score:
   band: thin
-  composite: 36.3
+  composite: 38.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 59.1
     developer_ergonomics: 38.7
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 36.3
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -390,13 +403,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/inthegame/refs/heads/main/screenshots/inthegame-2026-07-25T222719.png
+screenshot: https://apis.io/screenshots/inthegame/inthegame-2026-07-25T222719.png
 security:
 - kind: authentication
   name: Inthegame Authentication
@@ -406,6 +419,16 @@ security:
   name: Inthegame Domain Security
   slug: inthegame-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Create and inject a live poll
+  slug: inthegame-inject-poll
+- name: Run a live trivia round
+  slug: inthegame-run-trivia
+- name: Configure a shop product and let a viewer buy it
+  slug: inthegame-shop-purchase
+- name: Viewer answers a poll and checks the leaderboard
+  slug: inthegame-viewer-play-poll
 slug: inthegame
 tags:
 - Company

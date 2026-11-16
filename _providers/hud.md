@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -84,11 +91,8 @@ apis:
   description: ZIP code to geographic area crosswalk queries
   name: HUD - US Department of Housing and Urban Development ZIP Code Crosswalk API
   slug: hud-zip-code-crosswalk-api
-artifact_total: 31
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HUD User CHAS API
   slug: open-hud-chas-api
@@ -105,6 +109,11 @@ collections:
   name: HUD User CHAS ZIP Code Crosswalk API
   slug: open-hud-zip-code-crosswalk-api
 common:
+- group: other
+  href: https://artifacts.apis.io/hud/capabilities/hud-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hud-capability-edges.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -174,62 +183,62 @@ common:
   type: Security
   url: https://www.hud.gov/vulnerability-disclosure-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/conventions/hud-conventions.yml
+  href: https://artifacts.apis.io/hud/conventions/hud-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hud-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/errors/hud-problem-types.yml
+  href: https://artifacts.apis.io/hud/errors/hud-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hud-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/lifecycle/hud-lifecycle.yml
+  href: https://artifacts.apis.io/hud/lifecycle/hud-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hud-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/conformance/hud-conformance.yml
+  href: https://artifacts.apis.io/hud/conformance/hud-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hud-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/data-model/hud-data-model.yml
+  href: https://artifacts.apis.io/hud/data-model/hud-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hud-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/packages/hud-packages.yml
+  href: https://artifacts.apis.io/hud/packages/hud-packages.yml
   title: ''
   type: Packages
   url: packages/hud-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/security/hud-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hud/security/hud-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hud-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/mcp/hud-mcp.yml
+  href: https://artifacts.apis.io/hud/mcp/hud-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/hud-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/llms/hud-llms.txt
+  href: https://artifacts.apis.io/hud/llms/hud-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hud-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/agentic-access/hud-agentic-access.yml
+  href: https://artifacts.apis.io/hud/agentic-access/hud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/security/hud-domain-security.yml
+  href: https://artifacts.apis.io/hud/security/hud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/authentication/hud-authentication.yml
+  href: https://artifacts.apis.io/hud/authentication/hud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hud-authentication.yml
@@ -266,17 +275,17 @@ common:
   type: X
   url: https://x.com/HUDgov
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/plans/hud-plans-pricing.yml
+  href: https://artifacts.apis.io/hud/plans/hud-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hud-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/rate-limits/hud-rate-limits.yml
+  href: https://artifacts.apis.io/hud/rate-limits/hud-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hud-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/finops/hud-finops.yml
+  href: https://artifacts.apis.io/hud/finops/hud-finops.yml
   title: ''
   type: FinOps
   url: finops/hud-finops.yml
@@ -327,12 +336,12 @@ overview: 'HUD - US Department of Housing and Urban Development publishes 10 API
   The HUD - US Department of Housing and Urban Development catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  HUD - US Department of Housing and Urban Development''s developer surface includes product news, support, API reference, getting-started guide, signup flow, authentication, documentation, and 33 more developer resources.'
+  HUD - US Department of Housing and Urban Development''s developer surface includes product news, support, API reference, getting-started guide, signup flow, authentication, documentation, and 34 more developer resources.'
 plans:
 - name: Hud Plans Pricing
   plan_count: 2
   slug: hud-plans-pricing
-random_paper: 13
+random_paper: 9
 rate_limits:
 - limit_count: 2
   name: Hud Rate Limits
@@ -353,13 +362,13 @@ score:
   band: thin
   composite: 37.8
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 27
     catalog_earned: 55.3
     catalog_earned_first_party: 0.0
     catalog_gap: 59.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 28.0
@@ -367,7 +376,7 @@ score:
     developer_ergonomics: 14.3
     discoverability: 80.4
     operational_transparency: 34.2
-  previous_composite: 43.9
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -383,14 +392,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/hud/refs/heads/main/screenshots/hud-2026-06-20T182921.png
+screenshot: https://apis.io/screenshots/hud/hud-2026-06-20T182921.png
 security:
 - kind: authentication
   name: Hud Authentication

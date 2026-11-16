@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,9 +38,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 4
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -96,52 +99,52 @@ common:
   type: Compliance
   url: https://trust.genhealth.ai
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/llms/genhealthai-llms.txt
+  href: https://artifacts.apis.io/genhealthai/llms/genhealthai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/genhealthai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/mcp/genhealthai-mcp.yml
+  href: https://artifacts.apis.io/genhealthai/mcp/genhealthai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/genhealthai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/genhealthai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/authentication/genhealthai-authentication.yml
+  href: https://artifacts.apis.io/genhealthai/authentication/genhealthai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/genhealthai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/conformance/genhealthai-conformance.yml
+  href: https://artifacts.apis.io/genhealthai/conformance/genhealthai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/genhealthai-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/sandbox/genhealthai-sandbox.yml
+  href: https://artifacts.apis.io/genhealthai/sandbox/genhealthai-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/genhealthai-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/lifecycle/genhealthai-lifecycle.yml
+  href: https://artifacts.apis.io/genhealthai/lifecycle/genhealthai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/genhealthai-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/changelog/genhealthai-changelog.yml
+  href: https://artifacts.apis.io/genhealthai/changelog/genhealthai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/genhealthai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/conventions/genhealthai-conventions.yml
+  href: https://artifacts.apis.io/genhealthai/conventions/genhealthai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/genhealthai-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/security/genhealthai-domain-security.yml
+  href: https://artifacts.apis.io/genhealthai/security/genhealthai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/genhealthai-domain-security.yml
@@ -161,23 +164,23 @@ overview: 'GenHealth.ai is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   GenHealth.ai''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 17 more developer resources.'
-random_paper: 2
+random_paper: 18
 score:
   band: thin
-  composite: 28.0
+  composite: 29.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.5
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 52.4
+    developer_ergonomics: 59.5
     discoverability: 55.0
     operational_transparency: 26.3
   previous_composite: 28.0
@@ -191,14 +194,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/genhealthai/refs/heads/main/screenshots/genhealthai-2026-07-25T215613.png
+screenshot: https://apis.io/screenshots/genhealthai/genhealthai-2026-07-25T215613.png
 security:
 - kind: authentication
   name: Genhealthai Authentication
@@ -212,6 +215,14 @@ security:
   name: Genhealthai Trust Center
   slug: genhealthai-trust-center
   summary_line: SOC 2, HIPAA
+skill_count: 3
+skills:
+- name: draft-response
+  slug: genhealthai-draft-response
+- name: fax-intake-routing
+  slug: genhealthai-fax-intake-routing
+- name: prior-auth-drafting
+  slug: genhealthai-prior-auth-drafting
 slug: genhealthai
 tags:
 - Company

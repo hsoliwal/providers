@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 33.8
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Codes API from QRX — 3 operation(s) for codes.
@@ -35,52 +49,52 @@ apis:
 artifact_total: 12
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/vendors/qrx-vendors.yml
+  href: https://artifacts.apis.io/qrx/vendors/qrx-vendors.yml
   title: ''
   type: Vendors
   url: vendors/qrx-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/plans/qrx-plans-pricing.yml
+  href: https://artifacts.apis.io/qrx/plans/qrx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/qrx-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/rules/qrx-rules.yml
+  href: https://artifacts.apis.io/qrx/rules/qrx-rules.yml
   title: ''
   type: Spectral
   url: rules/qrx-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/json-ld/qrx-context.jsonld
+  href: https://artifacts.apis.io/qrx/json-ld/qrx-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/qrx-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/vocabulary/qrx-vocabulary.yml
+  href: https://artifacts.apis.io/qrx/vocabulary/qrx-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/qrx-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/data-model/qrx-data-model.yml
+  href: https://artifacts.apis.io/qrx/data-model/qrx-data-model.yml
   title: ''
   type: DataModel
   url: data-model/qrx-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/conformance/qrx-conformance.yml
+  href: https://artifacts.apis.io/qrx/conformance/qrx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/qrx-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/llms/qrx-llms.txt
+  href: https://artifacts.apis.io/qrx/llms/qrx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qrx-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/well-known/qrx-well-known.yml
+  href: https://artifacts.apis.io/qrx/well-known/qrx-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qrx-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/hosts/qrx-hosts.yml
+  href: https://artifacts.apis.io/qrx/hosts/qrx-hosts.yml
   title: ''
   type: Hosts
   url: hosts/qrx-hosts.yml
@@ -105,7 +119,7 @@ common:
   type: APIReference
   url: https://qrx.codes/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qrx/refs/heads/main/security/qrx-domain-security.yml
+  href: https://artifacts.apis.io/qrx/security/qrx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qrx-domain-security.yml
@@ -168,7 +182,7 @@ plans:
 - name: Qrx Plans Pricing
   plan_count: 2
   slug: qrx-plans-pricing
-random_paper: 17
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -183,22 +197,24 @@ rules:
     warn: 1
   slug: qrx-rules
 score:
-  band: thin
-  composite: 31.2
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 60.8
     catalog_earned_first_party: 8.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.8
   facets:
-    access_clarity: 52.6
+    access_clarity: 36.8
     contract_governance: 35.6
     contract_quality: 24.8
-    developer_ergonomics: 21.4
+    developer_ergonomics: 10.7
     discoverability: 55.4
     operational_transparency: 0.0
+  previous_composite: 31.2
   provenance:
     conformance: first-party
     contracts:
@@ -216,12 +232,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/qrx/qrx-2026-11-03T141809.png
 security:
 - kind: domain-security
   name: Qrx Domain Security

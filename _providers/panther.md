@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 34.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 61
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 96
   slug: panther-agentic-access
   summary_line: 96 operations · 61 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.your-panther-host
   baseurl_source: declared
@@ -149,15 +152,12 @@ apis:
   description: The user api handles all operations for users
   name: Panther User API
   slug: panther-user-api
-artifact_total: 49
+artifact_total: 51
 asyncapis:
 - description: ''
   name: Panther Webhooks
   slug: panther-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Panther REST alert API
   slug: open-panther-alert-api
@@ -223,57 +223,57 @@ collections:
   slug: open-panther-user-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/capabilities/panther-capability-edges.yml
+  href: https://artifacts.apis.io/panther/capabilities/panther-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/panther-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/overlays/panther-rest-overlay.yaml
+  href: https://artifacts.apis.io/panther/overlays/panther-rest-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/panther-rest-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/agentic-access/panther-agentic-access.yml
+  href: https://artifacts.apis.io/panther/agentic-access/panther-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/panther-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/security/panther-domain-security.yml
+  href: https://artifacts.apis.io/panther/security/panther-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/panther-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/authentication/panther-authentication.yml
+  href: https://artifacts.apis.io/panther/authentication/panther-authentication.yml
   title: ''
   type: Authentication
   url: authentication/panther-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/mcp/panther-mcp.yml
+  href: https://artifacts.apis.io/panther/mcp/panther-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/panther-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/llms/panther-llms.txt
+  href: https://artifacts.apis.io/panther/llms/panther-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/panther-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/packages/panther-packages.yml
+  href: https://artifacts.apis.io/panther/packages/panther-packages.yml
   title: ''
   type: Packages
   url: packages/panther-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/cli/panther-cli.yml
+  href: https://artifacts.apis.io/panther/cli/panther-cli.yml
   title: ''
   type: CLI
   url: cli/panther-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/conventions/panther-conventions.yml
+  href: https://artifacts.apis.io/panther/conventions/panther-conventions.yml
   title: ''
   type: Conventions
   url: conventions/panther-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/lifecycle/panther-lifecycle.yml
+  href: https://artifacts.apis.io/panther/lifecycle/panther-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/panther-lifecycle.yml
@@ -282,7 +282,7 @@ common:
   type: StatusPage
   url: https://status.panther.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/conformance/panther-conformance.yml
+  href: https://artifacts.apis.io/panther/conformance/panther-conformance.yml
   title: ''
   type: Conformance
   url: conformance/panther-conformance.yml
@@ -291,22 +291,22 @@ common:
   type: Compliance
   url: https://www.panther.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/security/panther-trust-center.yml
+  href: https://artifacts.apis.io/panther/security/panther-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/panther-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/well-known/panther-well-known.yml
+  href: https://artifacts.apis.io/panther/well-known/panther-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/panther-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/asyncapi/panther-webhooks.yml
+  href: https://artifacts.apis.io/panther/asyncapi/panther-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/panther-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/panther/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -354,6 +354,14 @@ common:
   title: ''
   type: Website
   url: https://www.panther.com/
+- group: company
+  title: ''
+  type: Website
+  url: https://panther.com/
+- group: company
+  title: ''
+  type: Blog
+  url: https://panther.com/blog
 created: '2026-07-17'
 description: Panther is a cloud-native, code-driven detection and response platform and AI-powered SOC that ingests and normalizes security logs at petabyte scale into a security data lake (customer-connected AWS/Snowflake/Databricks or Panther-hosted). It offers Python detection-as-code, AI-generated detections, correlation and scheduled rules, cloud-security policies, and an AI SOC agent that auto-triages and investigates alerts. Developers automate it through a REST API (X-API-Key), a GraphQL API, Terraform, the panther_analysis_tool CLI, and official local and remote MCP servers. Backed by ICONIQ Capital and Lightspeed Venture Partners.
 image: https://framerusercontent.com/images/bECYyaf1j2jroija0ScFzkorrSo.jpg
@@ -369,37 +377,50 @@ network: true
 overview: 'Panther publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alert API, api token API, aws cloud account API, and 18 more. Tagged areas include Company, Security, SIEM, Detection and Response, and Security Operations.
 
 
-  The Panther catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Panther catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Panther''s developer surface includes authentication, CLI, documentation, getting-started guide, support, engineering blog, pricing, and 22 more developer resources.'
-random_paper: 6
+  Panther''s developer surface includes authentication, CLI, documentation, getting-started guide, support, engineering blog, pricing, and 24 more developer resources.'
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Panther API Rules
+  rule_count: 55
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 4
+    warn: 9
+  slug: panther-rules
 score:
   band: strong
-  composite: 54.6
+  composite: 57.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.8
   facets:
     access_clarity: 60.5
-    contract_governance: 18.2
-    contract_quality: 54.1
+    contract_governance: 31.8
+    contract_quality: 58.8
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 54.6
+  previous_composite: 56.3
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 21
     mcp: first-party
     skills: derived
@@ -408,14 +429,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 27.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/panther/refs/heads/main/screenshots/panther-2026-08-07T191340.png
+screenshot: https://apis.io/screenshots/panther/panther-2026-08-07T191340.png
 security:
 - kind: authentication
   name: Panther Authentication
@@ -429,6 +450,12 @@ security:
   name: Panther Trust Center
   slug: panther-trust-center
   summary_line: SOC 2 Type II, ISO 27001, PCI DSS
+skill_count: 2
+skills:
+- name: Manage Panther detection rules
+  slug: panther-manage-detections
+- name: Triage a Panther alert
+  slug: panther-triage-alert
 slug: panther
 tags:
 - Company
@@ -441,5 +468,9 @@ tags:
 - Data Lake
 - Cloud Security
 - Developer Tools
+- Artificial Intelligence
+- SOC
+- Cloud
+- Automation
 website: https://www.panther.com/
 ---

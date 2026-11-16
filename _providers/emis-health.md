@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -102,7 +105,7 @@ apis:
   description: The user API from EMIS Health — 1 operation(s) for user.
   name: EMIS Health User API
   slug: emis-health-user-api
-artifact_total: 17
+artifact_total: 21
 collections:
 - collection_type: open
   name: Partner API
@@ -113,72 +116,72 @@ common:
   type: Blog
   url: https://www.enliviohealth.com/news/news
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/capabilities/emis-health-capability-edges.yml
+  href: https://artifacts.apis.io/emis-health/capabilities/emis-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/emis-health-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/overlays/emis-health-partner-api-overlay.yaml
+  href: https://artifacts.apis.io/emis-health/overlays/emis-health-partner-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/emis-health-partner-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/mcp/emis-health-mcp.yml
+  href: https://artifacts.apis.io/emis-health/mcp/emis-health-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/emis-health-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/agentic-access/emis-health-agentic-access.yml
+  href: https://artifacts.apis.io/emis-health/agentic-access/emis-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/emis-health-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/security/emis-health-domain-security.yml
+  href: https://artifacts.apis.io/emis-health/security/emis-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/emis-health-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/authentication/emis-health-authentication.yml
+  href: https://artifacts.apis.io/emis-health/authentication/emis-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/emis-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/scopes/emis-health-scopes.yml
+  href: https://artifacts.apis.io/emis-health/scopes/emis-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/emis-health-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/well-known/emis-health-well-known.yml
+  href: https://artifacts.apis.io/emis-health/well-known/emis-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/emis-health-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/conventions/emis-health-conventions.yml
+  href: https://artifacts.apis.io/emis-health/conventions/emis-health-conventions.yml
   title: ''
   type: Conventions
   url: conventions/emis-health-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/lifecycle/emis-health-lifecycle.yml
+  href: https://artifacts.apis.io/emis-health/lifecycle/emis-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/emis-health-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/conformance/emis-health-conformance.yml
+  href: https://artifacts.apis.io/emis-health/conformance/emis-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/emis-health-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/sandbox/emis-health-sandbox.yml
+  href: https://artifacts.apis.io/emis-health/sandbox/emis-health-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/emis-health-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/emis-health/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/llms/emis-health-llms.txt
+  href: https://artifacts.apis.io/emis-health/llms/emis-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/emis-health-llms.txt
@@ -229,8 +232,24 @@ network: true
 overview: 'EMIS Health publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Appointments API, CORS API, and 10 more. Tagged areas include Healthcare, United Kingdom, Electronic Health Records, Interoperability, and HL7.
 
 
+  The EMIS Health catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   EMIS Health''s developer surface includes engineering blog, authentication, sandbox, documentation, API reference, getting-started guide, and 18 more developer resources.'
-random_paper: 5
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: EMIS Health API Rules
+  rule_count: 49
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 3
+    warn: 10
+  slug: emis-health-rules
 scopes:
 - name: Emis Health Scopes
   scope_count: 7
@@ -238,18 +257,18 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.6
+  composite: 36.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 32.0
+    artifact_dirs: 23
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 42.7
     developer_ergonomics: 61.3
     discoverability: 64.3
@@ -262,7 +281,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 34.1
+  previous_composite: 36.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -279,13 +298,13 @@ score:
     regime: Health
     regime_id: health
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/emis-health/refs/heads/main/screenshots/emis-health-2026-07-25T213240.png
+screenshot: https://apis.io/screenshots/emis-health/emis-health-2026-07-25T213240.png
 security:
 - kind: authentication
   name: Emis Health Authentication
@@ -295,6 +314,14 @@ security:
   name: Emis Health Domain Security
   slug: emis-health-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Find a slot and book an appointment
+  slug: emis-health-book-appointment
+- name: File a record into a patient's clinical record
+  slug: emis-health-file-clinical-record
+- name: Retrieve a patient's medical record
+  slug: emis-health-retrieve-medical-record
 slug: emis-health
 tags:
 - Healthcare

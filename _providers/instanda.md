@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -42,7 +45,7 @@ asyncapis:
   slug: instanda-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/security/instanda-domain-security.yml
+  href: https://artifacts.apis.io/instanda/security/instanda-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/instanda-domain-security.yml
@@ -75,17 +78,17 @@ common:
   type: StatusPage
   url: https://status.instanda.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/lifecycle/instanda-lifecycle.yml
+  href: https://artifacts.apis.io/instanda/lifecycle/instanda-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/instanda-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/asyncapi/instanda-webhooks.yml
+  href: https://artifacts.apis.io/instanda/asyncapi/instanda-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/instanda-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/conformance/instanda-conformance.yml
+  href: https://artifacts.apis.io/instanda/conformance/instanda-conformance.yml
   title: ''
   type: Conformance
   url: conformance/instanda-conformance.yml
@@ -98,7 +101,7 @@ common:
   type: TrustCenter
   url: https://app.trustero.com/trust/instanda
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/security/instanda-trust-center.yml
+  href: https://artifacts.apis.io/instanda/security/instanda-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/instanda-trust-center.yml
@@ -107,7 +110,7 @@ common:
   type: Security
   url: https://instanda.com/platform-security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/llms/instanda-llms.txt
+  href: https://artifacts.apis.io/instanda/llms/instanda-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/instanda-llms.txt
@@ -152,12 +155,12 @@ overview: 'INSTANDA is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   INSTANDA''s developer surface includes engineering blog, product news, support, and 19 more developer resources.'
-random_paper: 14
+random_paper: 10
 score:
   band: thin
   composite: 31.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -188,14 +191,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/instanda/refs/heads/main/screenshots/instanda-2026-07-25T222607.png
+screenshot: https://apis.io/screenshots/instanda/instanda-2026-07-25T222607.png
 security:
 - kind: domain-security
   name: Instanda Domain Security

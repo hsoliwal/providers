@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -74,32 +78,32 @@ common:
   type: PrivacyPolicy
   url: https://www.voxer.com/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/packages/voxer-packages.yml
+  href: https://artifacts.apis.io/voxer/packages/voxer-packages.yml
   title: ''
   type: Packages
   url: packages/voxer-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/packages/voxer-packages.yml
+  href: https://artifacts.apis.io/voxer/packages/voxer-packages.yml
   title: ''
   type: SDKs
   url: packages/voxer-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/authentication/voxer-authentication.yml
+  href: https://artifacts.apis.io/voxer/authentication/voxer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/voxer-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/llms/voxer-llms.txt
+  href: https://artifacts.apis.io/voxer/llms/voxer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/voxer-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/well-known/voxer-well-known.yml
+  href: https://artifacts.apis.io/voxer/well-known/voxer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/voxer-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/security/voxer-domain-security.yml
+  href: https://artifacts.apis.io/voxer/security/voxer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/voxer-domain-security.yml
@@ -115,12 +119,12 @@ overview: 'Voxer is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Voxer''s developer surface includes documentation, engineering blog, support, pricing, authentication, and 10 more developer resources.'
-random_paper: 14
+random_paper: 12
 score:
   band: emerging
   composite: 21.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -141,14 +145,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/voxer/refs/heads/main/screenshots/voxer-2026-09-02T170251.png
+screenshot: https://apis.io/screenshots/voxer/voxer-2026-09-02T170251.png
 security:
 - kind: authentication
   name: Voxer Authentication

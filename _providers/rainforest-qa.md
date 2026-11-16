@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-10-17'
+  score: 32.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 1
@@ -134,15 +137,12 @@ apis:
   description: Operations about vm_stacks
   name: Rainforest QA Vm Stack API
   slug: rainforest-qa-vm-stack-api
-artifact_total: 42
+artifact_total: 46
 asyncapis:
 - description: ''
   name: Rainforest Qa Webhooks
   slug: rainforest-qa-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rainforest callback API
   slug: open-rainforest-qa-callback-api
@@ -198,13 +198,22 @@ collections:
   name: Rainforest callback vm_stack API
   slug: open-rainforest-qa-vm-stack-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/rainforest-qa/plans/rainforest-qa-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/rainforest-qa-plans-pricing.yml
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/rainforest-qa/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/capabilities/rainforest-qa-capability-edges.yml
+  href: https://artifacts.apis.io/rainforest-qa/capabilities/rainforest-qa-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rainforest-qa-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/overlays/rainforest-qa-openapi-overlay.yaml
+  href: https://artifacts.apis.io/rainforest-qa/overlays/rainforest-qa-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rainforest-qa-openapi-overlay.yaml
@@ -261,47 +270,47 @@ common:
   type: ChangeLog
   url: https://changelog.rainforestqa.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/cli/rainforest-qa-cli.yml
+  href: https://artifacts.apis.io/rainforest-qa/cli/rainforest-qa-cli.yml
   title: ''
   type: CLI
   url: cli/rainforest-qa-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/packages/rainforest-qa-packages.yml
+  href: https://artifacts.apis.io/rainforest-qa/packages/rainforest-qa-packages.yml
   title: ''
   type: Packages
   url: packages/rainforest-qa-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/packages/rainforest-qa-packages.yml
+  href: https://artifacts.apis.io/rainforest-qa/packages/rainforest-qa-packages.yml
   title: ''
   type: SDKs
   url: packages/rainforest-qa-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/mcp/rainforest-qa-mcp.yml
+  href: https://artifacts.apis.io/rainforest-qa/mcp/rainforest-qa-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rainforest-qa-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rainforest-qa/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/asyncapi/rainforest-qa-webhooks.yml
+  href: https://artifacts.apis.io/rainforest-qa/asyncapi/rainforest-qa-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rainforest-qa-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/lifecycle/rainforest-qa-lifecycle.yml
+  href: https://artifacts.apis.io/rainforest-qa/lifecycle/rainforest-qa-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rainforest-qa-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/changelog/rainforest-qa-changelog.yml
+  href: https://artifacts.apis.io/rainforest-qa/changelog/rainforest-qa-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rainforest-qa-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/conformance/rainforest-qa-conformance.yml
+  href: https://artifacts.apis.io/rainforest-qa/conformance/rainforest-qa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rainforest-qa-conformance.yml
@@ -310,32 +319,32 @@ common:
   type: Compliance
   url: https://www.rainforestqa.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/llms/rainforest-qa-llms.txt
+  href: https://artifacts.apis.io/rainforest-qa/llms/rainforest-qa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rainforest-qa-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/well-known/rainforest-qa-well-known.yml
+  href: https://artifacts.apis.io/rainforest-qa/well-known/rainforest-qa-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rainforest-qa-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/agentic-access/rainforest-qa-agentic-access.yml
+  href: https://artifacts.apis.io/rainforest-qa/agentic-access/rainforest-qa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rainforest-qa-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/security/rainforest-qa-trust-center.yml
+  href: https://artifacts.apis.io/rainforest-qa/security/rainforest-qa-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/rainforest-qa-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/security/rainforest-qa-domain-security.yml
+  href: https://artifacts.apis.io/rainforest-qa/security/rainforest-qa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rainforest-qa-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/authentication/rainforest-qa-authentication.yml
+  href: https://artifacts.apis.io/rainforest-qa/authentication/rainforest-qa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rainforest-qa-authentication.yml
@@ -345,6 +354,14 @@ common:
   url: https://www.rainforestqa.com/
 created: '2026-07-17'
 description: Rainforest QA is a no-code software testing platform that combines AI-powered test creation, crowdsourced manual QA, and automated browser testing in one place. Its REST API and command-line interface let teams create and manage tests, environments, sites and folders, trigger and rerun test runs, and pull JUnit results directly from CI/CD pipelines. Run-lifecycle webhooks (initializing_run, before_run, after_run) with HMAC-signed callbacks support advanced deploy-gated integrations. Authentication is via a CLIENT_TOKEN API key header.
+finops:
+- has_sources: true
+  method: derived
+  name: Rainforest Qa Finops
+  primary_unit: ''
+  service_category: ''
+  slug: rainforest-qa-finops
+  template: true
 image: https://files.readme.io/b4c4a73843894a94128b97dfacf7cd0936025ad438ac2bcff381bdfcae2125ec-VariationPrimary_AspectFull_ColorWhite2x.png
 layout: provider
 modified: '2026-07-20'
@@ -354,30 +371,47 @@ network: true
 overview: 'Rainforest QA publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Callback API, Clients API, Connections API, and 15 more. Tagged areas include Testing, QA, Test Automation, Software Testing, and CI/CD.
 
 
-  The Rainforest QA catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Rainforest QA catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Rainforest QA''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 25 more developer resources.'
+  Rainforest QA''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 27 more developer resources.'
+plans:
+- name: Rainforest Qa Plans Pricing
+  plan_count: 0
+  slug: rainforest-qa-plans-pricing
 random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Rainforest QA API Rules
+  rule_count: 54
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 2
+    warn: 6
+  slug: rainforest-qa-rules
 score:
   band: developing
-  composite: 48.5
+  composite: 53.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.4
   facets:
     access_clarity: 53.9
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.3
-    developer_ergonomics: 45.8
+    developer_ergonomics: 63.7
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 48.5
+  previous_composite: 50.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -398,13 +432,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/screenshots/rainforest-qa-2026-08-17T124920.png
+screenshot: https://apis.io/screenshots/rainforest-qa/rainforest-qa-2026-08-17T124920.png
 security:
 - kind: authentication
   name: Rainforest Qa Authentication
@@ -418,6 +452,12 @@ security:
   name: Rainforest Qa Trust Center
   slug: rainforest-qa-trust-center
   summary_line: SOC 2, HIPAA
+skill_count: 2
+skills:
+- name: Manage Rainforest environments before a run
+  slug: rainforest-qa-manage-environments
+- name: Run Rainforest tests and collect results
+  slug: rainforest-qa-run-tests
 slug: rainforest-qa
 tags:
 - Testing

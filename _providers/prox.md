@@ -1,16 +1,18 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 30.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Hosted MCP server that lets AI assistants query a manufacturer's Prox workspace (products, knowledge trees, wiki nodes) grounded in their manuals and make attributed, version-controlled edits. OAuth 2
@@ -42,7 +47,7 @@ apis:
 artifact_total: 7
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/plans/prox-plans-pricing.yml
+  href: https://artifacts.apis.io/prox/plans/prox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/prox-plans-pricing.yml
@@ -59,42 +64,42 @@ common:
   type: Documentation
   url: https://useprox.com/docs/mcp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/mcp/prox-mcp.yml
+  href: https://artifacts.apis.io/prox/mcp/prox-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/prox-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/authentication/prox-authentication.yml
+  href: https://artifacts.apis.io/prox/authentication/prox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prox-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/scopes/prox-scopes.yml
+  href: https://artifacts.apis.io/prox/scopes/prox-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/prox-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/well-known/prox-well-known.yml
+  href: https://artifacts.apis.io/prox/well-known/prox-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/prox-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/security/prox-domain-security.yml
+  href: https://artifacts.apis.io/prox/security/prox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/security/prox-trust-center.yml
+  href: https://artifacts.apis.io/prox/security/prox-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/prox-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/conventions/prox-conventions.yml
+  href: https://artifacts.apis.io/prox/conventions/prox-conventions.yml
   title: ''
   type: Conventions
   url: conventions/prox-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/llms/prox-llms.txt
+  href: https://artifacts.apis.io/prox/llms/prox-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prox-llms.txt
@@ -142,7 +147,7 @@ plans:
 - name: Prox Plans Pricing
   plan_count: 0
   slug: prox-plans-pricing
-random_paper: 17
+random_paper: 1
 scopes:
 - name: Prox Scopes
   scope_count: 4
@@ -182,14 +187,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/prox/refs/heads/main/screenshots/prox-2026-09-02T152244.png
+screenshot: https://apis.io/screenshots/prox/prox-2026-09-02T152244.png
 security:
 - kind: authentication
   name: Prox Authentication

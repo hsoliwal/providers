@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
-  pricing: freemium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
   public: false
   source:
-  - plans
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,16 +30,19 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.7
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 25.3
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://api.pynt.io
   baseurl_source: declared
@@ -196,24 +204,24 @@ apis:
   description: The vulnerability-instance API from Pynt — 5 operation(s) for vulnerability-instance.
   name: Pynt Vulnerability Instance API
   slug: pynt-vulnerability-instance-api
-artifact_total: 40
+artifact_total: 45
 asyncapis:
 - description: ''
   name: Pynt Webhooks
   slug: pynt-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/finops/pynt-finops.yml
+  href: https://artifacts.apis.io/pynt/finops/pynt-finops.yml
   title: ''
   type: FinOps
   url: finops/pynt-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/capabilities/pynt-capability-edges.yml
+  href: https://artifacts.apis.io/pynt/capabilities/pynt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pynt-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/overlays/pynt-openapi-overlay.yaml
+  href: https://artifacts.apis.io/pynt/overlays/pynt-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pynt-openapi-overlay.yaml
@@ -278,42 +286,42 @@ common:
   type: LLMsTxt
   url: https://docs.pynt.io/llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/packages/pynt-packages.yml
+  href: https://artifacts.apis.io/pynt/packages/pynt-packages.yml
   title: ''
   type: Packages
   url: packages/pynt-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/cli/pynt-cli.yml
+  href: https://artifacts.apis.io/pynt/cli/pynt-cli.yml
   title: ''
   type: CLI
   url: cli/pynt-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/authentication/pynt-authentication.yml
+  href: https://artifacts.apis.io/pynt/authentication/pynt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pynt-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/conventions/pynt-conventions.yml
+  href: https://artifacts.apis.io/pynt/conventions/pynt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pynt-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/errors/pynt-problem-types.yml
+  href: https://artifacts.apis.io/pynt/errors/pynt-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pynt-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/lifecycle/pynt-lifecycle.yml
+  href: https://artifacts.apis.io/pynt/lifecycle/pynt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pynt-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/data-model/pynt-data-model.yml
+  href: https://artifacts.apis.io/pynt/data-model/pynt-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pynt-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/conformance/pynt-conformance.yml
+  href: https://artifacts.apis.io/pynt/conformance/pynt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pynt-conformance.yml
@@ -322,7 +330,7 @@ common:
   type: Compliance
   url: https://www.pynt.io/trust-center
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/security/pynt-trust-center.yml
+  href: https://artifacts.apis.io/pynt/security/pynt-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/pynt-trust-center.yml
@@ -331,43 +339,43 @@ common:
   type: Security
   url: https://github.com/pynt-io/pynt/blob/main/SECURITY.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/security/pynt-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/pynt/security/pynt-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/pynt-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/security/pynt-domain-security.yml
+  href: https://artifacts.apis.io/pynt/security/pynt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pynt-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/asyncapi/pynt-webhooks.yml
+  href: https://artifacts.apis.io/pynt/asyncapi/pynt-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/pynt-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pynt/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/plans/pynt-plans-pricing.yml
+  href: https://artifacts.apis.io/pynt/plans/pynt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pynt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/rate-limits/pynt-rate-limits.yml
+  href: https://artifacts.apis.io/pynt/rate-limits/pynt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pynt-rate-limits.yml
 created: '2025-01-08'
 description: Pynt is an API security testing platform that discovers and secures APIs, LLM endpoints and MCP servers. It wraps a team's existing functional tests — or proxies live traffic — and runs automated attack simulations against whatever API surface it observes, covering business-logic flaws, injection, mass assignment, authentication bypass, SSRF, GraphQL introspection and alias overloading, LLM prompt injection and sensitive-data exposure. Pynt builds an API catalog from Swagger/OpenAPI definitions, Postman collections, API gateways, code repositories and eBPF live-traffic capture, scores each endpoint for risk, applies LLM false-positive and business-impact analysis to its findings, and generates automated penetration-test reports. It is delivered as a Python CLI that manages a Docker container, with integrations across Postman, Burp Suite, Insomnia, ReadyAPI, a dozen test frameworks, and the major CI/CD platforms. Pynt exposes a public REST API at api.pynt.io.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Pynt Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: pynt-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pynt.png
@@ -379,7 +387,7 @@ network: true
 overview: 'Pynt publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alive API, API Key API, Application API, and 29 more. Tagged areas include API Testing, API Security, Security, Application Security, and DAST.
 
 
-  The Pynt catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Pynt catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Pynt''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, CLI, authentication, and 28 more developer resources.'
@@ -387,36 +395,49 @@ plans:
 - name: Pynt Plans Pricing
   plan_count: 0
   slug: pynt-plans-pricing
-random_paper: 19
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Pynt Rate Limits
   slug: pynt-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Pynt API Rules
+  rule_count: 46
+  severity_counts:
+    error: 32
+    hint: 0
+    info: 3
+    warn: 11
+  slug: pynt-rules
 score:
   band: developing
-  composite: 51.8
+  composite: 54.0
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.9
+  delta: 1.1
   facets:
     access_clarity: 50.0
-    contract_governance: 4.5
-    contract_quality: 49.5
+    contract_governance: 18.2
+    contract_quality: 54.1
     developer_ergonomics: 68.5
-    discoverability: 78.6
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 52.7
+  previous_composite: 52.9
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 32
     mcp: derived
     skills: derived
@@ -426,13 +447,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/pynt/refs/heads/main/screenshots/pynt-2026-06-20T192329.png
+screenshot: https://apis.io/screenshots/pynt/pynt-2026-06-20T192329.png
 security:
 - kind: authentication
   name: Pynt Authentication
@@ -450,6 +471,16 @@ security:
   name: Pynt Trust Center
   slug: pynt-trust-center
   summary_line: SOC 2 Type II, ISO 27001, PCI DSS, HIPAA, FedRAMP
+skill_count: 4
+skills:
+- name: pynt-generate-pentest-report
+  slug: pynt-generate-pentest-report
+- name: pynt-onboard-application
+  slug: pynt-onboard-application
+- name: pynt-run-api-security-scan
+  slug: pynt-run-api-security-scan
+- name: pynt-triage-vulnerabilities
+  slug: pynt-triage-vulnerabilities
 slug: pynt
 tags:
 - API Testing

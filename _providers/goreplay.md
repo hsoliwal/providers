@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'GoReplay captures live HTTP traffic with libpcap and replays it against a test target, letting teams validate deploys, configuration changes and infrastructure changes against real production traffic '
@@ -43,7 +46,7 @@ apis:
 artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/finops/goreplay-finops.yml
+  href: https://artifacts.apis.io/goreplay/finops/goreplay-finops.yml
   title: ''
   type: FinOps
   url: finops/goreplay-finops.yml
@@ -80,52 +83,52 @@ common:
   type: TermsOfService
   url: https://github.com/probelabs/goreplay/blob/master/COMM-LICENSE
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/cli/goreplay-cli.yml
+  href: https://artifacts.apis.io/goreplay/cli/goreplay-cli.yml
   title: ''
   type: CLI
   url: cli/goreplay-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/packages/goreplay-packages.yml
+  href: https://artifacts.apis.io/goreplay/packages/goreplay-packages.yml
   title: ''
   type: Packages
   url: packages/goreplay-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/llms/goreplay-llms.txt
+  href: https://artifacts.apis.io/goreplay/llms/goreplay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/goreplay-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/changelog/goreplay-changelog.yml
+  href: https://artifacts.apis.io/goreplay/changelog/goreplay-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/goreplay-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/lifecycle/goreplay-lifecycle.yml
+  href: https://artifacts.apis.io/goreplay/lifecycle/goreplay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/goreplay-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/conventions/goreplay-conventions.yml
+  href: https://artifacts.apis.io/goreplay/conventions/goreplay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/goreplay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/conformance/goreplay-conformance.yml
+  href: https://artifacts.apis.io/goreplay/conformance/goreplay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/goreplay-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/plans/goreplay-plans-pricing.yml
+  href: https://artifacts.apis.io/goreplay/plans/goreplay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/goreplay-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/rate-limits/goreplay-rate-limits.yml
+  href: https://artifacts.apis.io/goreplay/rate-limits/goreplay-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/goreplay-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/security/goreplay-domain-security.yml
+  href: https://artifacts.apis.io/goreplay/security/goreplay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/goreplay-domain-security.yml
@@ -135,7 +138,7 @@ finops:
 - has_sources: false
   method: generated
   name: Goreplay Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: goreplay-finops
   template: true
@@ -153,7 +156,7 @@ plans:
 - name: Goreplay Plans Pricing
   plan_count: 2
   slug: goreplay-plans-pricing
-random_paper: 9
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Goreplay Rate Limits
@@ -162,13 +165,13 @@ score:
   band: thin
   composite: 26.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 40.0
     catalog_earned_first_party: 8.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
@@ -176,7 +179,7 @@ score:
     developer_ergonomics: 35.7
     discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 28.0
+  previous_composite: 26.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -186,14 +189,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/goreplay/refs/heads/main/screenshots/goreplay-2026-06-20T182250.png
+screenshot: https://apis.io/screenshots/goreplay/goreplay-2026-06-20T182250.png
 security:
 - kind: domain-security
   name: Goreplay Domain Security

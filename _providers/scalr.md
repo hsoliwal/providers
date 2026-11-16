@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Paid
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 24.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 182
   human_in_the_loop: 3
@@ -171,11 +175,8 @@ apis:
   description: The Webhook Endpoints API from Scalr — 2 operation(s) for webhook endpoints.
   name: Scalr Webhook Endpoints API
   slug: scalr-webhook-endpoints-api
-artifact_total: 68
+artifact_total: 67
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Scalr Account API
   slug: open-scalr-account
@@ -262,32 +263,32 @@ collections:
   slug: open-scalr-webhook-endpoints-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/plans/scalr-plans-pricing.yml
+  href: https://artifacts.apis.io/scalr/plans/scalr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/scalr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/rate-limits/scalr-rate-limits.yml
+  href: https://artifacts.apis.io/scalr/rate-limits/scalr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/scalr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/finops/scalr-finops.yml
+  href: https://artifacts.apis.io/scalr/finops/scalr-finops.yml
   title: ''
   type: FinOps
   url: finops/scalr-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/capabilities/scalr-capability-edges.yml
+  href: https://artifacts.apis.io/scalr/capabilities/scalr-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/scalr-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/agentic-access/scalr-agentic-access.yml
+  href: https://artifacts.apis.io/scalr/agentic-access/scalr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/scalr-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/security/scalr-domain-security.yml
+  href: https://artifacts.apis.io/scalr/security/scalr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/scalr-domain-security.yml
@@ -435,23 +436,23 @@ rules:
   slug: scalr-rules
 score:
   band: thin
-  composite: 31.1
+  composite: 32.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 54.8
     catalog_earned_first_party: 0.0
     catalog_gap: 60.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.2
   facets:
     access_clarity: 5.3
     contract_governance: 23.5
     contract_quality: 52.8
-    developer_ergonomics: 31.0
+    developer_ergonomics: 36.9
     discoverability: 69.6
     operational_transparency: 10.5
-  previous_composite: 32.6
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -465,13 +466,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/scalr/refs/heads/main/screenshots/scalr-2026-06-20T193608.png
+screenshot: https://apis.io/screenshots/scalr/scalr-2026-06-20T193608.png
 security:
 - kind: domain-security
   name: Scalr Domain Security

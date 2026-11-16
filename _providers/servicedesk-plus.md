@@ -1,39 +1,47 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: negotiable
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-10-17'
+  score: 24.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -51,11 +59,8 @@ apis:
   description: The Requests API from ManageEngine ServiceDesk Plus — 3 operation(s) for requests.
   name: ManageEngine ServiceDesk Plus Requests API
   slug: servicedesk-plus-requests-api
-artifact_total: 13
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ManageEngine ServiceDesk Plus Cloud Requests API
   slug: open-servicedesk-plus-requests-api
@@ -63,38 +68,118 @@ collections:
   name: ManageEngine ServiceDesk Plus Cloud API
   slug: open-servicedesk-plus
 common:
+- group: commercial
+  href: https://artifacts.apis.io/servicedesk-plus/finops/servicedesk-plus-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/servicedesk-plus-finops.yml
+- group: commercial
+  href: https://artifacts.apis.io/servicedesk-plus/plans/servicedesk-plus-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/servicedesk-plus-plans-pricing.yml
+- group: design
+  href: https://artifacts.apis.io/servicedesk-plus/rules/servicedesk-plus-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/servicedesk-plus-rules.yml
+- group: design
+  href: https://artifacts.apis.io/servicedesk-plus/vocabulary/servicedesk-plus-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/servicedesk-plus-vocabulary.yml
+- group: agent
+  href: https://artifacts.apis.io/servicedesk-plus/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.manageengine.com/cybersecurity-solutions.html
+- group: auth
+  title: ''
+  type: Security
+  url: https://bugbounty.zohocorp.com/bb/info
+- group: design
+  href: https://artifacts.apis.io/servicedesk-plus/conformance/servicedesk-plus-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/servicedesk-plus-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/capabilities/servicedesk-plus-capability-edges.yml
+  href: https://artifacts.apis.io/servicedesk-plus/overlays/servicedesk-plus-requests-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/servicedesk-plus-requests-api-overlay.yaml
+- group: agent
+  href: https://artifacts.apis.io/servicedesk-plus/llms/servicedesk-plus-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/servicedesk-plus-llms.txt
+- group: auth
+  href: https://artifacts.apis.io/servicedesk-plus/well-known/servicedesk-plus-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/servicedesk-plus-security.txt
+- group: agent
+  href: https://artifacts.apis.io/servicedesk-plus/well-known/servicedesk-plus-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/servicedesk-plus-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/servicedesk-plus/hosts/servicedesk-plus-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/servicedesk-plus-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/servicedesk-plus/integrations/servicedesk-plus-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/servicedesk-plus-integration-edges.yml
+- group: operate
+  title: ''
+  type: StatusPage
+  url: https://status.manageengine.com/
+- group: start
+  title: ''
+  type: SignUp
+  url: https://sdpondemand.manageengine.com/Register.do?new-index
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.manageengine.com/news/in-the-news.html
+- group: other
+  href: https://artifacts.apis.io/servicedesk-plus/capabilities/servicedesk-plus-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/servicedesk-plus-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/agentic-access/servicedesk-plus-agentic-access.yml
+  href: https://artifacts.apis.io/servicedesk-plus/agentic-access/servicedesk-plus-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/servicedesk-plus-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/security/servicedesk-plus-trust-center.yml
+  href: https://artifacts.apis.io/servicedesk-plus/security/servicedesk-plus-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/servicedesk-plus-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/security/servicedesk-plus-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/servicedesk-plus/security/servicedesk-plus-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/servicedesk-plus-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/security/servicedesk-plus-domain-security.yml
+  href: https://artifacts.apis.io/servicedesk-plus/security/servicedesk-plus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/servicedesk-plus-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/authentication/servicedesk-plus-authentication.yml
+  href: https://artifacts.apis.io/servicedesk-plus/authentication/servicedesk-plus-authentication.yml
   title: ''
   type: Authentication
   url: authentication/servicedesk-plus-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/scopes/servicedesk-plus-scopes.yml
+  href: https://artifacts.apis.io/servicedesk-plus/scopes/servicedesk-plus-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/servicedesk-plus-scopes.yml
@@ -118,16 +203,20 @@ common:
   title: ''
   type: Pricing
   url: https://www.manageengine.com/products/service-desk/pricing.html
-- group: start
-  title: ''
-  type: Signup
-  url: https://www.manageengine.com/products/service-desk/free-trial.html
 - group: company
   title: ''
   type: Blog
   url: https://blogs.manageengine.com/feed
 created: '2026-05-11'
 description: ManageEngine ServiceDesk Plus is a comprehensive IT service management (ITSM) suite with incident, problem, change, release, and asset management modules, plus a CMDB and project management. ServiceDesk Plus is available as cloud (SaaS) or on-premises, and exposes a REST API for integrating external systems with requests, problems, changes, assets, and the CMDB.
+finops:
+- has_sources: true
+  method: derived
+  name: Servicedesk Plus Finops
+  primary_unit: seat
+  service_category: ''
+  slug: servicedesk-plus-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/servicedesk-plus.png
 layout: provider
 modified: '2026-05-11'
@@ -140,21 +229,21 @@ overview: 'ManageEngine ServiceDesk Plus publishes 2 API contracts indexed on th
   The ManageEngine ServiceDesk Plus catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  ManageEngine ServiceDesk Plus'' developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
+  ManageEngine ServiceDesk Plus'' developer surface includes signup flow, authentication, documentation, pricing, engineering blog, and 25 more developer resources.'
 plans:
 - name: Servicedesk Plus Plans Pricing
   plan_count: 3
   slug: servicedesk-plus-plans-pricing
-random_paper: 1
+random_paper: 17
 rules:
 - authorship: generated
-  effective_rule_count: 52
+  effective_rule_count: 76
   extends:
   - spectral:oas
   name: ManageEngine ServiceDesk Plus API Rules
-  rule_count: 11
+  rule_count: 35
   severity_counts:
-    error: 9
+    error: 33
     hint: 0
     info: 1
     warn: 1
@@ -166,23 +255,23 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 39.9
+  composite: 48.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 53.5
+    artifact_dirs: 27
+    catalog_earned: 57.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 61.5
+    catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -14.5
+  delta: 5.3
   facets:
-    access_clarity: 63.2
-    contract_governance: 18.2
+    access_clarity: 78.9
+    contract_governance: 22.0
     contract_quality: 42.9
-    developer_ergonomics: 23.8
-    discoverability: 73.2
-    operational_transparency: 2.6
-  previous_composite: 54.4
+    developer_ergonomics: 25.6
+    discoverability: 75.0
+    operational_transparency: 28.9
+  previous_composite: 42.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -198,14 +287,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+    score: 37.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/servicedesk-plus/refs/heads/main/screenshots/servicedesk-plus-2026-06-20T193729.png
+screenshot: https://apis.io/screenshots/servicedesk-plus/servicedesk-plus-2026-06-20T193729.png
 security:
 - kind: authentication
   name: Servicedesk Plus Authentication
@@ -223,6 +312,10 @@ security:
   name: Servicedesk Plus Trust Center
   slug: servicedesk-plus-trust-center
   summary_line: ISO 27001, HIPAA, GDPR
+skill_count: 1
+skills:
+- name: servicedesk-plus-create-and-retrieve-request
+  slug: servicedesk-plus-create-and-retrieve-request
 slug: servicedesk-plus
 tags:
 - ITSM

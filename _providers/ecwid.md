@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 20.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -77,11 +81,8 @@ apis:
   description: The Profile API from Ecwid by Lightspeed — 1 operation(s) for profile.
   name: Ecwid by Lightspeed Profile API
   slug: ecwid-profile-api
-artifact_total: 19
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Ecwid REST Categories API
   slug: open-ecwid-categories-api
@@ -105,27 +106,27 @@ collections:
   slug: open-ecwid
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/plans/ecwid-plans-pricing.yml
+  href: https://artifacts.apis.io/ecwid/plans/ecwid-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ecwid-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/capabilities/ecwid-capability-edges.yml
+  href: https://artifacts.apis.io/ecwid/capabilities/ecwid-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ecwid-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/agentic-access/ecwid-agentic-access.yml
+  href: https://artifacts.apis.io/ecwid/agentic-access/ecwid-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ecwid-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/security/ecwid-domain-security.yml
+  href: https://artifacts.apis.io/ecwid/security/ecwid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ecwid-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/authentication/ecwid-authentication.yml
+  href: https://artifacts.apis.io/ecwid/authentication/ecwid-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ecwid-authentication.yml
@@ -171,6 +172,14 @@ common:
   url: https://www.ecwid.com/blog/feed
 created: '2026-05-11'
 description: Ecwid by Lightspeed is a multi-channel e-commerce platform that lets merchants launch a storefront and sell across websites, social media (Instagram, TikTok, Facebook, Pinterest, Snapchat), online marketplaces, and in-person via point-of-sale. The platform handles centralized inventory and order management, automated marketing, payments, shipping, tax, and domain management. The Ecwid REST API exposes products, categories, orders, customers, payment and shipping methods, and storefront settings using OAuth 2.0 authentication with public (read-only) or private access tokens.
+finops:
+- has_sources: true
+  method: derived
+  name: Ecwid Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: ecwid-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ecwid.png
 layout: provider
 modified: '2026-05-11'
@@ -180,31 +189,47 @@ network: true
 overview: 'Ecwid by Lightspeed publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Customers API, Discount Coupons API, and 4 more. Tagged areas include E-Commerce, Online Store, Storefront, Retail, and Point-of-Sale.
 
 
+  The Ecwid by Lightspeed catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ecwid by Lightspeed''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 10 more developer resources.'
 plans:
 - name: Ecwid Plans Pricing
   plan_count: 4
   slug: ecwid-plans-pricing
-random_paper: 18
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Ecwid by Lightspeed API Rules
+  rule_count: 56
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 2
+  slug: ecwid-rules
 score:
   band: developing
-  composite: 42.2
+  composite: 45.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 49.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 55.3
-    contract_governance: 0.0
+    access_clarity: 63.2
+    contract_governance: 13.6
     contract_quality: 48.7
     developer_ergonomics: 52.4
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 42.2
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     contracts:
@@ -218,13 +243,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/screenshots/ecwid-2026-06-20T180440.png
+screenshot: https://apis.io/screenshots/ecwid/ecwid-2026-06-20T180440.png
 security:
 - kind: authentication
   name: Ecwid Authentication

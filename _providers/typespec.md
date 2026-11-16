@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.7
-  scored_at: '2026-10-17'
+  score: 4.1
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: The TypeSpec compiler processes `.tsp` TypeSpec files and emits output for configured emitters (OpenAPI, JSON Schema, Protobuf, etc.). It provides a programmatic Node.js/TypeScript API for building Ty
@@ -56,18 +60,61 @@ apis:
   slug: typespec-rest-library
 artifact_total: 15
 common:
+- group: agent
+  href: https://artifacts.apis.io/typespec/llms/typespec-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/typespec-llms.txt
+- group: design
+  href: https://artifacts.apis.io/typespec/rules/typespec-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/typespec-jsonschema-spectral-rules.yml
+- group: build
+  href: https://artifacts.apis.io/typespec/cli/typespec-cli.yml
+  title: ''
+  type: CLI
+  url: cli/typespec-cli.yml
+- group: other
+  href: https://artifacts.apis.io/typespec/hosts/typespec-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/typespec-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/typespec/vendors/typespec-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/typespec-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/typespec/packages/typespec-packages.yml
+  title: ''
+  type: SDKs
+  url: packages/typespec-packages.yml
+- group: build
+  href: https://artifacts.apis.io/typespec/packages/typespec-packages.yml
+  title: ''
+  type: Packages
+  url: packages/typespec-packages.yml
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://typespec.io/docs/libraries/sse/reference/
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://typespec.io/docs/getting-started/getting-started-rest/01-setup-basic-syntax
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/plans/typespec-plans-pricing.yml
+  href: https://artifacts.apis.io/typespec/plans/typespec-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/typespec-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/rate-limits/typespec-rate-limits.yml
+  href: https://artifacts.apis.io/typespec/rate-limits/typespec-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/typespec-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/finops/typespec-finops.yml
+  href: https://artifacts.apis.io/typespec/finops/typespec-finops.yml
   title: ''
   type: FinOps
   url: finops/typespec-finops.yml
@@ -92,7 +139,7 @@ common:
   type: License
   url: https://github.com/microsoft/typespec/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/security/typespec-domain-security.yml
+  href: https://artifacts.apis.io/typespec/security/typespec-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/typespec-domain-security.yml
@@ -129,17 +176,17 @@ common:
   type: ReleaseNotes
   url: https://github.com/microsoft/typespec/releases
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/json-ld/typespec-context.jsonld
+  href: https://artifacts.apis.io/typespec/json-ld/typespec-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/typespec-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/vocabulary/typespec-vocabulary.yml
+  href: https://artifacts.apis.io/typespec/vocabulary/typespec-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/typespec-vocabulary.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/json-schema/typespec-program-schema.json
+  href: https://artifacts.apis.io/typespec/json-schema/typespec-program-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/typespec-program-schema.json
@@ -153,7 +200,7 @@ finops:
 - has_sources: false
   method: generated
   name: Typespec Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: typespec-finops
   template: true
@@ -186,12 +233,12 @@ overview: 'TypeSpec is listed with 6 APIs on the [APIs.io](https://apis.io/) net
   The TypeSpec catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  TypeSpec''s developer surface includes documentation, engineering blog, release notes, and 18 more developer resources.'
+  TypeSpec''s developer surface includes CLI, API reference, getting-started guide, documentation, engineering blog, release notes, and 24 more developer resources.'
 plans:
 - name: Typespec Plans Pricing
   plan_count: 3
   slug: typespec-plans-pricing
-random_paper: 19
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Typespec Rate Limits
@@ -210,40 +257,42 @@ rules:
   slug: typespec-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 32.5
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 59.8
+    artifact_dirs: 21
+    catalog_earned: 56.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.3
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 2.8
   facets:
     access_clarity: 7.9
-    contract_governance: 23.5
+    contract_governance: 13.6
     contract_quality: 14.7
-    developer_ergonomics: 17.9
+    developer_ergonomics: 39.3
     discoverability: 61.7
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 31.1
+  previous_composite: 29.7
+  provenance:
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/typespec/refs/heads/main/screenshots/typespec-2026-06-20T195906.png
+screenshot: https://apis.io/screenshots/typespec/typespec-2026-06-20T195906.png
 security:
 - kind: domain-security
   name: Typespec Domain Security

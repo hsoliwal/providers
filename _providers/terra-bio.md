@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -39,12 +52,12 @@ apis:
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/agentic-access/terra-bio-agentic-access.yml
+  href: https://artifacts.apis.io/terra-bio/agentic-access/terra-bio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/terra-bio-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/rules/terra-bio-rules.yml
+  href: https://artifacts.apis.io/terra-bio/rules/terra-bio-rules.yml
   title: ''
   type: Spectral
   url: rules/terra-bio-rules.yml
@@ -53,17 +66,17 @@ common:
   type: Compliance
   url: https://terra.bio/customer-security-requirements/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/conformance/terra-bio-conformance.yml
+  href: https://artifacts.apis.io/terra-bio/conformance/terra-bio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/terra-bio-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/hosts/terra-bio-hosts.yml
+  href: https://artifacts.apis.io/terra-bio/hosts/terra-bio-hosts.yml
   title: ''
   type: Hosts
   url: hosts/terra-bio-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/vendors/terra-bio-vendors.yml
+  href: https://artifacts.apis.io/terra-bio/vendors/terra-bio-vendors.yml
   title: ''
   type: Vendors
   url: vendors/terra-bio-vendors.yml
@@ -72,12 +85,12 @@ common:
   type: SignUp
   url: https://terra.bio/register-for-ashg-interactive-workshops/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/security/terra-bio-trust-center.yml
+  href: https://artifacts.apis.io/terra-bio/security/terra-bio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/terra-bio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terra-bio/refs/heads/main/security/terra-bio-domain-security.yml
+  href: https://artifacts.apis.io/terra-bio/security/terra-bio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/terra-bio-domain-security.yml
@@ -137,14 +150,14 @@ modified: '2026-10-14'
 name: Terra
 nav: Providers
 network: true
-overview: 'Terra publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Biomedical, DataAnalysis, Collaboration, and CloudPlatform.
+overview: 'Terra publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Biomedical, Data Analysis, Collaboration, and Cloud Platform.
 
 
   The Terra catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Terra''s developer surface includes signup flow, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 14 more developer resources.'
-random_paper: 21
+random_paper: 13
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -160,21 +173,23 @@ rules:
   slug: terra-bio-rules
 score:
   band: thin
-  composite: 37.9
+  composite: 27.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 31.5
     catalog_earned_first_party: 0.0
     catalog_gap: 83.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.9
   facets:
-    access_clarity: 60.5
+    access_clarity: 34.2
     contract_governance: 18.2
     contract_quality: 32.4
-    developer_ergonomics: 40.5
+    developer_ergonomics: 20.2
     discoverability: 48.2
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -189,13 +204,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/terra-bio/terra-bio-2026-11-03T144445.png
 security:
 - kind: domain-security
   name: Terra Bio Domain Security
@@ -209,8 +226,8 @@ slug: terra-bio
 tags:
 - Company
 - Biomedical
-- DataAnalysis
+- Data Analysis
 - Collaboration
-- CloudPlatform
+- Cloud Platform
 website: https://terra.bio
 ---

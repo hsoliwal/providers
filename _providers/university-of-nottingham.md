@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Keyless, read-only HAL+JSON REST API of the university's self-hosted DSpace 8.2 / DSpace-CRIS (cris-2024.02.04) institutional repository, served from the university's own domain at repository.nottingh
@@ -126,32 +130,32 @@ common:
   type: Twitter
   url: https://twitter.com/UniofNottingham
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/conformance/university-of-nottingham-conformance.yml
+  href: https://artifacts.apis.io/university-of-nottingham/conformance/university-of-nottingham-conformance.yml
   title: ''
   type: Conformance
   url: conformance/university-of-nottingham-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/security/university-of-nottingham-domain-security.yml
+  href: https://artifacts.apis.io/university-of-nottingham/security/university-of-nottingham-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/university-of-nottingham-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/plans/university-of-nottingham-plans-pricing.yml
+  href: https://artifacts.apis.io/university-of-nottingham/plans/university-of-nottingham-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/university-of-nottingham-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/rate-limits/university-of-nottingham-rate-limits.yml
+  href: https://artifacts.apis.io/university-of-nottingham/rate-limits/university-of-nottingham-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/university-of-nottingham-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/finops/university-of-nottingham-finops.yml
+  href: https://artifacts.apis.io/university-of-nottingham/finops/university-of-nottingham-finops.yml
   title: ''
   type: FinOps
   url: finops/university-of-nottingham-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/university-of-nottingham/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -188,7 +192,7 @@ plans:
 - name: University Of Nottingham Plans Pricing
   plan_count: 2
   slug: university-of-nottingham-plans-pricing
-random_paper: 20
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: University Of Nottingham Rate Limits
@@ -197,13 +201,13 @@ score:
   band: emerging
   composite: 23.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 47.0
     catalog_earned_first_party: 0.0
     catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
@@ -219,7 +223,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 29.9
+  previous_composite: 23.8
   provenance:
     conformance: first-party
   regulatory:
@@ -228,14 +232,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/university-of-nottingham/refs/heads/main/screenshots/university-of-nottingham-2026-06-20T200211.png
+screenshot: https://apis.io/screenshots/university-of-nottingham/university-of-nottingham-2026-06-20T200211.png
 security:
 - kind: domain-security
   name: University Of Nottingham Domain Security

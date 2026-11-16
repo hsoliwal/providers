@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Payple REST payment API (v2) for card, bank-account, recurring/billing-key, link, verification, and payout (Hub) operations, plus the hosted payment window.
@@ -88,77 +91,77 @@ common:
   type: Login
   url: https://accounts.payple.kr
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/packages/payple-packages.yml
+  href: https://artifacts.apis.io/payple/packages/payple-packages.yml
   title: ''
   type: Packages
   url: packages/payple-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/packages/payple-packages.yml
+  href: https://artifacts.apis.io/payple/packages/payple-packages.yml
   title: ''
   type: SDKs
   url: packages/payple-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/authentication/payple-authentication.yml
+  href: https://artifacts.apis.io/payple/authentication/payple-authentication.yml
   title: ''
   type: Authentication
   url: authentication/payple-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/errors/payple-response-codes.yml
+  href: https://artifacts.apis.io/payple/errors/payple-response-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/payple-response-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/errors/payple-decline-codes.yml
+  href: https://artifacts.apis.io/payple/errors/payple-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/payple-decline-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/sandbox/payple-sandbox.yml
+  href: https://artifacts.apis.io/payple/sandbox/payple-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/payple-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/conventions/payple-conventions.yml
+  href: https://artifacts.apis.io/payple/conventions/payple-conventions.yml
   title: ''
   type: Conventions
   url: conventions/payple-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/conventions/payple-conventions.yml
+  href: https://artifacts.apis.io/payple/conventions/payple-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/payple-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/lifecycle/payple-lifecycle.yml
+  href: https://artifacts.apis.io/payple/lifecycle/payple-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/payple-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/conformance/payple-conformance.yml
+  href: https://artifacts.apis.io/payple/conformance/payple-conformance.yml
   title: ''
   type: Conformance
   url: conformance/payple-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/conformance/payple-conformance.yml
+  href: https://artifacts.apis.io/payple/conformance/payple-conformance.yml
   title: ''
   type: Compliance
   url: conformance/payple-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/asyncapi/payple-webhooks.yml
+  href: https://artifacts.apis.io/payple/asyncapi/payple-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/payple-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/components/payple-components.yml
+  href: https://artifacts.apis.io/payple/components/payple-components.yml
   title: ''
   type: Components
   url: components/payple-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/security/payple-domain-security.yml
+  href: https://artifacts.apis.io/payple/security/payple-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/payple-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/llms/payple-llms.txt
+  href: https://artifacts.apis.io/payple/llms/payple-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/payple-llms.txt
@@ -177,12 +180,12 @@ overview: 'Payple is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Payple''s developer surface includes documentation, API reference, support, engineering blog, authentication, sandbox, and 19 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: developing
   composite: 40.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -212,14 +215,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/payple/refs/heads/main/screenshots/payple-2026-08-07T191656.png
+screenshot: https://apis.io/screenshots/payple/payple-2026-08-07T191656.png
 security:
 - kind: authentication
   name: Payple Authentication

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.2
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - baseURL: https://api.shift4.com
@@ -54,92 +68,92 @@ apis:
 artifact_total: 15
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/rules/credorax-rules.yml
+  href: https://artifacts.apis.io/credorax/rules/credorax-rules.yml
   title: ''
   type: Spectral
   url: rules/credorax-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/json-ld/credorax-context.jsonld
+  href: https://artifacts.apis.io/credorax/json-ld/credorax-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/credorax-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/vocabulary/credorax-vocabulary.yml
+  href: https://artifacts.apis.io/credorax/vocabulary/credorax-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/credorax-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/data-model/credorax-data-model.yml
+  href: https://artifacts.apis.io/credorax/data-model/credorax-data-model.yml
   title: ''
   type: DataModel
   url: data-model/credorax-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/changelog/credorax-changelog.yml
+  href: https://artifacts.apis.io/credorax/changelog/credorax-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/credorax-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/conventions/credorax-conventions.yml
+  href: https://artifacts.apis.io/credorax/conventions/credorax-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/credorax-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/conventions/credorax-conventions.yml
+  href: https://artifacts.apis.io/credorax/conventions/credorax-conventions.yml
   title: ''
   type: Conventions
   url: conventions/credorax-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/authentication/credorax-authentication.yml
+  href: https://artifacts.apis.io/credorax/authentication/credorax-authentication.yml
   title: ''
   type: Authentication
   url: authentication/credorax-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/conformance/credorax-conformance.yml
+  href: https://artifacts.apis.io/credorax/conformance/credorax-conformance.yml
   title: ''
   type: Conformance
   url: conformance/credorax-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/llms/credorax-llms.txt
+  href: https://artifacts.apis.io/credorax/llms/credorax-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/credorax-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/a2a/credorax-a2a.yml
+  href: https://artifacts.apis.io/credorax/a2a/credorax-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/credorax-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/well-known/credorax-status-security.txt
+  href: https://artifacts.apis.io/credorax/well-known/credorax-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/credorax-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/well-known/credorax-help-security.txt
+  href: https://artifacts.apis.io/credorax/well-known/credorax-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/credorax-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/well-known/credorax-well-known.yml
+  href: https://artifacts.apis.io/credorax/well-known/credorax-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/credorax-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/hosts/credorax-hosts.yml
+  href: https://artifacts.apis.io/credorax/hosts/credorax-hosts.yml
   title: ''
   type: Hosts
   url: hosts/credorax-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/vendors/credorax-vendors.yml
+  href: https://artifacts.apis.io/credorax/vendors/credorax-vendors.yml
   title: ''
   type: Vendors
   url: vendors/credorax-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/packages/credorax-packages.yml
+  href: https://artifacts.apis.io/credorax/packages/credorax-packages.yml
   title: ''
   type: SDKs
   url: packages/credorax-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/packages/credorax-packages.yml
+  href: https://artifacts.apis.io/credorax/packages/credorax-packages.yml
   title: ''
   type: Packages
   url: packages/credorax-packages.yml
@@ -168,7 +182,7 @@ common:
   type: APIReference
   url: https://docs.shift4.com/apis/payments-platform-rest/openapi.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credorax/refs/heads/main/security/credorax-domain-security.yml
+  href: https://artifacts.apis.io/credorax/security/credorax-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/credorax-domain-security.yml
@@ -223,7 +237,7 @@ overview: 'Credorax is listed with 5 APIs on the [APIs.io](https://apis.io/) net
 
 
   Credorax''s developer surface includes changelog, authentication, support, getting-started guide, documentation, API reference, and 20 more developer resources.'
-random_paper: 20
+random_paper: 16
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -239,21 +253,23 @@ rules:
   slug: credorax-rules
 score:
   band: thin
-  composite: 30.2
+  composite: 28.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.4
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 25.9
-    developer_ergonomics: 52.4
+    developer_ergonomics: 35.7
     discoverability: 69.6
-    operational_transparency: 31.6
+    operational_transparency: 42.1
+  previous_composite: 31.6
   provenance:
     conformance: derived
     contracts:
@@ -267,11 +283,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/credorax/credorax-2026-11-03T125555.png
 security:
 - kind: authentication
   name: Credorax Authentication

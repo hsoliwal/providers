@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The API powering the Unison Share web application, including the APIs for syncing code with UCM and browsing projects, branches, and definitions. Unison Share also acts as the OAuth2 (with PKCE) and O
@@ -50,7 +55,7 @@ common:
   type: License
   url: https://github.com/unisoncomputing/share-api/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/security/unison-computing-domain-security.yml
+  href: https://artifacts.apis.io/unison-computing/security/unison-computing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unison-computing-domain-security.yml
@@ -103,62 +108,62 @@ common:
   type: PrivacyPolicy
   url: https://www.unison.cloud/privacy-policy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/packages/unison-computing-packages.yml
+  href: https://artifacts.apis.io/unison-computing/packages/unison-computing-packages.yml
   title: ''
   type: Packages
   url: packages/unison-computing-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/packages/unison-computing-packages.yml
+  href: https://artifacts.apis.io/unison-computing/packages/unison-computing-packages.yml
   title: ''
   type: SDKs
   url: packages/unison-computing-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/well-known/unison-computing-well-known.yml
+  href: https://artifacts.apis.io/unison-computing/well-known/unison-computing-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/unison-computing-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/mcp/unison-computing-mcp.yml
+  href: https://artifacts.apis.io/unison-computing/mcp/unison-computing-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/unison-computing-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/llms/unison-computing-llms.txt
+  href: https://artifacts.apis.io/unison-computing/llms/unison-computing-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unison-computing-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/conformance/unison-computing-conformance.yml
+  href: https://artifacts.apis.io/unison-computing/conformance/unison-computing-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unison-computing-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/lifecycle/unison-computing-lifecycle.yml
+  href: https://artifacts.apis.io/unison-computing/lifecycle/unison-computing-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unison-computing-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/authentication/unison-computing-authentication.yml
+  href: https://artifacts.apis.io/unison-computing/authentication/unison-computing-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unison-computing-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/changelog/unison-computing-changelog.yml
+  href: https://artifacts.apis.io/unison-computing/changelog/unison-computing-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/unison-computing-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/cli/unison-computing-cli.yml
+  href: https://artifacts.apis.io/unison-computing/cli/unison-computing-cli.yml
   title: ''
   type: CLI
   url: cli/unison-computing-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/sandbox/unison-computing-sandbox.yml
+  href: https://artifacts.apis.io/unison-computing/sandbox/unison-computing-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/unison-computing-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/unison-computing/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -178,12 +183,12 @@ overview: 'Unison Computing is listed with 1 API on the [APIs.io](https://apis.i
 
 
   Unison Computing''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, authentication, and 20 more developer resources.'
-random_paper: 1
+random_paper: 15
 score:
   band: thin
   composite: 31.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -211,14 +216,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/screenshots/unison-computing-2026-09-02T164915.png
+screenshot: https://apis.io/screenshots/unison-computing/unison-computing-2026-09-02T164915.png
 security:
 - kind: authentication
   name: Unison Computing Authentication

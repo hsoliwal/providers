@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Open access
+  onboarding: open
+  pricing: freemium
+  public: true
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +30,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-10-17'
+  score: 40.3
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - description: QR code generation API documented at QRSalt.
@@ -68,57 +85,57 @@ apis:
 artifact_total: 19
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/plans/qrsalt-plans-pricing.yml
+  href: https://artifacts.apis.io/qrsalt/plans/qrsalt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/qrsalt-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/rules/qrsalt-rules.yml
+  href: https://artifacts.apis.io/qrsalt/rules/qrsalt-rules.yml
   title: ''
   type: Spectral
   url: rules/qrsalt-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/json-ld/qrsalt-context.jsonld
+  href: https://artifacts.apis.io/qrsalt/json-ld/qrsalt-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/qrsalt-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/vocabulary/qrsalt-vocabulary.yml
+  href: https://artifacts.apis.io/qrsalt/vocabulary/qrsalt-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/qrsalt-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/data-model/qrsalt-data-model.yml
+  href: https://artifacts.apis.io/qrsalt/data-model/qrsalt-data-model.yml
   title: ''
   type: DataModel
   url: data-model/qrsalt-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/conformance/qrsalt-conformance.yml
+  href: https://artifacts.apis.io/qrsalt/conformance/qrsalt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/qrsalt-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/llms/qrsalt-llms.txt
+  href: https://artifacts.apis.io/qrsalt/llms/qrsalt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qrsalt-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/mcp/qrsalt-mcp.yml
+  href: https://artifacts.apis.io/qrsalt/mcp/qrsalt-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/qrsalt-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/well-known/qrsalt-well-known.yml
+  href: https://artifacts.apis.io/qrsalt/well-known/qrsalt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qrsalt-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/hosts/qrsalt-hosts.yml
+  href: https://artifacts.apis.io/qrsalt/hosts/qrsalt-hosts.yml
   title: ''
   type: Hosts
   url: hosts/qrsalt-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/vendors/qrsalt-vendors.yml
+  href: https://artifacts.apis.io/qrsalt/vendors/qrsalt-vendors.yml
   title: ''
   type: Vendors
   url: vendors/qrsalt-vendors.yml
@@ -127,7 +144,7 @@ common:
   type: Webhooks
   url: https://app.qrsalt.com/dashboard/webhooks
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qrsalt/refs/heads/main/security/qrsalt-domain-security.yml
+  href: https://artifacts.apis.io/qrsalt/security/qrsalt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qrsalt-domain-security.yml
@@ -214,7 +231,7 @@ plans:
 - name: Qrsalt Plans Pricing
   plan_count: 4
   slug: qrsalt-plans-pricing
-random_paper: 3
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -230,23 +247,23 @@ rules:
   slug: qrsalt-rules
 score:
   band: thin
-  composite: 35.1
+  composite: 28.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 67.8
     catalog_earned_first_party: 12.0
     catalog_gap: 47.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -10.2
+  delta: -7.0
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
     contract_quality: 25.2
-    developer_ergonomics: 14.3
+    developer_ergonomics: 7.1
     discoverability: 63.3
-    operational_transparency: 7.9
-  previous_composite: 45.3
+    operational_transparency: 3.9
+  previous_composite: 35.1
   provenance:
     conformance: derived
     contracts:
@@ -260,13 +277,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/qrsalt/qrsalt-2026-11-03T141804.png
 security:
 - kind: domain-security
   name: Qrsalt Domain Security

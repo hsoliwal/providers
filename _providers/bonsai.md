@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,32 +38,32 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/mcp/bonsai-mcp.yml
+  href: https://artifacts.apis.io/bonsai/mcp/bonsai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bonsai-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/authentication/bonsai-authentication.yml
+  href: https://artifacts.apis.io/bonsai/authentication/bonsai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bonsai-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/rate-limits/bonsai-rate-limits.yml
+  href: https://artifacts.apis.io/bonsai/rate-limits/bonsai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bonsai-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/conventions/bonsai-conventions.yml
+  href: https://artifacts.apis.io/bonsai/conventions/bonsai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bonsai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/lifecycle/bonsai-lifecycle.yml
+  href: https://artifacts.apis.io/bonsai/lifecycle/bonsai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bonsai-lifecycle.yml
@@ -67,7 +72,7 @@ common:
   type: StatusPage
   url: https://status.hellobonsai.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/security/bonsai-domain-security.yml
+  href: https://artifacts.apis.io/bonsai/security/bonsai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bonsai-domain-security.yml
@@ -131,7 +136,7 @@ overview: 'Bonsai is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Bonsai''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, support, and 12 more developer resources.'
-random_paper: 20
+random_paper: 12
 rate_limits:
 - limit_count: 1
   name: Bonsai Rate Limits
@@ -140,13 +145,13 @@ score:
   band: thin
   composite: 26.6
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 52.6
     contract_governance: 0.0
@@ -154,7 +159,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 51.7
     operational_transparency: 28.9
-  previous_composite: 26.5
+  previous_composite: 26.6
   provenance:
     mcp: first-party
   regulatory:
@@ -163,14 +168,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bonsai/refs/heads/main/screenshots/bonsai-2026-07-25T203600.png
+screenshot: https://apis.io/screenshots/bonsai/bonsai-2026-07-25T203600.png
 security:
 - kind: authentication
   name: Bonsai Authentication

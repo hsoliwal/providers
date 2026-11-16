@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.6
-  scored_at: '2026-10-17'
+  score: 20.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 2
@@ -59,9 +63,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Microsoft Dev Proxy — Proxy JWT API
   slug: open-dev-proxy-jwt-api
 - collection_type: open
@@ -72,32 +73,32 @@ collections:
   slug: open-dev-proxy
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/plans/dev-proxy-plans-pricing.yml
+  href: https://artifacts.apis.io/dev-proxy/plans/dev-proxy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dev-proxy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/rate-limits/dev-proxy-rate-limits.yml
+  href: https://artifacts.apis.io/dev-proxy/rate-limits/dev-proxy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dev-proxy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/finops/dev-proxy-finops.yml
+  href: https://artifacts.apis.io/dev-proxy/finops/dev-proxy-finops.yml
   title: ''
   type: FinOps
   url: finops/dev-proxy-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/agentic-access/dev-proxy-agentic-access.yml
+  href: https://artifacts.apis.io/dev-proxy/agentic-access/dev-proxy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dev-proxy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/security/dev-proxy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dev-proxy/security/dev-proxy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dev-proxy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/security/dev-proxy-domain-security.yml
+  href: https://artifacts.apis.io/dev-proxy/security/dev-proxy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dev-proxy-domain-security.yml
@@ -123,7 +124,7 @@ finops:
 - has_sources: false
   method: generated
   name: Dev Proxy Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: dev-proxy-finops
   template: true
@@ -136,35 +137,51 @@ network: true
 overview: 'Dev Proxy publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including JWT API, and 2 more. Tagged areas include Debugging Proxy and Proxy.
 
 
+  The Dev Proxy catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Dev Proxy''s developer surface includes documentation and 9 more developer resources.'
 plans:
 - name: Dev Proxy Plans Pricing
   plan_count: 3
   slug: dev-proxy-plans-pricing
-random_paper: 18
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Dev Proxy Rate Limits
   slug: dev-proxy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Dev Proxy API Rules
+  rule_count: 42
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 1
+  slug: dev-proxy-rules
 score:
   band: emerging
-  composite: 18.4
+  composite: 21.4
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 28.0
+    artifact_dirs: 13
+    catalog_earned: 32.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 87.0
+    catalog_gap: 82.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 36.1
     developer_ergonomics: 18.3
     discoverability: 39.3
-    operational_transparency: 10.5
-  previous_composite: 19.9
+    operational_transparency: 21.1
+  previous_composite: 21.4
   provenance:
     agentic_access: derived
     contracts:
@@ -178,13 +195,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/screenshots/dev-proxy-2026-06-20T175945.png
+screenshot: https://apis.io/screenshots/dev-proxy/dev-proxy-2026-06-20T175945.png
 security:
 - kind: domain-security
   name: Dev Proxy Domain Security

@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The REST API behind Ticket Fairy''s ticket-buying experience: events, ticket types, time slots, add-ons, promo codes, cart, checkout, payment, orders, issued tickets and face-value resale, plus OAuth t'
@@ -79,77 +82,77 @@ common:
   type: GitHubOrganization
   url: https://github.com/theticketfairy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/security/the-ticket-fairy-domain-security.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/security/the-ticket-fairy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/the-ticket-fairy-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/llms/the-ticket-fairy-llms.txt
+  href: https://artifacts.apis.io/the-ticket-fairy/llms/the-ticket-fairy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/the-ticket-fairy-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/packages/the-ticket-fairy-packages.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/packages/the-ticket-fairy-packages.yml
   title: ''
   type: Packages
   url: packages/the-ticket-fairy-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/packages/the-ticket-fairy-packages.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/packages/the-ticket-fairy-packages.yml
   title: ''
   type: SDKs
   url: packages/the-ticket-fairy-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/authentication/the-ticket-fairy-authentication.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/authentication/the-ticket-fairy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/the-ticket-fairy-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/conventions/the-ticket-fairy-conventions.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/conventions/the-ticket-fairy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/the-ticket-fairy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/conventions/the-ticket-fairy-conventions.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/conventions/the-ticket-fairy-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/the-ticket-fairy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/errors/the-ticket-fairy-problem-types.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/errors/the-ticket-fairy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/the-ticket-fairy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/data-model/the-ticket-fairy-data-model.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/data-model/the-ticket-fairy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/the-ticket-fairy-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/components/the-ticket-fairy-components.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/components/the-ticket-fairy-components.yml
   title: ''
   type: Components
   url: components/the-ticket-fairy-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/conformance/the-ticket-fairy-conformance.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/conformance/the-ticket-fairy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/the-ticket-fairy-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/conformance/the-ticket-fairy-conformance.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/conformance/the-ticket-fairy-conformance.yml
   title: ''
   type: Compliance
   url: conformance/the-ticket-fairy-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/plans/the-ticket-fairy-plans-pricing.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/plans/the-ticket-fairy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/the-ticket-fairy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/rate-limits/the-ticket-fairy-rate-limits.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/rate-limits/the-ticket-fairy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/the-ticket-fairy-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/lifecycle/the-ticket-fairy-lifecycle.yml
+  href: https://artifacts.apis.io/the-ticket-fairy/lifecycle/the-ticket-fairy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/the-ticket-fairy-lifecycle.yml
@@ -179,7 +182,7 @@ score:
   band: emerging
   composite: 25.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -202,14 +205,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/the-ticket-fairy/refs/heads/main/screenshots/the-ticket-fairy-2026-09-02T163419.png
+screenshot: https://apis.io/screenshots/the-ticket-fairy/the-ticket-fairy-2026-09-02T163419.png
 security:
 - kind: authentication
   name: The Ticket Fairy Authentication

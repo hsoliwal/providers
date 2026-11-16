@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,20 +26,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: CloudSEK API provides endpoints for alerts, incidents, events, and related security data as documented in the API reference.
   name: CloudSEK API
-  slug: cloudsek-api-2
+  slug: cloudsek-api
 - description: The Bulk API from Cloudsek — 1 operation(s) for bulk.
   name: Cloudsek Bulk API
   slug: cloudsek-bulk-api
@@ -50,32 +64,32 @@ apis:
 artifact_total: 18
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/rules/cloudsek-rules.yml
+  href: https://artifacts.apis.io/cloudsek/rules/cloudsek-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudsek-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/json-ld/cloudsek-context.jsonld
+  href: https://artifacts.apis.io/cloudsek/json-ld/cloudsek-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloudsek-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/vocabulary/cloudsek-vocabulary.yml
+  href: https://artifacts.apis.io/cloudsek/vocabulary/cloudsek-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cloudsek-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/data-model/cloudsek-data-model.yml
+  href: https://artifacts.apis.io/cloudsek/data-model/cloudsek-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudsek-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/cli/cloudsek-cli.yml
+  href: https://artifacts.apis.io/cloudsek/cli/cloudsek-cli.yml
   title: ''
   type: CLI
   url: cli/cloudsek-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/conventions/cloudsek-conventions.yml
+  href: https://artifacts.apis.io/cloudsek/conventions/cloudsek-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cloudsek-conventions.yml
@@ -84,27 +98,27 @@ common:
   type: Compliance
   url: https://trust.cloudsek.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/authentication/cloudsek-authentication.yml
+  href: https://artifacts.apis.io/cloudsek/authentication/cloudsek-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudsek-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/conformance/cloudsek-conformance.yml
+  href: https://artifacts.apis.io/cloudsek/conformance/cloudsek-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudsek-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/well-known/cloudsek-well-known.yml
+  href: https://artifacts.apis.io/cloudsek/well-known/cloudsek-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudsek-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/hosts/cloudsek-hosts.yml
+  href: https://artifacts.apis.io/cloudsek/hosts/cloudsek-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudsek-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/vendors/cloudsek-vendors.yml
+  href: https://artifacts.apis.io/cloudsek/vendors/cloudsek-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudsek-vendors.yml
@@ -133,12 +147,12 @@ common:
   type: GettingStarted
   url: https://api.cloudsek.com/docs/intro
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/security/cloudsek-trust-center.yml
+  href: https://artifacts.apis.io/cloudsek/security/cloudsek-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cloudsek-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsek/refs/heads/main/security/cloudsek-domain-security.yml
+  href: https://artifacts.apis.io/cloudsek/security/cloudsek-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudsek-domain-security.yml
@@ -189,14 +203,14 @@ modified: '2026-10-09'
 name: Cloudsek
 nav: Providers
 network: true
-overview: 'Cloudsek is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Bulk API, Comments API, Events API, and 4 more. Tagged areas include Security, Threat Intelligence, Attack Path, Predictive Analytics, and Cyber Risk.
+overview: 'Cloudsek is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Bulk API, Comments API, and 5 more. Tagged areas include Security, Threat Intelligence, Attack Path, Predictive Analytics, and Cyber Risk.
 
 
   The Cloudsek catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Cloudsek''s developer surface includes CLI, authentication, support, engineering blog, getting-started guide, and 16 more developer resources.'
-random_paper: 0
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -211,22 +225,24 @@ rules:
     warn: 1
   slug: cloudsek-rules
 score:
-  band: thin
-  composite: 29.8
+  band: emerging
+  composite: 24.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.2
   facets:
-    access_clarity: 26.3
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 22.5
-    developer_ergonomics: 38.1
-    discoverability: 64.3
-    operational_transparency: 10.5
+    developer_ergonomics: 28.6
+    discoverability: 63.4
+    operational_transparency: 5.3
+  previous_composite: 29.8
   provenance:
     conformance: derived
     contracts:
@@ -240,12 +256,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cloudsek/cloudsek-2026-11-03T124554.png
 security:
 - kind: authentication
   name: Cloudsek Authentication

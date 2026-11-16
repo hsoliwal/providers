@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Programmatic access to Aristotle, Harmonic's formal reasoning agent. Over HTTPS with an API key, submit Lean 4 proofs with `sorry` placeholders, natural-language math problems, or LaTeX papers; Aristo
@@ -75,52 +78,52 @@ common:
   type: GitHubOrganization
   url: https://github.com/harmonic-ai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/authentication/harmonic-authentication.yml
+  href: https://artifacts.apis.io/harmonic/authentication/harmonic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/harmonic-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/packages/harmonic-packages.yml
+  href: https://artifacts.apis.io/harmonic/packages/harmonic-packages.yml
   title: ''
   type: Packages
   url: packages/harmonic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/packages/harmonic-packages.yml
+  href: https://artifacts.apis.io/harmonic/packages/harmonic-packages.yml
   title: ''
   type: SDKs
   url: packages/harmonic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/cli/harmonic-cli.yml
+  href: https://artifacts.apis.io/harmonic/cli/harmonic-cli.yml
   title: ''
   type: CLI
   url: cli/harmonic-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/mcp/harmonic-mcp.yml
+  href: https://artifacts.apis.io/harmonic/mcp/harmonic-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/harmonic-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/llms/harmonic-llms.txt
+  href: https://artifacts.apis.io/harmonic/llms/harmonic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/harmonic-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/conventions/harmonic-conventions.yml
+  href: https://artifacts.apis.io/harmonic/conventions/harmonic-conventions.yml
   title: ''
   type: Conventions
   url: conventions/harmonic-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/changelog/harmonic-changelog.yml
+  href: https://artifacts.apis.io/harmonic/changelog/harmonic-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/harmonic-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/lifecycle/harmonic-lifecycle.yml
+  href: https://artifacts.apis.io/harmonic/lifecycle/harmonic-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/harmonic-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/security/harmonic-domain-security.yml
+  href: https://artifacts.apis.io/harmonic/security/harmonic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/harmonic-domain-security.yml
@@ -140,18 +143,18 @@ overview: 'Harmonic is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Harmonic''s developer surface includes signup flow, engineering blog, authentication, CLI, changelog, and 13 more developer resources.'
-random_paper: 13
+random_paper: 9
 score:
   band: emerging
   composite: 22.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
@@ -159,7 +162,7 @@ score:
     developer_ergonomics: 38.1
     discoverability: 65.0
     operational_transparency: 18.4
-  previous_composite: 22.4
+  previous_composite: 22.5
   provenance:
     mcp: third-party
   regulatory:
@@ -168,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/harmonic/refs/heads/main/screenshots/harmonic-2026-07-25T220710.png
+screenshot: https://apis.io/screenshots/harmonic/harmonic-2026-07-25T220710.png
 security:
 - kind: authentication
   name: Harmonic Authentication

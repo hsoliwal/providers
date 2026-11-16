@@ -1,16 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
-  trial: false
-  try_now: false
+  trial: true
+  try_now: true
 agent_readiness:
   band: agent-native
   dimensions:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.4
-  scored_at: '2026-10-17'
+  score: 40.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: wss://data.infoway.io/ws
@@ -61,15 +68,12 @@ apis:
   description: The Stock API from Infoway Real-time Market Data API — 3 operation(s) for stock.
   name: Infoway Real-time Market Data API Stock API
   slug: infoway-real-time-market-data-api-stock-api
-artifact_total: 14
+artifact_total: 19
 asyncapis:
 - description: 'Real-time push of trades, order-book depth, candlesticks (K-line) and news over a single WebSocket connection. PROVENANCE: Infoway publishes NO AsyncAPI document. This document was DERIVED by API Evan'
   name: Infoway WebSocket Streaming API
   slug: infoway-real-time-market-data-api-streaming-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: REST Common API
   slug: open-infoway-real-time-market-data-api-common-api
@@ -80,6 +84,11 @@ collections:
   name: REST Stock API
   slug: open-infoway-real-time-market-data-api-stock-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/plans/infoway-real-time-market-data-api-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/infoway-real-time-market-data-api-plans-pricing.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -89,7 +98,7 @@ common:
   type: Website
   url: https://www.infoway.io/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/overlays/infoway-real-time-market-data-api-openapi-overlay.yaml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/overlays/infoway-real-time-market-data-api-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/infoway-real-time-market-data-api-openapi-overlay.yaml
@@ -98,42 +107,42 @@ common:
   type: IssueTracker
   url: https://github.com/infoway-api/infoway-mcp-server/issues
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/security/infoway-real-time-market-data-api-domain-security.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/security/infoway-real-time-market-data-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infoway-real-time-market-data-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/authentication/infoway-real-time-market-data-api-authentication.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/authentication/infoway-real-time-market-data-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infoway-real-time-market-data-api-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/packages/infoway-real-time-market-data-api-packages.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/packages/infoway-real-time-market-data-api-packages.yml
   title: ''
   type: Packages
   url: packages/infoway-real-time-market-data-api-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/packages/infoway-real-time-market-data-api-packages.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/packages/infoway-real-time-market-data-api-packages.yml
   title: ''
   type: SDKs
   url: packages/infoway-real-time-market-data-api-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/conventions/infoway-real-time-market-data-api-conventions.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/conventions/infoway-real-time-market-data-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/infoway-real-time-market-data-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/errors/infoway-real-time-market-data-api-error-codes.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/errors/infoway-real-time-market-data-api-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/infoway-real-time-market-data-api-error-codes.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/rate-limits/infoway-real-time-market-data-api-rate-limits.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/rate-limits/infoway-real-time-market-data-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/infoway-real-time-market-data-api-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/lifecycle/infoway-real-time-market-data-api-lifecycle.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/lifecycle/infoway-real-time-market-data-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/infoway-real-time-market-data-api-lifecycle.yml
@@ -142,22 +151,22 @@ common:
   type: StatusPage
   url: https://status.infoway.io
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/conformance/infoway-real-time-market-data-api-conformance.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/conformance/infoway-real-time-market-data-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/infoway-real-time-market-data-api-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/data-model/infoway-real-time-market-data-api-data-model.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/data-model/infoway-real-time-market-data-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/infoway-real-time-market-data-api-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/llms/infoway-real-time-market-data-api-llms.txt
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/llms/infoway-real-time-market-data-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/infoway-real-time-market-data-api-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/infoway-real-time-market-data-api/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -211,6 +220,14 @@ common:
   url: https://infoway.io/en/privacy-policy
 created: '2026-08-08'
 description: 'Infoway is a real-time and historical financial market-data provider covering equities (US, Hong Kong, China A-shares, Japan, South Korea, India), forex, cryptocurrencies across 30+ exchanges, and commodities/futures. It ships two surfaces from the host data.infoway.io: a REST/HTTP API for symbol reference data, trading calendars, last-trade ticks, order-book depth and candlestick (K-line) history, and a WebSocket streaming API that pushes trades, depth, candles and multilingual news with millisecond latency. Both authenticate with a single API key whose entitlements follow the plan it was issued against (Free through Professional). Infoway publishes per-endpoint OpenAPI 3.0.0 definitions on its ReadMe developer hub, official Python, Node.js and Java SDKs, an llms.txt documentation index, and a stdio MCP server exposing 17 financial-data tools with a provider-authored Agent Skill.'
+finops:
+- has_sources: true
+  method: derived
+  name: Infoway Real Time Market Data Api Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: infoway-real-time-market-data-api-finops
+  template: false
 image: https://infoway.io/favicon.png
 layout: provider
 mcp_servers:
@@ -224,34 +241,54 @@ network: true
 overview: 'Infoway Real-time Market Data API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Infoway WebSocket Streaming API, Common API, Crypto API, and 2 more. Tagged areas include stock-api, forex-api, crypto-api, commodities-api, and futures-api.
 
 
-  The Infoway Real-time Market Data API catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Infoway Real-time Market Data API catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Infoway Real-time Market Data API''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 22 more developer resources.'
-random_paper: 19
+  Infoway Real-time Market Data API''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 23 more developer resources.'
+plans:
+- name: Infoway Real Time Market Data Api Plans Pricing
+  plan_count: 4
+  slug: infoway-real-time-market-data-api-plans-pricing
+- name: Infoway Real Time Market Data Api Price Estimates
+  plan_count: 0
+  slug: infoway-real-time-market-data-api-price-estimates
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Infoway Real Time Market Data Api Rate Limits
   slug: infoway-real-time-market-data-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: Infoway Real-time Market Data API API Rules
+  rule_count: 43
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 1
+  slug: infoway-real-time-market-data-api-rules
 score:
-  band: developing
-  composite: 45.2
+  band: strong
+  composite: 57.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 26
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.8
   facets:
-    access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 51.4
-    developer_ergonomics: 67.9
+    access_clarity: 84.2
+    contract_governance: 18.2
+    contract_quality: 55.6
+    developer_ergonomics: 71.4
     discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 45.1
+  previous_composite: 55.5
   provenance:
     conformance: derived
     contracts:
@@ -266,15 +303,15 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 28.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/infoway-real-time-market-data-api/refs/heads/main/screenshots/infoway-real-time-market-data-api-2026-08-17T081000.png
+screenshot: https://apis.io/screenshots/infoway-real-time-market-data-api/infoway-real-time-market-data-api-2026-08-17T081000.png
 security:
 - kind: authentication
   name: Infoway Real Time Market Data Api Authentication
@@ -284,6 +321,12 @@ security:
   name: Infoway Real Time Market Data Api Domain Security
   slug: infoway-real-time-market-data-api-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: infoway-financial-data
+  slug: infoway-real-time-market-data-api-financial-data-skill
+- name: infoway-quote-and-kline
+  slug: infoway-real-time-market-data-api-quote-and-kline
 slug: infoway-real-time-market-data-api
 tags:
 - stock-api

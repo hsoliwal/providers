@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -42,32 +45,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/SynapseFI
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/packages/synapsefi-packages.yml
+  href: https://artifacts.apis.io/synapsefi/packages/synapsefi-packages.yml
   title: ''
   type: Packages
   url: packages/synapsefi-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/packages/synapsefi-packages.yml
+  href: https://artifacts.apis.io/synapsefi/packages/synapsefi-packages.yml
   title: ''
   type: SDKs
   url: packages/synapsefi-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/lifecycle/synapsefi-lifecycle.yml
+  href: https://artifacts.apis.io/synapsefi/lifecycle/synapsefi-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/synapsefi-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/plans/synapsefi-plans-pricing.yml
+  href: https://artifacts.apis.io/synapsefi/plans/synapsefi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/synapsefi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/rate-limits/synapsefi-rate-limits.yml
+  href: https://artifacts.apis.io/synapsefi/rate-limits/synapsefi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/synapsefi-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/synapsefi/refs/heads/main/llms/synapsefi-llms.txt
+  href: https://artifacts.apis.io/synapsefi/llms/synapsefi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/synapsefi-llms.txt
@@ -103,7 +106,7 @@ plans:
 - name: Synapsefi Plans Pricing
   plan_count: 0
   slug: synapsefi-plans-pricing
-random_paper: 10
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Synapsefi Rate Limits
@@ -112,7 +115,7 @@ score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -140,8 +143,8 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.1
-  scored_at: '2026-10-17'
+  score: 21.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -87,11 +94,8 @@ apis:
   description: Manage webhook subscriptions for tournament events.
   name: Toornament Webhooks API
   slug: toornament-webhooks-api
-artifact_total: 55
+artifact_total: 54
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Toornament Disciplines API
   slug: open-toornament-disciplines-api
@@ -120,38 +124,42 @@ collections:
   name: Toornament API
   slug: open-toornament
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/toornament/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/plans/toornament-plans-pricing.yml
+  href: https://artifacts.apis.io/toornament/plans/toornament-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/toornament-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/rate-limits/toornament-rate-limits.yml
+  href: https://artifacts.apis.io/toornament/rate-limits/toornament-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/toornament-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/finops/toornament-finops.yml
+  href: https://artifacts.apis.io/toornament/finops/toornament-finops.yml
   title: ''
   type: FinOps
   url: finops/toornament-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/agentic-access/toornament-agentic-access.yml
+  href: https://artifacts.apis.io/toornament/agentic-access/toornament-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/toornament-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/security/toornament-domain-security.yml
+  href: https://artifacts.apis.io/toornament/security/toornament-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/toornament-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/authentication/toornament-authentication.yml
+  href: https://artifacts.apis.io/toornament/authentication/toornament-authentication.yml
   title: ''
   type: Authentication
   url: authentication/toornament-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/scopes/toornament-scopes.yml
+  href: https://artifacts.apis.io/toornament/scopes/toornament-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/toornament-scopes.yml
@@ -184,27 +192,27 @@ common:
   type: Pricing
   url: https://www.toornament.com/en_US/p/tournament-api
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/json-ld/toornament-context.jsonld
+  href: https://artifacts.apis.io/toornament/json-ld/toornament-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/toornament-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/json-schema/toornament-tournament-schema.json
+  href: https://artifacts.apis.io/toornament/json-schema/toornament-tournament-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/toornament-tournament-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/json-structure/toornament-tournament-structure.json
+  href: https://artifacts.apis.io/toornament/json-structure/toornament-tournament-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/toornament-tournament-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/rules/toornament-rules.yml
+  href: https://artifacts.apis.io/toornament/rules/toornament-rules.yml
   title: ''
   type: SpectralRules
   url: rules/toornament-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/vocabulary/toornament-vocabulary.yml
+  href: https://artifacts.apis.io/toornament/vocabulary/toornament-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/toornament-vocabulary.yml
@@ -238,7 +246,7 @@ finops:
 - has_sources: false
   method: generated
   name: Toornament Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: toornament-finops
   template: true
@@ -274,12 +282,12 @@ overview: 'Toornament publishes 9 API contracts indexed on the [APIs.io](https:/
   The Toornament catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Toornament''s developer surface includes authentication, documentation, getting-started guide, signup flow, pricing, engineering blog, and 14 more developer resources.'
+  Toornament''s developer surface includes authentication, documentation, getting-started guide, signup flow, pricing, engineering blog, and 15 more developer resources.'
 plans:
 - name: Toornament Plans Pricing
   plan_count: 3
   slug: toornament-plans-pricing
-random_paper: 17
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Toornament Rate Limits
@@ -315,23 +323,23 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 38.6
+  composite: 38.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 57.0
     catalog_earned_first_party: 0.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 25.0
     contract_governance: 27.3
     contract_quality: 58.2
-    developer_ergonomics: 35.7
+    developer_ergonomics: 36.9
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 40.1
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     contracts:
@@ -345,13 +353,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/toornament/refs/heads/main/screenshots/toornament-2026-06-20T195451.png
+screenshot: https://apis.io/screenshots/toornament/toornament-2026-06-20T195451.png
 security:
 - kind: authentication
   name: Toornament Authentication

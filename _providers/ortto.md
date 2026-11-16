@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,8 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-10-17'
+  score: 32.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -119,15 +127,12 @@ apis:
     question: How do I text a one-time code or order update to a customer via Ortto?
   phrasing_ops: 2
   slug: ortto-transactional-api
-artifact_total: 24
+artifact_total: 28
 asyncapis:
 - description: ''
   name: Ortto Webhooks
   slug: ortto-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Ortto Accounts API
   slug: open-ortto-accounts-api
@@ -151,27 +156,27 @@ collections:
   slug: open-ortto
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/capabilities/ortto-capability-edges.yml
+  href: https://artifacts.apis.io/ortto/capabilities/ortto-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ortto-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/agentic-access/ortto-agentic-access.yml
+  href: https://artifacts.apis.io/ortto/agentic-access/ortto-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ortto-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/security/ortto-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ortto/security/ortto-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ortto-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/security/ortto-domain-security.yml
+  href: https://artifacts.apis.io/ortto/security/ortto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ortto-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/authentication/ortto-authentication.yml
+  href: https://artifacts.apis.io/ortto/authentication/ortto-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ortto-authentication.yml
@@ -192,17 +197,17 @@ common:
   type: Documentation
   url: https://ortto.com/developers/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/plans/ortto-plans-pricing.yml
+  href: https://artifacts.apis.io/ortto/plans/ortto-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ortto-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/rate-limits/ortto-rate-limits.yml
+  href: https://artifacts.apis.io/ortto/rate-limits/ortto-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ortto-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/finops/ortto-finops.yml
+  href: https://artifacts.apis.io/ortto/finops/ortto-finops.yml
   title: ''
   type: FinOps
   url: finops/ortto-finops.yml
@@ -211,97 +216,97 @@ common:
   type: Blog
   url: https://ortto.com/blog
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/packages/ortto-packages.yml
+  href: https://artifacts.apis.io/ortto/packages/ortto-packages.yml
   title: ''
   type: Packages
   url: packages/ortto-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/packages/ortto-packages.yml
+  href: https://artifacts.apis.io/ortto/packages/ortto-packages.yml
   title: ''
   type: SDKs
   url: packages/ortto-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/well-known/ortto-well-known.yml
+  href: https://artifacts.apis.io/ortto/well-known/ortto-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ortto-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/well-known/ortto-security.txt
+  href: https://artifacts.apis.io/ortto/well-known/ortto-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ortto-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/security/ortto-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ortto/security/ortto-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/ortto-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/security/ortto-trust-center.yml
+  href: https://artifacts.apis.io/ortto/security/ortto-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ortto-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/security/ortto-trust-center.yml
+  href: https://artifacts.apis.io/ortto/security/ortto-trust-center.yml
   title: ''
   type: Compliance
   url: security/ortto-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/mcp/ortto-mcp.yml
+  href: https://artifacts.apis.io/ortto/mcp/ortto-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ortto-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/mcp/ortto-tool-crosswalk.yml
+  href: https://artifacts.apis.io/ortto/mcp/ortto-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/ortto-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/llms/ortto-llms.txt
+  href: https://artifacts.apis.io/ortto/llms/ortto-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ortto-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/conformance/ortto-conformance.yml
+  href: https://artifacts.apis.io/ortto/conformance/ortto-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ortto-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/errors/ortto-problem-types.yml
+  href: https://artifacts.apis.io/ortto/errors/ortto-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ortto-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/conventions/ortto-conventions.yml
+  href: https://artifacts.apis.io/ortto/conventions/ortto-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ortto-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/lifecycle/ortto-lifecycle.yml
+  href: https://artifacts.apis.io/ortto/lifecycle/ortto-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ortto-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/data-model/ortto-data-model.yml
+  href: https://artifacts.apis.io/ortto/data-model/ortto-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ortto-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/components/ortto-components.yml
+  href: https://artifacts.apis.io/ortto/components/ortto-components.yml
   title: ''
   type: Components
   url: components/ortto-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/asyncapi/ortto-webhooks.yml
+  href: https://artifacts.apis.io/ortto/asyncapi/ortto-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/ortto-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ortto/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/changelog/ortto-changelog.yml
+  href: https://artifacts.apis.io/ortto/changelog/ortto-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ortto-changelog.yml
@@ -346,12 +351,12 @@ common:
   type: PrivacyPolicy
   url: https://ortto.com/privacy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/collections/ortto.postman_collection.json
+  href: https://artifacts.apis.io/ortto/collections/ortto.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/ortto.postman_collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/collections/ortto.opencollection.json
+  href: https://artifacts.apis.io/ortto/collections/ortto.opencollection.json
   title: ''
   type: OpenCollection
   url: collections/ortto.opencollection.json
@@ -359,12 +364,12 @@ created: '2026-06-25'
 description: Ortto (formerly Autopilot) is a marketing automation, customer data platform (CDP), and analytics product. Its REST API at https://api.ap3api.com/v1 lets applications create and update people/contacts and accounts, send custom activity events, manage tags, retrieve campaign reports, and send transactional email and SMS, all authenticated with a custom API key via the X-Api-Key header, with EU and AU service endpoints for accounts in those data-residency regions. Ortto also runs a first-party hosted MCP server, released in version 1.27 (December 2025), giving agents a read-heavy surface over campaigns, contacts, audiences, reports, schema and knowledge-base content. Ortto publishes no machine-readable OpenAPI; the specifications here are scaffolded from its help-center API reference. Ortto announced in April 2026 that it is joining Canva.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Ortto Finops
   primary_unit: ''
-  service_category: Marketing and Customer Engagement
+  service_category: ''
   slug: ortto-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ortto.png
 layout: provider
 mcp_servers:
@@ -378,7 +383,7 @@ network: true
 overview: 'Ortto publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Activities API, Campaigns API, and 3 more. Tagged areas include Marketing Automation, CDP, Customer Data Platform, Analytics, and Email.
 
 
-  The Ortto catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Ortto catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Ortto''s developer surface includes authentication, documentation, engineering blog, changelog, getting-started guide, support, signup flow, and 37 more developer resources.'
@@ -386,25 +391,38 @@ plans:
 - name: Ortto Plans Pricing
   plan_count: 5
   slug: ortto-plans-pricing
-random_paper: 18
+random_paper: 16
 rate_limits:
 - limit_count: 14
   name: Ortto Rate Limits
   slug: ortto-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Ortto API Rules
+  rule_count: 59
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ortto-rules
 score:
-  band: strong
-  composite: 65.9
+  band: exemplar
+  composite: 67.5
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 61.0
+    artifact_dirs: 31
+    catalog_earned: 65.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 81.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 56.1
     developer_ergonomics: 67.3
     discoverability: 75.0
@@ -432,13 +450,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 30.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ortto/refs/heads/main/screenshots/ortto-2026-08-07T190955.png
+screenshot: https://apis.io/screenshots/ortto/ortto-2026-08-07T190955.png
 security:
 - kind: authentication
   name: Ortto Authentication
@@ -456,6 +474,16 @@ security:
   name: Ortto Trust Center
   slug: ortto-trust-center
   summary_line: SOC 2, ISO 27001, GDPR, CCPA, EU-US Data Privacy Framework
+skill_count: 4
+skills:
+- name: Pull campaign reporting
+  slug: ortto-pull-campaign-reporting
+- name: Send a transactional email or SMS
+  slug: ortto-send-transactional-message
+- name: Sync contacts into Ortto
+  slug: ortto-sync-contacts
+- name: Track a custom activity event
+  slug: ortto-track-custom-activity
 slug: ortto
 tags:
 - Marketing Automation

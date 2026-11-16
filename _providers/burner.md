@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'OAuth 2.0 REST API for programmatic access to Burner line management, messaging (SMS/MMS) and configuration, plus a webhook system for real-time event notifications. Requests use `Authorization: Beare'
@@ -86,52 +93,52 @@ common:
   type: StatusPage
   url: https://status.burnerapp.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/llms/burner-llms.txt
+  href: https://artifacts.apis.io/burner/llms/burner-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/burner-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/packages/burner-packages.yml
+  href: https://artifacts.apis.io/burner/packages/burner-packages.yml
   title: ''
   type: Packages
   url: packages/burner-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/packages/burner-packages.yml
+  href: https://artifacts.apis.io/burner/packages/burner-packages.yml
   title: ''
   type: SDKs
   url: packages/burner-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/authentication/burner-authentication.yml
+  href: https://artifacts.apis.io/burner/authentication/burner-authentication.yml
   title: ''
   type: Authentication
   url: authentication/burner-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/conventions/burner-conventions.yml
+  href: https://artifacts.apis.io/burner/conventions/burner-conventions.yml
   title: ''
   type: Conventions
   url: conventions/burner-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/conformance/burner-conformance.yml
+  href: https://artifacts.apis.io/burner/conformance/burner-conformance.yml
   title: ''
   type: Conformance
   url: conformance/burner-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/lifecycle/burner-lifecycle.yml
+  href: https://artifacts.apis.io/burner/lifecycle/burner-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/burner-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/asyncapi/burner-webhooks.yml
+  href: https://artifacts.apis.io/burner/asyncapi/burner-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/burner-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/mcp/burner-mcp.yml
+  href: https://artifacts.apis.io/burner/mcp/burner-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/burner-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/security/burner-domain-security.yml
+  href: https://artifacts.apis.io/burner/security/burner-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/burner-domain-security.yml
@@ -150,12 +157,12 @@ overview: 'Burner is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Burner''s developer surface includes documentation, engineering blog, pricing, support, authentication, and 15 more developer resources.'
-random_paper: 16
+random_paper: 6
 score:
   band: thin
   composite: 37.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -179,14 +186,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/burner/refs/heads/main/screenshots/burner-2026-07-25T204111.png
+screenshot: https://apis.io/screenshots/burner/burner-2026-07-25T204111.png
 security:
 - kind: authentication
   name: Burner Authentication
@@ -208,7 +215,8 @@ tags:
 - Privacy
 - Communications
 - Second Phone Number
-- Authentication
+- OAuth
 - Webhook
+- Authentication
 website: https://www.burnerapp.com
 ---

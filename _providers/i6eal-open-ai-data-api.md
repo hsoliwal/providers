@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,16 +29,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.3
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 23.2
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://i6eal.de
   baseurl_source: spec
@@ -122,11 +128,8 @@ apis:
   description: Inspectable system profiles and source-evidenced links to repositories and technical inventories only.
   name: i6eal Open AI Data API Public AI System Evidence Pass API
   slug: i6eal-open-ai-data-api-public-ai-system-evidence-pass-api
-artifact_total: 40
+artifact_total: 43
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: i6eal Open AI Data AI Enforcement Monitor Germany & EU API
   slug: open-i6eal-open-ai-data-api-ai-enforcement-monitor-germany-eu-api
@@ -188,12 +191,12 @@ common:
   type: APIsJSON
   url: https://i6eal.de/apis.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/mcp/i6eal-open-ai-data-api-mcp.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/mcp/i6eal-open-ai-data-api-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/i6eal-open-ai-data-api-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/security/i6eal-open-ai-data-api-domain-security.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/security/i6eal-open-ai-data-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/i6eal-open-ai-data-api-domain-security.yml
@@ -242,57 +245,57 @@ common:
   type: About
   url: https://i6eal.de/ueber-uns/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/llms/i6eal-open-ai-data-api-llms.txt
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/llms/i6eal-open-ai-data-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/i6eal-open-ai-data-api-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/authentication/i6eal-open-ai-data-api-authentication.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/authentication/i6eal-open-ai-data-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/i6eal-open-ai-data-api-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/conventions/i6eal-open-ai-data-api-conventions.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/conventions/i6eal-open-ai-data-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/i6eal-open-ai-data-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/errors/i6eal-open-ai-data-api-problem-types.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/errors/i6eal-open-ai-data-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/i6eal-open-ai-data-api-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/lifecycle/i6eal-open-ai-data-api-lifecycle.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/lifecycle/i6eal-open-ai-data-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/i6eal-open-ai-data-api-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/conformance/i6eal-open-ai-data-api-conformance.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/conformance/i6eal-open-ai-data-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/i6eal-open-ai-data-api-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/data-model/i6eal-open-ai-data-api-data-model.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/data-model/i6eal-open-ai-data-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/i6eal-open-ai-data-api-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/examples/i6eal-open-ai-data-api-examples.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/examples/i6eal-open-ai-data-api-examples.yml
   title: ''
   type: Examples
   url: examples/i6eal-open-ai-data-api-examples.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/packages/i6eal-open-ai-data-api-packages.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/packages/i6eal-open-ai-data-api-packages.yml
   title: ''
   type: Packages
   url: packages/i6eal-open-ai-data-api-packages.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/overlays/i6eal-open-ai-data-api-overlay.yaml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/overlays/i6eal-open-ai-data-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/i6eal-open-ai-data-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/i6eal-open-ai-data-api/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -319,26 +322,39 @@ network: true
 overview: 'i6eal Open AI Data API publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Enforcement Monitor Germany & EU API, AI Parliamentary Accountability Monitor API, Catalogue API, and 14 more. Tagged areas include Artificial Intelligence, Open Data, Public Policy, Regulations, and Compliance.
 
 
-  The i6eal Open AI Data API catalog on APIs.io includes 1 JSON-LD context.
+  The i6eal Open AI Data API catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   i6eal Open AI Data API''s developer surface includes documentation, API reference, support, engineering blog, authentication, code examples, and 20 more developer resources.'
-random_paper: 3
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: i6eal Open AI Data API API Rules
+  rule_count: 54
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 4
+  slug: i6eal-open-ai-data-api-rules
 score:
   band: developing
-  composite: 42.7
+  composite: 45.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 57.1
-    contract_governance: 4.5
-    contract_quality: 52.7
+    contract_governance: 18.2
+    contract_quality: 57.8
     developer_ergonomics: 47.0
     discoverability: 64.3
     operational_transparency: 2.6
@@ -350,13 +366,13 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 42.7
+  previous_composite: 44.4
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 17
     mcp: derived
     skills: derived
@@ -366,14 +382,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/i6eal-open-ai-data-api/refs/heads/main/screenshots/i6eal-open-ai-data-api-2026-09-02T145815.png
+screenshot: https://apis.io/screenshots/i6eal-open-ai-data-api/i6eal-open-ai-data-api-2026-09-02T145815.png
 security:
 - kind: authentication
   name: I6Eal Open Ai Data Api Authentication
@@ -383,6 +399,14 @@ security:
   name: I6Eal Open Ai Data Api Domain Security
   slug: i6eal-open-ai-data-api-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Discover i6eal datasets and resolve a distribution URL
+  slug: i6eal-open-ai-data-api-discover-datasets
+- name: Monitor EU AI Act supervision, standardisation, transparency and enforcement
+  slug: i6eal-open-ai-data-api-monitor-eu-ai-act-evidence
+- name: Track German and EU public AI procurement
+  slug: i6eal-open-ai-data-api-track-ai-procurement
 slug: i6eal-open-ai-data-api
 tags:
 - Artificial Intelligence

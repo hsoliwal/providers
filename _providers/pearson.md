@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Pearson's named API program. Historically served the LearningStudio RESTful Course APIs, the SOAP SIS APIs, an eventing surface and a Financial Times Education API via api.pearson.com. The platform wa
@@ -35,32 +52,32 @@ apis:
 artifact_total: 8
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/security/pearson-domain-security.yml
+  href: https://artifacts.apis.io/pearson/security/pearson-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pearson-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/well-known/pearson-well-known.yml
+  href: https://artifacts.apis.io/pearson/well-known/pearson-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pearson-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/authentication/pearson-authentication.yml
+  href: https://artifacts.apis.io/pearson/authentication/pearson-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pearson-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/scopes/pearson-scopes.yml
+  href: https://artifacts.apis.io/pearson/scopes/pearson-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pearson-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/conformance/pearson-conformance.yml
+  href: https://artifacts.apis.io/pearson/conformance/pearson-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pearson-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/lifecycle/pearson-lifecycle.yml
+  href: https://artifacts.apis.io/pearson/lifecycle/pearson-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pearson-lifecycle.yml
@@ -69,7 +86,7 @@ common:
   type: StatusPage
   url: https://status.pearson.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/security/pearson-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/pearson/security/pearson-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/pearson-vulnerability-disclosure.yml
@@ -78,22 +95,22 @@ common:
   type: Security
   url: https://www.pearson.com/en-us/legal-information/our-policies/responsible-security-disclosure-policy.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/packages/pearson-packages.yml
+  href: https://artifacts.apis.io/pearson/packages/pearson-packages.yml
   title: ''
   type: Packages
   url: packages/pearson-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/llms/pearson-llms.txt
+  href: https://artifacts.apis.io/pearson/llms/pearson-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pearson-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/plans/pearson-plans-pricing.yml
+  href: https://artifacts.apis.io/pearson/plans/pearson-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pearson-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/rate-limits/pearson-rate-limits.yml
+  href: https://artifacts.apis.io/pearson/rate-limits/pearson-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pearson-rate-limits.yml
@@ -165,7 +182,7 @@ plans:
 - name: Pearson Plans Pricing
   plan_count: 0
   slug: pearson-plans-pricing
-random_paper: 12
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Pearson Rate Limits
@@ -179,13 +196,13 @@ score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -193,7 +210,7 @@ score:
     developer_ergonomics: 38.1
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 34.9
+  previous_composite: 35.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -203,14 +220,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pearson/refs/heads/main/screenshots/pearson-2026-10-11T112426.png
+screenshot: https://apis.io/screenshots/pearson/pearson-2026-10-11T112426.png
 security:
 - kind: authentication
   name: Pearson Authentication

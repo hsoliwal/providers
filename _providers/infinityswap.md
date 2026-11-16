@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Standard Ethereum JSON-RPC 2.0 interface to the Bitfinity EVM mainnet (Chain ID 355110). Supports the standard eth_*, net_*, and web3_* method namespaces for reading chain state, submitting transactio
@@ -78,42 +83,42 @@ common:
   type: SignUp
   url: https://wallet.bitfinity.network/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/packages/infinityswap-packages.yml
+  href: https://artifacts.apis.io/infinityswap/packages/infinityswap-packages.yml
   title: ''
   type: Packages
   url: packages/infinityswap-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/packages/infinityswap-packages.yml
+  href: https://artifacts.apis.io/infinityswap/packages/infinityswap-packages.yml
   title: ''
   type: SDKs
   url: packages/infinityswap-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/sandbox/infinityswap-sandbox.yml
+  href: https://artifacts.apis.io/infinityswap/sandbox/infinityswap-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/infinityswap-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/authentication/infinityswap-authentication.yml
+  href: https://artifacts.apis.io/infinityswap/authentication/infinityswap-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infinityswap-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/conventions/infinityswap-conventions.yml
+  href: https://artifacts.apis.io/infinityswap/conventions/infinityswap-conventions.yml
   title: ''
   type: Conventions
   url: conventions/infinityswap-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/conformance/infinityswap-conformance.yml
+  href: https://artifacts.apis.io/infinityswap/conformance/infinityswap-conformance.yml
   title: ''
   type: Conformance
   url: conformance/infinityswap-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/llms/infinityswap-llms.txt
+  href: https://artifacts.apis.io/infinityswap/llms/infinityswap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/infinityswap-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/security/infinityswap-domain-security.yml
+  href: https://artifacts.apis.io/infinityswap/security/infinityswap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infinityswap-domain-security.yml
@@ -129,12 +134,12 @@ overview: 'InfinitySwap is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   InfinitySwap''s developer surface includes documentation, getting-started guide, engineering blog, support, signup flow, sandbox, authentication, and 10 more developer resources.'
-random_paper: 19
+random_paper: 21
 score:
   band: emerging
   composite: 18.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -157,14 +162,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/infinityswap/refs/heads/main/screenshots/infinityswap-2026-07-25T222407.png
+screenshot: https://apis.io/screenshots/infinityswap/infinityswap-2026-07-25T222407.png
 security:
 - kind: authentication
   name: Infinityswap Authentication

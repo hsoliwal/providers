@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.6
-  scored_at: '2026-10-17'
+  score: 24.2
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - baseURL: https://openapi.digifinex.com/v3
@@ -59,52 +74,52 @@ apis:
 artifact_total: 10
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/rate-limits/digifinex-rate-limits.yml
+  href: https://artifacts.apis.io/digifinex/rate-limits/digifinex-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/digifinex-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/rules/digifinex-rules.yml
+  href: https://artifacts.apis.io/digifinex/rules/digifinex-rules.yml
   title: ''
   type: Spectral
   url: rules/digifinex-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/vocabulary/digifinex-vocabulary.yml
+  href: https://artifacts.apis.io/digifinex/vocabulary/digifinex-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/digifinex-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/conventions/digifinex-conventions.yml
+  href: https://artifacts.apis.io/digifinex/conventions/digifinex-conventions.yml
   title: ''
   type: Conventions
   url: conventions/digifinex-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/authentication/digifinex-authentication.yml
+  href: https://artifacts.apis.io/digifinex/authentication/digifinex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/digifinex-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/errors/digifinex-error-codes.yml
+  href: https://artifacts.apis.io/digifinex/errors/digifinex-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/digifinex-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/conformance/digifinex-conformance.yml
+  href: https://artifacts.apis.io/digifinex/conformance/digifinex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/digifinex-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/hosts/digifinex-hosts.yml
+  href: https://artifacts.apis.io/digifinex/hosts/digifinex-hosts.yml
   title: ''
   type: Hosts
   url: hosts/digifinex-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/vendors/digifinex-vendors.yml
+  href: https://artifacts.apis.io/digifinex/vendors/digifinex-vendors.yml
   title: ''
   type: Vendors
   url: vendors/digifinex-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digifinex/refs/heads/main/security/digifinex-domain-security.yml
+  href: https://artifacts.apis.io/digifinex/security/digifinex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/digifinex-domain-security.yml
@@ -174,7 +189,7 @@ overview: 'DigiFinex is listed with 6 APIs on the [APIs.io](https://apis.io/) ne
 
 
   DigiFinex''s developer surface includes authentication, documentation, API reference, support, signup flow, and 15 more developer resources.'
-random_paper: 5
+random_paper: 15
 rate_limits:
 - limit_count: 4
   name: Digifinex Rate Limits
@@ -194,21 +209,23 @@ rules:
   slug: digifinex-rules
 score:
   band: emerging
-  composite: 25.4
+  composite: 21.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 57.8
     catalog_earned_first_party: 12.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.8
   facets:
-    access_clarity: 13.2
+    access_clarity: 6.6
     contract_governance: 22.0
     contract_quality: 11.8
-    developer_ergonomics: 33.3
+    developer_ergonomics: 22.6
     discoverability: 71.4
-    operational_transparency: 36.8
+    operational_transparency: 34.2
+  previous_composite: 25.4
   provenance:
     conformance: derived
     contracts:
@@ -223,11 +240,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/digifinex/digifinex-2026-11-03T130655.png
 security:
 - kind: authentication
   name: Digifinex Authentication

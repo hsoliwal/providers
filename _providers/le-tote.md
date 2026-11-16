@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -45,22 +52,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/LeToteTeam
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/le-tote/refs/heads/main/packages/le-tote-packages.yml
+  href: https://artifacts.apis.io/le-tote/packages/le-tote-packages.yml
   title: ''
   type: Packages
   url: packages/le-tote-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/le-tote/refs/heads/main/lifecycle/le-tote-lifecycle.yml
+  href: https://artifacts.apis.io/le-tote/lifecycle/le-tote-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/le-tote-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/le-tote/refs/heads/main/security/le-tote-domain-security.yml
+  href: https://artifacts.apis.io/le-tote/security/le-tote-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/le-tote-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/le-tote/refs/heads/main/llms/le-tote-llms.txt
+  href: https://artifacts.apis.io/le-tote/llms/le-tote-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/le-tote-llms.txt
@@ -73,12 +80,12 @@ name: LE TOTE
 nav: Providers
 network: true
 overview: LE TOTE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Defunct, Retail, Fashion, and E-Commerce.
-random_paper: 16
+random_paper: 2
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -100,8 +107,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

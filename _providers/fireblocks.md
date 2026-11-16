@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-10-17'
+  score: 38.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 159
   human_in_the_loop: 3
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 303
   slug: fireblocks-agentic-access
   summary_line: 303 operations · 159 acting · 3 human-in-the-loop
-api_count: 7
+api_count: 1
 apis:
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
@@ -77,11 +80,6 @@ apis:
   slug: fireblocks-compliance-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: Configure the Fireblocks Gas Station — auto-fuel logic that tops up native-asset balances in vault accounts so ERC-20 / SPL / contract-call transactions don't fail for lack of gas. Per-asset threshold
-  name: Fireblocks Gas Station API
-  slug: fireblocks-gas-station-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
   description: Receive push notifications when workspace events occur — TRANSACTION_CREATED, TRANSACTION_STATUS_UPDATED, VAULT_ACCOUNT_ADDED, EMBEDDED_WALLET_DEVICE_PAIRED, SMART_TRANSFER events, and more. Each even
   name: Fireblocks Webhooks API
   slug: fireblocks-webhooks-api
@@ -95,11 +93,6 @@ apis:
   description: The Blockchains & Assets API from fireblocks — 8 operation(s) for blockchains & assets.
   name: fireblocks Blockchains & Assets API
   slug: fireblocks-blockchains-assets-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
-  description: The Connected Accounts (Beta) API from fireblocks — 5 operation(s) for connected accounts (beta).
-  name: fireblocks Connected Accounts (Beta) API
-  slug: fireblocks-connected-accounts-beta-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
   description: The Contract Interactions API from fireblocks — 4 operation(s) for contract interactions.
@@ -117,11 +110,6 @@ apis:
   slug: fireblocks-cosigners-beta-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The dApp Connections API from fireblocks — 3 operation(s) for dapp connections.
-  name: fireblocks dApp Connections API
-  slug: fireblocks-dapp-connections-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
   description: The Deployed Contracts API from fireblocks — 5 operation(s) for deployed contracts.
   name: fireblocks Deployed Contracts API
   slug: fireblocks-deployed-contracts-api
@@ -137,29 +125,14 @@ apis:
   slug: fireblocks-fiat-accounts-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Fireblocks Network API from fireblocks — 11 operation(s) for fireblocks network.
-  name: fireblocks Network API
-  slug: fireblocks-fireblocks-network-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
   description: The Job Management API from fireblocks — 6 operation(s) for job management.
   name: fireblocks Job Management API
   slug: fireblocks-job-management-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Key Link API from fireblocks — 5 operation(s) for key link.
-  name: fireblocks Key Link API
-  slug: fireblocks-key-link-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
   description: The Keys (Beta) API from fireblocks — 2 operation(s) for keys (beta).
   name: fireblocks Keys (Beta) API
   slug: fireblocks-keys-beta-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
-  description: The Off Exchange API from fireblocks — 5 operation(s) for off exchange.
-  name: fireblocks Off Exchange API
-  slug: fireblocks-off-exchange-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
   description: The Payments - Flows API from fireblocks — 5 operation(s) for payments - flows.
@@ -182,19 +155,9 @@ apis:
   slug: fireblocks-policy-editor-v2-beta-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Smart Transfers API from fireblocks — 15 operation(s) for smart transfers.
-  name: fireblocks Smart Transfers API
-  slug: fireblocks-smart-transfers-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
   description: The Tags API from fireblocks — 2 operation(s) for tags.
   name: fireblocks Tags API
   slug: fireblocks-tags-api
-- baseURL: https://api.fireblocks.io/v1
-  baseurl_source: declared
-  description: The Trading (Beta) API from fireblocks — 4 operation(s) for trading (beta).
-  name: fireblocks Trading (Beta) API
-  slug: fireblocks-trading-beta-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
   description: The Webhooks V2 API from fireblocks — 9 operation(s) for webhooks v2.
@@ -202,25 +165,200 @@ apis:
   slug: fireblocks-webhooks-v2-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Whitelisted Contracts API from fireblocks — 3 operation(s) for whitelisted contracts.
-  name: fireblocks Whitelisted Contracts API
-  slug: fireblocks-whitelisted-contracts-api
+  description: The Admin Quorum API from Fireblocks — 1 operation(s) for admin quorum.
+  name: Fireblocks Admin Quorum API
+  slug: fireblocks-admin-quorum-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Whitelisted External Wallets API from fireblocks — 4 operation(s) for whitelisted external wallets.
-  name: fireblocks Whitelisted External Wallets API
-  slug: fireblocks-whitelisted-external-wallets-api
+  description: The Api User API from Fireblocks — 2 operation(s) for api user.
+  name: Fireblocks Api User API
+  slug: fireblocks-api-user-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Whitelisted Internal Wallets API from fireblocks — 5 operation(s) for whitelisted internal wallets.
-  name: fireblocks Whitelisted Internal Wallets API
-  slug: fireblocks-whitelisted-internal-wallets-api
+  description: The Approvals (Beta) API from Fireblocks — 6 operation(s) for approvals (beta).
+  name: Fireblocks Approvals (Beta) API
+  slug: fireblocks-approvals-beta-api
 - baseURL: https://api.fireblocks.io/v1
   baseurl_source: declared
-  description: The Workspace Management API from fireblocks — 13 operation(s) for workspace management.
-  name: fireblocks Workspace Management API
-  slug: fireblocks-workspace-management-api
-artifact_total: 157
+  description: The Audit Logs API from Fireblocks — 1 operation(s) for audit logs.
+  name: Fireblocks Audit Logs API
+  slug: fireblocks-audit-logs-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Blockchain link (Beta) API from Fireblocks — 6 operation(s) for blockchain link (beta).
+  name: Fireblocks Blockchain link (Beta) API
+  slug: fireblocks-blockchain-link-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Canton (Beta) API from Fireblocks — 2 operation(s) for canton (beta).
+  name: Fireblocks Canton (Beta) API
+  slug: fireblocks-canton-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Compliance Orchestrator (Beta) API from Fireblocks — 4 operation(s) for compliance orchestrator (beta).
+  name: Fireblocks Compliance Orchestrator (Beta) API
+  slug: fireblocks-compliance-orchestrator-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Compliance Screening Configuration API from Fireblocks — 2 operation(s) for compliance screening configuration.
+  name: Fireblocks Compliance Screening Configuration API
+  slug: fireblocks-compliance-screening-configuration-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Connected Accounts API from Fireblocks — 11 operation(s) for connected accounts.
+  name: Fireblocks Connected Accounts API
+  slug: fireblocks-connected-accounts-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Console User API from Fireblocks — 2 operation(s) for console user.
+  name: Fireblocks Console User API
+  slug: fireblocks-console-user-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Contacts API from Fireblocks — 1 operation(s) for contacts.
+  name: Fireblocks Contacts API
+  slug: fireblocks-contacts-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Contracts API from Fireblocks — 3 operation(s) for contracts.
+  name: Fireblocks Contracts API
+  slug: fireblocks-contracts-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Earn API from Fireblocks — 6 operation(s) for earn.
+  name: Fireblocks Earn API
+  slug: fireblocks-earn-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Embedded Wallets API from Fireblocks — 20 operation(s) for embedded wallets.
+  name: Fireblocks Embedded Wallets API
+  slug: fireblocks-embedded-wallets-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The External wallets API from Fireblocks — 4 operation(s) for external wallets.
+  name: Fireblocks External wallets API
+  slug: fireblocks-external-wallets-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Gas stations API from Fireblocks — 4 operation(s) for gas stations.
+  name: Fireblocks Gas stations API
+  slug: fireblocks-gas-stations-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Genie (Beta) API from Fireblocks — 2 operation(s) for genie (beta).
+  name: Fireblocks Genie (Beta) API
+  slug: fireblocks-genie-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Internal wallets API from Fireblocks — 5 operation(s) for internal wallets.
+  name: Fireblocks Internal wallets API
+  slug: fireblocks-internal-wallets-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Key Link (Beta) API from Fireblocks — 8 operation(s) for key link (beta).
+  name: Fireblocks Key Link (Beta) API
+  slug: fireblocks-key-link-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Network connections API from Fireblocks — 11 operation(s) for network connections.
+  name: Fireblocks Network connections API
+  slug: fireblocks-network-connections-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Off exchanges API from Fireblocks — 5 operation(s) for off exchanges.
+  name: Fireblocks Off exchanges API
+  slug: fireblocks-off-exchanges-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Onchain Data API from Fireblocks — 8 operation(s) for onchain data.
+  name: Fireblocks Onchain Data API
+  slug: fireblocks-onchain-data-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The OTA (Beta) API from Fireblocks — 1 operation(s) for ota (beta).
+  name: Fireblocks OTA (Beta) API
+  slug: fireblocks-ota-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Policy Editor V2 API from Fireblocks — 2 operation(s) for policy editor v2.
+  name: Fireblocks Policy Editor V2 API
+  slug: fireblocks-policy-editor-v2-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Reports (Beta) API from Fireblocks — 2 operation(s) for reports (beta).
+  name: Fireblocks Reports (Beta) API
+  slug: fireblocks-reports-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Reset device API from Fireblocks — 1 operation(s) for reset device.
+  name: Fireblocks Reset device API
+  slug: fireblocks-reset-device-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Security Posture Management API from Fireblocks — 2 operation(s) for security posture management.
+  name: Fireblocks Security Posture Management API
+  slug: fireblocks-security-posture-management-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Smart Transfer API from Fireblocks — 15 operation(s) for smart transfer.
+  name: Fireblocks Smart Transfer API
+  slug: fireblocks-smart-transfer-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Tempo (Beta) API from Fireblocks — 1 operation(s) for tempo (beta).
+  name: Fireblocks Tempo (Beta) API
+  slug: fireblocks-tempo-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Trading API from Fireblocks — 10 operation(s) for trading.
+  name: Fireblocks Trading API
+  slug: fireblocks-trading-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Travel Rule API from Fireblocks — 8 operation(s) for travel rule.
+  name: Fireblocks Travel Rule API
+  slug: fireblocks-travel-rule-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The TRLink API from Fireblocks — 24 operation(s) for trlink.
+  name: Fireblocks TR Link API
+  slug: fireblocks-trlink-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The User groups (Beta) API from Fireblocks — 2 operation(s) for user groups (beta).
+  name: Fireblocks User groups (Beta) API
+  slug: fireblocks-user-groups-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Users API from Fireblocks — 1 operation(s) for users.
+  name: Fireblocks Users API
+  slug: fireblocks-users-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The UTXO Management (Beta) API from Fireblocks — 4 operation(s) for utxo management (beta).
+  name: Fireblocks UTXO Management (Beta) API
+  slug: fireblocks-utxo-management-beta-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Web3 connections API from Fireblocks — 3 operation(s) for web3 connections.
+  name: Fireblocks Web3 connections API
+  slug: fireblocks-web3-connections-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The whitelist ip addresses API from Fireblocks — 1 operation(s) for whitelist ip addresses.
+  name: Fireblocks whitelist ip addresses API
+  slug: fireblocks-whitelist-ip-addresses-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Workspace API from Fireblocks — 2 operation(s) for workspace.
+  name: Fireblocks Workspace API
+  slug: fireblocks-workspace-api
+- baseURL: https://api.fireblocks.io/v1
+  baseurl_source: declared
+  description: The Workspace Status (Beta) API from Fireblocks — 1 operation(s) for workspace status (beta).
+  name: Fireblocks Workspace Status (Beta) API
+  slug: fireblocks-workspace-status-beta-api
+artifact_total: 183
 collections:
 - collection_type: postman
   name: Fireblocks Blockchains and Assets Approval Requests API
@@ -327,9 +465,6 @@ collections:
 - collection_type: postman
   name: Fireblocks Blockchains and Assets Approval Requests Workspace Management API
   slug: postman-fireblocks-workspace-management-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fireblocks Blockchains and Assets Approval Requests API
   slug: open-fireblocks-approval-requests-api
@@ -466,7 +601,7 @@ common:
   type: Website
   url: https://www.fireblocks.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fireblocks/refs/heads/main/capabilities/fireblocks-capability-edges.yml
+  href: https://artifacts.apis.io/fireblocks/capabilities/fireblocks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fireblocks-capability-edges.yml
@@ -479,22 +614,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/fireblocks/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fireblocks/refs/heads/main/agentic-access/fireblocks-agentic-access.yml
+  href: https://artifacts.apis.io/fireblocks/agentic-access/fireblocks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fireblocks-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fireblocks/refs/heads/main/security/fireblocks-trust-center.yml
+  href: https://artifacts.apis.io/fireblocks/security/fireblocks-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/fireblocks-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fireblocks/refs/heads/main/security/fireblocks-domain-security.yml
+  href: https://artifacts.apis.io/fireblocks/security/fireblocks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fireblocks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fireblocks/refs/heads/main/authentication/fireblocks-authentication.yml
+  href: https://artifacts.apis.io/fireblocks/authentication/fireblocks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fireblocks-authentication.yml
@@ -809,10 +944,10 @@ features:
 - 'Pricing tiers: Developer Sandbox (free), Essentials ($699/mo + $1M outbound), Pro (from $18k/yr), Enterprise, Enterprise+'
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Fireblocks Finops
-  primary_unit: usd_transferred
-  service_category: Digital Asset Infrastructure
+  primary_unit: workspace
+  service_category: ''
   slug: fireblocks-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fireblocks.png
@@ -836,7 +971,7 @@ modified: '2026-09-16'
 name: Fireblocks
 nav: Providers
 network: true
-overview: 'Fireblocks publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Vaults API, Transactions API, Tokenization API, and 32 more. Tagged areas include Digital Assets, Custody, Vault, Transaction, and Tokenization.
+overview: 'Fireblocks publishes 62 API contracts indexed on the [APIs.io](https://apis.io/) network, including Vaults API, Transactions API, Tokenization API, and 59 more. Tagged areas include Digital Assets, Custody, Vault, Transaction, and Tokenization.
 
 
   The Fireblocks catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -881,43 +1016,48 @@ rules:
   slug: fireblocks-jsonschema-spectral-rules
 score:
   band: exemplar
-  composite: 67.8
+  composite: 69.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 85.4
+    artifact_dirs: 20
+    catalog_earned: 82.4
     catalog_earned_first_party: 26.0
-    catalog_gap: 29.6
+    catalog_gap: 32.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.8
+  delta: -0.1
   facets:
-    access_clarity: 68.4
+    access_clarity: 63.2
     contract_governance: 54.5
-    contract_quality: 61.7
+    contract_quality: 65.6
     developer_ergonomics: 70.2
-    discoverability: 80.4
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 65.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 69.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 35
+      marker_coverage: 65.6
+      total: 90
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/fireblocks/refs/heads/main/screenshots/fireblocks-2026-06-20T181228.png
+    score: 50.0
+screenshot: https://apis.io/screenshots/fireblocks/fireblocks-2026-06-20T181228.png
 security:
 - kind: authentication
   name: Fireblocks Authentication

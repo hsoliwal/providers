@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Paid (free trial) · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.9
-  scored_at: '2026-10-17'
+  score: 40.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -43,13 +50,8 @@ agentic_access:
   operation_count: 24
   slug: cronitor-agentic-access
   summary_line: 24 operations · 12 acting
-api_count: 2
+api_count: 1
 apis:
-- baseURL: https://cronitor.io/api/monitors
-  baseurl_source: declared
-  description: The Cronitor Telemetry API API from Cronitor — 1 operation(s) for cronitor telemetry api.
-  name: Cronitor Telemetry API
-  slug: cronitor-cronitor-telemetry-api-api
 - baseURL: https://cronitor.io/api/monitors
   baseurl_source: declared
   description: The Groups API from Cronitor — 3 operation(s) for groups.
@@ -62,14 +64,76 @@ apis:
   slug: cronitor-notifications-api
 - baseURL: https://cronitor.io/api/monitors
   baseurl_source: declared
-  description: The P API from Cronitor — 1 operation(s) for p.
-  name: Cronitor P API
-  slug: cronitor-p-api
-artifact_total: 26
+  description: The aggregates API from Cronitor — 1 operation(s) for aggregates.
+  name: Cronitor Aggregates API
+  slug: cronitor-aggregates-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The environments API from Cronitor — 2 operation(s) for environments.
+  name: Cronitor Environments API
+  slug: cronitor-environments-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The integrations API from Cronitor — 4 operation(s) for integrations.
+  name: Cronitor Integrations API
+  slug: cronitor-integrations-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The issues API from Cronitor — 3 operation(s) for issues.
+  name: Cronitor Issues API
+  slug: cronitor-issues-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The keys API from Cronitor — 2 operation(s) for keys.
+  name: Cronitor Keys API
+  slug: cronitor-keys-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The maintenance_windows API from Cronitor — 2 operation(s) for maintenance_windows.
+  name: Cronitor Maintenance Windows API
+  slug: cronitor-maintenance-windows-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The metrics API from Cronitor — 1 operation(s) for metrics.
+  name: Cronitor Metrics API
+  slug: cronitor-metrics-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The monitors API from Cronitor — 5 operation(s) for monitors.
+  name: Cronitor Monitors API
+  slug: cronitor-monitors-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The search API from Cronitor — 1 operation(s) for search.
+  name: Cronitor Search API
+  slug: cronitor-search-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The site_errors API from Cronitor — 2 operation(s) for site_errors.
+  name: Cronitor Site Errors API
+  slug: cronitor-site-errors-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The sites API from Cronitor — 3 operation(s) for sites.
+  name: Cronitor Sites API
+  slug: cronitor-sites-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The statuspage_components API from Cronitor — 2 operation(s) for statuspage_components.
+  name: Cronitor Statuspage Components API
+  slug: cronitor-statuspage-components-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: The statuspages API from Cronitor — 2 operation(s) for statuspages.
+  name: Cronitor Statuspages API
+  slug: cronitor-statuspages-api
+- baseURL: https://cronitor.io/api/monitors
+  baseurl_source: declared
+  description: Send events from jobs and heartbeats. Served from cronitor.link.
+  name: Cronitor Telemetry API
+  slug: cronitor-telemetry-api
+artifact_total: 37
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cronitor Groups and Notifications Cronitor Telemetry API API
   slug: open-cronitor-cronitor-telemetry-api-api
@@ -89,23 +153,27 @@ collections:
   name: Cronitor Groups and Notifications Cronitor Telemetry API Search API
   slug: open-cronitor-search-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/cronitor/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/capabilities/cronitor-capability-edges.yml
+  href: https://artifacts.apis.io/cronitor/capabilities/cronitor-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cronitor-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/agentic-access/cronitor-agentic-access.yml
+  href: https://artifacts.apis.io/cronitor/agentic-access/cronitor-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cronitor-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/security/cronitor-domain-security.yml
+  href: https://artifacts.apis.io/cronitor/security/cronitor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cronitor-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/authentication/cronitor-authentication.yml
+  href: https://artifacts.apis.io/cronitor/authentication/cronitor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cronitor-authentication.yml
@@ -142,42 +210,42 @@ common:
   type: X
   url: https://x.com/cronitorio
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/plans/cronitor-plans-pricing.yml
+  href: https://artifacts.apis.io/cronitor/plans/cronitor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cronitor-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/rate-limits/cronitor-rate-limits.yml
+  href: https://artifacts.apis.io/cronitor/rate-limits/cronitor-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cronitor-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/finops/cronitor-finops.yml
+  href: https://artifacts.apis.io/cronitor/finops/cronitor-finops.yml
   title: ''
   type: FinOps
   url: finops/cronitor-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/vocabulary/cronitor-vocabulary.yml
+  href: https://artifacts.apis.io/cronitor/vocabulary/cronitor-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cronitor-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/json-ld/cronitor-context.jsonld
+  href: https://artifacts.apis.io/cronitor/json-ld/cronitor-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/cronitor-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/json-schema/cronitor-monitor-schema.json
+  href: https://artifacts.apis.io/cronitor/json-schema/cronitor-monitor-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cronitor-monitor-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/json-schema/cronitor-telemetry-event-schema.json
+  href: https://artifacts.apis.io/cronitor/json-schema/cronitor-telemetry-event-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cronitor-telemetry-event-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/json-schema/cronitor-notification-list-schema.json
+  href: https://artifacts.apis.io/cronitor/json-schema/cronitor-notification-list-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cronitor-notification-list-schema.json
@@ -226,18 +294,18 @@ modified: '2026-09-16'
 name: Cronitor
 nav: Providers
 network: true
-overview: 'Cronitor publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Telemetry API, Groups API, Notifications API, and 1 more. Tagged areas include Monitoring, Cron Jobs, Scheduled Tasks, Alerting, and Uptime.
+overview: 'Cronitor publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Groups API, Notifications API, Aggregates API, and 13 more. Tagged areas include Monitoring, Cron Jobs, Scheduled Tasks, Alerting, and Uptime.
 
 
   The Cronitor catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Cronitor''s developer surface includes authentication, documentation, engineering blog, pricing, and 16 more developer resources.'
+  Cronitor''s developer surface includes authentication, documentation, engineering blog, pricing, and 17 more developer resources.'
 plans:
 - name: Cronitor Plans Pricing
   plan_count: 3
   slug: cronitor-plans-pricing
-random_paper: 0
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Cronitor Rate Limits
@@ -256,30 +324,30 @@ rules:
   slug: cronitor-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 34.8
+  composite: 38.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 22
     catalog_earned: 61.8
     catalog_earned_first_party: 0.0
     catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 1.8
   facets:
     access_clarity: 18.4
     contract_governance: 23.5
-    contract_quality: 59.1
-    developer_ergonomics: 23.8
+    contract_quality: 56.4
+    developer_ergonomics: 25.0
     discoverability: 68.3
-    operational_transparency: 18.4
-  previous_composite: 43.1
+    operational_transparency: 26.3
+  previous_composite: 36.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 6
+      marker_coverage: 66.7
+      total: 24
     mcp: first-party
   regulatory:
     applies: true
@@ -287,13 +355,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cronitor/refs/heads/main/screenshots/cronitor-2026-06-20T175236.png
+    score: 33.3
+screenshot: https://apis.io/screenshots/cronitor/cronitor-2026-06-20T175236.png
 security:
 - kind: authentication
   name: Cronitor Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -127,7 +134,7 @@ apis:
   description: Site users, their reputation, badges, tags, top posts, timeline, and write surfaces.
   name: Stack Exchange Users API
   slug: stackexchange-users-api
-artifact_total: 128
+artifact_total: 127
 collections:
 - collection_type: postman
   name: Stack Exchange Access Tokens API
@@ -177,9 +184,6 @@ collections:
 - collection_type: postman
   name: Stack Exchange Access Tokens Users API
   slug: postman-stackexchange-users-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Stack Exchange Access Tokens API
   slug: open-stackexchange-access-tokens-api
@@ -246,17 +250,17 @@ common:
   type: GitHub Topics
   url: https://github.com/topics/stackexchange-api
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/json-ld/stackexchange-context.jsonld
+  href: https://artifacts.apis.io/stackexchange/json-ld/stackexchange-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/stackexchange-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/json-schema/stackexchange-question-schema.json
+  href: https://artifacts.apis.io/stackexchange/json-schema/stackexchange-question-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/stackexchange-question-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/rules/stackexchange-rules.yml
+  href: https://artifacts.apis.io/stackexchange/rules/stackexchange-rules.yml
   title: ''
   type: SpectralRules
   url: rules/stackexchange-rules.yml
@@ -265,22 +269,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/stack-exchange/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/agentic-access/stackexchange-agentic-access.yml
+  href: https://artifacts.apis.io/stackexchange/agentic-access/stackexchange-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/stackexchange-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/security/stackexchange-domain-security.yml
+  href: https://artifacts.apis.io/stackexchange/security/stackexchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stackexchange-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/authentication/stackexchange-authentication.yml
+  href: https://artifacts.apis.io/stackexchange/authentication/stackexchange-authentication.yml
   title: ''
   type: Authentication
   url: authentication/stackexchange-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/scopes/stackexchange-scopes.yml
+  href: https://artifacts.apis.io/stackexchange/scopes/stackexchange-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/stackexchange-scopes.yml
@@ -341,22 +345,22 @@ common:
   type: Tools
   url: https://github.com/StackExchange/Stacks
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/plans/stackexchange-plans-pricing.yml
+  href: https://artifacts.apis.io/stackexchange/plans/stackexchange-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/stackexchange-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/rate-limits/stackexchange-rate-limits.yml
+  href: https://artifacts.apis.io/stackexchange/rate-limits/stackexchange-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/stackexchange-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/rules/stackexchange-spectral-rules.yml
+  href: https://artifacts.apis.io/stackexchange/rules/stackexchange-spectral-rules.yml
   title: ''
   type: Rules
   url: rules/stackexchange-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/vocabulary/stackexchange-vocabulary.yml
+  href: https://artifacts.apis.io/stackexchange/vocabulary/stackexchange-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/stackexchange-vocabulary.yml
@@ -592,7 +596,7 @@ plans:
 - name: Stackexchange Plans Pricing
   plan_count: 3
   slug: stackexchange-plans-pricing
-random_paper: 5
+random_paper: 1
 rate_limits:
 - limit_count: 6
   name: Stackexchange Rate Limits
@@ -642,13 +646,13 @@ score:
   band: developing
   composite: 41.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 66.0
     catalog_earned_first_party: 0.0
     catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.7
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 27.3
@@ -656,7 +660,7 @@ score:
     developer_ergonomics: 51.2
     discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 48.0
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     contracts:
@@ -670,14 +674,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/stackexchange/refs/heads/main/screenshots/stackexchange-2026-06-20T194445.png
+screenshot: https://apis.io/screenshots/stackexchange/stackexchange-2026-06-20T194445.png
 security:
 - kind: authentication
   name: Stackexchange Authentication

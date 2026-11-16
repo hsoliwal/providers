@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-10-17'
+  score: 24.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -41,7 +45,7 @@ agentic_access:
   operation_count: 42
   slug: aerodatabox-agentic-access
   summary_line: 42 operations · 4 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://prod.api.market/api/v1/aedbx/aerodatabox
   baseurl_source: declared
@@ -83,11 +87,8 @@ apis:
   description: The Statistical API API from AeroDataBox — 8 operation(s) for statistical api.
   name: AeroDataBox Statistical API
   slug: aerodatabox-statistical-api-api
-artifact_total: 371
+artifact_total: 370
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AeroDataBox API - Aviation and Flight Aircraft API API
   slug: open-aerodatabox-aircraft-api-api
@@ -117,17 +118,17 @@ collections:
   slug: open-aerodatabox
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/plans/aerodatabox-plans-pricing.yml
+  href: https://artifacts.apis.io/aerodatabox/plans/aerodatabox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aerodatabox-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/rate-limits/aerodatabox-rate-limits.yml
+  href: https://artifacts.apis.io/aerodatabox/rate-limits/aerodatabox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aerodatabox-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/finops/aerodatabox-finops.yml
+  href: https://artifacts.apis.io/aerodatabox/finops/aerodatabox-finops.yml
   title: ''
   type: FinOps
   url: finops/aerodatabox-finops.yml
@@ -144,12 +145,12 @@ common:
   type: Website
   url: https://www.aerodatabox.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/agentic-access/aerodatabox-agentic-access.yml
+  href: https://artifacts.apis.io/aerodatabox/agentic-access/aerodatabox-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/aerodatabox-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/security/aerodatabox-domain-security.yml
+  href: https://artifacts.apis.io/aerodatabox/security/aerodatabox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aerodatabox-domain-security.yml
@@ -186,17 +187,17 @@ common:
   type: Contact
   url: https://www.aerodatabox.com/contact
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/rules/aerodatabox-spectral-rules.yml
+  href: https://artifacts.apis.io/aerodatabox/rules/aerodatabox-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/aerodatabox-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/vocabulary/aerodatabox-vocabulary.yaml
+  href: https://artifacts.apis.io/aerodatabox/vocabulary/aerodatabox-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/aerodatabox-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/json-ld/aerodatabox-context.jsonld
+  href: https://artifacts.apis.io/aerodatabox/json-ld/aerodatabox-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/aerodatabox-context.jsonld
@@ -1239,7 +1240,7 @@ plans:
 - name: Aerodatabox Plans Pricing
   plan_count: 1
   slug: aerodatabox-plans-pricing
-random_paper: 18
+random_paper: 10
 rate_limits:
 - limit_count: 2
   name: Aerodatabox Rate Limits
@@ -1270,29 +1271,29 @@ rules:
   slug: aerodatabox-spectral-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 37.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 61.0
     catalog_earned_first_party: 0.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 1.4
   facets:
     access_clarity: 36.8
     contract_governance: 27.3
-    contract_quality: 57.5
+    contract_quality: 63.0
     developer_ergonomics: 21.4
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 37.4
+  previous_composite: 36.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
   regulatory:
     applies: true
@@ -1300,13 +1301,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/aerodatabox/refs/heads/main/screenshots/aerodatabox-2026-06-20T165508.png
+screenshot: https://apis.io/screenshots/aerodatabox/aerodatabox-2026-06-20T165508.png
 security:
 - kind: domain-security
   name: Aerodatabox Domain Security

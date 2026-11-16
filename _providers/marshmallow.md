@@ -1,11 +1,11 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:Partner Gated
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -38,12 +41,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/security/marshmallow-domain-security.yml
+  href: https://artifacts.apis.io/marshmallow/security/marshmallow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/marshmallow-domain-security.yml
@@ -68,7 +71,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/marshmallowltd
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/well-known/marshmallow-openid-configuration.json
+  href: https://artifacts.apis.io/marshmallow/well-known/marshmallow-openid-configuration.json
   title: ''
   type: OpenIDConfiguration
   url: well-known/marshmallow-openid-configuration.json
@@ -77,37 +80,37 @@ common:
   type: OpenIDConnect
   url: https://auth.marshmallow.com/.well-known/openid-configuration
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/authentication/marshmallow-authentication.yml
+  href: https://artifacts.apis.io/marshmallow/authentication/marshmallow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/marshmallow-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/scopes/marshmallow-scopes.yml
+  href: https://artifacts.apis.io/marshmallow/scopes/marshmallow-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/marshmallow-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/well-known/marshmallow-well-known.yml
+  href: https://artifacts.apis.io/marshmallow/well-known/marshmallow-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/marshmallow-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/conformance/marshmallow-conformance.yml
+  href: https://artifacts.apis.io/marshmallow/conformance/marshmallow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/marshmallow-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/packages/marshmallow-packages.yml
+  href: https://artifacts.apis.io/marshmallow/packages/marshmallow-packages.yml
   title: ''
   type: Packages
   url: packages/marshmallow-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/components/marshmallow-components.yml
+  href: https://artifacts.apis.io/marshmallow/components/marshmallow-components.yml
   title: ''
   type: Components
   url: components/marshmallow-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/llms/marshmallow-llms.txt
+  href: https://artifacts.apis.io/marshmallow/llms/marshmallow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/marshmallow-llms.txt
@@ -136,7 +139,7 @@ common:
   type: TermsOfService
   url: https://www.marshmallow.com/terms-and-conditions
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/marshmallow/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -154,7 +157,7 @@ overview: 'Marshmallow is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Marshmallow''s developer surface includes engineering blog, authentication, support, and 19 more developer resources.'
-random_paper: 3
+random_paper: 15
 scopes:
 - name: Marshmallow Scopes
   scope_count: 1
@@ -164,7 +167,7 @@ score:
   band: emerging
   composite: 19.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -195,14 +198,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/marshmallow/refs/heads/main/screenshots/marshmallow-2026-07-25T230257.png
+screenshot: https://apis.io/screenshots/marshmallow/marshmallow-2026-07-25T230257.png
 security:
 - kind: authentication
   name: Marshmallow Authentication

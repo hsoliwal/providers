@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 29.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -92,9 +99,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Gitee Open API v5 (core subset) Enterprises API
   slug: open-gitee-enterprises-api
 - collection_type: open
@@ -130,22 +134,22 @@ common:
   type: Blog
   url: https://gitee.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/capabilities/gitee-capability-edges.yml
+  href: https://artifacts.apis.io/gitee/capabilities/gitee-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/gitee-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/agentic-access/gitee-agentic-access.yml
+  href: https://artifacts.apis.io/gitee/agentic-access/gitee-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gitee-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/security/gitee-domain-security.yml
+  href: https://artifacts.apis.io/gitee/security/gitee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gitee-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/authentication/gitee-authentication.yml
+  href: https://artifacts.apis.io/gitee/authentication/gitee-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gitee-authentication.yml
@@ -166,17 +170,17 @@ common:
   type: OAuth
   url: https://gitee.com/api/v5/oauth_doc
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/plans/gitee-plans-pricing.yml
+  href: https://artifacts.apis.io/gitee/plans/gitee-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gitee-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/rate-limits/gitee-rate-limits.yml
+  href: https://artifacts.apis.io/gitee/rate-limits/gitee-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gitee-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/finops/gitee-finops.yml
+  href: https://artifacts.apis.io/gitee/finops/gitee-finops.yml
   title: ''
   type: FinOps
   url: finops/gitee-finops.yml
@@ -204,7 +208,10 @@ modified: '2026-10-06'
 name: Gitee
 nav: Providers
 network: true
-overview: 'Gitee publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Enterprises API, Gists API, Issues API, and 6 more. Tagged areas include Code Hosting, Git, Git Hosting, Version Control, and Repositories.
+overview: 'Gitee publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Enterprises API, Gists API, Issues API, and 6 more. Tagged areas include Code Hosting, Version Control, Git Hosting, Repositories, and Pull Requests.
+
+
+  The Gitee catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Gitee''s developer surface includes engineering blog, authentication, documentation, signup flow, and 9 more developer resources.'
@@ -212,25 +219,38 @@ plans:
 - name: Gitee Plans Pricing
   plan_count: 4
   slug: gitee-plans-pricing
-random_paper: 20
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Gitee Rate Limits
   slug: gitee-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Gitee API Rules
+  rule_count: 65
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 2
+    warn: 5
+  slug: gitee-rules
 score:
   band: thin
-  composite: 26.7
+  composite: 28.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.0
+  delta: 0.0
   facets:
     access_clarity: 14.5
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.4
     developer_ergonomics: 32.1
     discoverability: 68.3
@@ -242,7 +262,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 33.7
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -257,13 +277,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gitee/refs/heads/main/screenshots/gitee-2026-07-25T215849.png
+screenshot: https://apis.io/screenshots/gitee/gitee-2026-07-25T215849.png
 security:
 - kind: authentication
   name: Gitee Authentication
@@ -276,9 +296,8 @@ security:
 slug: gitee
 tags:
 - Code Hosting
-- Git
-- Git Hosting
 - Version Control
+- Git Hosting
 - Repositories
 - Pull Requests
 - Issue Tracking

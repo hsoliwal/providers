@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Teranet Connect is described by Teranet as an application programming interface providing secure access to Ontario's POLARIS land registration database and the Writs database, using XML and web servic
@@ -44,27 +47,27 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/security/teranet-domain-security.yml
+  href: https://artifacts.apis.io/teranet/security/teranet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/teranet-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/authentication/teranet-authentication.yml
+  href: https://artifacts.apis.io/teranet/authentication/teranet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/teranet-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/conventions/teranet-conventions.yml
+  href: https://artifacts.apis.io/teranet/conventions/teranet-conventions.yml
   title: ''
   type: Conventions
   url: conventions/teranet-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/conformance/teranet-conformance.yml
+  href: https://artifacts.apis.io/teranet/conformance/teranet-conformance.yml
   title: ''
   type: Conformance
   url: conformance/teranet-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/lifecycle/teranet-lifecycle.yml
+  href: https://artifacts.apis.io/teranet/lifecycle/teranet-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/teranet-lifecycle.yml
@@ -73,17 +76,17 @@ common:
   type: StatusPage
   url: https://www.teraview.ca/en/system-status/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/changelog/teranet-changelog.yml
+  href: https://artifacts.apis.io/teranet/changelog/teranet-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/teranet-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/sandbox/teranet-sandbox.yml
+  href: https://artifacts.apis.io/teranet/sandbox/teranet-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/teranet-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/llms/teranet-llms.txt
+  href: https://artifacts.apis.io/teranet/llms/teranet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/teranet-llms.txt
@@ -180,12 +183,12 @@ overview: 'Teranet is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Teranet''s developer surface includes authentication, changelog, sandbox, engineering blog, support, pricing, signup flow, and 22 more developer resources.'
-random_paper: 7
+random_paper: 11
 score:
   band: emerging
   composite: 25.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -215,14 +218,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/teranet/refs/heads/main/screenshots/teranet-2026-09-02T163122.png
+screenshot: https://apis.io/screenshots/teranet/teranet-2026-09-02T163122.png
 security:
 - kind: authentication
   name: Teranet Authentication

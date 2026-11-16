@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Paid (free trial) · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
   - authentication
-  trial: true
-  try_now: true
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 23.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -82,9 +86,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: LearnWorlds Courses API
   slug: open-learnworlds-courses-api
 - collection_type: open
@@ -118,27 +119,27 @@ common:
   type: Pricing
   url: https://www.learnworlds.com/pricing/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/capabilities/learnworlds-capability-edges.yml
+  href: https://artifacts.apis.io/learnworlds/capabilities/learnworlds-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/learnworlds-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/agentic-access/learnworlds-agentic-access.yml
+  href: https://artifacts.apis.io/learnworlds/agentic-access/learnworlds-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/learnworlds-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/security/learnworlds-domain-security.yml
+  href: https://artifacts.apis.io/learnworlds/security/learnworlds-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/learnworlds-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/authentication/learnworlds-authentication.yml
+  href: https://artifacts.apis.io/learnworlds/authentication/learnworlds-authentication.yml
   title: ''
   type: Authentication
   url: authentication/learnworlds-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/scopes/learnworlds-scopes.yml
+  href: https://artifacts.apis.io/learnworlds/scopes/learnworlds-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/learnworlds-scopes.yml
@@ -155,17 +156,17 @@ common:
   type: Documentation
   url: https://www.learnworlds.dev/docs/api
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/plans/learnworlds-plans-pricing.yml
+  href: https://artifacts.apis.io/learnworlds/plans/learnworlds-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/learnworlds-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/rate-limits/learnworlds-rate-limits.yml
+  href: https://artifacts.apis.io/learnworlds/rate-limits/learnworlds-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/learnworlds-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/finops/learnworlds-finops.yml
+  href: https://artifacts.apis.io/learnworlds/finops/learnworlds-finops.yml
   title: ''
   type: FinOps
   url: finops/learnworlds-finops.yml
@@ -192,16 +193,32 @@ network: true
 overview: 'LearnWorlds publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Courses API, Enrollments API, Payments API, and 4 more. Tagged areas include Online Courses, LMS, E-Learning, Education, and Course Platform.
 
 
+  The LearnWorlds catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   LearnWorlds'' developer surface includes pricing, authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Learnworlds Plans Pricing
   plan_count: 7
   slug: learnworlds-plans-pricing
-random_paper: 9
+random_paper: 21
 rate_limits:
 - limit_count: 2
   name: Learnworlds Rate Limits
   slug: learnworlds-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: LearnWorlds API Rules
+  rule_count: 64
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 2
+  slug: learnworlds-rules
 scopes:
 - name: Learnworlds Scopes
   scope_count: 0
@@ -209,23 +226,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 30.5
+  composite: 31.1
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 51.0
+    artifact_dirs: 18
+    catalog_earned: 55.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 64.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.3
+  delta: -1.0
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 48.5
     developer_ergonomics: 14.3
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 33.8
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
@@ -239,13 +256,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/learnworlds/refs/heads/main/screenshots/learnworlds-2026-07-25T224802.png
+screenshot: https://apis.io/screenshots/learnworlds/learnworlds-2026-07-25T224802.png
 security:
 - kind: authentication
   name: Learnworlds Authentication

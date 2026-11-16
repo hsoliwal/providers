@@ -1,10 +1,23 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
     consent_identity: false
@@ -15,15 +28,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.6
-  scored_at: '2026-10-17'
+  score: 53.3
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 14
+  human_in_the_loop: 0
+  name: Postonce Agentic Access
+  operation_count: 22
+  slug: postonce-agentic-access
+  summary_line: 22 operations · 14 acting
 api_count: 1
 apis:
 - description: Public API for PostOnce paid users
@@ -54,25 +77,45 @@ apis:
   description: The Workflows API from PostOnce — 2 operation(s) for workflows.
   name: PostOnce Workflows API
   slug: postonce-workflows-api
-artifact_total: 18
+artifact_total: 21
 common:
+- group: agent
+  href: https://artifacts.apis.io/postonce/agentic-access/postonce-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/postonce-agentic-access.yml
+- group: commercial
+  href: https://artifacts.apis.io/postonce/finops/postonce-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/postonce-finops.yml
+- group: build
+  href: https://artifacts.apis.io/postonce/integrations/postonce-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/postonce-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/postonce/capabilities/postonce-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/postonce-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/rules/postonce-rules.yml
+  href: https://artifacts.apis.io/postonce/rules/postonce-rules.yml
   title: ''
   type: Spectral
   url: rules/postonce-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/json-ld/postonce-context.jsonld
+  href: https://artifacts.apis.io/postonce/json-ld/postonce-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/postonce-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/vocabulary/postonce-vocabulary.yml
+  href: https://artifacts.apis.io/postonce/vocabulary/postonce-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/postonce-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/conformance/postonce-conformance.yml
+  href: https://artifacts.apis.io/postonce/conformance/postonce-conformance.yml
   title: ''
   type: Conformance
   url: conformance/postonce-conformance.yml
@@ -85,67 +128,67 @@ common:
   type: PrivacyPolicy
   url: https://postonce.to/privacy-policy
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/rate-limits/postonce-rate-limits.yml
+  href: https://artifacts.apis.io/postonce/rate-limits/postonce-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/postonce-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/plans/postonce-plans-pricing.yml
+  href: https://artifacts.apis.io/postonce/plans/postonce-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/postonce-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/data-model/postonce-data-model.yml
+  href: https://artifacts.apis.io/postonce/data-model/postonce-data-model.yml
   title: ''
   type: DataModel
   url: data-model/postonce-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/changelog/postonce-changelog.yml
+  href: https://artifacts.apis.io/postonce/changelog/postonce-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/postonce-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/conventions/postonce-conventions.yml
+  href: https://artifacts.apis.io/postonce/conventions/postonce-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/postonce-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/conventions/postonce-conventions.yml
+  href: https://artifacts.apis.io/postonce/conventions/postonce-conventions.yml
   title: ''
   type: Conventions
   url: conventions/postonce-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/authentication/postonce-authentication.yml
+  href: https://artifacts.apis.io/postonce/authentication/postonce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/postonce-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/errors/postonce-problem-types.yml
+  href: https://artifacts.apis.io/postonce/errors/postonce-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/postonce-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/llms/postonce-llms.txt
+  href: https://artifacts.apis.io/postonce/llms/postonce-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/postonce-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/a2a/postonce-a2a.yml
+  href: https://artifacts.apis.io/postonce/a2a/postonce-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/postonce-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/well-known/postonce-well-known.yml
+  href: https://artifacts.apis.io/postonce/well-known/postonce-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/postonce-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/hosts/postonce-hosts.yml
+  href: https://artifacts.apis.io/postonce/hosts/postonce-hosts.yml
   title: ''
   type: Hosts
   url: hosts/postonce-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/vendors/postonce-vendors.yml
+  href: https://artifacts.apis.io/postonce/vendors/postonce-vendors.yml
   title: ''
   type: Vendors
   url: vendors/postonce-vendors.yml
@@ -158,7 +201,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/postoncehq
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/postonce/refs/heads/main/security/postonce-domain-security.yml
+  href: https://artifacts.apis.io/postonce/security/postonce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/postonce-domain-security.yml
@@ -205,6 +248,14 @@ coverage:
   state: gated
 created: '2026-10-14'
 description: PostOnce is a cross‑posting platform that lets creators and businesses publish content to multiple social media channels from a single dashboard. Users can connect accounts on TikTok, Instagram, YouTube, Facebook, LinkedIn, X, Threads, Bluesky, Pinterest and more, then schedule or instantly push posts across all selected networks. The service offers integrations with tools like ChatGPT, Canva, and n8n, and provides API access for automating workflows, managing media, and tracking performance.
+finops:
+- has_sources: true
+  method: derived
+  name: Postonce Finops
+  primary_unit: seat
+  service_category: ''
+  slug: postonce-finops
+  template: false
 image: https://postonce.to/og-image-v3.png?v=1
 json_schemas:
 - name: Account
@@ -241,47 +292,53 @@ overview: 'PostOnce publishes 6 API contracts indexed on the [APIs.io](https://a
   The PostOnce catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  PostOnce''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 22 more developer resources.'
+  PostOnce''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 26 more developer resources.'
 plans:
 - name: Postonce Plans Pricing
   plan_count: 6
   slug: postonce-plans-pricing
-random_paper: 17
+- name: Postonce Price Estimates
+  plan_count: 0
+  slug: postonce-price-estimates
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Postonce Rate Limits
   slug: postonce-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 53
+  effective_rule_count: 95
   extends:
   - spectral:oas
   name: PostOnce API Rules
-  rule_count: 12
+  rule_count: 54
   severity_counts:
-    error: 11
+    error: 49
     hint: 0
     info: 1
-    warn: 0
+    warn: 4
   slug: postonce-rules
 score:
-  band: strong
-  composite: 59.5
+  band: developing
+  composite: 52.3
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 77.0
+    artifact_dirs: 30
+    catalog_earned: 80.8
     catalog_earned_first_party: 20.0
-    catalog_gap: 38.0
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.7
   facets:
-    access_clarity: 76.3
-    contract_governance: 19.7
+    access_clarity: 61.8
+    contract_governance: 22.0
     contract_quality: 67.7
-    developer_ergonomics: 47.6
+    developer_ergonomics: 29.8
     discoverability: 64.3
-    operational_transparency: 42.1
+    operational_transparency: 39.5
+  previous_composite: 61.0
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
@@ -294,12 +351,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/postonce/postonce-2026-11-03T141425.png
 security:
 - kind: authentication
   name: Postonce Authentication

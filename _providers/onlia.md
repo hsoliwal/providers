@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onlia/refs/heads/main/security/onlia-domain-security.yml
+  href: https://artifacts.apis.io/onlia/security/onlia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onlia-domain-security.yml
@@ -103,17 +106,17 @@ common:
   type: FraudReporting
   url: https://www.onlia.ca/help/report-fraud
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onlia/refs/heads/main/well-known/onlia-well-known.yml
+  href: https://artifacts.apis.io/onlia/well-known/onlia-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/onlia-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onlia/refs/heads/main/llms/onlia-llms.txt
+  href: https://artifacts.apis.io/onlia/llms/onlia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/onlia-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/onlia/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/onlia/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -135,7 +138,7 @@ score:
   band: emerging
   composite: 11.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -163,14 +166,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/onlia/refs/heads/main/screenshots/onlia-2026-08-07T190358.png
+screenshot: https://apis.io/screenshots/onlia/onlia-2026-08-07T190358.png
 security:
 - kind: domain-security
   name: Onlia Domain Security

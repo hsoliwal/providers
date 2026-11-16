@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -65,27 +69,27 @@ common:
   type: PrivacyPolicy
   url: https://www.withroam.com/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/roam/refs/heads/main/llms/roam-llms.txt
+  href: https://artifacts.apis.io/roam/llms/roam-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/roam-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/roam/refs/heads/main/well-known/roam-well-known.yml
+  href: https://artifacts.apis.io/roam/well-known/roam-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/roam-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/roam/refs/heads/main/well-known/roam-security.txt
+  href: https://artifacts.apis.io/roam/well-known/roam-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/roam-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/roam/refs/heads/main/security/roam-domain-security.yml
+  href: https://artifacts.apis.io/roam/security/roam-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/roam-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/roam/refs/heads/main/security/roam-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/roam/security/roam-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/roam-vulnerability-disclosure.yml
@@ -105,7 +109,7 @@ overview: 'Roam is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Roam''s developer surface includes engineering blog, support, FAQ, getting-started guide, and 9 more developer resources.'
-random_paper: 13
+random_paper: 23
 score:
   band: minimal
   composite: 6.0
@@ -116,7 +120,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -124,21 +128,21 @@ score:
     developer_ergonomics: 4.8
     discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 5.9
+  previous_composite: 6.0
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/roam/refs/heads/main/screenshots/roam-2026-09-02T153957.png
+screenshot: https://apis.io/screenshots/roam/roam-2026-09-02T153957.png
 security:
 - kind: domain-security
   name: Roam Domain Security

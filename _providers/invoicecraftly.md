@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
+  pricing: unknown
+  public: true
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -31,7 +49,7 @@ agentic_access:
   operation_count: 3
   slug: invoicecraftly-agentic-access
   summary_line: 3 operations · 3 acting
-api_count: 5
+api_count: 2
 apis:
 - baseURL: https://invoicecraftly.com
   baseurl_source: declared
@@ -43,10 +61,10 @@ apis:
   description: EN16931-core readiness and structured XML.
   name: InvoiceCraftly Developer Document API Structured invoicing API
   slug: invoicecraftly-structured-invoicing-api
-artifact_total: 12
+artifact_total: 14
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/well-known/invoicecraftly-well-known.yml
+  href: https://artifacts.apis.io/invoicecraftly/well-known/invoicecraftly-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/invoicecraftly-well-known.yml
@@ -59,87 +77,87 @@ common:
   type: BlogRSS
   url: https://invoicecraftly.com/feed.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/capabilities/invoicecraftly-capability-edges.yml
+  href: https://artifacts.apis.io/invoicecraftly/capabilities/invoicecraftly-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/invoicecraftly-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/overlays/invoicecraftly-openapi-overlay.yml
+  href: https://artifacts.apis.io/invoicecraftly/overlays/invoicecraftly-openapi-overlay.yml
   title: ''
   type: Overlay
   url: overlays/invoicecraftly-openapi-overlay.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/agentic-access/invoicecraftly-agentic-access.yml
+  href: https://artifacts.apis.io/invoicecraftly/agentic-access/invoicecraftly-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/invoicecraftly-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/plans/invoicecraftly-plans-pricing.yml
+  href: https://artifacts.apis.io/invoicecraftly/plans/invoicecraftly-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/invoicecraftly-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/rules/invoicecraftly-rules.yml
+  href: https://artifacts.apis.io/invoicecraftly/rules/invoicecraftly-rules.yml
   title: ''
   type: Spectral
   url: rules/invoicecraftly-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/json-ld/invoicecraftly-context.jsonld
+  href: https://artifacts.apis.io/invoicecraftly/json-ld/invoicecraftly-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/invoicecraftly-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/vocabulary/invoicecraftly-vocabulary.yml
+  href: https://artifacts.apis.io/invoicecraftly/vocabulary/invoicecraftly-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/invoicecraftly-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/invoicecraftly/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/data-model/invoicecraftly-data-model.yml
+  href: https://artifacts.apis.io/invoicecraftly/data-model/invoicecraftly-data-model.yml
   title: ''
   type: DataModel
   url: data-model/invoicecraftly-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/changelog/invoicecraftly-changelog.yml
+  href: https://artifacts.apis.io/invoicecraftly/changelog/invoicecraftly-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/invoicecraftly-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/errors/invoicecraftly-problem-types.yml
+  href: https://artifacts.apis.io/invoicecraftly/errors/invoicecraftly-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/invoicecraftly-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/conformance/invoicecraftly-conformance.yml
+  href: https://artifacts.apis.io/invoicecraftly/conformance/invoicecraftly-conformance.yml
   title: ''
   type: Conformance
   url: conformance/invoicecraftly-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/llms/invoicecraftly-llms.txt
+  href: https://artifacts.apis.io/invoicecraftly/llms/invoicecraftly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/invoicecraftly-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/hosts/invoicecraftly-hosts.yml
+  href: https://artifacts.apis.io/invoicecraftly/hosts/invoicecraftly-hosts.yml
   title: ''
   type: Hosts
   url: hosts/invoicecraftly-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/vendors/invoicecraftly-vendors.yml
+  href: https://artifacts.apis.io/invoicecraftly/vendors/invoicecraftly-vendors.yml
   title: ''
   type: Vendors
   url: vendors/invoicecraftly-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/packages/invoicecraftly-packages.yml
+  href: https://artifacts.apis.io/invoicecraftly/packages/invoicecraftly-packages.yml
   title: ''
   type: SDKs
   url: packages/invoicecraftly-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/packages/invoicecraftly-packages.yml
+  href: https://artifacts.apis.io/invoicecraftly/packages/invoicecraftly-packages.yml
   title: ''
   type: Packages
   url: packages/invoicecraftly-packages.yml
@@ -164,12 +182,12 @@ common:
   type: APIReference
   url: https://invoicecraftly.com/developers/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/authentication/invoicecraftly-authentication.yml
+  href: https://artifacts.apis.io/invoicecraftly/authentication/invoicecraftly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/invoicecraftly-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/security/invoicecraftly-domain-security.yml
+  href: https://artifacts.apis.io/invoicecraftly/security/invoicecraftly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/invoicecraftly-domain-security.yml
@@ -187,6 +205,14 @@ common:
   url: https://invoicecraftly.com/contact
 created: '2026-09-25'
 description: InvoiceCraftly provides a free, no‑signup invoice generator and related tools. Users can create, edit, and export professional invoices, quotes, estimates, receipts, and credit notes in PDF, PNG, SVG, and CSV formats. The platform offers templates, company lookup, QR‑code payment integration, and multilingual support, targeting freelancers, small businesses, and enterprises seeking a simple invoicing solution without account requirements.
+finops:
+- has_sources: true
+  method: derived
+  name: Invoicecraftly Finops
+  primary_unit: ''
+  service_category: ''
+  slug: invoicecraftly-finops
+  template: true
 image: https://invoicecraftly.com/assets/social/homepage-invoice-generator-1200x630.png
 json_schemas:
 - name: PublicDocumentV1
@@ -199,7 +225,7 @@ json_schemas:
   property_count: 5
   slug: invoicecraftly-readiness-response
 - name: StructuredArtifactResponse
-  property_count: 0
+  property_count: 6
   slug: invoicecraftly-structured-artifact-response
 jsonld:
 - class_count: 15
@@ -222,7 +248,7 @@ plans:
 - name: Invoicecraftly Plans Pricing
   plan_count: 1
   slug: invoicecraftly-plans-pricing
-random_paper: 10
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -238,30 +264,30 @@ rules:
   slug: invoicecraftly-rules
 score:
   band: developing
-  composite: 48.5
+  composite: 41.9
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 73.8
+    artifact_dirs: 29
+    catalog_earned: 70.8
     catalog_earned_first_party: 8.0
-    catalog_gap: 41.3
+    catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.7
+  delta: -6.0
   facets:
-    access_clarity: 42.1
+    access_clarity: 31.6
     contract_governance: 22.0
-    contract_quality: 64.4
-    developer_ergonomics: 54.2
-    discoverability: 78.6
-    operational_transparency: 26.3
-  previous_composite: 45.8
+    contract_quality: 70.1
+    developer_ergonomics: 37.5
+    discoverability: 73.2
+    operational_transparency: 13.2
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: derived
     skills: derived
@@ -270,14 +296,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 17.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/invoicecraftly/refs/heads/main/screenshots/invoicecraftly-2026-10-11T105827.png
+screenshot: https://apis.io/screenshots/invoicecraftly/invoicecraftly-2026-10-11T105827.png
 security:
 - kind: authentication
   name: Invoicecraftly Authentication
@@ -287,6 +313,10 @@ security:
   name: Invoicecraftly Domain Security
   slug: invoicecraftly-domain-security
   summary_line: TLSv1.3
+skill_count: 1
+skills:
+- name: invoicecraftly-check-and-generate-structured-invoice
+  slug: invoicecraftly-check-and-generate-structured-invoice
 slug: invoicecraftly
 tags:
 - Invoicing
@@ -294,7 +324,6 @@ tags:
 - Free Tools
 - DocumentExport
 - Payment QR
-- No Signup
 - CSV Import
 - Company Lookup
 website: https://invoicecraftly.com/

@@ -1,8 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  gated_conflict: 'x-api-posture: private but 1 published API entry'
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The OpenID Connect / OAuth 2.0 identity provider behind Good Energy''s customer hub at account.goodenergy.co.uk. It is NOT a developer-facing API and Good Energy publishes no documentation for it — it '
@@ -43,12 +47,12 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/security/good-energy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/good-energy/security/good-energy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/good-energy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/security/good-energy-domain-security.yml
+  href: https://artifacts.apis.io/good-energy/security/good-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/good-energy-domain-security.yml
@@ -73,7 +77,7 @@ common:
   type: SignIn
   url: https://account.goodenergy.co.uk/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/well-known/good-energy-security.txt
+  href: https://artifacts.apis.io/good-energy/well-known/good-energy-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/good-energy-security.txt
@@ -82,27 +86,27 @@ common:
   type: Security
   url: https://www.goodenergy.co.uk/.well-known/security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/well-known/good-energy-well-known.yml
+  href: https://artifacts.apis.io/good-energy/well-known/good-energy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/good-energy-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/authentication/good-energy-authentication.yml
+  href: https://artifacts.apis.io/good-energy/authentication/good-energy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/good-energy-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/scopes/good-energy-scopes.yml
+  href: https://artifacts.apis.io/good-energy/scopes/good-energy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/good-energy-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/conformance/good-energy-conformance.yml
+  href: https://artifacts.apis.io/good-energy/conformance/good-energy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/good-energy-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/llms/good-energy-llms.txt
+  href: https://artifacts.apis.io/good-energy/llms/good-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/good-energy-llms.txt
@@ -147,7 +151,7 @@ overview: 'Good Energy is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Good Energy''s developer surface includes engineering blog, authentication, pricing, signup flow, support, and 16 more developer resources.'
-random_paper: 20
+random_paper: 16
 scopes:
 - name: Good Energy Scopes
   scope_count: 6
@@ -157,7 +161,7 @@ score:
   band: emerging
   composite: 25.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -188,14 +192,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 39.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/good-energy/refs/heads/main/screenshots/good-energy-2026-08-07T165801.png
+screenshot: https://apis.io/screenshots/good-energy/good-energy-2026-08-07T165801.png
 security:
 - kind: authentication
   name: Good Energy Authentication

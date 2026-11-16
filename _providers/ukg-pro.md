@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-10-17'
+  score: 21.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,9 +84,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: UKG Pro HCM Benefits API
   slug: open-ukg-pro-benefits-api
 - collection_type: open
@@ -103,22 +103,22 @@ collections:
   slug: open-ukg-pro
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/capabilities/ukg-pro-capability-edges.yml
+  href: https://artifacts.apis.io/ukg-pro/capabilities/ukg-pro-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ukg-pro-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/agentic-access/ukg-pro-agentic-access.yml
+  href: https://artifacts.apis.io/ukg-pro/agentic-access/ukg-pro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ukg-pro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/security/ukg-pro-domain-security.yml
+  href: https://artifacts.apis.io/ukg-pro/security/ukg-pro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ukg-pro-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/authentication/ukg-pro-authentication.yml
+  href: https://artifacts.apis.io/ukg-pro/authentication/ukg-pro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ukg-pro-authentication.yml
@@ -173,27 +173,43 @@ network: true
 overview: 'UKG Pro publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Benefits API, Employment API, Pay API, and 5 more. Tagged areas include HCM, Human Resources, Payroll, Benefits Administration, and Talent Management.
 
 
+  The UKG Pro catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   UKG Pro''s developer surface includes authentication, documentation, pricing, support, and 10 more developer resources.'
-random_paper: 5
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: UKG Pro API Rules
+  rule_count: 63
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ukg-pro-rules
 score:
   band: emerging
-  composite: 22.2
+  composite: 25.7
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 37.0
+    artifact_dirs: 11
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.9
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.2
-    developer_ergonomics: 23.8
+    developer_ergonomics: 33.3
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 22.2
+  previous_composite: 23.8
   provenance:
     agentic_access: derived
     contracts:
@@ -207,14 +223,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/screenshots/ukg-pro-2026-06-20T200008.png
+screenshot: https://apis.io/screenshots/ukg-pro/ukg-pro-2026-06-20T200008.png
 security:
 - kind: authentication
   name: Ukg Pro Authentication

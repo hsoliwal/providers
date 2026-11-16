@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API documentation is provided at https://docs.bloomboard.com but no machine‑readable contract was found.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bloomboard/refs/heads/main/well-known/bloomboard-status-security.txt
+  href: https://artifacts.apis.io/bloomboard/well-known/bloomboard-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bloomboard-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bloomboard/refs/heads/main/well-known/bloomboard-well-known.yml
+  href: https://artifacts.apis.io/bloomboard/well-known/bloomboard-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bloomboard-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bloomboard/refs/heads/main/hosts/bloomboard-hosts.yml
+  href: https://artifacts.apis.io/bloomboard/hosts/bloomboard-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bloomboard-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bloomboard/refs/heads/main/vendors/bloomboard-vendors.yml
+  href: https://artifacts.apis.io/bloomboard/vendors/bloomboard-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bloomboard-vendors.yml
@@ -72,7 +85,7 @@ common:
   type: Newsroom
   url: https://bloomboard.com/press
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bloomboard/refs/heads/main/security/bloomboard-domain-security.yml
+  href: https://artifacts.apis.io/bloomboard/security/bloomboard-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bloomboard-domain-security.yml
@@ -122,23 +135,23 @@ overview: 'Bloomboard is listed with 1 API on the [APIs.io](https://apis.io/) ne
 random_paper: 1
 score:
   band: emerging
-  composite: 21.8
+  composite: 14.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 30.0
     catalog_earned_first_party: 0.0
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -9.1
   facets:
-    access_clarity: 42.1
+    access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 28.6
-    discoverability: 55.4
-    operational_transparency: 15.8
-  previous_composite: 21.7
+    developer_ergonomics: 14.3
+    discoverability: 54.5
+    operational_transparency: 18.4
+  previous_composite: 23.1
   provenance:
     mcp: unknown
   regulatory:
@@ -146,15 +159,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 12.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bloomboard/refs/heads/main/screenshots/bloomboard-2026-10-11T102448.png
+screenshot: https://apis.io/screenshots/bloomboard/bloomboard-2026-10-11T102448.png
 security:
 - kind: domain-security
   name: Bloomboard Domain Security

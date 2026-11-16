@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -41,12 +45,12 @@ common:
   type: BlogRSS
   url: https://www.fmshrc.gov/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/federal-mine-safety-and-health-review-commission/refs/heads/main/security/federal-mine-safety-and-health-review-commission-domain-security.yml
+  href: https://artifacts.apis.io/federal-mine-safety-and-health-review-commission/security/federal-mine-safety-and-health-review-commission-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/federal-mine-safety-and-health-review-commission-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/federal-mine-safety-and-health-review-commission/refs/heads/main/security/federal-mine-safety-and-health-review-commission-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/federal-mine-safety-and-health-review-commission/security/federal-mine-safety-and-health-review-commission-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/federal-mine-safety-and-health-review-commission-vulnerability-disclosure.yml
@@ -55,7 +59,7 @@ common:
   type: Security
   url: https://www.fmshrc.gov/content/vulnerability-disclosure-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/federal-mine-safety-and-health-review-commission/refs/heads/main/llms/federal-mine-safety-and-health-review-commission-llms.txt
+  href: https://artifacts.apis.io/federal-mine-safety-and-health-review-commission/llms/federal-mine-safety-and-health-review-commission-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/federal-mine-safety-and-health-review-commission-llms.txt
@@ -112,7 +116,7 @@ score:
   band: minimal
   composite: 10.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -138,14 +142,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/federal-mine-safety-and-health-review-commission/refs/heads/main/screenshots/federal-mine-safety-and-health-review-commission-2026-06-20T181121.png
+screenshot: https://apis.io/screenshots/federal-mine-safety-and-health-review-commission/federal-mine-safety-and-health-review-commission-2026-06-20T181121.png
 security:
 - kind: domain-security
   name: Federal Mine Safety And Health Review Commission Domain Security

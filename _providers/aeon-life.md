@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/plans/aeon-life-plans-pricing.yml
+  href: https://artifacts.apis.io/aeon-life/plans/aeon-life-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aeon-life-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/rate-limits/aeon-life-rate-limits.yml
+  href: https://artifacts.apis.io/aeon-life/rate-limits/aeon-life-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aeon-life-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/security/aeon-life-domain-security.yml
+  href: https://artifacts.apis.io/aeon-life/security/aeon-life-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aeon-life-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/llms/aeon-life-llms.txt
+  href: https://artifacts.apis.io/aeon-life/llms/aeon-life-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aeon-life-llms.txt
@@ -123,7 +137,7 @@ plans:
 - name: Aeon Life Plans Pricing
   plan_count: 0
   slug: aeon-life-plans-pricing
-random_paper: 0
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Aeon Life Rate Limits
@@ -132,7 +146,7 @@ score:
   band: emerging
   composite: 12.8
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -160,14 +174,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/screenshots/aeon-life-2026-10-11T092924.png
+screenshot: https://apis.io/screenshots/aeon-life/aeon-life-2026-10-11T092924.png
 security:
 - kind: domain-security
   name: Aeon Life Domain Security

@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Runner API and Dashboard API for programmatically running procedures, managing runs, submitting human-review decisions, managing API keys, and subscribing to run events via webhooks.
@@ -48,17 +51,17 @@ asyncapis:
   slug: rapidfolio-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/security/rapidfolio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rapidfolio/security/rapidfolio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rapidfolio-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/security/rapidfolio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rapidfolio/security/rapidfolio-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/rapidfolio-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/security/rapidfolio-domain-security.yml
+  href: https://artifacts.apis.io/rapidfolio/security/rapidfolio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rapidfolio-domain-security.yml
@@ -103,62 +106,62 @@ common:
   type: GitHubOrganization
   url: https://github.com/rapidfolio
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/llms/rapidfolio-llms.txt
+  href: https://artifacts.apis.io/rapidfolio/llms/rapidfolio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rapidfolio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/well-known/rapidfolio-well-known.yml
+  href: https://artifacts.apis.io/rapidfolio/well-known/rapidfolio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rapidfolio-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/well-known/rapidfolio-security.txt
+  href: https://artifacts.apis.io/rapidfolio/well-known/rapidfolio-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/rapidfolio-security.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/packages/rapidfolio-packages.yml
+  href: https://artifacts.apis.io/rapidfolio/packages/rapidfolio-packages.yml
   title: ''
   type: Packages
   url: packages/rapidfolio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/packages/rapidfolio-packages.yml
+  href: https://artifacts.apis.io/rapidfolio/packages/rapidfolio-packages.yml
   title: ''
   type: SDKs
   url: packages/rapidfolio-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/authentication/rapidfolio-authentication.yml
+  href: https://artifacts.apis.io/rapidfolio/authentication/rapidfolio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rapidfolio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/conventions/rapidfolio-conventions.yml
+  href: https://artifacts.apis.io/rapidfolio/conventions/rapidfolio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rapidfolio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/conventions/rapidfolio-conventions.yml
+  href: https://artifacts.apis.io/rapidfolio/conventions/rapidfolio-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/rapidfolio-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/sandbox/rapidfolio-sandbox.yml
+  href: https://artifacts.apis.io/rapidfolio/sandbox/rapidfolio-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rapidfolio-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/asyncapi/rapidfolio-webhooks.yml
+  href: https://artifacts.apis.io/rapidfolio/asyncapi/rapidfolio-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rapidfolio-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/conformance/rapidfolio-conformance.yml
+  href: https://artifacts.apis.io/rapidfolio/conformance/rapidfolio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rapidfolio-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/conformance/rapidfolio-conformance.yml
+  href: https://artifacts.apis.io/rapidfolio/conformance/rapidfolio-conformance.yml
   title: ''
   type: Compliance
   url: conformance/rapidfolio-conformance.yml
@@ -182,13 +185,13 @@ score:
   band: developing
   composite: 40.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
@@ -203,7 +206,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.2
+  previous_composite: 40.3
   provenance:
     conformance: first-party
   regulatory:
@@ -212,14 +215,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rapidfolio/refs/heads/main/screenshots/rapidfolio-2026-08-17T124927.png
+screenshot: https://apis.io/screenshots/rapidfolio/rapidfolio-2026-08-17T124927.png
 security:
 - kind: authentication
   name: Rapidfolio Authentication

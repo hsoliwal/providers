@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -85,9 +88,6 @@ apis:
 artifact_total: 33
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Pie Insurance Quote Api Appetite API
   slug: open-pie-insurance-appetite-api
 - collection_type: open
@@ -113,22 +113,22 @@ collections:
   slug: open-pie-insurance-quotes-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pie-insurance/refs/heads/main/capabilities/pie-insurance-capability-edges.yml
+  href: https://artifacts.apis.io/pie-insurance/capabilities/pie-insurance-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pie-insurance-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pie-insurance/refs/heads/main/agentic-access/pie-insurance-agentic-access.yml
+  href: https://artifacts.apis.io/pie-insurance/agentic-access/pie-insurance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pie-insurance-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pie-insurance/refs/heads/main/security/pie-insurance-domain-security.yml
+  href: https://artifacts.apis.io/pie-insurance/security/pie-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pie-insurance-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pie-insurance/refs/heads/main/authentication/pie-insurance-authentication.yml
+  href: https://artifacts.apis.io/pie-insurance/authentication/pie-insurance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pie-insurance-authentication.yml
@@ -254,22 +254,38 @@ network: true
 overview: 'Pie Insurance publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Appetite API, ClassCodeSearch API, Eligibility API, and 5 more. Tagged areas include Insurance, Insurtech, Workers Compensation, Small Business, and Commercial Insurance.
 
 
+  The Pie Insurance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pie Insurance''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, and 23 more developer resources.'
 random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Pie Insurance API Rules
+  rule_count: 47
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 2
+    warn: 2
+  slug: pie-insurance-rules
 score:
   band: thin
-  composite: 27.3
+  composite: 29.0
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 12
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 17.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.3
     developer_ergonomics: 33.3
     discoverability: 67.9
@@ -281,7 +297,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.3
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -295,13 +311,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 14.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pie-insurance/refs/heads/main/screenshots/pie-insurance-2026-06-20T191702.png
+screenshot: https://apis.io/screenshots/pie-insurance/pie-insurance-2026-06-20T191702.png
 security:
 - kind: authentication
   name: Pie Insurance Authentication

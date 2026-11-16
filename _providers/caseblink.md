@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: CaseBlink provides AI‑powered automation for immigration law firms via its platform.
@@ -32,37 +46,37 @@ apis:
 artifact_total: 3
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/vendors/caseblink-vendors.yml
+  href: https://artifacts.apis.io/caseblink/vendors/caseblink-vendors.yml
   title: ''
   type: Vendors
   url: vendors/caseblink-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/plans/caseblink-plans-pricing.yml
+  href: https://artifacts.apis.io/caseblink/plans/caseblink-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/caseblink-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/conformance/caseblink-conformance.yml
+  href: https://artifacts.apis.io/caseblink/conformance/caseblink-conformance.yml
   title: ''
   type: Conformance
   url: conformance/caseblink-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/llms/caseblink-llms.txt
+  href: https://artifacts.apis.io/caseblink/llms/caseblink-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/caseblink-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/well-known/caseblink-help-security.txt
+  href: https://artifacts.apis.io/caseblink/well-known/caseblink-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/caseblink-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/well-known/caseblink-well-known.yml
+  href: https://artifacts.apis.io/caseblink/well-known/caseblink-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/caseblink-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/hosts/caseblink-hosts.yml
+  href: https://artifacts.apis.io/caseblink/hosts/caseblink-hosts.yml
   title: ''
   type: Hosts
   url: hosts/caseblink-hosts.yml
@@ -75,7 +89,7 @@ common:
   type: StatusPage
   url: https://status.caseblink.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caseblink/refs/heads/main/security/caseblink-domain-security.yml
+  href: https://artifacts.apis.io/caseblink/security/caseblink-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/caseblink-domain-security.yml
@@ -136,24 +150,26 @@ plans:
 - name: Caseblink Plans Pricing
   plan_count: 4
   slug: caseblink-plans-pricing
-random_paper: 16
+random_paper: 4
 score:
-  band: thin
-  composite: 31.6
+  band: emerging
+  composite: 24.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 13
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.8
   facets:
-    access_clarity: 71.1
+    access_clarity: 51.3
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 64.3
-    operational_transparency: 15.8
+    operational_transparency: 18.4
+  previous_composite: 33.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -168,13 +184,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/caseblink/caseblink-2026-11-03T123437.png
 security:
 - kind: domain-security
   name: Caseblink Domain Security

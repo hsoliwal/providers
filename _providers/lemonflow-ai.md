@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Embeddable AI chat surface for EV charging driver support. Ships as a lemonflow-chat custom element loaded from a single script tag, or as a headless iframe at /embed for teams that already operate th
@@ -47,12 +50,12 @@ common:
   type: Website
   url: https://lemonflow-ai.github.io
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/security/lemonflow-ai-trust-center.yml
+  href: https://artifacts.apis.io/lemonflow-ai/security/lemonflow-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lemonflow-ai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/security/lemonflow-ai-domain-security.yml
+  href: https://artifacts.apis.io/lemonflow-ai/security/lemonflow-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lemonflow-ai-domain-security.yml
@@ -81,7 +84,7 @@ common:
   type: StatusPage
   url: https://status.lemonflow.ai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/conformance/lemonflow-ai-conformance.yml
+  href: https://artifacts.apis.io/lemonflow-ai/conformance/lemonflow-ai-conformance.yml
   title: ''
   type: Compliance
   url: conformance/lemonflow-ai-conformance.yml
@@ -102,47 +105,47 @@ common:
   type: SignUp
   url: https://lemonflow.ai/#request-demo
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/llms/lemonflow-ai-llms.txt
+  href: https://artifacts.apis.io/lemonflow-ai/llms/lemonflow-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lemonflow-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/well-known/lemonflow-ai-well-known.yml
+  href: https://artifacts.apis.io/lemonflow-ai/well-known/lemonflow-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lemonflow-ai-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/components/lemonflow-ai-components.yml
+  href: https://artifacts.apis.io/lemonflow-ai/components/lemonflow-ai-components.yml
   title: ''
   type: Components
   url: components/lemonflow-ai-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/conventions/lemonflow-ai-conventions.yml
+  href: https://artifacts.apis.io/lemonflow-ai/conventions/lemonflow-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lemonflow-ai-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/authentication/lemonflow-ai-authentication.yml
+  href: https://artifacts.apis.io/lemonflow-ai/authentication/lemonflow-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lemonflow-ai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/errors/lemonflow-ai-problem-types.yml
+  href: https://artifacts.apis.io/lemonflow-ai/errors/lemonflow-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lemonflow-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/conformance/lemonflow-ai-conformance.yml
+  href: https://artifacts.apis.io/lemonflow-ai/conformance/lemonflow-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lemonflow-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/lifecycle/lemonflow-ai-lifecycle.yml
+  href: https://artifacts.apis.io/lemonflow-ai/lifecycle/lemonflow-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lemonflow-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/data-model/lemonflow-ai-data-model.yml
+  href: https://artifacts.apis.io/lemonflow-ai/data-model/lemonflow-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lemonflow-ai-data-model.yml
@@ -158,7 +161,7 @@ overview: 'Lemonflow is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Lemonflow''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, authentication, and 17 more developer resources.'
-random_paper: 16
+random_paper: 2
 score:
   band: thin
   composite: 33.0
@@ -194,14 +197,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lemonflow-ai/refs/heads/main/screenshots/lemonflow-ai-2026-07-25T224851.png
+screenshot: https://apis.io/screenshots/lemonflow-ai/lemonflow-ai-2026-07-25T224851.png
 security:
 - kind: authentication
   name: Lemonflow Ai Authentication

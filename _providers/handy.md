@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-10-17'
+  score: 31.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -41,7 +46,7 @@ agentic_access:
   operation_count: 10
   slug: handy-agentic-access
   summary_line: 10 operations · 6 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://partners.services.handy.com/api/v1
   baseurl_source: declared
@@ -63,15 +68,12 @@ apis:
   description: The Testing API from handy — 1 operation(s) for testing.
   name: handy Testing API
   slug: handy-testing-api
-artifact_total: 14
+artifact_total: 15
 asyncapis:
 - description: ''
   name: Handy Webhooks
   slug: handy-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Handy’s Partner Bookings API
   slug: open-handy-bookings-api
@@ -86,12 +88,12 @@ collections:
   slug: open-handy-testing-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/capabilities/handy-capability-edges.yml
+  href: https://artifacts.apis.io/handy/capabilities/handy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/handy-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/agentic-access/handy-agentic-access.yml
+  href: https://artifacts.apis.io/handy/agentic-access/handy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/handy-agentic-access.yml
@@ -124,72 +126,72 @@ common:
   type: PrivacyPolicy
   url: https://www.handy.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/authentication/handy-authentication.yml
+  href: https://artifacts.apis.io/handy/authentication/handy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/handy-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/conventions/handy-conventions.yml
+  href: https://artifacts.apis.io/handy/conventions/handy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/handy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/errors/handy-problem-types.yml
+  href: https://artifacts.apis.io/handy/errors/handy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/handy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/lifecycle/handy-lifecycle.yml
+  href: https://artifacts.apis.io/handy/lifecycle/handy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/handy-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/data-model/handy-data-model.yml
+  href: https://artifacts.apis.io/handy/data-model/handy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/handy-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/conformance/handy-conformance.yml
+  href: https://artifacts.apis.io/handy/conformance/handy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/handy-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/sandbox/handy-sandbox.yml
+  href: https://artifacts.apis.io/handy/sandbox/handy-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/handy-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/asyncapi/handy-webhooks.yml
+  href: https://artifacts.apis.io/handy/asyncapi/handy-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/handy-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/mcp/handy-mcp.yml
+  href: https://artifacts.apis.io/handy/mcp/handy-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/handy-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/handy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/llms/handy-llms.txt
+  href: https://artifacts.apis.io/handy/llms/handy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/handy-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/overlays/handy-orders-overlay.yaml
+  href: https://artifacts.apis.io/handy/overlays/handy-orders-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/handy-orders-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/well-known/handy-well-known.yml
+  href: https://artifacts.apis.io/handy/well-known/handy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/handy-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/well-known/handy-security.txt
+  href: https://artifacts.apis.io/handy/well-known/handy-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/handy-security.txt
@@ -198,12 +200,12 @@ common:
   type: Security
   url: https://www.handy.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/security/handy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/handy/security/handy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/handy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/security/handy-domain-security.yml
+  href: https://artifacts.apis.io/handy/security/handy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/handy-domain-security.yml
@@ -222,37 +224,50 @@ network: true
 overview: 'handy publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bookings API, Order Products API, Orders API, and 1 more. Tagged areas include Company, Home Services, Marketplace, Cleaning, and Handyman.
 
 
-  The handy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The handy catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   handy''s developer surface includes documentation, API reference, support, authentication, sandbox, and 22 more developer resources.'
 random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: handy API Rules
+  rule_count: 47
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 2
+  slug: handy-rules
 score:
   band: developing
-  composite: 40.9
+  composite: 43.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 54.7
+    contract_governance: 18.2
+    contract_quality: 59.6
     developer_ergonomics: 51.8
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 40.8
+  previous_composite: 42.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: derived
     skills: derived
@@ -262,13 +277,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/handy/refs/heads/main/screenshots/handy-2026-07-25T220617.png
+screenshot: https://apis.io/screenshots/handy/handy-2026-07-25T220617.png
 security:
 - kind: authentication
   name: Handy Authentication
@@ -282,6 +297,10 @@ security:
   name: Handy Vulnerability Disclosure
   slug: handy-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: Create and track a Handy installation order
+  slug: handy-create-installation-order
 slug: handy
 tags:
 - Company

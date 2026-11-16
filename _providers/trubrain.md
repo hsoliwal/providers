@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,12 +57,12 @@ common:
   type: PrivacyPolicy
   url: https://trubrain.com/pages/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trubrain/refs/heads/main/well-known/trubrain-well-known.yml
+  href: https://artifacts.apis.io/trubrain/well-known/trubrain-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/trubrain-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trubrain/refs/heads/main/security/trubrain-domain-security.yml
+  href: https://artifacts.apis.io/trubrain/security/trubrain-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trubrain-domain-security.yml
@@ -74,7 +78,7 @@ overview: 'truBrain is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   truBrain''s developer surface includes support and 5 more developer resources.'
-random_paper: 13
+random_paper: 7
 score:
   band: minimal
   composite: 10.5
@@ -100,14 +104,14 @@ score:
     regime: Health
     regime_id: health
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/trubrain/refs/heads/main/screenshots/trubrain-2026-09-02T164328.png
+screenshot: https://apis.io/screenshots/trubrain/trubrain-2026-09-02T164328.png
 security:
 - kind: domain-security
   name: Trubrain Domain Security

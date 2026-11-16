@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   - '{''url'': ''https://kasten.io/'', ''status'': 301, ''note'': ''declared website redirects to https://www.veeam.com/products/cloud/kubernetes-data-protection.html — a different registrable domain (kasten.io -> veeam.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -91,47 +95,47 @@ common:
   type: ChangeLog
   url: https://docs.kasten.io/latest/releasenotes.html
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/changelog/kasten-changelog.yml
+  href: https://artifacts.apis.io/kasten/changelog/kasten-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kasten-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/lifecycle/kasten-lifecycle.yml
+  href: https://artifacts.apis.io/kasten/lifecycle/kasten-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kasten-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/authentication/kasten-authentication.yml
+  href: https://artifacts.apis.io/kasten/authentication/kasten-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kasten-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/conventions/kasten-conventions.yml
+  href: https://artifacts.apis.io/kasten/conventions/kasten-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kasten-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/conformance/kasten-conformance.yml
+  href: https://artifacts.apis.io/kasten/conformance/kasten-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kasten-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/packages/kasten-packages.yml
+  href: https://artifacts.apis.io/kasten/packages/kasten-packages.yml
   title: ''
   type: Packages
   url: packages/kasten-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/cli/kasten-cli.yml
+  href: https://artifacts.apis.io/kasten/cli/kasten-cli.yml
   title: ''
   type: CLI
   url: cli/kasten-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/llms/kasten-llms.txt
+  href: https://artifacts.apis.io/kasten/llms/kasten-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kasten-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/security/kasten-domain-security.yml
+  href: https://artifacts.apis.io/kasten/security/kasten-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kasten-domain-security.yml
@@ -147,18 +151,18 @@ overview: 'Kasten is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Kasten''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, pricing, changelog, and 15 more developer resources.'
-random_paper: 8
+random_paper: 22
 score:
   band: thin
   composite: 27.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
@@ -166,7 +170,7 @@ score:
     developer_ergonomics: 35.7
     discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 27.5
+  previous_composite: 27.6
   provenance:
     conformance: first-party
   regulatory:
@@ -175,14 +179,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kasten/refs/heads/main/screenshots/kasten-2026-07-25T223520.png
+screenshot: https://apis.io/screenshots/kasten/kasten-2026-07-25T223520.png
 security:
 - kind: authentication
   name: Kasten Authentication

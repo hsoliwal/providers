@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -79,42 +82,42 @@ common:
   type: GitHubOrganization
   url: https://github.com/duplocloud
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/authentication/duplo-cloud-authentication.yml
+  href: https://artifacts.apis.io/duplo-cloud/authentication/duplo-cloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/duplo-cloud-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/packages/duplo-cloud-packages.yml
+  href: https://artifacts.apis.io/duplo-cloud/packages/duplo-cloud-packages.yml
   title: ''
   type: Packages
   url: packages/duplo-cloud-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/packages/duplo-cloud-packages.yml
+  href: https://artifacts.apis.io/duplo-cloud/packages/duplo-cloud-packages.yml
   title: ''
   type: SDKs
   url: packages/duplo-cloud-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/cli/duplo-cloud-cli.yml
+  href: https://artifacts.apis.io/duplo-cloud/cli/duplo-cloud-cli.yml
   title: ''
   type: CLI
   url: cli/duplo-cloud-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/mcp/duplo-cloud-mcp.yml
+  href: https://artifacts.apis.io/duplo-cloud/mcp/duplo-cloud-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/duplo-cloud-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/llms/duplo-cloud-llms.txt
+  href: https://artifacts.apis.io/duplo-cloud/llms/duplo-cloud-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/duplo-cloud-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/changelog/duplo-cloud-changelog.yml
+  href: https://artifacts.apis.io/duplo-cloud/changelog/duplo-cloud-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/duplo-cloud-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/conformance/duplo-cloud-conformance.yml
+  href: https://artifacts.apis.io/duplo-cloud/conformance/duplo-cloud-conformance.yml
   title: ''
   type: Conformance
   url: conformance/duplo-cloud-conformance.yml
@@ -123,12 +126,12 @@ common:
   type: Compliance
   url: https://duplocloud.com/solutions/security-and-compliance/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/security/duplo-cloud-trust-center.yml
+  href: https://artifacts.apis.io/duplo-cloud/security/duplo-cloud-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/duplo-cloud-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/security/duplo-cloud-domain-security.yml
+  href: https://artifacts.apis.io/duplo-cloud/security/duplo-cloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/duplo-cloud-domain-security.yml
@@ -148,12 +151,12 @@ overview: 'Duplo Cloud is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Duplo Cloud''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, support, authentication, and 14 more developer resources.'
-random_paper: 6
+random_paper: 0
 score:
   band: thin
   composite: 34.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -187,14 +190,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/duplo-cloud/refs/heads/main/screenshots/duplo-cloud-2026-07-25T212513.png
+screenshot: https://apis.io/screenshots/duplo-cloud/duplo-cloud-2026-07-25T212513.png
 security:
 - kind: authentication
   name: Duplo Cloud Authentication

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -70,50 +74,60 @@ apis:
   description: 'Orders shipped to your customers: create and release them, follow their units and picks, and handle their returns.'
   name: Byrd Shipments API
   slug: byrd-shipments-api
-artifact_total: 19
+artifact_total: 24
 common:
+- group: commercial
+  href: https://artifacts.apis.io/byrd/plans/byrd-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/byrd-plans-pricing.yml
+- group: other
+  href: https://artifacts.apis.io/byrd/capabilities/byrd-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/byrd-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/agentic-access/byrd-agentic-access.yml
+  href: https://artifacts.apis.io/byrd/agentic-access/byrd-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/byrd-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/rules/byrd-rules.yml
+  href: https://artifacts.apis.io/byrd/rules/byrd-rules.yml
   title: ''
   type: Spectral
   url: rules/byrd-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/json-ld/byrd-context.jsonld
+  href: https://artifacts.apis.io/byrd/json-ld/byrd-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/byrd-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/vocabulary/byrd-vocabulary.yml
+  href: https://artifacts.apis.io/byrd/vocabulary/byrd-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/byrd-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/data-model/byrd-data-model.yml
+  href: https://artifacts.apis.io/byrd/data-model/byrd-data-model.yml
   title: ''
   type: DataModel
   url: data-model/byrd-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/security/byrd-trust-center.yml
+  href: https://artifacts.apis.io/byrd/security/byrd-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/byrd-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/errors/byrd-problem-types.yml
+  href: https://artifacts.apis.io/byrd/errors/byrd-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/byrd-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/hosts/byrd-hosts.yml
+  href: https://artifacts.apis.io/byrd/hosts/byrd-hosts.yml
   title: ''
   type: Hosts
   url: hosts/byrd-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/vendors/byrd-vendors.yml
+  href: https://artifacts.apis.io/byrd/vendors/byrd-vendors.yml
   title: ''
   type: Vendors
   url: vendors/byrd-vendors.yml
@@ -126,7 +140,7 @@ common:
   type: Leadership
   url: https://www.getbyrd.com/team
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/rate-limits/byrd-rate-limits.yml
+  href: https://artifacts.apis.io/byrd/rate-limits/byrd-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/byrd-rate-limits.yml
@@ -135,12 +149,12 @@ common:
   type: BlogRSS
   url: https://blog.getbyrd.com/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/security/byrd-domain-security.yml
+  href: https://artifacts.apis.io/byrd/security/byrd-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/byrd-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/security/byrd-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/byrd/security/byrd-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/byrd-vulnerability-disclosure.yml
@@ -165,7 +179,7 @@ common:
   type: GettingStarted
   url: https://developers.getbyrd.com/docs/integration-overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/authentication/byrd-authentication.yml
+  href: https://artifacts.apis.io/byrd/authentication/byrd-authentication.yml
   title: ''
   type: Authentication
   url: authentication/byrd-authentication.yml
@@ -210,17 +224,25 @@ common:
   type: Website
   url: https://www.getbyrd.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/llms/byrd-llms.txt
+  href: https://artifacts.apis.io/byrd/llms/byrd-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/byrd-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/byrd/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: byrd is a European e-commerce fulfillment and third-party logistics (3PL) provider operating a network of 25+ fulfillment warehouses across Europe and the UK. It offers multichannel order fulfillment with integrations to the major shop and marketplace platforms (Shopify, Amazon, eBay, WooCommerce, Shopware, PlentyONE, Mirakl and more), inventory and warehouse management, carrier shipping, returns handling, and analytics. byrd exposes a developer REST API (developers.getbyrd.com) for programmatically managing products, deliveries, shipments, and returns, secured with JWT bearer authentication. byrd is a Speedinvest portfolio company.
+finops:
+- has_sources: true
+  method: derived
+  name: Byrd Finops
+  primary_unit: ''
+  service_category: ''
+  slug: byrd-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/byrd.png
 json_schemas:
 - name: Delivery create request
@@ -257,8 +279,12 @@ overview: 'Byrd publishes 5 API contracts indexed on the [APIs.io](https://apis.
   The Byrd catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Byrd''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 26 more developer resources.'
-random_paper: 15
+  Byrd''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 28 more developer resources.'
+plans:
+- name: Byrd Plans Pricing
+  plan_count: 1
+  slug: byrd-plans-pricing
+random_paper: 1
 rate_limits:
 - limit_count: 1
   name: Byrd Rate Limits
@@ -277,24 +303,24 @@ rules:
     warn: 3
   slug: byrd-rules
 score:
-  band: developing
-  composite: 53.1
+  band: strong
+  composite: 63.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 70.8
-    catalog_earned_first_party: 8.0
-    catalog_gap: 44.3
+    artifact_dirs: 30
+    catalog_earned: 78.8
+    catalog_earned_first_party: 16.0
+    catalog_gap: 36.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 18.6
+  delta: 6.0
   facets:
-    access_clarity: 52.6
+    access_clarity: 73.7
     contract_governance: 22.0
-    contract_quality: 67.2
-    developer_ergonomics: 39.9
-    discoverability: 76.8
-    operational_transparency: 39.5
-  previous_composite: 34.5
+    contract_quality: 72.8
+    developer_ergonomics: 58.9
+    discoverability: 75.0
+    operational_transparency: 47.4
+  previous_composite: 57.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -311,13 +337,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/byrd/refs/heads/main/screenshots/byrd-2026-07-25T204138.png
+screenshot: https://apis.io/screenshots/byrd/byrd-2026-07-25T204138.png
 security:
 - kind: authentication
   name: Byrd Authentication
@@ -335,6 +361,14 @@ security:
   name: Byrd Trust Center
   slug: byrd-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Create and fulfill an outbound shipment
+  slug: byrd-create-and-fulfill-shipment
+- name: Announce and track a customer return
+  slug: byrd-handle-return
+- name: Announce an inbound delivery to restock inventory
+  slug: byrd-restock-inbound-delivery
 slug: byrd
 tags:
 - Company

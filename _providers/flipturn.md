@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.3
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -110,11 +113,8 @@ apis:
   description: Electric vehicles and their associated access IDs.
   name: Flipturn Vehicles API
   slug: flipturn-vehicles-api
-artifact_total: 32
+artifact_total: 35
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Flipturn Access IDs API
   slug: open-flipturn-access-ids-api
@@ -156,7 +156,7 @@ collections:
   slug: open-flipturn-vehicles-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/overlays/flipturn-openapi-overlay.yaml
+  href: https://artifacts.apis.io/flipturn/overlays/flipturn-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/flipturn-openapi-overlay.yaml
@@ -181,47 +181,47 @@ common:
   type: GettingStarted
   url: https://api-docs.getflipturn.com/authorization.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/authentication/flipturn-authentication.yml
+  href: https://artifacts.apis.io/flipturn/authentication/flipturn-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flipturn-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/conventions/flipturn-conventions.yml
+  href: https://artifacts.apis.io/flipturn/conventions/flipturn-conventions.yml
   title: ''
   type: Conventions
   url: conventions/flipturn-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/rate-limits/flipturn-rate-limits.yml
+  href: https://artifacts.apis.io/flipturn/rate-limits/flipturn-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/flipturn-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/errors/flipturn-problem-types.yml
+  href: https://artifacts.apis.io/flipturn/errors/flipturn-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/flipturn-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/llms/flipturn-llms.txt
+  href: https://artifacts.apis.io/flipturn/llms/flipturn-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/flipturn-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/mcp/flipturn-mcp.yml
+  href: https://artifacts.apis.io/flipturn/mcp/flipturn-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/flipturn-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/flipturn/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/agentic-access/flipturn-agentic-access.yml
+  href: https://artifacts.apis.io/flipturn/agentic-access/flipturn-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/flipturn-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/lifecycle/flipturn-lifecycle.yml
+  href: https://artifacts.apis.io/flipturn/lifecycle/flipturn-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/flipturn-lifecycle.yml
@@ -230,7 +230,7 @@ common:
   type: StatusPage
   url: https://status.getflipturn.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/conformance/flipturn-conformance.yml
+  href: https://artifacts.apis.io/flipturn/conformance/flipturn-conformance.yml
   title: ''
   type: Conformance
   url: conformance/flipturn-conformance.yml
@@ -239,12 +239,12 @@ common:
   type: Compliance
   url: https://www.getflipturn.com/product/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/security/flipturn-trust-center.yml
+  href: https://artifacts.apis.io/flipturn/security/flipturn-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/flipturn-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/security/flipturn-domain-security.yml
+  href: https://artifacts.apis.io/flipturn/security/flipturn-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flipturn-domain-security.yml
@@ -283,31 +283,47 @@ network: true
 overview: 'Flipturn publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access IDs API, Alerts API, Charger Health API, and 10 more. Tagged areas include Company, EV Charging, Electric Vehicles, Fleet Management, and Energy.
 
 
+  The Flipturn catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Flipturn''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 19 more developer resources.'
-random_paper: 4
+random_paper: 20
 rate_limits:
 - limit_count: 2
   name: Flipturn Rate Limits
   slug: flipturn-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Flipturn API Rules
+  rule_count: 66
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 5
+  slug: flipturn-rules
 score:
   band: developing
-  composite: 46.8
+  composite: 48.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 45.0
+    artifact_dirs: 22
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 14.6
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 46.8
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -328,13 +344,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 24.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/flipturn/refs/heads/main/screenshots/flipturn-2026-07-25T214806.png
+screenshot: https://apis.io/screenshots/flipturn/flipturn-2026-07-25T214806.png
 security:
 - kind: authentication
   name: Flipturn Authentication
@@ -348,6 +364,14 @@ security:
   name: Flipturn Trust Center
   slug: flipturn-trust-center
   summary_line: SOC 2, GDPR
+skill_count: 3
+skills:
+- name: Export Flipturn charging sessions to a data warehouse
+  slug: flipturn-export-charging-sessions
+- name: Monitor Flipturn charger health, errors, and alerts
+  slug: flipturn-monitor-charger-health
+- name: Sync a fleet of vehicles and RFID cards into Flipturn
+  slug: flipturn-sync-fleet-access-ids
 slug: flipturn
 tags:
 - Company

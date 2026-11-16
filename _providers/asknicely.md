@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - scopes
   - rate-limits
@@ -29,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.7
-  scored_at: '2026-10-17'
+  score: 53.6
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: AskNicely's remote Model Context Protocol server, exposing Ask NiceAI's tools — NPS summaries, survey responses, leaderboards and more — to external AI clients such as Claude. Served per tenant at htt
@@ -68,15 +72,12 @@ apis:
   description: Trigger NPS/CSAT/5-Star surveys to contacts.
   name: AskNicely Surveys API
   slug: asknicely-surveys-api
-artifact_total: 19
+artifact_total: 27
 asyncapis:
 - description: ''
   name: Asknicely Webhooks
   slug: asknicely-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AskNicely Contacts API
   slug: open-asknicely-contacts-api
@@ -93,18 +94,23 @@ collections:
   name: AskNicely Surveys API
   slug: open-asknicely-surveys-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/asknicely/plans/asknicely-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/asknicely-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/capabilities/asknicely-capability-edges.yml
+  href: https://artifacts.apis.io/asknicely/capabilities/asknicely-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/asknicely-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/overlays/asknicely-openapi-overlay.yaml
+  href: https://artifacts.apis.io/asknicely/overlays/asknicely-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/asknicely-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/security/asknicely-trust-center.yml
+  href: https://artifacts.apis.io/asknicely/security/asknicely-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/asknicely-trust-center.yml
@@ -165,12 +171,12 @@ common:
   type: StatusPage
   url: https://status.asknicely.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/changelog/asknicely-changelog.yml
+  href: https://artifacts.apis.io/asknicely/changelog/asknicely-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/asknicely-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/lifecycle/asknicely-lifecycle.yml
+  href: https://artifacts.apis.io/asknicely/lifecycle/asknicely-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/asknicely-lifecycle.yml
@@ -179,77 +185,85 @@ common:
   type: Deprecation
   url: https://demo.asknice.ly/help/apidocs/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/authentication/asknicely-authentication.yml
+  href: https://artifacts.apis.io/asknicely/authentication/asknicely-authentication.yml
   title: ''
   type: Authentication
   url: authentication/asknicely-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/scopes/asknicely-scopes.yml
+  href: https://artifacts.apis.io/asknicely/scopes/asknicely-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/asknicely-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/conventions/asknicely-conventions.yml
+  href: https://artifacts.apis.io/asknicely/conventions/asknicely-conventions.yml
   title: ''
   type: Conventions
   url: conventions/asknicely-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/errors/asknicely-problem-types.yml
+  href: https://artifacts.apis.io/asknicely/errors/asknicely-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/asknicely-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/rate-limits/asknicely-rate-limits.yml
+  href: https://artifacts.apis.io/asknicely/rate-limits/asknicely-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/asknicely-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/conformance/asknicely-conformance.yml
+  href: https://artifacts.apis.io/asknicely/conformance/asknicely-conformance.yml
   title: ''
   type: Conformance
   url: conformance/asknicely-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/well-known/asknicely-well-known.yml
+  href: https://artifacts.apis.io/asknicely/well-known/asknicely-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/asknicely-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/security/asknicely-domain-security.yml
+  href: https://artifacts.apis.io/asknicely/security/asknicely-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/asknicely-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/data-model/asknicely-data-model.yml
+  href: https://artifacts.apis.io/asknicely/data-model/asknicely-data-model.yml
   title: ''
   type: DataModel
   url: data-model/asknicely-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/asyncapi/asknicely-webhooks.yml
+  href: https://artifacts.apis.io/asknicely/asyncapi/asknicely-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/asknicely-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/packages/asknicely-packages.yml
+  href: https://artifacts.apis.io/asknicely/packages/asknicely-packages.yml
   title: ''
   type: Packages
   url: packages/asknicely-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/components/asknicely-components.yml
+  href: https://artifacts.apis.io/asknicely/components/asknicely-components.yml
   title: ''
   type: Components
   url: components/asknicely-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/asknicely/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/llms/asknicely-llms.txt
+  href: https://artifacts.apis.io/asknicely/llms/asknicely-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/asknicely-llms.txt
 created: '2026-08-06'
 description: AskNicely is a customer-experience (CX) platform for service businesses, built around Net Promoter Score, CSAT and 5-Star surveys delivered by email, SMS, web badge and in-app. It collects frontline feedback, routes it to managers and staff through leaderboards, coaching and case management, and syndicates positive responses to review sites through its Reputation/Review Manager. Founded in Auckland, New Zealand in 2014, AskNicely serves franchise, home-services, healthcare, fitness and professional-services operators. Its public REST API (`https://{domain}.asknice.ly/api/v1`) covers contact import, survey triggering, response and statistics retrieval, unsubscribe lists and GDPR erasure, authenticated with a single `X-apikey` header, and it ships a per-tenant remote MCP server for its Ask NiceAI assistant.
+finops:
+- has_sources: true
+  method: derived
+  name: Asknicely Finops
+  primary_unit: add-on
+  service_category: ''
+  slug: asknicely-finops
+  template: false
 image: https://cdn.prod.website-files.com/5e55a51f5f18f823ee05f445/5ec34b022aca806dce613ba4_AN_logo_white.png
 layout: provider
 mcp_servers:
@@ -263,39 +277,59 @@ network: true
 overview: 'AskNicely publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contacts API, In-App Surveys API, Responses API, and 3 more. Tagged areas include Company, Customer Experience, NPS, Surveys, and Feedback.
 
 
-  The AskNicely catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The AskNicely catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  AskNicely''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
-random_paper: 17
+  AskNicely''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
+plans:
+- name: Asknicely Plans Pricing
+  plan_count: 4
+  slug: asknicely-plans-pricing
+- name: Asknicely Price Estimates
+  plan_count: 0
+  slug: asknicely-price-estimates
+random_paper: 3
 rate_limits:
 - limit_count: 4
   name: Asknicely Rate Limits
   slug: asknicely-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 113
+  extends:
+  - spectral:oas
+  name: AskNicely API Rules
+  rule_count: 72
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 7
+    warn: 6
+  slug: asknicely-rules
 scopes:
 - name: Asknicely Scopes
   scope_count: 1
   slug: asknicely-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: strong
-  composite: 61.9
+  band: exemplar
+  composite: 71.4
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 32
+    catalog_earned: 68.5
+    catalog_earned_first_party: 24.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 60.5
-    contract_governance: 4.5
+    access_clarity: 100.0
+    contract_governance: 18.2
     contract_quality: 63.7
     developer_ergonomics: 58.9
     discoverability: 66.1
     operational_transparency: 81.6
-  previous_composite: 61.9
+  previous_composite: 71.4
   provenance:
     conformance: derived
     contracts:
@@ -315,13 +349,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/asknicely/refs/heads/main/screenshots/asknicely-2026-08-07T161800.png
+screenshot: https://apis.io/screenshots/asknicely/asknicely-2026-08-07T161800.png
 security:
 - kind: authentication
   name: Asknicely Authentication
@@ -335,6 +369,18 @@ security:
   name: Asknicely Trust Center
   slug: asknicely-trust-center
   summary_line: SOC 2, ISO 27001, PCI DSS, GDPR, CSA STAR (CAIQ), New Zealand Privacy Act
+skill_count: 5
+skills:
+- name: Embed an AskNicely survey in your own app
+  slug: asknicely-embed-in-app-survey
+- name: Export AskNicely responses and read scores
+  slug: asknicely-export-responses-and-scores
+- name: Honour an AskNicely privacy or unsubscribe request
+  slug: asknicely-honor-privacy-requests
+- name: Survey an AskNicely customer
+  slug: asknicely-survey-a-customer
+- name: Bulk load AskNicely contacts and survey them
+  slug: asknicely-survey-customers-in-bulk
 slug: asknicely
 tags:
 - Company

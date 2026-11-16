@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 65.1
-  scored_at: '2026-10-17'
+  score: 67.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 82
   human_in_the_loop: 0
@@ -31,7 +49,7 @@ agentic_access:
   operation_count: 185
   slug: vaquill-ai-agentic-access
   summary_line: 185 operations · 82 acting
-api_count: 6
+api_count: 3
 apis:
 - baseURL: https://api.vaquill.ai/api/v1
   baseurl_source: declared
@@ -163,164 +181,188 @@ apis:
   description: Multi-step analyses from a fixed catalogue. Read a definition to learn what documents and inputs it takes, launch a run inside a matter, then download the artifacts it produces.
   name: Vaquill AI Workflows API
   slug: vaquill-ai-workflows-api
-artifact_total: 57
+artifact_total: 62
 asyncapis:
 - description: ''
   name: Vaquill Ai Webhooks
   slug: vaquill-ai-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/vaquill-ai/finops/vaquill-ai-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/vaquill-ai-finops.yml
+- group: auth
+  href: https://artifacts.apis.io/vaquill-ai/well-known/vaquill-ai-vaquill-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/vaquill-ai-vaquill-security.txt
+- group: auth
+  href: https://artifacts.apis.io/vaquill-ai/well-known/vaquill-ai-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/vaquill-ai-security.txt
+- group: build
+  href: https://artifacts.apis.io/vaquill-ai/integrations/vaquill-ai-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/vaquill-ai-integration-edges.yml
+- group: operate
+  title: ''
+  type: StatusPage
+  url: https://status.vaquill.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/asyncapi/vaquill-ai-webhooks.yml
+  href: https://artifacts.apis.io/vaquill-ai/asyncapi/vaquill-ai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/vaquill-ai-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/agentic-access/vaquill-ai-agentic-access.yml
+  href: https://artifacts.apis.io/vaquill-ai/agentic-access/vaquill-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/vaquill-ai-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/rate-limits/vaquill-ai-workspace-rate-limits.yml
+  href: https://artifacts.apis.io/vaquill-ai/rate-limits/vaquill-ai-workspace-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vaquill-ai-workspace-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/rate-limits/vaquill-ai-rate-limits.yml
+  href: https://artifacts.apis.io/vaquill-ai/rate-limits/vaquill-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vaquill-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/plans/vaquill-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/vaquill-ai/plans/vaquill-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vaquill-ai-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/rules/vaquill-ai-rules.yml
+  href: https://artifacts.apis.io/vaquill-ai/rules/vaquill-ai-rules.yml
   title: ''
   type: Spectral
   url: rules/vaquill-ai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/json-ld/vaquill-ai-context.jsonld
+  href: https://artifacts.apis.io/vaquill-ai/json-ld/vaquill-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/vaquill-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/vocabulary/vaquill-ai-vocabulary.yml
+  href: https://artifacts.apis.io/vaquill-ai/vocabulary/vaquill-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/vaquill-ai-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/vaquill-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/data-model/vaquill-ai-data-model.yml
+  href: https://artifacts.apis.io/vaquill-ai/data-model/vaquill-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/vaquill-ai-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/changelog/vaquill-ai-changelog.yml
+  href: https://artifacts.apis.io/vaquill-ai/changelog/vaquill-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/vaquill-ai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/conventions/vaquill-ai-conventions.yml
+  href: https://artifacts.apis.io/vaquill-ai/conventions/vaquill-ai-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/vaquill-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/conventions/vaquill-ai-conventions.yml
+  href: https://artifacts.apis.io/vaquill-ai/conventions/vaquill-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/vaquill-ai-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/sandbox/vaquill-ai-sandbox.yml
+  href: https://artifacts.apis.io/vaquill-ai/sandbox/vaquill-ai-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/vaquill-ai-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/authentication/vaquill-ai-authentication.yml
+  href: https://artifacts.apis.io/vaquill-ai/authentication/vaquill-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vaquill-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/scopes/vaquill-ai-scopes.yml
+  href: https://artifacts.apis.io/vaquill-ai/scopes/vaquill-ai-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/vaquill-ai-scopes.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/lifecycle/vaquill-ai-lifecycle.yml
+  href: https://artifacts.apis.io/vaquill-ai/lifecycle/vaquill-ai-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/vaquill-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/lifecycle/vaquill-ai-lifecycle.yml
+  href: https://artifacts.apis.io/vaquill-ai/lifecycle/vaquill-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/vaquill-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/errors/vaquill-ai-error-codes.yml
+  href: https://artifacts.apis.io/vaquill-ai/errors/vaquill-ai-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/vaquill-ai-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/errors/vaquill-ai-problem-types.yml
+  href: https://artifacts.apis.io/vaquill-ai/errors/vaquill-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/vaquill-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/conformance/vaquill-ai-conformance.yml
+  href: https://artifacts.apis.io/vaquill-ai/conformance/vaquill-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vaquill-ai-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/overlays/vaquill-ai-india-overlay.yaml
+  href: https://artifacts.apis.io/vaquill-ai/overlays/vaquill-ai-india-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/vaquill-ai-india-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/llms/vaquill-ai-llms.txt
+  href: https://artifacts.apis.io/vaquill-ai/llms/vaquill-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vaquill-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/llms/vaquill-ai-docs-llms.txt
+  href: https://artifacts.apis.io/vaquill-ai/llms/vaquill-ai-docs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vaquill-ai-docs-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/mcp/vaquill-ai-tool-crosswalk.yml
+  href: https://artifacts.apis.io/vaquill-ai/mcp/vaquill-ai-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/vaquill-ai-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/mcp/vaquill-ai-mcp.yml
+  href: https://artifacts.apis.io/vaquill-ai/mcp/vaquill-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/vaquill-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/well-known/vaquill-ai-well-known.yml
+  href: https://artifacts.apis.io/vaquill-ai/well-known/vaquill-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vaquill-ai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/hosts/vaquill-ai-hosts.yml
+  href: https://artifacts.apis.io/vaquill-ai/hosts/vaquill-ai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/vaquill-ai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/vendors/vaquill-ai-vendors.yml
+  href: https://artifacts.apis.io/vaquill-ai/vendors/vaquill-ai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/vaquill-ai-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/packages/vaquill-ai-packages.yml
+  href: https://artifacts.apis.io/vaquill-ai/packages/vaquill-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/vaquill-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/packages/vaquill-ai-packages.yml
+  href: https://artifacts.apis.io/vaquill-ai/packages/vaquill-ai-packages.yml
   title: ''
   type: Packages
   url: packages/vaquill-ai-packages.yml
@@ -389,22 +431,30 @@ common:
   type: PrivacyPolicy
   url: https://www.vaquill.ai/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/security/vaquill-ai-trust-center.yml
+  href: https://artifacts.apis.io/vaquill-ai/security/vaquill-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/vaquill-ai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/security/vaquill-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/vaquill-ai/security/vaquill-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/vaquill-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/security/vaquill-ai-domain-security.yml
+  href: https://artifacts.apis.io/vaquill-ai/security/vaquill-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vaquill-ai-domain-security.yml
 created: '2026-10-07'
 description: 'Vaquill AI is US primary law data infrastructure: a credit-metered Legal Data API over the US Code, the CFR, every state and territory statutory code, regulations, constitutions, court rules, session laws, agency guidance and executive orders (5M+ sections, 54 jurisdictions), a sibling India API over central and state legislation, a Legal Workspace API for driving matters, documents, drafting, review and compliance checks from your own backend, and a hosted MCP server (OAuth or API key) with a local uvx package and a Claude Code plugin. Three OpenAPI 3.1 documents are published on api.vaquill.ai, and the Open US Law corpus is released on GitHub under CC BY-NC 4.0.'
+finops:
+- has_sources: true
+  method: derived
+  name: Vaquill Ai Finops
+  primary_unit: ''
+  service_category: ''
+  slug: vaquill-ai-finops
+  template: true
 image: https://www.vaquill.ai/opengraph-image?e9fbcdc281d37e49
 json_schemas:
 - name: ActCitedByResponse
@@ -481,12 +531,12 @@ overview: 'Vaquill AI publishes 26 API contracts indexed on the [APIs.io](https:
   The Vaquill AI catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Vaquill AI''s developer surface includes changelog, sandbox, authentication, documentation, API reference, getting-started guide, pricing, and 43 more developer resources.'
+  Vaquill AI''s developer surface includes changelog, sandbox, authentication, documentation, API reference, getting-started guide, pricing, and 48 more developer resources.'
 plans:
 - name: Vaquill Ai Plans Pricing
   plan_count: 1
   slug: vaquill-ai-plans-pricing
-random_paper: 1
+random_paper: 5
 rate_limits:
 - limit_count: 2
   name: Vaquill Ai Rate Limits
@@ -496,16 +546,16 @@ rate_limits:
   slug: vaquill-ai-workspace-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 58
+  effective_rule_count: 114
   extends:
   - spectral:oas
   name: Vaquill AI API Rules
-  rule_count: 17
+  rule_count: 73
   severity_counts:
-    error: 13
+    error: 52
     hint: 0
-    info: 1
-    warn: 3
+    info: 5
+    warn: 16
   slug: vaquill-ai-rules
 scopes:
 - name: Vaquill Ai Scopes
@@ -513,21 +563,21 @@ scopes:
   slug: vaquill-ai-scopes
   summary_line: 38 scopes
 score:
-  band: exemplar
-  composite: 71.6
+  band: strong
+  composite: 61.9
   coverage:
-    artifact_dirs: 31
+    artifact_dirs: 35
     catalog_earned: 81.8
     catalog_earned_first_party: 16.0
     catalog_gap: 33.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.8
+  delta: -9.7
   facets:
-    access_clarity: 73.7
+    access_clarity: 51.3
     contract_governance: 22.0
-    contract_quality: 74.3
-    developer_ergonomics: 73.2
+    contract_quality: 76.9
+    developer_ergonomics: 47.0
     discoverability: 80.0
     operational_transparency: 68.4
   jurisdiction:
@@ -537,14 +587,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 70.8
+  previous_composite: 71.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
-      derived: 1
-      marker_coverage: 3.8
+      derived: 0
+      marker_coverage: 19.2
       total: 26
     mcp: first-party
     skills: derived
@@ -553,14 +603,14 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 41.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/vaquill-ai/refs/heads/main/screenshots/vaquill-ai-2026-10-11T132844.png
+screenshot: https://apis.io/screenshots/vaquill-ai/vaquill-ai-2026-10-11T132844.png
 security:
 - kind: authentication
   name: Vaquill Ai Authentication
@@ -578,6 +628,16 @@ security:
   name: Vaquill Ai Trust Center
   slug: vaquill-ai-trust-center
   summary_line: trust center published
+skill_count: 4
+skills:
+- name: vaquill-ai-citation-resolution
+  slug: vaquill-ai-citation-resolution
+- name: vaquill-ai-india-act-lookup
+  slug: vaquill-ai-india-act-lookup
+- name: vaquill-ai-law-change-watch
+  slug: vaquill-ai-law-change-watch
+- name: vaquill-ai-statute-search
+  slug: vaquill-ai-statute-search
 slug: vaquill-ai
 tags:
 - Legal

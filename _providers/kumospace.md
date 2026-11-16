@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.kumospace.com
@@ -152,11 +159,8 @@ apis:
   description: The Zones API from Kumospace — 5 operation(s) for zones.
   name: Kumospace Zones API
   slug: kumospace-zones-api
-artifact_total: 50
+artifact_total: 58
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: '@kumo/api Account API'
   slug: open-kumospace-account-api
@@ -227,28 +231,33 @@ collections:
   name: '@kumo/api Account Zones API'
   slug: open-kumospace-zones-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/kumospace/plans/kumospace-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/kumospace-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/capabilities/kumospace-capability-edges.yml
+  href: https://artifacts.apis.io/kumospace/capabilities/kumospace-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kumospace-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/skills/kumospace-capture-meeting.md
+  href: https://artifacts.apis.io/kumospace/skills/kumospace-capture-meeting.md
   title: ''
   type: AgentSkill
   url: skills/kumospace-capture-meeting.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/mcp/kumospace-mcp.yml
+  href: https://artifacts.apis.io/kumospace/mcp/kumospace-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kumospace-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/overlays/kumospace-api-overlay.yaml
+  href: https://artifacts.apis.io/kumospace/overlays/kumospace-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kumospace-api-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/security/kumospace-trust-center.yml
+  href: https://artifacts.apis.io/kumospace/security/kumospace-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kumospace-trust-center.yml
@@ -305,32 +314,40 @@ common:
   type: StatusPage
   url: https://status.kumospace.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/conformance/kumospace-conformance.yml
+  href: https://artifacts.apis.io/kumospace/conformance/kumospace-conformance.yml
   title: ''
   type: Compliance
   url: conformance/kumospace-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/conformance/kumospace-conformance.yml
+  href: https://artifacts.apis.io/kumospace/conformance/kumospace-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kumospace-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/lifecycle/kumospace-lifecycle.yml
+  href: https://artifacts.apis.io/kumospace/lifecycle/kumospace-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kumospace-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/security/kumospace-domain-security.yml
+  href: https://artifacts.apis.io/kumospace/security/kumospace-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kumospace-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/llms/kumospace-llms.txt
+  href: https://artifacts.apis.io/kumospace/llms/kumospace-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kumospace-llms.txt
 created: '2026-07-17'
 description: Kumospace is a virtual office platform for remote and distributed teams, providing a persistent spatial workspace where colleagues move between rooms and floors, with proximity-based spatial audio and video, team chat channels, scheduled and ad-hoc meetings, recordings, transcription and meeting summaries, and calendar integrations with Google Calendar and Microsoft Outlook. Spaces are visually customizable through rooms, zones, floors, walls, furniture and music tracks, and the platform integrates presence status with Zoom and Microsoft Teams. Kumospace operates a publicly reachable REST API at api.kumospace.com, documented with a Swagger UI and an OpenAPI 3.0 description covering spaces, rooms, zones, users, invitations, chat, calendar, recordings, transcription, analytics and payments. The company is headquartered in New York and is backed by Lightspeed Venture Partners.
+finops:
+- has_sources: true
+  method: derived
+  name: Kumospace Finops
+  primary_unit: user
+  service_category: ''
+  slug: kumospace-finops
+  template: false
 image: https://content.kumospace.com/hubfs/LinkPreviewImage@2x-1.png
 layout: provider
 modified: '2026-07-19'
@@ -340,22 +357,45 @@ network: true
 overview: 'Kumospace publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Analytics API, Calendar API, and 20 more. Tagged areas include Company, Virtual Office, Remote Work, Collaboration, and Video Conferencing.
 
 
-  Kumospace''s developer surface includes API reference, documentation, getting-started guide, support, engineering blog, pricing, signup flow, and 16 more developer resources.'
-random_paper: 0
+  The Kumospace catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Kumospace''s developer surface includes API reference, documentation, getting-started guide, support, engineering blog, pricing, signup flow, and 17 more developer resources.'
+plans:
+- name: Kumospace Plans Pricing
+  plan_count: 3
+  slug: kumospace-plans-pricing
+- name: Kumospace Price Estimates
+  plan_count: 0
+  slug: kumospace-price-estimates
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Kumospace API Rules
+  rule_count: 46
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 2
+    warn: 11
+  slug: kumospace-rules
 score:
-  band: developing
-  composite: 45.3
+  band: strong
+  composite: 54.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 25
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 60.5
-    contract_governance: 18.2
+    access_clarity: 100.0
+    contract_governance: 31.8
     contract_quality: 44.0
     developer_ergonomics: 49.4
     discoverability: 73.2
@@ -367,7 +407,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.2
+  previous_composite: 54.8
   provenance:
     conformance: first-party
     contracts:
@@ -389,13 +429,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kumospace/refs/heads/main/screenshots/kumospace-2026-07-25T224329.png
+screenshot: https://apis.io/screenshots/kumospace/kumospace-2026-07-25T224329.png
 security:
 - kind: authentication
   name: Kumospace Authentication
@@ -409,6 +449,18 @@ security:
   name: Kumospace Trust Center
   slug: kumospace-trust-center
   summary_line: SOC 2, HIPAA, GDPR
+skill_count: 5
+skills:
+- name: kumospace-capture-meeting
+  slug: kumospace-capture-meeting
+- name: kumospace-manage-subscription
+  slug: kumospace-manage-subscription
+- name: kumospace-onboard-members
+  slug: kumospace-onboard-members
+- name: kumospace-provision-space
+  slug: kumospace-provision-space
+- name: kumospace-workspace-analytics
+  slug: kumospace-workspace-analytics
 slug: kumospace
 tags:
 - Company

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://api.ideonapi.com
@@ -44,47 +57,47 @@ apis:
 artifact_total: 7
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/rules/ideon-rules.yml
+  href: https://artifacts.apis.io/ideon/rules/ideon-rules.yml
   title: ''
   type: Spectral
   url: rules/ideon-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/json-ld/ideon-context.jsonld
+  href: https://artifacts.apis.io/ideon/json-ld/ideon-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/ideon-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/vocabulary/ideon-vocabulary.yml
+  href: https://artifacts.apis.io/ideon/vocabulary/ideon-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/ideon-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/data-model/ideon-data-model.yml
+  href: https://artifacts.apis.io/ideon/data-model/ideon-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ideon-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/conformance/ideon-conformance.yml
+  href: https://artifacts.apis.io/ideon/conformance/ideon-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ideon-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/well-known/ideon-status-security.txt
+  href: https://artifacts.apis.io/ideon/well-known/ideon-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ideon-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/well-known/ideon-well-known.yml
+  href: https://artifacts.apis.io/ideon/well-known/ideon-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ideon-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/hosts/ideon-hosts.yml
+  href: https://artifacts.apis.io/ideon/hosts/ideon-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ideon-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/vendors/ideon-vendors.yml
+  href: https://artifacts.apis.io/ideon/vendors/ideon-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ideon-vendors.yml
@@ -101,7 +114,7 @@ common:
   type: Newsroom
   url: https://ideonapi.com/newsroom/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ideon/refs/heads/main/security/ideon-domain-security.yml
+  href: https://artifacts.apis.io/ideon/security/ideon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ideon-domain-security.yml
@@ -177,7 +190,7 @@ overview: 'Ideon is listed with 3 APIs on the [APIs.io](https://apis.io/) networ
 
 
   Ideon''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 17 more developer resources.'
-random_paper: 21
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -192,22 +205,24 @@ rules:
     warn: 1
   slug: ideon-rules
 score:
-  band: thin
-  composite: 34.4
+  band: emerging
+  composite: 24.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 51.2
     catalog_earned_first_party: 0.0
     catalog_gap: 63.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.2
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 19.5
-    developer_ergonomics: 45.2
-    discoverability: 64.3
-    operational_transparency: 26.3
+    developer_ergonomics: 22.6
+    discoverability: 63.4
+    operational_transparency: 13.2
+  previous_composite: 34.4
   provenance:
     conformance: derived
     contracts:
@@ -221,13 +236,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 16.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/ideon/ideon-2026-11-03T133623.png
 security:
 - kind: domain-security
   name: Ideon Domain Security

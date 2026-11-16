@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
-  onboarding: unknown
+  label: Open access
+  onboarding: open
   pricing: unknown
-  public: false
-  source: []
+  public: true
+  source:
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eqt/refs/heads/main/security/eqt-domain-security.yml
+  href: https://artifacts.apis.io/eqt/security/eqt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eqt-domain-security.yml
@@ -62,17 +67,17 @@ common:
   type: X-CustomerPortal
   url: https://customers.equitransmidstream.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eqt/refs/heads/main/well-known/eqt-well-known.yml
+  href: https://artifacts.apis.io/eqt/well-known/eqt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/eqt-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eqt/refs/heads/main/conformance/eqt-conformance.yml
+  href: https://artifacts.apis.io/eqt/conformance/eqt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/eqt-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eqt/refs/heads/main/llms/eqt-llms.txt
+  href: https://artifacts.apis.io/eqt/llms/eqt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/eqt-llms.txt
@@ -142,12 +147,12 @@ press:
 - date: ''
   title: EQT Introduces AI Infrastructure Strategy to Help Build ...
   url: https://www.prnewswire.com/news-releases/eqt-introduces-ai-infrastructure-strategy-to-help-build-the-foundation-of-the-ai-economy-302748973.html
-random_paper: 0
+random_paper: 18
 score:
   band: emerging
   composite: 12.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -177,14 +182,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/eqt/refs/heads/main/screenshots/eqt-2026-06-20T180803.png
+screenshot: https://apis.io/screenshots/eqt/eqt-2026-06-20T180803.png
 security:
 - kind: authentication
   name: Eqt Authentication

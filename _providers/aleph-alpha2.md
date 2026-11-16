@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The PhariaInference HTTP API provides access to Aleph Alpha's specialized language models for text completion, chat completions, embeddings, semantic (symmetric and asymmetric) search, tokenization/de
@@ -43,7 +46,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/security/aleph-alpha2-domain-security.yml
+  href: https://artifacts.apis.io/aleph-alpha2/security/aleph-alpha2-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aleph-alpha2-domain-security.yml
@@ -92,27 +95,27 @@ common:
   type: TermsOfService
   url: https://aleph-alpha.com/impressum/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/packages/aleph-alpha2-packages.yml
+  href: https://artifacts.apis.io/aleph-alpha2/packages/aleph-alpha2-packages.yml
   title: ''
   type: Packages
   url: packages/aleph-alpha2-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/packages/aleph-alpha2-packages.yml
+  href: https://artifacts.apis.io/aleph-alpha2/packages/aleph-alpha2-packages.yml
   title: ''
   type: SDKs
   url: packages/aleph-alpha2-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/authentication/aleph-alpha2-authentication.yml
+  href: https://artifacts.apis.io/aleph-alpha2/authentication/aleph-alpha2-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aleph-alpha2-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/well-known/aleph-alpha2-well-known.yml
+  href: https://artifacts.apis.io/aleph-alpha2/well-known/aleph-alpha2-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/aleph-alpha2-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/llms/aleph-alpha2-llms.txt
+  href: https://artifacts.apis.io/aleph-alpha2/llms/aleph-alpha2-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aleph-alpha2-llms.txt
@@ -128,7 +131,7 @@ overview: 'Aleph Alpha2 is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   Aleph Alpha2''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 10 more developer resources.'
-random_paper: 13
+random_paper: 7
 score:
   band: emerging
   composite: 25.1
@@ -139,7 +142,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
@@ -155,21 +158,21 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 25.5
+  previous_composite: 25.1
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aleph-alpha2/refs/heads/main/screenshots/aleph-alpha2-2026-07-25T195554.png
+screenshot: https://apis.io/screenshots/aleph-alpha2/aleph-alpha2-2026-07-25T195554.png
 security:
 - kind: authentication
   name: Aleph Alpha2 Authentication

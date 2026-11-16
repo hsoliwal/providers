@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 47
   human_in_the_loop: 0
@@ -124,15 +127,12 @@ apis:
   description: The User Reports API from Sublime Security — 1 operation(s) for user reports.
   name: Sublime Security User Reports API
   slug: sublime-security-user-reports-api
-artifact_total: 38
+artifact_total: 41
 asyncapis:
 - description: ''
   name: Sublime Security Webhooks
   slug: sublime-security-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Multi-Tenancy API (BETA) BinExplode API
   slug: open-sublime-security-binexplode-api
@@ -183,7 +183,7 @@ collections:
   slug: open-sublime-security-user-reports-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/capabilities/sublime-security-capability-edges.yml
+  href: https://artifacts.apis.io/sublime-security/capabilities/sublime-security-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sublime-security-capability-edges.yml
@@ -224,82 +224,82 @@ common:
   type: TrustCenter
   url: https://trust.sublime.security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/authentication/sublime-security-authentication.yml
+  href: https://artifacts.apis.io/sublime-security/authentication/sublime-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sublime-security-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/security/sublime-security-domain-security.yml
+  href: https://artifacts.apis.io/sublime-security/security/sublime-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sublime-security-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/agentic-access/sublime-security-agentic-access.yml
+  href: https://artifacts.apis.io/sublime-security/agentic-access/sublime-security-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sublime-security-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/packages/sublime-security-packages.yml
+  href: https://artifacts.apis.io/sublime-security/packages/sublime-security-packages.yml
   title: ''
   type: Packages
   url: packages/sublime-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/packages/sublime-security-packages.yml
+  href: https://artifacts.apis.io/sublime-security/packages/sublime-security-packages.yml
   title: ''
   type: SDKs
   url: packages/sublime-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/cli/sublime-security-cli.yml
+  href: https://artifacts.apis.io/sublime-security/cli/sublime-security-cli.yml
   title: ''
   type: CLI
   url: cli/sublime-security-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/mcp/sublime-security-mcp.yml
+  href: https://artifacts.apis.io/sublime-security/mcp/sublime-security-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/sublime-security-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/llms/sublime-security-llms.txt
+  href: https://artifacts.apis.io/sublime-security/llms/sublime-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sublime-security-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/conformance/sublime-security-conformance.yml
+  href: https://artifacts.apis.io/sublime-security/conformance/sublime-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sublime-security-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/errors/sublime-security-problem-types.yml
+  href: https://artifacts.apis.io/sublime-security/errors/sublime-security-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sublime-security-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/lifecycle/sublime-security-lifecycle.yml
+  href: https://artifacts.apis.io/sublime-security/lifecycle/sublime-security-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sublime-security-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/conventions/sublime-security-conventions.yml
+  href: https://artifacts.apis.io/sublime-security/conventions/sublime-security-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sublime-security-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/data-model/sublime-security-data-model.yml
+  href: https://artifacts.apis.io/sublime-security/data-model/sublime-security-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sublime-security-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/asyncapi/sublime-security-webhooks.yml
+  href: https://artifacts.apis.io/sublime-security/asyncapi/sublime-security-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/sublime-security-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sublime-security/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/overlays/sublime-security-platform-overlay.yaml
+  href: https://artifacts.apis.io/sublime-security/overlays/sublime-security-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sublime-security-platform-overlay.yaml
@@ -314,37 +314,50 @@ network: true
 overview: 'Sublime Security publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including BinExplode API, Email Bombs API, Enrichment API, and 13 more. Tagged areas include Company, Security, Email Security, Phishing, and Detection as Code.
 
 
-  The Sublime Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Sublime Security catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Sublime Security''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 20 more developer resources.'
-random_paper: 14
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Sublime Security API Rules
+  rule_count: 49
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 10
+  slug: sublime-security-rules
 score:
-  band: thin
-  composite: 39.1
+  band: developing
+  composite: 47.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 6.5
   facets:
-    access_clarity: 7.9
-    contract_governance: 4.5
-    contract_quality: 55.0
-    developer_ergonomics: 47.0
+    access_clarity: 21.1
+    contract_governance: 18.2
+    contract_quality: 55.3
+    developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 39.0
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 6.3
       total: 16
     mcp: derived
     skills: derived
@@ -354,13 +367,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/screenshots/sublime-security-2026-08-17T082147.png
+screenshot: https://apis.io/screenshots/sublime-security/sublime-security-2026-08-17T082147.png
 security:
 - kind: authentication
   name: Sublime Security Authentication
@@ -374,6 +387,14 @@ security:
   name: Sublime Security Trust Center
   slug: sublime-security-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Analyze a raw message and hunt retroactively
+  slug: sublime-security-analyze-and-hunt
+- name: Author and activate an MQL detection rule
+  slug: sublime-security-author-detection-rule
+- name: Triage and trash a malicious message
+  slug: sublime-security-triage-and-trash-message
 slug: sublime-security
 tags:
 - Company

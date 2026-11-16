@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.8
-  scored_at: '2026-10-17'
+  score: 35.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 690
   human_in_the_loop: 37
@@ -31,7 +46,7 @@ agentic_access:
   operation_count: 1341
   slug: folio-agentic-access
   summary_line: 1341 operations · 690 acting · 37 human-in-the-loop
-api_count: 204
+api_count: 101
 apis:
 - description: 'FOLIO edge-oai-pmh module API, described in RAML (no OpenAPI published for this module). FOLIO is self-hosted: each library deployment exposes these endpoints through its own Okapi/Kong gateway URL.'
   name: FOLIO edge-oai-pmh
@@ -1563,155 +1578,155 @@ apis:
   description: The work flow controller API from FOLIO — 9 operation(s) for work flow controller.
   name: FOLIO work flow controller API
   slug: folio-work-flow-controller-api
-artifact_total: 477
+artifact_total: 484
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/capabilities/folio-capability-edges.yml
+  href: https://artifacts.apis.io/folio/capabilities/folio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/folio-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/agentic-access/folio-agentic-access.yml
+  href: https://artifacts.apis.io/folio/agentic-access/folio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/folio-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/rules/folio-rules.yml
+  href: https://artifacts.apis.io/folio/rules/folio-rules.yml
   title: ''
   type: Spectral
   url: rules/folio-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/rules/folio-mod-record-specifications-spectral-rules.yml
+  href: https://artifacts.apis.io/folio/rules/folio-mod-record-specifications-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/folio-mod-record-specifications-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/rules/folio-mod-quick-marc-spectral-rules.yml
+  href: https://artifacts.apis.io/folio/rules/folio-mod-quick-marc-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/folio-mod-quick-marc-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/json-ld/folio-context.jsonld
+  href: https://artifacts.apis.io/folio/json-ld/folio-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/folio-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/vocabulary/folio-vocabulary.yml
+  href: https://artifacts.apis.io/folio/vocabulary/folio-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/folio-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/folio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/data-model/folio-data-model.yml
+  href: https://artifacts.apis.io/folio/data-model/folio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/folio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/components/folio-components.yml
+  href: https://artifacts.apis.io/folio/components/folio-components.yml
   title: ''
   type: Components
   url: components/folio-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/cli/folio-cli.yml
+  href: https://artifacts.apis.io/folio/cli/folio-cli.yml
   title: ''
   type: CLI
   url: cli/folio-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/changelog/folio-changelog.yml
+  href: https://artifacts.apis.io/folio/changelog/folio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/folio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/conventions/folio-conventions.yml
+  href: https://artifacts.apis.io/folio/conventions/folio-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/folio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/conventions/folio-conventions.yml
+  href: https://artifacts.apis.io/folio/conventions/folio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/folio-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/sandbox/folio-sandbox.yml
+  href: https://artifacts.apis.io/folio/sandbox/folio-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/folio-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/lifecycle/folio-lifecycle.yml
+  href: https://artifacts.apis.io/folio/lifecycle/folio-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/folio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/lifecycle/folio-lifecycle.yml
+  href: https://artifacts.apis.io/folio/lifecycle/folio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/folio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/errors/folio-problem-types.yml
+  href: https://artifacts.apis.io/folio/errors/folio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/folio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/conformance/folio-conformance.yml
+  href: https://artifacts.apis.io/folio/conformance/folio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/folio-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/overlays/folio-edge-caiasoft-overlay.yaml
+  href: https://artifacts.apis.io/folio/overlays/folio-edge-caiasoft-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/folio-edge-caiasoft-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/well-known/folio-issues-security.txt
+  href: https://artifacts.apis.io/folio/well-known/folio-issues-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/folio-issues-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/well-known/folio-folio-org-security.txt
+  href: https://artifacts.apis.io/folio/well-known/folio-folio-org-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/folio-folio-org-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/well-known/folio-api-security.txt
+  href: https://artifacts.apis.io/folio/well-known/folio-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/folio-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/well-known/folio-well-known.yml
+  href: https://artifacts.apis.io/folio/well-known/folio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/folio-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/hosts/folio-hosts.yml
+  href: https://artifacts.apis.io/folio/hosts/folio-hosts.yml
   title: ''
   type: Hosts
   url: hosts/folio-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/vendors/folio-vendors.yml
+  href: https://artifacts.apis.io/folio/vendors/folio-vendors.yml
   title: ''
   type: Vendors
   url: vendors/folio-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/packages/folio-packages.yml
+  href: https://artifacts.apis.io/folio/packages/folio-packages.yml
   title: ''
   type: SDKs
   url: packages/folio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/packages/folio-packages.yml
+  href: https://artifacts.apis.io/folio/packages/folio-packages.yml
   title: ''
   type: Packages
   url: packages/folio-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/authentication/folio-authentication.yml
+  href: https://artifacts.apis.io/folio/authentication/folio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/folio-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/security/folio-domain-security.yml
+  href: https://artifacts.apis.io/folio/security/folio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/folio-domain-security.yml
@@ -1777,6 +1792,14 @@ common:
   url: https://www.youtube.com/channel/UC4Vs5mb1qgOXPZgso1LESUw
 created: '2026-10-09'
 description: FOLIO (Future of Libraries is Open) is an open source library services platform (LSP) built by a community of libraries, developers and vendors. Developer documentation and an API reference are published on the FOLIO developer portal (dev.folio.org), user documentation at docs.folio.org, and source code in the folio-org GitHub organization.
+finops:
+- has_sources: true
+  method: derived
+  name: Folio Finops
+  primary_unit: ''
+  service_category: ''
+  slug: folio-finops
+  template: true
 image: https://folio.org/wp-content/uploads/2023/08/folio-site-general-Illustration-social-image-1200.jpg
 json_schemas:
 - name: accessTokenResponse
@@ -1792,7 +1815,7 @@ json_schemas:
   property_count: 7
   slug: folio-application-cleanup-result
 - name: Application Descriptor Schema
-  property_count: 8
+  property_count: 11
   slug: folio-application-descriptor
 - name: applicationDescriptors
   property_count: 2
@@ -1858,7 +1881,7 @@ json_schemas:
   property_count: 10
   slug: folio-circulation-item
 - name: circulationItems
-  property_count: 0
+  property_count: 2
   slug: folio-circulation-items
 - name: Loan
   property_count: 33
@@ -1867,7 +1890,7 @@ json_schemas:
   property_count: 5
   slug: folio-contents-request
 - name: Custom Entity Type Schema
-  property_count: 0
+  property_count: 21
   slug: folio-custom-entity-type
 - name: CustomPropertyDefinition
   property_count: 10
@@ -1942,7 +1965,7 @@ json_schemas:
   property_count: 2
   slug: folio-instructors
 - name: itemShippedDTO
-  property_count: 8
+  property_count: 13
   slug: folio-item-shipped-dto
 - name: jobProfile
   property_count: 12
@@ -1951,7 +1974,7 @@ json_schemas:
   property_count: 18
   slug: folio-kb
 - name: License
-  property_count: 0
+  property_count: 20
   slug: folio-license
 - name: license-terms-batch
   property_count: 1
@@ -1963,7 +1986,7 @@ json_schemas:
   property_count: 8
   slug: folio-link
 - name: localHoldDTO
-  property_count: 10
+  property_count: 15
   slug: folio-local-hold-dto
 - name: mappingProfile
   property_count: 14
@@ -2182,29 +2205,29 @@ rules:
     warn: 4
   slug: folio-rules
 score:
-  band: strong
-  composite: 56.2
+  band: developing
+  composite: 51.2
   coverage:
-    artifact_dirs: 29
+    artifact_dirs: 31
     catalog_earned: 65.3
     catalog_earned_first_party: 18.0
     catalog_gap: 49.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 5.1
+  delta: -6.4
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 76.5
     contract_quality: 55.3
-    developer_ergonomics: 78.0
-    discoverability: 64.3
-    operational_transparency: 34.2
-  previous_composite: 51.1
+    developer_ergonomics: 56.5
+    discoverability: 63.4
+    operational_transparency: 39.5
+  previous_composite: 57.6
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 29.5
+      callable: 28.6
       derived: 0
       marker_coverage: 0.0
       total: 301
@@ -2215,14 +2238,14 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/folio/refs/heads/main/screenshots/folio-2026-10-11T104602.png
+screenshot: https://apis.io/screenshots/folio/folio-2026-10-11T104602.png
 security:
 - kind: authentication
   name: Folio Authentication
@@ -2232,6 +2255,20 @@ security:
   name: Folio Domain Security
   slug: folio-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 6
+skills:
+- name: check-out-and-check-in-by-barcode
+  slug: folio-check-out-and-check-in-by-barcode
+- name: mediated-request-review
+  slug: folio-mediated-request-review
+- name: patron-lookup-and-pin-verify
+  slug: folio-patron-lookup-and-pin-verify
+- name: place-and-track-a-request
+  slug: folio-place-and-track-a-request
+- name: search-catalog-and-check-availability
+  slug: folio-search-catalog-and-check-availability
+- name: service-point-opening-hours
+  slug: folio-service-point-opening-hours
 slug: folio
 tags:
 - Company

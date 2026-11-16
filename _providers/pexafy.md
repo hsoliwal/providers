@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -30,15 +33,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 56.3
-  scored_at: '2026-10-17'
+  score: 53.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -46,7 +52,7 @@ agentic_access:
   operation_count: 37
   slug: pexafy-agentic-access
   summary_line: 37 operations · 8 acting
-api_count: 3
+api_count: 2
 apis:
 - baseURL: https://api.pexafy.com
   baseurl_source: declared
@@ -73,14 +79,14 @@ apis:
   description: Quota counters.
   name: Pexafy Usage API
   slug: pexafy-usage-api
-artifact_total: 12
+artifact_total: 19
 common:
 - group: commercial
   title: ''
   type: Pricing
   url: https://pexafy.com/pricing/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/capabilities/pexafy-capability-edges.yml
+  href: https://artifacts.apis.io/pexafy/capabilities/pexafy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pexafy-capability-edges.yml
@@ -117,67 +123,67 @@ common:
   type: Login
   url: https://pexafy.com/auth/login/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/agentic-access/pexafy-agentic-access.yml
+  href: https://artifacts.apis.io/pexafy/agentic-access/pexafy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pexafy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/security/pexafy-domain-security.yml
+  href: https://artifacts.apis.io/pexafy/security/pexafy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pexafy-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/authentication/pexafy-authentication.yml
+  href: https://artifacts.apis.io/pexafy/authentication/pexafy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pexafy-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/scopes/pexafy-scopes.yml
+  href: https://artifacts.apis.io/pexafy/scopes/pexafy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pexafy-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/well-known/pexafy-well-known.yml
+  href: https://artifacts.apis.io/pexafy/well-known/pexafy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pexafy-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/llms/pexafy-llms.txt
+  href: https://artifacts.apis.io/pexafy/llms/pexafy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pexafy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/mcp/pexafy-mcp.yml
+  href: https://artifacts.apis.io/pexafy/mcp/pexafy-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pexafy-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/packages/pexafy-packages.yml
+  href: https://artifacts.apis.io/pexafy/packages/pexafy-packages.yml
   title: ''
   type: Packages
   url: packages/pexafy-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/packages/pexafy-packages.yml
+  href: https://artifacts.apis.io/pexafy/packages/pexafy-packages.yml
   title: ''
   type: SDKs
   url: packages/pexafy-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/cli/pexafy-cli.yml
+  href: https://artifacts.apis.io/pexafy/cli/pexafy-cli.yml
   title: ''
   type: CLI
   url: cli/pexafy-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/conventions/pexafy-conventions.yml
+  href: https://artifacts.apis.io/pexafy/conventions/pexafy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pexafy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/errors/pexafy-problem-types.yml
+  href: https://artifacts.apis.io/pexafy/errors/pexafy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pexafy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/lifecycle/pexafy-lifecycle.yml
+  href: https://artifacts.apis.io/pexafy/lifecycle/pexafy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pexafy-lifecycle.yml
@@ -186,42 +192,50 @@ common:
   type: Deprecation
   url: https://github.com/Pexafy/pexafy-openapi
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/changelog/pexafy-changelog.yml
+  href: https://artifacts.apis.io/pexafy/changelog/pexafy-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/pexafy-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/conformance/pexafy-conformance.yml
+  href: https://artifacts.apis.io/pexafy/conformance/pexafy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pexafy-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/data-model/pexafy-data-model.yml
+  href: https://artifacts.apis.io/pexafy/data-model/pexafy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pexafy-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/overlays/pexafy-api-overlay.yaml
+  href: https://artifacts.apis.io/pexafy/overlays/pexafy-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pexafy-api-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/rate-limits/pexafy-rate-limits.yml
+  href: https://artifacts.apis.io/pexafy/rate-limits/pexafy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pexafy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/plans/pexafy-plans-pricing.yml
+  href: https://artifacts.apis.io/pexafy/plans/pexafy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pexafy-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pexafy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-08-27'
 description: Pexafy is a semantic (meaning-based) search engine over free-licence stock photography. One request queries nine free stock-photo libraries — Unsplash, Pexels, Pixabay, StockSnap, Picjumbo, Kaboompics, Burst, Skitterphoto and NegativeSpace, plus Wikimedia Commons since description 1.3.0 — and returns every photo in one normalised JSON schema with dimensions, dominant colour, orientation, photographer, licence and a ready-made attribution string. Queries are written as full sentences in any of 100+ languages and ranked by meaning rather than keyword overlap; an image can be posted instead of text to find visually similar photos, and results can be filtered by colour, orientation, licence, source, photographer or date. The API is self-serve — a key is issued immediately from the dashboard with no application review and no mandatory download-tracking callback — and the same catalogue is exposed to LLM clients through a hosted, OAuth-protected MCP server at mcp.pexafy.com.
+finops:
+- has_sources: true
+  method: derived
+  name: Pexafy Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: pexafy-finops
+  template: false
 image: https://pexafy.com/static/img/favicon.png
 layout: provider
 mcp_servers:
@@ -235,40 +249,64 @@ network: true
 overview: 'Pexafy publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Facets API, Photos API, and 2 more. Tagged areas include Image, Photos, Stock Photos, Image Search, and Semantic Search.
 
 
+  The Pexafy catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pexafy''s developer surface includes pricing, support, engineering blog, authentication, CLI, changelog, and 25 more developer resources.'
 plans:
 - name: Pexafy Plans Pricing
-  plan_count: 7
+  plan_count: 6
   slug: pexafy-plans-pricing
-random_paper: 15
+- name: Pexafy Price Estimates
+  plan_count: 0
+  slug: pexafy-price-estimates
+random_paper: 5
 rate_limits:
 - limit_count: 7
   name: Pexafy Rate Limits
   slug: pexafy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Pexafy API Rules
+  rule_count: 62
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 3
+    warn: 4
+  slug: pexafy-rules
 scopes:
 - name: Pexafy Scopes
   scope_count: 2
   slug: pexafy-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: strong
-  composite: 64.7
+  band: exemplar
+  composite: 67.4
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 64.0
+    artifact_dirs: 30
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 18.2
+    access_clarity: 84.2
+    contract_governance: 31.8
     contract_quality: 50.4
     developer_ergonomics: 73.2
-    discoverability: 86.7
+    discoverability: 81.7
     operational_transparency: 73.7
-  previous_composite: 64.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 67.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -289,13 +327,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/screenshots/pexafy-2026-09-02T151126.png
+screenshot: https://apis.io/screenshots/pexafy/pexafy-2026-09-02T151126.png
 security:
 - kind: authentication
   name: Pexafy Authentication
@@ -305,6 +343,16 @@ security:
   name: Pexafy Domain Security
   slug: pexafy-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Curate a Pexafy collection
+  slug: pexafy-curate-a-collection
+- name: Find a usable photo with Pexafy
+  slug: pexafy-find-a-usable-photo
+- name: Pace a Pexafy integration against its quota
+  slug: pexafy-pace-against-quota
+- name: Search Pexafy by image and refine
+  slug: pexafy-visual-search-and-refine
 slug: pexafy
 tags:
 - Image

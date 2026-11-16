@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Enterprise · Self-serve signup
   onboarding: self-serve
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -23,18 +27,21 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -77,9 +84,6 @@ apis:
 artifact_total: 19
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Gradient Labs Actions & Tools API
   slug: open-gradient-labs-actions-tools-api
 - collection_type: open
@@ -99,22 +103,22 @@ collections:
   slug: open-gradient-labs
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/capabilities/gradient-labs-capability-edges.yml
+  href: https://artifacts.apis.io/gradient-labs/capabilities/gradient-labs-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/gradient-labs-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/agentic-access/gradient-labs-agentic-access.yml
+  href: https://artifacts.apis.io/gradient-labs/agentic-access/gradient-labs-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gradient-labs-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/security/gradient-labs-domain-security.yml
+  href: https://artifacts.apis.io/gradient-labs/security/gradient-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gradient-labs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/authentication/gradient-labs-authentication.yml
+  href: https://artifacts.apis.io/gradient-labs/authentication/gradient-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gradient-labs-authentication.yml
@@ -135,17 +139,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/gradientlabs-ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/plans/gradient-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/gradient-labs/plans/gradient-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gradient-labs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/rate-limits/gradient-labs-rate-limits.yml
+  href: https://artifacts.apis.io/gradient-labs/rate-limits/gradient-labs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gradient-labs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/finops/gradient-labs-finops.yml
+  href: https://artifacts.apis.io/gradient-labs/finops/gradient-labs-finops.yml
   title: ''
   type: FinOps
   url: finops/gradient-labs-finops.yml
@@ -172,35 +176,51 @@ network: true
 overview: 'Gradient Labs publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions & Tools API, Conversations API, Hand-off API, and 3 more. Tagged areas include Artificial Intelligence, Customer Service, AI Agents, Conversations, and Financial Services.
 
 
+  The Gradient Labs catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Gradient Labs'' developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Gradient Labs Plans Pricing
   plan_count: 1
   slug: gradient-labs-plans-pricing
-random_paper: 11
+random_paper: 13
 rate_limits:
 - limit_count: 2
   name: Gradient Labs Rate Limits
   slug: gradient-labs-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Gradient Labs API Rules
+  rule_count: 66
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 2
+    warn: 2
+  slug: gradient-labs-rules
 score:
-  band: emerging
-  composite: 25.2
+  band: thin
+  composite: 27.5
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 49.9
+    contract_governance: 13.6
+    contract_quality: 52.9
     developer_ergonomics: 15.5
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 31.2
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     contracts:
@@ -214,13 +234,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/screenshots/gradient-labs-2026-07-25T220209.png
+screenshot: https://apis.io/screenshots/gradient-labs/gradient-labs-2026-07-25T220209.png
 security:
 - kind: authentication
   name: Gradient Labs Authentication

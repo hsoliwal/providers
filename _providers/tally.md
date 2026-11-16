@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.3
-  scored_at: '2026-10-17'
+  score: 49.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -85,9 +91,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Tally REST Forms API
   slug: open-tally-forms-api
 - collection_type: open
@@ -114,22 +117,22 @@ common:
   type: BlogRSS
   url: https://blog.tally.so/rss/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/capabilities/tally-capability-edges.yml
+  href: https://artifacts.apis.io/tally/capabilities/tally-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tally-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/agentic-access/tally-agentic-access.yml
+  href: https://artifacts.apis.io/tally/agentic-access/tally-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tally-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/security/tally-domain-security.yml
+  href: https://artifacts.apis.io/tally/security/tally-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tally-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/authentication/tally-authentication.yml
+  href: https://artifacts.apis.io/tally/authentication/tally-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tally-authentication.yml
@@ -158,17 +161,17 @@ common:
   type: HelpCenter
   url: https://tally.so/help
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/plans/tally-plans-pricing.yml
+  href: https://artifacts.apis.io/tally/plans/tally-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tally-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/rate-limits/tally-rate-limits.yml
+  href: https://artifacts.apis.io/tally/rate-limits/tally-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tally-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/finops/tally-finops.yml
+  href: https://artifacts.apis.io/tally/finops/tally-finops.yml
   title: ''
   type: FinOps
   url: finops/tally-finops.yml
@@ -182,7 +185,7 @@ finops:
 - has_sources: true
   method: generated
   name: Tally Finops
-  primary_unit: ''
+  primary_unit: plan-month
   service_category: Forms / Surveys
   slug: tally-finops
   template: false
@@ -199,35 +202,51 @@ network: true
 overview: 'Tally publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Forms API, Organization API, Submissions API, and 5 more. Tagged areas include Forms, Surveys, No-Code, Free, and Notion-style.
 
 
+  The Tally catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tally''s developer surface includes authentication, documentation, pricing, and 12 more developer resources.'
 plans:
 - name: Tally Plans Pricing
   plan_count: 3
   slug: tally-plans-pricing
-random_paper: 0
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Tally Rate Limits
   slug: tally-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Tally API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: tally-rules
 score:
   band: thin
-  composite: 28.3
+  composite: 31.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 42.0
+    artifact_dirs: 20
+    catalog_earned: 49.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 18.4
-    contract_governance: 0.0
+    access_clarity: 26.3
+    contract_governance: 13.6
     contract_quality: 48.1
     developer_ergonomics: 21.4
     discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 29.8
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -242,13 +261,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/screenshots/tally-2026-06-20T194908.png
+screenshot: https://apis.io/screenshots/tally/tally-2026-06-20T194908.png
 security:
 - kind: authentication
   name: Tally Authentication

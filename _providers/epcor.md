@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-10-17'
+  score: 27.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -82,79 +85,79 @@ apis:
   description: Canadian water outages, main breaks and field events.
   name: EPCOR Water Outages API
   slug: epcor-water-outages-api
-artifact_total: 19
+artifact_total: 24
 collections:
 - collection_type: open
   name: EPCOR Public Outage and Service Area Feature Services (ArcGIS REST)
   slug: open-epcor-outages-arcgis
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/skills/epcor-check-edmonton-power-outages.md
+  href: https://artifacts.apis.io/epcor/skills/epcor-check-edmonton-power-outages.md
   title: ''
   type: AgentSkill
   url: skills/epcor-check-edmonton-power-outages.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/skills/epcor-track-water-outages-and-projects.md
+  href: https://artifacts.apis.io/epcor/skills/epcor-track-water-outages-and-projects.md
   title: ''
   type: AgentSkill
   url: skills/epcor-track-water-outages-and-projects.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/skills/epcor-map-us-water-districts.md
+  href: https://artifacts.apis.io/epcor/skills/epcor-map-us-water-districts.md
   title: ''
   type: AgentSkill
   url: skills/epcor-map-us-water-districts.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/agentic-access/epcor-agentic-access.yml
+  href: https://artifacts.apis.io/epcor/agentic-access/epcor-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/epcor-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/security/epcor-domain-security.yml
+  href: https://artifacts.apis.io/epcor/security/epcor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/epcor-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/authentication/epcor-authentication.yml
+  href: https://artifacts.apis.io/epcor/authentication/epcor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/epcor-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/conventions/epcor-conventions.yml
+  href: https://artifacts.apis.io/epcor/conventions/epcor-conventions.yml
   title: ''
   type: Conventions
   url: conventions/epcor-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/errors/epcor-problem-types.yml
+  href: https://artifacts.apis.io/epcor/errors/epcor-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/epcor-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/lifecycle/epcor-lifecycle.yml
+  href: https://artifacts.apis.io/epcor/lifecycle/epcor-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/epcor-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/conformance/epcor-conformance.yml
+  href: https://artifacts.apis.io/epcor/conformance/epcor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/epcor-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/data-model/epcor-data-model.yml
+  href: https://artifacts.apis.io/epcor/data-model/epcor-data-model.yml
   title: ''
   type: DataModel
   url: data-model/epcor-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/packages/epcor-packages.yml
+  href: https://artifacts.apis.io/epcor/packages/epcor-packages.yml
   title: ''
   type: Packages
   url: packages/epcor-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/llms/epcor-llms.txt
+  href: https://artifacts.apis.io/epcor/llms/epcor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/epcor-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/epcor/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -250,22 +253,38 @@ network: true
 overview: 'EPCOR publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Boundaries API, Catalog API, Infrastructure API, and 5 more. Tagged areas include Energy, Canada, Utilities, Electricity, and Natural Gas.
 
 
+  The EPCOR catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   EPCOR''s developer surface includes authentication, developer portal, support, engineering blog, and 24 more developer resources.'
 random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: EPCOR API Rules
+  rule_count: 49
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 3
+  slug: epcor-rules
 score:
   band: thin
-  composite: 32.9
+  composite: 34.6
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 33.5
+    artifact_dirs: 22
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 81.5
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.7
+  delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 16.8
     developer_ergonomics: 39.9
     discoverability: 64.3
@@ -277,7 +296,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.6
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -293,14 +312,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/epcor/refs/heads/main/screenshots/epcor-2026-08-07T164946.png
+screenshot: https://apis.io/screenshots/epcor/epcor-2026-08-07T164946.png
 security:
 - kind: authentication
   name: Epcor Authentication
@@ -310,6 +329,16 @@ security:
   name: Epcor Domain Security
   slug: epcor-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 4
+skills:
+- name: Check EPCOR Edmonton power outages
+  slug: epcor-check-edmonton-power-outages
+- name: Map EPCOR Water USA districts and outages
+  slug: epcor-map-us-water-districts
+- name: Obtain EPCOR Ontario Green Button customer energy data
+  slug: epcor-request-ontario-green-button-data
+- name: Track EPCOR water outages, main breaks and infrastructure projects
+  slug: epcor-track-water-outages-and-projects
 slug: epcor
 tags:
 - Energy

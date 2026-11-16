@@ -1,11 +1,16 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +40,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/rate-limits/evertune-rate-limits.yml
+  href: https://artifacts.apis.io/evertune/rate-limits/evertune-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/evertune-rate-limits.yml
@@ -90,37 +98,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/Evertune-AI
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/llms/evertune-llms.txt
+  href: https://artifacts.apis.io/evertune/llms/evertune-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/evertune-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/security/evertune-domain-security.yml
+  href: https://artifacts.apis.io/evertune/security/evertune-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/evertune-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/well-known/evertune-well-known.yml
+  href: https://artifacts.apis.io/evertune/well-known/evertune-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/evertune-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/authentication/evertune-authentication.yml
+  href: https://artifacts.apis.io/evertune/authentication/evertune-authentication.yml
   title: ''
   type: Authentication
   url: authentication/evertune-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/scopes/evertune-scopes.yml
+  href: https://artifacts.apis.io/evertune/scopes/evertune-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/evertune-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/conformance/evertune-conformance.yml
+  href: https://artifacts.apis.io/evertune/conformance/evertune-conformance.yml
   title: ''
   type: Conformance
   url: conformance/evertune-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/plans/evertune-plans-pricing.yml
+  href: https://artifacts.apis.io/evertune/plans/evertune-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/evertune-plans-pricing.yml
@@ -157,7 +165,7 @@ plans:
 - name: Evertune Plans Pricing
   plan_count: 2
   slug: evertune-plans-pricing
-random_paper: 20
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Evertune Rate Limits
@@ -171,7 +179,7 @@ score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
@@ -194,14 +202,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/evertune/refs/heads/main/screenshots/evertune-2026-07-25T213740.png
+screenshot: https://apis.io/screenshots/evertune/evertune-2026-07-25T213740.png
 security:
 - kind: authentication
   name: Evertune Authentication

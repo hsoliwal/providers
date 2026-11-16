@@ -1,8 +1,11 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
@@ -76,7 +82,7 @@ common:
   type: Compliance
   url: https://trust.artificial.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/security/artificial-labs-trust-center.yml
+  href: https://artifacts.apis.io/artificial-labs/security/artificial-labs-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/artificial-labs-trust-center.yml
@@ -109,47 +115,47 @@ common:
   type: OpenIDConnect
   url: https://auth.artificialos.com/.well-known/openid-configuration
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/authentication/artificial-labs-authentication.yml
+  href: https://artifacts.apis.io/artificial-labs/authentication/artificial-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/artificial-labs-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/scopes/artificial-labs-scopes.yml
+  href: https://artifacts.apis.io/artificial-labs/scopes/artificial-labs-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/artificial-labs-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/well-known/artificial-labs-well-known.yml
+  href: https://artifacts.apis.io/artificial-labs/well-known/artificial-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/artificial-labs-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/conformance/artificial-labs-conformance.yml
+  href: https://artifacts.apis.io/artificial-labs/conformance/artificial-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/artificial-labs-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/security/artificial-labs-domain-security.yml
+  href: https://artifacts.apis.io/artificial-labs/security/artificial-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/artificial-labs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/security/artificial-labs-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/artificial-labs/security/artificial-labs-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/artificial-labs-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/lifecycle/artificial-labs-lifecycle.yml
+  href: https://artifacts.apis.io/artificial-labs/lifecycle/artificial-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/artificial-labs-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/packages/artificial-labs-packages.yml
+  href: https://artifacts.apis.io/artificial-labs/packages/artificial-labs-packages.yml
   title: ''
   type: Packages
   url: packages/artificial-labs-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/llms/artificial-labs-llms.txt
+  href: https://artifacts.apis.io/artificial-labs/llms/artificial-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/artificial-labs-llms.txt
@@ -171,7 +177,7 @@ overview: 'Artificial Labs is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Artificial Labs'' developer surface includes documentation, engineering blog, support, authentication, and 22 more developer resources.'
-random_paper: 15
+random_paper: 23
 scopes:
 - name: Artificial Labs Scopes
   scope_count: 14
@@ -181,7 +187,7 @@ score:
   band: thin
   composite: 28.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -213,14 +219,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 46.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/artificial-labs/refs/heads/main/screenshots/artificial-labs-2026-07-25T201337.png
+screenshot: https://apis.io/screenshots/artificial-labs/artificial-labs-2026-07-25T201337.png
 security:
 - kind: authentication
   name: Artificial Labs Authentication

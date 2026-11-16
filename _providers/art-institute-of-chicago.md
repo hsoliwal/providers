@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.2
-  scored_at: '2026-10-17'
+  score: 25.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +48,7 @@ agentic_access:
   operation_count: 103
   slug: art-institute-of-chicago-agentic-access
   summary_line: 103 operations
-api_count: 2
+api_count: 1
 apis:
 - description: IIIF Image API 2.0-compliant service for delivering image binaries for artworks. Combine artwork.image_id with config.iiif_url returned by the Public API.
   name: IIIF Image API
@@ -234,11 +241,8 @@ apis:
   description: Video assets and metadata.
   name: Art Institute of Chicago Videos API
   slug: art-institute-of-chicago-videos-api
-artifact_total: 107
+artifact_total: 106
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Art Institute of Chicago Public Agent Roles API
   slug: open-art-institute-of-chicago-agent-roles-api
@@ -363,12 +367,12 @@ common:
   type: CodeOfConduct
   url: https://github.com/art-institute-of-chicago/api-data/blob/master/CODE_OF_CONDUCT.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/art-institute-of-chicago/refs/heads/main/agentic-access/art-institute-of-chicago-agentic-access.yml
+  href: https://artifacts.apis.io/art-institute-of-chicago/agentic-access/art-institute-of-chicago-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/art-institute-of-chicago-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/art-institute-of-chicago/refs/heads/main/security/art-institute-of-chicago-domain-security.yml
+  href: https://artifacts.apis.io/art-institute-of-chicago/security/art-institute-of-chicago-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/art-institute-of-chicago-domain-security.yml
@@ -500,29 +504,29 @@ rules:
   slug: art-institute-of-chicago-rules
 score:
   band: thin
-  composite: 31.0
+  composite: 32.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 60.5
     catalog_earned_first_party: 0.0
     catalog_gap: 54.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.7
+  delta: 1.3
   facets:
     access_clarity: 5.3
     contract_governance: 13.6
-    contract_quality: 61.4
+    contract_quality: 66.7
     developer_ergonomics: 23.8
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 33.7
+  previous_composite: 31.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 37
   regulatory:
     applies: true
@@ -530,14 +534,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/art-institute-of-chicago/refs/heads/main/screenshots/art-institute-of-chicago-2026-06-20T172440.png
+screenshot: https://apis.io/screenshots/art-institute-of-chicago/art-institute-of-chicago-2026-06-20T172440.png
 security:
 - kind: domain-security
   name: Art Institute Of Chicago Domain Security

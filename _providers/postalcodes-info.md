@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 21.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,11 +62,8 @@ apis:
   description: Interactive postal-code and locality lookup.
   name: PostalCodes.info Search API
   slug: postalcodes-info-search-api
-artifact_total: 27
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: PostalCodes.info Postal Code Reference Downloads API
   slug: open-postalcodes-info-downloads-api
@@ -77,27 +78,27 @@ collections:
   slug: open-postalcodes-info
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/postalcodes-info/refs/heads/main/plans/postalcodes-info-plans-pricing.yml
+  href: https://artifacts.apis.io/postalcodes-info/plans/postalcodes-info-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/postalcodes-info-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/postalcodes-info/refs/heads/main/rate-limits/postalcodes-info-rate-limits.yml
+  href: https://artifacts.apis.io/postalcodes-info/rate-limits/postalcodes-info-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/postalcodes-info-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/postalcodes-info/refs/heads/main/finops/postalcodes-info-finops.yml
+  href: https://artifacts.apis.io/postalcodes-info/finops/postalcodes-info-finops.yml
   title: ''
   type: FinOps
   url: finops/postalcodes-info-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/postalcodes-info/refs/heads/main/agentic-access/postalcodes-info-agentic-access.yml
+  href: https://artifacts.apis.io/postalcodes-info/agentic-access/postalcodes-info-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/postalcodes-info-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/postalcodes-info/refs/heads/main/security/postalcodes-info-domain-security.yml
+  href: https://artifacts.apis.io/postalcodes-info/security/postalcodes-info-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/postalcodes-info-domain-security.yml
@@ -233,7 +234,7 @@ plans:
 - name: Postalcodes Info Plans Pricing
   plan_count: 1
   slug: postalcodes-info-plans-pricing
-random_paper: 8
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Postalcodes Info Rate Limits
@@ -264,29 +265,29 @@ rules:
   slug: postalcodes-info-rules
 score:
   band: thin
-  composite: 32.4
+  composite: 33.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.4
+  delta: 1.3
   facets:
     access_clarity: 26.3
     contract_governance: 27.3
-    contract_quality: 59.2
+    contract_quality: 64.2
     developer_ergonomics: 9.5
     discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 36.8
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
   regulatory:
     applies: true
@@ -294,14 +295,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/postalcodes-info/refs/heads/main/screenshots/postalcodes-info-2026-06-20T191947.png
+screenshot: https://apis.io/screenshots/postalcodes-info/postalcodes-info-2026-06-20T191947.png
 security:
 - kind: domain-security
   name: Postalcodes Info Domain Security

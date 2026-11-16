@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: templated
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -38,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Tellius backend REST and WebSocket API. Authenticate against /api/auth/login for a JWT (or a cookie session), then call the Insights APIs (list, delete, notifications), the Search APIs (a WebSocke
@@ -47,7 +50,7 @@ apis:
 - description: 'Tellius exposes its analytics engine through a hosted MCP server that runs inside each Tellius deployment. It speaks MCP over streamable HTTP (SSE available for older clients) and publishes 25 tools, '
   name: Tellius MCP Server
   slug: tellius-mcp-server
-artifact_total: 9
+artifact_total: 13
 asyncapis:
 - description: Tellius' Search surface is not REST. Clients open a WebSocket, then exchange request and response messages that are correlated by a caller-generated `corrId`. The same channel delivers asynchronous jo
   name: Tellius Search and Job Notification WebSocket API
@@ -102,102 +105,110 @@ common:
   type: PrivacyPolicy
   url: https://www.tellius.com/privacy-policy
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/changelog/tellius-changelog.yml
+  href: https://artifacts.apis.io/tellius/changelog/tellius-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tellius-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/lifecycle/tellius-lifecycle.yml
+  href: https://artifacts.apis.io/tellius/lifecycle/tellius-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tellius-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/authentication/tellius-authentication.yml
+  href: https://artifacts.apis.io/tellius/authentication/tellius-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tellius-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/scopes/tellius-scopes.yml
+  href: https://artifacts.apis.io/tellius/scopes/tellius-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/tellius-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/conventions/tellius-conventions.yml
+  href: https://artifacts.apis.io/tellius/conventions/tellius-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tellius-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/conformance/tellius-conformance.yml
+  href: https://artifacts.apis.io/tellius/conformance/tellius-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tellius-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/conformance/tellius-conformance.yml
+  href: https://artifacts.apis.io/tellius/conformance/tellius-conformance.yml
   title: ''
   type: Compliance
   url: conformance/tellius-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/mcp/tellius-mcp.yml
+  href: https://artifacts.apis.io/tellius/mcp/tellius-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/tellius-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/mcp/tellius-tool-crosswalk.yml
+  href: https://artifacts.apis.io/tellius/mcp/tellius-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/tellius-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/llms/tellius-llms.txt
+  href: https://artifacts.apis.io/tellius/llms/tellius-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tellius-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/well-known/tellius-well-known.yml
+  href: https://artifacts.apis.io/tellius/well-known/tellius-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tellius-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/components/tellius-components.yml
+  href: https://artifacts.apis.io/tellius/components/tellius-components.yml
   title: ''
   type: Components
   url: components/tellius-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/data-model/tellius-data-model.yml
+  href: https://artifacts.apis.io/tellius/data-model/tellius-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tellius-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/packages/tellius-packages.yml
+  href: https://artifacts.apis.io/tellius/packages/tellius-packages.yml
   title: ''
   type: Packages
   url: packages/tellius-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/plans/tellius-plans-pricing.yml
+  href: https://artifacts.apis.io/tellius/plans/tellius-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tellius-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/rate-limits/tellius-rate-limits.yml
+  href: https://artifacts.apis.io/tellius/rate-limits/tellius-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tellius-rate-limits.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/asyncapi/tellius-search-asyncapi.yml
+  href: https://artifacts.apis.io/tellius/asyncapi/tellius-search-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/tellius-search-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tellius/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/security/tellius-domain-security.yml
+  href: https://artifacts.apis.io/tellius/security/tellius-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tellius-domain-security.yml
 created: '2026-08-30'
 description: 'Tellius is an agentic analytics platform that deploys AI agents ("Kaiya") on governed enterprise data to automate root cause analysis, variance decomposition and insight delivery across structured and unstructured sources. It sits above the data warehouse (Snowflake, Databricks, BigQuery, Redshift) without moving data, and exposes its analytics engine to developers three ways: a REST + WebSocket platform API (login/JWT, Search, Insights and ML prediction endpoints), an iFrame + postMessage embedding surface for Vizpads, Search, Kaiya and Feeds, and a hosted MCP server that any MCP client can call over streamable HTTP with OAuth. Because Tellius ships as a per-customer Kubernetes deployment, every API base URL and MCP endpoint is tenant-specific rather than a single shared public host. Founded by Ajay Khanna; SOC 2 Type II certified; 5x Gartner Magic Quadrant Visionary for Analytics and BI Platforms (2022-2026).'
+finops:
+- has_sources: true
+  method: derived
+  name: Tellius Finops
+  primary_unit: ''
+  service_category: ''
+  slug: tellius-finops
+  template: true
 image: https://cdn.prod.website-files.com/67fcfe6c0c7705918e4d7984/67fcfe6c0c7705918e4d798e_logo.svg
 layout: provider
 mcp_servers:
@@ -219,7 +230,7 @@ plans:
 - name: Tellius Plans Pricing
   plan_count: 2
   slug: tellius-plans-pricing
-random_paper: 0
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Tellius Rate Limits
@@ -233,13 +244,13 @@ score:
   band: developing
   composite: 50.9
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
@@ -247,7 +258,7 @@ score:
     developer_ergonomics: 58.9
     discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 50.8
+  previous_composite: 50.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -258,14 +269,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tellius/refs/heads/main/screenshots/tellius-2026-09-02T162748.png
+screenshot: https://apis.io/screenshots/tellius/tellius-2026-09-02T162748.png
 security:
 - kind: authentication
   name: Tellius Authentication
@@ -275,6 +286,14 @@ security:
   name: Tellius Domain Security
   slug: tellius-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: tellius-ask-a-governed-question
+  slug: tellius-ask-a-governed-question
+- name: tellius-investigate-why-a-metric-moved
+  slug: tellius-investigate-why-a-metric-moved
+- name: tellius-run-and-schedule-a-mission
+  slug: tellius-run-and-schedule-a-mission
 slug: tellius
 tags:
 - Company

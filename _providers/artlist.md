@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-10-17'
+  score: 34.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,11 +74,8 @@ apis:
   description: The song API from Artlist — 2 operation(s) for song.
   name: Artlist Song API
   slug: artlist-song-api
-artifact_total: 15
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Search Album API
   slug: open-artlist-album-api
@@ -87,7 +90,12 @@ collections:
   slug: open-artlist-song-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/overlays/artlist-download-overlay.yaml
+  href: https://artifacts.apis.io/artlist/capabilities/artlist-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/artlist-capability-edges.yml
+- group: other
+  href: https://artifacts.apis.io/artlist/overlays/artlist-download-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/artlist-download-overlay.yaml
@@ -156,82 +164,82 @@ common:
   type: Enterprise
   url: https://artlist.io/enterprise
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/authentication/artlist-authentication.yml
+  href: https://artifacts.apis.io/artlist/authentication/artlist-authentication.yml
   title: ''
   type: Authentication
   url: authentication/artlist-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/conventions/artlist-conventions.yml
+  href: https://artifacts.apis.io/artlist/conventions/artlist-conventions.yml
   title: ''
   type: Conventions
   url: conventions/artlist-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/rate-limits/artlist-rate-limits.yml
+  href: https://artifacts.apis.io/artlist/rate-limits/artlist-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/artlist-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/errors/artlist-problem-types.yml
+  href: https://artifacts.apis.io/artlist/errors/artlist-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/artlist-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/lifecycle/artlist-lifecycle.yml
+  href: https://artifacts.apis.io/artlist/lifecycle/artlist-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/artlist-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/conformance/artlist-conformance.yml
+  href: https://artifacts.apis.io/artlist/conformance/artlist-conformance.yml
   title: ''
   type: Conformance
   url: conformance/artlist-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/security/artlist-domain-security.yml
+  href: https://artifacts.apis.io/artlist/security/artlist-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/artlist-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/well-known/artlist-well-known.yml
+  href: https://artifacts.apis.io/artlist/well-known/artlist-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/artlist-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/well-known/artlist-api-catalog.json
+  href: https://artifacts.apis.io/artlist/well-known/artlist-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/artlist-api-catalog.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/llms/artlist-llms.txt
+  href: https://artifacts.apis.io/artlist/llms/artlist-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/artlist-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/data-model/artlist-data-model.yml
+  href: https://artifacts.apis.io/artlist/data-model/artlist-data-model.yml
   title: ''
   type: DataModel
   url: data-model/artlist-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/packages/artlist-packages.yml
+  href: https://artifacts.apis.io/artlist/packages/artlist-packages.yml
   title: ''
   type: Packages
   url: packages/artlist-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/agentic-access/artlist-agentic-access.yml
+  href: https://artifacts.apis.io/artlist/agentic-access/artlist-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/artlist-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/artlist/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/mcp/artlist-mcp.yml
+  href: https://artifacts.apis.io/artlist/mcp/artlist-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/artlist-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/mcp/artlist-tool-crosswalk.yml
+  href: https://artifacts.apis.io/artlist/mcp/artlist-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/artlist-tool-crosswalk.yml
@@ -250,38 +258,54 @@ network: true
 overview: 'Artlist publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Downloadable API, and 2 more. Tagged areas include Company, Music, Audio, Media, and Stock Media.
 
 
-  Artlist''s developer surface includes documentation, API reference, developer console, getting-started guide, support, engineering blog, pricing, and 26 more developer resources.'
-random_paper: 1
+  The Artlist catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Artlist''s developer surface includes documentation, API reference, developer console, getting-started guide, support, engineering blog, pricing, and 27 more developer resources.'
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Artlist Rate Limits
   slug: artlist-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Artlist API Rules
+  rule_count: 41
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 1
+    warn: 1
+  slug: artlist-rules
 score:
   band: developing
-  composite: 45.1
+  composite: 47.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 49.0
+    artifact_dirs: 24
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 1.1
   facets:
     access_clarity: 35.5
-    contract_governance: 18.2
-    contract_quality: 39.0
+    contract_governance: 31.8
+    contract_quality: 43.4
     developer_ergonomics: 63.7
     discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 45.5
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: first-party
     skills: derived
@@ -295,14 +319,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/artlist/refs/heads/main/screenshots/artlist-2026-08-07T161743.png
+screenshot: https://apis.io/screenshots/artlist/artlist-2026-08-07T161743.png
 security:
 - kind: authentication
   name: Artlist Authentication
@@ -312,6 +336,14 @@ security:
   name: Artlist Domain Security
   slug: artlist-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Find and download an Artlist track
+  slug: artlist-find-and-download-a-track
+- name: Resolve Artlist artist and album credits
+  slug: artlist-resolve-artist-and-album-credits
+- name: Score generated media with Artlist music
+  slug: artlist-score-generated-media
 slug: artlist
 tags:
 - Company

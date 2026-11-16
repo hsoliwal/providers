@@ -1,6 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: human-only
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -9,55 +19,73 @@ agent_readiness:
     auth_clarity: false
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: na
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: false
+    idempotency: na
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: false
-    spec_presence: false
+    reversibility_documented: na
+    spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.5
-  scored_at: '2026-10-17'
-api_count: 1
+  score: 22.9
+  scored_at: '2026-11-06'
+api_count: 4
 apis:
 - description: Open data on AI training job listings and advertised pay.
   name: AITraining.jobs Data API
   slug: aitraining-jobs-data-api
-artifact_total: 3
+- baseURL: https://aitraining.jobs
+  baseurl_source: declared
+  description: The Pay.csv API from AITraining.jobs — 1 operation(s) for pay.csv.
+  name: AITraining.jobs Pay.csv API
+  slug: aitraining-jobs-pay-csv-api
+- baseURL: https://aitraining.jobs
+  baseurl_source: declared
+  description: The Pay.json API from AITraining.jobs — 1 operation(s) for pay.json.
+  name: AITraining.jobs Pay.json API
+  slug: aitraining-jobs-pay-json-api
+- baseURL: https://aitraining.jobs
+  baseurl_source: declared
+  description: The Roles.json API from AITraining.jobs — 1 operation(s) for roles.json.
+  name: AITraining.jobs Roles.json API
+  slug: aitraining-jobs-roles-json-api
+artifact_total: 7
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/conformance/aitraining-jobs-conformance.yml
+  href: https://artifacts.apis.io/aitraining-jobs/conformance/aitraining-jobs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aitraining-jobs-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/overlays/aitraining-jobs-openapi-overlay.yaml
+  href: https://artifacts.apis.io/aitraining-jobs/overlays/aitraining-jobs-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/aitraining-jobs-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/llms/aitraining-jobs-llms.txt
+  href: https://artifacts.apis.io/aitraining-jobs/llms/aitraining-jobs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aitraining-jobs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/mcp/aitraining-jobs-mcp.yml
+  href: https://artifacts.apis.io/aitraining-jobs/mcp/aitraining-jobs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/aitraining-jobs-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/hosts/aitraining-jobs-hosts.yml
+  href: https://artifacts.apis.io/aitraining-jobs/hosts/aitraining-jobs-hosts.yml
   title: ''
   type: Hosts
   url: hosts/aitraining-jobs-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/vendors/aitraining-jobs-vendors.yml
+  href: https://artifacts.apis.io/aitraining-jobs/vendors/aitraining-jobs-vendors.yml
   title: ''
   type: Vendors
   url: vendors/aitraining-jobs-vendors.yml
@@ -66,7 +94,7 @@ common:
   type: SignUp
   url: https://aitraining.jobs/jobs/registered-nurse-4c1e4cf12fb3
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aitraining-jobs/refs/heads/main/security/aitraining-jobs-domain-security.yml
+  href: https://artifacts.apis.io/aitraining-jobs/security/aitraining-jobs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aitraining-jobs-domain-security.yml
@@ -110,43 +138,68 @@ modified: '2026-10-11'
 name: AITraining.jobs
 nav: Providers
 network: true
-overview: 'AITraining.jobs is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Job, Data, and Training.
+overview: 'AITraining.jobs is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Pay.csv API, Pay.json API, Roles.json API, and 1 more. Tagged areas include Company, Artificial Intelligence, Job, Data, and Training.
+
+
+  The AITraining.jobs catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   AITraining.jobs'' developer surface includes signup flow, documentation, API reference, getting-started guide, pricing, and 10 more developer resources.'
-random_paper: 19
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 79
+  extends:
+  - spectral:oas
+  name: AITraining.jobs API Rules
+  rule_count: 38
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 1
+    warn: 1
+  slug: aitraining-jobs-rules
 score:
-  band: emerging
-  composite: 23.0
+  band: thin
+  composite: 28.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 13
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.8
   facets:
-    access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 0.0
-    developer_ergonomics: 28.6
-    discoverability: 75.0
+    access_clarity: 22.4
+    contract_governance: 18.2
+    contract_quality: 44.7
+    developer_ergonomics: 14.3
+    discoverability: 80.0
     operational_transparency: 0.0
+  previous_composite: 36.3
   provenance:
     conformance: derived
+    contracts:
+      callable: 100.0
+      derived: 0
+      marker_coverage: 0.0
+      total: 3
     mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
-    note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
-    reason: no_specs
+    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
+    reason: read_only
+screenshot: https://apis.io/screenshots/aitraining-jobs/aitraining-jobs-2026-11-03T120546.png
 security:
 - kind: domain-security
   name: Aitraining Jobs Domain Security

@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
@@ -12,7 +12,7 @@ access_model:
   - rate-limits
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -30,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.1
-  scored_at: '2026-10-17'
+  score: 44.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -138,15 +141,12 @@ apis:
   description: The Webhooks API from Enrich — 0 operation(s) for webhooks.
   name: Enrich Webhooks API
   slug: enrich-so-webhooks-api
-artifact_total: 38
+artifact_total: 43
 asyncapis:
 - description: ''
   name: Enrich So Webhooks
   slug: enrich-so-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Enrich Account API
   slug: open-enrich-so-account-api
@@ -179,42 +179,42 @@ collections:
   slug: open-enrich-so
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/capabilities/enrich-so-capability-edges.yml
+  href: https://artifacts.apis.io/enrich-so/capabilities/enrich-so-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/enrich-so-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/overlays/enrich-so-account-overlay.yaml
+  href: https://artifacts.apis.io/enrich-so/overlays/enrich-so-account-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/enrich-so-account-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/overlays/enrich-so-company-intelligence-overlay.yaml
+  href: https://artifacts.apis.io/enrich-so/overlays/enrich-so-company-intelligence-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/enrich-so-company-intelligence-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/overlays/enrich-so-email-verification-overlay.yaml
+  href: https://artifacts.apis.io/enrich-so/overlays/enrich-so-email-verification-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/enrich-so-email-verification-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/overlays/enrich-so-person-enrichment-overlay.yaml
+  href: https://artifacts.apis.io/enrich-so/overlays/enrich-so-person-enrichment-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/enrich-so-person-enrichment-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/security/enrich-so-domain-security.yml
+  href: https://artifacts.apis.io/enrich-so/security/enrich-so-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/enrich-so-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/agentic-access/enrich-so-agentic-access.yml
+  href: https://artifacts.apis.io/enrich-so/agentic-access/enrich-so-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/enrich-so-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/authentication/enrich-so-authentication.yml
+  href: https://artifacts.apis.io/enrich-so/authentication/enrich-so-authentication.yml
   title: ''
   type: Authentication
   url: authentication/enrich-so-authentication.yml
@@ -231,17 +231,17 @@ common:
   type: Documentation
   url: https://doc.enrich.so/introduction-1951028m0
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/plans/enrich-so-plans-pricing.yml
+  href: https://artifacts.apis.io/enrich-so/plans/enrich-so-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/enrich-so-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/rate-limits/enrich-so-rate-limits.yml
+  href: https://artifacts.apis.io/enrich-so/rate-limits/enrich-so-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/enrich-so-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/finops/enrich-so-finops.yml
+  href: https://artifacts.apis.io/enrich-so/finops/enrich-so-finops.yml
   title: ''
   type: FinOps
   url: finops/enrich-so-finops.yml
@@ -250,47 +250,47 @@ common:
   type: Blog
   url: https://www.enrich.so/blog
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/packages/enrich-so-packages.yml
+  href: https://artifacts.apis.io/enrich-so/packages/enrich-so-packages.yml
   title: ''
   type: Packages
   url: packages/enrich-so-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/packages/enrich-so-packages.yml
+  href: https://artifacts.apis.io/enrich-so/packages/enrich-so-packages.yml
   title: ''
   type: SDKs
   url: packages/enrich-so-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/well-known/enrich-so-well-known.yml
+  href: https://artifacts.apis.io/enrich-so/well-known/enrich-so-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/enrich-so-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/mcp/enrich-so-mcp.yml
+  href: https://artifacts.apis.io/enrich-so/mcp/enrich-so-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/enrich-so-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/mcp/enrich-so-tool-crosswalk.yml
+  href: https://artifacts.apis.io/enrich-so/mcp/enrich-so-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/enrich-so-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/llms/enrich-so-llms.txt
+  href: https://artifacts.apis.io/enrich-so/llms/enrich-so-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/enrich-so-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/conformance/enrich-so-conformance.yml
+  href: https://artifacts.apis.io/enrich-so/conformance/enrich-so-conformance.yml
   title: ''
   type: Conformance
   url: conformance/enrich-so-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/errors/enrich-so-problem-types.yml
+  href: https://artifacts.apis.io/enrich-so/errors/enrich-so-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/enrich-so-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/lifecycle/enrich-so-lifecycle.yml
+  href: https://artifacts.apis.io/enrich-so/lifecycle/enrich-so-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/enrich-so-lifecycle.yml
@@ -299,32 +299,32 @@ common:
   type: StatusPage
   url: https://status.enrich.so
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/scopes/enrich-so-scopes.yml
+  href: https://artifacts.apis.io/enrich-so/scopes/enrich-so-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/enrich-so-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/conventions/enrich-so-conventions.yml
+  href: https://artifacts.apis.io/enrich-so/conventions/enrich-so-conventions.yml
   title: ''
   type: Conventions
   url: conventions/enrich-so-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/changelog/enrich-so-changelog.yml
+  href: https://artifacts.apis.io/enrich-so/changelog/enrich-so-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/enrich-so-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/data-model/enrich-so-data-model.yml
+  href: https://artifacts.apis.io/enrich-so/data-model/enrich-so-data-model.yml
   title: ''
   type: DataModel
   url: data-model/enrich-so-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/asyncapi/enrich-so-webhooks.yml
+  href: https://artifacts.apis.io/enrich-so/asyncapi/enrich-so-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/enrich-so-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/enrich-so/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -365,12 +365,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/maximiseai
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/collections/enrich-so.postman_collection.json
+  href: https://artifacts.apis.io/enrich-so/collections/enrich-so.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/enrich-so.postman_collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/collections/enrich-so.opencollection.json
+  href: https://artifacts.apis.io/enrich-so/collections/enrich-so.opencollection.json
   title: ''
   type: OpenCollection
   url: collections/enrich-so.opencollection.json
@@ -398,19 +398,35 @@ network: true
 overview: 'Enrich publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Email Finder API, Lead Finder API, Phone Finder API, and 15 more. Tagged areas include Data Enrichment, Contact Discovery, Web Intelligence, B2B Data, and Lead Enrichment.
 
 
-  The Enrich catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Enrich catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Enrich''s developer surface includes authentication, documentation, engineering blog, changelog, API reference, getting-started guide, pricing, and 35 more developer resources.'
 plans:
 - name: Enrich So Plans Pricing
-  plan_count: 5
+  plan_count: 3
   slug: enrich-so-plans-pricing
-random_paper: 2
+- name: Enrich So Price Estimates
+  plan_count: 0
+  slug: enrich-so-price-estimates
+random_paper: 16
 rate_limits:
 - limit_count: 18
   name: Enrich So Rate Limits
   slug: enrich-so-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 112
+  extends:
+  - spectral:oas
+  name: Enrich API Rules
+  rule_count: 71
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 6
+    warn: 12
+  slug: enrich-so-rules
 scopes:
 - name: Enrich So Scopes
   scope_count: 1
@@ -418,23 +434,23 @@ scopes:
   summary_line: 1 scope
 score:
   band: strong
-  composite: 62.3
+  composite: 64.1
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 64.0
+    artifact_dirs: 31
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 65.8
-    contract_governance: 18.2
-    contract_quality: 61.0
+    contract_governance: 31.8
+    contract_quality: 61.9
     developer_ergonomics: 62.5
     discoverability: 80.0
     operational_transparency: 73.7
-  previous_composite: 63.8
+  previous_composite: 64.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -451,13 +467,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/screenshots/enrich-so-2026-07-25T213424.png
+screenshot: https://apis.io/screenshots/enrich-so/enrich-so-2026-07-25T213424.png
 security:
 - kind: authentication
   name: Enrich So Authentication
@@ -467,6 +483,16 @@ security:
   name: Enrich So Domain Security
   slug: enrich-so-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: build-a-lead-list-without-overspending
+  slug: build-a-lead-list-without-overspending
+- name: enrich-a-person-from-an-email
+  slug: enrich-a-person-from-an-email
+- name: find-and-verify-a-work-email
+  slug: find-and-verify-a-work-email
+- name: run-a-bulk-enrichment-job
+  slug: run-a-bulk-enrichment-job
 slug: enrich-so
 tags:
 - Data Enrichment

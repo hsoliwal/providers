@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The authenticated API behind the LevelTen Energy Marketplace. The host at api.levelten.energy self-identifies as "the API for LevelTen Energy" and directs callers to log in at marketplace.levelten.ene
@@ -65,12 +69,12 @@ common:
   type: PrivacyPolicy
   url: https://www.leveltenenergy.com/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/levelten-energy/refs/heads/main/llms/levelten-energy-llms.txt
+  href: https://artifacts.apis.io/levelten-energy/llms/levelten-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/levelten-energy-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/levelten-energy/refs/heads/main/security/levelten-energy-domain-security.yml
+  href: https://artifacts.apis.io/levelten-energy/security/levelten-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/levelten-energy-domain-security.yml
@@ -86,12 +90,12 @@ overview: 'LevelTen Energy is listed with 1 API on the [APIs.io](https://apis.io
 
 
   LevelTen Energy''s developer surface includes engineering blog, support, and 6 more developer resources.'
-random_paper: 18
+random_paper: 22
 score:
   band: emerging
   composite: 14.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -112,14 +116,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/levelten-energy/refs/heads/main/screenshots/levelten-energy-2026-07-25T224950.png
+screenshot: https://apis.io/screenshots/levelten-energy/levelten-energy-2026-07-25T224950.png
 security:
 - kind: domain-security
   name: Levelten Energy Domain Security

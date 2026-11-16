@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -58,9 +65,6 @@ apis:
 artifact_total: 13
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Presto Client REST Statement API
   slug: open-presto-foundation-statement-api
 - collection_type: open
@@ -68,17 +72,17 @@ collections:
   slug: open-presto-foundation
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/plans/presto-foundation-plans-pricing.yml
+  href: https://artifacts.apis.io/presto-foundation/plans/presto-foundation-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/presto-foundation-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/rate-limits/presto-foundation-rate-limits.yml
+  href: https://artifacts.apis.io/presto-foundation/rate-limits/presto-foundation-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/presto-foundation-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/finops/presto-foundation-finops.yml
+  href: https://artifacts.apis.io/presto-foundation/finops/presto-foundation-finops.yml
   title: ''
   type: FinOps
   url: finops/presto-foundation-finops.yml
@@ -107,22 +111,22 @@ common:
   type: License
   url: https://github.com/prestodb/presto/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/agentic-access/presto-foundation-agentic-access.yml
+  href: https://artifacts.apis.io/presto-foundation/agentic-access/presto-foundation-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/presto-foundation-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/security/presto-foundation-domain-security.yml
+  href: https://artifacts.apis.io/presto-foundation/security/presto-foundation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/presto-foundation-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/authentication/presto-foundation-authentication.yml
+  href: https://artifacts.apis.io/presto-foundation/authentication/presto-foundation-authentication.yml
   title: ''
   type: Authentication
   url: authentication/presto-foundation-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/scopes/presto-foundation-scopes.yml
+  href: https://artifacts.apis.io/presto-foundation/scopes/presto-foundation-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/presto-foundation-scopes.yml
@@ -184,7 +188,7 @@ finops:
 - has_sources: false
   method: generated
   name: Presto Foundation Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: presto-foundation-finops
   template: true
@@ -197,16 +201,32 @@ network: true
 overview: 'Presto Foundation publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Statement API, and 2 more. Tagged areas include Analytics, Big Data, Distributed SQL, Linux Foundation, and Open Source.
 
 
+  The Presto Foundation catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Presto Foundation''s developer surface includes authentication, developer portal, documentation, engineering blog, YouTube channel, and 21 more developer resources.'
 plans:
 - name: Presto Foundation Plans Pricing
   plan_count: 3
   slug: presto-foundation-plans-pricing
-random_paper: 11
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Presto Foundation Rate Limits
   slug: presto-foundation-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Presto Foundation API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: presto-foundation-rules
 scopes:
 - name: Presto Foundation Scopes
   scope_count: 0
@@ -214,18 +234,18 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 32.4
+  composite: 33.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 38.0
+    artifact_dirs: 17
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.4
     developer_ergonomics: 35.7
     discoverability: 57.1
@@ -233,7 +253,7 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 33.7
+  previous_composite: 33.8
   provenance:
     agentic_access: derived
     contracts:
@@ -247,13 +267,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/presto-foundation/refs/heads/main/screenshots/presto-foundation-2026-06-20T192054.png
+screenshot: https://apis.io/screenshots/presto-foundation/presto-foundation-2026-06-20T192054.png
 security:
 - kind: authentication
   name: Presto Foundation Authentication

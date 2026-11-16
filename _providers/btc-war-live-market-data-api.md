@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -28,23 +31,26 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.2
-  scored_at: '2026-10-17'
-api_count: 6
+  score: 55.3
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://btcwar.net
   baseurl_source: spec
   description: Sourced and timestamped Binance Spot observations.
   name: BTC War Live Market Data API Market data API
   slug: btc-war-live-market-data-api-market-data-api
-artifact_total: 13
+artifact_total: 16
 collections:
 - collection_type: open
   name: BTC War Live Market Data API
@@ -67,67 +73,67 @@ common:
   type: MCPServer
   url: https://btcwar.net/mcp
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/openapi/_original/btc-war-live-market-data-api-market-data-openapi.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/openapi/_original/btc-war-live-market-data-api-market-data-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/btc-war-live-market-data-api-market-data-openapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/arazzo/btc-war-live-market-data-api-arazzo.json
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/arazzo/btc-war-live-market-data-api-arazzo.json
   title: ''
   type: Arazzo
   url: arazzo/btc-war-live-market-data-api-arazzo.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/overlays/btc-war-live-market-data-api-market-data-overlay.yaml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/overlays/btc-war-live-market-data-api-market-data-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/btc-war-live-market-data-api-market-data-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/examples/btc-war-live-market-data-api-examples.json
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/examples/btc-war-live-market-data-api-examples.json
   title: ''
   type: Examples
   url: examples/btc-war-live-market-data-api-examples.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/vocabulary/btc-war-live-market-data-api-vocabulary.yaml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/vocabulary/btc-war-live-market-data-api-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/btc-war-live-market-data-api-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/data-model/btc-war-live-market-data-api-data-model.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/data-model/btc-war-live-market-data-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/btc-war-live-market-data-api-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/authentication/btc-war-live-market-data-api-authentication.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/authentication/btc-war-live-market-data-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/btc-war-live-market-data-api-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/conventions/btc-war-live-market-data-api-conventions.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/conventions/btc-war-live-market-data-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/btc-war-live-market-data-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/conventions/btc-war-live-market-data-api-conventions.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/conventions/btc-war-live-market-data-api-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/btc-war-live-market-data-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/errors/btc-war-live-market-data-api-problem-types.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/errors/btc-war-live-market-data-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/btc-war-live-market-data-api-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/rate-limits/btc-war-live-market-data-api-rate-limits.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/rate-limits/btc-war-live-market-data-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/btc-war-live-market-data-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/plans/btc-war-live-market-data-api-plans-pricing.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/plans/btc-war-live-market-data-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/btc-war-live-market-data-api-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/lifecycle/btc-war-live-market-data-api-lifecycle.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/lifecycle/btc-war-live-market-data-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/btc-war-live-market-data-api-lifecycle.yml
@@ -136,42 +142,42 @@ common:
   type: StatusPage
   url: https://btcwar.net/api/status/v1.json
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/changelog/btc-war-live-market-data-api-changelog.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/changelog/btc-war-live-market-data-api-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/btc-war-live-market-data-api-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/conformance/btc-war-live-market-data-api-conformance.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/conformance/btc-war-live-market-data-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/btc-war-live-market-data-api-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/mcp/btc-war-live-market-data-api-mcp.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/mcp/btc-war-live-market-data-api-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/btc-war-live-market-data-api-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/mcp/btc-war-live-market-data-api-tool-crosswalk.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/mcp/btc-war-live-market-data-api-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/btc-war-live-market-data-api-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/agentic-access/btc-war-live-market-data-api-agentic-access.yaml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/agentic-access/btc-war-live-market-data-api-agentic-access.yaml
   title: ''
   type: AgenticAccess
   url: agentic-access/btc-war-live-market-data-api-agentic-access.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/skills/btc-war-live-market-data-api-live-crypto-price.md
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/skills/btc-war-live-market-data-api-live-crypto-price.md
   title: ''
   type: AgentSkill
   url: skills/btc-war-live-market-data-api-live-crypto-price.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/llms/btc-war-live-market-data-api-llms.txt
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/llms/btc-war-live-market-data-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/btc-war-live-market-data-api-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/well-known/btc-war-live-market-data-api-well-known.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/well-known/btc-war-live-market-data-api-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/btc-war-live-market-data-api-well-known.yml
@@ -180,7 +186,7 @@ common:
   type: APICatalog
   url: https://btcwar.net/.well-known/api-catalog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/well-known/btc-war-live-market-data-api-security.txt
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/well-known/btc-war-live-market-data-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/btc-war-live-market-data-api-security.txt
@@ -189,22 +195,22 @@ common:
   type: ContentSignal
   url: https://btcwar.net/robots.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/security/btc-war-live-market-data-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/security/btc-war-live-market-data-api-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/btc-war-live-market-data-api-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/security/btc-war-live-market-data-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/security/btc-war-live-market-data-api-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/btc-war-live-market-data-api-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/security/btc-war-live-market-data-api-domain-security.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/security/btc-war-live-market-data-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/btc-war-live-market-data-api-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/packages/btc-war-live-market-data-api-packages.yml
+  href: https://artifacts.apis.io/btc-war-live-market-data-api/packages/btc-war-live-market-data-api-packages.yml
   title: ''
   type: Packages
   url: packages/btc-war-live-market-data-api-packages.yml
@@ -230,6 +236,14 @@ examples:
 - key_count: 5
   name: Btc War Live Market Data Api Examples
   slug: btc-war-live-market-data-api-examples
+finops:
+- has_sources: true
+  method: derived
+  name: Btc War Live Market Data Api Finops
+  primary_unit: ''
+  service_category: ''
+  slug: btc-war-live-market-data-api-finops
+  template: true
 image: https://btcwar.net/seo-scenes/modern.webp
 json_schemas:
 - name: BTC War Live Market Observation
@@ -256,10 +270,10 @@ modified: '2026-10-06'
 name: BTC War Live Market Data API
 nav: Providers
 network: true
-overview: 'BTC War Live Market Data API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Market data API. Tagged areas include Finance, Cryptocurrency, Market Data, Bitcoin, and crypto-price.
+overview: 'BTC War Live Market Data API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Market data API. Tagged areas include Finance, Cryptocurrency, Market Data, Bitcoin, and Crypto Price.
 
 
-  The BTC War Live Market Data API catalog on APIs.io includes 2 JSON-LD contexts.
+  The BTC War Live Market Data API catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
 
 
   BTC War Live Market Data API''s developer surface includes pricing, code examples, authentication, changelog, support, engineering blog, and 31 more developer resources.'
@@ -267,37 +281,50 @@ plans:
 - name: Btc War Live Market Data Api Plans Pricing
   plan_count: 1
   slug: btc-war-live-market-data-api-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Btc War Live Market Data Api Rate Limits
   slug: btc-war-live-market-data-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: BTC War Live Market Data API API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: btc-war-live-market-data-api-rules
 score:
   band: developing
-  composite: 46.2
+  composite: 47.6
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 64.5
+    artifact_dirs: 32
+    catalog_earned: 66.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 50.5
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: 0.2
   facets:
-    access_clarity: 31.6
-    contract_governance: 18.2
-    contract_quality: 62.7
+    access_clarity: 26.3
+    contract_governance: 31.8
+    contract_quality: 68.0
     developer_ergonomics: 35.7
-    discoverability: 81.7
+    discoverability: 76.7
     operational_transparency: 44.7
-  previous_composite: 44.1
+  previous_composite: 47.4
   provenance:
     agentic_access: unknown
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: first-party
     skills: first-party
@@ -307,14 +334,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 26.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/btc-war-live-market-data-api/refs/heads/main/screenshots/btc-war-live-market-data-api-2026-08-17T123059.png
+screenshot: https://apis.io/screenshots/btc-war-live-market-data-api/btc-war-live-market-data-api-2026-08-17T123059.png
 security:
 - kind: authentication
   name: Btc War Live Market Data Api Authentication
@@ -328,13 +355,17 @@ security:
   name: Btc War Live Market Data Api Vulnerability Disclosure
   slug: btc-war-live-market-data-api-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: btc-war-live-crypto-price
+  slug: btc-war-live-market-data-api-live-crypto-price
 slug: btc-war-live-market-data-api
 tags:
 - Finance
 - Cryptocurrency
 - Market Data
 - Bitcoin
-- crypto-price
+- Crypto Price
 - binance-spot
 - Orderflow
 - market-depth

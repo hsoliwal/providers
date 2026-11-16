@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 26.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 6
@@ -92,15 +98,40 @@ apis:
   slug: freestyle-sh-observability-api
 - baseURL: https://api.freestyle.sh
   baseurl_source: spec
-  description: APIs for managing lightweight virtual machines (VMs) to run your code in isolated environments.
-  name: Freestyle VM API
-  slug: freestyle-sh-vm-api
-- baseURL: https://api.freestyle.sh
-  baseurl_source: spec
   description: 'APIs for deploying websites. We handle node modules caching, scaling, certificates and the whole end to end process. Send the code using the [deploy](#tag/web/POST/web/v1/deploy) endpoint, and you''ll '
   name: Freestyle Web API
   slug: freestyle-sh-web-api
-artifact_total: 99
+- description: 'Run any call server-side and poll for its result: send `x-freestyle-background-after-secs: <n>` on the original request, and if it outlives that window you get a `202` with a request id to poll here. '
+  name: Freestyle Background requests API
+  slug: freestyle-sh-background-requests-api
+- description: Read and write files inside a running VM
+  name: Freestyle Filesystem API
+  slug: freestyle-sh-filesystem-api
+- description: The Firewall API from Freestyle — 6 operation(s) for firewall.
+  name: Freestyle Firewall API
+  slug: freestyle-sh-firewall-api
+- description: The Hardware API from Freestyle — 4 operation(s) for hardware.
+  name: Freestyle Hardware API
+  slug: freestyle-sh-hardware-api
+- description: 'Scoped access for your end users: identities, tokens, and per-VM grants'
+  name: Freestyle Identities API
+  slug: freestyle-sh-identities-api
+- description: Capture a VM's exact state, memory and disk, and boot new VMs from it
+  name: Freestyle Snapshots API
+  slug: freestyle-sh-snapshots-api
+- description: The TLS API from Freestyle — 8 operation(s) for tls.
+  name: Freestyle TLS API
+  slug: freestyle-sh-tls-api
+- description: The Tunnels API from Freestyle — 8 operation(s) for tunnels.
+  name: Freestyle Tunnels API
+  slug: freestyle-sh-tunnels-api
+- description: Boot, control, and run commands in your VMs
+  name: Freestyle VMs API
+  slug: freestyle-sh-vms-api
+- description: Private networks your VMs can share
+  name: Freestyle VPCs API
+  slug: freestyle-sh-vpcs-api
+artifact_total: 108
 collections:
 - collection_type: postman
   name: Freestyle Cron Auth API
@@ -135,9 +166,6 @@ collections:
 - collection_type: postman
   name: Freestyle Cron Auth Web API
   slug: postman-freestyle-sh-web-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Freestyle Cron API
   slug: open-freestyle-cron-api
@@ -197,7 +225,7 @@ collections:
   slug: open-freestyle-web-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/capabilities/freestyle-sh-capability-edges.yml
+  href: https://artifacts.apis.io/freestyle-sh/capabilities/freestyle-sh-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/freestyle-sh-capability-edges.yml
@@ -210,17 +238,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/freestyle/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/agentic-access/freestyle-sh-agentic-access.yml
+  href: https://artifacts.apis.io/freestyle-sh/agentic-access/freestyle-sh-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/freestyle-sh-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/security/freestyle-sh-domain-security.yml
+  href: https://artifacts.apis.io/freestyle-sh/security/freestyle-sh-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/freestyle-sh-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/authentication/freestyle-sh-authentication.yml
+  href: https://artifacts.apis.io/freestyle-sh/authentication/freestyle-sh-authentication.yml
   title: ''
   type: Authentication
   url: authentication/freestyle-sh-authentication.yml
@@ -397,17 +425,17 @@ common:
   type: Documentation
   url: https://docs.freestyle.sh/v2/domains/cli
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/plans/freestyle-sh-plans-pricing.yml
+  href: https://artifacts.apis.io/freestyle-sh/plans/freestyle-sh-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/freestyle-sh-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/rate-limits/freestyle-sh-rate-limits.yml
+  href: https://artifacts.apis.io/freestyle-sh/rate-limits/freestyle-sh-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/freestyle-sh-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/finops/freestyle-sh-finops.yml
+  href: https://artifacts.apis.io/freestyle-sh/finops/freestyle-sh-finops.yml
   title: ''
   type: FinOps
   url: finops/freestyle-sh-finops.yml
@@ -437,10 +465,10 @@ features:
 - Plan tiers Free, Hobby ($50/mo + usage), Pro ($500/mo + usage), Enterprise
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Freestyle Sh Finops
-  primary_unit: vcpu_hour
-  service_category: Compute
+  primary_unit: hour of vcpu
+  service_category: ''
   slug: freestyle-sh-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freestyle-sh.png
@@ -459,10 +487,10 @@ integrations:
 - Astro, Next.js, SvelteKit, Solid Start, React Native, Expo, Vite — starter templates
 json_schemas:
 - name: Freestyle Repository
-  property_count: 0
+  property_count: 8
   slug: freestyle-repository
 - name: Freestyle VM
-  property_count: 0
+  property_count: 7
   slug: freestyle-vm
 jsonld:
 - class_count: 0
@@ -474,7 +502,7 @@ modified: '2026-05-25'
 name: Freestyle
 nav: Providers
 network: true
-overview: 'Freestyle publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Certs API, Cron API, and 8 more. Tagged areas include Artificial Intelligence, Agents, Sandbox, VMs, and MicroVM.
+overview: 'Freestyle publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Certs API, Cron API, and 17 more. Tagged areas include Artificial Intelligence, Agents, Sandbox, VMs, and MicroVM.
 
 
   The Freestyle catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -483,9 +511,12 @@ overview: 'Freestyle publishes 11 API contracts indexed on the [APIs.io](https:/
   Freestyle''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 45 more developer resources.'
 plans:
 - name: Freestyle Sh Plans Pricing
-  plan_count: 5
+  plan_count: 8
   slug: freestyle-sh-plans-pricing
-random_paper: 11
+- name: Freestyle Sh Price Estimates
+  plan_count: 0
+  slug: freestyle-sh-price-estimates
+random_paper: 19
 rate_limits:
 - limit_count: 4
   name: Freestyle Sh Rate Limits
@@ -503,44 +534,44 @@ rules:
     warn: 4
   slug: freestyle-sh-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 52.0
+  band: strong
+  composite: 56.2
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 64.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 50.8
+    artifact_dirs: 19
+    catalog_earned: 73.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 41.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.7
+  delta: 0.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 73.7
     contract_governance: 9.8
-    contract_quality: 69.3
+    contract_quality: 67.4
     developer_ergonomics: 67.9
     discoverability: 62.5
     operational_transparency: 28.9
-  previous_composite: 58.7
+  previous_composite: 55.6
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 11
+      marker_coverage: 45.5
+      total: 22
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/freestyle-sh/refs/heads/main/screenshots/freestyle-sh-2026-06-20T181533.png
+screenshot: https://apis.io/screenshots/freestyle-sh/freestyle-sh-2026-06-20T181533.png
 security:
 - kind: authentication
   name: Freestyle Sh Authentication
@@ -562,7 +593,7 @@ tags:
 - Sandbox
 - VMs
 - MicroVM
-- Git
+- Version Control
 - Code Execution
 - JavaScript
 - TypeScript

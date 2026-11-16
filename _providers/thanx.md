@@ -1,13 +1,17 @@
 ---
 access_model:
   confidence: high
-  label: Enterprise · Self-serve signup
-  onboarding: self-serve
+  label: Enterprise
+  onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.0
-  scored_at: '2026-10-17'
+  score: 41.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 1
@@ -232,7 +239,7 @@ apis:
     question: Which loyalty members belong to a merchant?
   phrasing_ops: 4
   slug: thanx-users-api
-artifact_total: 153
+artifact_total: 157
 asyncapis:
 - description: ''
   name: Thanx Webhooks
@@ -280,9 +287,6 @@ collections:
 - collection_type: postman
   name: Thanx Consumer Account Users API
   slug: postman-thanx-users-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Thanx Consumer Account API
   slug: open-thanx-account-api
@@ -336,7 +340,7 @@ collections:
   slug: open-thanx-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/capabilities/thanx-capability-edges.yml
+  href: https://artifacts.apis.io/thanx/capabilities/thanx-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/thanx-capability-edges.yml
@@ -345,17 +349,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/thanx/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/agentic-access/thanx-agentic-access.yml
+  href: https://artifacts.apis.io/thanx/agentic-access/thanx-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/thanx-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/security/thanx-domain-security.yml
+  href: https://artifacts.apis.io/thanx/security/thanx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/thanx-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/authentication/thanx-authentication.yml
+  href: https://artifacts.apis.io/thanx/authentication/thanx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/thanx-authentication.yml
@@ -424,27 +428,27 @@ common:
   type: CodeExamples
   url: https://docs.thanx.com/overview/api_collections
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/rules/thanx-spectral-rules.yml
+  href: https://artifacts.apis.io/thanx/rules/thanx-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/thanx-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/vocabulary/thanx-vocabulary.yaml
+  href: https://artifacts.apis.io/thanx/vocabulary/thanx-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/thanx-vocabulary.yaml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/plans/thanx-plans-pricing.yml
+  href: https://artifacts.apis.io/thanx/plans/thanx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/thanx-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/rate-limits/thanx-rate-limits.yml
+  href: https://artifacts.apis.io/thanx/rate-limits/thanx-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/thanx-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/finops/thanx-finops.yml
+  href: https://artifacts.apis.io/thanx/finops/thanx-finops.yml
   title: ''
   type: FinOps
   url: finops/thanx-finops.yml
@@ -453,62 +457,62 @@ common:
   type: Blog
   url: https://www.thanx.com/blog
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/packages/thanx-packages.yml
+  href: https://artifacts.apis.io/thanx/packages/thanx-packages.yml
   title: ''
   type: Packages
   url: packages/thanx-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/packages/thanx-packages.yml
+  href: https://artifacts.apis.io/thanx/packages/thanx-packages.yml
   title: ''
   type: SDKs
   url: packages/thanx-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/well-known/thanx-well-known.yml
+  href: https://artifacts.apis.io/thanx/well-known/thanx-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/thanx-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/mcp/thanx-mcp.yml
+  href: https://artifacts.apis.io/thanx/mcp/thanx-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/thanx-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/mcp/thanx-tool-crosswalk.yml
+  href: https://artifacts.apis.io/thanx/mcp/thanx-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/thanx-tool-crosswalk.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/a2a/thanx-a2a.yml
+  href: https://artifacts.apis.io/thanx/a2a/thanx-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/thanx-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/llms/thanx-llms.txt
+  href: https://artifacts.apis.io/thanx/llms/thanx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/thanx-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/conformance/thanx-conformance.yml
+  href: https://artifacts.apis.io/thanx/conformance/thanx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/thanx-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/security/thanx-trust-center.yml
+  href: https://artifacts.apis.io/thanx/security/thanx-trust-center.yml
   title: ''
   type: Compliance
   url: security/thanx-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/security/thanx-trust-center.yml
+  href: https://artifacts.apis.io/thanx/security/thanx-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/thanx-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/errors/thanx-problem-types.yml
+  href: https://artifacts.apis.io/thanx/errors/thanx-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/thanx-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/lifecycle/thanx-lifecycle.yml
+  href: https://artifacts.apis.io/thanx/lifecycle/thanx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/thanx-lifecycle.yml
@@ -517,47 +521,47 @@ common:
   type: StatusPage
   url: https://status.thanx.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/lifecycle/thanx-lifecycle.yml
+  href: https://artifacts.apis.io/thanx/lifecycle/thanx-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/thanx-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/scopes/thanx-scopes.yml
+  href: https://artifacts.apis.io/thanx/scopes/thanx-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/thanx-scopes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/sandbox/thanx-sandbox.yml
+  href: https://artifacts.apis.io/thanx/sandbox/thanx-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/thanx-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/conventions/thanx-conventions.yml
+  href: https://artifacts.apis.io/thanx/conventions/thanx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/thanx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/conventions/thanx-conventions.yml
+  href: https://artifacts.apis.io/thanx/conventions/thanx-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/thanx-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/changelog/thanx-changelog.yml
+  href: https://artifacts.apis.io/thanx/changelog/thanx-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/thanx-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/data-model/thanx-data-model.yml
+  href: https://artifacts.apis.io/thanx/data-model/thanx-data-model.yml
   title: ''
   type: DataModel
   url: data-model/thanx-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/asyncapi/thanx-webhooks.yml
+  href: https://artifacts.apis.io/thanx/asyncapi/thanx-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/thanx-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/thanx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -682,12 +686,12 @@ features:
   name: Webhooks
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Thanx Finops
   primary_unit: ''
-  service_category: Customer Engagement + Loyalty
+  service_category: ''
   slug: thanx-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/thanx.png
 integrations:
 - description: Online ordering provider referenced in purchase order providers.
@@ -927,13 +931,13 @@ score:
   band: exemplar
   composite: 74.4
   coverage:
-    artifact_dirs: 36
+    artifact_dirs: 38
     catalog_earned: 89.0
     catalog_earned_first_party: 20.0
     catalog_gap: 26.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 60.5
     contract_governance: 45.5
@@ -941,7 +945,7 @@ score:
     developer_ergonomics: 84.5
     discoverability: 80.0
     operational_transparency: 86.8
-  previous_composite: 75.9
+  previous_composite: 74.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -958,13 +962,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/thanx/refs/heads/main/screenshots/thanx-2026-06-20T195212.png
+screenshot: https://apis.io/screenshots/thanx/thanx-2026-06-20T195212.png
 security:
 - kind: authentication
   name: Thanx Authentication
@@ -978,6 +982,18 @@ security:
   name: Thanx Trust Center
   slug: thanx-trust-center
   summary_line: SOC 2 Type 2, PCI DSS, HIPAA, ISO 27001, FedRAMP
+skill_count: 5
+skills:
+- name: Create a campaign and issue rewards in bulk
+  slug: thanx-campaign-reward-issuance
+- name: Enroll a guest and redeem a reward in a consumer app
+  slug: thanx-consumer-reward-redemption
+- name: Thanx
+  slug: thanx-loyalty-api
+- name: Apply loyalty at POS checkout
+  slug: thanx-pos-checkout-loyalty
+- name: Ingest subscribers from an external channel
+  slug: thanx-subscriber-ingestion
 slug: thanx
 tags:
 - Restaurant

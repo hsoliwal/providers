@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-10-17'
+  score: 36.7
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
-- description: Allwhere API provides endpoints for IT procurement and asset management as documented in the API Reference.
+- baseURL: https://api.allwhere.co
+  baseurl_source: spec
+  description: Allwhere API provides endpoints for IT procurement and asset management as documented in the API Reference.
   name: Allwhere API
-  slug: allwhere-api-2
+  slug: allwhere-api
 - baseURL: https://api.allwhere.co
   baseurl_source: declared
   description: The Beta API from allwhere — 6 operation(s) for beta.
@@ -37,57 +53,57 @@ apis:
 artifact_total: 12
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/rules/allwhere-rules.yml
+  href: https://artifacts.apis.io/allwhere/rules/allwhere-rules.yml
   title: ''
   type: Spectral
   url: rules/allwhere-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/json-ld/allwhere-context.jsonld
+  href: https://artifacts.apis.io/allwhere/json-ld/allwhere-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/allwhere-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/vocabulary/allwhere-vocabulary.yml
+  href: https://artifacts.apis.io/allwhere/vocabulary/allwhere-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/allwhere-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/data-model/allwhere-data-model.yml
+  href: https://artifacts.apis.io/allwhere/data-model/allwhere-data-model.yml
   title: ''
   type: DataModel
   url: data-model/allwhere-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/conventions/allwhere-conventions.yml
+  href: https://artifacts.apis.io/allwhere/conventions/allwhere-conventions.yml
   title: ''
   type: Conventions
   url: conventions/allwhere-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/authentication/allwhere-authentication.yml
+  href: https://artifacts.apis.io/allwhere/authentication/allwhere-authentication.yml
   title: ''
   type: Authentication
   url: authentication/allwhere-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/conformance/allwhere-conformance.yml
+  href: https://artifacts.apis.io/allwhere/conformance/allwhere-conformance.yml
   title: ''
   type: Conformance
   url: conformance/allwhere-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/llms/allwhere-llms.txt
+  href: https://artifacts.apis.io/allwhere/llms/allwhere-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/allwhere-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/well-known/allwhere-well-known.yml
+  href: https://artifacts.apis.io/allwhere/well-known/allwhere-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/allwhere-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/hosts/allwhere-hosts.yml
+  href: https://artifacts.apis.io/allwhere/hosts/allwhere-hosts.yml
   title: ''
   type: Hosts
   url: hosts/allwhere-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/vendors/allwhere-vendors.yml
+  href: https://artifacts.apis.io/allwhere/vendors/allwhere-vendors.yml
   title: ''
   type: Vendors
   url: vendors/allwhere-vendors.yml
@@ -120,7 +136,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/allwhere
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwhere/refs/heads/main/security/allwhere-domain-security.yml
+  href: https://artifacts.apis.io/allwhere/security/allwhere-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/allwhere-domain-security.yml
@@ -168,14 +184,14 @@ modified: '2026-09-24'
 name: allwhere
 nav: Providers
 network: true
-overview: 'allwhere is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Beta API, and 1 more. Tagged areas include Company, IT, Asset-Management, Procurement, and Remote-Workforce.
+overview: 'allwhere is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Beta API, and 1 more. Tagged areas include Company, IT, Asset Management, Procurement, and Remote-Workforce.
 
 
   The allwhere catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   allwhere''s developer surface includes authentication, pricing, engineering blog, API reference, getting-started guide, documentation, and 14 more developer resources.'
-random_paper: 16
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -190,24 +206,24 @@ rules:
     warn: 2
   slug: allwhere-rules
 score:
-  band: thin
-  composite: 29.3
+  band: emerging
+  composite: 23.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 19
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 29.0
+  delta: -5.9
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 26.5
-    developer_ergonomics: 42.9
+    developer_ergonomics: 27.4
     discoverability: 64.3
-    operational_transparency: 5.3
-  previous_composite: 0.3
+    operational_transparency: 2.6
+  previous_composite: 29.3
   provenance:
     conformance: derived
     contracts:
@@ -221,13 +237,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/allwhere/allwhere-2026-11-03T120657.png
 security:
 - kind: authentication
   name: Allwhere Authentication
@@ -241,7 +258,7 @@ slug: allwhere
 tags:
 - Company
 - IT
-- Asset-Management
+- Asset Management
 - Procurement
 - Remote-Workforce
 - Enterprise

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -88,9 +94,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Salsa Payroll Companies API
   slug: open-salsa-companies-api
 - collection_type: open
@@ -119,22 +122,22 @@ collections:
   slug: open-salsa
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/capabilities/salsa-capability-edges.yml
+  href: https://artifacts.apis.io/salsa/capabilities/salsa-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/salsa-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/agentic-access/salsa-agentic-access.yml
+  href: https://artifacts.apis.io/salsa/agentic-access/salsa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/salsa-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/security/salsa-domain-security.yml
+  href: https://artifacts.apis.io/salsa/security/salsa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/salsa-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/authentication/salsa-authentication.yml
+  href: https://artifacts.apis.io/salsa/authentication/salsa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/salsa-authentication.yml
@@ -155,17 +158,17 @@ common:
   type: Documentation
   url: https://docs.salsa.dev/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/plans/salsa-plans-pricing.yml
+  href: https://artifacts.apis.io/salsa/plans/salsa-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/salsa-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/rate-limits/salsa-rate-limits.yml
+  href: https://artifacts.apis.io/salsa/rate-limits/salsa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/salsa-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/finops/salsa-finops.yml
+  href: https://artifacts.apis.io/salsa/finops/salsa-finops.yml
   title: ''
   type: FinOps
   url: finops/salsa-finops.yml
@@ -188,6 +191,9 @@ network: true
 overview: 'Salsa publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Companies API, Onboarding & Sessions API, Pay Schedules API, and 5 more. Tagged areas include Payroll, Embedded Finance, Payroll as a Service, Fintech, and Payments.
 
 
+  The Salsa catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Salsa''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Salsa Plans Pricing
@@ -198,25 +204,38 @@ rate_limits:
 - limit_count: 3
   name: Salsa Rate Limits
   slug: salsa-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Salsa API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: salsa-rules
 score:
   band: emerging
-  composite: 23.7
+  composite: 25.3
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.5
     developer_ergonomics: 21.4
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.0
+  previous_composite: 25.3
   provenance:
     agentic_access: derived
     contracts:
@@ -230,13 +249,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/salsa/refs/heads/main/screenshots/salsa-2026-09-02T154329.png
+screenshot: https://apis.io/screenshots/salsa/salsa-2026-09-02T154329.png
 security:
 - kind: authentication
   name: Salsa Authentication

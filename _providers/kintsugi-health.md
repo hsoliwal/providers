@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Provides endpoints to initiate a session, submit audio, retrieve results, and submit feedback for voice biomarker analysis.
@@ -57,42 +71,42 @@ apis:
 artifact_total: 16
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/rules/kintsugi-health-rules.yml
+  href: https://artifacts.apis.io/kintsugi-health/rules/kintsugi-health-rules.yml
   title: ''
   type: Spectral
   url: rules/kintsugi-health-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/json-ld/kintsugi-health-context.jsonld
+  href: https://artifacts.apis.io/kintsugi-health/json-ld/kintsugi-health-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/kintsugi-health-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/vocabulary/kintsugi-health-vocabulary.yml
+  href: https://artifacts.apis.io/kintsugi-health/vocabulary/kintsugi-health-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/kintsugi-health-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/data-model/kintsugi-health-data-model.yml
+  href: https://artifacts.apis.io/kintsugi-health/data-model/kintsugi-health-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kintsugi-health-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/authentication/kintsugi-health-authentication.yml
+  href: https://artifacts.apis.io/kintsugi-health/authentication/kintsugi-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kintsugi-health-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/conformance/kintsugi-health-conformance.yml
+  href: https://artifacts.apis.io/kintsugi-health/conformance/kintsugi-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kintsugi-health-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/hosts/kintsugi-health-hosts.yml
+  href: https://artifacts.apis.io/kintsugi-health/hosts/kintsugi-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/kintsugi-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/vendors/kintsugi-health-vendors.yml
+  href: https://artifacts.apis.io/kintsugi-health/vendors/kintsugi-health-vendors.yml
   title: ''
   type: Vendors
   url: vendors/kintsugi-health-vendors.yml
@@ -117,7 +131,7 @@ common:
   type: Leadership
   url: https://www.kintsugihealth.com/blog-categories/team
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kintsugi-health/refs/heads/main/security/kintsugi-health-domain-security.yml
+  href: https://artifacts.apis.io/kintsugi-health/security/kintsugi-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kintsugi-health-domain-security.yml
@@ -193,14 +207,14 @@ modified: '2026-10-14'
 name: Kintsugi Health
 nav: Providers
 network: true
-overview: 'Kintsugi Health is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Feedback API, Initiate API, Kintsugi Health API, and 3 more. Tagged areas include Health Tech, Artificial Intelligence, VoiceAnalytics, Mental Health, and Digital Health.
+overview: 'Kintsugi Health is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Feedback API, Initiate API, Kintsugi Health API, and 3 more. Tagged areas include Health Tech, Artificial Intelligence, Voice Analytics, Mental Health, and Digital Health.
 
 
   The Kintsugi Health catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Kintsugi Health''s developer surface includes authentication, documentation, getting-started guide, support, engineering blog, and 17 more developer resources.'
-random_paper: 13
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -216,21 +230,23 @@ rules:
   slug: kintsugi-health-rules
 score:
   band: thin
-  composite: 37.4
+  composite: 29.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.2
   facets:
-    access_clarity: 28.9
+    access_clarity: 14.5
     contract_governance: 35.6
     contract_quality: 25.7
-    developer_ergonomics: 57.1
-    discoverability: 66.1
-    operational_transparency: 10.5
+    developer_ergonomics: 38.1
+    discoverability: 64.3
+    operational_transparency: 5.3
+  previous_composite: 37.4
   provenance:
     conformance: first-party
     contracts:
@@ -248,12 +264,14 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 27.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 22.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/kintsugi-health/kintsugi-health-2026-11-03T134426.png
 security:
 - kind: authentication
   name: Kintsugi Health Authentication
@@ -267,7 +285,7 @@ slug: kintsugi-health
 tags:
 - Health Tech
 - Artificial Intelligence
-- VoiceAnalytics
+- Voice Analytics
 - Mental Health
 - Digital Health
 website: https://www.kintsugihealth.com

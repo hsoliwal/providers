@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: River's GraphQL data API secured with OAuth 2.0 authorization-code + PKCE and OpenID Connect. Read scopes cover account balances, transactions, identity, and payment networks.
@@ -42,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/mcp/river-financial-mcp.yml
+  href: https://artifacts.apis.io/river-financial/mcp/river-financial-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/river-financial-mcp.yml
@@ -83,52 +88,52 @@ common:
   type: Security
   url: https://river.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/well-known/river-financial-security.txt
+  href: https://artifacts.apis.io/river-financial/well-known/river-financial-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/river-financial-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/well-known/river-financial-well-known.yml
+  href: https://artifacts.apis.io/river-financial/well-known/river-financial-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/river-financial-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/authentication/river-financial-authentication.yml
+  href: https://artifacts.apis.io/river-financial/authentication/river-financial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/river-financial-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/scopes/river-financial-scopes.yml
+  href: https://artifacts.apis.io/river-financial/scopes/river-financial-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/river-financial-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/conventions/river-financial-conventions.yml
+  href: https://artifacts.apis.io/river-financial/conventions/river-financial-conventions.yml
   title: ''
   type: Conventions
   url: conventions/river-financial-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/conformance/river-financial-conformance.yml
+  href: https://artifacts.apis.io/river-financial/conformance/river-financial-conformance.yml
   title: ''
   type: Conformance
   url: conformance/river-financial-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/lifecycle/river-financial-lifecycle.yml
+  href: https://artifacts.apis.io/river-financial/lifecycle/river-financial-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/river-financial-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/security/river-financial-domain-security.yml
+  href: https://artifacts.apis.io/river-financial/security/river-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/river-financial-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/security/river-financial-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/river-financial/security/river-financial-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/river-financial-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/llms/river-financial-llms.txt
+  href: https://artifacts.apis.io/river-financial/llms/river-financial-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/river-financial-llms.txt
@@ -144,7 +149,7 @@ overview: 'River Financial is listed with 1 API on the [APIs.io](https://apis.io
 
 
   River Financial''s developer surface includes support, signup flow, authentication, and 17 more developer resources.'
-random_paper: 12
+random_paper: 18
 scopes:
 - name: River Financial Scopes
   scope_count: 6
@@ -154,7 +159,7 @@ score:
   band: thin
   composite: 28.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -183,14 +188,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 41.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/river-financial/refs/heads/main/screenshots/river-financial-2026-09-02T153919.png
+screenshot: https://apis.io/screenshots/river-financial/river-financial-2026-09-02T153919.png
 security:
 - kind: authentication
   name: River Financial Authentication
@@ -211,6 +216,7 @@ tags:
 - Cryptocurrency
 - Financial Services
 - Banking
+- OAuth
 - Authentication
 website: https://river.com
 ---

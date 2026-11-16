@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,12 +40,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/security/darrow-domain-security.yml
+  href: https://artifacts.apis.io/darrow/security/darrow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/darrow-domain-security.yml
@@ -99,37 +102,37 @@ common:
   type: Partners
   url: https://www.darrow.ai/partnerships
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/well-known/darrow-well-known.yml
+  href: https://artifacts.apis.io/darrow/well-known/darrow-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/darrow-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/authentication/darrow-authentication.yml
+  href: https://artifacts.apis.io/darrow/authentication/darrow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/darrow-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/scopes/darrow-scopes.yml
+  href: https://artifacts.apis.io/darrow/scopes/darrow-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/darrow-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/conformance/darrow-conformance.yml
+  href: https://artifacts.apis.io/darrow/conformance/darrow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/darrow-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/llms/darrow-llms.txt
+  href: https://artifacts.apis.io/darrow/llms/darrow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/darrow-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/plans/darrow-plans-pricing.yml
+  href: https://artifacts.apis.io/darrow/plans/darrow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/darrow-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/rate-limits/darrow-rate-limits.yml
+  href: https://artifacts.apis.io/darrow/rate-limits/darrow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/darrow-rate-limits.yml
@@ -163,7 +166,7 @@ plans:
 - name: Darrow Plans Pricing
   plan_count: 0
   slug: darrow-plans-pricing
-random_paper: 17
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Darrow Rate Limits
@@ -177,7 +180,7 @@ score:
   band: emerging
   composite: 20.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -200,14 +203,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/darrow/refs/heads/main/screenshots/darrow-2026-09-02T145214.png
+screenshot: https://apis.io/screenshots/darrow/darrow-2026-09-02T145214.png
 security:
 - kind: authentication
   name: Darrow Authentication

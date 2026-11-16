@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.5
-  scored_at: '2026-10-17'
+  score: 32.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 5
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 79
   slug: mv-sistemas-agentic-access
   summary_line: 79 operations · 40 acting · 5 human-in-the-loop
-api_count: 31
+api_count: 18
 apis:
 - baseURL: https://api.globalhealth.mv/available-appointments/api
   baseurl_source: declared
@@ -220,15 +223,12 @@ apis:
   description: The User API from MV sistemas — 1 operation(s) for user.
   name: MV sistemas User API
   slug: mv-sistemas-user-api
-artifact_total: 75
+artifact_total: 78
 asyncapis:
 - description: ''
   name: Mv Sistemas Webhooks
   slug: mv-sistemas-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Clinic Agenda Agendamento API
   slug: open-mv-sistemas-agendamento-api
@@ -336,12 +336,12 @@ collections:
   slug: open-mv-sistemas-user-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/capabilities/mv-sistemas-capability-edges.yml
+  href: https://artifacts.apis.io/mv-sistemas/capabilities/mv-sistemas-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/mv-sistemas-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/overlays/mv-sistemas-clinic-agenda-overlay.yaml
+  href: https://artifacts.apis.io/mv-sistemas/overlays/mv-sistemas-clinic-agenda-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mv-sistemas-clinic-agenda-overlay.yaml
@@ -374,67 +374,67 @@ common:
   type: TermsOfService
   url: http://globalhealth.mv/termos/checkin/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/authentication/mv-sistemas-authentication.yml
+  href: https://artifacts.apis.io/mv-sistemas/authentication/mv-sistemas-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mv-sistemas-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/conventions/mv-sistemas-conventions.yml
+  href: https://artifacts.apis.io/mv-sistemas/conventions/mv-sistemas-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mv-sistemas-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/errors/mv-sistemas-problem-types.yml
+  href: https://artifacts.apis.io/mv-sistemas/errors/mv-sistemas-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mv-sistemas-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/lifecycle/mv-sistemas-lifecycle.yml
+  href: https://artifacts.apis.io/mv-sistemas/lifecycle/mv-sistemas-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mv-sistemas-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/conformance/mv-sistemas-conformance.yml
+  href: https://artifacts.apis.io/mv-sistemas/conformance/mv-sistemas-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mv-sistemas-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/data-model/mv-sistemas-data-model.yml
+  href: https://artifacts.apis.io/mv-sistemas/data-model/mv-sistemas-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mv-sistemas-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/sandbox/mv-sistemas-sandbox.yml
+  href: https://artifacts.apis.io/mv-sistemas/sandbox/mv-sistemas-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/mv-sistemas-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/mcp/mv-sistemas-mcp.yml
+  href: https://artifacts.apis.io/mv-sistemas/mcp/mv-sistemas-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/mv-sistemas-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/llms/mv-sistemas-llms.txt
+  href: https://artifacts.apis.io/mv-sistemas/llms/mv-sistemas-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mv-sistemas-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/asyncapi/mv-sistemas-webhooks.yml
+  href: https://artifacts.apis.io/mv-sistemas/asyncapi/mv-sistemas-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/mv-sistemas-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mv-sistemas/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/agentic-access/mv-sistemas-agentic-access.yml
+  href: https://artifacts.apis.io/mv-sistemas/agentic-access/mv-sistemas-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mv-sistemas-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/security/mv-sistemas-domain-security.yml
+  href: https://artifacts.apis.io/mv-sistemas/security/mv-sistemas-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mv-sistemas-domain-security.yml
@@ -449,26 +449,39 @@ network: true
 overview: 'MV sistemas publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agendamento API, Agendamento de performance API, Atendimento API, and 32 more. Tagged areas include Company, Healthcare, Health IT, Hospitals, and Clinics.
 
 
-  The MV sistemas catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The MV sistemas catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   MV sistemas'' developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, sandbox, and 16 more developer resources.'
-random_paper: 1
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: MV sistemas API Rules
+  rule_count: 59
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 3
+    warn: 16
+  slug: mv-sistemas-rules
 score:
   band: developing
-  composite: 39.7
+  composite: 42.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.9
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
-    contract_quality: 56.4
+    contract_governance: 18.2
+    contract_quality: 59.8
     developer_ergonomics: 53.0
     discoverability: 78.6
     operational_transparency: 7.9
@@ -479,14 +492,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 39.7
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 62.9
       total: 35
     mcp: derived
     skills: derived
@@ -496,13 +509,13 @@ score:
     regime: Health
     regime_id: health
     score: 21.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/mv-sistemas/refs/heads/main/screenshots/mv-sistemas-2026-08-07T184458.png
+screenshot: https://apis.io/screenshots/mv-sistemas/mv-sistemas-2026-08-07T184458.png
 security:
 - kind: authentication
   name: Mv Sistemas Authentication
@@ -512,6 +525,14 @@ security:
   name: Mv Sistemas Domain Security
   slug: mv-sistemas-domain-security
   summary_line: TLSv1.3
+skill_count: 3
+skills:
+- name: Schedule a clinic performance appointment
+  slug: mv-sistemas-clinic-performance-scheduling
+- name: Manage patient health pendencies
+  slug: mv-sistemas-manage-health-pendencies
+- name: Register and look up a beneficiary
+  slug: mv-sistemas-register-lookup-beneficiary
 slug: mv-sistemas
 tags:
 - Company

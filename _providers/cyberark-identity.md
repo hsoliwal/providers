@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -86,9 +89,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: CyberArk Identity REST Authentication API
   slug: open-cyberark-identity-authentication-api
 - collection_type: open
@@ -114,27 +114,27 @@ collections:
   slug: open-cyberark-identity
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cyberark-identity/refs/heads/main/capabilities/cyberark-identity-capability-edges.yml
+  href: https://artifacts.apis.io/cyberark-identity/capabilities/cyberark-identity-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cyberark-identity-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cyberark-identity/refs/heads/main/agentic-access/cyberark-identity-agentic-access.yml
+  href: https://artifacts.apis.io/cyberark-identity/agentic-access/cyberark-identity-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cyberark-identity-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cyberark-identity/refs/heads/main/security/cyberark-identity-trust-center.yml
+  href: https://artifacts.apis.io/cyberark-identity/security/cyberark-identity-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cyberark-identity-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cyberark-identity/refs/heads/main/security/cyberark-identity-domain-security.yml
+  href: https://artifacts.apis.io/cyberark-identity/security/cyberark-identity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cyberark-identity-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cyberark-identity/refs/heads/main/authentication/cyberark-identity-authentication.yml
+  href: https://artifacts.apis.io/cyberark-identity/authentication/cyberark-identity-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cyberark-identity-authentication.yml
@@ -170,30 +170,46 @@ modified: '2026-05-11'
 name: CyberArk Identity
 nav: Providers
 network: true
-overview: 'CyberArk Identity publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, CDirectoryService API, ExtData API, and 5 more. Tagged areas include Identity, Identity and Access Management, SSO, Multi-Factor Authentication, and Authentication.
+overview: 'CyberArk Identity publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, CDirectoryService API, ExtData API, and 5 more. Tagged areas include Identity, Identity and Access Management, SSO, Multi-Factor Authentication, and OAuth.
+
+
+  The CyberArk Identity catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   CyberArk Identity''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 6 more developer resources.'
-random_paper: 10
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: CyberArk Identity API Rules
+  rule_count: 57
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 2
+  slug: cyberark-identity-rules
 score:
-  band: emerging
-  composite: 24.9
+  band: thin
+  composite: 26.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 11
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.6
     developer_ergonomics: 14.3
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 24.8
+  previous_composite: 26.5
   provenance:
     agentic_access: derived
     contracts:
@@ -207,13 +223,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cyberark-identity/refs/heads/main/screenshots/cyberark-identity-2026-06-20T175406.png
+screenshot: https://apis.io/screenshots/cyberark-identity/cyberark-identity-2026-06-20T175406.png
 security:
 - kind: authentication
   name: Cyberark Identity Authentication
@@ -233,7 +249,8 @@ tags:
 - Identity and Access Management
 - SSO
 - Multi-Factor Authentication
-- Authentication
+- OAuth
 - Zero Trust
+- Authentication
 website: https://www.cyberark.com/products/identity-management/
 ---

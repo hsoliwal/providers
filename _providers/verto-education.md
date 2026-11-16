@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A remote Model Context Protocol endpoint served from Verto Education's own WordPress installation and advertised through RFC 9728 protected-resource metadata. Access requires an OAuth 2.0 access token
@@ -36,7 +52,7 @@ common:
   type: BlogRSS
   url: https://vertoeducation.org/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/security/verto-education-domain-security.yml
+  href: https://artifacts.apis.io/verto-education/security/verto-education-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/verto-education-domain-security.yml
@@ -73,62 +89,62 @@ common:
   type: PrivacyPolicy
   url: https://vertoeducation.org/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/mcp/verto-education-mcp.yml
+  href: https://artifacts.apis.io/verto-education/mcp/verto-education-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/verto-education-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/llms/verto-education-llms.txt
+  href: https://artifacts.apis.io/verto-education/llms/verto-education-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/verto-education-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/well-known/verto-education-well-known.yml
+  href: https://artifacts.apis.io/verto-education/well-known/verto-education-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/verto-education-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/authentication/verto-education-authentication.yml
+  href: https://artifacts.apis.io/verto-education/authentication/verto-education-authentication.yml
   title: ''
   type: Authentication
   url: authentication/verto-education-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/scopes/verto-education-scopes.yml
+  href: https://artifacts.apis.io/verto-education/scopes/verto-education-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/verto-education-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/conformance/verto-education-conformance.yml
+  href: https://artifacts.apis.io/verto-education/conformance/verto-education-conformance.yml
   title: ''
   type: Conformance
   url: conformance/verto-education-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/errors/verto-education-problem-types.yml
+  href: https://artifacts.apis.io/verto-education/errors/verto-education-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/verto-education-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/conventions/verto-education-conventions.yml
+  href: https://artifacts.apis.io/verto-education/conventions/verto-education-conventions.yml
   title: ''
   type: Conventions
   url: conventions/verto-education-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/lifecycle/verto-education-lifecycle.yml
+  href: https://artifacts.apis.io/verto-education/lifecycle/verto-education-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/verto-education-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/rate-limits/verto-education-rate-limits.yml
+  href: https://artifacts.apis.io/verto-education/rate-limits/verto-education-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/verto-education-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/plans/verto-education-plans-pricing.yml
+  href: https://artifacts.apis.io/verto-education/plans/verto-education-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/verto-education-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/packages/verto-education-packages.yml
+  href: https://artifacts.apis.io/verto-education/packages/verto-education-packages.yml
   title: ''
   type: Packages
   url: packages/verto-education-packages.yml
@@ -152,7 +168,7 @@ plans:
 - name: Verto Education Plans Pricing
   plan_count: 0
   slug: verto-education-plans-pricing
-random_paper: 21
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Verto Education Rate Limits
@@ -166,7 +182,7 @@ score:
   band: emerging
   composite: 24.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -190,14 +206,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/verto-education/refs/heads/main/screenshots/verto-education-2026-10-11T132918.png
+screenshot: https://apis.io/screenshots/verto-education/verto-education-2026-10-11T132918.png
 security:
 - kind: authentication
   name: Verto Education Authentication
@@ -217,7 +233,8 @@ tags:
 - Students
 - Travel
 - MCP
-- Authentication
+- OAuth
 - Agents
+- Authentication
 website: https://vertoeducation.org/
 ---

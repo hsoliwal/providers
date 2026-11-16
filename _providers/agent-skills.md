@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Anthropic Tool Use API allows AI agents built on Claude to call client-defined functions or Anthropic-provided server tools such as web search, code execution, and web fetch. Tools are declared in
@@ -48,17 +52,17 @@ apis:
 artifact_total: 40
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agent-skills/refs/heads/main/plans/agent-skills-plans-pricing.yml
+  href: https://artifacts.apis.io/agent-skills/plans/agent-skills-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/agent-skills-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/agent-skills/refs/heads/main/rate-limits/agent-skills-rate-limits.yml
+  href: https://artifacts.apis.io/agent-skills/rate-limits/agent-skills-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/agent-skills-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agent-skills/refs/heads/main/finops/agent-skills-finops.yml
+  href: https://artifacts.apis.io/agent-skills/finops/agent-skills-finops.yml
   title: ''
   type: FinOps
   url: finops/agent-skills-finops.yml
@@ -87,7 +91,7 @@ common:
   type: License
   url: https://github.com/google/adk-python/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agent-skills/refs/heads/main/security/agent-skills-domain-security.yml
+  href: https://artifacts.apis.io/agent-skills/security/agent-skills-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agent-skills-domain-security.yml
@@ -151,7 +155,7 @@ finops:
 - has_sources: false
   method: generated
   name: Agent Skills Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: agent-skills-finops
   template: true
@@ -218,7 +222,7 @@ plans:
 - name: Agent Skills Plans Pricing
   plan_count: 3
   slug: agent-skills-plans-pricing
-random_paper: 20
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Agent Skills Rate Limits
@@ -245,7 +249,7 @@ score:
     catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.9
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
@@ -256,21 +260,21 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 29.1
+  previous_composite: 28.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/agent-skills/refs/heads/main/screenshots/agent-skills-2026-06-20T165939.png
+screenshot: https://apis.io/screenshots/agent-skills/agent-skills-2026-06-20T165939.png
 security:
 - kind: domain-security
   name: Agent Skills Domain Security

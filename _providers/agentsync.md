@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'A modern REST API delivering enriched, actionable producer and adjuster data from the NIPR (200+ data points: licensing, carrier appointments, adjuster licensing) into your existing tech stack. OAuth '
@@ -90,52 +98,52 @@ common:
   type: StatusPage
   url: https://status.agentsync.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/lifecycle/agentsync-lifecycle.yml
+  href: https://artifacts.apis.io/agentsync/lifecycle/agentsync-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/agentsync-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/authentication/agentsync-authentication.yml
+  href: https://artifacts.apis.io/agentsync/authentication/agentsync-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agentsync-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/conventions/agentsync-conventions.yml
+  href: https://artifacts.apis.io/agentsync/conventions/agentsync-conventions.yml
   title: ''
   type: Conventions
   url: conventions/agentsync-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/sandbox/agentsync-sandbox.yml
+  href: https://artifacts.apis.io/agentsync/sandbox/agentsync-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/agentsync-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/well-known/agentsync-well-known.yml
+  href: https://artifacts.apis.io/agentsync/well-known/agentsync-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/agentsync-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/llms/agentsync-llms.txt
+  href: https://artifacts.apis.io/agentsync/llms/agentsync-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agentsync-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/conformance/agentsync-conformance.yml
+  href: https://artifacts.apis.io/agentsync/conformance/agentsync-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agentsync-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/security/agentsync-trust-center.yml
+  href: https://artifacts.apis.io/agentsync/security/agentsync-trust-center.yml
   title: ''
   type: Compliance
   url: security/agentsync-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/security/agentsync-trust-center.yml
+  href: https://artifacts.apis.io/agentsync/security/agentsync-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/agentsync-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/security/agentsync-domain-security.yml
+  href: https://artifacts.apis.io/agentsync/security/agentsync-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agentsync-domain-security.yml
@@ -151,12 +159,12 @@ overview: 'Agentsync is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Agentsync''s developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, sandbox, and 15 more developer resources.'
-random_paper: 4
+random_paper: 12
 score:
   band: thin
   composite: 38.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -179,14 +187,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/agentsync/refs/heads/main/screenshots/agentsync-2026-07-25T195248.png
+screenshot: https://apis.io/screenshots/agentsync/agentsync-2026-07-25T195248.png
 security:
 - kind: authentication
   name: Agentsync Authentication
@@ -210,6 +218,7 @@ tags:
 - Licensing
 - NIPR
 - REST
+- OAuth
 - Authentication
 website: https://agentsync.io
 ---

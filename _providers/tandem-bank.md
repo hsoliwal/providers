@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 36.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -185,90 +191,90 @@ apis:
   description: The Transactions API from Tandem Bank — 2 operation(s) for transactions.
   name: Tandem Bank Transactions API
   slug: tandem-bank-transactions-api
-artifact_total: 32
+artifact_total: 36
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/capabilities/tandem-bank-capability-edges.yml
+  href: https://artifacts.apis.io/tandem-bank/capabilities/tandem-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tandem-bank-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/overlays/tandem-bank-account-info-overlay.yaml
+  href: https://artifacts.apis.io/tandem-bank/overlays/tandem-bank-account-info-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tandem-bank-account-info-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/overlays/tandem-bank-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/tandem-bank/overlays/tandem-bank-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tandem-bank-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/overlays/tandem-bank-confirmation-funds-overlay.yaml
+  href: https://artifacts.apis.io/tandem-bank/overlays/tandem-bank-confirmation-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tandem-bank-confirmation-funds-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/security/tandem-bank-domain-security.yml
+  href: https://artifacts.apis.io/tandem-bank/security/tandem-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tandem-bank-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/agentic-access/tandem-bank-agentic-access.yml
+  href: https://artifacts.apis.io/tandem-bank/agentic-access/tandem-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tandem-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/scopes/tandem-bank-scopes.yml
+  href: https://artifacts.apis.io/tandem-bank/scopes/tandem-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/tandem-bank-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/authentication/tandem-bank-authentication.yml
+  href: https://artifacts.apis.io/tandem-bank/authentication/tandem-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tandem-bank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/conventions/tandem-bank-conventions.yml
+  href: https://artifacts.apis.io/tandem-bank/conventions/tandem-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tandem-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/conventions/tandem-bank-conventions.yml
+  href: https://artifacts.apis.io/tandem-bank/conventions/tandem-bank-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/tandem-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/errors/tandem-bank-problem-types.yml
+  href: https://artifacts.apis.io/tandem-bank/errors/tandem-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/tandem-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/conformance/tandem-bank-conformance.yml
+  href: https://artifacts.apis.io/tandem-bank/conformance/tandem-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tandem-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/data-model/tandem-bank-data-model.yml
+  href: https://artifacts.apis.io/tandem-bank/data-model/tandem-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tandem-bank-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/lifecycle/tandem-bank-lifecycle.yml
+  href: https://artifacts.apis.io/tandem-bank/lifecycle/tandem-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tandem-bank-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/mcp/tandem-bank-mcp.yml
+  href: https://artifacts.apis.io/tandem-bank/mcp/tandem-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/tandem-bank-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/llms/tandem-bank-llms.txt
+  href: https://artifacts.apis.io/tandem-bank/llms/tandem-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tandem-bank-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tandem-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -328,8 +334,24 @@ network: true
 overview: 'Tandem Bank publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
+  The Tandem Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tandem Bank''s developer surface includes authentication, getting-started guide, engineering blog, support, and 24 more developer resources.'
-random_paper: 12
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Tandem Bank API Rules
+  rule_count: 59
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 5
+  slug: tandem-bank-rules
 scopes:
 - name: Tandem Bank Scopes
   scope_count: 3
@@ -337,18 +359,18 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 36.1
+  composite: 37.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 35.0
+    artifact_dirs: 22
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.0
     developer_ergonomics: 58.9
     discoverability: 70.5
@@ -361,7 +383,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 36.1
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -382,13 +404,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 40.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tandem-bank/refs/heads/main/screenshots/tandem-bank-2026-09-02T162515.png
+screenshot: https://apis.io/screenshots/tandem-bank/tandem-bank-2026-09-02T162515.png
 security:
 - kind: authentication
   name: Tandem Bank Authentication
@@ -398,6 +420,14 @@ security:
   name: Tandem Bank Domain Security
   slug: tandem-bank-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Access account and transaction information (AIS)
+  slug: tandem-bank-account-information-access
+- name: Confirm availability of funds (CBPII)
+  slug: tandem-bank-confirmation-of-funds
+- name: Initiate a domestic payment (PIS)
+  slug: tandem-bank-domestic-payment
 slug: tandem-bank
 tags:
 - Financial Services

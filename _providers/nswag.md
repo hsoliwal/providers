@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: NSwag is an open source .NET toolchain for generating C# and TypeScript API clients and Swagger/OpenAPI specifications from ASP.NET controllers and vice versa. It ships as NuGet packages, MSBuild targ
@@ -42,17 +46,17 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/plans/nswag-plans-pricing.yml
+  href: https://artifacts.apis.io/nswag/plans/nswag-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nswag-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/rate-limits/nswag-rate-limits.yml
+  href: https://artifacts.apis.io/nswag/rate-limits/nswag-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nswag-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/finops/nswag-finops.yml
+  href: https://artifacts.apis.io/nswag/finops/nswag-finops.yml
   title: ''
   type: FinOps
   url: finops/nswag-finops.yml
@@ -101,42 +105,42 @@ common:
   type: License
   url: https://github.com/RicoSuter/NSwag/blob/master/LICENSE.md
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/packages/nswag-packages.yml
+  href: https://artifacts.apis.io/nswag/packages/nswag-packages.yml
   title: ''
   type: Packages
   url: packages/nswag-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/packages/nswag-packages.yml
+  href: https://artifacts.apis.io/nswag/packages/nswag-packages.yml
   title: ''
   type: SDKs
   url: packages/nswag-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/cli/nswag-cli.yml
+  href: https://artifacts.apis.io/nswag/cli/nswag-cli.yml
   title: ''
   type: CLI
   url: cli/nswag-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/changelog/nswag-changelog.yml
+  href: https://artifacts.apis.io/nswag/changelog/nswag-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nswag-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/lifecycle/nswag-lifecycle.yml
+  href: https://artifacts.apis.io/nswag/lifecycle/nswag-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nswag-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/conformance/nswag-conformance.yml
+  href: https://artifacts.apis.io/nswag/conformance/nswag-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nswag-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/security/nswag-domain-security.yml
+  href: https://artifacts.apis.io/nswag/security/nswag-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nswag-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/llms/nswag-llms.txt
+  href: https://artifacts.apis.io/nswag/llms/nswag-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nswag-llms.txt
@@ -146,7 +150,7 @@ finops:
 - has_sources: false
   method: generated
   name: Nswag Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: nswag-finops
   template: true
@@ -177,13 +181,13 @@ score:
   band: emerging
   composite: 24.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 38.0
     catalog_earned_first_party: 0.0
     catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
@@ -194,7 +198,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 25.9
+  previous_composite: 24.5
   provenance:
     conformance: first-party
   regulatory:
@@ -203,14 +207,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nswag/refs/heads/main/screenshots/nswag-2026-06-20T190459.png
+screenshot: https://apis.io/screenshots/nswag/nswag-2026-06-20T190459.png
 security:
 - kind: domain-security
   name: Nswag Domain Security

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 24.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -89,11 +92,8 @@ apis:
   description: Tables are organized in folders, and contain Items.
   name: Materials Zone Tables API
   slug: materials-zone-tables-api
-artifact_total: 22
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Materials Zone files API
   slug: open-materials-zone-files-api
@@ -123,12 +123,12 @@ collections:
   slug: open-materials-zone-tables-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/mcp/materials-zone-mcp.yml
+  href: https://artifacts.apis.io/materials-zone/mcp/materials-zone-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/materials-zone-mcp.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/openapi/_original/materials-zone-openapi.json
+  href: https://artifacts.apis.io/materials-zone/openapi/_original/materials-zone-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/materials-zone-openapi.json
@@ -149,57 +149,57 @@ common:
   type: GettingStarted
   url: https://developer.materials.zone/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/authentication/materials-zone-authentication.yml
+  href: https://artifacts.apis.io/materials-zone/authentication/materials-zone-authentication.yml
   title: ''
   type: Authentication
   url: authentication/materials-zone-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/conventions/materials-zone-conventions.yml
+  href: https://artifacts.apis.io/materials-zone/conventions/materials-zone-conventions.yml
   title: ''
   type: Conventions
   url: conventions/materials-zone-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/errors/materials-zone-problem-types.yml
+  href: https://artifacts.apis.io/materials-zone/errors/materials-zone-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/materials-zone-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/data-model/materials-zone-data-model.yml
+  href: https://artifacts.apis.io/materials-zone/data-model/materials-zone-data-model.yml
   title: ''
   type: DataModel
   url: data-model/materials-zone-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/lifecycle/materials-zone-lifecycle.yml
+  href: https://artifacts.apis.io/materials-zone/lifecycle/materials-zone-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/materials-zone-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/conformance/materials-zone-conformance.yml
+  href: https://artifacts.apis.io/materials-zone/conformance/materials-zone-conformance.yml
   title: ''
   type: Conformance
   url: conformance/materials-zone-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/overlays/materials-zone-openapi-overlay.yaml
+  href: https://artifacts.apis.io/materials-zone/overlays/materials-zone-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/materials-zone-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/llms/materials-zone-llms.txt
+  href: https://artifacts.apis.io/materials-zone/llms/materials-zone-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/materials-zone-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/materials-zone/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/agentic-access/materials-zone-agentic-access.yml
+  href: https://artifacts.apis.io/materials-zone/agentic-access/materials-zone-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/materials-zone-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/security/materials-zone-domain-security.yml
+  href: https://artifacts.apis.io/materials-zone/security/materials-zone-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/materials-zone-domain-security.yml
@@ -238,27 +238,43 @@ network: true
 overview: 'Materials Zone publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Files API, Folders API, Items API, and 6 more. Tagged areas include Company, Materials Informatics, Materials Science, Research and Development, and Laboratory Data.
 
 
+  The Materials Zone catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Materials Zone''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 17 more developer resources.'
-random_paper: 21
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Materials Zone API Rules
+  rule_count: 61
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 3
+  slug: materials-zone-rules
 score:
   band: thin
-  composite: 33.2
+  composite: 34.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.1
     developer_ergonomics: 28.0
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 33.1
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -275,13 +291,13 @@ score:
     regime: Health
     regime_id: health
     score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/materials-zone/refs/heads/main/screenshots/materials-zone-2026-07-25T230407.png
+screenshot: https://apis.io/screenshots/materials-zone/materials-zone-2026-07-25T230407.png
 security:
 - kind: authentication
   name: Materials Zone Authentication
@@ -291,6 +307,14 @@ security:
   name: Materials Zone Domain Security
   slug: materials-zone-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Build a data table and add items
+  slug: materials-zone-build-table-and-add-items
+- name: Ingest instrument measurements with a parser
+  slug: materials-zone-ingest-measurements-with-parser
+- name: Page through all items in a table
+  slug: materials-zone-paginate-table-items
 slug: materials-zone
 tags:
 - Company

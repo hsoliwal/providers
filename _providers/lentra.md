@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -65,7 +69,7 @@ common:
   type: Careers
   url: https://lentra.ai/careers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/security/lentra-trust-center.yml
+  href: https://artifacts.apis.io/lentra/security/lentra-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lentra-trust-center.yml
@@ -86,32 +90,32 @@ common:
   type: YouTube
   url: https://www.youtube.com/channel/UCUnrvCyvzQKYBGKCFbSAA1g
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/packages/lentra-packages.yml
+  href: https://artifacts.apis.io/lentra/packages/lentra-packages.yml
   title: ''
   type: Packages
   url: packages/lentra-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/components/lentra-components.yml
+  href: https://artifacts.apis.io/lentra/components/lentra-components.yml
   title: ''
   type: Components
   url: components/lentra-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/conformance/lentra-conformance.yml
+  href: https://artifacts.apis.io/lentra/conformance/lentra-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lentra-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/security/lentra-domain-security.yml
+  href: https://artifacts.apis.io/lentra/security/lentra-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lentra-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/well-known/lentra-well-known.yml
+  href: https://artifacts.apis.io/lentra/well-known/lentra-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lentra-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/llms/lentra-llms.txt
+  href: https://artifacts.apis.io/lentra/llms/lentra-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lentra-llms.txt
@@ -128,7 +132,7 @@ overview: 'Lentra is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Lentra''s developer surface includes engineering blog, YouTube channel, and 16 more developer resources.'
-random_paper: 8
+random_paper: 22
 score:
   band: emerging
   composite: 13.2
@@ -139,7 +143,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -154,7 +158,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 13.1
+  previous_composite: 13.2
   provenance:
     conformance: first-party
   regulatory:
@@ -163,14 +167,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 15.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lentra/refs/heads/main/screenshots/lentra-2026-07-25T224920.png
+screenshot: https://apis.io/screenshots/lentra/lentra-2026-07-25T224920.png
 security:
 - kind: domain-security
   name: Lentra Domain Security

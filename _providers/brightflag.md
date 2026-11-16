@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: OAuth 2.0 secured REST API (OpenAPI 3.1) for Brightflag's enterprise legal management platform. Includes a Reporting API to extract key datasets and a Matter Budget API, plus operations to search invo
@@ -90,47 +94,47 @@ common:
   type: Security
   url: https://brightflag.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/security/brightflag-trust-center.yml
+  href: https://artifacts.apis.io/brightflag/security/brightflag-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/brightflag-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/security/brightflag-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/brightflag/security/brightflag-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/brightflag-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/security/brightflag-domain-security.yml
+  href: https://artifacts.apis.io/brightflag/security/brightflag-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brightflag-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/authentication/brightflag-authentication.yml
+  href: https://artifacts.apis.io/brightflag/authentication/brightflag-authentication.yml
   title: ''
   type: Authentication
   url: authentication/brightflag-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/conventions/brightflag-conventions.yml
+  href: https://artifacts.apis.io/brightflag/conventions/brightflag-conventions.yml
   title: ''
   type: Conventions
   url: conventions/brightflag-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/conformance/brightflag-conformance.yml
+  href: https://artifacts.apis.io/brightflag/conformance/brightflag-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brightflag-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/lifecycle/brightflag-lifecycle.yml
+  href: https://artifacts.apis.io/brightflag/lifecycle/brightflag-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/brightflag-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/mcp/brightflag-mcp.yml
+  href: https://artifacts.apis.io/brightflag/mcp/brightflag-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/brightflag-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/llms/brightflag-llms.txt
+  href: https://artifacts.apis.io/brightflag/llms/brightflag-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brightflag-llms.txt
@@ -142,22 +146,22 @@ modified: '2026-10-06'
 name: Brightflag
 nav: Providers
 network: true
-overview: 'Brightflag is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Operations, Legal Spend Management, and Enterprise Legal Management.
+overview: 'Brightflag is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Operations, E-Billing, and Enterprise Legal Management.
 
 
   Brightflag''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, authentication, and 15 more developer resources.'
-random_paper: 16
+random_paper: 18
 score:
   band: thin
   composite: 29.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 22.4
     contract_governance: 18.2
@@ -173,7 +177,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 29.2
+  previous_composite: 29.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -187,14 +191,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/brightflag/refs/heads/main/screenshots/brightflag-2026-07-25T203843.png
+screenshot: https://apis.io/screenshots/brightflag/brightflag-2026-07-25T203843.png
 security:
 - kind: authentication
   name: Brightflag Authentication
@@ -217,9 +221,8 @@ tags:
 - Company
 - Legal
 - Legal Operations
-- Legal Spend Management
-- Enterprise Legal Management
 - E-Billing
+- Enterprise Legal Management
 - Matter Management
 - Reporting
 - Artificial Intelligence

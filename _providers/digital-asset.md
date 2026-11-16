@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-10-17'
-api_count: 11
+  score: 28.1
+  scored_at: '2026-11-06'
+api_count: 6
 apis:
 - baseURL: https://api.utilities.digitalasset.com
   baseurl_source: declared
@@ -58,11 +61,8 @@ apis:
   description: The registry API from Digital Asset — 18 operation(s) for registry.
   name: Digital Asset Registry API
   slug: digital-asset-registry-api
-artifact_total: 13
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Utilities Common API
   slug: open-digital-asset-common-api
@@ -76,12 +76,17 @@ collections:
   name: Digital Asset Registry API
   slug: open-digital-asset-registry-api
 common:
+- group: other
+  href: https://artifacts.apis.io/digital-asset/capabilities/digital-asset-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/digital-asset-capability-edges.yml
 - group: company
   title: ''
   type: BlogRSS
   url: https://blog.digitalasset.com/blog/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/mcp/digital-asset-mcp.yml
+  href: https://artifacts.apis.io/digital-asset/mcp/digital-asset-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/digital-asset-mcp.yml
@@ -138,62 +143,62 @@ common:
   type: Security
   url: https://www.digitalasset.com/responsible-disclosure
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/security/digital-asset-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/digital-asset/security/digital-asset-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/digital-asset-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/security/digital-asset-domain-security.yml
+  href: https://artifacts.apis.io/digital-asset/security/digital-asset-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/digital-asset-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/authentication/digital-asset-authentication.yml
+  href: https://artifacts.apis.io/digital-asset/authentication/digital-asset-authentication.yml
   title: ''
   type: Authentication
   url: authentication/digital-asset-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/a2a/digital-asset-a2a.yml
+  href: https://artifacts.apis.io/digital-asset/a2a/digital-asset-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/digital-asset-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/digital-asset/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/llms/digital-asset-llms.txt
+  href: https://artifacts.apis.io/digital-asset/llms/digital-asset-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/digital-asset-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/well-known/digital-asset-well-known.yml
+  href: https://artifacts.apis.io/digital-asset/well-known/digital-asset-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/digital-asset-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/packages/digital-asset-packages.yml
+  href: https://artifacts.apis.io/digital-asset/packages/digital-asset-packages.yml
   title: ''
   type: Packages
   url: packages/digital-asset-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/packages/digital-asset-packages.yml
+  href: https://artifacts.apis.io/digital-asset/packages/digital-asset-packages.yml
   title: ''
   type: SDKs
   url: packages/digital-asset-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/conformance/digital-asset-conformance.yml
+  href: https://artifacts.apis.io/digital-asset/conformance/digital-asset-conformance.yml
   title: ''
   type: Conformance
   url: conformance/digital-asset-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/errors/digital-asset-problem-types.yml
+  href: https://artifacts.apis.io/digital-asset/errors/digital-asset-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/digital-asset-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/lifecycle/digital-asset-lifecycle.yml
+  href: https://artifacts.apis.io/digital-asset/lifecycle/digital-asset-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/digital-asset-lifecycle.yml
@@ -202,32 +207,32 @@ common:
   type: Deprecation
   url: https://docs.digitalasset.com/registry/releases/versioning
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/changelog/digital-asset-changelog.yml
+  href: https://artifacts.apis.io/digital-asset/changelog/digital-asset-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/digital-asset-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/conventions/digital-asset-conventions.yml
+  href: https://artifacts.apis.io/digital-asset/conventions/digital-asset-conventions.yml
   title: ''
   type: Conventions
   url: conventions/digital-asset-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/data-model/digital-asset-data-model.yml
+  href: https://artifacts.apis.io/digital-asset/data-model/digital-asset-data-model.yml
   title: ''
   type: DataModel
   url: data-model/digital-asset-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/sandbox/digital-asset-sandbox.yml
+  href: https://artifacts.apis.io/digital-asset/sandbox/digital-asset-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/digital-asset-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/cli/digital-asset-cli.yml
+  href: https://artifacts.apis.io/digital-asset/cli/digital-asset-cli.yml
   title: ''
   type: CLI
   url: cli/digital-asset-cli.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/overlays/digital-asset-utilities-overlay.yaml
+  href: https://artifacts.apis.io/digital-asset/overlays/digital-asset-utilities-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/digital-asset-utilities-overlay.yaml
@@ -242,33 +247,49 @@ network: true
 overview: 'Digital Asset publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Common API, Operator API, Public API, and 1 more. Tagged areas include Blockchain, Tokenization, Digital Assets, Financial Services, and Distributed Ledger.
 
 
-  Digital Asset''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 27 more developer resources.'
+  The Digital Asset catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Digital Asset''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 28 more developer resources.'
 random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Digital Asset API Rules
+  rule_count: 48
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 2
+    warn: 10
+  slug: digital-asset-rules
 score:
   band: developing
-  composite: 47.8
+  composite: 50.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 27
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.6
   facets:
     access_clarity: 26.3
-    contract_governance: 4.5
-    contract_quality: 41.8
+    contract_governance: 18.2
+    contract_quality: 44.1
     developer_ergonomics: 85.7
     discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 47.7
+  previous_composite: 49.4
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 50.0
       total: 4
     mcp: derived
     skills: first-party
@@ -278,13 +299,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/digital-asset/refs/heads/main/screenshots/digital-asset-2026-08-07T164342.png
+screenshot: https://apis.io/screenshots/digital-asset/digital-asset-2026-08-07T164342.png
 security:
 - kind: authentication
   name: Digital Asset Authentication
@@ -302,6 +323,10 @@ security:
   name: Digital Asset Trust Center
   slug: digital-asset-trust-center
   summary_line: ISO/IEC 27001, SOC 2 Type II, Cloud Security Alliance STAR (Level 1, CAIQ v4.0.2), CIS SecureSuite Member
+skill_count: 1
+skills:
+- name: Digitalasset
+  slug: digital-asset-registry
 slug: digital-asset
 tags:
 - Blockchain

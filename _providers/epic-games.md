@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 1
@@ -134,9 +141,6 @@ apis:
 artifact_total: 43
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Epic Online Services Web Achievements API
   slug: open-epic-games-achievements-api
 - collection_type: open
@@ -168,42 +172,42 @@ collections:
   slug: open-epic-games
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/plans/epic-games-plans-pricing.yml
+  href: https://artifacts.apis.io/epic-games/plans/epic-games-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/epic-games-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/rate-limits/epic-games-rate-limits.yml
+  href: https://artifacts.apis.io/epic-games/rate-limits/epic-games-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/epic-games-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/finops/epic-games-finops.yml
+  href: https://artifacts.apis.io/epic-games/finops/epic-games-finops.yml
   title: ''
   type: FinOps
   url: finops/epic-games-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/agentic-access/epic-games-agentic-access.yml
+  href: https://artifacts.apis.io/epic-games/agentic-access/epic-games-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/epic-games-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/security/epic-games-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/epic-games/security/epic-games-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/epic-games-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/security/epic-games-domain-security.yml
+  href: https://artifacts.apis.io/epic-games/security/epic-games-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/epic-games-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/authentication/epic-games-authentication.yml
+  href: https://artifacts.apis.io/epic-games/authentication/epic-games-authentication.yml
   title: ''
   type: Authentication
   url: authentication/epic-games-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/scopes/epic-games-scopes.yml
+  href: https://artifacts.apis.io/epic-games/scopes/epic-games-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/epic-games-scopes.yml
@@ -314,16 +318,32 @@ network: true
 overview: 'Epic Games publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Achievements API, Auth API, Connect API, and 20 more. Tagged areas include Achievements, Anti-Cheat, Cross-Platform, EOS, and Epic Online Services.
 
 
+  The Epic Games catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Epic Games'' developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, status page, support, and 22 more developer resources.'
 plans:
 - name: Epic Games Plans Pricing
   plan_count: 1
   slug: epic-games-plans-pricing
-random_paper: 19
+random_paper: 3
 rate_limits:
 - limit_count: 2
   name: Epic Games Rate Limits
   slug: epic-games-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Epic Games API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: epic-games-rules
 scopes:
 - name: Epic Games Scopes
   scope_count: 1
@@ -331,23 +351,23 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 39.5
+  composite: 42.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 41.0
+    artifact_dirs: 17
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.9
     developer_ergonomics: 64.3
     discoverability: 73.2
-    operational_transparency: 7.9
-  previous_composite: 45.5
+    operational_transparency: 18.4
+  previous_composite: 42.5
   provenance:
     agentic_access: derived
     contracts:
@@ -361,13 +381,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/epic-games/refs/heads/main/screenshots/epic-games-2026-06-20T180759.png
+screenshot: https://apis.io/screenshots/epic-games/epic-games-2026-06-20T180759.png
 security:
 - kind: authentication
   name: Epic Games Authentication

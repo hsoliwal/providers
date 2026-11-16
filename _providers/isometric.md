@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.3
-  scored_at: '2026-10-17'
+  score: 46.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 46
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 125
   slug: isometric-agentic-access
   summary_line: 125 operations · 46 acting
-api_count: 2
+api_count: 3
 apis:
 - description: Isometric ships a hosted Model Context Protocol (MCP) server that makes the Isometric Standard, proprietary protocols (biochar, DAC, enhanced weathering, marine CDR, biosphere, superpollutants), proto
   name: Isometric MCP Server
@@ -223,11 +226,48 @@ apis:
   description: The Transfers API from Isometric — 3 operation(s) for transfers.
   name: Isometric Transfers API
   slug: isometric-transfers-api
-artifact_total: 93
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Internal API from Isometric — 1 operation(s) for internal.
+  name: Isometric Internal API
+  slug: isometric-internal-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Liveness API from Isometric — 1 operation(s) for liveness.
+  name: Isometric Liveness API
+  slug: isometric-liveness-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Oauth API from Isometric — 2 operation(s) for oauth.
+  name: Isometric OAuth API
+  slug: isometric-oauth-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Readiness API from Isometric — 1 operation(s) for readiness.
+  name: Isometric Readiness API
+  slug: isometric-readiness-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Startup API from Isometric — 1 operation(s) for startup.
+  name: Isometric Startup API
+  slug: isometric-startup-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Webhooks API from Isometric — 4 operation(s) for webhooks.
+  name: Isometric Webhooks API
+  slug: isometric-webhooks-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The .well Known API from Isometric — 4 operation(s) for .well known.
+  name: Isometric .well Known API
+  slug: isometric-well-known-api
+- baseURL: https://api.isometric.com/mcp
+  baseurl_source: declared
+  description: The Graph QL API from Isometric — 2 operation(s) for graph ql.
+  name: Isometric Graph QL API
+  slug: isometric-graph-ql-api
+artifact_total: 101
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Isometric Certify Data Ingestion Beneficiaries API
   slug: open-isometric-beneficiaries-api
@@ -341,22 +381,22 @@ collections:
   slug: open-isometric-transfers-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/isometric/refs/heads/main/capabilities/isometric-capability-edges.yml
+  href: https://artifacts.apis.io/isometric/capabilities/isometric-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/isometric-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/isometric/refs/heads/main/agentic-access/isometric-agentic-access.yml
+  href: https://artifacts.apis.io/isometric/agentic-access/isometric-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/isometric-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/isometric/refs/heads/main/security/isometric-domain-security.yml
+  href: https://artifacts.apis.io/isometric/security/isometric-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/isometric-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/isometric/refs/heads/main/authentication/isometric-authentication.yml
+  href: https://artifacts.apis.io/isometric/authentication/isometric-authentication.yml
   title: ''
   type: Authentication
   url: authentication/isometric-authentication.yml
@@ -485,28 +525,44 @@ modified: '2026-05-24'
 name: Isometric
 nav: Providers
 network: true
-overview: 'Isometric publishes 36 API contracts indexed on the [APIs.io](https://apis.io/) network, including Beneficiaries API, Beneficiary API, Biochar Applications API, and 33 more. Tagged areas include Carbon Removal, Carbon Registry, Climate, Climate Tech, and CDR.
+overview: 'Isometric publishes 44 API contracts indexed on the [APIs.io](https://apis.io/) network, including Beneficiaries API, Beneficiary API, Biochar Applications API, and 41 more. Tagged areas include Carbon Removal, Carbon Registry, Climate, Climate Tech, and CDR.
+
+
+  The Isometric catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Isometric''s developer surface includes authentication, developer portal, documentation, getting-started guide, changelog, engineering blog, and 22 more developer resources.'
-random_paper: 7
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Isometric API Rules
+  rule_count: 59
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 7
+    warn: 12
+  slug: isometric-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 31.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 37.0
+    artifact_dirs: 15
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.3
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
-    contract_quality: 51.9
+    contract_governance: 13.6
+    contract_quality: 51.6
     developer_ergonomics: 48.8
-    discoverability: 70.0
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -515,14 +571,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 29.7
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 83.3
       derived: 0
-      marker_coverage: 0.0
-      total: 35
+      marker_coverage: 18.6
+      total: 43
     mcp: first-party
   regulatory:
     applies: true
@@ -530,13 +586,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 8.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/isometric/refs/heads/main/screenshots/isometric-2026-06-20T183619.png
+screenshot: https://apis.io/screenshots/isometric/isometric-2026-06-20T183619.png
 security:
 - kind: authentication
   name: Isometric Authentication

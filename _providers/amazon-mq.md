@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -70,7 +76,17 @@ apis:
   description: The Tags API from Amazon MQ — 2 operation(s) for tags.
   name: Amazon MQ Tags API
   slug: amazon-mq-tags-api
-artifact_total: 260
+- baseURL: http://mq.{region}.amazonaws.com
+  baseurl_source: declared
+  description: The Mq Operations API from Amazon MQ — 5 operation(s) for mq operations.
+  name: Amazon MQ Mq Operations API
+  slug: amazon-mq-operations-api
+- baseURL: http://mq.{region}.amazonaws.com
+  baseurl_source: declared
+  description: The Mq Users API from Amazon MQ — 2 operation(s) for mq users.
+  name: Amazon MQ Mq Users API
+  slug: amazon-mq-users-api
+artifact_total: 261
 collections:
 - collection_type: postman
   name: AmazonMQ Broker Engine Types API
@@ -87,9 +103,6 @@ collections:
 - collection_type: postman
   name: AmazonMQ Broker Engine Types Tags API
   slug: postman-amazon-mq-tags-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AmazonMQ Broker Engine Types API
   slug: open-amazon-mq-broker-engine-types-api
@@ -110,17 +123,17 @@ collections:
   slug: open-openapi
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/plans/amazon-mq-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-mq/plans/amazon-mq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-mq-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/rate-limits/amazon-mq-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-mq/rate-limits/amazon-mq-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-mq-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/finops/amazon-mq-finops.yml
+  href: https://artifacts.apis.io/amazon-mq/finops/amazon-mq-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-mq-finops.yml
@@ -129,7 +142,7 @@ common:
   type: Website
   url: https://aws.amazon.com/amazon-mq/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/capabilities/amazon-mq-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-mq/capabilities/amazon-mq-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-mq-capability-edges.yml
@@ -138,27 +151,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-mq/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/agentic-access/amazon-mq-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-mq/agentic-access/amazon-mq-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-mq-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/security/amazon-mq-trust-center.yml
+  href: https://artifacts.apis.io/amazon-mq/security/amazon-mq-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-mq-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/security/amazon-mq-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-mq/security/amazon-mq-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-mq-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/security/amazon-mq-domain-security.yml
+  href: https://artifacts.apis.io/amazon-mq/security/amazon-mq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-mq-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/authentication/amazon-mq-authentication.yml
+  href: https://artifacts.apis.io/amazon-mq/authentication/amazon-mq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-mq-authentication.yml
@@ -207,12 +220,12 @@ common:
   type: Contact
   url: https://aws.amazon.com/contact-us/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/rules/amazon-mq-spectral-rules.yml
+  href: https://artifacts.apis.io/amazon-mq/rules/amazon-mq-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/amazon-mq-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/vocabulary/amazon-mq-vocabulary.yaml
+  href: https://artifacts.apis.io/amazon-mq/vocabulary/amazon-mq-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-mq-vocabulary.yaml
@@ -458,7 +471,7 @@ finops:
 - has_sources: false
   method: generated
   name: Amazon Mq Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: amazon-mq-finops
   template: true
@@ -919,7 +932,7 @@ modified: '2026-09-16'
 name: Amazon MQ
 nav: Providers
 network: true
-overview: 'Amazon MQ publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Broker Engine Types API, Broker Instance Options API, Brokers API, and 2 more. Tagged areas include Message Queue, Messaging, Message Broker, and RabbitMQ.
+overview: 'Amazon MQ publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Broker Engine Types API, Broker Instance Options API, Brokers API, and 4 more. Tagged areas include Amazon Web Services, Message Queue, Messaging, Message Broker, and RabbitMQ.
 
 
   The Amazon MQ catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -930,7 +943,7 @@ plans:
 - name: Amazon Mq Plans Pricing
   plan_count: 3
   slug: amazon-mq-plans-pricing
-random_paper: 11
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Amazon Mq Rate Limits
@@ -961,43 +974,43 @@ rules:
   slug: amazon-mq-spectral-rules
 score:
   band: developing
-  composite: 47.0
+  composite: 49.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 58.0
+    artifact_dirs: 22
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 57.0
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.4
   facets:
     access_clarity: 50.0
     contract_governance: 27.3
-    contract_quality: 65.4
+    contract_quality: 64.9
     developer_ergonomics: 29.8
-    discoverability: 57.1
-    operational_transparency: 26.3
-  previous_composite: 48.5
+    discoverability: 66.1
+    operational_transparency: 36.8
+  previous_composite: 47.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 28.6
+      total: 7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-mq/refs/heads/main/screenshots/amazon-mq-2026-06-20T171747.png
+screenshot: https://apis.io/screenshots/amazon-mq/amazon-mq-2026-06-20T171747.png
 security:
 - kind: authentication
   name: Amazon Mq Authentication
@@ -1017,6 +1030,7 @@ security:
   summary_line: PCI DSS, HIPAA, FedRAMP, GDPR, FIPS 140
 slug: amazon-mq
 tags:
+- Amazon Web Services
 - Message Queue
 - Messaging
 - Message Broker

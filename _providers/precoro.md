@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +27,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 api_count: 10
 apis:
-- description: API documentation is not publicly machine‑readable; the developer portal provides help articles but no OpenAPI, GraphQL, AsyncAPI, gRPC or WSDL contracts.
+- baseURL: https://api.precoro.com
+  baseurl_source: spec
+  description: API documentation is not publicly machine‑readable; the developer portal provides help articles but no OpenAPI, GraphQL, AsyncAPI, gRPC or WSDL contracts.
   name: Precoro API
-  slug: precoro-api-2
+  slug: precoro-api
 - baseURL: https://api.precoro.com
   baseurl_source: declared
   description: The Invoices API from Precoro — 1 operation(s) for invoices.
@@ -74,35 +91,35 @@ apis:
   description: The Taxes API from Precoro — 1 operation(s) for taxes.
   name: Precoro Taxes API
   slug: precoro-taxes-api
-artifact_total: 22
+artifact_total: 24
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/rate-limits/precoro-rate-limits.yml
+  href: https://artifacts.apis.io/precoro/rate-limits/precoro-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/precoro-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/plans/precoro-plans-pricing.yml
+  href: https://artifacts.apis.io/precoro/plans/precoro-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/precoro-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/rules/precoro-rules.yml
+  href: https://artifacts.apis.io/precoro/rules/precoro-rules.yml
   title: ''
   type: Spectral
   url: rules/precoro-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/json-ld/precoro-context.jsonld
+  href: https://artifacts.apis.io/precoro/json-ld/precoro-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/precoro-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/vocabulary/precoro-vocabulary.yml
+  href: https://artifacts.apis.io/precoro/vocabulary/precoro-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/precoro-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/data-model/precoro-data-model.yml
+  href: https://artifacts.apis.io/precoro/data-model/precoro-data-model.yml
   title: ''
   type: DataModel
   url: data-model/precoro-data-model.yml
@@ -111,27 +128,27 @@ common:
   type: Compliance
   url: https://precoro.com/trust-and-security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/conformance/precoro-conformance.yml
+  href: https://artifacts.apis.io/precoro/conformance/precoro-conformance.yml
   title: ''
   type: Conformance
   url: conformance/precoro-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/llms/precoro-llms.txt
+  href: https://artifacts.apis.io/precoro/llms/precoro-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/precoro-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/well-known/precoro-well-known.yml
+  href: https://artifacts.apis.io/precoro/well-known/precoro-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/precoro-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/hosts/precoro-hosts.yml
+  href: https://artifacts.apis.io/precoro/hosts/precoro-hosts.yml
   title: ''
   type: Hosts
   url: hosts/precoro-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/vendors/precoro-vendors.yml
+  href: https://artifacts.apis.io/precoro/vendors/precoro-vendors.yml
   title: ''
   type: Vendors
   url: vendors/precoro-vendors.yml
@@ -176,12 +193,12 @@ common:
   type: Documentation
   url: https://help.precoro.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/security/precoro-trust-center.yml
+  href: https://artifacts.apis.io/precoro/security/precoro-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/precoro-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precoro/refs/heads/main/security/precoro-domain-security.yml
+  href: https://artifacts.apis.io/precoro/security/precoro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/precoro-domain-security.yml
@@ -199,6 +216,14 @@ coverage:
   state: unreadable
 created: '2026-10-13'
 description: Precoro is an agentic procurement and accounts payable platform that centralizes purchasing, approvals, budgets, suppliers, invoices, and payments. AI agents automate routine intake-to-pay work while teams stay in control of policies and exceptions. It serves mid-sized and multi-entity companies, offering AI‑driven automation, spend management, and ERP integration.
+finops:
+- has_sources: true
+  method: derived
+  name: Precoro Finops
+  primary_unit: seat
+  service_category: ''
+  slug: precoro-finops
+  template: false
 image: https://precoro.com/build/images/og_img.DQ01zr4h.png
 json_schemas:
 - name: PatchReceiptsIdnRequest
@@ -229,7 +254,7 @@ modified: '2026-10-13'
 name: Precoro
 nav: Providers
 network: true
-overview: 'Precoro is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Invoices API, Items API, Legalentities API, and 7 more. Tagged areas include Procurement, Spend Management, Vendor Management, Purchase-To-Pay, and AP Automation.
+overview: 'Precoro is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Invoices API, Items API, and 8 more. Tagged areas include Procurement, Spend Management, Vendor Management, Purchase-To-Pay, and AP Automation.
 
 
   The Precoro catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -240,7 +265,10 @@ plans:
 - name: Precoro Plans Pricing
   plan_count: 4
   slug: precoro-plans-pricing
-random_paper: 14
+- name: Precoro Price Estimates
+  plan_count: 0
+  slug: precoro-price-estimates
+random_paper: 18
 rate_limits:
 - limit_count: 3
   name: Precoro Rate Limits
@@ -260,21 +288,23 @@ rules:
   slug: precoro-rules
 score:
   band: developing
-  composite: 49.0
+  composite: 40.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 81.8
+    artifact_dirs: 20
+    catalog_earned: 84.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 33.3
+    catalog_gap: 30.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.7
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 22.0
     contract_quality: 22.8
-    developer_ergonomics: 23.8
-    discoverability: 71.4
-    operational_transparency: 47.4
+    developer_ergonomics: 11.9
+    discoverability: 70.5
+    operational_transparency: 39.5
+  previous_composite: 50.6
   provenance:
     conformance: derived
     contracts:
@@ -288,12 +318,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/precoro/precoro-2026-11-03T141438.png
 security:
 - kind: domain-security
   name: Precoro Domain Security

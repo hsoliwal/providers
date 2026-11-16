@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Open Kraken is the integration layer of the Kraken utility operating system. Kraken publicly describes it as "APIs, events and MCP" for building apps and experiences against data and capabilities insi
@@ -46,42 +49,42 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/security/kraken-technologies-domain-security.yml
+  href: https://artifacts.apis.io/kraken-technologies/security/kraken-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kraken-technologies-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/authentication/kraken-technologies-authentication.yml
+  href: https://artifacts.apis.io/kraken-technologies/authentication/kraken-technologies-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kraken-technologies-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/conventions/kraken-technologies-conventions.yml
+  href: https://artifacts.apis.io/kraken-technologies/conventions/kraken-technologies-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kraken-technologies-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/components/kraken-technologies-components.yml
+  href: https://artifacts.apis.io/kraken-technologies/components/kraken-technologies-components.yml
   title: ''
   type: Components
   url: components/kraken-technologies-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/packages/kraken-technologies-packages.yml
+  href: https://artifacts.apis.io/kraken-technologies/packages/kraken-technologies-packages.yml
   title: ''
   type: Packages
   url: packages/kraken-technologies-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/mcp/kraken-technologies-mcp.yml
+  href: https://artifacts.apis.io/kraken-technologies/mcp/kraken-technologies-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kraken-technologies-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/llms/kraken-technologies-llms.txt
+  href: https://artifacts.apis.io/kraken-technologies/llms/kraken-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kraken-technologies-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/conformance/kraken-technologies-conformance.yml
+  href: https://artifacts.apis.io/kraken-technologies/conformance/kraken-technologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kraken-technologies-conformance.yml
@@ -90,12 +93,12 @@ common:
   type: Compliance
   url: https://www.kraken.tech/legal/trust-center
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/lifecycle/kraken-technologies-lifecycle.yml
+  href: https://artifacts.apis.io/kraken-technologies/lifecycle/kraken-technologies-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kraken-technologies-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/changelog/kraken-technologies-changelog.yml
+  href: https://artifacts.apis.io/kraken-technologies/changelog/kraken-technologies-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kraken-technologies-changelog.yml
@@ -156,7 +159,7 @@ common:
   type: VulnerabilityDisclosure
   url: https://www.kraken.tech/vulnerability-disclosure-process
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/security/kraken-technologies-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kraken-technologies/security/kraken-technologies-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kraken-technologies-vulnerability-disclosure.yml
@@ -165,7 +168,7 @@ common:
   type: TrustCenter
   url: https://www.kraken.tech/legal/trust-center
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/security/kraken-technologies-trust-center.yml
+  href: https://artifacts.apis.io/kraken-technologies/security/kraken-technologies-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kraken-technologies-trust-center.yml
@@ -210,12 +213,12 @@ overview: 'Kraken Technologies is listed with 2 APIs on the [APIs.io](https://ap
 
 
   Kraken Technologies'' developer surface includes authentication, changelog, documentation, SDKs, engineering blog, support, legal docs, and 27 more developer resources.'
-random_paper: 7
+random_paper: 21
 score:
   band: thin
   composite: 28.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -251,14 +254,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kraken-technologies/refs/heads/main/screenshots/kraken-technologies-2026-08-07T171335.png
+screenshot: https://apis.io/screenshots/kraken-technologies/kraken-technologies-2026-08-07T171335.png
 security:
 - kind: authentication
   name: Kraken Technologies Authentication

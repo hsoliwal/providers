@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The MCP layer that lets any AI agent build, configure, and deploy production voice agents. Describe one and call it in 30 seconds.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/audiomcp/refs/heads/main/llms/audiomcp-llms.txt
+  href: https://artifacts.apis.io/audiomcp/llms/audiomcp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/audiomcp-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/audiomcp/refs/heads/main/hosts/audiomcp-hosts.yml
+  href: https://artifacts.apis.io/audiomcp/hosts/audiomcp-hosts.yml
   title: ''
   type: Hosts
   url: hosts/audiomcp-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/audiomcp/refs/heads/main/security/audiomcp-domain-security.yml
+  href: https://artifacts.apis.io/audiomcp/security/audiomcp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/audiomcp-domain-security.yml
@@ -67,17 +80,18 @@ name: op.ai
 nav: Providers
 network: true
 overview: op.ai is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Voice, Conversational AI, Platform, and MCP.
-random_paper: 14
+random_paper: 10
 score:
   band: minimal
   composite: 4.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -85,6 +99,7 @@ score:
     developer_ergonomics: 0.0
     discoverability: 64.3
     operational_transparency: 0.0
+  previous_composite: 4.6
   provenance:
     mcp: unknown
   regulatory:
@@ -93,12 +108,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/audiomcp/audiomcp-2026-11-03T121312.png
 security:
 - kind: domain-security
   name: Audiomcp Domain Security

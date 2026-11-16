@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The agent-driven commerce surface exposed on the aventon.com Shopify storefront via the Universal Commerce Protocol (ucp.dev). An MCP endpoint offers catalog search, cart, checkout, discount, fulfillm
@@ -62,37 +67,37 @@ common:
   type: TermsOfService
   url: https://www.aventon.com/policies/terms-of-service
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/mcp/aventon-mcp.yml
+  href: https://artifacts.apis.io/aventon/mcp/aventon-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/aventon-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/llms/aventon-llms.txt
+  href: https://artifacts.apis.io/aventon/llms/aventon-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aventon-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/well-known/aventon-well-known.yml
+  href: https://artifacts.apis.io/aventon/well-known/aventon-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/aventon-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/authentication/aventon-authentication.yml
+  href: https://artifacts.apis.io/aventon/authentication/aventon-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aventon-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/scopes/aventon-scopes.yml
+  href: https://artifacts.apis.io/aventon/scopes/aventon-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/aventon-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/conformance/aventon-conformance.yml
+  href: https://artifacts.apis.io/aventon/conformance/aventon-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aventon-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/security/aventon-domain-security.yml
+  href: https://artifacts.apis.io/aventon/security/aventon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aventon-domain-security.yml
@@ -112,7 +117,7 @@ overview: 'Aventon is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Aventon''s developer surface includes engineering blog, authentication, and 10 more developer resources.'
-random_paper: 15
+random_paper: 19
 scopes:
 - name: Aventon Scopes
   scope_count: 4
@@ -122,13 +127,13 @@ score:
   band: emerging
   composite: 19.6
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -141,7 +146,7 @@ score:
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 19.1
+  previous_composite: 19.6
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -151,14 +156,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aventon/refs/heads/main/screenshots/aventon-2026-08-07T162023.png
+screenshot: https://apis.io/screenshots/aventon/aventon-2026-08-07T162023.png
 security:
 - kind: authentication
   name: Aventon Authentication

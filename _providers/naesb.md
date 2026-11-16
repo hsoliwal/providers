@@ -1,16 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Paid membership or per-document purchase · Registry API requires accredited certificate
-  onboarding: unknown
-  pricing: paid
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
   public: false
   source:
-  - https://www.naesb.org/ESPI_Standards.asp
-  - https://www.naesb.org//misc/naesb_matl_order_espi_standards.pdf
-  - https://www.naesb.org//misc/NAESB_Nonmember_Evaluation.pdf
-  - https://www.naesb.org/pdf4/eir_webregistry_technical_guide_v6.1_1018.pdf
-  trial: true
+  - authentication
+  - security
+  trial: false
   try_now: false
 agent_readiness:
   band: agent-aware
@@ -28,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The NAESB REQ.21 ESPI Model Business Practices define the data exchange protocol for transferring retail energy usage information from a utility (Data Custodian) to a Third Party with the Retail Custo
@@ -45,15 +49,15 @@ apis:
 - description: 'The NAESB Electric Industry Registry is the central repository of registry information used by the North American wholesale electric industry for electronic tagging; it replaced the NERC TSIN in 2012 '
   name: NAESB Electric Industry Registry (EIR) webRegistry Web Services
   slug: naesb-eir-webregistry
-artifact_total: 4
+artifact_total: 6
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/mcp/naesb-mcp.yml
+  href: https://artifacts.apis.io/naesb/mcp/naesb-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/naesb-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/security/naesb-domain-security.yml
+  href: https://artifacts.apis.io/naesb/security/naesb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/naesb-domain-security.yml
@@ -130,47 +134,47 @@ common:
   type: Compliance
   url: https://www.naesb.org/materials/certification.asp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/authentication/naesb-authentication.yml
+  href: https://artifacts.apis.io/naesb/authentication/naesb-authentication.yml
   title: ''
   type: Authentication
   url: authentication/naesb-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/conventions/naesb-conventions.yml
+  href: https://artifacts.apis.io/naesb/conventions/naesb-conventions.yml
   title: ''
   type: Conventions
   url: conventions/naesb-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/errors/naesb-error-codes.yml
+  href: https://artifacts.apis.io/naesb/errors/naesb-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/naesb-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/lifecycle/naesb-lifecycle.yml
+  href: https://artifacts.apis.io/naesb/lifecycle/naesb-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/naesb-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/changelog/naesb-changelog.yml
+  href: https://artifacts.apis.io/naesb/changelog/naesb-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/naesb-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/conformance/naesb-conformance.yml
+  href: https://artifacts.apis.io/naesb/conformance/naesb-conformance.yml
   title: ''
   type: Conformance
   url: conformance/naesb-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/data-model/naesb-data-model.yml
+  href: https://artifacts.apis.io/naesb/data-model/naesb-data-model.yml
   title: ''
   type: DataModel
   url: data-model/naesb-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/llms/naesb-llms.txt
+  href: https://artifacts.apis.io/naesb/llms/naesb-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/naesb-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/naesb/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -188,12 +192,12 @@ overview: 'NAESB is listed with 2 APIs on the [APIs.io](https://apis.io/) networ
 
 
   NAESB''s developer surface includes documentation, tooling, pricing, support, authentication, changelog, and 23 more developer resources.'
-random_paper: 15
+random_paper: 17
 score:
   band: thin
   composite: 34.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -225,14 +229,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 24.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/naesb/refs/heads/main/screenshots/naesb-2026-08-07T184604.png
+screenshot: https://apis.io/screenshots/naesb/naesb-2026-08-07T184604.png
 security:
 - kind: authentication
   name: Naesb Authentication
@@ -242,6 +246,12 @@ security:
   name: Naesb Domain Security
   slug: naesb-domain-security
   summary_line: TLSv1.2 · DMARC
+skill_count: 2
+skills:
+- name: Download a NAESB EIR registry publication
+  slug: naesb-download-eir-registry
+- name: Authorize and retrieve Green Button energy usage under NAESB ESPI
+  slug: naesb-espi-green-button-authorization
 slug: naesb
 tags:
 - Energy

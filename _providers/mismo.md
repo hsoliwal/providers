@@ -1,4 +1,13 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source: []
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 12
 common:
@@ -88,27 +100,27 @@ common:
   type: Contact
   url: https://www.mismo.org/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mismo/refs/heads/main/governance/mismo-governance.yml
+  href: https://artifacts.apis.io/mismo/governance/mismo-governance.yml
   title: ''
   type: Governance
   url: governance/mismo-governance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mismo/refs/heads/main/taxonomy/mismo-taxonomy.yml
+  href: https://artifacts.apis.io/mismo/taxonomy/mismo-taxonomy.yml
   title: ''
   type: Taxonomy
   url: taxonomy/mismo-taxonomy.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mismo/refs/heads/main/people/mismo-people.yml
+  href: https://artifacts.apis.io/mismo/people/mismo-people.yml
   title: ''
   type: People
   url: people/mismo-people.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mismo/refs/heads/main/companies/mismo-companies.yml
+  href: https://artifacts.apis.io/mismo/companies/mismo-companies.yml
   title: ''
   type: Companies
   url: companies/mismo-companies.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mismo/refs/heads/main/leads/mismo-new-company-leads.yml
+  href: https://artifacts.apis.io/mismo/leads/mismo-new-company-leads.yml
   title: ''
   type: Leads
   url: leads/mismo-new-company-leads.yml
@@ -177,14 +189,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mismo/refs/heads/main/screenshots/mismo-2026-08-07T183743.png
+screenshot: https://apis.io/screenshots/mismo/mismo-2026-08-07T183743.png
 slug: mismo
 tags:
 - API Standards

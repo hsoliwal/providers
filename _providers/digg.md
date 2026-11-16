@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,20 +25,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-10-17'
+  score: 11.4
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digg/refs/heads/main/security/digg-domain-security.yml
+  href: https://artifacts.apis.io/digg/security/digg-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/digg-domain-security.yml
@@ -53,12 +57,16 @@ common:
   title: ''
   type: PrivacyPolicy
   url: https://digg.com/privacy
+- group: company
+  title: ''
+  type: Website
+  url: https://digg.com
 created: '2026-07-17'
 description: Digg is a technology news aggregation and community curation platform, relaunched under new ownership and backed by Andreessen Horowitz (a16z) and True Ventures. It surfaces trending stories, discussions, and video signals drawn largely from X/Twitter, ranking them by community engagement and editorial signals. The platform tracks contributor rankings, rising stories, today's highlights, and GitHub repository activity, positioning itself as an AI-assisted discovery hub for technology, startups, and AI news. As surfaced here, Digg is a consumer web product with no public developer API, SDKs, or documentation; this profile captures its identity and web/domain-security posture for the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/digg.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at digg.com over HTTP; 3 tools listed.
+- description: Remote MCP server at digg.com over HTTP; 9 tools listed.
   name: Digg MCP Server
   slug: digg
 modified: '2026-07-18'
@@ -66,10 +74,10 @@ name: Digg
 nav: Providers
 network: true
 overview: Digg is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, News Aggregation, Social News, Content Curation, and Technology.
-random_paper: 15
+random_paper: 3
 score:
   band: minimal
-  composite: 6.4
+  composite: 3.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -77,15 +85,15 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -2.7
   facets:
-    access_clarity: 10.5
+    access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 6.3
+  previous_composite: 6.4
   provenance:
     mcp: first-party
   regulatory:
@@ -93,15 +101,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 9.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 5.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/digg/refs/heads/main/screenshots/digg-2026-08-07T180513.png
+screenshot: https://apis.io/screenshots/digg/digg-2026-08-07T180513.png
 security:
 - kind: domain-security
   name: Digg Domain Security
@@ -116,5 +124,6 @@ tags:
 - Technology
 - Media
 - Artificial Intelligence
+- News
 website: https://digg.com/ai
 ---

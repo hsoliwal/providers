@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,9 +64,6 @@ apis:
 artifact_total: 12
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: NumLookup Account API
   slug: open-numlookupapi-account-api
 - collection_type: open
@@ -71,17 +74,17 @@ collections:
   slug: open-numlookupapi
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/agentic-access/numlookupapi-agentic-access.yml
+  href: https://artifacts.apis.io/numlookupapi/agentic-access/numlookupapi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/numlookupapi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/authentication/numlookupapi-authentication.yml
+  href: https://artifacts.apis.io/numlookupapi/authentication/numlookupapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/numlookupapi-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/security/numlookupapi-domain-security.yml
+  href: https://artifacts.apis.io/numlookupapi/security/numlookupapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/numlookupapi-domain-security.yml
@@ -102,17 +105,17 @@ common:
   type: Documentation
   url: https://numlookupapi.com/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/plans/numlookupapi-plans-pricing.yml
+  href: https://artifacts.apis.io/numlookupapi/plans/numlookupapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/numlookupapi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/rate-limits/numlookupapi-rate-limits.yml
+  href: https://artifacts.apis.io/numlookupapi/rate-limits/numlookupapi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/numlookupapi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/finops/numlookupapi-finops.yml
+  href: https://artifacts.apis.io/numlookupapi/finops/numlookupapi-finops.yml
   title: ''
   type: FinOps
   url: finops/numlookupapi-finops.yml
@@ -135,35 +138,51 @@ network: true
 overview: 'NumLookupAPI publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Account API and Validation API. Tagged areas include Number Verification, Phone Validation, Phone Number Lookup, Carrier Lookup, and Line Type.
 
 
+  The NumLookupAPI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   NumLookupAPI''s developer surface includes authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Numlookupapi Plans Pricing
   plan_count: 5
   slug: numlookupapi-plans-pricing
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 6
   name: Numlookupapi Rate Limits
   slug: numlookupapi-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: NumLookupAPI API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: numlookupapi-rules
 score:
   band: thin
-  composite: 26.7
+  composite: 28.3
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 43.0
+    artifact_dirs: 13
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.8
     developer_ergonomics: 29.8
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 35.0
+  previous_composite: 28.3
   provenance:
     agentic_access: derived
     contracts:
@@ -177,14 +196,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/numlookupapi/refs/heads/main/screenshots/numlookupapi-2026-08-07T185737.png
+screenshot: https://apis.io/screenshots/numlookupapi/numlookupapi-2026-08-07T185737.png
 security:
 - kind: authentication
   name: Numlookupapi Authentication

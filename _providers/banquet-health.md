@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -32,17 +45,17 @@ common:
   type: Compliance
   url: https://www.banquethealth.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/banquet-health/refs/heads/main/conformance/banquet-health-conformance.yml
+  href: https://artifacts.apis.io/banquet-health/conformance/banquet-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/banquet-health-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/banquet-health/refs/heads/main/hosts/banquet-health-hosts.yml
+  href: https://artifacts.apis.io/banquet-health/hosts/banquet-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/banquet-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/banquet-health/refs/heads/main/vendors/banquet-health-vendors.yml
+  href: https://artifacts.apis.io/banquet-health/vendors/banquet-health-vendors.yml
   title: ''
   type: Vendors
   url: vendors/banquet-health-vendors.yml
@@ -51,12 +64,12 @@ common:
   type: Security
   url: https://www.banquethealth.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banquet-health/refs/heads/main/security/banquet-health-trust-center.yml
+  href: https://artifacts.apis.io/banquet-health/security/banquet-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/banquet-health-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banquet-health/refs/heads/main/security/banquet-health-domain-security.yml
+  href: https://artifacts.apis.io/banquet-health/security/banquet-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/banquet-health-domain-security.yml
@@ -100,25 +113,25 @@ overview: 'Banquet Health is profiled on the [APIs.io](https://apis.io/) network
 
 
   Banquet Health''s developer surface includes documentation, engineering blog, and 10 more developer resources.'
-random_paper: 19
+random_paper: 11
 score:
   band: emerging
-  composite: 19.1
+  composite: 13.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.5
   facets:
-    access_clarity: 36.8
+    access_clarity: 22.4
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 11.9
+    developer_ergonomics: 6.0
     discoverability: 48.2
-    operational_transparency: 10.5
+    operational_transparency: 5.3
   previous_composite: 19.1
   provenance:
     conformance: first-party
@@ -132,15 +145,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 13.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/banquet-health/refs/heads/main/screenshots/banquet-health-2026-10-11T101531.png
+screenshot: https://apis.io/screenshots/banquet-health/banquet-health-2026-10-11T101531.png
 security:
 - kind: domain-security
   name: Banquet Health Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -81,37 +85,37 @@ common:
   type: PrivacyPolicy
   url: https://promptdriven.ai/privacy-policy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/packages/prompt-driven-packages.yml
+  href: https://artifacts.apis.io/prompt-driven/packages/prompt-driven-packages.yml
   title: ''
   type: Packages
   url: packages/prompt-driven-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/cli/prompt-driven-cli.yml
+  href: https://artifacts.apis.io/prompt-driven/cli/prompt-driven-cli.yml
   title: ''
   type: CLI
   url: cli/prompt-driven-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/changelog/prompt-driven-changelog.yml
+  href: https://artifacts.apis.io/prompt-driven/changelog/prompt-driven-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/prompt-driven-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/prompt-driven/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/llms/prompt-driven-llms.txt
+  href: https://artifacts.apis.io/prompt-driven/llms/prompt-driven-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prompt-driven-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/well-known/prompt-driven-well-known.yml
+  href: https://artifacts.apis.io/prompt-driven/well-known/prompt-driven-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/prompt-driven-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/security/prompt-driven-domain-security.yml
+  href: https://artifacts.apis.io/prompt-driven/security/prompt-driven-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prompt-driven-domain-security.yml
@@ -127,18 +131,18 @@ overview: 'Prompt Driven is profiled on the [APIs.io](https://apis.io/) network.
 
 
   Prompt Driven''s developer surface includes documentation, support, CLI, changelog, and 14 more developer resources.'
-random_paper: 3
+random_paper: 23
 score:
   band: emerging
   composite: 20.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -149,7 +153,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 20.6
+  previous_composite: 20.7
   provenance:
     skills: first-party
   regulatory:
@@ -158,14 +162,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/screenshots/prompt-driven-2026-09-02T152145.png
+screenshot: https://apis.io/screenshots/prompt-driven/prompt-driven-2026-09-02T152145.png
 security:
 - kind: domain-security
   name: Prompt Driven Domain Security

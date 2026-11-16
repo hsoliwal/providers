@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
@@ -11,7 +11,7 @@ access_model:
   - security
   - sandbox
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
-    openapi_examples: documented
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 35.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 75
   slug: decart-agentic-access
   summary_line: 75 operations · 67 acting
-api_count: 2
+api_count: 3
 apis:
 - description: A gRPC session protocol for Oasis 3 Preview, Decart's promptable real-time world model. A client initializes a session, sets a scene with a text prompt, then loops Infer calls that submit four driving
   name: Decart Oasis Action-to-Video (gRPC)
@@ -92,7 +95,7 @@ apis:
   description: The Watch Stream API from Decart — 1 operation(s) for watch stream.
   name: Decart Watch Stream API
   slug: decart-watch-stream-api
-artifact_total: 18
+artifact_total: 26
 collections:
 - collection_type: open
   name: Decart API
@@ -101,13 +104,18 @@ collections:
   name: Decart API
   slug: open-decart-platform-openapi-original
 common:
+- group: other
+  href: https://artifacts.apis.io/decart/capabilities/decart-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/decart-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/agentic-access/decart-agentic-access.yml
+  href: https://artifacts.apis.io/decart/agentic-access/decart-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/decart-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/security/decart-domain-security.yml
+  href: https://artifacts.apis.io/decart/security/decart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/decart-domain-security.yml
@@ -172,77 +180,77 @@ common:
   type: StatusPage
   url: https://status.decart.ai/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/llms/decart-llms.txt
+  href: https://artifacts.apis.io/decart/llms/decart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/decart-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/a2a/decart-a2a.yml
+  href: https://artifacts.apis.io/decart/a2a/decart-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/decart-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/mcp/decart-mcp.yml
+  href: https://artifacts.apis.io/decart/mcp/decart-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/decart-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/mcp/decart-tool-crosswalk.yml
+  href: https://artifacts.apis.io/decart/mcp/decart-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/decart-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/decart/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/packages/decart-packages.yml
+  href: https://artifacts.apis.io/decart/packages/decart-packages.yml
   title: ''
   type: Packages
   url: packages/decart-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/packages/decart-packages.yml
+  href: https://artifacts.apis.io/decart/packages/decart-packages.yml
   title: ''
   type: SDKs
   url: packages/decart-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/authentication/decart-authentication.yml
+  href: https://artifacts.apis.io/decart/authentication/decart-authentication.yml
   title: ''
   type: Authentication
   url: authentication/decart-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/conventions/decart-conventions.yml
+  href: https://artifacts.apis.io/decart/conventions/decart-conventions.yml
   title: ''
   type: Conventions
   url: conventions/decart-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/errors/decart-problem-types.yml
+  href: https://artifacts.apis.io/decart/errors/decart-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/decart-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/lifecycle/decart-lifecycle.yml
+  href: https://artifacts.apis.io/decart/lifecycle/decart-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/decart-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/changelog/decart-changelog.yml
+  href: https://artifacts.apis.io/decart/changelog/decart-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/decart-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/plans/decart-plans-pricing.yml
+  href: https://artifacts.apis.io/decart/plans/decart-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/decart-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/rate-limits/decart-rate-limits.yml
+  href: https://artifacts.apis.io/decart/rate-limits/decart-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/decart-rate-limits.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/sandbox/decart-sandbox.yml
+  href: https://artifacts.apis.io/decart/sandbox/decart-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/decart-sandbox.yml
@@ -263,7 +271,7 @@ common:
   type: FAQ
   url: https://docs.platform.decart.ai/resources/faq
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/examples/decart-examples.yml
+  href: https://artifacts.apis.io/decart/examples/decart-examples.yml
   title: ''
   type: Examples
   url: examples/decart-examples.yml
@@ -272,32 +280,40 @@ common:
   type: Examples
   url: https://docs.platform.decart.ai/examples/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/conformance/decart-conformance.yml
+  href: https://artifacts.apis.io/decart/conformance/decart-conformance.yml
   title: ''
   type: Conformance
   url: conformance/decart-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/data-model/decart-data-model.yml
+  href: https://artifacts.apis.io/decart/data-model/decart-data-model.yml
   title: ''
   type: DataModel
   url: data-model/decart-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/well-known/decart-well-known.yml
+  href: https://artifacts.apis.io/decart/well-known/decart-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/decart-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/overlays/decart-api-overlay.yaml
+  href: https://artifacts.apis.io/decart/overlays/decart-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/decart-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/grpc/decart-a2v.proto
+  href: https://artifacts.apis.io/decart/grpc/decart-a2v.proto
   title: ''
   type: Protobuf
   url: grpc/decart-a2v.proto
 created: '2026-08-01'
 description: 'Decart is an AI research lab and API platform building real-time world models — foundation models that generate and transform video frame-by-frame as they are watched. Its Decart API Platform (platform.decart.ai) exposes the Lucy family of realtime and batch video/image models plus the Oasis promptable world model through three surfaces: a Realtime API that edits a live WebRTC camera or video stream with text prompts and reference images, a Queue API that submits asynchronous video jobs and polls them to completion, and a Process API for synchronous image editing. The platform ships first-party JavaScript, Python, Swift and Android SDKs, ephemeral client tokens for browser and mobile apps, a Files API for reusable reference images, and a gRPC action-to-video session protocol for Oasis 3 Preview. Pricing is pay-as-you-go and metered per generated second (video and realtime) or per generation (images).'
+finops:
+- has_sources: true
+  method: derived
+  name: Decart Finops
+  primary_unit: second of active generation
+  service_category: ''
+  slug: decart-finops
+  template: false
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 layout: provider
 mcp_servers:
@@ -311,35 +327,56 @@ network: true
 overview: 'Decart publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Client API, Files API, Generate API, and 7 more. Tagged areas include Artificial Intelligence, Machine Learning, Video, Video Generation, and Video Editing.
 
 
-  Decart''s developer surface includes documentation, API reference, getting-started guide, quickstart, engineering blog, support, pricing, and 36 more developer resources.'
+  The Decart catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Decart''s developer surface includes documentation, API reference, getting-started guide, quickstart, engineering blog, support, pricing, and 37 more developer resources.'
 plans:
 - name: Decart Plans Pricing
-  plan_count: 5
+  plan_count: 6
   slug: decart-plans-pricing
-random_paper: 11
+random_paper: 3
 rate_limits:
 - limit_count: 5
   name: Decart Rate Limits
   slug: decart-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Decart API Rules
+  rule_count: 47
+  severity_counts:
+    error: 30
+    hint: 0
+    info: 4
+    warn: 13
+  slug: decart-rules
 score:
   band: strong
-  composite: 54.4
+  composite: 58.3
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 52.0
+    artifact_dirs: 33
+    catalog_earned: 62.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 52.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 0.1
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
-    contract_quality: 43.8
+    access_clarity: 84.2
+    contract_governance: 18.2
+    contract_quality: 44.4
     developer_ergonomics: 75.0
-    discoverability: 71.7
+    discoverability: 76.7
     operational_transparency: 42.1
-  previous_composite: 54.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 58.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -347,7 +384,7 @@ score:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 8
+      total: 17
     mcp: first-party
     skills: first-party
   regulatory:
@@ -356,13 +393,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/decart/refs/heads/main/screenshots/decart-2026-08-07T164225.png
+screenshot: https://apis.io/screenshots/decart/decart-2026-08-07T164225.png
 security:
 - kind: authentication
   name: Decart Authentication
@@ -372,6 +409,20 @@ security:
   name: Decart Domain Security
   slug: decart-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 6
+skills:
+- name: Edit an image synchronously with the Decart Process API
+  slug: decart-edit-image-process
+- name: Edit a video with the Decart Queue API
+  slug: decart-edit-video-queue
+- name: Upload and reuse a Decart reference image by file id
+  slug: decart-manage-reference-files
+- name: Mint a scoped client token for a Decart realtime session
+  slug: decart-mint-client-token
+- name: decart
+  slug: decart-provider-skill
+- name: Run a virtual try-on job with Decart Lucy VTON
+  slug: decart-virtual-try-on
 slug: decart
 tags:
 - Artificial Intelligence

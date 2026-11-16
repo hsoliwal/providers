@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,33 +26,33 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.1
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 27.7
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://api.atlas.aalphabio.com
   baseurl_source: declared
   description: The Datasets API from A-Alpha Bio — 9 operation(s) for datasets.
   name: A-Alpha Bio Datasets API
   slug: a-alpha-bio-datasets-api
-artifact_total: 11
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: A Alpha Bio Datasets API
   slug: open-a-alpha-bio-datasets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/overlays/a-alpha-bio-atlas-datasets-overlay.yaml
+  href: https://artifacts.apis.io/a-alpha-bio/overlays/a-alpha-bio-atlas-datasets-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/a-alpha-bio-atlas-datasets-overlay.yaml
@@ -65,7 +65,7 @@ common:
   type: License
   url: https://github.com/A-Alpha-Bio/alphabind/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/security/a-alpha-bio-domain-security.yml
+  href: https://artifacts.apis.io/a-alpha-bio/security/a-alpha-bio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/a-alpha-bio-domain-security.yml
@@ -134,52 +134,52 @@ common:
   type: SourceCode
   url: https://github.com/A-Alpha-Bio/alphabind
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/authentication/a-alpha-bio-authentication.yml
+  href: https://artifacts.apis.io/a-alpha-bio/authentication/a-alpha-bio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/a-alpha-bio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/conventions/a-alpha-bio-conventions.yml
+  href: https://artifacts.apis.io/a-alpha-bio/conventions/a-alpha-bio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/a-alpha-bio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/errors/a-alpha-bio-problem-types.yml
+  href: https://artifacts.apis.io/a-alpha-bio/errors/a-alpha-bio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/a-alpha-bio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/lifecycle/a-alpha-bio-lifecycle.yml
+  href: https://artifacts.apis.io/a-alpha-bio/lifecycle/a-alpha-bio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/a-alpha-bio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/conformance/a-alpha-bio-conformance.yml
+  href: https://artifacts.apis.io/a-alpha-bio/conformance/a-alpha-bio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/a-alpha-bio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/data-model/a-alpha-bio-data-model.yml
+  href: https://artifacts.apis.io/a-alpha-bio/data-model/a-alpha-bio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/a-alpha-bio-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/cli/a-alpha-bio-cli.yml
+  href: https://artifacts.apis.io/a-alpha-bio/cli/a-alpha-bio-cli.yml
   title: ''
   type: CLI
   url: cli/a-alpha-bio-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/mcp/a-alpha-bio-mcp.yml
+  href: https://artifacts.apis.io/a-alpha-bio/mcp/a-alpha-bio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/a-alpha-bio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/llms/a-alpha-bio-llms.txt
+  href: https://artifacts.apis.io/a-alpha-bio/llms/a-alpha-bio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/a-alpha-bio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/a-alpha-bio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -215,33 +215,49 @@ network: true
 overview: 'A-Alpha Bio publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Datasets API. Tagged areas include protein-interactions, Biotechnology, Drug Discovery, Antibody Engineering, and Synthetic Biology.
 
 
+  The A-Alpha Bio catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   A-Alpha Bio''s developer surface includes signup flow, engineering blog, product news, support, authentication, CLI, and 24 more developer resources.'
-random_paper: 7
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: A-Alpha Bio API Rules
+  rule_count: 48
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 3
+  slug: a-alpha-bio-rules
 score:
   band: thin
-  composite: 33.4
+  composite: 35.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 24
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.0
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.3
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 55.4
+    contract_governance: 18.2
+    contract_quality: 60.5
     developer_ergonomics: 28.0
-    discoverability: 79.5
+    discoverability: 74.1
     operational_transparency: 2.6
-  previous_composite: 32.9
+  previous_composite: 34.5
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: derived
     skills: derived
@@ -251,14 +267,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/a-alpha-bio/refs/heads/main/screenshots/a-alpha-bio-2026-08-07T160731.png
+screenshot: https://apis.io/screenshots/a-alpha-bio/a-alpha-bio-2026-08-07T160731.png
 security:
 - kind: authentication
   name: A Alpha Bio Authentication
@@ -268,6 +284,12 @@ security:
   name: A Alpha Bio Domain Security
   slug: a-alpha-bio-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: browse-atlas-catalog
+  slug: a-alpha-bio-browse-atlas-catalog
+- name: load-data-block-into-pandas
+  slug: a-alpha-bio-load-data-block-into-pandas
 slug: a-alpha-bio
 tags:
 - protein-interactions

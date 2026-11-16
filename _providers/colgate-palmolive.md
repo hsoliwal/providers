@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/security/colgate-palmolive-domain-security.yml
+  href: https://artifacts.apis.io/colgate-palmolive/security/colgate-palmolive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/colgate-palmolive-domain-security.yml
@@ -82,37 +87,37 @@ common:
   type: TermsOfService
   url: https://www.colgatepalmolive.com/en-us/legal-privacy-policy/terms-of-use
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/security/colgate-palmolive-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/colgate-palmolive/security/colgate-palmolive-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/colgate-palmolive-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/security/colgate-palmolive-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/colgate-palmolive/security/colgate-palmolive-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/colgate-palmolive-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/conformance/colgate-palmolive-conformance.yml
+  href: https://artifacts.apis.io/colgate-palmolive/conformance/colgate-palmolive-conformance.yml
   title: ''
   type: Conformance
   url: conformance/colgate-palmolive-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/packages/colgate-palmolive-packages.yml
+  href: https://artifacts.apis.io/colgate-palmolive/packages/colgate-palmolive-packages.yml
   title: ''
   type: Packages
   url: packages/colgate-palmolive-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/llms/colgate-palmolive-llms.txt
+  href: https://artifacts.apis.io/colgate-palmolive/llms/colgate-palmolive-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/colgate-palmolive-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/plans/colgate-palmolive-plans-pricing.yml
+  href: https://artifacts.apis.io/colgate-palmolive/plans/colgate-palmolive-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/colgate-palmolive-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/rate-limits/colgate-palmolive-rate-limits.yml
+  href: https://artifacts.apis.io/colgate-palmolive/rate-limits/colgate-palmolive-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/colgate-palmolive-rate-limits.yml
@@ -166,7 +171,7 @@ press:
 - date: ''
   title: Colgate - Harnessing AI for innovative oral care
   url: https://www.efp.org/publications-hub/colgate-harnessing-ai-for-innovative-oral-care-how-colgate-palmolive-is-taking-on-the-charge/
-random_paper: 11
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Colgate Palmolive Rate Limits
@@ -175,7 +180,7 @@ score:
   band: emerging
   composite: 14.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -198,14 +203,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/colgate-palmolive/refs/heads/main/screenshots/colgate-palmolive-2026-06-20T174744.png
+screenshot: https://apis.io/screenshots/colgate-palmolive/colgate-palmolive-2026-06-20T174744.png
 security:
 - kind: domain-security
   name: Colgate Palmolive Domain Security

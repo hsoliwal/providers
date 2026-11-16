@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 30.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 546
   human_in_the_loop: 39
@@ -456,70 +470,75 @@ apis:
   description: The API Keys API from SecureAuth (incl. Cloudentity) — 2 operation(s) for api keys.
   name: SecureAuth (incl. Cloudentity) API Keys API
   slug: secureauth-api-keys-api
-artifact_total: 90
+artifact_total: 92
 common:
+- group: commercial
+  href: https://artifacts.apis.io/secureauth/plans/secureauth-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/secureauth-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/capabilities/secureauth-capability-edges.yml
+  href: https://artifacts.apis.io/secureauth/capabilities/secureauth-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/secureauth-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/agentic-access/secureauth-agentic-access.yml
+  href: https://artifacts.apis.io/secureauth/agentic-access/secureauth-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/secureauth-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/rules/secureauth-rules.yml
+  href: https://artifacts.apis.io/secureauth/rules/secureauth-rules.yml
   title: ''
   type: Spectral
   url: rules/secureauth-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/data-model/secureauth-data-model.yml
+  href: https://artifacts.apis.io/secureauth/data-model/secureauth-data-model.yml
   title: ''
   type: DataModel
   url: data-model/secureauth-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/conventions/secureauth-conventions.yml
+  href: https://artifacts.apis.io/secureauth/conventions/secureauth-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/secureauth-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/conventions/secureauth-conventions.yml
+  href: https://artifacts.apis.io/secureauth/conventions/secureauth-conventions.yml
   title: ''
   type: Conventions
   url: conventions/secureauth-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/errors/secureauth-problem-types.yml
+  href: https://artifacts.apis.io/secureauth/errors/secureauth-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/secureauth-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/conformance/secureauth-conformance.yml
+  href: https://artifacts.apis.io/secureauth/conformance/secureauth-conformance.yml
   title: ''
   type: Conformance
   url: conformance/secureauth-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/llms/secureauth-llms.txt
+  href: https://artifacts.apis.io/secureauth/llms/secureauth-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/secureauth-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/well-known/secureauth-status-security.txt
+  href: https://artifacts.apis.io/secureauth/well-known/secureauth-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/secureauth-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/well-known/secureauth-well-known.yml
+  href: https://artifacts.apis.io/secureauth/well-known/secureauth-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/secureauth-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/hosts/secureauth-hosts.yml
+  href: https://artifacts.apis.io/secureauth/hosts/secureauth-hosts.yml
   title: ''
   type: Hosts
   url: hosts/secureauth-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/vendors/secureauth-vendors.yml
+  href: https://artifacts.apis.io/secureauth/vendors/secureauth-vendors.yml
   title: ''
   type: Vendors
   url: vendors/secureauth-vendors.yml
@@ -544,17 +563,17 @@ common:
   type: Leadership
   url: https://secureauth.com/leadership
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/scopes/secureauth-scopes.yml
+  href: https://artifacts.apis.io/secureauth/scopes/secureauth-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/secureauth-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/authentication/secureauth-authentication.yml
+  href: https://artifacts.apis.io/secureauth/authentication/secureauth-authentication.yml
   title: ''
   type: Authentication
   url: authentication/secureauth-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/secureauth/refs/heads/main/security/secureauth-domain-security.yml
+  href: https://artifacts.apis.io/secureauth/security/secureauth-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/secureauth-domain-security.yml
@@ -597,20 +616,32 @@ coverage:
   state: none
 created: '2026-10-13'
 description: SecureAuth is an identity and access management company. It acquired Cloudentity; cloudentity.com now redirects to secureauth.com and the former Cloudentity Authorization Control Plane ships as SecureAuth CIAM, whose 23 OpenAPI definitions (979 operations) are published in the SecureAuthCorp/ciam-client-go repository.
+finops:
+- has_sources: true
+  method: derived
+  name: Secureauth Finops
+  primary_unit: ''
+  service_category: ''
+  slug: secureauth-finops
+  template: true
 image: https://secureauth.com/og-image.png
 layout: provider
 modified: '2026-10-13'
 name: SecureAuth (incl. Cloudentity)
 nav: Providers
 network: true
-overview: 'SecureAuth (incl. Cloudentity) publishes 85 API contracts indexed on the [APIs.io](https://apis.io/) network, including ACRs API, APIs API, Applications API, and 82 more. Tagged areas include Company, Identity, Authentication, Authorization, and Open Banking.
+overview: 'SecureAuth (incl. Cloudentity) publishes 85 API contracts indexed on the [APIs.io](https://apis.io/) network, including ACRs API, APIs API, Applications API, and 82 more. Tagged areas include Company, Identity, Authentication, Authorization, and OAuth.
 
 
   The SecureAuth (incl. Cloudentity) catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  SecureAuth (incl. Cloudentity)''s developer surface includes pricing, authentication, documentation, support, engineering blog, SDKs, and 22 more developer resources.'
-random_paper: 3
+  SecureAuth (incl. Cloudentity)''s developer surface includes pricing, authentication, documentation, support, engineering blog, SDKs, and 23 more developer resources.'
+plans:
+- name: Secureauth Plans Pricing
+  plan_count: 0
+  slug: secureauth-plans-pricing
+random_paper: 1
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -631,21 +662,23 @@ scopes:
   summary_line: 44 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 44.9
+  composite: 39.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 22
     catalog_earned: 39.5
     catalog_earned_first_party: 0.0
     catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.8
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 18.2
     contract_quality: 45.8
-    developer_ergonomics: 35.7
-    discoverability: 73.2
+    developer_ergonomics: 27.4
+    discoverability: 71.4
     operational_transparency: 21.1
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -660,12 +693,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 36.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 33.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 61.1
+screenshot: https://apis.io/screenshots/secureauth/secureauth-2026-11-03T142938.png
 security:
 - kind: authentication
   name: Secureauth Authentication
@@ -681,6 +716,7 @@ tags:
 - Identity
 - Authentication
 - Authorization
+- OAuth
 - Open Banking
 website: https://secureauth.com
 ---

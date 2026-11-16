@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-10-17'
+  score: 27.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 1
@@ -109,11 +116,8 @@ apis:
   description: Scene classification.
   name: CodeProject Vision-Scene API
   slug: codeproject-vision-scene-api
-artifact_total: 38
+artifact_total: 37
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CodeProject.AI Server API
   slug: open-codeproject-ai-server
@@ -161,22 +165,22 @@ collections:
   slug: open-codeproject-vision-scene-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/plans/codeproject-plans-pricing.yml
+  href: https://artifacts.apis.io/codeproject/plans/codeproject-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/codeproject-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/rate-limits/codeproject-rate-limits.yml
+  href: https://artifacts.apis.io/codeproject/rate-limits/codeproject-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/codeproject-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/finops/codeproject-finops.yml
+  href: https://artifacts.apis.io/codeproject/finops/codeproject-finops.yml
   title: ''
   type: FinOps
   url: finops/codeproject-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/capabilities/codeproject-capability-edges.yml
+  href: https://artifacts.apis.io/codeproject/capabilities/codeproject-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/codeproject-capability-edges.yml
@@ -189,22 +193,22 @@ common:
   type: Releases
   url: https://github.com/codeproject/CodeProject.AI-Server/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/agentic-access/codeproject-agentic-access.yml
+  href: https://artifacts.apis.io/codeproject/agentic-access/codeproject-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/codeproject-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/security/codeproject-domain-security.yml
+  href: https://artifacts.apis.io/codeproject/security/codeproject-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codeproject-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/authentication/codeproject-authentication.yml
+  href: https://artifacts.apis.io/codeproject/authentication/codeproject-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codeproject-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/scopes/codeproject-scopes.yml
+  href: https://artifacts.apis.io/codeproject/scopes/codeproject-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/codeproject-scopes.yml
@@ -257,12 +261,12 @@ common:
   type: GitHub
   url: https://github.com/codeproject
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/json-ld/codeproject-context.jsonld
+  href: https://artifacts.apis.io/codeproject/json-ld/codeproject-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/codeproject-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/rules/codeproject-rules.yml
+  href: https://artifacts.apis.io/codeproject/rules/codeproject-rules.yml
   title: ''
   type: Spectral
   url: rules/codeproject-rules.yml
@@ -272,7 +276,7 @@ finops:
 - has_sources: false
   method: generated
   name: Codeproject Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: codeproject-finops
   template: true
@@ -298,7 +302,7 @@ plans:
 - name: Codeproject Plans Pricing
   plan_count: 3
   slug: codeproject-plans-pricing
-random_paper: 4
+random_paper: 18
 rate_limits:
 - limit_count: 5
   name: Codeproject Rate Limits
@@ -325,13 +329,13 @@ score:
   band: thin
   composite: 39.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 52.5
     catalog_earned_first_party: 0.0
     catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.3
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 13.6
@@ -339,7 +343,7 @@ score:
     developer_ergonomics: 42.9
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 45.4
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     contracts:
@@ -353,13 +357,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 30.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/screenshots/codeproject-2026-06-20T174804.png
+screenshot: https://apis.io/screenshots/codeproject/codeproject-2026-06-20T174804.png
 security:
 - kind: authentication
   name: Codeproject Authentication

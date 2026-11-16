@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -75,9 +82,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SMART Health IT Sandbox FHIR APIs Bulk Data API
   slug: open-smarthealthit-bulk-data-api
 - collection_type: open
@@ -105,22 +109,22 @@ common:
   type: BlogRSS
   url: https://smarthealthit.org/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/agentic-access/smarthealthit-agentic-access.yml
+  href: https://artifacts.apis.io/smarthealthit/agentic-access/smarthealthit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/smarthealthit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/security/smarthealthit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/smarthealthit/security/smarthealthit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/smarthealthit-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/security/smarthealthit-domain-security.yml
+  href: https://artifacts.apis.io/smarthealthit/security/smarthealthit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/smarthealthit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/authentication/smarthealthit-authentication.yml
+  href: https://artifacts.apis.io/smarthealthit/authentication/smarthealthit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/smarthealthit-authentication.yml
@@ -141,17 +145,17 @@ common:
   type: Specification
   url: https://hl7.org/fhir/smart-app-launch/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/plans/smarthealthit-plans-pricing.yml
+  href: https://artifacts.apis.io/smarthealthit/plans/smarthealthit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/smarthealthit-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/rate-limits/smarthealthit-rate-limits.yml
+  href: https://artifacts.apis.io/smarthealthit/rate-limits/smarthealthit-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/smarthealthit-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/finops/smarthealthit-finops.yml
+  href: https://artifacts.apis.io/smarthealthit/finops/smarthealthit-finops.yml
   title: ''
   type: FinOps
   url: finops/smarthealthit-finops.yml
@@ -174,35 +178,51 @@ network: true
 overview: 'SMART Health IT publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bulk Data API, Clinical Records API, Conformance API, and 3 more. Tagged areas include SMART on FHIR, FHIR, Health IT, EHR Integration, and Clinical Data.
 
 
+  The SMART Health IT catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   SMART Health IT''s developer surface includes engineering blog, authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Smarthealthit Plans Pricing
   plan_count: 1
   slug: smarthealthit-plans-pricing
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 4
   name: Smarthealthit Rate Limits
   slug: smarthealthit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: SMART Health IT API Rules
+  rule_count: 69
+  severity_counts:
+    error: 66
+    hint: 0
+    info: 1
+    warn: 2
+  slug: smarthealthit-rules
 score:
   band: thin
-  composite: 26.9
+  composite: 29.9
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 42.0
+    artifact_dirs: 15
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.4
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.1
     developer_ergonomics: 31.0
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 33.3
+    operational_transparency: 21.1
+  previous_composite: 29.9
   provenance:
     agentic_access: derived
     contracts:
@@ -216,13 +236,13 @@ score:
     regime: Health
     regime_id: health
     score: 14.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/smarthealthit/refs/heads/main/screenshots/smarthealthit-2026-09-02T155918.png
+screenshot: https://apis.io/screenshots/smarthealthit/smarthealthit-2026-09-02T155918.png
 security:
 - kind: authentication
   name: Smarthealthit Authentication

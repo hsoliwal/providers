@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -27,16 +30,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 21.3
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://frontstage.santeacademie.com
   baseurl_source: declared
@@ -98,20 +104,20 @@ apis:
   description: Topic
   name: Santé Académie Topic API
   slug: santeacademie-topic-api
-artifact_total: 16
+artifact_total: 20
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/capabilities/santeacademie-capability-edges.yml
+  href: https://artifacts.apis.io/santeacademie/capabilities/santeacademie-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/santeacademie-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/overlays/santeacademie-frontstage-overlay.yaml
+  href: https://artifacts.apis.io/santeacademie/overlays/santeacademie-frontstage-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/santeacademie-frontstage-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/overlays/santeacademie-connector-overlay.yaml
+  href: https://artifacts.apis.io/santeacademie/overlays/santeacademie-connector-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/santeacademie-connector-overlay.yaml
@@ -152,72 +158,72 @@ common:
   type: StatusPage
   url: https://status.santeacademie.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/lifecycle/santeacademie-lifecycle.yml
+  href: https://artifacts.apis.io/santeacademie/lifecycle/santeacademie-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/santeacademie-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/authentication/santeacademie-authentication.yml
+  href: https://artifacts.apis.io/santeacademie/authentication/santeacademie-authentication.yml
   title: ''
   type: Authentication
   url: authentication/santeacademie-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/conventions/santeacademie-conventions.yml
+  href: https://artifacts.apis.io/santeacademie/conventions/santeacademie-conventions.yml
   title: ''
   type: Conventions
   url: conventions/santeacademie-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/conformance/santeacademie-conformance.yml
+  href: https://artifacts.apis.io/santeacademie/conformance/santeacademie-conformance.yml
   title: ''
   type: Conformance
   url: conformance/santeacademie-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/conformance/santeacademie-conformance.yml
+  href: https://artifacts.apis.io/santeacademie/conformance/santeacademie-conformance.yml
   title: ''
   type: Compliance
   url: conformance/santeacademie-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/errors/santeacademie-problem-types.yml
+  href: https://artifacts.apis.io/santeacademie/errors/santeacademie-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/santeacademie-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/data-model/santeacademie-data-model.yml
+  href: https://artifacts.apis.io/santeacademie/data-model/santeacademie-data-model.yml
   title: ''
   type: DataModel
   url: data-model/santeacademie-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/security/santeacademie-domain-security.yml
+  href: https://artifacts.apis.io/santeacademie/security/santeacademie-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/santeacademie-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/packages/santeacademie-packages.yml
+  href: https://artifacts.apis.io/santeacademie/packages/santeacademie-packages.yml
   title: ''
   type: Packages
   url: packages/santeacademie-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/llms/santeacademie-llms.txt
+  href: https://artifacts.apis.io/santeacademie/llms/santeacademie-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/santeacademie-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/mcp/santeacademie-mcp.yml
+  href: https://artifacts.apis.io/santeacademie/mcp/santeacademie-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/santeacademie-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/santeacademie/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/plans/santeacademie-plans-pricing.yml
+  href: https://artifacts.apis.io/santeacademie/plans/santeacademie-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/santeacademie-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/rate-limits/santeacademie-rate-limits.yml
+  href: https://artifacts.apis.io/santeacademie/rate-limits/santeacademie-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/santeacademie-rate-limits.yml
@@ -232,33 +238,49 @@ network: true
 overview: 'Santé Académie publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Article API, Custom Catalog API, Faq API, and 9 more. Tagged areas include Company, EdTech, Healthcare Training, Continuing Education, and DPC.
 
 
+  The Santé Académie catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Santé Académie''s developer surface includes support, engineering blog, authentication, and 23 more developer resources.'
 plans:
 - name: Santeacademie Plans Pricing
   plan_count: 0
   slug: santeacademie-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Santeacademie Rate Limits
   slug: santeacademie-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Santé Académie API Rules
+  rule_count: 48
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 5
+    warn: 4
+  slug: santeacademie-rules
 score:
   band: thin
-  composite: 34.3
+  composite: 35.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 35.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 40.9
     developer_ergonomics: 28.0
-    discoverability: 78.6
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -268,7 +290,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 34.3
+  previous_composite: 35.4
   provenance:
     conformance: derived
     contracts:
@@ -284,14 +306,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/santeacademie/refs/heads/main/screenshots/santeacademie-2026-09-02T154403.png
+screenshot: https://apis.io/screenshots/santeacademie/santeacademie-2026-09-02T154403.png
 security:
 - kind: authentication
   name: Santeacademie Authentication
@@ -301,6 +323,14 @@ security:
   name: Santeacademie Domain Security
   slug: santeacademie-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: santeacademie-browse-webinars-and-content
+  slug: santeacademie-browse-webinars-and-content
+- name: santeacademie-enumerate-catalog
+  slug: santeacademie-enumerate-catalog
+- name: santeacademie-find-funded-dpc-training
+  slug: santeacademie-find-funded-dpc-training
 slug: santeacademie
 tags:
 - Company

@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -111,32 +114,32 @@ common:
   type: Security
   url: https://qolab.ai/vulnerability-disclosure
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/security/qolab-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/qolab/security/qolab-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/qolab-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/security/qolab-domain-security.yml
+  href: https://artifacts.apis.io/qolab/security/qolab-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qolab-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/llms/qolab-llms.txt
+  href: https://artifacts.apis.io/qolab/llms/qolab-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qolab-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/plans/qolab-plans-pricing.yml
+  href: https://artifacts.apis.io/qolab/plans/qolab-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/qolab-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/rate-limits/qolab-rate-limits.yml
+  href: https://artifacts.apis.io/qolab/rate-limits/qolab-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/qolab-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/packages/qolab-packages.yml
+  href: https://artifacts.apis.io/qolab/packages/qolab-packages.yml
   title: ''
   type: Packages
   url: packages/qolab-packages.yml
@@ -171,7 +174,7 @@ plans:
 - name: Qolab Plans Pricing
   plan_count: 0
   slug: qolab-plans-pricing
-random_paper: 21
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Qolab Rate Limits
@@ -180,7 +183,7 @@ score:
   band: emerging
   composite: 12.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -201,14 +204,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/qolab/refs/heads/main/screenshots/qolab-2026-09-02T152533.png
+screenshot: https://apis.io/screenshots/qolab/qolab-2026-09-02T152533.png
 security:
 - kind: domain-security
   name: Qolab Domain Security

@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 44.9
-  scored_at: '2026-10-17'
+  score: 44.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 69
   human_in_the_loop: 0
@@ -186,77 +191,77 @@ asyncapis:
   slug: nmi-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/agentic-access/nmi-agentic-access.yml
+  href: https://artifacts.apis.io/nmi/agentic-access/nmi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nmi-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/rules/nmi-rules.yml
+  href: https://artifacts.apis.io/nmi/rules/nmi-rules.yml
   title: ''
   type: Spectral
   url: rules/nmi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/json-ld/nmi-context.jsonld
+  href: https://artifacts.apis.io/nmi/json-ld/nmi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/nmi-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/vocabulary/nmi-vocabulary.yml
+  href: https://artifacts.apis.io/nmi/vocabulary/nmi-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/nmi-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/asyncapi/nmi-webhooks.yml
+  href: https://artifacts.apis.io/nmi/asyncapi/nmi-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/nmi-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/data-model/nmi-data-model.yml
+  href: https://artifacts.apis.io/nmi/data-model/nmi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nmi-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/conventions/nmi-conventions.yml
+  href: https://artifacts.apis.io/nmi/conventions/nmi-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/nmi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/conventions/nmi-conventions.yml
+  href: https://artifacts.apis.io/nmi/conventions/nmi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nmi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/errors/nmi-problem-types.yml
+  href: https://artifacts.apis.io/nmi/errors/nmi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nmi-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/conformance/nmi-conformance.yml
+  href: https://artifacts.apis.io/nmi/conformance/nmi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nmi-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/llms/nmi-llms.txt
+  href: https://artifacts.apis.io/nmi/llms/nmi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nmi-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/mcp/nmi-mcp.yml
+  href: https://artifacts.apis.io/nmi/mcp/nmi-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/nmi-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/well-known/nmi-well-known.yml
+  href: https://artifacts.apis.io/nmi/well-known/nmi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nmi-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/hosts/nmi-hosts.yml
+  href: https://artifacts.apis.io/nmi/hosts/nmi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/nmi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/vendors/nmi-vendors.yml
+  href: https://artifacts.apis.io/nmi/vendors/nmi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/nmi-vendors.yml
@@ -277,12 +282,12 @@ common:
   type: Leadership
   url: https://www.nmi.com/about-us/leadership/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/scopes/nmi-scopes.yml
+  href: https://artifacts.apis.io/nmi/scopes/nmi-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/nmi-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/authentication/nmi-authentication.yml
+  href: https://artifacts.apis.io/nmi/authentication/nmi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nmi-authentication.yml
@@ -291,7 +296,7 @@ common:
   type: Website
   url: https://nmi.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/security/nmi-domain-security.yml
+  href: https://artifacts.apis.io/nmi/security/nmi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nmi-domain-security.yml
@@ -352,10 +357,10 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nmi.png
 json_schemas:
 - name: ACH - Credit
-  property_count: 0
+  property_count: 128
   slug: nmi-achcredit-request
 - name: ACH - Sale
-  property_count: 0
+  property_count: 128
   slug: nmi-achsale-request
 - name: application-document
   property_count: 7
@@ -382,13 +387,13 @@ json_schemas:
   property_count: 29
   slug: nmi-create-merchant-response
 - name: Credit Card - Capture
-  property_count: 0
+  property_count: 8
   slug: nmi-credit-card-capture-request
 - name: Credit Card - Complete Partial Payment in Full
-  property_count: 0
+  property_count: 126
   slug: nmi-credit-card-payment-in-full-partial-request
 - name: Credit Card - Sale
-  property_count: 0
+  property_count: 127
   slug: nmi-credit-card-sale-request
 - name: full-application
   property_count: 7
@@ -448,7 +453,7 @@ plans:
 - name: Plans
   plan_count: 3
   slug: plans
-random_paper: 16
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -473,23 +478,23 @@ scopes:
   summary_line: 6 scopes · clientCredentials
 score:
   band: developing
-  composite: 47.0
+  composite: 45.8
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 28
     catalog_earned: 68.8
     catalog_earned_first_party: 0.0
     catalog_gap: 46.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 21.2
+  delta: -1.4
   facets:
-    access_clarity: 28.9
+    access_clarity: 18.4
     contract_governance: 22.0
-    contract_quality: 73.6
+    contract_quality: 79.8
     developer_ergonomics: 48.8
-    discoverability: 83.3
+    discoverability: 81.7
     operational_transparency: 7.9
-  previous_composite: 25.8
+  previous_composite: 47.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -504,14 +509,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 27.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nmi/refs/heads/main/screenshots/nmi-2026-06-20T190340.png
+screenshot: https://apis.io/screenshots/nmi/nmi-2026-06-20T190340.png
 security:
 - kind: authentication
   name: Nmi Authentication

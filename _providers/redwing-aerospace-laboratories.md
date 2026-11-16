@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -49,17 +53,17 @@ common:
   type: PrivacyPolicy
   url: https://drive.google.com/file/d/1qiVNuax6MUaMjBjXEEA3c-rPHytRcmLw/view?usp=share_link
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/redwing-aerospace-laboratories/refs/heads/main/mcp/redwing-aerospace-laboratories-mcp.yml
+  href: https://artifacts.apis.io/redwing-aerospace-laboratories/mcp/redwing-aerospace-laboratories-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/redwing-aerospace-laboratories-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/redwing-aerospace-laboratories/refs/heads/main/llms/redwing-aerospace-laboratories-llms.txt
+  href: https://artifacts.apis.io/redwing-aerospace-laboratories/llms/redwing-aerospace-laboratories-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/redwing-aerospace-laboratories-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/redwing-aerospace-laboratories/refs/heads/main/security/redwing-aerospace-laboratories-domain-security.yml
+  href: https://artifacts.apis.io/redwing-aerospace-laboratories/security/redwing-aerospace-laboratories-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/redwing-aerospace-laboratories-domain-security.yml
@@ -68,7 +72,7 @@ description: RedWing Aerospace Laboratories (RedWing Labs, operated by Kitemaps 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redwing-aerospace-laboratories.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at www.redwinglabs.in over HTTP; 9 tools listed.
+- description: Remote MCP server at www.redwinglabs.in over HTTP; 10 tools listed.
   name: RedWing Labs Site MCP (Wix)
   slug: redwing-labs-site
 modified: '2026-07-21'
@@ -79,12 +83,12 @@ overview: 'RedWing Aerospace Laboratories is profiled on the [APIs.io](https://a
 
 
   RedWing Aerospace Laboratories'' developer surface includes engineering blog and 5 more developer resources.'
-random_paper: 18
+random_paper: 4
 score:
   band: minimal
   composite: 5.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -114,14 +118,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/redwing-aerospace-laboratories/refs/heads/main/screenshots/redwing-aerospace-laboratories-2026-09-02T153202.png
+screenshot: https://apis.io/screenshots/redwing-aerospace-laboratories/redwing-aerospace-laboratories-2026-09-02T153202.png
 security:
 - kind: domain-security
   name: Redwing Aerospace Laboratories Domain Security

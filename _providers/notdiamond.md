@@ -1,6 +1,6 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
   label: Paid
   onboarding: unknown
   pricing: paid
@@ -8,6 +8,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: false
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -68,9 +72,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Not Diamond Custom Routers API
   slug: open-notdiamond-custom-routers-api
 - collection_type: open
@@ -91,22 +92,22 @@ common:
   type: Pricing
   url: https://www.notdiamond.ai/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/capabilities/notdiamond-capability-edges.yml
+  href: https://artifacts.apis.io/notdiamond/capabilities/notdiamond-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/notdiamond-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/agentic-access/notdiamond-agentic-access.yml
+  href: https://artifacts.apis.io/notdiamond/agentic-access/notdiamond-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/notdiamond-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/security/notdiamond-domain-security.yml
+  href: https://artifacts.apis.io/notdiamond/security/notdiamond-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/notdiamond-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/authentication/notdiamond-authentication.yml
+  href: https://artifacts.apis.io/notdiamond/authentication/notdiamond-authentication.yml
   title: ''
   type: Authentication
   url: authentication/notdiamond-authentication.yml
@@ -131,17 +132,17 @@ common:
   type: Documentation
   url: https://docs.notdiamond.ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/plans/notdiamond-plans-pricing.yml
+  href: https://artifacts.apis.io/notdiamond/plans/notdiamond-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/notdiamond-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/rate-limits/notdiamond-rate-limits.yml
+  href: https://artifacts.apis.io/notdiamond/rate-limits/notdiamond-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/notdiamond-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/finops/notdiamond-finops.yml
+  href: https://artifacts.apis.io/notdiamond/finops/notdiamond-finops.yml
   title: ''
   type: FinOps
   url: finops/notdiamond-finops.yml
@@ -164,6 +165,9 @@ network: true
 overview: 'Not Diamond publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Custom Routers API, Feedback API, Model Routing API, and 1 more. Tagged areas include Artificial Intelligence, LLM, Model Routing, Router, and Orchestration.
 
 
+  The Not Diamond catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Not Diamond''s developer surface includes pricing, authentication, engineering blog, documentation, and 9 more developer resources.'
 plans:
 - name: Notdiamond Plans Pricing
@@ -174,25 +178,38 @@ rate_limits:
 - limit_count: 1
   name: Notdiamond Rate Limits
   slug: notdiamond-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Not Diamond API Rules
+  rule_count: 60
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 2
+    warn: 1
+  slug: notdiamond-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 33.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 53.0
+    artifact_dirs: 17
+    catalog_earned: 57.5
     catalog_earned_first_party: 16.0
-    catalog_gap: 62.0
+    catalog_gap: 57.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
-    access_clarity: 31.6
-    contract_governance: 0.0
+    access_clarity: 26.3
+    contract_governance: 13.6
     contract_quality: 49.6
-    developer_ergonomics: 23.8
+    developer_ergonomics: 27.4
     discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 31.8
+  previous_composite: 33.5
   provenance:
     agentic_access: derived
     contracts:
@@ -206,13 +223,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/notdiamond/refs/heads/main/screenshots/notdiamond-2026-06-20T190525.png
+screenshot: https://apis.io/screenshots/notdiamond/notdiamond-2026-06-20T190525.png
 security:
 - kind: authentication
   name: Notdiamond Authentication

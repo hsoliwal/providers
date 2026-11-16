@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -74,37 +79,37 @@ common:
   type: PrivacyPolicy
   url: https://supplier.io/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/mcp/supplier-mcp.yml
+  href: https://artifacts.apis.io/supplier/mcp/supplier-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/supplier-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/well-known/supplier-well-known.yml
+  href: https://artifacts.apis.io/supplier/well-known/supplier-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/supplier-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/llms/supplier-llms.txt
+  href: https://artifacts.apis.io/supplier/llms/supplier-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/supplier-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/authentication/supplier-authentication.yml
+  href: https://artifacts.apis.io/supplier/authentication/supplier-authentication.yml
   title: ''
   type: Authentication
   url: authentication/supplier-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/scopes/supplier-scopes.yml
+  href: https://artifacts.apis.io/supplier/scopes/supplier-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/supplier-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/conformance/supplier-conformance.yml
+  href: https://artifacts.apis.io/supplier/conformance/supplier-conformance.yml
   title: ''
   type: Conformance
   url: conformance/supplier-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/security/supplier-domain-security.yml
+  href: https://artifacts.apis.io/supplier/security/supplier-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/supplier-domain-security.yml
@@ -124,7 +129,7 @@ overview: 'Supplier is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Supplier''s developer surface includes engineering blog, pricing, support, authentication, and 12 more developer resources.'
-random_paper: 4
+random_paper: 20
 scopes:
 - name: Supplier Scopes
   scope_count: 1
@@ -134,7 +139,7 @@ score:
   band: emerging
   composite: 22.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -158,14 +163,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/supplier/refs/heads/main/screenshots/supplier-2026-09-02T161304.png
+screenshot: https://apis.io/screenshots/supplier/supplier-2026-09-02T161304.png
 security:
 - kind: authentication
   name: Supplier Authentication

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: DRiV, a Tenneco company, provides digital parts catalog and vehicle fitment lookup capabilities for its portfolio of more than 30 aftermarket brands including Monroe, Champion, Walker, and Fel-Pro.
@@ -42,22 +46,22 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tenneco/refs/heads/main/plans/tenneco-plans-pricing.yml
+  href: https://artifacts.apis.io/tenneco/plans/tenneco-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tenneco-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tenneco/refs/heads/main/rate-limits/tenneco-rate-limits.yml
+  href: https://artifacts.apis.io/tenneco/rate-limits/tenneco-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tenneco-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tenneco/refs/heads/main/finops/tenneco-finops.yml
+  href: https://artifacts.apis.io/tenneco/finops/tenneco-finops.yml
   title: ''
   type: FinOps
   url: finops/tenneco-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tenneco/refs/heads/main/security/tenneco-domain-security.yml
+  href: https://artifacts.apis.io/tenneco/security/tenneco-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tenneco-domain-security.yml
@@ -87,7 +91,7 @@ finops:
 - has_sources: false
   method: generated
   name: Tenneco Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: tenneco-finops
   template: true
@@ -129,7 +133,7 @@ press:
 - date: ''
   title: Winning at this level takes partners you trust. We' ...
   url: https://www.linkedin.com/posts/tenneco_winning-at-this-level-takes-partners-you-activity-7420103720606175232-MQsC
-random_paper: 0
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Tenneco Rate Limits
@@ -144,7 +148,7 @@ score:
     catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -152,21 +156,21 @@ score:
     developer_ergonomics: 0.0
     discoverability: 58.0
     operational_transparency: 7.9
-  previous_composite: 14.6
+  previous_composite: 13.1
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tenneco/refs/heads/main/screenshots/tenneco-2026-06-20T195115.png
+screenshot: https://apis.io/screenshots/tenneco/tenneco-2026-06-20T195115.png
 security:
 - kind: domain-security
   name: Tenneco Domain Security

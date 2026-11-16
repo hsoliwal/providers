@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Schema-first Go library for building type-safe GraphQL servers with automatic code generation, resolver scaffolding, DataLoader integration, subscriptions, and middleware support.
@@ -41,7 +45,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gqlgen/refs/heads/main/security/gqlgen-domain-security.yml
+  href: https://artifacts.apis.io/gqlgen/security/gqlgen-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gqlgen-domain-security.yml
@@ -66,17 +70,17 @@ common:
   type: Pricing
   url: https://pkg.go.dev/github.com/99designs/gqlgen
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gqlgen/refs/heads/main/plans/gqlgen-plans.md
+  href: https://artifacts.apis.io/gqlgen/plans/gqlgen-plans.md
   title: ''
   type: Plans
   url: plans/gqlgen-plans.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gqlgen/refs/heads/main/rate-limits/gqlgen-rate-limits.md
+  href: https://artifacts.apis.io/gqlgen/rate-limits/gqlgen-rate-limits.md
   title: ''
   type: RateLimits
   url: rate-limits/gqlgen-rate-limits.md
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gqlgen/refs/heads/main/finops/gqlgen-finops.md
+  href: https://artifacts.apis.io/gqlgen/finops/gqlgen-finops.md
   title: ''
   type: FinOps
   url: finops/gqlgen-finops.md
@@ -96,7 +100,7 @@ overview: 'gqlgen is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   gqlgen''s developer surface includes documentation, pricing, and 7 more developer resources.'
-random_paper: 0
+random_paper: 14
 score:
   band: emerging
   composite: 17.3
@@ -122,14 +126,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/gqlgen/refs/heads/main/screenshots/gqlgen-2026-06-20T182306.png
+screenshot: https://apis.io/screenshots/gqlgen/gqlgen-2026-06-20T182306.png
 security:
 - kind: domain-security
   name: Gqlgen Domain Security

@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -30,15 +33,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 40.8
-  scored_at: '2026-10-17'
+  score: 42.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 55
   human_in_the_loop: 2
@@ -46,7 +52,7 @@ agentic_access:
   operation_count: 93
   slug: unqork-agentic-access
   summary_line: 93 operations · 55 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://training.unqork.io/api/1.0
   baseurl_source: declared
@@ -133,7 +139,7 @@ apis:
   description: The Workflow API from Unqork — 10 operation(s) for workflow.
   name: Unqork Workflow API
   slug: unqork-workflow-api
-artifact_total: 27
+artifact_total: 34
 asyncapis:
 - description: ''
   name: Unqork Webhooks
@@ -144,7 +150,7 @@ collections:
   slug: open-unqork-customer-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/rate-limits/unqork-rate-limits.yml
+  href: https://artifacts.apis.io/unqork/rate-limits/unqork-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/unqork-rate-limits.yml
@@ -153,32 +159,32 @@ common:
   type: BlogRSS
   url: https://unqork.com/resource-center/feed/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/plans/unqork-plans-pricing.yml
+  href: https://artifacts.apis.io/unqork/plans/unqork-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/unqork-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/capabilities/unqork-capability-edges.yml
+  href: https://artifacts.apis.io/unqork/capabilities/unqork-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/unqork-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/overlays/unqork-customer-api-overlay.yaml
+  href: https://artifacts.apis.io/unqork/overlays/unqork-customer-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/unqork-customer-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/mcp/unqork-mcp.yml
+  href: https://artifacts.apis.io/unqork/mcp/unqork-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/unqork-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/agentic-access/unqork-agentic-access.yml
+  href: https://artifacts.apis.io/unqork/agentic-access/unqork-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/unqork-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/security/unqork-domain-security.yml
+  href: https://artifacts.apis.io/unqork/security/unqork-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unqork-domain-security.yml
@@ -255,57 +261,65 @@ common:
   type: Training
   url: https://academy.unqork.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/llms/unqork-llms.txt
+  href: https://artifacts.apis.io/unqork/llms/unqork-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unqork-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/security/unqork-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/unqork/security/unqork-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/unqork-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/lifecycle/unqork-lifecycle.yml
+  href: https://artifacts.apis.io/unqork/lifecycle/unqork-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unqork-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/changelog/unqork-changelog.yml
+  href: https://artifacts.apis.io/unqork/changelog/unqork-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/unqork-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/conformance/unqork-conformance.yml
+  href: https://artifacts.apis.io/unqork/conformance/unqork-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unqork-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/packages/unqork-packages.yml
+  href: https://artifacts.apis.io/unqork/packages/unqork-packages.yml
   title: ''
   type: Packages
   url: packages/unqork-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/sandbox/unqork-sandbox.yml
+  href: https://artifacts.apis.io/unqork/sandbox/unqork-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/unqork-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/components/unqork-components.yml
+  href: https://artifacts.apis.io/unqork/components/unqork-components.yml
   title: ''
   type: Components
   url: components/unqork-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/asyncapi/unqork-webhooks.yml
+  href: https://artifacts.apis.io/unqork/asyncapi/unqork-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/unqork-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/unqork/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-31'
 description: Unqork is an enterprise application development platform — a no-code / "codeless" platform-as-a-service used by banks, insurers, healthcare organizations and government agencies to build and operate complex, regulated business applications without hand-written application code. Creators assemble applications from modules, workflows, components and data models in the Unqork Designer, and the platform exposes a REST Customer API (documented as OpenAPI 3.0.3 at developers.unqork.io) that lets external systems manage submissions, modules, applications, workflows, users, groups, promotions, transforms, global variables and API access credentials in an Unqork environment. The API is served per-tenant at https://{subdomain}.unqork.io/api/1.0, secured with OAuth 2.0 client-credentials and password grants issued through API Access Management, and the platform ships on a quarterly GA release cadence with weekly patch releases.
+finops:
+- has_sources: true
+  method: derived
+  name: Unqork Finops
+  primary_unit: ''
+  service_category: ''
+  slug: unqork-finops
+  template: true
 image: https://developers.unqork.io/unqork-logo.png
 layout: provider
 modified: '2026-10-06'
@@ -315,7 +329,7 @@ network: true
 overview: 'Unqork publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Authentication API, Credentials API, and 14 more. Tagged areas include Company, No-Code, Low-Code, Application Development, and Enterprise Software.
 
 
-  The Unqork catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Unqork catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Unqork''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, pricing, and 29 more developer resources.'
@@ -323,42 +337,55 @@ plans:
 - name: Unqork Plans Pricing
   plan_count: 0
   slug: unqork-plans-pricing
-random_paper: 12
+random_paper: 0
 rate_limits:
 - limit_count: 2
   name: Unqork Rate Limits
   slug: unqork-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Unqork API Rules
+  rule_count: 57
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 3
+    warn: 7
+  slug: unqork-rules
 scopes:
 - name: Unqork Scopes
   scope_count: 1
   slug: unqork-scopes
   summary_line: 1 scope · clientCredentials/password
 score:
-  band: developing
-  composite: 50.3
+  band: strong
+  composite: 63.8
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 45.0
+    artifact_dirs: 32
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 11.8
   facets:
-    access_clarity: 21.1
-    contract_governance: 18.2
-    contract_quality: 51.7
-    developer_ergonomics: 63.7
+    access_clarity: 60.5
+    contract_governance: 31.8
+    contract_quality: 56.1
+    developer_ergonomics: 66.1
     discoverability: 73.2
-    operational_transparency: 63.2
-  previous_composite: 50.3
+    operational_transparency: 73.7
+  previous_composite: 52.0
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 17
     mcp: derived
     skills: derived
@@ -367,14 +394,14 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 39.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 46.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/unqork/refs/heads/main/screenshots/unqork-2026-08-17T082627.png
+screenshot: https://apis.io/screenshots/unqork/unqork-2026-08-17T082627.png
 security:
 - kind: authentication
   name: Unqork Authentication
@@ -392,6 +419,18 @@ security:
   name: Unqork Trust Center
   slug: unqork-trust-center
   summary_line: SOC 2 Type II, ISO/IEC 27001:2013, HIPAA, FedRAMP, GDPR
+skill_count: 5
+skills:
+- name: Authenticate to Unqork and read submission data
+  slug: unqork-authenticate-and-read-submissions
+- name: Create, execute and correct an Unqork submission
+  slug: unqork-create-and-execute-submission
+- name: Start, resume and schedule an Unqork workflow
+  slug: unqork-drive-a-workflow
+- name: Manage Unqork API credentials, users and access
+  slug: unqork-manage-api-credentials-and-access
+- name: Promote Unqork configuration across environments
+  slug: unqork-promote-across-environments
 slug: unqork
 tags:
 - Company

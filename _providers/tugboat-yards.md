@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Publisher-scoped REST API for the Tugboat audience-funding platform, covering API-key verification, pages, offers and offer issues, subscribers, orders, the deprecated WePay checkouts interface, per-k
@@ -47,22 +50,22 @@ asyncapis:
   slug: tugboat-yards-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tugboat-yards/refs/heads/main/llms/tugboat-yards-llms.txt
+  href: https://artifacts.apis.io/tugboat-yards/llms/tugboat-yards-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tugboat-yards-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tugboat-yards/refs/heads/main/packages/tugboat-yards-packages.yml
+  href: https://artifacts.apis.io/tugboat-yards/packages/tugboat-yards-packages.yml
   title: ''
   type: Packages
   url: packages/tugboat-yards-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tugboat-yards/refs/heads/main/lifecycle/tugboat-yards-lifecycle.yml
+  href: https://artifacts.apis.io/tugboat-yards/lifecycle/tugboat-yards-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tugboat-yards-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tugboat-yards/refs/heads/main/security/tugboat-yards-domain-security.yml
+  href: https://artifacts.apis.io/tugboat-yards/security/tugboat-yards-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tugboat-yards-domain-security.yml
@@ -78,7 +81,7 @@ overview: 'Tugboat Yards is listed with 1 API on the [APIs.io](https://apis.io/)
 
 
   The Tugboat Yards catalog on APIs.io includes 1 event-driven AsyncAPI specification.'
-random_paper: 8
+random_paper: 6
 score:
   band: minimal
   composite: 0.0
@@ -105,14 +108,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tugboat-yards/refs/heads/main/screenshots/tugboat-yards-2026-10-11T131238.png
+screenshot: https://apis.io/screenshots/tugboat-yards/tugboat-yards-2026-10-11T131238.png
 security:
 - kind: authentication
   name: Tugboat Yards Authentication

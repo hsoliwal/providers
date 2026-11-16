@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Stwebapi API from HCLSoftware — 1 operation(s) for stwebapi.
@@ -36,37 +49,37 @@ common:
   type: Pricing
   url: https://www.hcl-software.com/devops-plan
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/plans/hcl-software-plans-pricing.yml
+  href: https://artifacts.apis.io/hcl-software/plans/hcl-software-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hcl-software-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/rules/hcl-software-rules.yml
+  href: https://artifacts.apis.io/hcl-software/rules/hcl-software-rules.yml
   title: ''
   type: Spectral
   url: rules/hcl-software-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/conformance/hcl-software-conformance.yml
+  href: https://artifacts.apis.io/hcl-software/conformance/hcl-software-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hcl-software-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/llms/hcl-software-llms.txt
+  href: https://artifacts.apis.io/hcl-software/llms/hcl-software-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hcl-software-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/well-known/hcl-software-well-known.yml
+  href: https://artifacts.apis.io/hcl-software/well-known/hcl-software-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hcl-software-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/hosts/hcl-software-hosts.yml
+  href: https://artifacts.apis.io/hcl-software/hosts/hcl-software-hosts.yml
   title: ''
   type: Hosts
   url: hosts/hcl-software-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/vendors/hcl-software-vendors.yml
+  href: https://artifacts.apis.io/hcl-software/vendors/hcl-software-vendors.yml
   title: ''
   type: Vendors
   url: vendors/hcl-software-vendors.yml
@@ -83,7 +96,7 @@ common:
   type: DeveloperPortal
   url: https://www.hcl-software.com/developer
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/security/hcl-software-domain-security.yml
+  href: https://artifacts.apis.io/hcl-software/security/hcl-software-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hcl-software-domain-security.yml
@@ -130,7 +143,7 @@ plans:
 - name: Hcl Software Plans Pricing
   plan_count: 0
   slug: hcl-software-plans-pricing
-random_paper: 21
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -146,7 +159,7 @@ rules:
   slug: hcl-software-rules
 score:
   band: emerging
-  composite: 24.6
+  composite: 18.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 36.5
@@ -154,15 +167,15 @@ score:
     catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.9
+  delta: -6.3
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 31.8
     contract_quality: 9.4
-    developer_ergonomics: 26.2
+    developer_ergonomics: 13.1
     discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 32.5
+  previous_composite: 24.6
   provenance:
     conformance: first-party
     contracts:
@@ -180,14 +193,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hcl-software/refs/heads/main/screenshots/hcl-software-2026-10-11T190142.png
+screenshot: https://apis.io/screenshots/hcl-software/hcl-software-2026-10-11T190142.png
 security:
 - kind: domain-security
   name: Hcl Software Domain Security

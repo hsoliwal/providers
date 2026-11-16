@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The agent-native commerce surface of the IM8 Health Shopify storefront: a Universal Commerce Protocol (UCP) merchant profile with a hosted MCP shopping endpoint (catalog search, cart, checkout, fulfil'
@@ -42,7 +50,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/security/im8-domain-security.yml
+  href: https://artifacts.apis.io/im8/security/im8-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/im8-domain-security.yml
@@ -55,32 +63,32 @@ common:
   type: Documentation
   url: https://im8health.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/mcp/im8-mcp.yml
+  href: https://artifacts.apis.io/im8/mcp/im8-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/im8-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/authentication/im8-authentication.yml
+  href: https://artifacts.apis.io/im8/authentication/im8-authentication.yml
   title: ''
   type: Authentication
   url: authentication/im8-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/scopes/im8-scopes.yml
+  href: https://artifacts.apis.io/im8/scopes/im8-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/im8-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/well-known/im8-well-known.yml
+  href: https://artifacts.apis.io/im8/well-known/im8-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/im8-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/llms/im8-llms.txt
+  href: https://artifacts.apis.io/im8/llms/im8-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/im8-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/conformance/im8-conformance.yml
+  href: https://artifacts.apis.io/im8/conformance/im8-conformance.yml
   title: ''
   type: Conformance
   url: conformance/im8-conformance.yml
@@ -126,7 +134,7 @@ score:
   band: emerging
   composite: 21.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -150,14 +158,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/im8/refs/heads/main/screenshots/im8-2026-08-07T170629.png
+screenshot: https://apis.io/screenshots/im8/im8-2026-08-07T170629.png
 security:
 - kind: authentication
   name: Im8 Authentication

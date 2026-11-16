@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: Higress is a next-generation cloud-native API gateway that provides intelligent routing, traffic management, authentication, and observability capabilities for microservices architectures.
@@ -51,17 +55,17 @@ apis:
 artifact_total: 8
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/higress/refs/heads/main/plans/higress-plans-pricing.yml
+  href: https://artifacts.apis.io/higress/plans/higress-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/higress-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/higress/refs/heads/main/rate-limits/higress-rate-limits.yml
+  href: https://artifacts.apis.io/higress/rate-limits/higress-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/higress-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/higress/refs/heads/main/finops/higress-finops.yml
+  href: https://artifacts.apis.io/higress/finops/higress-finops.yml
   title: ''
   type: FinOps
   url: finops/higress-finops.yml
@@ -78,7 +82,7 @@ common:
   type: License
   url: https://github.com/alibaba/higress/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/higress/refs/heads/main/security/higress-domain-security.yml
+  href: https://artifacts.apis.io/higress/security/higress-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/higress-domain-security.yml
@@ -128,7 +132,7 @@ finops:
 - has_sources: false
   method: generated
   name: Higress Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: higress-finops
   template: true
@@ -146,7 +150,7 @@ plans:
 - name: Higress Plans Pricing
   plan_count: 3
   slug: higress-plans-pricing
-random_paper: 9
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Higress Rate Limits
@@ -161,7 +165,7 @@ score:
     catalog_gap: 79.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -172,21 +176,21 @@ score:
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 20.4
+  previous_composite: 19.0
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/higress/refs/heads/main/screenshots/higress-2026-06-20T182735.png
+screenshot: https://apis.io/screenshots/higress/higress-2026-06-20T182735.png
 security:
 - kind: domain-security
   name: Higress Domain Security

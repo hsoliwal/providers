@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: 'Market API for electronic placement in the London subscription market — create submissions and submission versions, upload Market Reform Contract and quote documents, add carriers and underwriters to '
@@ -54,7 +57,7 @@ apis:
 artifact_total: 30
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/security/lloyds-of-london-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lloyds-of-london/security/lloyds-of-london-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/lloyds-of-london-vulnerability-disclosure.yml
@@ -63,72 +66,72 @@ common:
   type: Security
   url: https://www.lloyds.com/security-reports
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/well-known/lloyds-of-london-security.txt
+  href: https://artifacts.apis.io/lloyds-of-london/well-known/lloyds-of-london-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/lloyds-of-london-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/security/lloyds-of-london-domain-security.yml
+  href: https://artifacts.apis.io/lloyds-of-london/security/lloyds-of-london-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lloyds-of-london-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/well-known/lloyds-of-london-well-known.yml
+  href: https://artifacts.apis.io/lloyds-of-london/well-known/lloyds-of-london-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lloyds-of-london-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/authentication/lloyds-of-london-authentication.yml
+  href: https://artifacts.apis.io/lloyds-of-london/authentication/lloyds-of-london-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lloyds-of-london-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/scopes/lloyds-of-london-scopes.yml
+  href: https://artifacts.apis.io/lloyds-of-london/scopes/lloyds-of-london-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lloyds-of-london-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/conventions/lloyds-of-london-conventions.yml
+  href: https://artifacts.apis.io/lloyds-of-london/conventions/lloyds-of-london-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lloyds-of-london-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/errors/lloyds-of-london-error-codes.yml
+  href: https://artifacts.apis.io/lloyds-of-london/errors/lloyds-of-london-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/lloyds-of-london-error-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/lloyds-of-london/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/data-model/lloyds-of-london-data-model.yml
+  href: https://artifacts.apis.io/lloyds-of-london/data-model/lloyds-of-london-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lloyds-of-london-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/lifecycle/lloyds-of-london-lifecycle.yml
+  href: https://artifacts.apis.io/lloyds-of-london/lifecycle/lloyds-of-london-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lloyds-of-london-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/changelog/lloyds-of-london-changelog.yml
+  href: https://artifacts.apis.io/lloyds-of-london/changelog/lloyds-of-london-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/lloyds-of-london-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/conformance/lloyds-of-london-conformance.yml
+  href: https://artifacts.apis.io/lloyds-of-london/conformance/lloyds-of-london-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lloyds-of-london-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/sandbox/lloyds-of-london-sandbox.yml
+  href: https://artifacts.apis.io/lloyds-of-london/sandbox/lloyds-of-london-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lloyds-of-london-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/llms/lloyds-of-london-llms.txt
+  href: https://artifacts.apis.io/lloyds-of-london/llms/lloyds-of-london-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lloyds-of-london-llms.txt
@@ -257,7 +260,7 @@ overview: 'Lloyd''s of London is listed with 4 APIs on the [APIs.io](https://api
 
 
   Lloyd''s of London''s developer surface includes authentication, code examples, changelog, sandbox, support, engineering blog, documentation, and 20 more developer resources.'
-random_paper: 10
+random_paper: 8
 scopes:
 - name: Lloyds Of London Scopes
   scope_count: 1
@@ -298,14 +301,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 42.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lloyds-of-london/refs/heads/main/screenshots/lloyds-of-london-2026-07-25T225413.png
+screenshot: https://apis.io/screenshots/lloyds-of-london/lloyds-of-london-2026-07-25T225413.png
 security:
 - kind: authentication
   name: Lloyds Of London Authentication

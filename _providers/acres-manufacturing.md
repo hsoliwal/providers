@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'WebSocket streaming API onto the Foundation event bus. Two channels are documented: a real-time event streamer that pushes every event as it is collected from the floor (backed by a rolling cache of u'
@@ -39,7 +54,7 @@ asyncapis:
   slug: acres-manufacturing-foundation-events
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/security/acres-manufacturing-domain-security.yml
+  href: https://artifacts.apis.io/acres-manufacturing/security/acres-manufacturing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acres-manufacturing-domain-security.yml
@@ -76,52 +91,52 @@ common:
   type: PrivacyPolicy
   url: https://acresmanufacturing.com/privacy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/packages/acres-manufacturing-packages.yml
+  href: https://artifacts.apis.io/acres-manufacturing/packages/acres-manufacturing-packages.yml
   title: ''
   type: Packages
   url: packages/acres-manufacturing-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/packages/acres-manufacturing-packages.yml
+  href: https://artifacts.apis.io/acres-manufacturing/packages/acres-manufacturing-packages.yml
   title: ''
   type: SDKs
   url: packages/acres-manufacturing-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/asyncapi/acres-manufacturing-foundation-events.yml
+  href: https://artifacts.apis.io/acres-manufacturing/asyncapi/acres-manufacturing-foundation-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/acres-manufacturing-foundation-events.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/authentication/acres-manufacturing-authentication.yml
+  href: https://artifacts.apis.io/acres-manufacturing/authentication/acres-manufacturing-authentication.yml
   title: ''
   type: Authentication
   url: authentication/acres-manufacturing-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/conventions/acres-manufacturing-conventions.yml
+  href: https://artifacts.apis.io/acres-manufacturing/conventions/acres-manufacturing-conventions.yml
   title: ''
   type: Conventions
   url: conventions/acres-manufacturing-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/rate-limits/acres-manufacturing-rate-limits.yml
+  href: https://artifacts.apis.io/acres-manufacturing/rate-limits/acres-manufacturing-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acres-manufacturing-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/lifecycle/acres-manufacturing-lifecycle.yml
+  href: https://artifacts.apis.io/acres-manufacturing/lifecycle/acres-manufacturing-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/acres-manufacturing-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/conformance/acres-manufacturing-conformance.yml
+  href: https://artifacts.apis.io/acres-manufacturing/conformance/acres-manufacturing-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acres-manufacturing-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/plans/acres-manufacturing-plans-pricing.yml
+  href: https://artifacts.apis.io/acres-manufacturing/plans/acres-manufacturing-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acres-manufacturing-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/llms/acres-manufacturing-llms.txt
+  href: https://artifacts.apis.io/acres-manufacturing/llms/acres-manufacturing-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acres-manufacturing-llms.txt
@@ -145,7 +160,7 @@ plans:
 - name: Acres Manufacturing Plans Pricing
   plan_count: 0
   slug: acres-manufacturing-plans-pricing
-random_paper: 9
+random_paper: 23
 rate_limits:
 - limit_count: 6
   name: Acres Manufacturing Rate Limits
@@ -154,7 +169,7 @@ score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
@@ -178,14 +193,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 17.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acres-manufacturing/refs/heads/main/screenshots/acres-manufacturing-2026-10-11T092708.png
+screenshot: https://apis.io/screenshots/acres-manufacturing/acres-manufacturing-2026-10-11T092708.png
 security:
 - kind: authentication
   name: Acres Manufacturing Authentication

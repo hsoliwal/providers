@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -50,11 +56,8 @@ apis:
   description: Ingredient parsing operations
   name: Zestful Parse API
   slug: zestful-parse-api
-artifact_total: 17
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Zestful Parse API
   slug: open-zestful-parse-api
@@ -62,33 +65,37 @@ collections:
   name: Zestful
   slug: open-zestful
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/zestful/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/plans/zestful-plans-pricing.yml
+  href: https://artifacts.apis.io/zestful/plans/zestful-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zestful-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/rate-limits/zestful-rate-limits.yml
+  href: https://artifacts.apis.io/zestful/rate-limits/zestful-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zestful-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/finops/zestful-finops.yml
+  href: https://artifacts.apis.io/zestful/finops/zestful-finops.yml
   title: ''
   type: FinOps
   url: finops/zestful-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/agentic-access/zestful-agentic-access.yml
+  href: https://artifacts.apis.io/zestful/agentic-access/zestful-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zestful-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/security/zestful-domain-security.yml
+  href: https://artifacts.apis.io/zestful/security/zestful-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zestful-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/authentication/zestful-authentication.yml
+  href: https://artifacts.apis.io/zestful/authentication/zestful-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zestful-authentication.yml
@@ -113,7 +120,7 @@ common:
   type: SDKs
   url: https://github.com/mtlynch/zestful-client
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/vocabulary/zestful-vocabulary.yml
+  href: https://artifacts.apis.io/zestful/vocabulary/zestful-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/zestful-vocabulary.yml
@@ -127,7 +134,7 @@ finops:
 - has_sources: false
   method: generated
   name: Zestful Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: zestful-finops
   template: true
@@ -159,12 +166,12 @@ overview: 'Zestful publishes 1 API contract indexed on the [APIs.io](https://api
   The Zestful catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Zestful''s developer surface includes authentication, documentation, pricing, and 9 more developer resources.'
+  Zestful''s developer surface includes authentication, documentation, pricing, and 10 more developer resources.'
 plans:
 - name: Zestful Plans Pricing
   plan_count: 3
   slug: zestful-plans-pricing
-random_paper: 11
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Zestful Rate Limits
@@ -195,23 +202,23 @@ rules:
   slug: zestful-rules
 score:
   band: thin
-  composite: 35.6
+  composite: 35.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 69.0
     catalog_earned_first_party: 0.0
     catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
     contract_quality: 63.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 29.8
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 37.1
+  previous_composite: 35.8
   provenance:
     agentic_access: derived
     contracts:
@@ -225,13 +232,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zestful/refs/heads/main/screenshots/zestful-2026-06-20T201840.png
+screenshot: https://apis.io/screenshots/zestful/zestful-2026-06-20T201840.png
 security:
 - kind: authentication
   name: Zestful Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 asyncapis:
@@ -73,32 +77,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/sparepayments
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/changelog/spare-payments-changelog.yml
+  href: https://artifacts.apis.io/spare-payments/changelog/spare-payments-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/spare-payments-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/asyncapi/spare-payments-webhooks.yml
+  href: https://artifacts.apis.io/spare-payments/asyncapi/spare-payments-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/spare-payments-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/data-model/spare-payments-data-model.yml
+  href: https://artifacts.apis.io/spare-payments/data-model/spare-payments-data-model.yml
   title: ''
   type: DataModel
   url: data-model/spare-payments-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/conventions/spare-payments-conventions.yml
+  href: https://artifacts.apis.io/spare-payments/conventions/spare-payments-conventions.yml
   title: ''
   type: Conventions
   url: conventions/spare-payments-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/security/spare-payments-domain-security.yml
+  href: https://artifacts.apis.io/spare-payments/security/spare-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spare-payments-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/llms/spare-payments-llms.txt
+  href: https://artifacts.apis.io/spare-payments/llms/spare-payments-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/spare-payments-llms.txt
@@ -117,12 +121,12 @@ overview: 'Spare Payments is profiled on the [APIs.io](https://apis.io/) network
 
 
   Spare Payments'' developer surface includes documentation, API reference, support, changelog, and 10 more developer resources.'
-random_paper: 13
+random_paper: 1
 score:
   band: emerging
   composite: 26.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -143,14 +147,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/spare-payments/refs/heads/main/screenshots/spare-payments-2026-09-02T160319.png
+screenshot: https://apis.io/screenshots/spare-payments/spare-payments-2026-09-02T160319.png
 security:
 - kind: domain-security
   name: Spare Payments Domain Security

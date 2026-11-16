@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-10-17'
+  score: 29.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -69,11 +72,8 @@ apis:
   description: Combined rollup of status, components, unresolved incidents and active/upcoming maintenances.
   name: CodaMetrix Summary API
   slug: codametrix-summary-api
-artifact_total: 23
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CodaMetrix Status Components API
   slug: open-codametrix-components-api
@@ -91,17 +91,17 @@ collections:
   slug: open-codametrix-summary-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/mcp/codametrix-mcp.yml
+  href: https://artifacts.apis.io/codametrix/mcp/codametrix-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/codametrix-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/agentic-access/codametrix-agentic-access.yml
+  href: https://artifacts.apis.io/codametrix/agentic-access/codametrix-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/codametrix-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/security/codametrix-domain-security.yml
+  href: https://artifacts.apis.io/codametrix/security/codametrix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codametrix-domain-security.yml
@@ -150,42 +150,42 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/codametrix_stock/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/examples/codametrix-status-api-examples.yml
+  href: https://artifacts.apis.io/codametrix/examples/codametrix-status-api-examples.yml
   title: ''
   type: Examples
   url: examples/codametrix-status-api-examples.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/authentication/codametrix-authentication.yml
+  href: https://artifacts.apis.io/codametrix/authentication/codametrix-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codametrix-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/conventions/codametrix-conventions.yml
+  href: https://artifacts.apis.io/codametrix/conventions/codametrix-conventions.yml
   title: ''
   type: Conventions
   url: conventions/codametrix-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/lifecycle/codametrix-lifecycle.yml
+  href: https://artifacts.apis.io/codametrix/lifecycle/codametrix-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/codametrix-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/conformance/codametrix-conformance.yml
+  href: https://artifacts.apis.io/codametrix/conformance/codametrix-conformance.yml
   title: ''
   type: Conformance
   url: conformance/codametrix-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/well-known/codametrix-well-known.yml
+  href: https://artifacts.apis.io/codametrix/well-known/codametrix-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/codametrix-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/llms/codametrix-llms.txt
+  href: https://artifacts.apis.io/codametrix/llms/codametrix-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/codametrix-llms.txt
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/openapi/_original/codametrix-status-openapi.yml
+  href: https://artifacts.apis.io/codametrix/openapi/_original/codametrix-status-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/codametrix-status-openapi.yml
@@ -194,22 +194,22 @@ common:
   type: Documentation
   url: https://status.codametrix.com/api/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/errors/codametrix-problem-types.yml
+  href: https://artifacts.apis.io/codametrix/errors/codametrix-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/codametrix-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/data-model/codametrix-data-model.yml
+  href: https://artifacts.apis.io/codametrix/data-model/codametrix-data-model.yml
   title: ''
   type: DataModel
   url: data-model/codametrix-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/overlays/codametrix-status-overlay.yaml
+  href: https://artifacts.apis.io/codametrix/overlays/codametrix-status-overlay.yaml
   title: ''
   type: OpenAPIOverlay
   url: overlays/codametrix-status-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/codametrix/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -261,26 +261,42 @@ network: true
 overview: 'CodaMetrix publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Components API, Incidents API, Scheduled Maintenances API, and 2 more. Tagged areas include Company, Healthcare, Health Systems, Medical Coding, and Autonomous Coding.
 
 
+  The CodaMetrix catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CodaMetrix''s developer surface includes engineering blog, support, code examples, authentication, documentation, and 25 more developer resources.'
 random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: CodaMetrix API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: codametrix-rules
 score:
-  band: thin
-  composite: 37.8
+  band: developing
+  composite: 40.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 71.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 16.5
     developer_ergonomics: 37.5
     discoverability: 66.1
-    operational_transparency: 15.8
+    operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -288,7 +304,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 37.8
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -305,14 +321,14 @@ score:
     regime: Health
     regime_id: health
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/codametrix/refs/heads/main/screenshots/codametrix-2026-08-07T163535.png
+screenshot: https://apis.io/screenshots/codametrix/codametrix-2026-08-07T163535.png
 security:
 - kind: authentication
   name: Codametrix Authentication
@@ -326,6 +342,12 @@ security:
   name: Codametrix Trust Center
   slug: codametrix-trust-center
   summary_line: SOC 2, SOC 2 Type 2, ISO 27001, HIPAA
+skill_count: 2
+skills:
+- name: Check CodaMetrix platform status
+  slug: codametrix-check-platform-status
+- name: Review CodaMetrix incident and maintenance history
+  slug: codametrix-review-incident-history
 slug: codametrix
 tags:
 - Company

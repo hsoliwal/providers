@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -80,47 +94,47 @@ common:
   type: Compliance
   url: https://x-tention.com/en/information-security-policy-clients
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/security/x-tention-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/x-tention/security/x-tention-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/x-tention-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/security/x-tention-trust-center.yml
+  href: https://artifacts.apis.io/x-tention/security/x-tention-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/x-tention-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/security/x-tention-domain-security.yml
+  href: https://artifacts.apis.io/x-tention/security/x-tention-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/x-tention-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/conformance/x-tention-conformance.yml
+  href: https://artifacts.apis.io/x-tention/conformance/x-tention-conformance.yml
   title: ''
   type: Conformance
   url: conformance/x-tention-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/packages/x-tention-packages.yml
+  href: https://artifacts.apis.io/x-tention/packages/x-tention-packages.yml
   title: ''
   type: Packages
   url: packages/x-tention-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/plans/x-tention-plans-pricing.yml
+  href: https://artifacts.apis.io/x-tention/plans/x-tention-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/x-tention-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/rate-limits/x-tention-rate-limits.yml
+  href: https://artifacts.apis.io/x-tention/rate-limits/x-tention-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/x-tention-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/lifecycle/x-tention-lifecycle.yml
+  href: https://artifacts.apis.io/x-tention/lifecycle/x-tention-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/x-tention-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/llms/x-tention-llms.txt
+  href: https://artifacts.apis.io/x-tention/llms/x-tention-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/x-tention-llms.txt
@@ -157,7 +171,7 @@ plans:
 - name: X Tention Plans Pricing
   plan_count: 0
   slug: x-tention-plans-pricing
-random_paper: 10
+random_paper: 22
 rate_limits:
 - limit_count: 0
   name: X Tention Rate Limits
@@ -166,7 +180,7 @@ score:
   band: emerging
   composite: 19.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -197,14 +211,14 @@ score:
     regime: Health
     regime_id: health
     score: 28.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/x-tention/refs/heads/main/screenshots/x-tention-2026-10-11T195240.png
+screenshot: https://apis.io/screenshots/x-tention/x-tention-2026-10-11T195240.png
 security:
 - kind: domain-security
   name: X Tention Domain Security

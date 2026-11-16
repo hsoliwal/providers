@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cohere-technologies/refs/heads/main/security/cohere-technologies-domain-security.yml
+  href: https://artifacts.apis.io/cohere-technologies/security/cohere-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cohere-technologies-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cohere-technologies/refs/heads/main/llms/cohere-technologies-llms.txt
+  href: https://artifacts.apis.io/cohere-technologies/llms/cohere-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cohere-technologies-llms.txt
@@ -70,6 +74,10 @@ common:
   title: ''
   type: Investors
   url: https://www.cohere-tech.com/investors/
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.cohere-tech.com/blog/
 created: '2026-07-17'
 description: Cohere Technologies is a San Jose, California wireless communications software company developing spectral-efficiency technology for mobile networks. Its Universal Spectrum Multiplier (USM) software delivers a 2x spectrum multiplier for 4G, 5G, and Multi-G networks across FDD and TDD bands, and its Pulsone technology applies the Zak-OTFS (Orthogonal Time Frequency Space) waveform to Integrated Sensing and Communications (ISAC) and Non-Terrestrial Networks (NTN). The company sells to mobile network operators and Open RAN ecosystems and is backed by Lightspeed Venture Partners, NEA, Telstra Ventures, Intel Capital, Koch Investments Group, VMware, and Juniper Networks. Cohere Technologies is a portfolio company of Lightspeed Venture Partners and does not currently publish a public developer API, SDK, or documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cohere-technologies.png
@@ -81,13 +89,13 @@ network: true
 overview: 'Cohere Technologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wireless, Telecommunications, 5G, and Open RAN.
 
 
-  Cohere Technologies'' developer surface includes engineering blog and 7 more developer resources.'
-random_paper: 1
+  Cohere Technologies'' developer surface includes engineering blog and 8 more developer resources.'
+random_paper: 15
 score:
   band: minimal
   composite: 6.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -108,14 +116,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 8.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cohere-technologies/refs/heads/main/screenshots/cohere-technologies-2026-07-25T210017.png
+screenshot: https://apis.io/screenshots/cohere-technologies/cohere-technologies-2026-07-25T210017.png
 security:
 - kind: domain-security
   name: Cohere Technologies Domain Security
@@ -131,5 +139,8 @@ tags:
 - Spectrum Efficiency
 - OTFS
 - Non-Terrestrial Network
+- RAN
+- USM
+- Innovation
 website: https://www.cohere-tech.com/
 ---

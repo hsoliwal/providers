@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 23.2
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Public API for Dataedo allowing integration with Dataedo portal, requires authorization token and appropriate license.
@@ -35,17 +49,17 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/plans/dataedo-plans-pricing.yml
+  href: https://artifacts.apis.io/dataedo/plans/dataedo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dataedo-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/rules/dataedo-rules.yml
+  href: https://artifacts.apis.io/dataedo/rules/dataedo-rules.yml
   title: ''
   type: Spectral
   url: rules/dataedo-rules.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/changelog/dataedo-changelog.yml
+  href: https://artifacts.apis.io/dataedo/changelog/dataedo-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/dataedo-changelog.yml
@@ -54,22 +68,22 @@ common:
   type: Compliance
   url: https://dataedo.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/conformance/dataedo-conformance.yml
+  href: https://artifacts.apis.io/dataedo/conformance/dataedo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dataedo-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/well-known/dataedo-well-known.yml
+  href: https://artifacts.apis.io/dataedo/well-known/dataedo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dataedo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/hosts/dataedo-hosts.yml
+  href: https://artifacts.apis.io/dataedo/hosts/dataedo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/dataedo-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/vendors/dataedo-vendors.yml
+  href: https://artifacts.apis.io/dataedo/vendors/dataedo-vendors.yml
   title: ''
   type: Vendors
   url: vendors/dataedo-vendors.yml
@@ -86,12 +100,12 @@ common:
   type: PrivacyPolicy
   url: https://dataedo.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/security/dataedo-trust-center.yml
+  href: https://artifacts.apis.io/dataedo/security/dataedo-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/dataedo-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dataedo/refs/heads/main/security/dataedo-domain-security.yml
+  href: https://artifacts.apis.io/dataedo/security/dataedo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dataedo-domain-security.yml
@@ -154,7 +168,7 @@ plans:
 - name: Dataedo Plans Pricing
   plan_count: 3
   slug: dataedo-plans-pricing
-random_paper: 18
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -170,21 +184,23 @@ rules:
   slug: dataedo-rules
 score:
   band: thin
-  composite: 38.7
+  composite: 29.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 15
     catalog_earned: 48.5
     catalog_earned_first_party: 12.0
     catalog_gap: 66.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.5
   facets:
-    access_clarity: 78.9
+    access_clarity: 59.2
     contract_governance: 18.2
     contract_quality: 9.4
-    developer_ergonomics: 35.7
+    developer_ergonomics: 17.9
     discoverability: 57.1
-    operational_transparency: 31.6
+    operational_transparency: 23.7
+  previous_composite: 38.7
   provenance:
     conformance: derived
     contracts:
@@ -198,12 +214,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/dataedo/dataedo-2026-11-03T130153.png
 security:
 - kind: domain-security
   name: Dataedo Domain Security

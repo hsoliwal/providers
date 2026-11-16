@@ -1,12 +1,18 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -20,21 +26,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: true
     error_semantics: documented
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.2
-  scored_at: '2026-10-17'
+  score: 50.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 92
   human_in_the_loop: 7
@@ -42,7 +51,7 @@ agentic_access:
   operation_count: 149
   slug: zippykid-agentic-access
   summary_line: 149 operations · 92 acting · 7 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
@@ -84,15 +93,12 @@ apis:
   description: The zones API from ZippyKid — 5 operation(s) for zones.
   name: ZippyKid Zones API
   slug: zippykid-zones-api
-artifact_total: 23
+artifact_total: 28
 asyncapis:
 - description: ''
   name: Zippykid Webhooks
   slug: zippykid-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Pressable API Documentation (v1) account API
   slug: open-zippykid-account-api
@@ -118,8 +124,13 @@ collections:
   name: Pressable API Documentation (v1) account zones API
   slug: open-zippykid-zones-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/zippykid/plans/zippykid-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/zippykid-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/capabilities/zippykid-capability-edges.yml
+  href: https://artifacts.apis.io/zippykid/capabilities/zippykid-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zippykid-capability-edges.yml
@@ -176,92 +187,100 @@ common:
   type: StatusPage
   url: https://pressablestatus.com/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/openapi/_original/zippykid-pressable-openapi-original.json
+  href: https://artifacts.apis.io/zippykid/openapi/_original/zippykid-pressable-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/zippykid-pressable-openapi-original.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/overlays/zippykid-pressable-overlay.yaml
+  href: https://artifacts.apis.io/zippykid/overlays/zippykid-pressable-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zippykid-pressable-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/llms/zippykid-llms.txt
+  href: https://artifacts.apis.io/zippykid/llms/zippykid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zippykid-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/mcp/zippykid-mcp.yml
+  href: https://artifacts.apis.io/zippykid/mcp/zippykid-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/zippykid-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/authentication/zippykid-authentication.yml
+  href: https://artifacts.apis.io/zippykid/authentication/zippykid-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zippykid-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/scopes/zippykid-scopes.yml
+  href: https://artifacts.apis.io/zippykid/scopes/zippykid-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zippykid-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/conventions/zippykid-conventions.yml
+  href: https://artifacts.apis.io/zippykid/conventions/zippykid-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zippykid-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/errors/zippykid-problem-types.yml
+  href: https://artifacts.apis.io/zippykid/errors/zippykid-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zippykid-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/lifecycle/zippykid-lifecycle.yml
+  href: https://artifacts.apis.io/zippykid/lifecycle/zippykid-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zippykid-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/changelog/zippykid-changelog.yml
+  href: https://artifacts.apis.io/zippykid/changelog/zippykid-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/zippykid-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/asyncapi/zippykid-webhooks.yml
+  href: https://artifacts.apis.io/zippykid/asyncapi/zippykid-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zippykid-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/conformance/zippykid-conformance.yml
+  href: https://artifacts.apis.io/zippykid/conformance/zippykid-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zippykid-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/data-model/zippykid-data-model.yml
+  href: https://artifacts.apis.io/zippykid/data-model/zippykid-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zippykid-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/well-known/zippykid-well-known.yml
+  href: https://artifacts.apis.io/zippykid/well-known/zippykid-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zippykid-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/security/zippykid-domain-security.yml
+  href: https://artifacts.apis.io/zippykid/security/zippykid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zippykid-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/agentic-access/zippykid-agentic-access.yml
+  href: https://artifacts.apis.io/zippykid/agentic-access/zippykid-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zippykid-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zippykid/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: ZippyKid is the company behind Pressable, a managed WordPress hosting platform now operated as an Automattic brand and built on Automattic's WP Cloud infrastructure. Surfaced as a 500 Global portfolio company and added to the API Evangelist network, Pressable delivers managed WordPress hosting with autoscaling, a global CDN, Jetpack Security, daily backups, and SSH/Git/WP-CLI access. For developers and agencies it exposes a full OAuth 2.0 REST API (v1) covering sites, domains, DNS zones, Git deploys, plugins, themes, edge cache and collaborators; 66 webhook events; and a published remote MCP server (75+ tools) for AI-driven site management from Claude, Gemini CLI and ChatGPT.
+finops:
+- has_sources: true
+  method: derived
+  name: Zippykid Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: zippykid-finops
+  template: false
 image: https://i0.wp.com/pressable.com/wp-content/uploads/2024/07/dk-pressable-hosting.png
 layout: provider
 mcp_servers:
@@ -275,42 +294,62 @@ network: true
 overview: 'ZippyKid publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Activity API, Auth API, and 5 more. Tagged areas include Company, WordPress, Managed Hosting, WordPress Hosting, and Web Hosting.
 
 
-  The ZippyKid catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The ZippyKid catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  ZippyKid''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
-random_paper: 4
+  ZippyKid''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
+plans:
+- name: Zippykid Plans Pricing
+  plan_count: 9
+  slug: zippykid-plans-pricing
+- name: Zippykid Price Estimates
+  plan_count: 0
+  slug: zippykid-price-estimates
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: ZippyKid API Rules
+  rule_count: 47
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 2
+    warn: 7
+  slug: zippykid-rules
 scopes:
 - name: Zippykid Scopes
   scope_count: 13
   slug: zippykid-scopes
   summary_line: 13 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 48.6
+  band: strong
+  composite: 59.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
-    access_clarity: 39.5
-    contract_governance: 4.5
-    contract_quality: 55.2
+    access_clarity: 78.9
+    contract_governance: 18.2
+    contract_quality: 60.3
     developer_ergonomics: 58.9
     discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 48.6
+  previous_composite: 58.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: first-party
     skills: derived
@@ -320,13 +359,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/screenshots/zippykid-2026-08-17T083111.png
+screenshot: https://apis.io/screenshots/zippykid/zippykid-2026-08-17T083111.png
 security:
 - kind: authentication
   name: Zippykid Authentication
@@ -336,6 +375,12 @@ security:
   name: Zippykid Domain Security
   slug: zippykid-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Connect a repo and deploy to a Pressable site
+  slug: zippykid-git-deploy
+- name: Provision a Pressable WordPress site
+  slug: zippykid-provision-site
 slug: zippykid
 tags:
 - Company

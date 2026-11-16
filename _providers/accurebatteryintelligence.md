@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The authenticated API gateway behind the ACCURE battery analytics platform. Established by probe, not by documentation: the platform single-page application at accure-platform.com declares VITE_AUTH0_'
@@ -32,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/security/accurebatteryintelligence-domain-security.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/security/accurebatteryintelligence-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/accurebatteryintelligence-domain-security.yml
@@ -57,37 +72,37 @@ common:
   type: Login
   url: https://accure-platform.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/authentication/accurebatteryintelligence-authentication.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/authentication/accurebatteryintelligence-authentication.yml
   title: ''
   type: Authentication
   url: authentication/accurebatteryintelligence-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/well-known/accurebatteryintelligence-well-known.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/well-known/accurebatteryintelligence-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/accurebatteryintelligence-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/conformance/accurebatteryintelligence-conformance.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/conformance/accurebatteryintelligence-conformance.yml
   title: ''
   type: Conformance
   url: conformance/accurebatteryintelligence-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/conformance/accurebatteryintelligence-conformance.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/conformance/accurebatteryintelligence-conformance.yml
   title: ''
   type: Compliance
   url: conformance/accurebatteryintelligence-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/plans/accurebatteryintelligence-plans-pricing.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/plans/accurebatteryintelligence-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/accurebatteryintelligence-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/rate-limits/accurebatteryintelligence-rate-limits.yml
+  href: https://artifacts.apis.io/accurebatteryintelligence/rate-limits/accurebatteryintelligence-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/accurebatteryintelligence-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/llms/accurebatteryintelligence-llms.txt
+  href: https://artifacts.apis.io/accurebatteryintelligence/llms/accurebatteryintelligence-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/accurebatteryintelligence-llms.txt
@@ -130,7 +145,7 @@ score:
   band: emerging
   composite: 19.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -161,14 +176,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/screenshots/accurebatteryintelligence-2026-10-11T092552.png
+screenshot: https://apis.io/screenshots/accurebatteryintelligence/accurebatteryintelligence-2026-10-11T092552.png
 security:
 - kind: authentication
   name: Accurebatteryintelligence Authentication

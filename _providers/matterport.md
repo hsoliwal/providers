@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Matterport's public GraphQL API family. The Model API reads and manages 3D models (spaces, meshes, assets, labels/tags, sweeps); the Account API manages account, folders and users; the Import API inge
@@ -46,12 +50,12 @@ common:
   type: Website
   url: https://www.matterport.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/security/matterport-trust-center.yml
+  href: https://artifacts.apis.io/matterport/security/matterport-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/matterport-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/security/matterport-domain-security.yml
+  href: https://artifacts.apis.io/matterport/security/matterport-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/matterport-domain-security.yml
@@ -116,57 +120,57 @@ common:
   type: ChangeLog
   url: https://matterport.github.io/showcase-sdk/sdk_changelog.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/packages/matterport-packages.yml
+  href: https://artifacts.apis.io/matterport/packages/matterport-packages.yml
   title: ''
   type: Packages
   url: packages/matterport-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/packages/matterport-packages.yml
+  href: https://artifacts.apis.io/matterport/packages/matterport-packages.yml
   title: ''
   type: SDKs
   url: packages/matterport-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/authentication/matterport-authentication.yml
+  href: https://artifacts.apis.io/matterport/authentication/matterport-authentication.yml
   title: ''
   type: Authentication
   url: authentication/matterport-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/conventions/matterport-conventions.yml
+  href: https://artifacts.apis.io/matterport/conventions/matterport-conventions.yml
   title: ''
   type: Conventions
   url: conventions/matterport-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/components/matterport-components.yml
+  href: https://artifacts.apis.io/matterport/components/matterport-components.yml
   title: ''
   type: Components
   url: components/matterport-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/lifecycle/matterport-lifecycle.yml
+  href: https://artifacts.apis.io/matterport/lifecycle/matterport-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/matterport-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/lifecycle/matterport-lifecycle.yml
+  href: https://artifacts.apis.io/matterport/lifecycle/matterport-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/matterport-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/conformance/matterport-conformance.yml
+  href: https://artifacts.apis.io/matterport/conformance/matterport-conformance.yml
   title: ''
   type: Conformance
   url: conformance/matterport-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/errors/matterport-error-codes.yml
+  href: https://artifacts.apis.io/matterport/errors/matterport-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/matterport-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/data-model/matterport-data-model.yml
+  href: https://artifacts.apis.io/matterport/data-model/matterport-data-model.yml
   title: ''
   type: DataModel
   url: data-model/matterport-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/llms/matterport-llms.txt
+  href: https://artifacts.apis.io/matterport/llms/matterport-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/matterport-llms.txt
@@ -182,18 +186,18 @@ overview: 'MatterPort is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   MatterPort''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
-random_paper: 6
+random_paper: 2
 score:
   band: thin
   composite: 39.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
@@ -201,7 +205,7 @@ score:
     developer_ergonomics: 57.1
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 38.9
+  previous_composite: 39.0
   provenance:
     conformance: first-party
   regulatory:
@@ -216,14 +220,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/matterport/refs/heads/main/screenshots/matterport-2026-07-25T230424.png
+screenshot: https://apis.io/screenshots/matterport/matterport-2026-07-25T230424.png
 security:
 - kind: authentication
   name: Matterport Authentication

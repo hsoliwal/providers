@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Extendable GraphQL API for WordPress that exposes posts, pages, custom post types, users, menus, taxonomies, media, and settings as GraphQL types and connections. Supports queries, mutations, and subs
@@ -41,7 +45,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wpgraphql/refs/heads/main/security/wpgraphql-domain-security.yml
+  href: https://artifacts.apis.io/wpgraphql/security/wpgraphql-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wpgraphql-domain-security.yml
@@ -78,17 +82,17 @@ common:
   type: OpenCollective
   url: https://opencollective.com/wp-graphql
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wpgraphql/refs/heads/main/plans/wpgraphql-plans.md
+  href: https://artifacts.apis.io/wpgraphql/plans/wpgraphql-plans.md
   title: ''
   type: Plans
   url: plans/wpgraphql-plans.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wpgraphql/refs/heads/main/rate-limits/wpgraphql-rate-limits.md
+  href: https://artifacts.apis.io/wpgraphql/rate-limits/wpgraphql-rate-limits.md
   title: ''
   type: RateLimits
   url: rate-limits/wpgraphql-rate-limits.md
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wpgraphql/refs/heads/main/finops/wpgraphql-finops.md
+  href: https://artifacts.apis.io/wpgraphql/finops/wpgraphql-finops.md
   title: ''
   type: FinOps
   url: finops/wpgraphql-finops.md
@@ -108,12 +112,12 @@ overview: 'WPGraphQL is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   WPGraphQL''s developer surface includes documentation, engineering blog, pricing, and 9 more developer resources.'
-random_paper: 14
+random_paper: 22
 score:
   band: emerging
   composite: 25.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -134,14 +138,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wpgraphql/refs/heads/main/screenshots/wpgraphql-2026-06-20T201626.png
+screenshot: https://apis.io/screenshots/wpgraphql/wpgraphql-2026-06-20T201626.png
 security:
 - kind: domain-security
   name: Wpgraphql Domain Security

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cabot/refs/heads/main/plans/cabot-plans-pricing.yml
+  href: https://artifacts.apis.io/cabot/plans/cabot-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cabot-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cabot/refs/heads/main/rate-limits/cabot-rate-limits.yml
+  href: https://artifacts.apis.io/cabot/rate-limits/cabot-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cabot-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cabot/refs/heads/main/finops/cabot-finops.yml
+  href: https://artifacts.apis.io/cabot/finops/cabot-finops.yml
   title: ''
   type: FinOps
   url: finops/cabot-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cabot/refs/heads/main/security/cabot-domain-security.yml
+  href: https://artifacts.apis.io/cabot/security/cabot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cabot-domain-security.yml
@@ -91,7 +95,7 @@ finops:
 - has_sources: false
   method: generated
   name: Cabot Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: cabot-finops
   template: true
@@ -122,7 +126,7 @@ press:
 - date: ''
   title: The Dr. CaBot AI system was created to generate ...
   url: https://www.facebook.com/TheNewEnglandJournalofMedicine/posts/the-dr-cabot-ai-system-was-created-to-generate-differential-diagnoses-in-the-sty/1197451285748712/
-random_paper: 15
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Cabot Rate Limits
@@ -137,7 +141,7 @@ score:
     catalog_gap: 82.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
@@ -145,21 +149,21 @@ score:
     developer_ergonomics: 0.0
     discoverability: 49.1
     operational_transparency: 7.9
-  previous_composite: 10.3
+  previous_composite: 8.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cabot/refs/heads/main/screenshots/cabot-2026-06-20T173834.png
+screenshot: https://apis.io/screenshots/cabot/cabot-2026-06-20T173834.png
 security:
 - kind: domain-security
   name: Cabot Domain Security

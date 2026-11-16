@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -16,12 +19,12 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/kraken-technologies/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kwest/refs/heads/main/lifecycle/kwest-lifecycle.yml
+  href: https://artifacts.apis.io/kwest/lifecycle/kwest-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kwest-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kwest/refs/heads/main/llms/kwest-llms.txt
+  href: https://artifacts.apis.io/kwest/llms/kwest-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kwest-llms.txt
@@ -43,8 +46,8 @@ name: Kwest
 nav: Providers
 network: true
 overview: Kwest is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Acquired, Climate Tech, Renewable Energy, and Solar.
-random_paper: 8
-screenshot: https://raw.githubusercontent.com/api-evangelist/kwest/refs/heads/main/screenshots/kwest-2026-07-25T224344.png
+random_paper: 6
+screenshot: https://apis.io/screenshots/kwest/kwest-2026-07-25T224344.png
 slug: kwest
 tags:
 - Company
@@ -52,7 +55,7 @@ tags:
 - Climate Tech
 - Renewable Energy
 - Solar
-- Field Service
+- Field Service Management
 - Project Management
 - Workflow Automation
 - Germany

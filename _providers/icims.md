@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 6
   slug: icims-agentic-access
   summary_line: 6 operations · 3 acting
-api_count: 3
+api_count: 1
 apis:
 - description: The iCIMS Apply Framework API enables external systems to deliver candidate apply experiences and submit applications into the iCIMS Talent Cloud, supporting integrations with job boards, sourcing cha
   name: iCIMS Apply Framework API
@@ -59,9 +65,6 @@ apis:
 artifact_total: 13
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: iCIMS Workflows API
   slug: open-icims-workflows-api
 - collection_type: open
@@ -69,42 +72,42 @@ collections:
   slug: open-icims
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/plans/icims-plans-pricing.yml
+  href: https://artifacts.apis.io/icims/plans/icims-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/icims-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/rate-limits/icims-rate-limits.yml
+  href: https://artifacts.apis.io/icims/rate-limits/icims-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/icims-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/finops/icims-finops.yml
+  href: https://artifacts.apis.io/icims/finops/icims-finops.yml
   title: ''
   type: FinOps
   url: finops/icims-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/capabilities/icims-capability-edges.yml
+  href: https://artifacts.apis.io/icims/capabilities/icims-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/icims-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/agentic-access/icims-agentic-access.yml
+  href: https://artifacts.apis.io/icims/agentic-access/icims-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/icims-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/security/icims-trust-center.yml
+  href: https://artifacts.apis.io/icims/security/icims-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/icims-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/security/icims-domain-security.yml
+  href: https://artifacts.apis.io/icims/security/icims-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/icims-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/authentication/icims-authentication.yml
+  href: https://artifacts.apis.io/icims/authentication/icims-authentication.yml
   title: ''
   type: Authentication
   url: authentication/icims-authentication.yml
@@ -142,7 +145,7 @@ finops:
 - has_sources: false
   method: generated
   name: Icims Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: icims-finops
   template: true
@@ -152,7 +155,10 @@ modified: '2026-05-19'
 name: iCIMS
 nav: Providers
 network: true
-overview: 'iCIMS is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Workflows API, and 2 more. Tagged areas include Applicant Tracking, Human Resources, Recruiting, and Talent Acquisition.
+overview: 'iCIMS publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Workflows API, and 2 more. Tagged areas include Applicant Tracking, Human Resources, Recruiting, and Talent Acquisition.
+
+
+  The iCIMS catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   iCIMS''s developer surface includes authentication, developer portal, documentation, support, engineering blog, and 10 more developer resources.'
@@ -165,25 +171,38 @@ rate_limits:
 - limit_count: 5
   name: Icims Rate Limits
   slug: icims-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: iCIMS API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: icims-rules
 score:
   band: thin
-  composite: 26.8
+  composite: 27.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 36.0
+    artifact_dirs: 17
+    catalog_earned: 37.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 77.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
-    contract_quality: 45.3
+    contract_governance: 13.6
+    contract_quality: 44.1
     developer_ergonomics: 33.3
-    discoverability: 53.6
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 28.4
+  previous_composite: 27.6
   provenance:
     agentic_access: derived
     contracts:
@@ -197,13 +216,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/screenshots/icims-2026-06-20T183152.png
+screenshot: https://apis.io/screenshots/icims/icims-2026-06-20T183152.png
 security:
 - kind: authentication
   name: Icims Authentication

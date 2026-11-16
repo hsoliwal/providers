@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/security/klarivis-domain-security.yml
+  href: https://artifacts.apis.io/klarivis/security/klarivis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/klarivis-domain-security.yml
@@ -100,27 +103,27 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/klarivis
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/security/klarivis-trust-center.yml
+  href: https://artifacts.apis.io/klarivis/security/klarivis-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/klarivis-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/security/klarivis-trust-center.yml
+  href: https://artifacts.apis.io/klarivis/security/klarivis-trust-center.yml
   title: ''
   type: Compliance
   url: security/klarivis-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/llms/klarivis-llms.txt
+  href: https://artifacts.apis.io/klarivis/llms/klarivis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/klarivis-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/plans/klarivis-plans-pricing.yml
+  href: https://artifacts.apis.io/klarivis/plans/klarivis-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/klarivis-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/rate-limits/klarivis-rate-limits.yml
+  href: https://artifacts.apis.io/klarivis/rate-limits/klarivis-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/klarivis-rate-limits.yml
@@ -154,7 +157,7 @@ plans:
 - name: Klarivis Plans Pricing
   plan_count: 0
   slug: klarivis-plans-pricing
-random_paper: 11
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Klarivis Rate Limits
@@ -163,7 +166,7 @@ score:
   band: minimal
   composite: 10.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -184,14 +187,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/klarivis/refs/heads/main/screenshots/klarivis-2026-09-02T150107.png
+screenshot: https://apis.io/screenshots/klarivis/klarivis-2026-09-02T150107.png
 security:
 - kind: domain-security
   name: Klarivis Domain Security

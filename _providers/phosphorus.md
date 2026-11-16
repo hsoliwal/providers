@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 20.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 23.2
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://{tenant}.phosphorus.io
   baseurl_source: declared
@@ -77,10 +80,10 @@ apis:
   description: The Vault API from Phosphorus — 2 operation(s) for vault.
   name: Phosphorus Vault API
   slug: phosphorus-vault-api
-artifact_total: 13
+artifact_total: 18
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/rate-limits/phosphorus-rate-limits.yml
+  href: https://artifacts.apis.io/phosphorus/rate-limits/phosphorus-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/phosphorus-rate-limits.yml
@@ -89,17 +92,17 @@ common:
   type: BlogRSS
   url: https://phosphorus.io/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/capabilities/phosphorus-capability-edges.yml
+  href: https://artifacts.apis.io/phosphorus/capabilities/phosphorus-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/phosphorus-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/overlays/phosphorus-api-overlay.yaml
+  href: https://artifacts.apis.io/phosphorus/overlays/phosphorus-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/phosphorus-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/phosphorus/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -140,42 +143,42 @@ common:
   type: Contact
   url: https://phosphorus.io/contact-us/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/packages/phosphorus-packages.yml
+  href: https://artifacts.apis.io/phosphorus/packages/phosphorus-packages.yml
   title: ''
   type: Packages
   url: packages/phosphorus-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/conformance/phosphorus-conformance.yml
+  href: https://artifacts.apis.io/phosphorus/conformance/phosphorus-conformance.yml
   title: ''
   type: Conformance
   url: conformance/phosphorus-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/lifecycle/phosphorus-lifecycle.yml
+  href: https://artifacts.apis.io/phosphorus/lifecycle/phosphorus-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/phosphorus-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/security/phosphorus-domain-security.yml
+  href: https://artifacts.apis.io/phosphorus/security/phosphorus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/phosphorus-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/security/phosphorus-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/phosphorus/security/phosphorus-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/phosphorus-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/security/phosphorus-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/phosphorus/security/phosphorus-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/phosphorus-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/llms/phosphorus-llms.txt
+  href: https://artifacts.apis.io/phosphorus/llms/phosphorus-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/phosphorus-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/plans/phosphorus-plans-pricing.yml
+  href: https://artifacts.apis.io/phosphorus/plans/phosphorus-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/phosphorus-plans-pricing.yml
@@ -194,35 +197,51 @@ network: true
 overview: 'Phosphorus publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Device API, Devices API, and 5 more. Tagged areas include Cybersecurity, xIoT Security, IoT Security, OT Security, and IoMT.
 
 
+  The Phosphorus catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Phosphorus'' developer surface includes support, engineering blog, and 21 more developer resources.'
 plans:
 - name: Phosphorus Plans Pricing
   plan_count: 0
   slug: phosphorus-plans-pricing
-random_paper: 15
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Phosphorus Rate Limits
   slug: phosphorus-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Phosphorus API Rules
+  rule_count: 53
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 5
+    warn: 2
+  slug: phosphorus-rules
 score:
   band: thin
-  composite: 32.5
+  composite: 34.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.3
     developer_ergonomics: 20.8
     discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 32.5
+  previous_composite: 34.2
   provenance:
     conformance: derived
     contracts:
@@ -238,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/screenshots/phosphorus-2026-09-02T151153.png
+screenshot: https://apis.io/screenshots/phosphorus/phosphorus-2026-09-02T151153.png
 security:
 - kind: authentication
   name: Phosphorus Authentication
@@ -258,6 +277,16 @@ security:
   name: Phosphorus Vulnerability Disclosure
   slug: phosphorus-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 4
+skills:
+- name: phosphorus-device-risk-triage
+  slug: phosphorus-device-risk-triage
+- name: phosphorus-dynamic-scan-lifecycle
+  slug: phosphorus-dynamic-scan-lifecycle
+- name: phosphorus-provider-health-audit
+  slug: phosphorus-provider-health-audit
+- name: phosphorus-vault-secret-handling
+  slug: phosphorus-vault-secret-handling
 slug: phosphorus
 tags:
 - Cybersecurity

@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.0
-  scored_at: '2026-10-17'
+  score: 26.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -72,7 +75,7 @@ apis:
   description: Click-to-call and outbound voice.
   name: Kaleyra Voice API
   slug: kaleyra-voice-api
-artifact_total: 24
+artifact_total: 28
 asyncapis:
 - description: ''
   name: Kaleyra Webhooks
@@ -91,9 +94,6 @@ collections:
   name: Kaleyra CPaaS Messages Voice API
   slug: postman-kaleyra-voice-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Kaleyra CPaaS Messages API
   slug: open-kaleyra-messages-api
 - collection_type: open
@@ -106,27 +106,32 @@ collections:
   name: Kaleyra CPaaS Messages Voice API
   slug: open-kaleyra-voice-api
 common:
+- group: other
+  href: https://artifacts.apis.io/kaleyra/capabilities/kaleyra-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kaleyra-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/kaleyra/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/agentic-access/kaleyra-agentic-access.yml
+  href: https://artifacts.apis.io/kaleyra/agentic-access/kaleyra-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kaleyra-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/security/kaleyra-trust-center.yml
+  href: https://artifacts.apis.io/kaleyra/security/kaleyra-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kaleyra-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/security/kaleyra-trust-center.yml
+  href: https://artifacts.apis.io/kaleyra/security/kaleyra-trust-center.yml
   title: ''
   type: Compliance
   url: security/kaleyra-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/security/kaleyra-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kaleyra/security/kaleyra-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kaleyra-vulnerability-disclosure.yml
@@ -135,57 +140,57 @@ common:
   type: Security
   url: https://www.kaleyra.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/security/kaleyra-domain-security.yml
+  href: https://artifacts.apis.io/kaleyra/security/kaleyra-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kaleyra-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/authentication/kaleyra-authentication.yml
+  href: https://artifacts.apis.io/kaleyra/authentication/kaleyra-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kaleyra-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/conformance/kaleyra-conformance.yml
+  href: https://artifacts.apis.io/kaleyra/conformance/kaleyra-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kaleyra-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/packages/kaleyra-packages.yml
+  href: https://artifacts.apis.io/kaleyra/packages/kaleyra-packages.yml
   title: ''
   type: Packages
   url: packages/kaleyra-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/packages/kaleyra-packages.yml
+  href: https://artifacts.apis.io/kaleyra/packages/kaleyra-packages.yml
   title: ''
   type: SDKs
   url: packages/kaleyra-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/well-known/kaleyra-well-known.yml
+  href: https://artifacts.apis.io/kaleyra/well-known/kaleyra-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kaleyra-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/mcp/kaleyra-mcp.yml
+  href: https://artifacts.apis.io/kaleyra/mcp/kaleyra-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kaleyra-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/llms/kaleyra-llms.txt
+  href: https://artifacts.apis.io/kaleyra/llms/kaleyra-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kaleyra-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/overlays/kaleyra-overlay.yaml
+  href: https://artifacts.apis.io/kaleyra/overlays/kaleyra-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kaleyra-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/errors/kaleyra-error-codes.yml
+  href: https://artifacts.apis.io/kaleyra/errors/kaleyra-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/kaleyra-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/lifecycle/kaleyra-lifecycle.yml
+  href: https://artifacts.apis.io/kaleyra/lifecycle/kaleyra-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kaleyra-lifecycle.yml
@@ -194,32 +199,32 @@ common:
   type: StatusPage
   url: https://status.kaleyra.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/conventions/kaleyra-conventions.yml
+  href: https://artifacts.apis.io/kaleyra/conventions/kaleyra-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kaleyra-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/changelog/kaleyra-changelog.yml
+  href: https://artifacts.apis.io/kaleyra/changelog/kaleyra-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kaleyra-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/components/kaleyra-components.yml
+  href: https://artifacts.apis.io/kaleyra/components/kaleyra-components.yml
   title: ''
   type: Components
   url: components/kaleyra-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/data-model/kaleyra-data-model.yml
+  href: https://artifacts.apis.io/kaleyra/data-model/kaleyra-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kaleyra-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/asyncapi/kaleyra-webhooks.yml
+  href: https://artifacts.apis.io/kaleyra/asyncapi/kaleyra-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/kaleyra-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kaleyra/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -252,7 +257,7 @@ common:
   type: PrivacyPolicy
   url: https://www.kaleyra.com/privacy-policy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/collections/kaleyra.postman_collection.json
+  href: https://artifacts.apis.io/kaleyra/collections/kaleyra.postman_collection.json
   title: ''
   type: Postman
   url: collections/kaleyra.postman_collection.json
@@ -269,17 +274,17 @@ common:
   type: Documentation
   url: https://developers.kaleyra.io/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/plans/kaleyra-plans-pricing.yml
+  href: https://artifacts.apis.io/kaleyra/plans/kaleyra-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kaleyra-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/rate-limits/kaleyra-rate-limits.yml
+  href: https://artifacts.apis.io/kaleyra/rate-limits/kaleyra-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kaleyra-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/finops/kaleyra-finops.yml
+  href: https://artifacts.apis.io/kaleyra/finops/kaleyra-finops.yml
   title: ''
   type: FinOps
   url: finops/kaleyra-finops.yml
@@ -306,35 +311,48 @@ network: true
 overview: 'Kaleyra publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Messages API, Verify API, Video API, and 3 more. Tagged areas include CPaaS, Messaging, SMS, WhatsApp, and Voice.
 
 
-  The Kaleyra catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Kaleyra catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Kaleyra''s developer surface includes authentication, changelog, getting-started guide, API reference, support, documentation, engineering blog, and 32 more developer resources.'
+  Kaleyra''s developer surface includes authentication, changelog, getting-started guide, API reference, support, documentation, engineering blog, and 33 more developer resources.'
 plans:
 - name: Kaleyra Plans Pricing
   plan_count: 2
   slug: kaleyra-plans-pricing
-random_paper: 19
+random_paper: 1
 rate_limits:
 - limit_count: 4
   name: Kaleyra Rate Limits
   slug: kaleyra-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Kaleyra API Rules
+  rule_count: 66
+  severity_counts:
+    error: 63
+    hint: 0
+    info: 2
+    warn: 1
+  slug: kaleyra-rules
 score:
   band: developing
-  composite: 43.3
+  composite: 47.6
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 42.0
+    artifact_dirs: 33
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.0
+  delta: 2.6
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 56.7
-    developer_ergonomics: 54.2
+    developer_ergonomics: 67.3
     discoverability: 73.2
     operational_transparency: 50.0
   jurisdiction:
@@ -344,7 +362,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 50.3
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -367,13 +385,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 23.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kaleyra/refs/heads/main/screenshots/kaleyra-2026-07-25T223430.png
+screenshot: https://apis.io/screenshots/kaleyra/kaleyra-2026-07-25T223430.png
 security:
 - kind: authentication
   name: Kaleyra Authentication
@@ -391,6 +409,16 @@ security:
   name: Kaleyra Trust Center
   slug: kaleyra-trust-center
   summary_line: ISO 27001, SOC 2, GDPR, HIPAA, PCI DSS
+skill_count: 4
+skills:
+- name: Place a click-to-call bridged call
+  slug: kaleyra-click-to-call
+- name: Create a Kaleyra Video room
+  slug: kaleyra-create-video-room
+- name: Send an SMS and track delivery
+  slug: kaleyra-send-sms
+- name: Verify a user with an OTP
+  slug: kaleyra-verify-otp
 slug: kaleyra
 tags:
 - CPaaS

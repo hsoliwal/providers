@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 22.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -69,11 +72,8 @@ apis:
   description: The orders API from REKKI — 11 operation(s) for orders.
   name: REKKI Orders API
   slug: rekki-orders-api
-artifact_total: 14
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rekki.com Supplier catalog API
   slug: open-rekki-catalog-api
@@ -91,7 +91,7 @@ collections:
   slug: open-rekki-orders-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/capabilities/rekki-capability-edges.yml
+  href: https://artifacts.apis.io/rekki/capabilities/rekki-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rekki-capability-edges.yml
@@ -128,72 +128,72 @@ common:
   type: APIReference
   url: https://api.rekki.com/swagger/index.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/authentication/rekki-authentication.yml
+  href: https://artifacts.apis.io/rekki/authentication/rekki-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rekki-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/security/rekki-domain-security.yml
+  href: https://artifacts.apis.io/rekki/security/rekki-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rekki-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/agentic-access/rekki-agentic-access.yml
+  href: https://artifacts.apis.io/rekki/agentic-access/rekki-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rekki-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/packages/rekki-packages.yml
+  href: https://artifacts.apis.io/rekki/packages/rekki-packages.yml
   title: ''
   type: Packages
   url: packages/rekki-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/packages/rekki-packages.yml
+  href: https://artifacts.apis.io/rekki/packages/rekki-packages.yml
   title: ''
   type: SDKs
   url: packages/rekki-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/mcp/rekki-mcp.yml
+  href: https://artifacts.apis.io/rekki/mcp/rekki-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rekki-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/llms/rekki-llms.txt
+  href: https://artifacts.apis.io/rekki/llms/rekki-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rekki-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/overlays/rekki-supplier-api-overlay.yaml
+  href: https://artifacts.apis.io/rekki/overlays/rekki-supplier-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rekki-supplier-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/conformance/rekki-conformance.yml
+  href: https://artifacts.apis.io/rekki/conformance/rekki-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rekki-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/errors/rekki-problem-types.yml
+  href: https://artifacts.apis.io/rekki/errors/rekki-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rekki-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/lifecycle/rekki-lifecycle.yml
+  href: https://artifacts.apis.io/rekki/lifecycle/rekki-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rekki-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/conventions/rekki-conventions.yml
+  href: https://artifacts.apis.io/rekki/conventions/rekki-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rekki-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/data-model/rekki-data-model.yml
+  href: https://artifacts.apis.io/rekki/data-model/rekki-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rekki-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rekki/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -208,32 +208,48 @@ network: true
 overview: 'REKKI publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Connect Customers API, General API, and 2 more. Tagged areas include Company, Food, Wholesale, Ordering, and Restaurant.
 
 
+  The REKKI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   REKKI''s developer surface includes getting-started guide, support, documentation, API reference, authentication, and 18 more developer resources.'
 random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: REKKI API Rules
+  rule_count: 62
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 7
+  slug: rekki-rules
 score:
-  band: thin
-  composite: 38.9
+  band: developing
+  composite: 39.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 44.0
+    contract_governance: 18.2
+    contract_quality: 40.9
     developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 38.8
+  previous_composite: 39.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 5
@@ -245,13 +261,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/rekki/refs/heads/main/screenshots/rekki-2026-09-02T153301.png
+screenshot: https://apis.io/screenshots/rekki/rekki-2026-09-02T153301.png
 security:
 - kind: authentication
   name: Rekki Authentication
@@ -261,6 +277,12 @@ security:
   name: Rekki Domain Security
   slug: rekki-domain-security
   summary_line: TLSv1.2 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Process restaurant orders from REKKI
+  slug: rekki-process-orders
+- name: Sync a supplier catalog to REKKI
+  slug: rekki-sync-catalog
 slug: rekki
 tags:
 - Company

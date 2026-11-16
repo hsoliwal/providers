@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.2
-  scored_at: '2026-10-17'
+  score: 46.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 1
@@ -149,15 +155,12 @@ apis:
   description: The OAuth API from Wish — 3 operation(s) for oauth.
   name: Wish O Auth API
   slug: wish-oauth-api
-artifact_total: 49
+artifact_total: 52
 asyncapis:
 - description: ''
   name: Wish Webhooks
   slug: wish-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Wish Marketplace V3 Brands API
   slug: open-wish-brands-api
@@ -223,52 +226,52 @@ collections:
   slug: open-wish-webhook-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/rate-limits/wish-rate-limits.yml
+  href: https://artifacts.apis.io/wish/rate-limits/wish-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wish-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/capabilities/wish-capability-edges.yml
+  href: https://artifacts.apis.io/wish/capabilities/wish-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/wish-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/skills/wish-fulfill-orders.md
+  href: https://artifacts.apis.io/wish/skills/wish-fulfill-orders.md
   title: ''
   type: AgentSkill
   url: skills/wish-fulfill-orders.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/mcp/wish-mcp.yml
+  href: https://artifacts.apis.io/wish/mcp/wish-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/wish-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/overlays/wish-marketplace-v3-overlay.yaml
+  href: https://artifacts.apis.io/wish/overlays/wish-marketplace-v3-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wish-marketplace-v3-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/agentic-access/wish-agentic-access.yml
+  href: https://artifacts.apis.io/wish/agentic-access/wish-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wish-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/security/wish-domain-security.yml
+  href: https://artifacts.apis.io/wish/security/wish-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wish-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/packages/wish-packages.yml
+  href: https://artifacts.apis.io/wish/packages/wish-packages.yml
   title: ''
   type: Packages
   url: packages/wish-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/well-known/wish-well-known.yml
+  href: https://artifacts.apis.io/wish/well-known/wish-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wish-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/llms/wish-llms.txt
+  href: https://artifacts.apis.io/wish/llms/wish-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wish-llms.txt
@@ -319,15 +322,28 @@ network: true
 overview: 'Wish publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Brands API, Bulk Products API, Currencies API, and 18 more. Tagged areas include Company, E-Commerce, Marketplace, Retail, and Merchants.
 
 
-  The Wish catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Wish catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Wish''s developer surface includes documentation, API reference, getting-started guide, signup flow, and 15 more developer resources.'
-random_paper: 3
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Wish Rate Limits
   slug: wish-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Wish API Rules
+  rule_count: 65
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 4
+    warn: 10
+  slug: wish-rules
 scopes:
 - name: Wish Scopes
   scope_count: 39
@@ -335,23 +351,23 @@ scopes:
   summary_line: 39 scopes · authorizationCode
 score:
   band: developing
-  composite: 43.8
+  composite: 45.4
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 62.4
     developer_ergonomics: 58.9
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 43.8
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -368,13 +384,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/wish/refs/heads/main/screenshots/wish-2026-08-17T082925.png
+screenshot: https://apis.io/screenshots/wish/wish-2026-08-17T082925.png
 security:
 - kind: authentication
   name: Wish Authentication
@@ -384,6 +400,14 @@ security:
   name: Wish Domain Security
   slug: wish-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Fulfill Wish orders
+  slug: wish-fulfill-orders
+- name: Manage Wish products and variations
+  slug: wish-manage-products
+- name: Subscribe to Wish webhooks
+  slug: wish-webhook-subscriptions
 slug: wish
 tags:
 - Company
@@ -395,6 +419,7 @@ tags:
 - Product
 - Fulfillment
 - Shopping
+- OAuth
 - Authentication
 website: https://wish.com
 ---

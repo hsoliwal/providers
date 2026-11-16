@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -21,7 +21,7 @@ modified: '2026-10-06'
 name: IDG Capital
 nav: Providers
 network: true
-random_paper: 9
+random_paper: 7
 slug: idg-capital
 tags:
 - Venture Capital

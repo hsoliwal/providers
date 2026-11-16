@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for full programmatic access to TrueContext (ProntoForms) forms, submissions, users, and dispatch, available on the Elite tier. Supports HTTP GET/POST for bidirectional data, webhooks to push
@@ -123,37 +126,37 @@ common:
   type: Webhooks
   url: https://truecontext.com/product/integrations/?tab=api-integrations
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/llms/truecontext-llms.txt
+  href: https://artifacts.apis.io/truecontext/llms/truecontext-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/truecontext-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/authentication/truecontext-authentication.yml
+  href: https://artifacts.apis.io/truecontext/authentication/truecontext-authentication.yml
   title: ''
   type: Authentication
   url: authentication/truecontext-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/lifecycle/truecontext-lifecycle.yml
+  href: https://artifacts.apis.io/truecontext/lifecycle/truecontext-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/truecontext-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/conventions/truecontext-conventions.yml
+  href: https://artifacts.apis.io/truecontext/conventions/truecontext-conventions.yml
   title: ''
   type: Conventions
   url: conventions/truecontext-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/conformance/truecontext-conformance.yml
+  href: https://artifacts.apis.io/truecontext/conformance/truecontext-conformance.yml
   title: ''
   type: Conformance
   url: conformance/truecontext-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/security/truecontext-trust-center.yml
+  href: https://artifacts.apis.io/truecontext/security/truecontext-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/truecontext-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/security/truecontext-domain-security.yml
+  href: https://artifacts.apis.io/truecontext/security/truecontext-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/truecontext-domain-security.yml
@@ -165,16 +168,16 @@ modified: '2026-10-06'
 name: TrueContext
 nav: Providers
 network: true
-overview: 'TrueContext is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Field Service, Mobile Forms, Workflow Automation, and Data Collection.
+overview: 'TrueContext is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Field Service Management, Mobile Forms, Workflow Automation, and Data Collection.
 
 
   TrueContext''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
-random_paper: 11
+random_paper: 21
 score:
   band: thin
   composite: 36.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -203,14 +206,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/truecontext/refs/heads/main/screenshots/truecontext-2026-09-02T164345.png
+screenshot: https://apis.io/screenshots/truecontext/truecontext-2026-09-02T164345.png
 security:
 - kind: authentication
   name: Truecontext Authentication
@@ -227,7 +230,7 @@ security:
 slug: truecontext
 tags:
 - Company
-- Field Service
+- Field Service Management
 - Mobile Forms
 - Workflow Automation
 - Data Collection

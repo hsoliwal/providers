@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/plans/medix-infusion-plans-pricing.yml
+  href: https://artifacts.apis.io/medix-infusion/plans/medix-infusion-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/medix-infusion-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/rate-limits/medix-infusion-rate-limits.yml
+  href: https://artifacts.apis.io/medix-infusion/rate-limits/medix-infusion-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/medix-infusion-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/security/medix-infusion-domain-security.yml
+  href: https://artifacts.apis.io/medix-infusion/security/medix-infusion-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/medix-infusion-domain-security.yml
@@ -74,12 +77,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/medix-infusion
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/llms/medix-infusion-llms.txt
+  href: https://artifacts.apis.io/medix-infusion/llms/medix-infusion-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/medix-infusion-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/conformance/medix-infusion-conformance.yml
+  href: https://artifacts.apis.io/medix-infusion/conformance/medix-infusion-conformance.yml
   title: ''
   type: Conformance
   url: conformance/medix-infusion-conformance.yml
@@ -109,7 +112,7 @@ modified: '2026-08-25'
 name: Medix Infusion
 nav: Providers
 network: true
-overview: 'Medix Infusion is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Infusion Therapy, Specialty Pharmacy, and Home Health.
+overview: 'Medix Infusion is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Infusion Therapy, Specialty Pharmacy, and Home Care.
 
 
   Medix Infusion''s developer surface includes support and 9 more developer resources.'
@@ -117,7 +120,7 @@ plans:
 - name: Medix Infusion Plans Pricing
   plan_count: 0
   slug: medix-infusion-plans-pricing
-random_paper: 3
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Medix Infusion Rate Limits
@@ -160,14 +163,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/screenshots/medix-infusion-2026-09-02T150455.png
+screenshot: https://apis.io/screenshots/medix-infusion/medix-infusion-2026-09-02T150455.png
 security:
 - kind: domain-security
   name: Medix Infusion Domain Security
@@ -179,7 +182,7 @@ tags:
 - Healthcare
 - Infusion Therapy
 - Specialty Pharmacy
-- Home Health
+- Home Care
 - Ambulatory Care
 - Patient Care
 - Texas

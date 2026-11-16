@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coinroutes/refs/heads/main/llms/coinroutes-llms.txt
+  href: https://artifacts.apis.io/coinroutes/llms/coinroutes-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coinroutes-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coinroutes/refs/heads/main/hosts/coinroutes-hosts.yml
+  href: https://artifacts.apis.io/coinroutes/hosts/coinroutes-hosts.yml
   title: ''
   type: Hosts
   url: hosts/coinroutes-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coinroutes/refs/heads/main/vendors/coinroutes-vendors.yml
+  href: https://artifacts.apis.io/coinroutes/vendors/coinroutes-vendors.yml
   title: ''
   type: Vendors
   url: vendors/coinroutes-vendors.yml
@@ -55,7 +68,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/CoinRoutes
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coinroutes/refs/heads/main/security/coinroutes-domain-security.yml
+  href: https://artifacts.apis.io/coinroutes/security/coinroutes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coinroutes-domain-security.yml
@@ -80,24 +93,26 @@ name: CoinRoutes
 nav: Providers
 network: true
 overview: CoinRoutes is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Algorithmic Trading, Cryptocurrency, Institutional Trading, Portfolio Management, and Risk Management.
-random_paper: 21
+random_paper: 19
 score:
   band: minimal
-  composite: 6.8
+  composite: 5.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.8
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.1
-    operational_transparency: 5.3
+    discoverability: 56.3
+    operational_transparency: 2.6
+  previous_composite: 6.8
   provenance:
     mcp: derived
   regulatory:
@@ -105,13 +120,15 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 9.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/coinroutes/coinroutes-2026-11-03T124820.png
 security:
 - kind: domain-security
   name: Coinroutes Domain Security

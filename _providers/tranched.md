@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tranched/refs/heads/main/security/tranched-domain-security.yml
+  href: https://artifacts.apis.io/tranched/security/tranched-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tranched-domain-security.yml
@@ -70,22 +74,22 @@ common:
   type: Security
   url: https://tranched.fi/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tranched/refs/heads/main/security/tranched-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tranched/security/tranched-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tranched-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tranched/refs/heads/main/security/tranched-trust-center.yml
+  href: https://artifacts.apis.io/tranched/security/tranched-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tranched-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tranched/refs/heads/main/conformance/tranched-conformance.yml
+  href: https://artifacts.apis.io/tranched/conformance/tranched-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tranched-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tranched/refs/heads/main/well-known/tranched-well-known.yml
+  href: https://artifacts.apis.io/tranched/well-known/tranched-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tranched-well-known.yml
@@ -109,7 +113,7 @@ overview: 'Tranched is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Tranched''s developer surface includes engineering blog, support, and 12 more developer resources.'
-random_paper: 5
+random_paper: 1
 score:
   band: emerging
   composite: 15.6
@@ -120,7 +124,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -136,7 +140,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 15.5
+  previous_composite: 15.6
   provenance:
     conformance: first-party
   regulatory:
@@ -149,14 +153,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tranched/refs/heads/main/screenshots/tranched-2026-09-02T164114.png
+screenshot: https://apis.io/screenshots/tranched/tranched-2026-09-02T164114.png
 security:
 - kind: domain-security
   name: Tranched Domain Security

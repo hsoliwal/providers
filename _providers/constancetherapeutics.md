@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/constancetherapeutics/refs/heads/main/hosts/constancetherapeutics-hosts.yml
+  href: https://artifacts.apis.io/constancetherapeutics/hosts/constancetherapeutics-hosts.yml
   title: ''
   type: Hosts
   url: hosts/constancetherapeutics-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/constancetherapeutics/refs/heads/main/vendors/constancetherapeutics-vendors.yml
+  href: https://artifacts.apis.io/constancetherapeutics/vendors/constancetherapeutics-vendors.yml
   title: ''
   type: Vendors
   url: vendors/constancetherapeutics-vendors.yml
@@ -46,7 +59,7 @@ common:
   type: Newsroom
   url: https://constancetherapeutics.com/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/constancetherapeutics/refs/heads/main/security/constancetherapeutics-domain-security.yml
+  href: https://artifacts.apis.io/constancetherapeutics/security/constancetherapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/constancetherapeutics-domain-security.yml
@@ -71,24 +84,26 @@ name: Constancetherapeutics
 nav: Providers
 network: true
 overview: Constancetherapeutics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cannabis, Therapeutics, CBD, and Health.
-random_paper: 11
+random_paper: 23
 score:
   band: minimal
-  composite: 6.5
+  composite: 5.1
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.4
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
+  previous_composite: 6.5
   provenance:
     mcp: unknown
   regulatory:
@@ -96,13 +111,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 6.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/constancetherapeutics/constancetherapeutics-2026-11-03T125146.png
 security:
 - kind: domain-security
   name: Constancetherapeutics Domain Security

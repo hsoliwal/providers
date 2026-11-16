@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Etleap's external REST API for creating and managing connections, pipelines, models, dbt schedules, teams, and users. Uses HTTP Basic authentication.
@@ -87,57 +90,57 @@ common:
   type: StatusPage
   url: https://status.etleap.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/authentication/etleap-authentication.yml
+  href: https://artifacts.apis.io/etleap/authentication/etleap-authentication.yml
   title: ''
   type: Authentication
   url: authentication/etleap-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/packages/etleap-packages.yml
+  href: https://artifacts.apis.io/etleap/packages/etleap-packages.yml
   title: ''
   type: Packages
   url: packages/etleap-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/packages/etleap-packages.yml
+  href: https://artifacts.apis.io/etleap/packages/etleap-packages.yml
   title: ''
   type: SDKs
   url: packages/etleap-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/mcp/etleap-mcp.yml
+  href: https://artifacts.apis.io/etleap/mcp/etleap-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/etleap-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/llms/etleap-llms.txt
+  href: https://artifacts.apis.io/etleap/llms/etleap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/etleap-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/conventions/etleap-conventions.yml
+  href: https://artifacts.apis.io/etleap/conventions/etleap-conventions.yml
   title: ''
   type: Conventions
   url: conventions/etleap-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/lifecycle/etleap-lifecycle.yml
+  href: https://artifacts.apis.io/etleap/lifecycle/etleap-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/etleap-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/conformance/etleap-conformance.yml
+  href: https://artifacts.apis.io/etleap/conformance/etleap-conformance.yml
   title: ''
   type: Conformance
   url: conformance/etleap-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/conformance/etleap-conformance.yml
+  href: https://artifacts.apis.io/etleap/conformance/etleap-conformance.yml
   title: ''
   type: Compliance
   url: conformance/etleap-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/data-model/etleap-data-model.yml
+  href: https://artifacts.apis.io/etleap/data-model/etleap-data-model.yml
   title: ''
   type: DataModel
   url: data-model/etleap-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/security/etleap-domain-security.yml
+  href: https://artifacts.apis.io/etleap/security/etleap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/etleap-domain-security.yml
@@ -153,12 +156,12 @@ overview: 'Etleap is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Etleap''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 16 more developer resources.'
-random_paper: 19
+random_paper: 11
 score:
   band: thin
   composite: 29.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -190,14 +193,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/etleap/refs/heads/main/screenshots/etleap-2026-07-25T213654.png
+screenshot: https://apis.io/screenshots/etleap/etleap-2026-07-25T213654.png
 security:
 - kind: authentication
   name: Etleap Authentication

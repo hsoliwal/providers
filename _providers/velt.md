@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 1
@@ -83,9 +89,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Velt Data (REST) Auth API
   slug: open-velt-auth-api
 - collection_type: open
@@ -111,27 +114,27 @@ collections:
   slug: open-velt
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/capabilities/velt-capability-edges.yml
+  href: https://artifacts.apis.io/velt/capabilities/velt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/velt-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/agentic-access/velt-agentic-access.yml
+  href: https://artifacts.apis.io/velt/agentic-access/velt-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/velt-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/security/velt-trust-center.yml
+  href: https://artifacts.apis.io/velt/security/velt-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/velt-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/security/velt-domain-security.yml
+  href: https://artifacts.apis.io/velt/security/velt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/velt-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/authentication/velt-authentication.yml
+  href: https://artifacts.apis.io/velt/authentication/velt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/velt-authentication.yml
@@ -152,17 +155,17 @@ common:
   type: Documentation
   url: https://velt.dev/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/plans/velt-plans-pricing.yml
+  href: https://artifacts.apis.io/velt/plans/velt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/velt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/rate-limits/velt-rate-limits.yml
+  href: https://artifacts.apis.io/velt/rate-limits/velt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/velt-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/finops/velt-finops.yml
+  href: https://artifacts.apis.io/velt/finops/velt-finops.yml
   title: ''
   type: FinOps
   url: finops/velt-finops.yml
@@ -189,35 +192,51 @@ network: true
 overview: 'Velt publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Comments API, Documents API, and 4 more. Tagged areas include Real-Time Collaboration, Comments, Presence, Notification, and SDK.
 
 
+  The Velt catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Velt''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Velt Plans Pricing
   plan_count: 3
   slug: velt-plans-pricing
-random_paper: 3
+random_paper: 11
 rate_limits:
 - limit_count: 4
   name: Velt Rate Limits
   slug: velt-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Velt API Rules
+  rule_count: 59
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 1
+  slug: velt-rules
 score:
   band: thin
-  composite: 28.2
+  composite: 29.9
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.6
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 36.5
+  previous_composite: 29.9
   provenance:
     agentic_access: derived
     contracts:
@@ -231,13 +250,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/velt/refs/heads/main/screenshots/velt-2026-09-02T165630.png
+screenshot: https://apis.io/screenshots/velt/velt-2026-09-02T165630.png
 security:
 - kind: authentication
   name: Velt Authentication

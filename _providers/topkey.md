@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,12 +69,12 @@ common:
   type: PrivacyPolicy
   url: https://topkey.io/legal/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/topkey/refs/heads/main/llms/topkey-llms.txt
+  href: https://artifacts.apis.io/topkey/llms/topkey-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/topkey-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/topkey/refs/heads/main/security/topkey-domain-security.yml
+  href: https://artifacts.apis.io/topkey/security/topkey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/topkey-domain-security.yml
@@ -86,12 +90,12 @@ overview: 'TopKey is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   TopKey''s developer surface includes documentation, engineering blog, support, and 6 more developer resources.'
-random_paper: 8
+random_paper: 20
 score:
   band: emerging
   composite: 13.0
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -112,14 +116,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/topkey/refs/heads/main/screenshots/topkey-2026-09-02T163920.png
+screenshot: https://apis.io/screenshots/topkey/topkey-2026-09-02T163920.png
 security:
 - kind: domain-security
   name: Topkey Domain Security

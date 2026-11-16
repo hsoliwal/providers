@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 asyncapis:
@@ -42,7 +47,7 @@ asyncapis:
   slug: rain-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/security/rain-domain-security.yml
+  href: https://artifacts.apis.io/rain/security/rain-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rain-domain-security.yml
@@ -91,37 +96,37 @@ common:
   type: Compliance
   url: https://trust.rain.xyz
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/conformance/rain-conformance.yml
+  href: https://artifacts.apis.io/rain/conformance/rain-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rain-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/lifecycle/rain-lifecycle.yml
+  href: https://artifacts.apis.io/rain/lifecycle/rain-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rain-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/asyncapi/rain-webhooks.yml
+  href: https://artifacts.apis.io/rain/asyncapi/rain-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rain-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/sandbox/rain-sandbox.yml
+  href: https://artifacts.apis.io/rain/sandbox/rain-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rain-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/llms/rain-llms.txt
+  href: https://artifacts.apis.io/rain/llms/rain-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rain-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/well-known/rain-well-known.yml
+  href: https://artifacts.apis.io/rain/well-known/rain-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rain-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/mcp/rain-mcp.yml
+  href: https://artifacts.apis.io/rain/mcp/rain-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rain-mcp.yml
@@ -144,12 +149,12 @@ overview: 'Rain is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Rain''s developer surface includes documentation, engineering blog, support, signup flow, sandbox, and 14 more developer resources.'
-random_paper: 8
+random_paper: 18
 score:
   band: thin
   composite: 35.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -173,14 +178,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 33.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rain/refs/heads/main/screenshots/rain-2026-09-02T152814.png
+screenshot: https://apis.io/screenshots/rain/rain-2026-09-02T152814.png
 security:
 - kind: domain-security
   name: Rain Domain Security

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.4
-  scored_at: '2026-10-17'
+  score: 32.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://apurata.com
@@ -58,7 +61,7 @@ apis:
   description: Embeddable checkout widgets (HTML)
   name: Apurata Widgets API
   slug: apurata-widgets-api
-artifact_total: 14
+artifact_total: 16
 asyncapis:
 - description: Outbound webhook events Apurata delivers to a merchant-registered URL as an aCuotaz installment order moves through its lifecycle. Generated from the public webhook documentation at docs.apurata.com/P
   name: Apurata aCuotaz Order Webhooks
@@ -67,9 +70,6 @@ asyncapis:
   name: Apurata Acuotaz Webhooks
   slug: apurata-acuotaz-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Apurata aCuotaz POS REST config API
   slug: open-apurata-config-api
@@ -128,72 +128,72 @@ common:
   type: SignUp
   url: https://apurata.com/app/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/packages/apurata-packages.yml
+  href: https://artifacts.apis.io/apurata/packages/apurata-packages.yml
   title: ''
   type: Packages
   url: packages/apurata-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/packages/apurata-packages.yml
+  href: https://artifacts.apis.io/apurata/packages/apurata-packages.yml
   title: ''
   type: SDKs
   url: packages/apurata-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/components/apurata-components.yml
+  href: https://artifacts.apis.io/apurata/components/apurata-components.yml
   title: ''
   type: Components
   url: components/apurata-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/well-known/apurata-well-known.yml
+  href: https://artifacts.apis.io/apurata/well-known/apurata-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/apurata-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/well-known/apurata-security.txt
+  href: https://artifacts.apis.io/apurata/well-known/apurata-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/apurata-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/mcp/apurata-mcp.yml
+  href: https://artifacts.apis.io/apurata/mcp/apurata-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/apurata-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/llms/apurata-llms.txt
+  href: https://artifacts.apis.io/apurata/llms/apurata-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apurata-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/overlays/apurata-acuotaz-pos-overlay.yaml
+  href: https://artifacts.apis.io/apurata/overlays/apurata-acuotaz-pos-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/apurata-acuotaz-pos-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/conformance/apurata-conformance.yml
+  href: https://artifacts.apis.io/apurata/conformance/apurata-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apurata-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/errors/apurata-problem-types.yml
+  href: https://artifacts.apis.io/apurata/errors/apurata-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/apurata-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/lifecycle/apurata-lifecycle.yml
+  href: https://artifacts.apis.io/apurata/lifecycle/apurata-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/apurata-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/authentication/apurata-authentication.yml
+  href: https://artifacts.apis.io/apurata/authentication/apurata-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apurata-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/security/apurata-domain-security.yml
+  href: https://artifacts.apis.io/apurata/security/apurata-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apurata-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/security/apurata-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apurata/security/apurata-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apurata-vulnerability-disclosure.yml
@@ -202,37 +202,37 @@ common:
   type: Security
   url: https://apurata.com/.well-known/vdp.txt
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/sandbox/apurata-sandbox.yml
+  href: https://artifacts.apis.io/apurata/sandbox/apurata-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/apurata-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/conventions/apurata-conventions.yml
+  href: https://artifacts.apis.io/apurata/conventions/apurata-conventions.yml
   title: ''
   type: Conventions
   url: conventions/apurata-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/conventions/apurata-conventions.yml
+  href: https://artifacts.apis.io/apurata/conventions/apurata-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/apurata-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/data-model/apurata-data-model.yml
+  href: https://artifacts.apis.io/apurata/data-model/apurata-data-model.yml
   title: ''
   type: DataModel
   url: data-model/apurata-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/asyncapi/apurata-acuotaz-webhooks.yml
+  href: https://artifacts.apis.io/apurata/asyncapi/apurata-acuotaz-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/apurata-acuotaz-webhooks.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/asyncapi/apurata-acuotaz-asyncapi.yml
+  href: https://artifacts.apis.io/apurata/asyncapi/apurata-acuotaz-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/apurata-acuotaz-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/apurata/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -247,25 +247,38 @@ network: true
 overview: 'Apurata publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Config API, Orders API, Refunds API, and 1 more. Tagged areas include Company, Financial Services, Fintech, Lending, and Buy Now Pay Later.
 
 
-  The Apurata catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The Apurata catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   Apurata''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 26 more developer resources.'
-random_paper: 2
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Apurata API Rules
+  rule_count: 59
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 3
+    warn: 2
+  slug: apurata-rules
 score:
   band: thin
-  composite: 37.1
+  composite: 38.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 32.0
+    artifact_dirs: 25
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 21.7
     developer_ergonomics: 73.2
     discoverability: 64.3
@@ -277,7 +290,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 37.1
+  previous_composite: 38.8
   provenance:
     conformance: derived
     contracts:
@@ -293,13 +306,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apurata/refs/heads/main/screenshots/apurata-2026-07-25T200944.png
+screenshot: https://apis.io/screenshots/apurata/apurata-2026-07-25T200944.png
 security:
 - kind: authentication
   name: Apurata Authentication
@@ -313,6 +326,12 @@ security:
   name: Apurata Vulnerability Disclosure
   slug: apurata-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 2
+skills:
+- name: Create and confirm an aCuotaz installment order
+  slug: apurata-create-and-confirm-order
+- name: Refund an aCuotaz order
+  slug: apurata-refund-order
 slug: apurata
 tags:
 - Company

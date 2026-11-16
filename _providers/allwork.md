@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/security/allwork-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/allwork/security/allwork-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/allwork-vulnerability-disclosure.yml
@@ -49,7 +52,7 @@ common:
   type: Security
   url: https://allworknow.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/security/allwork-domain-security.yml
+  href: https://artifacts.apis.io/allwork/security/allwork-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/allwork-domain-security.yml
@@ -102,37 +105,37 @@ common:
   type: Twitter
   url: https://twitter.com/AllWorkNow
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/well-known/allwork-well-known.yml
+  href: https://artifacts.apis.io/allwork/well-known/allwork-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/allwork-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/well-known/allwork-security.txt
+  href: https://artifacts.apis.io/allwork/well-known/allwork-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/allwork-security.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/well-known/allwork-openid-configuration.json
+  href: https://artifacts.apis.io/allwork/well-known/allwork-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/allwork-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/authentication/allwork-authentication.yml
+  href: https://artifacts.apis.io/allwork/authentication/allwork-authentication.yml
   title: ''
   type: Authentication
   url: authentication/allwork-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/scopes/allwork-scopes.yml
+  href: https://artifacts.apis.io/allwork/scopes/allwork-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/allwork-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/conformance/allwork-conformance.yml
+  href: https://artifacts.apis.io/allwork/conformance/allwork-conformance.yml
   title: ''
   type: Conformance
   url: conformance/allwork-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/llms/allwork-llms.txt
+  href: https://artifacts.apis.io/allwork/llms/allwork-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/allwork-llms.txt
@@ -164,7 +167,7 @@ overview: 'AllWork is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   AllWork''s developer surface includes documentation, support, engineering blog, FAQ, authentication, and 17 more developer resources.'
-random_paper: 16
+random_paper: 20
 scopes:
 - name: Allwork Scopes
   scope_count: 10
@@ -174,7 +177,7 @@ score:
   band: emerging
   composite: 20.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -204,14 +207,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/allwork/refs/heads/main/screenshots/allwork-2026-08-07T161234.png
+screenshot: https://apis.io/screenshots/allwork/allwork-2026-08-07T161234.png
 security:
 - kind: authentication
   name: Allwork Authentication

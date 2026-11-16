@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Requires approval
   onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Probe42 API provides programmatic access to curated intelligence on Indian companies — company profiles, financials, directors, and charges — for embedding due-diligence and business-intelligence '
@@ -73,15 +77,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/probe42
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/probe-information/refs/heads/main/llms/probe-information-llms.txt
+  href: https://artifacts.apis.io/probe-information/llms/probe-information-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/probe-information-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/probe-information/refs/heads/main/security/probe-information-domain-security.yml
+  href: https://artifacts.apis.io/probe-information/security/probe-information-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/probe-information-domain-security.yml
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://probe42.in/products/api.html
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://probe42.in/products/api.html
+- group: company
+  title: ''
+  type: Blog
+  url: https://probe42.in/ourstory.html
 created: '2026-07-17'
 description: Probe Information Services (Probe42) is an Indian company-intelligence and business-data platform that collects, cleans, and curates information on roughly one million Indian companies from 743 public-domain sources through a five-step verification process. Its products — Probe42 Business, Probe42 Banking, and the Probe42 API — deliver company profiles, financials, director and charge data, and risk signals used by banks, NBFCs, fintechs, and sales teams for onboarding, KYC/due-diligence, credit assessment, and lead intelligence. The Probe42 API lets developers embed this company data directly inside their own applications. Surfaced as an Accel portfolio company and added to the API Evangelist network for enrichment; the public API surface is gated behind developer-portal authentication.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/probe-information.png
@@ -93,24 +109,24 @@ network: true
 overview: 'Probe Information is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Business Intelligence, Company Data, Financial Data, and Due Diligence.
 
 
-  Probe Information''s developer surface includes engineering blog, support, and 8 more developer resources.'
-random_paper: 11
+  Probe Information''s developer surface includes engineering blog, support, API reference, documentation, and 9 more developer resources.'
+random_paper: 19
 score:
   band: emerging
-  composite: 15.9
+  composite: 17.8
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.9
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 14.3
+    developer_ergonomics: 23.8
     discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
@@ -127,14 +143,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/probe-information/refs/heads/main/screenshots/probe-information-2026-09-02T152104.png
+screenshot: https://apis.io/screenshots/probe-information/probe-information-2026-09-02T152104.png
 security:
 - kind: domain-security
   name: Probe Information Domain Security
@@ -150,5 +166,7 @@ tags:
 - KYC
 - Banking
 - India
+- Data Intelligence
+- Indian-Market
 website: https://probe42.in
 ---

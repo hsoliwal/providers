@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://developer.cashflo.io
@@ -42,17 +45,14 @@ apis:
   description: The Ingest API from CashFlo — 3 operation(s) for ingest.
   name: CashFlo Ingest API
   slug: cashflo-ingest-api
-artifact_total: 5
+artifact_total: 7
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cashflo Data Ingestion API Documentation Ingest API
   slug: open-cashflo-ingest-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/capabilities/cashflo-capability-edges.yml
+  href: https://artifacts.apis.io/cashflo/capabilities/cashflo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cashflo-capability-edges.yml
@@ -61,17 +61,17 @@ common:
   type: Website
   url: https://www.cashflo.io/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/skills/cashflo-ingest-grns.md
+  href: https://artifacts.apis.io/cashflo/skills/cashflo-ingest-grns.md
   title: ''
   type: AgentSkill
   url: skills/cashflo-ingest-grns.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/mcp/cashflo-mcp.yml
+  href: https://artifacts.apis.io/cashflo/mcp/cashflo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cashflo-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/overlays/cashflo-data-ingestion-overlay.yaml
+  href: https://artifacts.apis.io/cashflo/overlays/cashflo-data-ingestion-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cashflo-data-ingestion-overlay.yaml
@@ -88,32 +88,32 @@ common:
   type: APIReference
   url: https://developer.cashflo.io
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/authentication/cashflo-authentication.yml
+  href: https://artifacts.apis.io/cashflo/authentication/cashflo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cashflo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/conventions/cashflo-conventions.yml
+  href: https://artifacts.apis.io/cashflo/conventions/cashflo-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cashflo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/conformance/cashflo-conformance.yml
+  href: https://artifacts.apis.io/cashflo/conformance/cashflo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cashflo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/lifecycle/cashflo-lifecycle.yml
+  href: https://artifacts.apis.io/cashflo/lifecycle/cashflo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cashflo-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/security/cashflo-domain-security.yml
+  href: https://artifacts.apis.io/cashflo/security/cashflo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cashflo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/llms/cashflo-llms.txt
+  href: https://artifacts.apis.io/cashflo/llms/cashflo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cashflo-llms.txt
@@ -156,22 +156,38 @@ network: true
 overview: 'CashFlo publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Ingest API. Tagged areas include Company, Fintech, Accounts Payable, Payments, and Working Capital.
 
 
+  The CashFlo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CashFlo''s developer surface includes documentation, API reference, authentication, engineering blog, support, and 16 more developer resources.'
-random_paper: 10
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: CashFlo API Rules
+  rule_count: 48
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cashflo-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 38.3
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 35.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.3
     developer_ergonomics: 47.0
     discoverability: 73.2
@@ -183,7 +199,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 36.6
+  previous_composite: 38.3
   provenance:
     conformance: derived
     contracts:
@@ -199,13 +215,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/screenshots/cashflo-2026-07-25T204721.png
+screenshot: https://apis.io/screenshots/cashflo/cashflo-2026-07-25T204721.png
 security:
 - kind: authentication
   name: Cashflo Authentication
@@ -215,6 +231,12 @@ security:
   name: Cashflo Domain Security
   slug: cashflo-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Ingest goods-receipt notes (GRNs) into CashFlo
+  slug: cashflo-ingest-grns
+- name: Ingest purchase orders into CashFlo and reconcile errors
+  slug: cashflo-ingest-purchase-orders
 slug: cashflo
 tags:
 - Company

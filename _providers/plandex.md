@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Paid (free trial) · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 1
@@ -119,7 +125,7 @@ apis:
   description: User listing and removal within an org.
   name: Plandex Users API
   slug: plandex-users-api
-artifact_total: 118
+artifact_total: 117
 collections:
 - collection_type: postman
   name: Plandex Server Accounts API
@@ -166,9 +172,6 @@ collections:
 - collection_type: postman
   name: Plandex Server Accounts Users API
   slug: postman-plandex-users-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Plandex Server Accounts API
   slug: open-plandex-accounts-api
@@ -219,7 +222,7 @@ collections:
   slug: open-plandex-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/plandex/refs/heads/main/capabilities/plandex-capability-edges.yml
+  href: https://artifacts.apis.io/plandex/capabilities/plandex-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/plandex-capability-edges.yml
@@ -228,12 +231,12 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/plandex/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plandex/refs/heads/main/agentic-access/plandex-agentic-access.yml
+  href: https://artifacts.apis.io/plandex/agentic-access/plandex-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/plandex-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plandex/refs/heads/main/authentication/plandex-authentication.yml
+  href: https://artifacts.apis.io/plandex/authentication/plandex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/plandex-authentication.yml
@@ -425,7 +428,7 @@ finops:
 - has_sources: false
   method: generated
   name: Plandex Finops
-  primary_unit: ''
+  primary_unit: subscription-month / credit-usd / provider-token
   service_category: Developer Tools / AI Coding Agent
   slug: plandex-finops
   template: true
@@ -523,7 +526,7 @@ plans:
 - name: Plandex Plans Pricing
   plan_count: 3
   slug: plandex-plans-pricing
-random_paper: 0
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Plandex Rate Limits
@@ -556,13 +559,13 @@ score:
   band: thin
   composite: 38.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 64.0
     catalog_earned_first_party: 0.0
     catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 27.3
@@ -573,7 +576,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 46.3
+  previous_composite: 38.9
   provenance:
     agentic_access: derived
     contracts:
@@ -587,9 +590,9 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2

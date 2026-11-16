@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/security/cumbuca-domain-security.yml
+  href: https://artifacts.apis.io/cumbuca/security/cumbuca-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cumbuca-domain-security.yml
@@ -71,22 +76,22 @@ common:
   type: StatusPage
   url: https://via.cumbuca.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/lifecycle/cumbuca-lifecycle.yml
+  href: https://artifacts.apis.io/cumbuca/lifecycle/cumbuca-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cumbuca-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/mcp/cumbuca-mcp.yml
+  href: https://artifacts.apis.io/cumbuca/mcp/cumbuca-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cumbuca-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/well-known/cumbuca-well-known.yml
+  href: https://artifacts.apis.io/cumbuca/well-known/cumbuca-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cumbuca-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/well-known/cumbuca-security.txt
+  href: https://artifacts.apis.io/cumbuca/well-known/cumbuca-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cumbuca-security.txt
@@ -95,22 +100,22 @@ common:
   type: Security
   url: https://cumbuca.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/security/cumbuca-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cumbuca/security/cumbuca-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cumbuca-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/authentication/cumbuca-authentication.yml
+  href: https://artifacts.apis.io/cumbuca/authentication/cumbuca-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cumbuca-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/scopes/cumbuca-scopes.yml
+  href: https://artifacts.apis.io/cumbuca/scopes/cumbuca-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cumbuca-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/conformance/cumbuca-conformance.yml
+  href: https://artifacts.apis.io/cumbuca/conformance/cumbuca-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cumbuca-conformance.yml
@@ -119,7 +124,7 @@ common:
   type: Compliance
   url: https://cumbuca.com/politica-de-seguranca-cibernetica/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/llms/cumbuca-llms.txt
+  href: https://artifacts.apis.io/cumbuca/llms/cumbuca-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cumbuca-llms.txt
@@ -140,7 +145,7 @@ overview: 'Cumbuca is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Cumbuca''s developer surface includes documentation, getting-started guide, engineering blog, support, authentication, and 14 more developer resources.'
-random_paper: 10
+random_paper: 16
 scopes:
 - name: Cumbuca Scopes
   scope_count: 4
@@ -181,14 +186,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 49.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cumbuca/refs/heads/main/screenshots/cumbuca-2026-07-25T210921.png
+screenshot: https://apis.io/screenshots/cumbuca/cumbuca-2026-07-25T210921.png
 security:
 - kind: authentication
   name: Cumbuca Authentication

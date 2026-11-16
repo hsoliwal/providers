@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,46 +30,49 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 27.5
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 29.0
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.oneconcern.com
   baseurl_source: declared
   description: The Location API from One Concern — 5 operation(s) for location.
   name: One Concern Location API
   slug: one-concern-location-api
-artifact_total: 5
+artifact_total: 8
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/plans/one-concern-plans-pricing.yml
+  href: https://artifacts.apis.io/one-concern/plans/one-concern-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/one-concern-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/rate-limits/one-concern-rate-limits.yml
+  href: https://artifacts.apis.io/one-concern/rate-limits/one-concern-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/one-concern-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/capabilities/one-concern-capability-edges.yml
+  href: https://artifacts.apis.io/one-concern/capabilities/one-concern-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/one-concern-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/overlays/one-concern-domino-ai-overlay.yaml
+  href: https://artifacts.apis.io/one-concern/overlays/one-concern-domino-ai-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/one-concern-domino-ai-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/one-concern/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -127,22 +133,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/oneconcern/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/packages/one-concern-packages.yml
+  href: https://artifacts.apis.io/one-concern/packages/one-concern-packages.yml
   title: ''
   type: Packages
   url: packages/one-concern-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/well-known/one-concern-well-known.yml
+  href: https://artifacts.apis.io/one-concern/well-known/one-concern-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/one-concern-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/llms/one-concern-llms.txt
+  href: https://artifacts.apis.io/one-concern/llms/one-concern-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/one-concern-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/security/one-concern-domain-security.yml
+  href: https://artifacts.apis.io/one-concern/security/one-concern-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/one-concern-domain-security.yml
@@ -158,41 +164,57 @@ network: true
 overview: 'One Concern publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Location API. Tagged areas include Climate Risk, Catastrophe Modeling, Resilience, Insurance, and Reinsurance.
 
 
+  The One Concern catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   One Concern''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, and 18 more developer resources.'
 plans:
 - name: One Concern Plans Pricing
   plan_count: 0
   slug: one-concern-plans-pricing
-random_paper: 11
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: One Concern Rate Limits
   slug: one-concern-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: One Concern API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: one-concern-rules
 score:
   band: thin
-  composite: 33.8
+  composite: 36.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 41.6
+    contract_governance: 18.2
+    contract_quality: 46.3
     developer_ergonomics: 58.9
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 33.8
+  previous_composite: 35.4
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: derived
     skills: derived
@@ -202,13 +224,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/screenshots/one-concern-2026-09-02T150842.png
+screenshot: https://apis.io/screenshots/one-concern/one-concern-2026-09-02T150842.png
 security:
 - kind: authentication
   name: One Concern Authentication
@@ -218,6 +240,12 @@ security:
   name: One Concern Domain Security
   slug: one-concern-domain-security
   summary_line: TLSv1.3 · DNSSEC
+skill_count: 2
+skills:
+- name: compare-property-damage-scenarios
+  slug: one-concern-compare-property-damage-scenarios
+- name: score-location-business-interruption
+  slug: one-concern-score-location-business-interruption
 slug: one-concern
 tags:
 - Climate Risk

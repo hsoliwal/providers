@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The signed-request platform API behind the UrbanLogiq community intelligence platform — data catalog objects, aggregate queries, and streams served in Apache Arrow, Parquet, CSV, XLSX, JSON, text, and
@@ -44,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/security/urbanlogiq-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/urbanlogiq/security/urbanlogiq-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/urbanlogiq-vulnerability-disclosure.yml
@@ -53,7 +56,7 @@ common:
   type: Security
   url: https://urbanlogiq.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/security/urbanlogiq-domain-security.yml
+  href: https://artifacts.apis.io/urbanlogiq/security/urbanlogiq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/urbanlogiq-domain-security.yml
@@ -90,7 +93,7 @@ common:
   type: TermsOfService
   url: https://urbanlogiq.com/terms-and-conditions
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/security/urbanlogiq-trust-center.yml
+  href: https://artifacts.apis.io/urbanlogiq/security/urbanlogiq-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/urbanlogiq-trust-center.yml
@@ -99,62 +102,62 @@ common:
   type: Compliance
   url: https://urbanlogiq.com/trust-center
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/packages/urbanlogiq-packages.yml
+  href: https://artifacts.apis.io/urbanlogiq/packages/urbanlogiq-packages.yml
   title: ''
   type: Packages
   url: packages/urbanlogiq-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/packages/urbanlogiq-packages.yml
+  href: https://artifacts.apis.io/urbanlogiq/packages/urbanlogiq-packages.yml
   title: ''
   type: SDKs
   url: packages/urbanlogiq-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/cli/urbanlogiq-cli.yml
+  href: https://artifacts.apis.io/urbanlogiq/cli/urbanlogiq-cli.yml
   title: ''
   type: CLI
   url: cli/urbanlogiq-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/well-known/urbanlogiq-well-known.yml
+  href: https://artifacts.apis.io/urbanlogiq/well-known/urbanlogiq-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/urbanlogiq-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/well-known/urbanlogiq-security.txt
+  href: https://artifacts.apis.io/urbanlogiq/well-known/urbanlogiq-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/urbanlogiq-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/llms/urbanlogiq-llms.txt
+  href: https://artifacts.apis.io/urbanlogiq/llms/urbanlogiq-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/urbanlogiq-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/mcp/urbanlogiq-mcp.yml
+  href: https://artifacts.apis.io/urbanlogiq/mcp/urbanlogiq-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/urbanlogiq-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/authentication/urbanlogiq-authentication.yml
+  href: https://artifacts.apis.io/urbanlogiq/authentication/urbanlogiq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/urbanlogiq-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/conformance/urbanlogiq-conformance.yml
+  href: https://artifacts.apis.io/urbanlogiq/conformance/urbanlogiq-conformance.yml
   title: ''
   type: Conformance
   url: conformance/urbanlogiq-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/conventions/urbanlogiq-conventions.yml
+  href: https://artifacts.apis.io/urbanlogiq/conventions/urbanlogiq-conventions.yml
   title: ''
   type: Conventions
   url: conventions/urbanlogiq-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/sandbox/urbanlogiq-sandbox.yml
+  href: https://artifacts.apis.io/urbanlogiq/sandbox/urbanlogiq-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/urbanlogiq-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/lifecycle/urbanlogiq-lifecycle.yml
+  href: https://artifacts.apis.io/urbanlogiq/lifecycle/urbanlogiq-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/urbanlogiq-lifecycle.yml
@@ -175,13 +178,13 @@ score:
   band: emerging
   composite: 21.8
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
@@ -189,7 +192,7 @@ score:
     developer_ergonomics: 42.9
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 21.9
+  previous_composite: 21.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -207,14 +210,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/urbanlogiq/refs/heads/main/screenshots/urbanlogiq-2026-09-02T165205.png
+screenshot: https://apis.io/screenshots/urbanlogiq/urbanlogiq-2026-09-02T165205.png
 security:
 - kind: authentication
   name: Urbanlogiq Authentication

@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.0
-  scored_at: '2026-10-17'
+  score: 28.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -31,7 +45,7 @@ agentic_access:
   operation_count: 8
   slug: rjhsignaltech-agentic-access
   summary_line: 8 operations · 2 acting
-api_count: 2
+api_count: 1
 apis:
 - description: API providing U.S. congressional and state legislative district lookup and officeholder info.
   name: Who Represents This Address API
@@ -66,60 +80,60 @@ apis:
   description: The Zip API from Who Represents This Address (RJH Signal Technologies) — 1 operation(s) for zip.
   name: Who Represents This Address (RJH Signal Technologies) Zip API
   slug: rjhsignaltech-zip-api
-artifact_total: 12
+artifact_total: 13
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/overlays/rjhsignaltech-openapi-overlay.yaml
+  href: https://artifacts.apis.io/rjhsignaltech/overlays/rjhsignaltech-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rjhsignaltech-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/mcp/rjhsignaltech-mcp.yml
+  href: https://artifacts.apis.io/rjhsignaltech/mcp/rjhsignaltech-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rjhsignaltech-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/agentic-access/rjhsignaltech-agentic-access.yml
+  href: https://artifacts.apis.io/rjhsignaltech/agentic-access/rjhsignaltech-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rjhsignaltech-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/rules/rjhsignaltech-rules.yml
+  href: https://artifacts.apis.io/rjhsignaltech/rules/rjhsignaltech-rules.yml
   title: ''
   type: Spectral
   url: rules/rjhsignaltech-rules.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rjhsignaltech/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/errors/rjhsignaltech-problem-types.yml
+  href: https://artifacts.apis.io/rjhsignaltech/errors/rjhsignaltech-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rjhsignaltech-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/conformance/rjhsignaltech-conformance.yml
+  href: https://artifacts.apis.io/rjhsignaltech/conformance/rjhsignaltech-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rjhsignaltech-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/hosts/rjhsignaltech-hosts.yml
+  href: https://artifacts.apis.io/rjhsignaltech/hosts/rjhsignaltech-hosts.yml
   title: ''
   type: Hosts
   url: hosts/rjhsignaltech-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/vendors/rjhsignaltech-vendors.yml
+  href: https://artifacts.apis.io/rjhsignaltech/vendors/rjhsignaltech-vendors.yml
   title: ''
   type: Vendors
   url: vendors/rjhsignaltech-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/security/rjhsignaltech-domain-security.yml
+  href: https://artifacts.apis.io/rjhsignaltech/security/rjhsignaltech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rjhsignaltech-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/authentication/rjhsignaltech-authentication.yml
+  href: https://artifacts.apis.io/rjhsignaltech/authentication/rjhsignaltech-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rjhsignaltech-authentication.yml
@@ -157,7 +171,7 @@ overview: 'Who Represents This Address (RJH Signal Technologies) publishes 7 API
 
 
   Who Represents This Address (RJH Signal Technologies)''s developer surface includes authentication, API reference, pricing, support, and 11 more developer resources.'
-random_paper: 18
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -172,8 +186,8 @@ rules:
     warn: 1
   slug: rjhsignaltech-rules
 score:
-  band: thin
-  composite: 27.2
+  band: emerging
+  composite: 25.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 34.5
@@ -181,15 +195,15 @@ score:
     catalog_gap: 80.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: -1.7
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 18.2
     contract_quality: 49.4
-    developer_ergonomics: 25.6
+    developer_ergonomics: 22.0
     discoverability: 56.7
     operational_transparency: 0.0
-  previous_composite: 27.3
+  previous_composite: 27.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -206,13 +220,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rjhsignaltech/refs/heads/main/screenshots/rjhsignaltech-2026-10-11T125337.png
+screenshot: https://apis.io/screenshots/rjhsignaltech/rjhsignaltech-2026-10-11T125337.png
 security:
 - kind: authentication
   name: Rjhsignaltech Authentication
@@ -222,6 +236,10 @@ security:
   name: Rjhsignaltech Domain Security
   slug: rjhsignaltech-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: rjhsignaltech-x402-lookup
+  slug: rjhsignaltech-x402-lookup
 slug: rjhsignaltech
 tags:
 - Company

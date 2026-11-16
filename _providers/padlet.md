@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 51.3
-  scored_at: '2026-10-17'
+  score: 52.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -81,11 +84,8 @@ apis:
   description: The Users API from Padlet — 1 operation(s) for users.
   name: Padlet Users API
   slug: padlet-users-api
-artifact_total: 21
+artifact_total: 24
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Padlet AI Recipe Boards API
   slug: open-padlet-ai-recipe-boards-api
@@ -113,22 +113,22 @@ common:
   type: Blog
   url: https://padlet.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/security/padlet-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/padlet/security/padlet-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/padlet-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/security/padlet-domain-security.yml
+  href: https://artifacts.apis.io/padlet/security/padlet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/padlet-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/agentic-access/padlet-agentic-access.yml
+  href: https://artifacts.apis.io/padlet/agentic-access/padlet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/padlet-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/authentication/padlet-authentication.yml
+  href: https://artifacts.apis.io/padlet/authentication/padlet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/padlet-authentication.yml
@@ -177,22 +177,22 @@ common:
   type: StatusPage
   url: https://status.padlet.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/mcp/padlet-mcp.yml
+  href: https://artifacts.apis.io/padlet/mcp/padlet-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/padlet-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/llms/padlet-llms.txt
+  href: https://artifacts.apis.io/padlet/llms/padlet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/padlet-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/well-known/padlet-well-known.yml
+  href: https://artifacts.apis.io/padlet/well-known/padlet-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/padlet-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/well-known/padlet-security.txt
+  href: https://artifacts.apis.io/padlet/well-known/padlet-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/padlet-security.txt
@@ -201,42 +201,42 @@ common:
   type: Security
   url: https://padlet.com/.well-known/security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/errors/padlet-problem-types.yml
+  href: https://artifacts.apis.io/padlet/errors/padlet-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/padlet-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/conventions/padlet-conventions.yml
+  href: https://artifacts.apis.io/padlet/conventions/padlet-conventions.yml
   title: ''
   type: Conventions
   url: conventions/padlet-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/rate-limits/padlet-rate-limits.yml
+  href: https://artifacts.apis.io/padlet/rate-limits/padlet-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/padlet-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/data-model/padlet-data-model.yml
+  href: https://artifacts.apis.io/padlet/data-model/padlet-data-model.yml
   title: ''
   type: DataModel
   url: data-model/padlet-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/conformance/padlet-conformance.yml
+  href: https://artifacts.apis.io/padlet/conformance/padlet-conformance.yml
   title: ''
   type: Conformance
   url: conformance/padlet-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/lifecycle/padlet-lifecycle.yml
+  href: https://artifacts.apis.io/padlet/lifecycle/padlet-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/padlet-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/overlays/padlet-openapi-overlay.yaml
+  href: https://artifacts.apis.io/padlet/overlays/padlet-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/padlet-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/padlet/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -255,31 +255,47 @@ network: true
 overview: 'Padlet publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Recipe Boards API, Boards API, Comments API, and 4 more. Tagged areas include Collaboration, Education, Visual Collaboration, Content, and Boards.
 
 
+  The Padlet catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Padlet''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, support, pricing, and 22 more developer resources.'
-random_paper: 18
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Padlet Rate Limits
   slug: padlet-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Padlet API Rules
+  rule_count: 46
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 2
+  slug: padlet-rules
 score:
   band: developing
-  composite: 46.3
+  composite: 49.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 24
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.2
   facets:
     access_clarity: 44.7
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 49.9
-    developer_ergonomics: 48.2
+    developer_ergonomics: 54.2
     discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 45.8
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -296,13 +312,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/padlet/refs/heads/main/screenshots/padlet-2026-08-07T191252.png
+screenshot: https://apis.io/screenshots/padlet/padlet-2026-08-07T191252.png
 security:
 - kind: authentication
   name: Padlet Authentication
@@ -316,6 +332,14 @@ security:
   name: Padlet Vulnerability Disclosure
   slug: padlet-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: Add a post to a board and engage with it
+  slug: padlet-add-post-and-engage
+- name: Generate an AI recipe board and poll its status
+  slug: padlet-generate-ai-recipe-board
+- name: Read a Padlet board and its posts
+  slug: padlet-read-board
 slug: padlet
 tags:
 - Collaboration

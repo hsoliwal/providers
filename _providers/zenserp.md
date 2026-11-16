@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,9 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-10-17'
+  score: 31.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -69,15 +78,12 @@ apis:
   description: Google Trends endpoints exposing keyword interest over time for one or more keywords, and the currently trending searches for a category, language and region. Served from the v1 base, not v2.
   name: Zenserp Trends API
   slug: zenserp-trends-api
-artifact_total: 24
+artifact_total: 27
 asyncapis:
 - description: ''
   name: Zenserp Batch Webhooks
   slug: zenserp-batch-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Zenserp Batch API
   slug: open-zenserp-batch-api
@@ -95,17 +101,17 @@ collections:
   slug: open-zenserp-trends-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/agentic-access/zenserp-agentic-access.yml
+  href: https://artifacts.apis.io/zenserp/agentic-access/zenserp-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zenserp-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/security/zenserp-domain-security.yml
+  href: https://artifacts.apis.io/zenserp/security/zenserp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zenserp-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/authentication/zenserp-authentication.yml
+  href: https://artifacts.apis.io/zenserp/authentication/zenserp-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zenserp-authentication.yml
@@ -138,77 +144,77 @@ common:
   type: X
   url: https://twitter.com/apilayer
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/plans/zenserp-plans-pricing.yml
+  href: https://artifacts.apis.io/zenserp/plans/zenserp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zenserp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/rate-limits/zenserp-rate-limits.yml
+  href: https://artifacts.apis.io/zenserp/rate-limits/zenserp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zenserp-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/finops/zenserp-finops.yml
+  href: https://artifacts.apis.io/zenserp/finops/zenserp-finops.yml
   title: ''
   type: FinOps
   url: finops/zenserp-finops.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/packages/zenserp-packages.yml
+  href: https://artifacts.apis.io/zenserp/packages/zenserp-packages.yml
   title: ''
   type: Packages
   url: packages/zenserp-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/packages/zenserp-packages.yml
+  href: https://artifacts.apis.io/zenserp/packages/zenserp-packages.yml
   title: ''
   type: SDKs
   url: packages/zenserp-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/llms/zenserp-llms.txt
+  href: https://artifacts.apis.io/zenserp/llms/zenserp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zenserp-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/conventions/zenserp-conventions.yml
+  href: https://artifacts.apis.io/zenserp/conventions/zenserp-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zenserp-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/errors/zenserp-problem-types.yml
+  href: https://artifacts.apis.io/zenserp/errors/zenserp-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zenserp-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/lifecycle/zenserp-lifecycle.yml
+  href: https://artifacts.apis.io/zenserp/lifecycle/zenserp-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zenserp-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/conformance/zenserp-conformance.yml
+  href: https://artifacts.apis.io/zenserp/conformance/zenserp-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zenserp-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/data-model/zenserp-data-model.yml
+  href: https://artifacts.apis.io/zenserp/data-model/zenserp-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zenserp-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/sandbox/zenserp-sandbox.yml
+  href: https://artifacts.apis.io/zenserp/sandbox/zenserp-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/zenserp-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/asyncapi/zenserp-batch-webhooks.yml
+  href: https://artifacts.apis.io/zenserp/asyncapi/zenserp-batch-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zenserp-batch-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zenserp/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/overlays/zenserp-search-overlay.yaml
+  href: https://artifacts.apis.io/zenserp/overlays/zenserp-search-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zenserp-search-overlay.yaml
@@ -265,13 +271,13 @@ examples:
   name: Zenserp Web Search Example
   slug: zenserp-web-search-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Zenserp Finops
-  primary_unit: ''
+  primary_unit: searches
   service_category: ''
   slug: zenserp-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zenserp.png
 json_schemas:
 - name: Zenserp Search Response
@@ -296,9 +302,12 @@ overview: 'Zenserp publishes 5 API contracts indexed on the [APIs.io](https://ap
   Zenserp''s developer surface includes authentication, documentation, pricing, engineering blog, sandbox, API reference, signup flow, and 28 more developer resources.'
 plans:
 - name: Zenserp Plans Pricing
-  plan_count: 6
+  plan_count: 7
   slug: zenserp-plans-pricing
-random_paper: 5
+- name: Zenserp Price Estimates
+  plan_count: 0
+  slug: zenserp-price-estimates
+random_paper: 7
 rate_limits:
 - limit_count: 7
   name: Zenserp Rate Limits
@@ -317,17 +326,17 @@ rules:
   slug: zenserp-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 54.4
+  composite: 56.0
   coverage:
-    artifact_dirs: 30
-    catalog_earned: 75.3
+    artifact_dirs: 32
+    catalog_earned: 78.3
     catalog_earned_first_party: 24.0
-    catalog_gap: 39.8
+    catalog_gap: 36.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
-    access_clarity: 55.3
+    access_clarity: 63.2
     contract_governance: 14.4
     contract_quality: 62.1
     developer_ergonomics: 66.1
@@ -350,13 +359,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zenserp/refs/heads/main/screenshots/zenserp-2026-06-20T201820.png
+screenshot: https://apis.io/screenshots/zenserp/zenserp-2026-06-20T201820.png
 security:
 - kind: authentication
   name: Zenserp Authentication
@@ -366,6 +375,14 @@ security:
   name: Zenserp Domain Security
   slug: zenserp-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: zenserp-ad-verification
+  slug: zenserp-ad-verification
+- name: zenserp-bulk-serp-batch
+  slug: zenserp-bulk-serp-batch
+- name: zenserp-rank-tracking
+  slug: zenserp-rank-tracking
 slug: zenserp
 tags:
 - SERP

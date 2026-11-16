@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,13 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: true
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.4
-  scored_at: '2026-10-17'
+  score: 39.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 12
@@ -89,7 +98,7 @@ apis:
   description: The Sales Orders API from bexio — 5 operation(s) for sales orders.
   name: bexio Sales Orders API
   slug: bexio-sales-orders-api
-artifact_total: 38
+artifact_total: 41
 collections:
 - collection_type: postman
   name: bexio Accounting API
@@ -119,9 +128,6 @@ collections:
   name: bexio Accounting Sales Orders API
   slug: postman-bexio-sales-orders-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: bexio Accounting API
   slug: open-bexio-accounting-api
 - collection_type: open
@@ -150,7 +156,7 @@ collections:
   slug: open-bexio-sales-orders-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/capabilities/bexio-capability-edges.yml
+  href: https://artifacts.apis.io/bexio/capabilities/bexio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bexio-capability-edges.yml
@@ -159,27 +165,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/bexio/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/agentic-access/bexio-agentic-access.yml
+  href: https://artifacts.apis.io/bexio/agentic-access/bexio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bexio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/security/bexio-trust-center.yml
+  href: https://artifacts.apis.io/bexio/security/bexio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bexio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/security/bexio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bexio/security/bexio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bexio-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/security/bexio-domain-security.yml
+  href: https://artifacts.apis.io/bexio/security/bexio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bexio-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/authentication/bexio-authentication.yml
+  href: https://artifacts.apis.io/bexio/authentication/bexio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bexio-authentication.yml
@@ -200,17 +206,17 @@ common:
   type: Documentation
   url: https://docs.bexio.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/plans/bexio-plans-pricing.yml
+  href: https://artifacts.apis.io/bexio/plans/bexio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bexio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/rate-limits/bexio-rate-limits.yml
+  href: https://artifacts.apis.io/bexio/rate-limits/bexio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bexio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/finops/bexio-finops.yml
+  href: https://artifacts.apis.io/bexio/finops/bexio-finops.yml
   title: ''
   type: FinOps
   url: finops/bexio-finops.yml
@@ -219,12 +225,12 @@ common:
   type: Blog
   url: https://www.bexio.com/en-CH/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/well-known/bexio-well-known.yml
+  href: https://artifacts.apis.io/bexio/well-known/bexio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bexio-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/well-known/bexio-security.txt
+  href: https://artifacts.apis.io/bexio/well-known/bexio-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bexio-security.txt
@@ -237,42 +243,42 @@ common:
   type: Compliance
   url: https://www.bexio.com/en-CH/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/scopes/bexio-scopes.yml
+  href: https://artifacts.apis.io/bexio/scopes/bexio-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bexio-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/packages/bexio-packages.yml
+  href: https://artifacts.apis.io/bexio/packages/bexio-packages.yml
   title: ''
   type: Packages
   url: packages/bexio-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/mcp/bexio-mcp.yml
+  href: https://artifacts.apis.io/bexio/mcp/bexio-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bexio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/llms/bexio-llms.txt
+  href: https://artifacts.apis.io/bexio/llms/bexio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bexio-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/overlays/bexio-openapi-overlay.yaml
+  href: https://artifacts.apis.io/bexio/overlays/bexio-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bexio-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/conformance/bexio-conformance.yml
+  href: https://artifacts.apis.io/bexio/conformance/bexio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bexio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/errors/bexio-problem-types.yml
+  href: https://artifacts.apis.io/bexio/errors/bexio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bexio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/lifecycle/bexio-lifecycle.yml
+  href: https://artifacts.apis.io/bexio/lifecycle/bexio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bexio-lifecycle.yml
@@ -285,27 +291,27 @@ common:
   type: Deprecation
   url: https://docs.bexio.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/changelog/bexio-changelog.yml
+  href: https://artifacts.apis.io/bexio/changelog/bexio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bexio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/conventions/bexio-conventions.yml
+  href: https://artifacts.apis.io/bexio/conventions/bexio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bexio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/data-model/bexio-data-model.yml
+  href: https://artifacts.apis.io/bexio/data-model/bexio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bexio-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bexio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/collections/bexio.postman_collection.json
+  href: https://artifacts.apis.io/bexio/collections/bexio.postman_collection.json
   title: ''
   type: Postman
   url: collections/bexio.postman_collection.json
@@ -364,6 +370,9 @@ network: true
 overview: 'bexio publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounting API, Banking API, Contacts API, and 6 more. Tagged areas include Accounting, ERP, Invoicing, Small Business, and Switzerland.
 
 
+  The bexio catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   bexio''s developer surface includes authentication, documentation, engineering blog, changelog, API reference, getting-started guide, support, and 35 more developer resources.'
 plans:
 - name: Bexio Plans Pricing
@@ -374,25 +383,38 @@ rate_limits:
 - limit_count: 2
   name: Bexio Rate Limits
   slug: bexio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: bexio API Rules
+  rule_count: 54
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 1
+  slug: bexio-rules
 scopes:
 - name: Bexio Scopes
   scope_count: 71
   slug: bexio-scopes
   summary_line: 71 scopes
 score:
-  band: thin
-  composite: 38.7
+  band: developing
+  composite: 40.4
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 42.0
+    artifact_dirs: 31
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 60.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 1.0
     developer_ergonomics: 50.6
     discoverability: 65.0
@@ -405,7 +427,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 46.1
+  previous_composite: 40.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -426,13 +448,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bexio/refs/heads/main/screenshots/bexio-2026-07-25T202828.png
+screenshot: https://apis.io/screenshots/bexio/bexio-2026-07-25T202828.png
 security:
 - kind: authentication
   name: Bexio Authentication
@@ -450,6 +472,14 @@ security:
   name: Bexio Trust Center
   slug: bexio-trust-center
   summary_line: ISO 27001, Swiss FADP (revDSG), GDPR
+skill_count: 3
+skills:
+- name: Create a contact and issue an invoice
+  slug: bexio-create-contact-and-invoice
+- name: Log billable time against a project
+  slug: bexio-log-project-time
+- name: Maintain the items/products catalog
+  slug: bexio-manage-items-catalog
 slug: bexio
 tags:
 - Accounting

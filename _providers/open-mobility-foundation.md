@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 2
@@ -78,55 +93,55 @@ apis:
 - description: The Vehicles API from Open Mobility Foundation — 4 operation(s) for vehicles.
   name: Open Mobility Foundation Vehicles API
   slug: open-mobility-foundation-vehicles-api
-artifact_total: 44
+artifact_total: 48
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/agentic-access/open-mobility-foundation-agentic-access.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/agentic-access/open-mobility-foundation-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/open-mobility-foundation-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/rules/open-mobility-foundation-rules.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/rules/open-mobility-foundation-rules.yml
   title: ''
   type: Spectral
   url: rules/open-mobility-foundation-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/rules/open-mobility-foundation-mds-openapi-spectral-rules.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/rules/open-mobility-foundation-mds-openapi-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/open-mobility-foundation-mds-openapi-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/json-ld/open-mobility-foundation-context.jsonld
+  href: https://artifacts.apis.io/open-mobility-foundation/json-ld/open-mobility-foundation-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/open-mobility-foundation-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/vocabulary/open-mobility-foundation-vocabulary.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/vocabulary/open-mobility-foundation-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/open-mobility-foundation-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/data-model/open-mobility-foundation-data-model.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/data-model/open-mobility-foundation-data-model.yml
   title: ''
   type: DataModel
   url: data-model/open-mobility-foundation-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/changelog/open-mobility-foundation-changelog.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/changelog/open-mobility-foundation-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/open-mobility-foundation-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/conventions/open-mobility-foundation-conventions.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/conventions/open-mobility-foundation-conventions.yml
   title: ''
   type: Conventions
   url: conventions/open-mobility-foundation-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/scopes/open-mobility-foundation-scopes.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/scopes/open-mobility-foundation-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/open-mobility-foundation-scopes.yml
@@ -135,42 +150,42 @@ common:
   type: Deprecation
   url: https://github.com/openmobilityfoundation/governance/blob/main/technical/ReleaseGuidelines.md#ongoing-version-support
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/lifecycle/open-mobility-foundation-lifecycle.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/lifecycle/open-mobility-foundation-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/open-mobility-foundation-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/errors/open-mobility-foundation-problem-types.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/errors/open-mobility-foundation-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/open-mobility-foundation-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/conformance/open-mobility-foundation-conformance.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/conformance/open-mobility-foundation-conformance.yml
   title: ''
   type: Conformance
   url: conformance/open-mobility-foundation-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/overlays/open-mobility-foundation-mds-agency-overlay.yaml
+  href: https://artifacts.apis.io/open-mobility-foundation/overlays/open-mobility-foundation-mds-agency-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/open-mobility-foundation-mds-agency-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/hosts/open-mobility-foundation-hosts.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/hosts/open-mobility-foundation-hosts.yml
   title: ''
   type: Hosts
   url: hosts/open-mobility-foundation-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/vendors/open-mobility-foundation-vendors.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/vendors/open-mobility-foundation-vendors.yml
   title: ''
   type: Vendors
   url: vendors/open-mobility-foundation-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/authentication/open-mobility-foundation-authentication.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/authentication/open-mobility-foundation-authentication.yml
   title: ''
   type: Authentication
   url: authentication/open-mobility-foundation-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/security/open-mobility-foundation-domain-security.yml
+  href: https://artifacts.apis.io/open-mobility-foundation/security/open-mobility-foundation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/open-mobility-foundation-domain-security.yml
@@ -230,7 +245,7 @@ json_schemas:
   property_count: 0
   slug: open-mobility-foundation-data-types-uuid
 - name: models/event
-  property_count: 0
+  property_count: 14
   slug: open-mobility-foundation-event
 - name: models/geography
   property_count: 9
@@ -263,16 +278,16 @@ json_schemas:
   property_count: 1
   slug: open-mobility-foundation-response-version
 - name: models/stop
-  property_count: 0
+  property_count: 22
   slug: open-mobility-foundation-stop
 - name: models/telemetry
   property_count: 13
   slug: open-mobility-foundation-telemetry
 - name: models/trip
-  property_count: 0
+  property_count: 20
   slug: open-mobility-foundation-trip
 - name: models/vehicle
-  property_count: 0
+  property_count: 11
   slug: open-mobility-foundation-vehicle
 jsonld:
 - class_count: 37
@@ -295,7 +310,7 @@ plans:
 - name: Open Mobility Foundation Plans Pricing
   plan_count: 0
   slug: open-mobility-foundation-plans-pricing
-random_paper: 12
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Open Mobility Foundation Rate Limits
@@ -331,24 +346,24 @@ scopes:
   slug: open-mobility-foundation-scopes
   summary_line: 2 scopes
 score:
-  band: developing
-  composite: 41.6
+  band: thin
+  composite: 36.3
   coverage:
-    artifact_dirs: 27
+    artifact_dirs: 28
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.5
+  delta: -5.3
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 35.6
     contract_quality: 58.7
-    developer_ergonomics: 30.4
-    discoverability: 64.3
-    operational_transparency: 28.9
-  previous_composite: 47.1
+    developer_ergonomics: 22.0
+    discoverability: 63.4
+    operational_transparency: 22.4
+  previous_composite: 41.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -364,14 +379,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 30.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/open-mobility-foundation/refs/heads/main/screenshots/open-mobility-foundation-2026-10-11T112037.png
+screenshot: https://apis.io/screenshots/open-mobility-foundation/open-mobility-foundation-2026-10-11T112037.png
 security:
 - kind: authentication
   name: Open Mobility Foundation Authentication
@@ -381,6 +396,16 @@ security:
   name: Open Mobility Foundation Domain Security
   slug: open-mobility-foundation-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: open-mobility-foundation-discover-policy-requirements
+  slug: open-mobility-foundation-discover-policy-requirements
+- name: open-mobility-foundation-pull-hourly-provider-data
+  slug: open-mobility-foundation-pull-hourly-provider-data
+- name: open-mobility-foundation-query-mobility-metrics
+  slug: open-mobility-foundation-query-mobility-metrics
+- name: open-mobility-foundation-register-vehicles-and-report-activity
+  slug: open-mobility-foundation-register-vehicles-and-report-activity
 slug: open-mobility-foundation
 tags:
 - Company

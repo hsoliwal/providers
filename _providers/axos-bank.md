@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: Submit new account applications and open new Axos deposit and commercial accounts programmatically. Partner-gated access secured with OAuth 2.0; no public OpenAPI specification is published.
@@ -60,17 +63,17 @@ common:
   type: Login
   url: https://www.axosbank.com/business/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axos-bank/refs/heads/main/security/axos-bank-domain-security.yml
+  href: https://artifacts.apis.io/axos-bank/security/axos-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axos-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axos-bank/refs/heads/main/authentication/axos-bank-authentication.yml
+  href: https://artifacts.apis.io/axos-bank/authentication/axos-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/axos-bank-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axos-bank/refs/heads/main/llms/axos-bank-llms.txt
+  href: https://artifacts.apis.io/axos-bank/llms/axos-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/axos-bank-llms.txt
@@ -119,7 +122,7 @@ overview: 'Axos Bank is listed with 4 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Axos Bank''s developer surface includes engineering blog, authentication, documentation, support, and 9 more developer resources.'
-random_paper: 20
+random_paper: 12
 score:
   band: emerging
   composite: 20.8
@@ -152,14 +155,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/axos-bank/refs/heads/main/screenshots/axos-bank-2026-07-25T202103.png
+screenshot: https://apis.io/screenshots/axos-bank/axos-bank-2026-07-25T202103.png
 security:
 - kind: authentication
   name: Axos Bank Authentication

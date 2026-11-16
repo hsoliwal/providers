@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.0
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -104,15 +111,12 @@ apis:
   description: Accounting vouchers (journal entries).
   name: Fortnox Vouchers API
   slug: fortnox-vouchers-api
-artifact_total: 33
+artifact_total: 32
 asyncapis:
 - description: AsyncAPI 2.6 description of Fortnox's **real duplex WebSocket API** at `wss://ws.fortnox.se/topics-v1` (the "Topics" service). Unlike the REST API at https://api.fortnox.se/3/, this is a genuine WebSo
   name: Fortnox Topics WebSocket API
   slug: fortnox-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fortnox REST API (Representative Subset) Accounts API
   slug: open-fortnox-accounts-api
@@ -151,22 +155,22 @@ collections:
   slug: open-fortnox
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/capabilities/fortnox-capability-edges.yml
+  href: https://artifacts.apis.io/fortnox/capabilities/fortnox-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fortnox-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/agentic-access/fortnox-agentic-access.yml
+  href: https://artifacts.apis.io/fortnox/agentic-access/fortnox-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fortnox-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/security/fortnox-domain-security.yml
+  href: https://artifacts.apis.io/fortnox/security/fortnox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fortnox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/authentication/fortnox-authentication.yml
+  href: https://artifacts.apis.io/fortnox/authentication/fortnox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fortnox-authentication.yml
@@ -183,17 +187,17 @@ common:
   type: Documentation
   url: https://www.fortnox.se/developer
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/plans/fortnox-plans-pricing.yml
+  href: https://artifacts.apis.io/fortnox/plans/fortnox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fortnox-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/rate-limits/fortnox-rate-limits.yml
+  href: https://artifacts.apis.io/fortnox/rate-limits/fortnox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fortnox-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/finops/fortnox-finops.yml
+  href: https://artifacts.apis.io/fortnox/finops/fortnox-finops.yml
   title: ''
   type: FinOps
   url: finops/fortnox-finops.yml
@@ -228,7 +232,7 @@ plans:
 - name: Fortnox Plans Pricing
   plan_count: 6
   slug: fortnox-plans-pricing
-random_paper: 14
+random_paper: 16
 rate_limits:
 - limit_count: 2
   name: Fortnox Rate Limits
@@ -250,13 +254,13 @@ score:
   band: thin
   composite: 27.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 46.5
     catalog_earned_first_party: 0.0
     catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -272,7 +276,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 35.3
+  previous_composite: 27.9
   provenance:
     agentic_access: derived
     contracts:
@@ -286,13 +290,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fortnox/refs/heads/main/screenshots/fortnox-2026-07-25T215012.png
+screenshot: https://apis.io/screenshots/fortnox/fortnox-2026-07-25T215012.png
 security:
 - kind: authentication
   name: Fortnox Authentication

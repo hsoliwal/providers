@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,11 +69,8 @@ apis:
   description: Machine-readable index of all available extracts
   name: Geofabrik Index API
   slug: geofabrik-index-api
-artifact_total: 17
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Geofabrik Download Downloads API
   slug: open-geofabrik-downloads-api
@@ -75,12 +79,12 @@ collections:
   slug: open-geofabrik-index-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/geofabrik/refs/heads/main/agentic-access/geofabrik-agentic-access.yml
+  href: https://artifacts.apis.io/geofabrik/agentic-access/geofabrik-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/geofabrik-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/geofabrik/refs/heads/main/security/geofabrik-domain-security.yml
+  href: https://artifacts.apis.io/geofabrik/security/geofabrik-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/geofabrik-domain-security.yml
@@ -113,17 +117,17 @@ common:
   type: Mastodon
   url: https://en.osm.town/@geofabrik
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/geofabrik/refs/heads/main/plans/geofabrik-plans-pricing.yml
+  href: https://artifacts.apis.io/geofabrik/plans/geofabrik-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/geofabrik-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/geofabrik/refs/heads/main/rate-limits/geofabrik-rate-limits.yml
+  href: https://artifacts.apis.io/geofabrik/rate-limits/geofabrik-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/geofabrik-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/geofabrik/refs/heads/main/finops/geofabrik-finops.yml
+  href: https://artifacts.apis.io/geofabrik/finops/geofabrik-finops.yml
   title: ''
   type: FinOps
   url: finops/geofabrik-finops.yml
@@ -167,7 +171,7 @@ plans:
 - name: Geofabrik Plans Pricing
   plan_count: 5
   slug: geofabrik-plans-pricing
-random_paper: 14
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Geofabrik Rate Limits
@@ -188,13 +192,13 @@ score:
   band: thin
   composite: 27.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 54.3
     catalog_earned_first_party: 0.0
     catalog_gap: 60.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -202,7 +206,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 33.0
+  previous_composite: 27.4
   provenance:
     agentic_access: derived
     contracts:
@@ -216,14 +220,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/geofabrik/refs/heads/main/screenshots/geofabrik-2026-06-20T181750.png
+screenshot: https://apis.io/screenshots/geofabrik/geofabrik-2026-06-20T181750.png
 security:
 - kind: domain-security
   name: Geofabrik Domain Security

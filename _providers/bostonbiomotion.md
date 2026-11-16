@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bostonbiomotion/refs/heads/main/well-known/bostonbiomotion-well-known.yml
+  href: https://artifacts.apis.io/bostonbiomotion/well-known/bostonbiomotion-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bostonbiomotion-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bostonbiomotion/refs/heads/main/hosts/bostonbiomotion-hosts.yml
+  href: https://artifacts.apis.io/bostonbiomotion/hosts/bostonbiomotion-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bostonbiomotion-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bostonbiomotion/refs/heads/main/vendors/bostonbiomotion-vendors.yml
+  href: https://artifacts.apis.io/bostonbiomotion/vendors/bostonbiomotion-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bostonbiomotion-vendors.yml
@@ -55,7 +68,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/proteusmotion
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bostonbiomotion/refs/heads/main/security/bostonbiomotion-domain-security.yml
+  href: https://artifacts.apis.io/bostonbiomotion/security/bostonbiomotion-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bostonbiomotion-domain-security.yml
@@ -83,26 +96,26 @@ overview: 'Bostonbiomotion is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Bostonbiomotion''s developer surface includes support and 7 more developer resources.'
-random_paper: 9
+random_paper: 5
 score:
   band: minimal
-  composite: 7.8
+  composite: 5.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.0
+  delta: -2.2
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
+    developer_ergonomics: 2.4
     discoverability: 39.3
-    operational_transparency: 5.3
-  previous_composite: 6.8
+    operational_transparency: 2.6
+  previous_composite: 7.8
   provenance:
     mcp: derived
   regulatory:
@@ -110,14 +123,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/bostonbiomotion/bostonbiomotion-2026-11-03T122325.png
 security:
 - kind: domain-security
   name: Bostonbiomotion Domain Security

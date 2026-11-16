@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-10-17'
+  score: 29.0
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - baseURL: https://YOUR_CUBE_CLOUD_HOST
@@ -71,40 +86,40 @@ apis:
   description: The Embed Tenants API from Cube Dev — 2 operation(s) for embed tenants.
   name: Cube Dev Embed Tenants API
   slug: cube-dev-embed-tenants-api
-artifact_total: 30
+artifact_total: 31
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/rate-limits/cube-dev-rate-limits.yml
+  href: https://artifacts.apis.io/cube-dev/rate-limits/cube-dev-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cube-dev-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/plans/cube-dev-plans-pricing.yml
+  href: https://artifacts.apis.io/cube-dev/plans/cube-dev-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cube-dev-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/rules/cube-dev-rules.yml
+  href: https://artifacts.apis.io/cube-dev/rules/cube-dev-rules.yml
   title: ''
   type: Spectral
   url: rules/cube-dev-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/json-ld/cube-dev-context.jsonld
+  href: https://artifacts.apis.io/cube-dev/json-ld/cube-dev-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cube-dev-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/vocabulary/cube-dev-vocabulary.yml
+  href: https://artifacts.apis.io/cube-dev/vocabulary/cube-dev-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cube-dev-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/data-model/cube-dev-data-model.yml
+  href: https://artifacts.apis.io/cube-dev/data-model/cube-dev-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cube-dev-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/cli/cube-dev-cli.yml
+  href: https://artifacts.apis.io/cube-dev/cli/cube-dev-cli.yml
   title: ''
   type: CLI
   url: cli/cube-dev-cli.yml
@@ -113,32 +128,32 @@ common:
   type: Compliance
   url: https://cube.dev/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/conformance/cube-dev-conformance.yml
+  href: https://artifacts.apis.io/cube-dev/conformance/cube-dev-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cube-dev-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/llms/cube-dev-llms.txt
+  href: https://artifacts.apis.io/cube-dev/llms/cube-dev-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cube-dev-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/a2a/cube-dev-a2a.yml
+  href: https://artifacts.apis.io/cube-dev/a2a/cube-dev-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/cube-dev-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/mcp/cube-dev-mcp.yml
+  href: https://artifacts.apis.io/cube-dev/mcp/cube-dev-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cube-dev-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/hosts/cube-dev-hosts.yml
+  href: https://artifacts.apis.io/cube-dev/hosts/cube-dev-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cube-dev-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/vendors/cube-dev-vendors.yml
+  href: https://artifacts.apis.io/cube-dev/vendors/cube-dev-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cube-dev-vendors.yml
@@ -179,17 +194,17 @@ common:
   type: Documentation
   url: https://docs.cube.dev/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/security/cube-dev-trust-center.yml
+  href: https://artifacts.apis.io/cube-dev/security/cube-dev-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cube-dev-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/security/cube-dev-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cube-dev/security/cube-dev-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cube-dev-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cube-dev/refs/heads/main/security/cube-dev-domain-security.yml
+  href: https://artifacts.apis.io/cube-dev/security/cube-dev-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cube-dev-domain-security.yml
@@ -207,6 +222,14 @@ coverage:
   state: unreadable
 created: '2026-10-11'
 description: Cube Dev provides an agentic analytics platform built on a semantic layer, delivering AI‑native business intelligence and embedded analytics. It offers a governed data model for both human users and AI agents, enabling natural‑language queries, workbooks, dashboards, and API access for developers to embed analytics into their applications.
+finops:
+- has_sources: true
+  method: derived
+  name: Cube Dev Finops
+  primary_unit: seat
+  service_category: ''
+  slug: cube-dev-finops
+  template: false
 image: https://static.cube.dev/website-v2/og/og-cube-default.png
 json_schemas:
 - name: GetApiV1DeploymentsDeploymentidIdResponse
@@ -262,7 +285,7 @@ modified: '2026-10-11'
 name: Cube Dev
 nav: Providers
 network: true
-overview: 'Cube Dev is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Build API, Cube Dev API, and 6 more. Tagged areas include Company, Analytics, Artificial Intelligence, Business-Intelligence, and Platform.
+overview: 'Cube Dev is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Build API, Cube Dev API, and 6 more. Tagged areas include Company, Analytics, Artificial Intelligence, Business Intelligence, and Platform.
 
 
   The Cube Dev catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -273,7 +296,7 @@ plans:
 - name: Cube Dev Plans Pricing
   plan_count: 3
   slug: cube-dev-plans-pricing
-random_paper: 9
+random_paper: 11
 rate_limits:
 - limit_count: 2
   name: Cube Dev Rate Limits
@@ -293,21 +316,23 @@ rules:
   slug: cube-dev-rules
 score:
   band: developing
-  composite: 50.3
+  composite: 42.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 85.8
+    artifact_dirs: 22
+    catalog_earned: 88.8
     catalog_earned_first_party: 20.0
-    catalog_gap: 29.3
+    catalog_gap: 26.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.7
   facets:
-    access_clarity: 78.9
+    access_clarity: 67.1
     contract_governance: 22.0
     contract_quality: 24.8
-    developer_ergonomics: 38.1
+    developer_ergonomics: 22.6
     discoverability: 80.0
-    operational_transparency: 47.4
+    operational_transparency: 34.2
+  previous_composite: 51.9
   provenance:
     conformance: derived
     contracts:
@@ -321,12 +346,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/cube-dev/cube-dev-2026-11-03T125732.png
 security:
 - kind: domain-security
   name: Cube Dev Domain Security
@@ -345,7 +372,7 @@ tags:
 - Company
 - Analytics
 - Artificial Intelligence
-- Business-Intelligence
+- Business Intelligence
 - Platform
 website: https://cube.dev/
 ---

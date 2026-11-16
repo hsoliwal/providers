@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Cerebelly's Universal Commerce Protocol (UCP) MCP endpoint, served anonymously from the storefront host. A tools/list call returns 13 tools with full JSON Schema draft 2020-12 input schemas covering c
@@ -44,10 +47,10 @@ apis:
 - description: 'The Shopify Storefront GraphQL API as served from cerebelly.com. Answers unauthenticated introspection: 416 types, 35 root queries and 41 mutations covering products, collections, blog articles, pages'
   name: Cerebelly Storefront GraphQL API
   slug: cerebelly-storefront-graphql
-artifact_total: 7
+artifact_total: 10
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/security/cerebelly-domain-security.yml
+  href: https://artifacts.apis.io/cerebelly/security/cerebelly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cerebelly-domain-security.yml
@@ -60,57 +63,57 @@ common:
   type: Documentation
   url: https://cerebelly.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/llms/cerebelly-llms.txt
+  href: https://artifacts.apis.io/cerebelly/llms/cerebelly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cerebelly-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/well-known/cerebelly-well-known.yml
+  href: https://artifacts.apis.io/cerebelly/well-known/cerebelly-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cerebelly-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/authentication/cerebelly-authentication.yml
+  href: https://artifacts.apis.io/cerebelly/authentication/cerebelly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cerebelly-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/scopes/cerebelly-scopes.yml
+  href: https://artifacts.apis.io/cerebelly/scopes/cerebelly-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cerebelly-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/conventions/cerebelly-conventions.yml
+  href: https://artifacts.apis.io/cerebelly/conventions/cerebelly-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cerebelly-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/conventions/cerebelly-conventions.yml
+  href: https://artifacts.apis.io/cerebelly/conventions/cerebelly-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cerebelly-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/conformance/cerebelly-conformance.yml
+  href: https://artifacts.apis.io/cerebelly/conformance/cerebelly-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cerebelly-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/errors/cerebelly-problem-types.yml
+  href: https://artifacts.apis.io/cerebelly/errors/cerebelly-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cerebelly-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/lifecycle/cerebelly-lifecycle.yml
+  href: https://artifacts.apis.io/cerebelly/lifecycle/cerebelly-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cerebelly-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/data-model/cerebelly-data-model.yml
+  href: https://artifacts.apis.io/cerebelly/data-model/cerebelly-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cerebelly-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cerebelly/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -174,7 +177,7 @@ overview: 'Cerebelly is listed with 2 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Cerebelly''s developer surface includes documentation, authentication, engineering blog, support, signup flow, and 19 more developer resources.'
-random_paper: 5
+random_paper: 15
 scopes:
 - name: Cerebelly Scopes
   scope_count: 4
@@ -184,13 +187,13 @@ score:
   band: thin
   composite: 27.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 42.4
     catalog_earned_first_party: 0.0
     catalog_gap: 72.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
@@ -198,7 +201,7 @@ score:
     developer_ergonomics: 30.4
     discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 27.8
+  previous_composite: 27.9
   provenance:
     conformance: derived
     mcp: platform-generated
@@ -209,14 +212,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cerebelly/refs/heads/main/screenshots/cerebelly-2026-09-02T145033.png
+screenshot: https://apis.io/screenshots/cerebelly/cerebelly-2026-09-02T145033.png
 security:
 - kind: authentication
   name: Cerebelly Authentication
@@ -226,6 +229,14 @@ security:
   name: Cerebelly Domain Security
   slug: cerebelly-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: cerebelly-cart-and-checkout
+  slug: cerebelly-cart-and-checkout
+- name: cerebelly-catalog-sync
+  slug: cerebelly-catalog-sync
+- name: cerebelly-product-discovery
+  slug: cerebelly-product-discovery
 slug: cerebelly
 tags:
 - Company

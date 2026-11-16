@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 26.4
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: API for Foxit eSign documented at the Foxit Developer portal.
@@ -49,65 +63,65 @@ apis:
   description: The Pdf Services API from Foxit eSign — 3 operation(s) for pdf services.
   name: Foxit eSign Pdf Services API
   slug: foxit-pdf-services-api
-artifact_total: 15
+artifact_total: 17
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/well-known/foxit-foxit-security.txt
+  href: https://artifacts.apis.io/foxit/well-known/foxit-foxit-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/foxit-foxit-security.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/plans/foxit-plans-pricing.yml
+  href: https://artifacts.apis.io/foxit/plans/foxit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/foxit-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/rules/foxit-rules.yml
+  href: https://artifacts.apis.io/foxit/rules/foxit-rules.yml
   title: ''
   type: Spectral
   url: rules/foxit-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/json-ld/foxit-context.jsonld
+  href: https://artifacts.apis.io/foxit/json-ld/foxit-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/foxit-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/vocabulary/foxit-vocabulary.yml
+  href: https://artifacts.apis.io/foxit/vocabulary/foxit-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/foxit-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/data-model/foxit-data-model.yml
+  href: https://artifacts.apis.io/foxit/data-model/foxit-data-model.yml
   title: ''
   type: DataModel
   url: data-model/foxit-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/conformance/foxit-conformance.yml
+  href: https://artifacts.apis.io/foxit/conformance/foxit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/foxit-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/llms/foxit-llms.txt
+  href: https://artifacts.apis.io/foxit/llms/foxit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/foxit-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/well-known/foxit-security.txt
+  href: https://artifacts.apis.io/foxit/well-known/foxit-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/foxit-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/well-known/foxit-well-known.yml
+  href: https://artifacts.apis.io/foxit/well-known/foxit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/foxit-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/hosts/foxit-hosts.yml
+  href: https://artifacts.apis.io/foxit/hosts/foxit-hosts.yml
   title: ''
   type: Hosts
   url: hosts/foxit-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/vendors/foxit-vendors.yml
+  href: https://artifacts.apis.io/foxit/vendors/foxit-vendors.yml
   title: ''
   type: Vendors
   url: vendors/foxit-vendors.yml
@@ -156,12 +170,12 @@ common:
   type: Documentation
   url: https://developers.foxit.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/security/foxit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/foxit/security/foxit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/foxit-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/foxit/refs/heads/main/security/foxit-domain-security.yml
+  href: https://artifacts.apis.io/foxit/security/foxit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/foxit-domain-security.yml
@@ -179,6 +193,14 @@ coverage:
   state: unreadable
 created: '2026-10-16'
 description: Foxit Software provides Foxit eSign, a solution that enables organizations to send, sign, and manage agreements through secure electronic signature workflows. The service is offered to businesses that need to handle legally binding signatures, integrate signing into document processes, and manage signed documents at scale. It is part of Foxit’s broader portfolio of PDF and document productivity tools.
+finops:
+- has_sources: true
+  method: derived
+  name: Foxit Finops
+  primary_unit: user
+  service_category: ''
+  slug: foxit-finops
+  template: false
 image: https://www.foxit.com/assets/images/og-images/thumb.webp
 json_schemas:
 - name: GetDocumentGenerationApiApiidResponse
@@ -215,9 +237,12 @@ overview: 'Foxit eSign is listed with 5 APIs on the [APIs.io](https://apis.io/) 
   Foxit eSign''s developer surface includes support, signup flow, pricing, engineering blog, documentation, and 21 more developer resources.'
 plans:
 - name: Foxit Plans Pricing
-  plan_count: 1
+  plan_count: 2
   slug: foxit-plans-pricing
-random_paper: 4
+- name: Foxit Price Estimates
+  plan_count: 0
+  slug: foxit-price-estimates
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -232,22 +257,24 @@ rules:
     warn: 1
   slug: foxit-rules
 score:
-  band: developing
-  composite: 42.4
+  band: thin
+  composite: 34.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 65.8
+    artifact_dirs: 19
+    catalog_earned: 68.8
     catalog_earned_first_party: 8.0
-    catalog_gap: 49.3
+    catalog_gap: 46.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.6
   facets:
-    access_clarity: 73.7
+    access_clarity: 55.3
     contract_governance: 35.6
     contract_quality: 23.5
-    developer_ergonomics: 23.8
+    developer_ergonomics: 15.5
     discoverability: 69.6
-    operational_transparency: 26.3
+    operational_transparency: 13.2
+  previous_composite: 43.9
   provenance:
     conformance: first-party
     contracts:
@@ -265,12 +292,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 28.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/foxit/foxit-2026-11-03T132320.png
 security:
 - kind: domain-security
   name: Foxit Domain Security

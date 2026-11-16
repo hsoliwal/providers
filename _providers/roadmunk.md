@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid (free trial) · Open access
   onboarding: open
   pricing: paid
   public: true
   source:
   - plans
+  - security
   - '{''url'': ''https://roadmunk.com'', ''status'': 308, ''note'': ''declared website redirects to https://www.tempo.io/products/roadmaps — a different registrable domain (roadmunk.com -> tempo.io), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: true
   try_now: true
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Roadmunk (Strategic Roadmaps) GraphQL API provides programmatic access to roadmaps, items, milestones, key dates, portfolios, feedback, ideas, customers, contacts, accounts, and user management. T
@@ -43,12 +50,12 @@ apis:
 artifact_total: 9
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/roadmunk/refs/heads/main/security/roadmunk-trust-center.yml
+  href: https://artifacts.apis.io/roadmunk/security/roadmunk-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/roadmunk-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/roadmunk/refs/heads/main/security/roadmunk-domain-security.yml
+  href: https://artifacts.apis.io/roadmunk/security/roadmunk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/roadmunk-domain-security.yml
@@ -85,17 +92,17 @@ common:
   type: X
   url: https://x.com/roadmunkapp
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/roadmunk/refs/heads/main/plans/roadmunk-plans-pricing.yml
+  href: https://artifacts.apis.io/roadmunk/plans/roadmunk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/roadmunk-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/roadmunk/refs/heads/main/rate-limits/roadmunk-rate-limits.yml
+  href: https://artifacts.apis.io/roadmunk/rate-limits/roadmunk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/roadmunk-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/roadmunk/refs/heads/main/finops/roadmunk-finops.yml
+  href: https://artifacts.apis.io/roadmunk/finops/roadmunk-finops.yml
   title: ''
   type: FinOps
   url: finops/roadmunk-finops.yml
@@ -139,7 +146,7 @@ plans:
 - name: Roadmunk Plans Pricing
   plan_count: 4
   slug: roadmunk-plans-pricing
-random_paper: 7
+random_paper: 1
 rate_limits:
 - limit_count: 2
   name: Roadmunk Rate Limits
@@ -154,7 +161,7 @@ score:
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
@@ -162,7 +169,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 37.1
+  previous_composite: 29.7
   provenance:
     mcp: first-party
   regulatory:
@@ -171,14 +178,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/roadmunk/refs/heads/main/screenshots/roadmunk-2026-06-20T193137.png
+screenshot: https://apis.io/screenshots/roadmunk/roadmunk-2026-06-20T193137.png
 security:
 - kind: domain-security
   name: Roadmunk Domain Security

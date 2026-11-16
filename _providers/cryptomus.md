@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 33.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -86,11 +89,8 @@ apis:
   description: Test and manage webhook notifications
   name: Cryptomus Webhooks API
   slug: cryptomus-webhooks-api
-artifact_total: 30
+artifact_total: 29
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cryptomus Exchange API
   slug: open-cryptomus-exchange-api
@@ -119,17 +119,17 @@ common:
   type: BlogRSS
   url: https://cryptomus.com/api/generate-feed
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cryptomus/refs/heads/main/agentic-access/cryptomus-agentic-access.yml
+  href: https://artifacts.apis.io/cryptomus/agentic-access/cryptomus-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cryptomus-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cryptomus/refs/heads/main/security/cryptomus-domain-security.yml
+  href: https://artifacts.apis.io/cryptomus/security/cryptomus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cryptomus-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cryptomus/refs/heads/main/authentication/cryptomus-authentication.yml
+  href: https://artifacts.apis.io/cryptomus/authentication/cryptomus-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cryptomus-authentication.yml
@@ -233,7 +233,7 @@ plans:
 - name: Plans
   plan_count: 4
   slug: plans
-random_paper: 2
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -254,13 +254,13 @@ score:
   band: thin
   composite: 32.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 53.7
     catalog_earned_first_party: 0.0
     catalog_gap: 61.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.2
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -268,7 +268,7 @@ score:
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 38.1
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     contracts:
@@ -282,13 +282,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cryptomus/refs/heads/main/screenshots/cryptomus-2026-06-20T175312.png
+screenshot: https://apis.io/screenshots/cryptomus/cryptomus-2026-06-20T175312.png
 security:
 - kind: authentication
   name: Cryptomus Authentication

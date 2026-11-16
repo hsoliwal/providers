@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -76,11 +82,8 @@ apis:
   description: The Apis API from APIIDA — 1 operation(s) for apis.
   name: APIIDA APIS API
   slug: apiida-apis-api
-artifact_total: 45
+artifact_total: 44
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: APIIDA API Control Plane Alarms API
   slug: open-apiida-alarms-api
@@ -107,22 +110,22 @@ collections:
   slug: open-apiida-versions-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/plans/apiida-plans-pricing.yml
+  href: https://artifacts.apis.io/apiida/plans/apiida-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apiida-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/rate-limits/apiida-rate-limits.yml
+  href: https://artifacts.apis.io/apiida/rate-limits/apiida-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apiida-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/finops/apiida-finops.yml
+  href: https://artifacts.apis.io/apiida/finops/apiida-finops.yml
   title: ''
   type: FinOps
   url: finops/apiida-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/capabilities/apiida-capability-edges.yml
+  href: https://artifacts.apis.io/apiida/capabilities/apiida-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/apiida-capability-edges.yml
@@ -131,17 +134,17 @@ common:
   type: ParentCompany
   url: https://boomi.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/agentic-access/apiida-agentic-access.yml
+  href: https://artifacts.apis.io/apiida/agentic-access/apiida-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apiida-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/security/apiida-domain-security.yml
+  href: https://artifacts.apis.io/apiida/security/apiida-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apiida-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/authentication/apiida-authentication.yml
+  href: https://artifacts.apis.io/apiida/authentication/apiida-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apiida-authentication.yml
@@ -192,7 +195,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apiida Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apiida-finops
   template: true
@@ -238,7 +241,7 @@ plans:
 - name: Apiida Plans Pricing
   plan_count: 3
   slug: apiida-plans-pricing
-random_paper: 0
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Apiida Rate Limits
@@ -269,23 +272,23 @@ rules:
   slug: apiida-spectral-rules
 score:
   band: thin
-  composite: 31.4
+  composite: 31.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 64.5
     catalog_earned_first_party: 0.0
     catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.5
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
     contract_quality: 65.6
-    developer_ergonomics: 21.4
+    developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.9
+  previous_composite: 31.4
   provenance:
     agentic_access: derived
     contracts:
@@ -299,13 +302,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apiida/refs/heads/main/screenshots/apiida-2026-06-20T172240.png
+screenshot: https://apis.io/screenshots/apiida/apiida-2026-06-20T172240.png
 security:
 - kind: authentication
   name: Apiida Authentication

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Enterprise
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: enterprise
+  pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 26.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -63,11 +67,8 @@ apis:
   description: Service health and operational endpoints.
   name: Dexterity System API
   slug: dexterity-system-api
-artifact_total: 59
+artifact_total: 58
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dexterity Foresight Packing Challenge API
   slug: open-dexterity-foresight-packing-challenge
@@ -85,12 +86,12 @@ collections:
   slug: open-dexterity-system-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/agentic-access/dexterity-agentic-access.yml
+  href: https://artifacts.apis.io/dexterity/agentic-access/dexterity-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dexterity-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/security/dexterity-domain-security.yml
+  href: https://artifacts.apis.io/dexterity/security/dexterity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dexterity-domain-security.yml
@@ -139,32 +140,32 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/dexterityinc
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/rules/dexterity-rules.yml
+  href: https://artifacts.apis.io/dexterity/rules/dexterity-rules.yml
   title: ''
   type: SpectralRules
   url: rules/dexterity-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/vocabulary/dexterity-vocabulary.yml
+  href: https://artifacts.apis.io/dexterity/vocabulary/dexterity-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dexterity-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/json-ld/dexterity-context.jsonld
+  href: https://artifacts.apis.io/dexterity/json-ld/dexterity-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/dexterity-context.jsonld
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/plans/dexterity-plans-pricing.yml
+  href: https://artifacts.apis.io/dexterity/plans/dexterity-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dexterity-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/rate-limits/dexterity-rate-limits.yml
+  href: https://artifacts.apis.io/dexterity/rate-limits/dexterity-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dexterity-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/finops/dexterity-finops.yml
+  href: https://artifacts.apis.io/dexterity/finops/dexterity-finops.yml
   title: ''
   type: FinOps
   url: finops/dexterity-finops.yml
@@ -280,7 +281,7 @@ plans:
 - name: Dexterity Plans Pricing
   plan_count: 2
   slug: dexterity-plans-pricing
-random_paper: 4
+random_paper: 10
 rate_limits:
 - limit_count: 3
   name: Dexterity Rate Limits
@@ -313,13 +314,13 @@ score:
   band: thin
   composite: 37.2
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 68.0
     catalog_earned_first_party: 0.0
     catalog_gap: 47.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 27.3
@@ -327,7 +328,7 @@ score:
     developer_ergonomics: 42.9
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 44.1
+  previous_composite: 37.2
   provenance:
     agentic_access: derived
     contracts:
@@ -341,13 +342,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dexterity/refs/heads/main/screenshots/dexterity-2026-06-20T180009.png
+screenshot: https://apis.io/screenshots/dexterity/dexterity-2026-06-20T180009.png
 security:
 - kind: domain-security
   name: Dexterity Domain Security

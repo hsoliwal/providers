@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.6
-  scored_at: '2026-10-17'
+  score: 33.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 147
   human_in_the_loop: 0
@@ -103,11 +109,6 @@ apis:
   description: The Custom Layouts API from Aha.io — 2 operation(s) for custom layouts.
   name: Aha.io Custom Layouts API
   slug: aha-custom-layouts-api
-- baseURL: https://{subdomain}.aha.io/api/v1
-  baseurl_source: declared
-  description: The Custom pivots API from Aha.io — 1 operation(s) for custom pivots.
-  name: Aha.io Custom pivots API
-  slug: aha-custom-pivots-api
 - baseURL: https://{subdomain}.aha.io/api/v1
   baseurl_source: declared
   description: The Custom table record links API from Aha.io — 8 operation(s) for custom table record links.
@@ -338,11 +339,48 @@ apis:
   description: The Workflows API from Aha.io — 2 operation(s) for workflows.
   name: Aha.io Workflows API
   slug: aha-workflows-api
-artifact_total: 127
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Assistant usage API from Aha.io — 1 operation(s) for assistant usage.
+  name: Aha.io Assistant usage API
+  slug: aha-assistant-usage-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Custom reports API from Aha.io — 1 operation(s) for custom reports.
+  name: Aha.io Custom reports API
+  slug: aha-custom-reports-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Discovery groups API from Aha.io — 2 operation(s) for discovery groups.
+  name: Aha.io Discovery groups API
+  slug: aha-discovery-groups-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Idea themes API from Aha.io — 2 operation(s) for idea themes.
+  name: Aha.io Idea themes API
+  slug: aha-idea-themes-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Integration change jobs API from Aha.io — 1 operation(s) for integration change jobs.
+  name: Aha.io Integration change jobs API
+  slug: aha-integration-change-jobs-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Knowledge base pages API from Aha.io — 2 operation(s) for knowledge base pages.
+  name: Aha.io Knowledge base pages API
+  slug: aha-knowledge-base-pages-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Knowledge bases API from Aha.io — 1 operation(s) for knowledge bases.
+  name: Aha.io Knowledge bases API
+  slug: aha-knowledge-bases-api
+- baseURL: https://{subdomain}.aha.io/api/v1
+  baseurl_source: declared
+  description: The Workflow status times API from Aha.io — 10 operation(s) for workflow status times.
+  name: Aha.io Workflow status times API
+  slug: aha-workflow-status-times-api
+artifact_total: 135
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Aha! Account backups API
   slug: open-aha-account-backups-api
@@ -525,37 +563,37 @@ collections:
   slug: open-aha
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/rate-limits/aha-rate-limits.yml
+  href: https://artifacts.apis.io/aha/rate-limits/aha-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aha-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/plans/aha-plans-pricing.yml
+  href: https://artifacts.apis.io/aha/plans/aha-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aha-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/capabilities/aha-capability-edges.yml
+  href: https://artifacts.apis.io/aha/capabilities/aha-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/aha-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/agentic-access/aha-agentic-access.yml
+  href: https://artifacts.apis.io/aha/agentic-access/aha-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/aha-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/security/aha-domain-security.yml
+  href: https://artifacts.apis.io/aha/security/aha-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aha-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/authentication/aha-authentication.yml
+  href: https://artifacts.apis.io/aha/authentication/aha-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aha-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/scopes/aha-scopes.yml
+  href: https://artifacts.apis.io/aha/scopes/aha-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/aha-scopes.yml
@@ -589,13 +627,24 @@ common:
   url: https://www.aha.io/signup
 created: '2026-05-11'
 description: Aha! is a product development suite that combines roadmapping, idea management, requirements specification, whiteboarding, knowledge bases, and development tracking into a single platform for product teams. The suite spans Aha! Roadmaps, Aha! Ideas, Aha! Whiteboards, Aha! Knowledge, and Aha! Develop with integrations into engineering tools like Jira and GitHub. The Aha! REST API offers full CRUD access to products, releases, features, ideas, and integrations with OAuth 2.0, API key, and Basic authentication options.
+finops:
+- has_sources: true
+  method: derived
+  name: Aha Finops
+  primary_unit: user
+  service_category: ''
+  slug: aha-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aha.png
 layout: provider
 modified: '2026-05-11'
 name: Aha.io
 nav: Providers
 network: true
-overview: 'Aha.io publishes 59 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account backups API, Attachments API, Audits API, and 56 more. Tagged areas include Product Management, Roadmapping, Idea Management, Product Development, and Requirements.
+overview: 'Aha.io publishes 66 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account backups API, Attachments API, Audits API, and 63 more. Tagged areas include Product Management, Roadmapping, Idea Management, Product Development, and Requirements.
+
+
+  The Aha.io catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Aha.io''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, and 9 more developer resources.'
@@ -606,11 +655,24 @@ plans:
 - name: Aha Price Estimates
   plan_count: 0
   slug: aha-price-estimates
-random_paper: 12
+random_paper: 10
 rate_limits:
 - limit_count: 3
   name: Aha Rate Limits
   slug: aha-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Aha.io API Rules
+  rule_count: 73
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 3
+    warn: 12
+  slug: aha-rules
 scopes:
 - name: Aha Scopes
   scope_count: 0
@@ -618,43 +680,43 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 40.8
+  composite: 44.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 61.0
+    artifact_dirs: 18
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.7
   facets:
-    access_clarity: 55.3
-    contract_governance: 0.0
-    contract_quality: 50.0
+    access_clarity: 63.2
+    contract_governance: 13.6
+    contract_quality: 52.8
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 40.7
+  previous_composite: 44.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 59
+      marker_coverage: 52.4
+      total: 126
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/aha/refs/heads/main/screenshots/aha-2026-06-20T170530.png
+screenshot: https://apis.io/screenshots/aha/aha-2026-06-20T170530.png
 security:
 - kind: authentication
   name: Aha Authentication

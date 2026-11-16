@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 17
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/american-equity-investment-life-holding/refs/heads/main/plans/american-equity-investment-life-holding-plans-pricing.yml
+  href: https://artifacts.apis.io/american-equity-investment-life-holding/plans/american-equity-investment-life-holding-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/american-equity-investment-life-holding-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/american-equity-investment-life-holding/refs/heads/main/rate-limits/american-equity-investment-life-holding-rate-limits.yml
+  href: https://artifacts.apis.io/american-equity-investment-life-holding/rate-limits/american-equity-investment-life-holding-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/american-equity-investment-life-holding-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-equity-investment-life-holding/refs/heads/main/security/american-equity-investment-life-holding-domain-security.yml
+  href: https://artifacts.apis.io/american-equity-investment-life-holding/security/american-equity-investment-life-holding-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/american-equity-investment-life-holding-domain-security.yml
@@ -72,12 +77,12 @@ common:
   type: Security
   url: https://www.american-equity.com/security-disclosure
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-equity-investment-life-holding/refs/heads/main/security/american-equity-investment-life-holding-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/american-equity-investment-life-holding/security/american-equity-investment-life-holding-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/american-equity-investment-life-holding-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-equity-investment-life-holding/refs/heads/main/llms/american-equity-investment-life-holding-llms.txt
+  href: https://artifacts.apis.io/american-equity-investment-life-holding/llms/american-equity-investment-life-holding-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/american-equity-investment-life-holding-llms.txt
@@ -177,7 +182,7 @@ press:
 - date: ''
   title: American Equity Recognized for Award-Winning Customer ...
   url: https://www.businesswire.com/news/home/20221031005652/en/American-Equity-Recognized-for-Award-Winning-Customer-Satisfaction-Among-Annuity-Providers-in-the-U.S.-by-J.D.-Power
-random_paper: 5
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: American Equity Investment Life Holding Rate Limits
@@ -186,7 +191,7 @@ score:
   band: emerging
   composite: 17.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -212,14 +217,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 17.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/american-equity-investment-life-holding/refs/heads/main/screenshots/american-equity-investment-life-holding-2026-06-20T171912.png
+screenshot: https://apis.io/screenshots/american-equity-investment-life-holding/american-equity-investment-life-holding-2026-06-20T171912.png
 security:
 - kind: domain-security
   name: American Equity Investment Life Holding Domain Security

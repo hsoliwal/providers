@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 17.6
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: Chronogg (operating as Nexus) provides a Support-a-Creator platform with APIs for managing creator programs, payouts, and metadata.
@@ -82,57 +96,57 @@ apis:
 artifact_total: 21
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/rules/chronogg-rules.yml
+  href: https://artifacts.apis.io/chronogg/rules/chronogg-rules.yml
   title: ''
   type: Spectral
   url: rules/chronogg-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/json-ld/chronogg-context.jsonld
+  href: https://artifacts.apis.io/chronogg/json-ld/chronogg-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chronogg-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/vocabulary/chronogg-vocabulary.yml
+  href: https://artifacts.apis.io/chronogg/vocabulary/chronogg-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/chronogg-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/data-model/chronogg-data-model.yml
+  href: https://artifacts.apis.io/chronogg/data-model/chronogg-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chronogg-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/authentication/chronogg-authentication.yml
+  href: https://artifacts.apis.io/chronogg/authentication/chronogg-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chronogg-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/conformance/chronogg-conformance.yml
+  href: https://artifacts.apis.io/chronogg/conformance/chronogg-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chronogg-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/llms/chronogg-llms.txt
+  href: https://artifacts.apis.io/chronogg/llms/chronogg-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chronogg-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/well-known/chronogg-status-security.txt
+  href: https://artifacts.apis.io/chronogg/well-known/chronogg-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/chronogg-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/well-known/chronogg-well-known.yml
+  href: https://artifacts.apis.io/chronogg/well-known/chronogg-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/chronogg-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/hosts/chronogg-hosts.yml
+  href: https://artifacts.apis.io/chronogg/hosts/chronogg-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chronogg-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/vendors/chronogg-vendors.yml
+  href: https://artifacts.apis.io/chronogg/vendors/chronogg-vendors.yml
   title: ''
   type: Vendors
   url: vendors/chronogg-vendors.yml
@@ -165,7 +179,7 @@ common:
   type: Documentation
   url: https://docs.nexus.gg/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chronogg/refs/heads/main/security/chronogg-domain-security.yml
+  href: https://artifacts.apis.io/chronogg/security/chronogg-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chronogg-domain-security.yml
@@ -220,7 +234,7 @@ overview: 'Chronogg is listed with 11 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Chronogg''s developer surface includes authentication, support, engineering blog, getting-started guide, documentation, and 15 more developer resources.'
-random_paper: 19
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -235,22 +249,24 @@ rules:
     warn: 1
   slug: chronogg-rules
 score:
-  band: thin
-  composite: 29.7
+  band: emerging
+  composite: 24.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 52.8
     catalog_earned_first_party: 0.0
     catalog_gap: 62.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.6
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 23.6
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 60.7
-    operational_transparency: 15.8
+    operational_transparency: 18.4
+  previous_composite: 31.1
   provenance:
     conformance: derived
     contracts:
@@ -264,12 +280,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/chronogg/chronogg-2026-11-03T124116.png
 security:
 - kind: authentication
   name: Chronogg Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mona-ai/refs/heads/main/security/mona-ai-domain-security.yml
+  href: https://artifacts.apis.io/mona-ai/security/mona-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mona-ai-domain-security.yml
@@ -78,17 +82,17 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/mona-ai-gmbh
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mona-ai/refs/heads/main/llms/mona-ai-llms.txt
+  href: https://artifacts.apis.io/mona-ai/llms/mona-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mona-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mona-ai/refs/heads/main/mcp/mona-ai-mcp.yml
+  href: https://artifacts.apis.io/mona-ai/mcp/mona-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/mona-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mona-ai/refs/heads/main/well-known/mona-ai-well-known.yml
+  href: https://artifacts.apis.io/mona-ai/well-known/mona-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mona-ai-well-known.yml
@@ -108,12 +112,12 @@ overview: 'Mona Ai is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Mona Ai''s developer surface includes engineering blog, pricing, support, and 10 more developer resources.'
-random_paper: 14
+random_paper: 2
 score:
   band: emerging
   composite: 11.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -144,14 +148,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mona-ai/refs/heads/main/screenshots/mona-ai-2026-08-07T184132.png
+screenshot: https://apis.io/screenshots/mona-ai/mona-ai-2026-08-07T184132.png
 security:
 - kind: domain-security
   name: Mona Ai Domain Security

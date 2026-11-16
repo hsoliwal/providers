@@ -1,30 +1,44 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
-    protected_resource_metadata: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
+    protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 40.9
-  scored_at: '2026-10-17'
+  score: 31.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 1
@@ -39,65 +53,75 @@ apis:
   description: The External API from Cloudidr — 12 operation(s) for external.
   name: Cloudidr External API
   slug: cloudidr-external-api
-artifact_total: 6
+artifact_total: 7
 common:
+- group: commercial
+  href: https://artifacts.apis.io/cloudidr/finops/cloudidr-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/cloudidr-finops.yml
+- group: design
+  href: https://artifacts.apis.io/cloudidr/vocabulary/cloudidr-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/cloudidr-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/agentic-access/cloudidr-agentic-access.yml
+  href: https://artifacts.apis.io/cloudidr/agentic-access/cloudidr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudidr-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/plans/cloudidr-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudidr/plans/cloudidr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudidr-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/rules/cloudidr-rules.yml
+  href: https://artifacts.apis.io/cloudidr/rules/cloudidr-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudidr-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/authentication/cloudidr-authentication.yml
+  href: https://artifacts.apis.io/cloudidr/authentication/cloudidr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudidr-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/errors/cloudidr-problem-types.yml
+  href: https://artifacts.apis.io/cloudidr/errors/cloudidr-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cloudidr-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/conformance/cloudidr-conformance.yml
+  href: https://artifacts.apis.io/cloudidr/conformance/cloudidr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudidr-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/overlays/cloudidr-openapi-overlay.yml
+  href: https://artifacts.apis.io/cloudidr/overlays/cloudidr-openapi-overlay.yml
   title: ''
   type: Overlay
   url: overlays/cloudidr-openapi-overlay.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/llms/cloudidr-llms.txt
+  href: https://artifacts.apis.io/cloudidr/llms/cloudidr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudidr-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/a2a/cloudidr-a2a.yml
+  href: https://artifacts.apis.io/cloudidr/a2a/cloudidr-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/cloudidr-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/well-known/cloudidr-well-known.yml
+  href: https://artifacts.apis.io/cloudidr/well-known/cloudidr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudidr-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/hosts/cloudidr-hosts.yml
+  href: https://artifacts.apis.io/cloudidr/hosts/cloudidr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudidr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/vendors/cloudidr-vendors.yml
+  href: https://artifacts.apis.io/cloudidr/vendors/cloudidr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudidr-vendors.yml
@@ -134,7 +158,7 @@ common:
   type: APIReference
   url: https://docs.cloudidr.com/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudidr/refs/heads/main/security/cloudidr-domain-security.yml
+  href: https://artifacts.apis.io/cloudidr/security/cloudidr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudidr-domain-security.yml
@@ -153,6 +177,14 @@ coverage:
   state: none
 created: '2026-10-16'
 description: Cloudidr provides a cloud-based identity and access management platform that enables enterprises to securely manage user authentication, authorization, and lifecycle across multiple applications and services. The solution offers features such as single sign‑on (SSO), multi‑factor authentication (MFA), role‑based access control, and automated provisioning. Designed for scalability and compliance, Cloudidr helps organizations meet security standards while simplifying user management and improving operational efficiency.
+finops:
+- has_sources: true
+  method: derived
+  name: Cloudidr Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: cloudidr-finops
+  template: false
 image: https://framerusercontent.com/assets/F2tSiREZaPKoP6x8PGivmwaUFs4.png
 layout: provider
 modified: '2026-10-16'
@@ -165,42 +197,44 @@ overview: 'Cloudidr publishes 1 API contract indexed on the [APIs.io](https://ap
   The Cloudidr catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Cloudidr''s developer surface includes authentication, pricing, engineering blog, signup flow, getting-started guide, documentation, API reference, and 15 more developer resources.'
+  Cloudidr''s developer surface includes authentication, pricing, engineering blog, signup flow, getting-started guide, documentation, API reference, and 17 more developer resources.'
 plans:
 - name: Cloudidr Plans Pricing
   plan_count: 4
   slug: cloudidr-plans-pricing
-random_paper: 18
+random_paper: 14
 rules:
 - authorship: generated
-  effective_rule_count: 53
+  effective_rule_count: 92
   extends:
   - spectral:oas
   name: Cloudidr API Rules
-  rule_count: 12
+  rule_count: 51
   severity_counts:
-    error: 7
+    error: 43
     hint: 0
     info: 1
-    warn: 4
+    warn: 7
   slug: cloudidr-rules
 score:
   band: developing
-  composite: 46.6
+  composite: 40.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 53.5
+    artifact_dirs: 22
+    catalog_earned: 57.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 61.5
+    catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.7
   facets:
-    access_clarity: 76.3
-    contract_governance: 18.2
+    access_clarity: 61.8
+    contract_governance: 22.0
     contract_quality: 51.2
-    developer_ergonomics: 42.9
+    developer_ergonomics: 27.4
     discoverability: 73.2
     operational_transparency: 0.0
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -215,12 +249,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cloudidr/cloudidr-2026-11-03T124519.png
 security:
 - kind: authentication
   name: Cloudidr Authentication

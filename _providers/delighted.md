@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -13,7 +16,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -76,11 +82,8 @@ apis:
   description: Manage unsubscribe lists
   name: Delighted Unsubscribes API
   slug: delighted-unsubscribes-api
-artifact_total: 27
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Delighted Autopilot API
   slug: open-delighted-autopilot-api
@@ -101,22 +104,22 @@ collections:
   slug: open-delighted-unsubscribes-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/capabilities/delighted-capability-edges.yml
+  href: https://artifacts.apis.io/delighted/capabilities/delighted-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/delighted-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/agentic-access/delighted-agentic-access.yml
+  href: https://artifacts.apis.io/delighted/agentic-access/delighted-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/delighted-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/security/delighted-domain-security.yml
+  href: https://artifacts.apis.io/delighted/security/delighted-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/delighted-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/authentication/delighted-authentication.yml
+  href: https://artifacts.apis.io/delighted/authentication/delighted-authentication.yml
   title: ''
   type: Authentication
   url: authentication/delighted-authentication.yml
@@ -149,17 +152,17 @@ common:
   type: X
   url: https://twitter.com/delighted
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/plans/delighted-plans-pricing.yml
+  href: https://artifacts.apis.io/delighted/plans/delighted-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/delighted-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/rate-limits/delighted-rate-limits.yml
+  href: https://artifacts.apis.io/delighted/rate-limits/delighted-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/delighted-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/finops/delighted-finops.yml
+  href: https://artifacts.apis.io/delighted/finops/delighted-finops.yml
   title: ''
   type: FinOps
   url: finops/delighted-finops.yml
@@ -204,7 +207,7 @@ modified: '2026-06-13'
 name: Delighted
 nav: Providers
 network: true
-overview: 'Delighted publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Autopilot API, Bounces API, Metrics API, and 3 more. Tagged areas include NPS, CSAT, Customer Satisfaction, CES, and Customer Effort Score.
+overview: 'Delighted publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Autopilot API, Bounces API, Metrics API, and 3 more. Tagged areas include NPS, CSAT, CES, Customer Effort Score, and Surveys.
 
 
   The Delighted catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -215,7 +218,7 @@ plans:
 - name: Delighted Plans Pricing
   plan_count: 6
   slug: delighted-plans-pricing
-random_paper: 14
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Delighted Rate Limits
@@ -234,27 +237,27 @@ rules:
   slug: delighted-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 24.5
+  composite: 23.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 55.2
+    contract_quality: 52.2
     developer_ergonomics: 0.0
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 30.1
+  previous_composite: 23.7
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 6
@@ -264,13 +267,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/delighted/refs/heads/main/screenshots/delighted-2026-06-20T175852.png
+screenshot: https://apis.io/screenshots/delighted/delighted-2026-06-20T175852.png
 security:
 - kind: authentication
   name: Delighted Authentication
@@ -284,7 +287,6 @@ slug: delighted
 tags:
 - NPS
 - CSAT
-- Customer Satisfaction
 - CES
 - Customer Effort Score
 - Surveys

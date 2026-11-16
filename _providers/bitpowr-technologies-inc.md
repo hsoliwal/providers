@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-10-17'
+  score: 39.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -95,15 +98,12 @@ apis:
   description: The Utils API from BitPowr Technologies, Inc. — 4 operation(s) for utils.
   name: BitPowr Technologies, Inc. Utils API
   slug: bitpowr-technologies-inc-utils-api
-artifact_total: 25
+artifact_total: 27
 asyncapis:
 - description: ''
   name: Bitpowr Technologies Inc Webhooks
   slug: bitpowr-technologies-inc-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Bitpowr Reference Account API
   slug: open-bitpowr-technologies-inc-account-api
@@ -136,7 +136,7 @@ collections:
   slug: open-bitpowr-technologies-inc-utils-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/overlays/bitpowr-technologies-inc-openapi-overlay.yaml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/overlays/bitpowr-technologies-inc-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bitpowr-technologies-inc-openapi-overlay.yaml
@@ -161,17 +161,17 @@ common:
   type: GettingStarted
   url: https://docs.bitpowr.com/docs/getting-started-in-5-minutes
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/authentication/bitpowr-technologies-inc-authentication.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/authentication/bitpowr-technologies-inc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bitpowr-technologies-inc-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/conventions/bitpowr-technologies-inc-conventions.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/conventions/bitpowr-technologies-inc-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bitpowr-technologies-inc-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/lifecycle/bitpowr-technologies-inc-lifecycle.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/lifecycle/bitpowr-technologies-inc-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bitpowr-technologies-inc-lifecycle.yml
@@ -180,47 +180,47 @@ common:
   type: StatusPage
   url: https://bitpowr.betteruptime.com/
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/sandbox/bitpowr-technologies-inc-sandbox.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/sandbox/bitpowr-technologies-inc-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bitpowr-technologies-inc-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/asyncapi/bitpowr-technologies-inc-webhooks.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/asyncapi/bitpowr-technologies-inc-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bitpowr-technologies-inc-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/mcp/bitpowr-technologies-inc-mcp.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/mcp/bitpowr-technologies-inc-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bitpowr-technologies-inc-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/agentic-access/bitpowr-technologies-inc-agentic-access.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/agentic-access/bitpowr-technologies-inc-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bitpowr-technologies-inc-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/conformance/bitpowr-technologies-inc-conformance.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/conformance/bitpowr-technologies-inc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitpowr-technologies-inc-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/security/bitpowr-technologies-inc-domain-security.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/security/bitpowr-technologies-inc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitpowr-technologies-inc-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/llms/bitpowr-technologies-inc-llms.txt
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/llms/bitpowr-technologies-inc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitpowr-technologies-inc-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/packages/bitpowr-technologies-inc-packages.yml
+  href: https://artifacts.apis.io/bitpowr-technologies-inc/packages/bitpowr-technologies-inc-packages.yml
   title: ''
   type: Packages
   url: packages/bitpowr-technologies-inc-packages.yml
@@ -259,30 +259,43 @@ network: true
 overview: 'BitPowr Technologies publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including BitPowr Technologies, Inc. Account API, BitPowr Technologies, Inc. Address API, BitPowr Technologies, Inc. Assets API, and 7 more. Tagged areas include Company, Cryptocurrency, Blockchain, Digital Assets, and Wallet Infrastructure.
 
 
-  The BitPowr Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The BitPowr Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   BitPowr Technologies'' developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, engineering blog, support, and 18 more developer resources.'
-random_paper: 21
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: BitPowr Technologies API Rules
+  rule_count: 60
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 15
+  slug: bitpowr-technologies-inc-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 33.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.9
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 8.1
-    developer_ergonomics: 45.8
+    developer_ergonomics: 55.4
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 29.7
+  previous_composite: 31.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -299,13 +312,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/bitpowr-technologies-inc/refs/heads/main/screenshots/bitpowr-technologies-inc-2026-07-25T203206.png
+screenshot: https://apis.io/screenshots/bitpowr-technologies-inc/bitpowr-technologies-inc-2026-07-25T203206.png
 security:
 - kind: authentication
   name: Bitpowr Technologies Inc Authentication
@@ -315,6 +328,12 @@ security:
   name: Bitpowr Technologies Inc Domain Security
   slug: bitpowr-technologies-inc-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create a Bitpowr wallet and generate a deposit address
+  slug: bitpowr-technologies-inc-create-wallet-and-address
+- name: Estimate and send a Bitpowr transaction
+  slug: bitpowr-technologies-inc-estimate-and-send-transaction
 slug: bitpowr-technologies-inc
 tags:
 - Company

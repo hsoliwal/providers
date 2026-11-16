@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -39,47 +52,47 @@ apis:
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/agentic-access/alyawmgold-agentic-access.yml
+  href: https://artifacts.apis.io/alyawmgold/agentic-access/alyawmgold-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/alyawmgold-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/rules/alyawmgold-rules.yml
+  href: https://artifacts.apis.io/alyawmgold/rules/alyawmgold-rules.yml
   title: ''
   type: Spectral
   url: rules/alyawmgold-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/json-ld/alyawmgold-context.jsonld
+  href: https://artifacts.apis.io/alyawmgold/json-ld/alyawmgold-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/alyawmgold-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/vocabulary/alyawmgold-vocabulary.yml
+  href: https://artifacts.apis.io/alyawmgold/vocabulary/alyawmgold-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/alyawmgold-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/data-model/alyawmgold-data-model.yml
+  href: https://artifacts.apis.io/alyawmgold/data-model/alyawmgold-data-model.yml
   title: ''
   type: DataModel
   url: data-model/alyawmgold-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/errors/alyawmgold-problem-types.yml
+  href: https://artifacts.apis.io/alyawmgold/errors/alyawmgold-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/alyawmgold-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/conformance/alyawmgold-conformance.yml
+  href: https://artifacts.apis.io/alyawmgold/conformance/alyawmgold-conformance.yml
   title: ''
   type: Conformance
   url: conformance/alyawmgold-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/hosts/alyawmgold-hosts.yml
+  href: https://artifacts.apis.io/alyawmgold/hosts/alyawmgold-hosts.yml
   title: ''
   type: Hosts
   url: hosts/alyawmgold-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/vendors/alyawmgold-vendors.yml
+  href: https://artifacts.apis.io/alyawmgold/vendors/alyawmgold-vendors.yml
   title: ''
   type: Vendors
   url: vendors/alyawmgold-vendors.yml
@@ -100,7 +113,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/alyawmgold
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/security/alyawmgold-domain-security.yml
+  href: https://artifacts.apis.io/alyawmgold/security/alyawmgold-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alyawmgold-domain-security.yml
@@ -151,23 +164,23 @@ rules:
   slug: alyawmgold-rules
 score:
   band: emerging
-  composite: 16.9
+  composite: 13.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 42.8
     catalog_earned_first_party: 0.0
     catalog_gap: 72.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -3.8
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 6.7
-    developer_ergonomics: 7.1
+    developer_ergonomics: 3.6
     discoverability: 57.1
-    operational_transparency: 5.3
-  previous_composite: 16.8
+    operational_transparency: 2.6
+  previous_composite: 16.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -177,15 +190,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/alyawmgold/refs/heads/main/screenshots/alyawmgold-2026-10-11T093804.png
+screenshot: https://apis.io/screenshots/alyawmgold/alyawmgold-2026-10-11T093804.png
 security:
 - kind: domain-security
   name: Alyawmgold Domain Security

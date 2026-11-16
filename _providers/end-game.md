@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.9
-  scored_at: '2026-10-17'
+  score: 49.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -59,11 +65,8 @@ apis:
   description: The Protected Static API from Endgame — 2 operation(s) for protected static.
   name: Endgame Protected Static API
   slug: end-game-protected-static-api
-artifact_total: 14
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Endgame Public Threads API
   slug: open-end-game-threads-api
@@ -73,22 +76,22 @@ common:
   type: License
   url: https://github.com/Endgame-Labs/endgame-cli/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/security/end-game-trust-center.yml
+  href: https://artifacts.apis.io/end-game/security/end-game-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/end-game-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/security/end-game-domain-security.yml
+  href: https://artifacts.apis.io/end-game/security/end-game-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/end-game-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/agentic-access/end-game-agentic-access.yml
+  href: https://artifacts.apis.io/end-game/agentic-access/end-game-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/end-game-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/authentication/end-game-authentication.yml
+  href: https://artifacts.apis.io/end-game/authentication/end-game-authentication.yml
   title: ''
   type: Authentication
   url: authentication/end-game-authentication.yml
@@ -117,17 +120,17 @@ common:
   type: Authentication
   url: https://docs.endgame.io/api-reference/authentication
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/mcp/end-game-mcp.yml
+  href: https://artifacts.apis.io/end-game/mcp/end-game-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/end-game-mcp.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/openapi/_original/end-game-openapi.json
+  href: https://artifacts.apis.io/end-game/openapi/_original/end-game-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/end-game-openapi.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/llms/end-game-llms.txt
+  href: https://artifacts.apis.io/end-game/llms/end-game-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/end-game-llms.txt
@@ -172,87 +175,87 @@ common:
   type: Security
   url: https://docs.endgame.io/vdp
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/errors/end-game-error-codes.yml
+  href: https://artifacts.apis.io/end-game/errors/end-game-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/end-game-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/conventions/end-game-conventions.yml
+  href: https://artifacts.apis.io/end-game/conventions/end-game-conventions.yml
   title: ''
   type: Conventions
   url: conventions/end-game-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/data-model/end-game-data-model.yml
+  href: https://artifacts.apis.io/end-game/data-model/end-game-data-model.yml
   title: ''
   type: DataModel
   url: data-model/end-game-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/rate-limits/end-game-rate-limits.yml
+  href: https://artifacts.apis.io/end-game/rate-limits/end-game-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/end-game-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/conformance/end-game-conformance.yml
+  href: https://artifacts.apis.io/end-game/conformance/end-game-conformance.yml
   title: ''
   type: Conformance
   url: conformance/end-game-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/lifecycle/end-game-lifecycle.yml
+  href: https://artifacts.apis.io/end-game/lifecycle/end-game-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/end-game-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/overlays/end-game-openapi-overlay.yaml
+  href: https://artifacts.apis.io/end-game/overlays/end-game-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/end-game-openapi-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/changelog/end-game-changelog.yml
+  href: https://artifacts.apis.io/end-game/changelog/end-game-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/end-game-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/end-game/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/skills/end-game-published-skill.md
+  href: https://artifacts.apis.io/end-game/skills/end-game-published-skill.md
   title: ''
   type: AgentSkill
   url: skills/end-game-published-skill.md
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/a2a/end-game-a2a.yml
+  href: https://artifacts.apis.io/end-game/a2a/end-game-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/end-game-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/well-known/end-game-well-known.yml
+  href: https://artifacts.apis.io/end-game/well-known/end-game-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/end-game-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/scopes/end-game-scopes.yml
+  href: https://artifacts.apis.io/end-game/scopes/end-game-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/end-game-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/packages/end-game-packages.yml
+  href: https://artifacts.apis.io/end-game/packages/end-game-packages.yml
   title: ''
   type: Packages
   url: packages/end-game-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/cli/end-game-cli.yml
+  href: https://artifacts.apis.io/end-game/cli/end-game-cli.yml
   title: ''
   type: CLI
   url: cli/end-game-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/mcp/end-game-tool-crosswalk.yml
+  href: https://artifacts.apis.io/end-game/mcp/end-game-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/end-game-tool-crosswalk.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/plans/end-game-plans-pricing.yml
+  href: https://artifacts.apis.io/end-game/plans/end-game-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/end-game-plans-pricing.yml
@@ -269,7 +272,7 @@ common:
   type: TrustCenter
   url: https://app.drata.com/trust/9cbf820f-0c38-11ee-865f-029d78a187d9
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/llms/end-game-website-llms.txt
+  href: https://artifacts.apis.io/end-game/llms/end-game-website-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/end-game-website-llms.txt
@@ -279,6 +282,14 @@ common:
   url: mailto:support@endgame.io
 created: '2026-07-17'
 description: Endgame (Endgame Labs, Inc.) is a context graph platform for go-to-market teams and AI agents that turns sales calls, CRM records, emails, Slack conversations, meeting transcripts, and uploaded documents into structured, queryable revenue intelligence. Sales and RevOps users ask questions across their book of business in natural language, and connected AI assistants reach the same knowledge through the Endgame MCP Server. The public REST API (rooted at /api/v1) lets developers create and manage Endgame threads programmatically over HTTPS with Bearer-token authentication, while a broad connector surface ingests context from Salesforce, Gong, Chorus, Clari Copilot, Zoom, Notion, Confluence, Highspot, Seismic, Snowflake, Slack, Microsoft Teams/SharePoint/Outlook, and Google Drive. Endgame was surfaced through the API Evangelist VC-portfolio pipeline and has been enriched from its published developer documentation, OpenAPI, MCP server, and trust/security programs.
+finops:
+- has_sources: true
+  method: derived
+  name: End Game Finops
+  primary_unit: ''
+  service_category: ''
+  slug: end-game-finops
+  template: true
 image: https://www.endgame.io/opengraph-image
 layout: provider
 mcp_servers:
@@ -292,16 +303,32 @@ network: true
 overview: 'Endgame publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Threads API, Internal API, and Protected Static API. Tagged areas include Company, Sales, Revenue Intelligence, Go-To-Market, and Artificial Intelligence.
 
 
+  The Endgame catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Endgame''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, support, engineering blog, and 39 more developer resources.'
 plans:
 - name: End Game Plans Pricing
   plan_count: 0
   slug: end-game-plans-pricing
-random_paper: 18
+random_paper: 22
 rate_limits:
 - limit_count: 1
   name: End Game Rate Limits
   slug: end-game-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Endgame API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: end-game-rules
 scopes:
 - name: End Game Scopes
   scope_count: 4
@@ -309,23 +336,23 @@ scopes:
   summary_line: 4 scopes
 score:
   band: strong
-  composite: 57.5
+  composite: 59.2
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 45.0
+    artifact_dirs: 30
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 46.9
     developer_ergonomics: 71.4
     discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 57.5
+  previous_composite: 59.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -348,13 +375,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/end-game/refs/heads/main/screenshots/end-game-2026-07-25T213310.png
+screenshot: https://apis.io/screenshots/end-game/end-game-2026-07-25T213310.png
 security:
 - kind: authentication
   name: End Game Authentication
@@ -372,6 +399,14 @@ security:
   name: End Game Trust Center
   slug: end-game-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 3
+skills:
+- name: Ask Endgame a revenue question
+  slug: end-game-ask-endgame
+- name: List, rename, and delete Endgame threads
+  slug: end-game-manage-threads
+- name: Endgame
+  slug: end-game-published-skill
 slug: end-game
 tags:
 - Company

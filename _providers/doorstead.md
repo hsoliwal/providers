@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/doorstead/refs/heads/main/rate-limits/doorstead-rate-limits.yml
+  href: https://artifacts.apis.io/doorstead/rate-limits/doorstead-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/doorstead-rate-limits.yml
@@ -57,7 +60,7 @@ common:
   type: Pricing
   url: https://www.doorstead.com/compare-plans
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/doorstead/refs/heads/main/plans/doorstead-plans-pricing.yml
+  href: https://artifacts.apis.io/doorstead/plans/doorstead-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/doorstead-plans-pricing.yml
@@ -90,12 +93,12 @@ common:
   type: KnowledgeBase
   url: https://www.doorstead.com/knowledge
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/doorstead/refs/heads/main/llms/doorstead-llms.txt
+  href: https://artifacts.apis.io/doorstead/llms/doorstead-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/doorstead-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/doorstead/refs/heads/main/security/doorstead-domain-security.yml
+  href: https://artifacts.apis.io/doorstead/security/doorstead-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/doorstead-domain-security.yml
@@ -130,7 +133,7 @@ plans:
 - name: Doorstead Plans Pricing
   plan_count: 2
   slug: doorstead-plans-pricing
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Doorstead Rate Limits
@@ -139,7 +142,7 @@ score:
   band: emerging
   composite: 18.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
@@ -167,14 +170,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/doorstead/refs/heads/main/screenshots/doorstead-2026-09-02T145302.png
+screenshot: https://apis.io/screenshots/doorstead/doorstead-2026-09-02T145302.png
 security:
 - kind: domain-security
   name: Doorstead Domain Security

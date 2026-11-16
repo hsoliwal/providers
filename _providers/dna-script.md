@@ -1,6 +1,10 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_conflict: 'x-api-posture: private but 1 published API entry'
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The GraphQL API behind DNA Script's SYNTAX Console Software — the fleet-management layer customers use to design plate templates, upload oligo sequence files, schedule and start synthesis runs, monito
@@ -43,17 +50,17 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dna-script/refs/heads/main/security/dna-script-domain-security.yml
+  href: https://artifacts.apis.io/dna-script/security/dna-script-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dna-script-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dna-script/refs/heads/main/well-known/dna-script-well-known.yml
+  href: https://artifacts.apis.io/dna-script/well-known/dna-script-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/dna-script-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dna-script/refs/heads/main/llms/dna-script-llms.txt
+  href: https://artifacts.apis.io/dna-script/llms/dna-script-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dna-script-llms.txt
@@ -142,12 +149,12 @@ overview: 'DNA Script is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   DNA Script''s developer surface includes FAQ, support, engineering blog, product news, YouTube channel, and 16 more developer resources.'
-random_paper: 1
+random_paper: 5
 score:
   band: emerging
   composite: 20.8
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -170,14 +177,14 @@ score:
     regime: Health
     regime_id: health
     score: 11.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dna-script/refs/heads/main/screenshots/dna-script-2026-08-07T164437.png
+screenshot: https://apis.io/screenshots/dna-script/dna-script-2026-08-07T164437.png
 security:
 - kind: authentication
   name: Dna Script Authentication

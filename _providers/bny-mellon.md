@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Treasury Services API family covering payments (USD clearing, global ACH, RTP, wires, Pay by Bank), liquidity, cash management, trade finance, and FX, exposed to corporate and financial-institution cl
@@ -67,7 +70,7 @@ common:
   type: TrustCenter
   url: https://www.bny.com/corporate/global/en/about-us/trust-center.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bny-mellon/refs/heads/main/security/bny-mellon-domain-security.yml
+  href: https://artifacts.apis.io/bny-mellon/security/bny-mellon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bny-mellon-domain-security.yml
@@ -112,7 +115,7 @@ common:
   type: Login
   url: https://developer.bny.com/login
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bny-mellon/refs/heads/main/sandbox/bny-mellon-sandbox.yml
+  href: https://artifacts.apis.io/bny-mellon/sandbox/bny-mellon-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bny-mellon-sandbox.yml
@@ -129,12 +132,12 @@ overview: 'BNY Mellon is listed with 5 APIs on the [APIs.io](https://apis.io/) n
 
 
   BNY Mellon''s developer surface includes documentation, support, sandbox, and 12 more developer resources.'
-random_paper: 9
+random_paper: 13
 score:
   band: emerging
   composite: 20.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -162,14 +165,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 15.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bny-mellon/refs/heads/main/screenshots/bny-mellon-2026-07-25T203518.png
+screenshot: https://apis.io/screenshots/bny-mellon/bny-mellon-2026-07-25T203518.png
 security:
 - kind: domain-security
   name: Bny Mellon Domain Security

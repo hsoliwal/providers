@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -6,24 +18,27 @@ agent_readiness:
     agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 53.7
-  scored_at: '2026-10-17'
+  score: 39.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 80
   human_in_the_loop: 8
@@ -128,55 +143,70 @@ apis:
   description: Asynchronous video generation
   name: Opper AI Videos API
   slug: opper-videos-api
-artifact_total: 33
+artifact_total: 38
 common:
+- group: commercial
+  href: https://artifacts.apis.io/opper/finops/opper-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/opper-finops.yml
+- group: build
+  href: https://artifacts.apis.io/opper/integrations/opper-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/opper-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/opper/capabilities/opper-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/opper-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/agentic-access/opper-agentic-access.yml
+  href: https://artifacts.apis.io/opper/agentic-access/opper-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/opper-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/plans/opper-plans-pricing.yml
+  href: https://artifacts.apis.io/opper/plans/opper-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/opper-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/rules/opper-rules.yml
+  href: https://artifacts.apis.io/opper/rules/opper-rules.yml
   title: ''
   type: Spectral
   url: rules/opper-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/json-ld/opper-context.jsonld
+  href: https://artifacts.apis.io/opper/json-ld/opper-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/opper-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/vocabulary/opper-vocabulary.yml
+  href: https://artifacts.apis.io/opper/vocabulary/opper-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/opper-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/opper/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/data-model/opper-data-model.yml
+  href: https://artifacts.apis.io/opper/data-model/opper-data-model.yml
   title: ''
   type: DataModel
   url: data-model/opper-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/cli/opper-cli.yml
+  href: https://artifacts.apis.io/opper/cli/opper-cli.yml
   title: ''
   type: CLI
   url: cli/opper-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/conventions/opper-conventions.yml
+  href: https://artifacts.apis.io/opper/conventions/opper-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/opper-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/conventions/opper-conventions.yml
+  href: https://artifacts.apis.io/opper/conventions/opper-conventions.yml
   title: ''
   type: Conventions
   url: conventions/opper-conventions.yml
@@ -189,47 +219,47 @@ common:
   type: Security
   url: https://opper.ai/security-overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/authentication/opper-authentication.yml
+  href: https://artifacts.apis.io/opper/authentication/opper-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opper-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/errors/opper-problem-types.yml
+  href: https://artifacts.apis.io/opper/errors/opper-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/opper-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/conformance/opper-conformance.yml
+  href: https://artifacts.apis.io/opper/conformance/opper-conformance.yml
   title: ''
   type: Conformance
   url: conformance/opper-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/llms/opper-llms.txt
+  href: https://artifacts.apis.io/opper/llms/opper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/opper-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/a2a/opper-a2a.yml
+  href: https://artifacts.apis.io/opper/a2a/opper-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/opper-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/well-known/opper-security.txt
+  href: https://artifacts.apis.io/opper/well-known/opper-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/opper-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/well-known/opper-well-known.yml
+  href: https://artifacts.apis.io/opper/well-known/opper-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/opper-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/hosts/opper-hosts.yml
+  href: https://artifacts.apis.io/opper/hosts/opper-hosts.yml
   title: ''
   type: Hosts
   url: hosts/opper-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/vendors/opper-vendors.yml
+  href: https://artifacts.apis.io/opper/vendors/opper-vendors.yml
   title: ''
   type: Vendors
   url: vendors/opper-vendors.yml
@@ -278,17 +308,17 @@ common:
   type: APIReference
   url: https://docs.opper.ai/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/security/opper-trust-center.yml
+  href: https://artifacts.apis.io/opper/security/opper-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/opper-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/security/opper-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/opper/security/opper-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/opper-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opper/refs/heads/main/security/opper-domain-security.yml
+  href: https://artifacts.apis.io/opper/security/opper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opper-domain-security.yml
@@ -298,6 +328,14 @@ common:
   url: https://opper.ai/
 created: '2026-10-15'
 description: Opper AI provides a European AI gateway offering access to over 700 AI models via a GDPR‑compliant, ISO‑27001 certified API. It supports OpenAI‑compatible SDKs, pay‑as‑you‑go pricing, spend caps, model allowlists, and zero data retention, targeting developers building AI agents across Europe.
+finops:
+- has_sources: true
+  method: derived
+  name: Opper Finops
+  primary_unit: platform fee on credit purchases
+  service_category: ''
+  slug: opper-finops
+  template: false
 image: https://opper.ai/images/opper-og.jpg
 json_schemas:
 - name: ChatRequest
@@ -334,42 +372,52 @@ overview: 'Opper AI publishes 19 API contracts indexed on the [APIs.io](https://
   The Opper AI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Opper AI''s developer surface includes CLI, authentication, pricing, changelog, engineering blog, getting-started guide, documentation, and 29 more developer resources.'
+  Opper AI''s developer surface includes CLI, authentication, pricing, changelog, engineering blog, getting-started guide, documentation, and 32 more developer resources.'
 plans:
 - name: Opper Plans Pricing
   plan_count: 3
   slug: opper-plans-pricing
-random_paper: 0
+- name: Opper Price Estimates
+  plan_count: 0
+  slug: opper-price-estimates
+random_paper: 22
 rules:
 - authorship: generated
-  effective_rule_count: 56
+  effective_rule_count: 101
   extends:
   - spectral:oas
   name: Opper AI API Rules
-  rule_count: 15
+  rule_count: 60
   severity_counts:
-    error: 10
+    error: 44
     hint: 0
-    info: 1
-    warn: 4
+    info: 2
+    warn: 14
   slug: opper-rules
 score:
-  band: exemplar
-  composite: 67.1
+  band: strong
+  composite: 56.4
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 74.8
+    artifact_dirs: 31
+    catalog_earned: 77.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -12.3
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 35.6
     contract_quality: 63.4
-    developer_ergonomics: 51.8
+    developer_ergonomics: 36.3
     discoverability: 73.2
-    operational_transparency: 47.4
+    operational_transparency: 23.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+  previous_composite: 68.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -378,7 +426,7 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 19
-    mcp: unknown
+    mcp: derived
     skills: derived
   regulatory:
     applies: true
@@ -389,12 +437,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/opper/opper-2026-11-03T140711.png
 security:
 - kind: authentication
   name: Opper Authentication
@@ -412,6 +462,14 @@ security:
   name: Opper Trust Center
   slug: opper-trust-center
   summary_line: SOC 2, ISO 27001, GDPR
+skill_count: 3
+skills:
+- name: opper-create-and-deploy-dynamic-route
+  slug: opper-create-and-deploy-dynamic-route
+- name: opper-realtime-session-connect
+  slug: opper-realtime-session-connect
+- name: opper-upload-and-retrieve-file
+  slug: opper-upload-and-retrieve-file
 slug: opper
 tags:
 - Artificial Intelligence

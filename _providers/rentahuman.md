@@ -14,6 +14,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -28,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.5
-  scored_at: '2026-10-17'
+  score: 39.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -65,15 +69,12 @@ arazzos:
 - description: Find an available human by skill, review the profile, create a booking for a physical-world task, confirm it, and read back the booking status.
   name: RentAHuman — search and book a human
   slug: rentahuman-search-and-book
-artifact_total: 15
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Rentahuman Webhooks
   slug: rentahuman-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: RentAHuman.ai Bookings API
   slug: open-rentahuman-bookings-api
@@ -84,12 +85,17 @@ collections:
   name: RentAHuman.ai Bookings Wallet API
   slug: open-rentahuman-wallet-api
 common:
+- group: other
+  href: https://artifacts.apis.io/rentahuman/capabilities/rentahuman-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rentahuman-capability-edges.yml
 - group: company
   title: ''
   type: Website
   url: https://www.rentahuman.ai/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/overlays/rentahuman-openapi-overlay.yaml
+  href: https://artifacts.apis.io/rentahuman/overlays/rentahuman-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rentahuman-openapi-overlay.yaml
@@ -126,107 +132,107 @@ common:
   type: TermsOfService
   url: https://rentahuman.ai/terms
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/llms/rentahuman-llms.txt
+  href: https://artifacts.apis.io/rentahuman/llms/rentahuman-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rentahuman-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/well-known/rentahuman-well-known.yml
+  href: https://artifacts.apis.io/rentahuman/well-known/rentahuman-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rentahuman-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/well-known/rentahuman-security.txt
+  href: https://artifacts.apis.io/rentahuman/well-known/rentahuman-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/rentahuman-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/mcp/rentahuman-mcp.yml
+  href: https://artifacts.apis.io/rentahuman/mcp/rentahuman-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rentahuman-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/packages/rentahuman-packages.yml
+  href: https://artifacts.apis.io/rentahuman/packages/rentahuman-packages.yml
   title: ''
   type: Packages
   url: packages/rentahuman-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/packages/rentahuman-packages.yml
+  href: https://artifacts.apis.io/rentahuman/packages/rentahuman-packages.yml
   title: ''
   type: SDKs
   url: packages/rentahuman-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/authentication/rentahuman-authentication.yml
+  href: https://artifacts.apis.io/rentahuman/authentication/rentahuman-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rentahuman-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/conventions/rentahuman-conventions.yml
+  href: https://artifacts.apis.io/rentahuman/conventions/rentahuman-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rentahuman-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/rate-limits/rentahuman-rate-limits.yml
+  href: https://artifacts.apis.io/rentahuman/rate-limits/rentahuman-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rentahuman-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/errors/rentahuman-problem-types.yml
+  href: https://artifacts.apis.io/rentahuman/errors/rentahuman-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rentahuman-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/lifecycle/rentahuman-lifecycle.yml
+  href: https://artifacts.apis.io/rentahuman/lifecycle/rentahuman-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rentahuman-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/conformance/rentahuman-conformance.yml
+  href: https://artifacts.apis.io/rentahuman/conformance/rentahuman-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rentahuman-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/data-model/rentahuman-data-model.yml
+  href: https://artifacts.apis.io/rentahuman/data-model/rentahuman-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rentahuman-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/sandbox/rentahuman-sandbox.yml
+  href: https://artifacts.apis.io/rentahuman/sandbox/rentahuman-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rentahuman-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/asyncapi/rentahuman-webhooks.yml
+  href: https://artifacts.apis.io/rentahuman/asyncapi/rentahuman-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rentahuman-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rentahuman/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/arazzo/rentahuman-search-and-book.yml
+  href: https://artifacts.apis.io/rentahuman/arazzo/rentahuman-search-and-book.yml
   title: ''
   type: Arazzo
   url: arazzo/rentahuman-search-and-book.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/agentic-access/rentahuman-agentic-access.yml
+  href: https://artifacts.apis.io/rentahuman/agentic-access/rentahuman-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rentahuman-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/security/rentahuman-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rentahuman/security/rentahuman-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rentahuman-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/security/rentahuman-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rentahuman/security/rentahuman-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/rentahuman-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/security/rentahuman-domain-security.yml
+  href: https://artifacts.apis.io/rentahuman/security/rentahuman-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rentahuman-domain-security.yml
@@ -245,34 +251,47 @@ network: true
 overview: 'Rentahuman publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Bookings API, Humans API, and Wallet API. Tagged areas include Company, Marketplace, AI Agents, Human-in-the-Loop, and Gig Economy.
 
 
-  The Rentahuman catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Rentahuman catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Rentahuman''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
+  Rentahuman''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 25 more developer resources.'
 random_paper: 19
 rate_limits:
 - limit_count: 9
   name: Rentahuman Rate Limits
   slug: rentahuman-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Rentahuman API Rules
+  rule_count: 49
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 2
+    warn: 1
+  slug: rentahuman-rules
 score:
   band: developing
-  composite: 46.8
+  composite: 48.5
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 51.7
     developer_ergonomics: 73.2
     discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 46.8
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -289,13 +308,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 24.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rentahuman/refs/heads/main/screenshots/rentahuman-2026-08-17T081515.png
+screenshot: https://apis.io/screenshots/rentahuman/rentahuman-2026-08-17T081515.png
 security:
 - kind: authentication
   name: Rentahuman Authentication
@@ -309,6 +328,12 @@ security:
   name: Rentahuman Vulnerability Disclosure
   slug: rentahuman-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 2
+skills:
+- name: Find and book a human for a physical-world task
+  slug: rentahuman-find-and-book-a-human
+- name: Monitor and control agent wallet spend
+  slug: rentahuman-manage-agent-spend
 slug: rentahuman
 tags:
 - Company

@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 16.7
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: API for Entry Point AI platform providing model fine‑tuning, data transformation, and deployment endpoints.
@@ -47,57 +65,57 @@ apis:
 artifact_total: 15
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/plans/entrypointai-plans-pricing.yml
+  href: https://artifacts.apis.io/entrypointai/plans/entrypointai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/entrypointai-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/rules/entrypointai-rules.yml
+  href: https://artifacts.apis.io/entrypointai/rules/entrypointai-rules.yml
   title: ''
   type: Spectral
   url: rules/entrypointai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/json-ld/entrypointai-context.jsonld
+  href: https://artifacts.apis.io/entrypointai/json-ld/entrypointai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/entrypointai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/vocabulary/entrypointai-vocabulary.yml
+  href: https://artifacts.apis.io/entrypointai/vocabulary/entrypointai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/entrypointai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/data-model/entrypointai-data-model.yml
+  href: https://artifacts.apis.io/entrypointai/data-model/entrypointai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/entrypointai-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/authentication/entrypointai-authentication.yml
+  href: https://artifacts.apis.io/entrypointai/authentication/entrypointai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/entrypointai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/conformance/entrypointai-conformance.yml
+  href: https://artifacts.apis.io/entrypointai/conformance/entrypointai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/entrypointai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/llms/entrypointai-llms.txt
+  href: https://artifacts.apis.io/entrypointai/llms/entrypointai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/entrypointai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/well-known/entrypointai-well-known.yml
+  href: https://artifacts.apis.io/entrypointai/well-known/entrypointai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/entrypointai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/hosts/entrypointai-hosts.yml
+  href: https://artifacts.apis.io/entrypointai/hosts/entrypointai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/entrypointai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/vendors/entrypointai-vendors.yml
+  href: https://artifacts.apis.io/entrypointai/vendors/entrypointai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/entrypointai-vendors.yml
@@ -106,7 +124,7 @@ common:
   type: Documentation
   url: https://docs.entrypointai.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/entrypointai/refs/heads/main/security/entrypointai-domain-security.yml
+  href: https://artifacts.apis.io/entrypointai/security/entrypointai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/entrypointai-domain-security.yml
@@ -184,7 +202,7 @@ plans:
 - name: Entrypointai Plans Pricing
   plan_count: 4
   slug: entrypointai-plans-pricing
-random_paper: 20
+random_paper: 22
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -200,21 +218,23 @@ rules:
   slug: entrypointai-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 30.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 19
     catalog_earned: 70.8
     catalog_earned_first_party: 12.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.0
   facets:
-    access_clarity: 63.2
+    access_clarity: 47.4
     contract_governance: 22.0
     contract_quality: 26.7
-    developer_ergonomics: 35.7
+    developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 0.0
+  previous_composite: 36.1
   provenance:
     conformance: derived
     contracts:
@@ -228,12 +248,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/entrypointai/entrypointai-2026-11-03T131541.png
 security:
 - kind: authentication
   name: Entrypointai Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-10-17'
+  score: 27.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -89,11 +96,8 @@ apis:
   description: Task management for tracking long-running Spinnaker operations and checking their completion status
   name: Spinnaker Tasks API
   slug: spinnaker-tasks-api
-artifact_total: 34
+artifact_total: 33
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Spinnaker Gate Applications API
   slug: open-spinnaker-applications-api
@@ -126,17 +130,17 @@ collections:
   slug: open-spinnaker-tasks-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/plans/spinnaker-plans-pricing.yml
+  href: https://artifacts.apis.io/spinnaker/plans/spinnaker-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/spinnaker-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/rate-limits/spinnaker-rate-limits.yml
+  href: https://artifacts.apis.io/spinnaker/rate-limits/spinnaker-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/spinnaker-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/finops/spinnaker-finops.yml
+  href: https://artifacts.apis.io/spinnaker/finops/spinnaker-finops.yml
   title: ''
   type: FinOps
   url: finops/spinnaker-finops.yml
@@ -145,7 +149,7 @@ common:
   type: BlogRSS
   url: https://blog.spinnaker.io/feed
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/capabilities/spinnaker-capability-edges.yml
+  href: https://artifacts.apis.io/spinnaker/capabilities/spinnaker-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/spinnaker-capability-edges.yml
@@ -170,22 +174,22 @@ common:
   type: License
   url: https://github.com/spinnaker/gate/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/agentic-access/spinnaker-agentic-access.yml
+  href: https://artifacts.apis.io/spinnaker/agentic-access/spinnaker-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spinnaker-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/security/spinnaker-domain-security.yml
+  href: https://artifacts.apis.io/spinnaker/security/spinnaker-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spinnaker-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/authentication/spinnaker-authentication.yml
+  href: https://artifacts.apis.io/spinnaker/authentication/spinnaker-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spinnaker-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/scopes/spinnaker-scopes.yml
+  href: https://artifacts.apis.io/spinnaker/scopes/spinnaker-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/spinnaker-scopes.yml
@@ -230,17 +234,17 @@ common:
   type: ChangeLog
   url: https://spinnaker.io/changelogs/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/openapi/_original/spinnaker-gate-openapi.yml
+  href: https://artifacts.apis.io/spinnaker/openapi/_original/spinnaker-gate-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/spinnaker-gate-openapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/rules/spinnaker-rules.yml
+  href: https://artifacts.apis.io/spinnaker/rules/spinnaker-rules.yml
   title: ''
   type: SpectralRules
   url: rules/spinnaker-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/vocabulary/spinnaker-vocabulary.yml
+  href: https://artifacts.apis.io/spinnaker/vocabulary/spinnaker-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/spinnaker-vocabulary.yml
@@ -257,7 +261,7 @@ finops:
 - has_sources: false
   method: generated
   name: Spinnaker Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: spinnaker-finops
   template: true
@@ -291,7 +295,7 @@ plans:
 - name: Spinnaker Plans Pricing
   plan_count: 3
   slug: spinnaker-plans-pricing
-random_paper: 3
+random_paper: 11
 rate_limits:
 - limit_count: 5
   name: Spinnaker Rate Limits
@@ -329,13 +333,13 @@ score:
   band: thin
   composite: 36.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 58.0
     catalog_earned_first_party: 0.0
     catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
@@ -346,7 +350,7 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 37.3
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
@@ -360,13 +364,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/spinnaker/refs/heads/main/screenshots/spinnaker-2026-06-20T194321.png
+screenshot: https://apis.io/screenshots/spinnaker/spinnaker-2026-06-20T194321.png
 security:
 - kind: authentication
   name: Spinnaker Authentication

@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +29,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: documented
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 46.4
-  scored_at: '2026-10-17'
+  score: 46.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 193
   human_in_the_loop: 28
@@ -32,7 +48,7 @@ agentic_access:
   operation_count: 449
   slug: raiffeisen-ru-agentic-access
   summary_line: 449 operations · 193 acting · 28 human-in-the-loop
-api_count: 106
+api_count: 53
 apis:
 - baseURL: https://api.raiffeisen.ru/raif-pay
   baseurl_source: declared
@@ -599,159 +615,159 @@ apis:
   description: Информация о клиенте
   name: Raiffeisenbank (Russia) Client Info API
   slug: raiffeisen-ru-client-info-api
-artifact_total: 244
+artifact_total: 249
 asyncapis:
 - description: ''
   name: Raiffeisen Ru Webhooks
   slug: raiffeisen-ru-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/capabilities/raiffeisen-ru-capability-edges.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/capabilities/raiffeisen-ru-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/raiffeisen-ru-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/asyncapi/raiffeisen-ru-webhooks.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/asyncapi/raiffeisen-ru-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/raiffeisen-ru-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/integrations/raiffeisen-ru-integration-edges.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/integrations/raiffeisen-ru-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/raiffeisen-ru-integration-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/agentic-access/raiffeisen-ru-agentic-access.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/agentic-access/raiffeisen-ru-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/raiffeisen-ru-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/rules/raiffeisen-ru-rules.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/rules/raiffeisen-ru-rules.yml
   title: ''
   type: Spectral
   url: rules/raiffeisen-ru-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/rules/raiffeisen-ru-rest-api-guide-spectral-rules.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/rules/raiffeisen-ru-rest-api-guide-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/raiffeisen-ru-rest-api-guide-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/json-ld/raiffeisen-ru-context.jsonld
+  href: https://artifacts.apis.io/raiffeisen-ru/json-ld/raiffeisen-ru-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/raiffeisen-ru-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/vocabulary/raiffeisen-ru-vocabulary.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/vocabulary/raiffeisen-ru-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/raiffeisen-ru-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/data-model/raiffeisen-ru-data-model.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/data-model/raiffeisen-ru-data-model.yml
   title: ''
   type: DataModel
   url: data-model/raiffeisen-ru-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/components/raiffeisen-ru-components.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/components/raiffeisen-ru-components.yml
   title: ''
   type: Components
   url: components/raiffeisen-ru-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/changelog/raiffeisen-ru-changelog.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/changelog/raiffeisen-ru-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/raiffeisen-ru-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/conventions/raiffeisen-ru-conventions.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/conventions/raiffeisen-ru-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/raiffeisen-ru-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/conventions/raiffeisen-ru-conventions.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/conventions/raiffeisen-ru-conventions.yml
   title: ''
   type: Conventions
   url: conventions/raiffeisen-ru-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/sandbox/raiffeisen-ru-sandbox.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/sandbox/raiffeisen-ru-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/raiffeisen-ru-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/scopes/raiffeisen-ru-scopes.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/scopes/raiffeisen-ru-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/raiffeisen-ru-scopes.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/lifecycle/raiffeisen-ru-lifecycle.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/lifecycle/raiffeisen-ru-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/raiffeisen-ru-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/lifecycle/raiffeisen-ru-lifecycle.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/lifecycle/raiffeisen-ru-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/raiffeisen-ru-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/errors/raiffeisen-ru-decline-codes.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/errors/raiffeisen-ru-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/raiffeisen-ru-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/errors/raiffeisen-ru-error-codes.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/errors/raiffeisen-ru-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/raiffeisen-ru-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/errors/raiffeisen-ru-problem-types.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/errors/raiffeisen-ru-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/raiffeisen-ru-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/conformance/raiffeisen-ru-conformance.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/conformance/raiffeisen-ru-conformance.yml
   title: ''
   type: Conformance
   url: conformance/raiffeisen-ru-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/overlays/raiffeisen-ru-adm-deposit-codes-overlay.yaml
+  href: https://artifacts.apis.io/raiffeisen-ru/overlays/raiffeisen-ru-adm-deposit-codes-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/raiffeisen-ru-adm-deposit-codes-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/llms/raiffeisen-ru-llms.txt
+  href: https://artifacts.apis.io/raiffeisen-ru/llms/raiffeisen-ru-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/raiffeisen-ru-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/mcp/raiffeisen-ru-tool-crosswalk.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/mcp/raiffeisen-ru-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/raiffeisen-ru-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/mcp/raiffeisen-ru-mcp.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/mcp/raiffeisen-ru-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/raiffeisen-ru-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/well-known/raiffeisen-ru-well-known.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/well-known/raiffeisen-ru-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/raiffeisen-ru-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/hosts/raiffeisen-ru-hosts.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/hosts/raiffeisen-ru-hosts.yml
   title: ''
   type: Hosts
   url: hosts/raiffeisen-ru-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/packages/raiffeisen-ru-packages.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/packages/raiffeisen-ru-packages.yml
   title: ''
   type: SDKs
   url: packages/raiffeisen-ru-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/packages/raiffeisen-ru-packages.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/packages/raiffeisen-ru-packages.yml
   title: ''
   type: Packages
   url: packages/raiffeisen-ru-packages.yml
@@ -760,12 +776,12 @@ common:
   type: ChangeLog
   url: https://www.raiffeisen.ru/about/press/releases/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/authentication/raiffeisen-ru-authentication.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/authentication/raiffeisen-ru-authentication.yml
   title: ''
   type: Authentication
   url: authentication/raiffeisen-ru-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/security/raiffeisen-ru-domain-security.yml
+  href: https://artifacts.apis.io/raiffeisen-ru/security/raiffeisen-ru-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/raiffeisen-ru-domain-security.yml
@@ -843,13 +859,13 @@ json_schemas:
   property_count: 3
   slug: raiffeisen-ru-agreements-filter-request
 - name: AgreementsResponse
-  property_count: 1
+  property_count: 4
   slug: raiffeisen-ru-agreements-response
 - name: ApiProcessImportDto
-  property_count: 8
+  property_count: 9
   slug: raiffeisen-ru-api-process-import-dto
 - name: ApiProcessImportFullDto
-  property_count: 8
+  property_count: 9
   slug: raiffeisen-ru-api-process-import-full-dto
 - name: ApiShortProcessImportDto
   property_count: 1
@@ -870,7 +886,7 @@ json_schemas:
   property_count: 6
   slug: raiffeisen-ru-bill-request
 - name: Buyer
-  property_count: 0
+  property_count: 10
   slug: raiffeisen-ru-buyer
 - name: ClientInfoResponse
   property_count: 2
@@ -948,10 +964,10 @@ json_schemas:
   property_count: 12
   slug: raiffeisen-ru-create1-creport-request-v2
 - name: CurrencyContractRequest
-  property_count: 0
+  property_count: 13
   slug: raiffeisen-ru-currency-contract-request
 - name: CurrencyContractResponse
-  property_count: 0
+  property_count: 20
   slug: raiffeisen-ru-currency-contract-response
 - name: DeactivateCodeRequest
   property_count: 1
@@ -996,7 +1012,7 @@ json_schemas:
   property_count: 2
   slug: raiffeisen-ru-file-upload-request
 - name: FileUploadResponse
-  property_count: 0
+  property_count: 8
   slug: raiffeisen-ru-file-upload-response
 - name: ForeignTradeContract
   property_count: 29
@@ -1026,7 +1042,7 @@ json_schemas:
   property_count: 3
   slug: raiffeisen-ru-guarantee-beneficiary-filter-request
 - name: GuaranteeBeneficiaryResponse
-  property_count: 1
+  property_count: 4
   slug: raiffeisen-ru-guarantee-beneficiary-response
 - name: GuaranteeChangeLogDto
   property_count: 11
@@ -1044,7 +1060,7 @@ json_schemas:
   property_count: 2
   slug: raiffeisen-ru-guarantee-short-dto
 - name: GuaranteesResponse
-  property_count: 1
+  property_count: 4
   slug: raiffeisen-ru-guarantees-response
 - name: LoginStepRequestDTO
   property_count: 5
@@ -1065,7 +1081,7 @@ json_schemas:
   property_count: 4
   slug: raiffeisen-ru-operation-dto-v2
 - name: OrderResponse
-  property_count: 0
+  property_count: 17
   slug: raiffeisen-ru-order-response
 - name: PacketResponse
   property_count: 10
@@ -1182,7 +1198,7 @@ json_schemas:
   property_count: 1
   slug: raiffeisen-ru-update-code-request
 - name: UPDRequest
-  property_count: 0
+  property_count: 8
   slug: raiffeisen-ru-updrequest
 - name: UserEligibleCompaniesResponse
   property_count: 4
@@ -1255,22 +1271,22 @@ scopes:
   summary_line: 4 scopes
 score:
   band: strong
-  composite: 63.2
+  composite: 54.8
   coverage:
-    artifact_dirs: 32
+    artifact_dirs: 33
     catalog_earned: 79.3
     catalog_earned_first_party: 18.0
     catalog_gap: 35.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.3
+  delta: -8.4
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 76.5
     contract_quality: 71.3
-    developer_ergonomics: 63.7
-    discoverability: 81.7
-    operational_transparency: 36.8
+    developer_ergonomics: 42.3
+    discoverability: 80.8
+    operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -1279,7 +1295,7 @@ score:
     regions:
     - cee
     - europe
-  previous_composite: 54.9
+  previous_composite: 63.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -1295,14 +1311,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 29.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 28.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/raiffeisen-ru/refs/heads/main/screenshots/raiffeisen-ru-2026-10-11T113117.png
+screenshot: https://apis.io/screenshots/raiffeisen-ru/raiffeisen-ru-2026-10-11T113117.png
 security:
 - kind: authentication
   name: Raiffeisen Ru Authentication
@@ -1312,6 +1328,18 @@ security:
   name: Raiffeisen Ru Domain Security
   slug: raiffeisen-ru-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: raiffeisen-ru-authorization
+  slug: raiffeisen-ru-authorization
+- name: raiffeisen-ru-bank-statements
+  slug: raiffeisen-ru-bank-statements
+- name: raiffeisen-ru-domestic-payments-import
+  slug: raiffeisen-ru-domestic-payments-import
+- name: raiffeisen-ru-raif-pay-payouts
+  slug: raiffeisen-ru-raif-pay-payouts
+- name: raiffeisen-ru-raif-pay-sbp-qr
+  slug: raiffeisen-ru-raif-pay-sbp-qr
 slug: raiffeisen-ru
 tags:
 - Company

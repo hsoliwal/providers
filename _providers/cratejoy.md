@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'REST interface into most of the data and functionality of interest to Cratejoy merchants and developers: customers, orders, subscriptions, shipments, products, inventory, carts, transactions, addresse'
@@ -102,57 +105,57 @@ common:
   type: StatusPage
   url: https://status.cratejoy.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/llms/cratejoy-llms.txt
+  href: https://artifacts.apis.io/cratejoy/llms/cratejoy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cratejoy-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/authentication/cratejoy-authentication.yml
+  href: https://artifacts.apis.io/cratejoy/authentication/cratejoy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cratejoy-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/conventions/cratejoy-conventions.yml
+  href: https://artifacts.apis.io/cratejoy/conventions/cratejoy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cratejoy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/errors/cratejoy-problem-types.yml
+  href: https://artifacts.apis.io/cratejoy/errors/cratejoy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cratejoy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/asyncapi/cratejoy-webhooks.yml
+  href: https://artifacts.apis.io/cratejoy/asyncapi/cratejoy-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/cratejoy-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/lifecycle/cratejoy-lifecycle.yml
+  href: https://artifacts.apis.io/cratejoy/lifecycle/cratejoy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cratejoy-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/packages/cratejoy-packages.yml
+  href: https://artifacts.apis.io/cratejoy/packages/cratejoy-packages.yml
   title: ''
   type: Packages
   url: packages/cratejoy-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/mcp/cratejoy-mcp.yml
+  href: https://artifacts.apis.io/cratejoy/mcp/cratejoy-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cratejoy-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/conformance/cratejoy-conformance.yml
+  href: https://artifacts.apis.io/cratejoy/conformance/cratejoy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cratejoy-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/data-model/cratejoy-data-model.yml
+  href: https://artifacts.apis.io/cratejoy/data-model/cratejoy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cratejoy-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/security/cratejoy-domain-security.yml
+  href: https://artifacts.apis.io/cratejoy/security/cratejoy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cratejoy-domain-security.yml
@@ -171,23 +174,23 @@ overview: 'Cratejoy is listed with 2 APIs on the [APIs.io](https://apis.io/) net
 
 
   Cratejoy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 17 more developer resources.'
-random_paper: 7
+random_paper: 1
 score:
-  band: thin
-  composite: 38.0
+  band: developing
+  composite: 41.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.8
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
     contract_quality: 39.0
-    developer_ergonomics: 38.1
+    developer_ergonomics: 57.1
     discoverability: 73.2
     operational_transparency: 26.3
   previous_composite: 38.0
@@ -200,14 +203,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cratejoy/refs/heads/main/screenshots/cratejoy-2026-07-25T210648.png
+screenshot: https://apis.io/screenshots/cratejoy/cratejoy-2026-07-25T210648.png
 security:
 - kind: authentication
   name: Cratejoy Authentication

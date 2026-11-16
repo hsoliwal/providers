@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -49,7 +52,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/security/group-1-automotive-domain-security.yml
+  href: https://artifacts.apis.io/group-1-automotive/security/group-1-automotive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/group-1-automotive-domain-security.yml
@@ -74,27 +77,27 @@ common:
   type: Support
   url: https://www.group1auto.com/contact-us/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/llms/group-1-automotive-llms.txt
+  href: https://artifacts.apis.io/group-1-automotive/llms/group-1-automotive-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/group-1-automotive-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/agentic-access/group-1-automotive-agentic-access.yml
+  href: https://artifacts.apis.io/group-1-automotive/agentic-access/group-1-automotive-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/group-1-automotive-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/conventions/group-1-automotive-conventions.yml
+  href: https://artifacts.apis.io/group-1-automotive/conventions/group-1-automotive-conventions.yml
   title: ''
   type: Conventions
   url: conventions/group-1-automotive-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/rate-limits/group-1-automotive-rate-limits.yml
+  href: https://artifacts.apis.io/group-1-automotive/rate-limits/group-1-automotive-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/group-1-automotive-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/plans/group-1-automotive-plans-pricing.yml
+  href: https://artifacts.apis.io/group-1-automotive/plans/group-1-automotive-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/group-1-automotive-plans-pricing.yml
@@ -130,7 +133,7 @@ press:
 - date: ''
   title: Recent Press | Group 1
   url: https://www.piedpiperpsi.com/press/?tag=group+1
-random_paper: 15
+random_paper: 21
 rate_limits:
 - limit_count: 1
   name: Group 1 Automotive Rate Limits
@@ -163,14 +166,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/screenshots/group-1-automotive-2026-10-11T185917.png
+screenshot: https://apis.io/screenshots/group-1-automotive/group-1-automotive-2026-10-11T185917.png
 security:
 - kind: domain-security
   name: Group 1 Automotive Domain Security
@@ -185,6 +188,6 @@ tags:
 - Dealership
 - Retail
 - Agentic Access
-- llms-txt
+- Llms.txt
 website: https://www.group1auto.com
 ---

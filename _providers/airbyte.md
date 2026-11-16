@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,8 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -21,21 +26,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: na
     dynamic_client_registration: false
     error_semantics: derived
     event_surface_described: false
-    idempotency: false
+    idempotency: na
     mcp_server: verified
-    openapi_examples: verified
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
-    reversibility_documented: documented
+    reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.8
-  scored_at: '2026-10-17'
+  score: 44.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 52
   human_in_the_loop: 4
@@ -47,445 +55,19 @@ api_count: 1
 apis:
 - baseURL: https://api.airbyte.com/v1
   baseurl_source: declared
-  description: The public API from Airbyte — 47 operation(s) for public.
-  name: Airbyte Public API
-  phrasing_intents:
-  - id: getEmbeddedWidget
-    intent: Get a token for the Airbyte Embedded widget
-    question: How do I get a widget token so I can render the Airbyte Embedded widget in my app?
-  - id: generateEmbeddedScopedToken
-    intent: Generate a token scoped to an end-user workspace
-    question: How can I generate a token that only has access to one end user's workspace?
-  - id: listEmbeddedOrganizationsByUser
-    intent: List my organizations that have Embedded enabled
-    question: Which of my organizations have Airbyte Embedded turned on?
-  phrasing_ops: 3
-  slug: airbyte-public-api
+  description: The Airbyte Marketing Site API from Airbyte — 1 operation(s) for airbyte marketing site.
+  name: Airbyte Airbyte Marketing Site API
+  slug: airbyte-airbyte-marketing-site-api
 - baseURL: https://api.airbyte.com/v1
   baseurl_source: declared
-  description: The public_applications API from Airbyte — 3 operation(s) for public_applications.
-  name: Airbyte Public Applications API
-  phrasing_intents:
-  - id: listApplications
-    intent: List my API applications
-    question: What API applications have I created in Airbyte?
-  - id: createApplication
-    intent: Create an API application
-    question: How do I create an application to get a client id and secret for the Airbyte API?
-  - id: getApplication
-    intent: Get an application's details
-    question: How do I look up the details of one API application?
-  - id: deleteApplication
-    intent: Delete an API application
-    question: How do I delete an application I no longer use?
-  - id: createAccessToken
-    intent: Exchange client credentials for an access token
-    question: How do I get an access token from my application's client id and secret?
-  phrasing_ops: 5
-  slug: airbyte-public-applications-api
+  description: The .well Known API from Airbyte — 1 operation(s) for .well known.
+  name: Airbyte .well Known API
+  slug: airbyte-well-known-api
 - baseURL: https://api.airbyte.com/v1
   baseurl_source: declared
-  description: The public_connections API from Airbyte — 2 operation(s) for public_connections.
-  name: Airbyte Public Connections API
-  phrasing_intents:
-  - id: createConnection
-    intent: Create a connection between a source and destination
-    question: How do I connect a source to a destination so data starts syncing?
-  - id: listConnections
-    intent: List connections
-    question: How do I list all the connections in my workspaces?
-  - id: getConnection
-    intent: Get a connection's details
-    question: How do I see the configuration and schedule of one connection?
-  - id: patchConnection
-    intent: Update an existing connection
-    question: How do I change the sync schedule of a connection that already exists?
-  - id: deleteConnection
-    intent: Delete a connection
-    question: How do I delete a connection I don't need anymore?
-  phrasing_ops: 5
-  slug: airbyte-public-connections-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_connector_definitions API from Airbyte — 1 operation(s) for public_connector_definitions.
-  name: Airbyte Public Connector Definitions API
-  phrasing_intents:
-  - id: listConnectorDefinitions
-    intent: List available connector definitions
-    question: Which source or destination connectors are available to my workspace?
-  phrasing_ops: 1
-  slug: airbyte-public-connector-definitions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_dataplanes API from Airbyte — 2 operation(s) for public_dataplanes.
-  name: Airbyte Public Dataplanes API
-  phrasing_intents:
-  - id: listDataplanes
-    intent: List dataplanes
-    question: What dataplanes are running in my regions?
-  - id: createDataplane
-    intent: Create a dataplane in a region
-    question: How do I add a new dataplane to a region?
-  - id: getDataplane
-    intent: Get a dataplane
-    question: How do I check the details of one dataplane?
-  - id: updateDataplane
-    intent: Rename or enable/disable a dataplane
-    question: How do I disable an existing dataplane without deleting it?
-  - id: deleteDataplane
-    intent: Delete a dataplane
-    question: How do I delete a dataplane I've decommissioned?
-  phrasing_ops: 5
-  slug: airbyte-public-dataplanes-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_declarative_source_definitions API from Airbyte — 2 operation(s) for public_declarative_source_definitions.
-  name: Airbyte Public Declarative Source Definitions API
-  phrasing_intents:
-  - id: listDeclarativeSourceDefinitions
-    intent: List low-code declarative source definitions
-    question: Which low-code declarative sources have been built in my workspace?
-  - id: createDeclarativeSourceDefinition
-    intent: Create a declarative source from a manifest
-    question: How do I publish a custom source from a low-code CDK manifest?
-  - id: getDeclarativeSourceDefinition
-    intent: Get a declarative source definition
-    question: How do I view the manifest behind one declarative source?
-  - id: updateDeclarativeSourceDefinition
-    intent: Replace a declarative source's manifest
-    question: How do I push a new manifest version to an existing declarative source?
-  - id: deleteDeclarativeSourceDefinition
-    intent: Delete a declarative source definition
-    question: How do I delete a low-code source definition I built?
-  phrasing_ops: 5
-  slug: airbyte-public-declarative-source-definitions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_destination_definitions API from Airbyte — 2 operation(s) for public_destination_definitions.
-  name: Airbyte Public Destination Definitions API
-  phrasing_intents:
-  - id: listDestinationDefinitions
-    intent: List a workspace's destination definitions
-    question: Which destination connector definitions exist in my workspace?
-  - id: createDestinationDefinition
-    intent: Register a custom destination connector image
-    question: How do I add a custom destination connector from my own Docker image?
-  - id: getDestinationDefinition
-    intent: Get a destination definition
-    question: How do I check which Docker image a destination definition uses?
-  - id: updateDestinationDefinition
-    intent: Update a destination definition's name or image tag
-    question: How do I bump the image tag of a custom destination connector?
-  - id: deleteDestinationDefinition
-    intent: Delete a destination definition
-    question: How do I delete a custom destination connector definition?
-  phrasing_ops: 5
-  slug: airbyte-public-destination-definitions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_destinations API from Airbyte — 2 operation(s) for public_destinations.
-  name: Airbyte Public Destinations API
-  phrasing_intents:
-  - id: listDestinations
-    intent: List destinations
-    question: How do I list the destinations set up in my workspaces?
-  - id: createDestination
-    intent: Create a destination
-    question: How do I create a new destination like a warehouse to send data to?
-  - id: getDestination
-    intent: Get a destination's details
-    question: How do I view the configuration of one destination?
-  - id: deleteDestination
-    intent: Delete a destination
-    question: How do I delete a destination I no longer write to?
-  - id: patchDestination
-    intent: Partially update a destination
-    question: How do I change just one setting on a destination, like its name?
-  - id: putDestination
-    intent: Fully overwrite a destination's configuration
-    question: How do I replace a destination's entire configuration rather than patch it?
-  phrasing_ops: 6
-  slug: airbyte-public-destinations-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_group_members API from Airbyte — 2 operation(s) for public_group_members.
-  name: Airbyte Public Group Members API
-  phrasing_intents:
-  - id: listGroupMembers
-    intent: List a group's members
-    question: Who are the members of a particular group?
-  - id: addGroupMember
-    intent: Add a user to a group
-    question: How do I add a user to a group?
-  - id: removeGroupMember
-    intent: Remove a user from a group
-    question: How do I take a user out of a group?
-  phrasing_ops: 3
-  slug: airbyte-public-group-members-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_group_permissions API from Airbyte — 2 operation(s) for public_group_permissions.
-  name: Airbyte Public Group Permissions API
-  phrasing_intents:
-  - id: listGroupPermissions
-    intent: List a group's permissions
-    question: What permissions does a group have?
-  - id: createGroupPermission
-    intent: Grant a permission to a group
-    question: How do I give a whole group access to a workspace?
-  - id: deleteGroupPermission
-    intent: Revoke a permission from a group
-    question: How do I revoke a group's access to a workspace?
-  phrasing_ops: 3
-  slug: airbyte-public-group-permissions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_groups API from Airbyte — 2 operation(s) for public_groups.
-  name: Airbyte Public Groups API
-  phrasing_intents:
-  - id: listGroups
-    intent: List groups in an organization
-    question: What user groups exist in my organization?
-  - id: createGroup
-    intent: Create a user group
-    question: How do I create a group to manage access for a team?
-  - id: getGroup
-    intent: Get a group's details
-    question: How do I look up one group by its id?
-  - id: updateGroup
-    intent: Rename or redescribe a group
-    question: How do I rename an existing group?
-  - id: deleteGroup
-    intent: Delete a group
-    question: How do I delete a group entirely?
-  phrasing_ops: 5
-  slug: airbyte-public-groups-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_health API from Airbyte — 1 operation(s) for public_health.
-  name: Airbyte Public Health API
-  phrasing_intents:
-  - id: getHealthCheck
-    intent: Check that the API is up
-    question: Is the Airbyte API up and responding right now?
-  phrasing_ops: 1
-  slug: airbyte-public-health-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_jobs API from Airbyte — 2 operation(s) for public_jobs.
-  name: Airbyte Public Jobs API
-  phrasing_intents:
-  - id: listJobs
-    intent: List sync and reset jobs
-    question: How do I see the recent sync jobs for a connection?
-  - id: createJob
-    intent: Trigger a sync or reset for a connection
-    question: How do I kick off a sync for a connection right now?
-  - id: getJob
-    intent: Get a job's status and details
-    question: How do I check whether a sync job finished or failed?
-  - id: cancelJob
-    intent: Cancel a running job
-    question: How do I stop a sync that's currently running?
-  phrasing_ops: 4
-  slug: airbyte-public-jobs-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_oauth API from Airbyte — 1 operation(s) for public_oauth.
-  name: Airbyte Public OAUTH API
-  phrasing_intents:
-  - id: oauthCallback
-    intent: Receive an OAuth redirect from an identity provider
-    question: Where do identity providers redirect back to after a source's OAuth sign-in?
-  phrasing_ops: 1
-  slug: airbyte-public-oauth-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_organizations API from Airbyte — 3 operation(s) for public_organizations.
-  name: Airbyte Public Organizations API
-  phrasing_intents:
-  - id: listOrganizationsForUser
-    intent: List the organizations I belong to
-    question: Which organizations does my user belong to?
-  - id: createOrUpdateOrganizationOAuthCredentials
-    intent: Set org-wide OAuth override credentials for a connector
-    question: How do I use my own OAuth app credentials for a connector across my whole organization?
-  - id: deleteOrganizationOAuthCredentials
-    intent: Remove org-wide OAuth override credentials
-    question: How do I go back to the default OAuth credentials for a connector in my organization?
-  phrasing_ops: 3
-  slug: airbyte-public-organizations-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_permissions API from Airbyte — 2 operation(s) for public_permissions.
-  name: Airbyte Public Permissions API
-  phrasing_intents:
-  - id: getPermission
-    intent: Get a permission's details
-    question: How do I look up a single permission by its id?
-  - id: updatePermission
-    intent: Change a permission's role
-    question: How do I change a user's role on an existing permission?
-  - id: deletePermission
-    intent: Delete a user's permission
-    question: How do I revoke a user's permission?
-  - id: listPermissions
-    intent: List a user's permissions
-    question: What permissions does a particular user have?
-  - id: createPermission
-    intent: Grant a permission to a user
-    question: How do I give a user access to a workspace?
-  phrasing_ops: 5
-  slug: airbyte-public-permissions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_regions API from Airbyte — 2 operation(s) for public_regions.
-  name: Airbyte Public Regions API
-  phrasing_intents:
-  - id: listRegions
-    intent: List an organization's regions
-    question: What regions are set up for my organization?
-  - id: createRegion
-    intent: Create a region
-    question: How do I create a new region for my organization?
-  - id: getRegion
-    intent: Get a region
-    question: How do I look up one region's details?
-  - id: updateRegion
-    intent: Rename or enable/disable a region
-    question: How do I disable a region without deleting it?
-  - id: deleteRegion
-    intent: Delete a region
-    question: How do I delete a region?
-  phrasing_ops: 5
-  slug: airbyte-public-regions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_root API from Airbyte — 1 operation(s) for public_root.
-  name: Airbyte Public Root API
-  phrasing_intents:
-  - id: getDocumentation
-    intent: Open the API documentation
-    question: Where does the API root URL send me?
-  phrasing_ops: 1
-  slug: airbyte-public-root-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_source_definitions API from Airbyte — 2 operation(s) for public_source_definitions.
-  name: Airbyte Public Source Definitions API
-  phrasing_intents:
-  - id: listSourceDefinitions
-    intent: List a workspace's source definitions
-    question: Which source connector definitions exist in my workspace?
-  - id: createSourceDefinition
-    intent: Register a custom source connector image
-    question: How do I add a custom source connector from my own Docker image?
-  - id: getSourceDefinition
-    intent: Get a source definition
-    question: How do I check which Docker image a source definition uses?
-  - id: updateSourceDefinition
-    intent: Update a source definition's name or image tag
-    question: How do I bump the image tag of a custom source connector?
-  - id: deleteSourceDefinition
-    intent: Delete a source definition
-    question: How do I delete a custom source connector definition?
-  phrasing_ops: 5
-  slug: airbyte-public-source-definitions-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_sources API from Airbyte — 3 operation(s) for public_sources.
-  name: Airbyte Public Sources API
-  phrasing_intents:
-  - id: listSources
-    intent: List sources
-    question: How do I list the sources set up in my workspaces?
-  - id: createSource
-    intent: Create a source
-    question: How do I create a new source to pull data from, like a database or app?
-  - id: getSource
-    intent: Get a source's details
-    question: How do I view the configuration of one source?
-  - id: patchSource
-    intent: Partially update a source
-    question: How do I change just one setting on a source, like its name?
-  - id: putSource
-    intent: Fully overwrite a source's configuration
-    question: How do I replace a source's entire configuration rather than patch it?
-  - id: deleteSource
-    intent: Delete a source
-    question: How do I delete a source I no longer pull from?
-  - id: initiateOAuth
-    intent: Start OAuth sign-in for a source
-    question: How do I get the URL a user visits to authorize a source with OAuth?
-  phrasing_ops: 7
-  slug: airbyte-public-sources-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_streams API from Airbyte — 1 operation(s) for public_streams.
-  name: Airbyte Public Streams API
-  phrasing_intents:
-  - id: getStreamProperties
-    intent: Get the streams and fields a source offers
-    question: What streams and fields can I sync from a source?
-  phrasing_ops: 1
-  slug: airbyte-public-streams-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_tags API from Airbyte — 2 operation(s) for public_tags.
-  name: Airbyte Public Tags API
-  phrasing_intents:
-  - id: listTags
-    intent: List tags
-    question: What tags have been created for organizing connections?
-  - id: createTag
-    intent: Create a tag
-    question: How do I create a colored tag to label my connections?
-  - id: getTag
-    intent: Get a tag
-    question: How do I look up a tag by its id?
-  - id: deleteTag
-    intent: Delete a tag
-    question: How do I delete a tag I don't use?
-  - id: updateTag
-    intent: Rename or recolor a tag
-    question: How do I change the color of an existing tag?
-  phrasing_ops: 5
-  slug: airbyte-public-tags-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_users API from Airbyte — 1 operation(s) for public_users.
-  name: Airbyte Public Users API
-  phrasing_intents:
-  - id: listUsersWithinAnOrganization
-    intent: List users in an organization
-    question: Who are all the users in my organization?
-  phrasing_ops: 1
-  slug: airbyte-public-users-api
-- baseURL: https://api.airbyte.com/v1
-  baseurl_source: declared
-  description: The public_workspaces API from Airbyte — 3 operation(s) for public_workspaces.
-  name: Airbyte Public Workspaces API
-  phrasing_intents:
-  - id: listWorkspaces
-    intent: List workspaces
-    question: What workspaces do I have access to?
-  - id: createWorkspace
-    intent: Create a workspace
-    question: How do I create a new workspace?
-  - id: getWorkspace
-    intent: Get a workspace's details
-    question: How do I look up one workspace's settings?
-  - id: updateWorkspace
-    intent: Update a workspace's name, region or notifications
-    question: How do I rename an existing workspace?
-  - id: deleteWorkspace
-    intent: Delete a workspace
-    question: How do I delete a workspace?
-  - id: createOrUpdateWorkspaceOAuthCredentials
-    intent: Set workspace OAuth override credentials for a connector
-    question: How do I use my own OAuth app credentials for a connector in just one workspace?
-  phrasing_ops: 6
-  slug: airbyte-public-workspaces-api
+  description: The X402 API from Airbyte — 1 operation(s) for x402.
+  name: Airbyte X402 API
+  slug: airbyte-x402-api
 arazzos:
 - description: Create an API application to mint client credentials, read it back, then exchange those credentials for a bearer access token.
   name: Airbyte Bootstrap an Application and Access Token
@@ -517,7 +99,7 @@ arazzos:
 - description: Create a workspace, read it back, create an organizing tag inside it, and confirm the workspace starts empty of connections.
   name: Airbyte Bootstrap a Workspace
   slug: airbyte-workspace-bootstrap-workflow
-artifact_total: 808
+artifact_total: 788
 collections:
 - collection_type: postman
   name: airbyte-api Applications API
@@ -648,9 +230,6 @@ collections:
 - collection_type: postman
   name: airbyte-api Applications Workspaces API
   slug: postman-airbyte-workspaces-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: airbyte-api Applications API
   slug: open-airbyte-applications-api
@@ -787,23 +366,91 @@ collections:
   name: airbyte-api
   slug: open-airbyte
 common:
+- group: design
+  href: https://artifacts.apis.io/airbyte/rules/airbyte-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/airbyte-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/airbyte/rules/airbyte-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/airbyte-rules.yml
+- group: design
+  href: https://artifacts.apis.io/airbyte/rules/airbyte-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/airbyte-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/airbyte/json-ld/airbyte-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/airbyte-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/airbyte/vocabulary/airbyte-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/airbyte-vocabulary.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://trust.airbyte.com/
+- group: auth
+  title: ''
+  type: Security
+  url: https://docs.airbyte.com/platform/operating-airbyte/security
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://docs.airbyte.com/release_notes/breaking-changes
+- group: other
+  href: https://artifacts.apis.io/airbyte/hosts/airbyte-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/airbyte-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/airbyte/integrations/airbyte-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/airbyte-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/airbyte/vendors/airbyte-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/airbyte-vendors.yml
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://airbyte.com/company/press
+- group: start
+  title: ''
+  type: Login
+  url: https://airbyte.com/signin
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://docs.airbyte.com/
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://reference.airbyte.com/reference
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/plans/airbyte-plans-pricing.yml
+  href: https://artifacts.apis.io/airbyte/plans/airbyte-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/airbyte-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/rate-limits/airbyte-rate-limits.yml
+  href: https://artifacts.apis.io/airbyte/rate-limits/airbyte-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/airbyte-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/finops/airbyte-finops.yml
+  href: https://artifacts.apis.io/airbyte/finops/airbyte-finops.yml
   title: ''
   type: FinOps
   url: finops/airbyte-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/capabilities/airbyte-capability-edges.yml
+  href: https://artifacts.apis.io/airbyte/capabilities/airbyte-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/airbyte-capability-edges.yml
@@ -816,147 +463,147 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/airbyte/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/agentic-access/airbyte-agentic-access.yml
+  href: https://artifacts.apis.io/airbyte/agentic-access/airbyte-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/airbyte-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/security/airbyte-domain-security.yml
+  href: https://artifacts.apis.io/airbyte/security/airbyte-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airbyte-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/packages/airbyte-packages.yml
+  href: https://artifacts.apis.io/airbyte/packages/airbyte-packages.yml
   title: ''
   type: Packages
   url: packages/airbyte-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/well-known/airbyte-well-known.yml
+  href: https://artifacts.apis.io/airbyte/well-known/airbyte-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/airbyte-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/mcp/airbyte-mcp.yml
+  href: https://artifacts.apis.io/airbyte/mcp/airbyte-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/airbyte-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/llms/airbyte-llms.txt
+  href: https://artifacts.apis.io/airbyte/llms/airbyte-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/airbyte-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/overlays/airbyte-openapi-overlay.yaml
+  href: https://artifacts.apis.io/airbyte/overlays/airbyte-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/airbyte-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/conformance/airbyte-conformance.yml
+  href: https://artifacts.apis.io/airbyte/conformance/airbyte-conformance.yml
   title: ''
   type: Conformance
   url: conformance/airbyte-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/errors/airbyte-problem-types.yml
+  href: https://artifacts.apis.io/airbyte/errors/airbyte-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/airbyte-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/lifecycle/airbyte-lifecycle.yml
+  href: https://artifacts.apis.io/airbyte/lifecycle/airbyte-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/airbyte-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/scopes/airbyte-scopes.yml
+  href: https://artifacts.apis.io/airbyte/scopes/airbyte-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/airbyte-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/authentication/airbyte-authentication.yml
+  href: https://artifacts.apis.io/airbyte/authentication/airbyte-authentication.yml
   title: ''
   type: Authentication
   url: authentication/airbyte-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/security/airbyte-trust-center.yml
+  href: https://artifacts.apis.io/airbyte/security/airbyte-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/airbyte-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/security/airbyte-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/airbyte/security/airbyte-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/airbyte-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/conventions/airbyte-conventions.yml
+  href: https://artifacts.apis.io/airbyte/conventions/airbyte-conventions.yml
   title: ''
   type: Conventions
   url: conventions/airbyte-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/changelog/airbyte-changelog.yml
+  href: https://artifacts.apis.io/airbyte/changelog/airbyte-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/airbyte-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/cli/airbyte-cli.yml
+  href: https://artifacts.apis.io/airbyte/cli/airbyte-cli.yml
   title: ''
   type: CLI
   url: cli/airbyte-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/components/airbyte-components.yml
+  href: https://artifacts.apis.io/airbyte/components/airbyte-components.yml
   title: ''
   type: Components
   url: components/airbyte-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/data-model/airbyte-data-model.yml
+  href: https://artifacts.apis.io/airbyte/data-model/airbyte-data-model.yml
   title: ''
   type: DataModel
   url: data-model/airbyte-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-application-token-bootstrap-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-application-token-bootstrap-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-application-token-bootstrap-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-cancel-running-job-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-cancel-running-job-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-cancel-running-job-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-destination-create-verify-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-destination-create-verify-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-destination-create-verify-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-find-connection-and-sync-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-find-connection-and-sync-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-find-connection-and-sync-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-provision-pipeline-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-provision-pipeline-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-provision-pipeline-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-reset-and-resync-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-reset-and-resync-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-reset-and-resync-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-source-create-verify-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-source-create-verify-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-source-create-verify-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-tag-connection-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-tag-connection-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-tag-connection-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-trigger-sync-and-poll-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-trigger-sync-and-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-trigger-sync-and-poll-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/arazzo/airbyte-workspace-bootstrap-workflow.yml
+  href: https://artifacts.apis.io/airbyte/arazzo/airbyte-workspace-bootstrap-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/airbyte-workspace-bootstrap-workflow.yml
@@ -1737,10 +1384,10 @@ features:
 - Data Activation (Reverse ETL) capabilities
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Airbyte Finops
-  primary_unit: ''
-  service_category: Data Integration
+  primary_unit: credits
+  service_category: ''
   slug: airbyte-finops
   template: false
 graphqls:
@@ -3050,18 +2697,21 @@ modified: '2026-06-20'
 name: Airbyte
 nav: Providers
 network: true
-overview: 'Airbyte publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Public API, Public Applications API, Public Connections API, and 21 more. Tagged areas include Data Integration, ETL, ELT, Open Source, and Data Pipeline.
+overview: 'Airbyte publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Airbyte Marketing Site API, .well Known API, and X402 API. Tagged areas include Data Integration, ETL, ELT, Open Source, and Data Pipeline.
 
 
-  The Airbyte catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Airbyte catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Airbyte''s developer surface includes authentication, changelog, CLI, developer portal, developer console, signup flow, pricing, and 54 more developer resources.'
+  Airbyte''s developer surface includes documentation, API reference, authentication, changelog, CLI, developer portal, developer console, and 69 more developer resources.'
 plans:
 - name: Airbyte Plans Pricing
   plan_count: 5
   slug: airbyte-plans-pricing
-random_paper: 4
+- name: Airbyte Price Estimates
+  plan_count: 0
+  slug: airbyte-price-estimates
+random_paper: 8
 rate_limits:
 - limit_count: 3
   name: Airbyte Rate Limits
@@ -3078,6 +2728,18 @@ rules:
     info: 2
     warn: 3
   slug: airbyte-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 62
+  extends:
+  - spectral:oas
+  name: Airbyte API Rules
+  rule_count: 21
+  severity_counts:
+    error: 19
+    hint: 0
+    info: 1
+    warn: 1
+  slug: airbyte-rules
 - authorship: generated
   effective_rule_count: 75
   extends:
@@ -3097,31 +2759,31 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: exemplar
-  composite: 68.8
+  composite: 77.5
   coverage:
-    artifact_dirs: 37
-    catalog_earned: 63.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    artifact_dirs: 42
+    catalog_earned: 77.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 38.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 4.3
   facets:
-    access_clarity: 60.5
-    contract_governance: 31.8
-    contract_quality: 57.9
-    developer_ergonomics: 92.1
-    discoverability: 75.0
-    operational_transparency: 50.0
-  previous_composite: 70.3
+    access_clarity: 100.0
+    contract_governance: 37.9
+    contract_quality: 51.1
+    developer_ergonomics: 95.7
+    discoverability: 76.7
+    operational_transparency: 68.4
+  previous_composite: 73.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 24
+      marker_coverage: 10.7
+      total: 28
     mcp: first-party
   regulatory:
     applies: true
@@ -3129,13 +2791,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
-    applies: true
-    score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/airbyte/refs/heads/main/screenshots/airbyte-2026-06-20T171421.png
+    applies: false
+    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
+    reason: read_only
+screenshot: https://apis.io/screenshots/airbyte/airbyte-2026-06-20T171421.png
 security:
 - kind: authentication
   name: Airbyte Authentication

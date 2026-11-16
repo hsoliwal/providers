@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -49,17 +52,14 @@ apis:
   description: The Trade API from DODO — 1 operation(s) for trade.
   name: DODO Trade API
   slug: dodo-trade-api
-artifact_total: 6
+artifact_total: 7
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: DODO / Route Trade API
   slug: open-dodo-trade-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/overlays/dodo-trade-overlay.yaml
+  href: https://artifacts.apis.io/dodo/overlays/dodo-trade-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/dodo-trade-overlay.yaml
@@ -80,67 +80,67 @@ common:
   type: GitHubOrganization
   url: https://github.com/DODOEX
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/authentication/dodo-authentication.yml
+  href: https://artifacts.apis.io/dodo/authentication/dodo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dodo-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/agentic-access/dodo-agentic-access.yml
+  href: https://artifacts.apis.io/dodo/agentic-access/dodo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dodo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/security/dodo-domain-security.yml
+  href: https://artifacts.apis.io/dodo/security/dodo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dodo-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/packages/dodo-packages.yml
+  href: https://artifacts.apis.io/dodo/packages/dodo-packages.yml
   title: ''
   type: Packages
   url: packages/dodo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/packages/dodo-packages.yml
+  href: https://artifacts.apis.io/dodo/packages/dodo-packages.yml
   title: ''
   type: SDKs
   url: packages/dodo-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/mcp/dodo-mcp.yml
+  href: https://artifacts.apis.io/dodo/mcp/dodo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/dodo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/llms/dodo-llms.txt
+  href: https://artifacts.apis.io/dodo/llms/dodo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dodo-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/conventions/dodo-conventions.yml
+  href: https://artifacts.apis.io/dodo/conventions/dodo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dodo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/lifecycle/dodo-lifecycle.yml
+  href: https://artifacts.apis.io/dodo/lifecycle/dodo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dodo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/conformance/dodo-conformance.yml
+  href: https://artifacts.apis.io/dodo/conformance/dodo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dodo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/errors/dodo-error-codes.yml
+  href: https://artifacts.apis.io/dodo/errors/dodo-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/dodo-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/data-model/dodo-data-model.yml
+  href: https://artifacts.apis.io/dodo/data-model/dodo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dodo-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dodo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -159,27 +159,43 @@ network: true
 overview: 'DODO publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Trade API. Tagged areas include Company, Cryptocurrency, DeFi, Decentralized Exchange, and Blockchain.
 
 
+  The DODO catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   DODO''s developer surface includes documentation, API reference, authentication, and 16 more developer resources.'
-random_paper: 4
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: DODO API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: dodo-rules
 score:
   band: emerging
-  composite: 18.5
+  composite: 20.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 14.5
     developer_ergonomics: 39.9
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 18.5
+  previous_composite: 20.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -196,14 +212,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/dodo/refs/heads/main/screenshots/dodo-2026-07-25T212227.png
+screenshot: https://apis.io/screenshots/dodo/dodo-2026-07-25T212227.png
 security:
 - kind: authentication
   name: Dodo Authentication
@@ -213,6 +229,10 @@ security:
   name: Dodo Domain Security
   slug: dodo-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Get a DODO swap route quote
+  slug: dodo-get-swap-route
 slug: dodo
 tags:
 - Company

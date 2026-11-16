@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  label: Open access
+  onboarding: open
   pricing: unknown
-  public: false
-  source: []
+  public: true
+  source:
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brinker-international/refs/heads/main/security/brinker-international-domain-security.yml
+  href: https://artifacts.apis.io/brinker-international/security/brinker-international-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brinker-international-domain-security.yml
@@ -74,22 +80,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/brinker-international
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brinker-international/refs/heads/main/authentication/brinker-international-authentication.yml
+  href: https://artifacts.apis.io/brinker-international/authentication/brinker-international-authentication.yml
   title: Authentication + onboarding profile (Apigee key/secret, approval-gated)
   type: Authentication
   url: authentication/brinker-international-authentication.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/brinker-international/refs/heads/main/plans/brinker-international-plans-pricing.yml
+  href: https://artifacts.apis.io/brinker-international/plans/brinker-international-plans-pricing.yml
   title: Plans + pricing (none published — partner entitlement only)
   type: Plans
   url: plans/brinker-international-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/brinker-international/refs/heads/main/rate-limits/brinker-international-rate-limits.yml
+  href: https://artifacts.apis.io/brinker-international/rate-limits/brinker-international-rate-limits.yml
   title: Rate limits (none published)
   type: RateLimits
   url: rate-limits/brinker-international-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brinker-international/refs/heads/main/llms/brinker-international-llms.txt
+  href: https://artifacts.apis.io/brinker-international/llms/brinker-international-llms.txt
   title: llms.txt (generated)
   type: LLMsTxt
   url: llms/brinker-international-llms.txt
@@ -156,7 +162,7 @@ press:
 - date: ''
   title: BRINKER INTERNATIONAL REPORTS THIRD QUARTER ...
   url: https://www.prnewswire.com/news-releases/brinker-international-reports-third-quarter-of-fiscal-2026-results-and-updates-fiscal-2026-guidance-302756567.html
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Brinker International Rate Limits
@@ -193,14 +199,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/brinker-international/refs/heads/main/screenshots/brinker-international-2026-06-20T173707.png
+screenshot: https://apis.io/screenshots/brinker-international/brinker-international-2026-06-20T173707.png
 security:
 - kind: authentication
   name: Brinker International Authentication

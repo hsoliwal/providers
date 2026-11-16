@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 93
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 167
   slug: frostbyte-agentic-access
   summary_line: 167 operations · 93 acting
-api_count: 8
+api_count: 7
 apis:
 - baseURL: https://agent-gateway-kappa.vercel.app
   baseurl_source: declared
@@ -94,11 +101,8 @@ apis:
   description: 1 services
   name: Frostbyte Security API
   slug: frostbyte-security-api
-artifact_total: 68
+artifact_total: 67
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Clawdia Agent Gateway API
   slug: open-frostbyte-agent-gateway
@@ -152,32 +156,32 @@ collections:
   slug: open-frostbyte-web-scraper
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/plans/frostbyte-plans-pricing.yml
+  href: https://artifacts.apis.io/frostbyte/plans/frostbyte-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/frostbyte-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/rate-limits/frostbyte-rate-limits.yml
+  href: https://artifacts.apis.io/frostbyte/rate-limits/frostbyte-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/frostbyte-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/finops/frostbyte-finops.yml
+  href: https://artifacts.apis.io/frostbyte/finops/frostbyte-finops.yml
   title: ''
   type: FinOps
   url: finops/frostbyte-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/agentic-access/frostbyte-agentic-access.yml
+  href: https://artifacts.apis.io/frostbyte/agentic-access/frostbyte-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/frostbyte-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/security/frostbyte-domain-security.yml
+  href: https://artifacts.apis.io/frostbyte/security/frostbyte-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/frostbyte-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/authentication/frostbyte-authentication.yml
+  href: https://artifacts.apis.io/frostbyte/authentication/frostbyte-authentication.yml
   title: ''
   type: Authentication
   url: authentication/frostbyte-authentication.yml
@@ -333,7 +337,7 @@ plans:
 - name: Frostbyte Plans Pricing
   plan_count: 2
   slug: frostbyte-plans-pricing
-random_paper: 4
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Frostbyte Rate Limits
@@ -364,29 +368,29 @@ rules:
   slug: frostbyte-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 30.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 51.5
     catalog_earned_first_party: 0.0
     catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 1.0
   facets:
     access_clarity: 5.3
     contract_governance: 13.6
-    contract_quality: 53.5
+    contract_quality: 57.7
     developer_ergonomics: 38.1
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 34.0
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 80.0
       total: 10
   regulatory:
     applies: true
@@ -394,13 +398,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/frostbyte/refs/heads/main/screenshots/frostbyte-2026-06-20T181557.png
+screenshot: https://apis.io/screenshots/frostbyte/frostbyte-2026-06-20T181557.png
 security:
 - kind: authentication
   name: Frostbyte Authentication

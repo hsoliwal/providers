@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://feed.fusion.tempus-ex.com/v2/
@@ -41,14 +46,14 @@ apis:
   description: 'FusionFeed aggregates sports data and media (schedules, rosters, official and automated statistics, telemetry, scoreboard, and live/VOD video) into a single GraphQL-first API (with an interchangeable '
   name: FusionFeed
   slug: fusionfeed
-artifact_total: 5
+artifact_total: 7
 asyncapis:
 - description: Live push of sports data from FusionFeed over WebSocket. Subscriptions use the graphql-ws protocol (legacy subscriptions-transport-ws is also supported). Authentication is provided in the connection-i
   name: FusionFeed Realtime (GraphQL Subscriptions)
   slug: tempus-ex-fusionfeed-asyncapi
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/security/tempus-ex-domain-security.yml
+  href: https://artifacts.apis.io/tempus-ex/security/tempus-ex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tempus-ex-domain-security.yml
@@ -85,62 +90,62 @@ common:
   type: StatusPage
   url: https://status.tempus-ex.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/lifecycle/tempus-ex-lifecycle.yml
+  href: https://artifacts.apis.io/tempus-ex/lifecycle/tempus-ex-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/tempus-ex-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/authentication/tempus-ex-authentication.yml
+  href: https://artifacts.apis.io/tempus-ex/authentication/tempus-ex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tempus-ex-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/conventions/tempus-ex-conventions.yml
+  href: https://artifacts.apis.io/tempus-ex/conventions/tempus-ex-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tempus-ex-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/rate-limits/tempus-ex-rate-limits.yml
+  href: https://artifacts.apis.io/tempus-ex/rate-limits/tempus-ex-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tempus-ex-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/lifecycle/tempus-ex-lifecycle.yml
+  href: https://artifacts.apis.io/tempus-ex/lifecycle/tempus-ex-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tempus-ex-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/errors/tempus-ex-problem-types.yml
+  href: https://artifacts.apis.io/tempus-ex/errors/tempus-ex-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/tempus-ex-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/conformance/tempus-ex-conformance.yml
+  href: https://artifacts.apis.io/tempus-ex/conformance/tempus-ex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tempus-ex-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/data-model/tempus-ex-data-model.yml
+  href: https://artifacts.apis.io/tempus-ex/data-model/tempus-ex-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tempus-ex-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/asyncapi/tempus-ex-fusionfeed-asyncapi.yml
+  href: https://artifacts.apis.io/tempus-ex/asyncapi/tempus-ex-fusionfeed-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/tempus-ex-fusionfeed-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/mcp/tempus-ex-mcp.yml
+  href: https://artifacts.apis.io/tempus-ex/mcp/tempus-ex-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/tempus-ex-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/llms/tempus-ex-llms.txt
+  href: https://artifacts.apis.io/tempus-ex/llms/tempus-ex-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tempus-ex-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tempus-ex/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -159,7 +164,7 @@ overview: 'Tempus Ex is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Tempus Ex''s developer surface includes documentation, API reference, getting-started guide, support, authentication, and 16 more developer resources.'
-random_paper: 12
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Tempus Ex Rate Limits
@@ -168,7 +173,7 @@ score:
   band: thin
   composite: 34.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -193,14 +198,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tempus-ex/refs/heads/main/screenshots/tempus-ex-2026-09-02T163041.png
+screenshot: https://apis.io/screenshots/tempus-ex/tempus-ex-2026-09-02T163041.png
 security:
 - kind: authentication
   name: Tempus Ex Authentication
@@ -210,6 +215,12 @@ security:
   name: Tempus Ex Domain Security
   slug: tempus-ex-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Query football schedules, games and plays
+  slug: tempus-ex-query-football-schedule-and-plays
+- name: Find, clip and thumbnail game video
+  slug: tempus-ex-stream-and-clip-game-video
 slug: tempus-ex
 tags:
 - Company

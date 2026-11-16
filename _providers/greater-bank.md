@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -82,11 +86,8 @@ arazzos:
 - description: List Greater Bank's public CDR Product Reference Data (PRD) offerings, then retrieve the full detail for one product. Runs unauthenticated against the live public CDS host (no consumer consent / ADR h
   name: Greater Bank product lookup
   slug: greater-bank-product-lookup
-artifact_total: 19
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-greater-bank-banking-account-balances-api
@@ -110,37 +111,37 @@ collections:
   slug: open-greater-bank-banking-products-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/capabilities/greater-bank-capability-edges.yml
+  href: https://artifacts.apis.io/greater-bank/capabilities/greater-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/greater-bank-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/agentic-access/greater-bank-agentic-access.yml
+  href: https://artifacts.apis.io/greater-bank/agentic-access/greater-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/greater-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/security/greater-bank-domain-security.yml
+  href: https://artifacts.apis.io/greater-bank/security/greater-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/greater-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/authentication/greater-bank-authentication.yml
+  href: https://artifacts.apis.io/greater-bank/authentication/greater-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/greater-bank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/conventions/greater-bank-conventions.yml
+  href: https://artifacts.apis.io/greater-bank/conventions/greater-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/greater-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/errors/greater-bank-problem-types.yml
+  href: https://artifacts.apis.io/greater-bank/errors/greater-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/greater-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/lifecycle/greater-bank-lifecycle.yml
+  href: https://artifacts.apis.io/greater-bank/lifecycle/greater-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/greater-bank-lifecycle.yml
@@ -153,37 +154,37 @@ common:
   type: Deprecation
   url: https://consumerdatastandardsaustralia.github.io/standards/#versioning
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/conformance/greater-bank-conformance.yml
+  href: https://artifacts.apis.io/greater-bank/conformance/greater-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/greater-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/data-model/greater-bank-data-model.yml
+  href: https://artifacts.apis.io/greater-bank/data-model/greater-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/greater-bank-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/mcp/greater-bank-mcp.yml
+  href: https://artifacts.apis.io/greater-bank/mcp/greater-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/greater-bank-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/llms/greater-bank-llms.txt
+  href: https://artifacts.apis.io/greater-bank/llms/greater-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/greater-bank-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/overlays/greater-bank-cds-banking-products-overlay.yaml
+  href: https://artifacts.apis.io/greater-bank/overlays/greater-bank-cds-banking-products-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/greater-bank-cds-banking-products-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/greater-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/arazzo/greater-bank-product-lookup.yml
+  href: https://artifacts.apis.io/greater-bank/arazzo/greater-bank-product-lookup.yml
   title: ''
   type: Arazzo
   url: arazzo/greater-bank-product-lookup.yml
@@ -234,22 +235,38 @@ network: true
 overview: 'Greater Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
+  The Greater Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Greater Bank''s developer surface includes authentication, documentation, getting-started guide, API reference, support, and 20 more developer resources.'
-random_paper: 15
+random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Greater Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: greater-bank-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 35.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 47.0
     discoverability: 73.2
@@ -261,7 +278,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 33.9
+  previous_composite: 35.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -278,13 +295,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/greater-bank/refs/heads/main/screenshots/greater-bank-2026-07-21T130910.png
+screenshot: https://apis.io/screenshots/greater-bank/greater-bank-2026-07-21T130910.png
 security:
 - kind: authentication
   name: Greater Bank Authentication
@@ -294,6 +311,10 @@ security:
   name: Greater Bank Domain Security
   slug: greater-bank-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Look up Greater Bank banking products
+  slug: greater-bank-lookup-products
 slug: greater-bank
 tags:
 - Finance

@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-10-17'
+  score: 28.5
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: The AcruxCore REST API provides endpoints for authentication, prompts, versions, gateway, tracing, tools, and evaluation.
@@ -54,75 +70,75 @@ apis:
   description: The Traces API from Acrux Core — 4 operation(s) for traces.
   name: Acrux Core Traces API
   slug: acruxcore-traces-api
-artifact_total: 19
+artifact_total: 20
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/rate-limits/acruxcore-rate-limits.yml
+  href: https://artifacts.apis.io/acruxcore/rate-limits/acruxcore-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acruxcore-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/plans/acruxcore-plans-pricing.yml
+  href: https://artifacts.apis.io/acruxcore/plans/acruxcore-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acruxcore-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/rules/acruxcore-rules.yml
+  href: https://artifacts.apis.io/acruxcore/rules/acruxcore-rules.yml
   title: ''
   type: Spectral
   url: rules/acruxcore-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/json-ld/acruxcore-context.jsonld
+  href: https://artifacts.apis.io/acruxcore/json-ld/acruxcore-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/acruxcore-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/vocabulary/acruxcore-vocabulary.yml
+  href: https://artifacts.apis.io/acruxcore/vocabulary/acruxcore-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/acruxcore-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/acruxcore/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/data-model/acruxcore-data-model.yml
+  href: https://artifacts.apis.io/acruxcore/data-model/acruxcore-data-model.yml
   title: ''
   type: DataModel
   url: data-model/acruxcore-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/authentication/acruxcore-authentication.yml
+  href: https://artifacts.apis.io/acruxcore/authentication/acruxcore-authentication.yml
   title: ''
   type: Authentication
   url: authentication/acruxcore-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/conformance/acruxcore-conformance.yml
+  href: https://artifacts.apis.io/acruxcore/conformance/acruxcore-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acruxcore-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/llms/acruxcore-llms.txt
+  href: https://artifacts.apis.io/acruxcore/llms/acruxcore-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acruxcore-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/well-known/acruxcore-well-known.yml
+  href: https://artifacts.apis.io/acruxcore/well-known/acruxcore-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/acruxcore-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/hosts/acruxcore-hosts.yml
+  href: https://artifacts.apis.io/acruxcore/hosts/acruxcore-hosts.yml
   title: ''
   type: Hosts
   url: hosts/acruxcore-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/vendors/acruxcore-vendors.yml
+  href: https://artifacts.apis.io/acruxcore/vendors/acruxcore-vendors.yml
   title: ''
   type: Vendors
   url: vendors/acruxcore-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/packages/acruxcore-packages.yml
+  href: https://artifacts.apis.io/acruxcore/packages/acruxcore-packages.yml
   title: ''
   type: Packages
   url: packages/acruxcore-packages.yml
@@ -139,12 +155,12 @@ common:
   type: Newsroom
   url: https://acruxcore.com/press
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/security/acruxcore-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/acruxcore/security/acruxcore-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/acruxcore-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acruxcore/refs/heads/main/security/acruxcore-domain-security.yml
+  href: https://artifacts.apis.io/acruxcore/security/acruxcore-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acruxcore-domain-security.yml
@@ -186,6 +202,14 @@ common:
   url: https://acruxcore.com/terms
 created: '2026-10-15'
 description: Acrux Core is an open-source LLMOps platform designed for engineering teams to manage, version, and evaluate prompts, gateways, and tools across multiple LLM providers. It offers self-hostable deployment via Docker, a hosted beta, and SDKs for TypeScript and Python. Features include prompt versioning, tool integration, tracing, audit trails, and cost monitoring, all under an Apache-2.0 license.
+finops:
+- has_sources: true
+  method: derived
+  name: Acruxcore Finops
+  primary_unit: ''
+  service_category: ''
+  slug: acruxcore-finops
+  template: true
 image: https://acruxcore.com/og-image.png
 json_schemas:
 - name: GetAccountApiKeysResponse
@@ -225,9 +249,9 @@ overview: 'Acrux Core is listed with 6 APIs on the [APIs.io](https://apis.io/) n
   Acrux Core''s developer surface includes authentication, documentation, pricing, getting-started guide, API reference, engineering blog, support, and 21 more developer resources.'
 plans:
 - name: Acruxcore Plans Pricing
-  plan_count: 1
+  plan_count: 3
   slug: acruxcore-plans-pricing
-random_paper: 4
+random_paper: 12
 rate_limits:
 - limit_count: 1
   name: Acruxcore Rate Limits
@@ -246,22 +270,24 @@ rules:
     warn: 3
   slug: acruxcore-rules
 score:
-  band: developing
-  composite: 44.4
+  band: thin
+  composite: 38.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 76.8
-    catalog_earned_first_party: 16.0
-    catalog_gap: 38.3
+    artifact_dirs: 25
+    catalog_earned: 80.8
+    catalog_earned_first_party: 20.0
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.1
   facets:
-    access_clarity: 52.6
+    access_clarity: 47.4
     contract_governance: 22.0
     contract_quality: 25.9
-    developer_ergonomics: 61.2
-    discoverability: 71.4
-    operational_transparency: 31.6
+    developer_ergonomics: 43.3
+    discoverability: 70.5
+    operational_transparency: 26.3
+  previous_composite: 46.5
   provenance:
     conformance: derived
     contracts:
@@ -276,12 +302,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 24.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/acruxcore/acruxcore-2026-11-03T120208.png
 security:
 - kind: authentication
   name: Acruxcore Authentication

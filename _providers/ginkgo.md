@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Async, job-polling REST API for running inference on public and Ginkgo-proprietary biological foundation models — protein/DNA masked language modeling and mean-embedding generation. Authenticated with
@@ -72,47 +75,47 @@ common:
   type: GitHubOrganization
   url: https://github.com/ginkgobioworks
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/packages/ginkgo-packages.yml
+  href: https://artifacts.apis.io/ginkgo/packages/ginkgo-packages.yml
   title: ''
   type: Packages
   url: packages/ginkgo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/packages/ginkgo-packages.yml
+  href: https://artifacts.apis.io/ginkgo/packages/ginkgo-packages.yml
   title: ''
   type: SDKs
   url: packages/ginkgo-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/authentication/ginkgo-authentication.yml
+  href: https://artifacts.apis.io/ginkgo/authentication/ginkgo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ginkgo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/conventions/ginkgo-conventions.yml
+  href: https://artifacts.apis.io/ginkgo/conventions/ginkgo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ginkgo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/errors/ginkgo-error-codes.yml
+  href: https://artifacts.apis.io/ginkgo/errors/ginkgo-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/ginkgo-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/lifecycle/ginkgo-lifecycle.yml
+  href: https://artifacts.apis.io/ginkgo/lifecycle/ginkgo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ginkgo-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/mcp/ginkgo-mcp.yml
+  href: https://artifacts.apis.io/ginkgo/mcp/ginkgo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ginkgo-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/security/ginkgo-domain-security.yml
+  href: https://artifacts.apis.io/ginkgo/security/ginkgo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ginkgo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/llms/ginkgo-llms.txt
+  href: https://artifacts.apis.io/ginkgo/llms/ginkgo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ginkgo-llms.txt
@@ -128,12 +131,12 @@ overview: 'Ginkgo Bioworks is listed with 1 API on the [APIs.io](https://apis.io
 
 
   Ginkgo Bioworks'' developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, and 11 more developer resources.'
-random_paper: 1
+random_paper: 15
 score:
   band: emerging
   composite: 18.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -156,14 +159,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ginkgo/refs/heads/main/screenshots/ginkgo-2026-07-25T215827.png
+screenshot: https://apis.io/screenshots/ginkgo/ginkgo-2026-07-25T215827.png
 security:
 - kind: authentication
   name: Ginkgo Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/panera-bread/refs/heads/main/security/panera-bread-domain-security.yml
+  href: https://artifacts.apis.io/panera-bread/security/panera-bread-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/panera-bread-domain-security.yml
@@ -96,12 +100,12 @@ press:
 - date: ''
   title: Panera tests automated coffee brewing system
   url: https://www.facebook.com/groups/334753240947835/posts/653552035734619/
-random_paper: 20
+random_paper: 10
 score:
   band: minimal
   composite: 3.4
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -122,14 +126,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/panera-bread/refs/heads/main/screenshots/panera-bread-2026-06-20T191337.png
+screenshot: https://apis.io/screenshots/panera-bread/panera-bread-2026-06-20T191337.png
 security:
 - kind: domain-security
   name: Panera Bread Domain Security

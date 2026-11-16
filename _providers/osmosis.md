@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.2
-  scored_at: '2026-10-17'
+  score: 35.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 5
   slug: osmosis-agentic-access
   summary_line: 5 operations · 3 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.osmosis.ai
   baseurl_source: declared
@@ -59,15 +62,12 @@ apis:
   description: The Osmosis Agent Improvement API API from Osmosis — 1 operation(s) for osmosis agent improvement api.
   name: Osmosis Agent Improvement API
   slug: osmosis-osmosis-agent-improvement-api-api
-artifact_total: 12
+artifact_total: 14
 asyncapis:
 - description: ''
   name: Osmosis Webhooks
   slug: osmosis-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Osmosis Improvement agent API
   slug: open-osmosis-agent-api
@@ -79,12 +79,12 @@ collections:
   slug: open-osmosis-osmosis-agent-improvement-api-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/capabilities/osmosis-capability-edges.yml
+  href: https://artifacts.apis.io/osmosis/capabilities/osmosis-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/osmosis-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/overlays/osmosis-agent-improvement-overlay.yaml
+  href: https://artifacts.apis.io/osmosis/overlays/osmosis-agent-improvement-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/osmosis-agent-improvement-overlay.yaml
@@ -137,87 +137,87 @@ common:
   type: TrustCenter
   url: https://trust.osmosis.ai
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/packages/osmosis-packages.yml
+  href: https://artifacts.apis.io/osmosis/packages/osmosis-packages.yml
   title: ''
   type: Packages
   url: packages/osmosis-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/packages/osmosis-packages.yml
+  href: https://artifacts.apis.io/osmosis/packages/osmosis-packages.yml
   title: ''
   type: SDKs
   url: packages/osmosis-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/cli/osmosis-cli.yml
+  href: https://artifacts.apis.io/osmosis/cli/osmosis-cli.yml
   title: ''
   type: CLI
   url: cli/osmosis-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/mcp/osmosis-mcp.yml
+  href: https://artifacts.apis.io/osmosis/mcp/osmosis-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/osmosis-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/llms/osmosis-llms.txt
+  href: https://artifacts.apis.io/osmosis/llms/osmosis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/osmosis-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/well-known/osmosis-well-known.yml
+  href: https://artifacts.apis.io/osmosis/well-known/osmosis-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/osmosis-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/conformance/osmosis-conformance.yml
+  href: https://artifacts.apis.io/osmosis/conformance/osmosis-conformance.yml
   title: ''
   type: Conformance
   url: conformance/osmosis-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/errors/osmosis-problem-types.yml
+  href: https://artifacts.apis.io/osmosis/errors/osmosis-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/osmosis-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/lifecycle/osmosis-lifecycle.yml
+  href: https://artifacts.apis.io/osmosis/lifecycle/osmosis-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/osmosis-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/changelog/osmosis-changelog.yml
+  href: https://artifacts.apis.io/osmosis/changelog/osmosis-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/osmosis-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/conventions/osmosis-conventions.yml
+  href: https://artifacts.apis.io/osmosis/conventions/osmosis-conventions.yml
   title: ''
   type: Conventions
   url: conventions/osmosis-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/data-model/osmosis-data-model.yml
+  href: https://artifacts.apis.io/osmosis/data-model/osmosis-data-model.yml
   title: ''
   type: DataModel
   url: data-model/osmosis-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/asyncapi/osmosis-webhooks.yml
+  href: https://artifacts.apis.io/osmosis/asyncapi/osmosis-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/osmosis-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/osmosis/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/security/osmosis-domain-security.yml
+  href: https://artifacts.apis.io/osmosis/security/osmosis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/osmosis-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/agentic-access/osmosis-agentic-access.yml
+  href: https://artifacts.apis.io/osmosis/agentic-access/osmosis-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/osmosis-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/authentication/osmosis-authentication.yml
+  href: https://artifacts.apis.io/osmosis/authentication/osmosis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/osmosis-authentication.yml
@@ -236,37 +236,50 @@ network: true
 overview: 'Osmosis publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Agent API, Knowledge API, and Agent Improvement API. Tagged areas include Company, Artificial Intelligence, Reinforcement Learning, LLM, and Post-Training.
 
 
-  The Osmosis catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Osmosis catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Osmosis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, CLI, and 24 more developer resources.'
-random_paper: 11
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Osmosis API Rules
+  rule_count: 47
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 1
+  slug: osmosis-rules
 score:
   band: developing
-  composite: 43.4
+  composite: 46.2
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 51.8
+    contract_governance: 18.2
+    contract_quality: 56.7
     developer_ergonomics: 73.2
     discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 43.3
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: first-party
     skills: derived
@@ -276,13 +289,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/screenshots/osmosis-2026-08-07T191013.png
+screenshot: https://apis.io/screenshots/osmosis/osmosis-2026-08-07T191013.png
 security:
 - kind: authentication
   name: Osmosis Authentication
@@ -292,6 +305,12 @@ security:
   name: Osmosis Domain Security
   slug: osmosis-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Enhance an agent task with Osmosis memory
+  slug: osmosis-enhance-agent-task
+- name: Store and manage agent interaction knowledge
+  slug: osmosis-store-and-manage-knowledge
 slug: osmosis
 tags:
 - Company

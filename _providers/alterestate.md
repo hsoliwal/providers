@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.9
-  scored_at: '2026-10-17'
+  score: 41.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://secure.alterestate.com/api/v1
@@ -62,11 +68,8 @@ apis:
   description: Property listings and detail views
   name: AlterEstate Properties API
   slug: alterestate-properties-api
-artifact_total: 16
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AlterEstate Agents API
   slug: open-alterestate-agents-api
@@ -84,7 +87,7 @@ collections:
   slug: open-alterestate-properties-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/plans/alterestate-plans-pricing.yml
+  href: https://artifacts.apis.io/alterestate/plans/alterestate-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/alterestate-plans-pricing.yml
@@ -101,67 +104,67 @@ common:
   type: APIReference
   url: https://dev.alterestate.com/properties
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/authentication/alterestate-authentication.yml
+  href: https://artifacts.apis.io/alterestate/authentication/alterestate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/alterestate-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/scopes/alterestate-scopes.yml
+  href: https://artifacts.apis.io/alterestate/scopes/alterestate-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/alterestate-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/mcp/alterestate-mcp.yml
+  href: https://artifacts.apis.io/alterestate/mcp/alterestate-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/alterestate-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/well-known/alterestate-well-known.yml
+  href: https://artifacts.apis.io/alterestate/well-known/alterestate-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/alterestate-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/llms/alterestate-llms.txt
+  href: https://artifacts.apis.io/alterestate/llms/alterestate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/alterestate-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/overlays/alterestate-overlay.yaml
+  href: https://artifacts.apis.io/alterestate/overlays/alterestate-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/alterestate-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/conventions/alterestate-conventions.yml
+  href: https://artifacts.apis.io/alterestate/conventions/alterestate-conventions.yml
   title: ''
   type: Conventions
   url: conventions/alterestate-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/errors/alterestate-problem-types.yml
+  href: https://artifacts.apis.io/alterestate/errors/alterestate-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/alterestate-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/lifecycle/alterestate-lifecycle.yml
+  href: https://artifacts.apis.io/alterestate/lifecycle/alterestate-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/alterestate-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/conformance/alterestate-conformance.yml
+  href: https://artifacts.apis.io/alterestate/conformance/alterestate-conformance.yml
   title: ''
   type: Conformance
   url: conformance/alterestate-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/data-model/alterestate-data-model.yml
+  href: https://artifacts.apis.io/alterestate/data-model/alterestate-data-model.yml
   title: ''
   type: DataModel
   url: data-model/alterestate-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/alterestate/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/security/alterestate-domain-security.yml
+  href: https://artifacts.apis.io/alterestate/security/alterestate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alterestate-domain-security.yml
@@ -216,12 +219,28 @@ network: true
 overview: 'AlterEstate publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Developments API, Leads API, and 2 more. Tagged areas include Company, Real Estate, CRM, Property Management, and Lead Management.
 
 
+  The AlterEstate catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   AlterEstate''s developer surface includes documentation, API reference, authentication, engineering blog, support, pricing, signup flow, and 19 more developer resources.'
 plans:
 - name: Alterestate Plans Pricing
   plan_count: 2
   slug: alterestate-plans-pricing
-random_paper: 16
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: AlterEstate API Rules
+  rule_count: 66
+  severity_counts:
+    error: 64
+    hint: 0
+    info: 1
+    warn: 1
+  slug: alterestate-rules
 scopes:
 - name: Alterestate Scopes
   scope_count: 1
@@ -229,18 +248,18 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 36.9
+  composite: 38.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 45.0
+    artifact_dirs: 23
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.2
+  delta: 0.0
   facets:
     access_clarity: 59.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 13.9
     developer_ergonomics: 58.9
     discoverability: 75.0
@@ -250,7 +269,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 32.7
+  previous_composite: 38.6
   provenance:
     conformance: derived
     contracts:
@@ -266,13 +285,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/alterestate/refs/heads/main/screenshots/alterestate-2026-07-25T195823.png
+screenshot: https://apis.io/screenshots/alterestate/alterestate-2026-07-25T195823.png
 security:
 - kind: authentication
   name: Alterestate Authentication
@@ -282,6 +301,12 @@ security:
   name: Alterestate Domain Security
   slug: alterestate-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Browse AlterEstate property listings and project units
+  slug: alterestate-browse-listings
+- name: Capture a real-estate lead into AlterEstate
+  slug: alterestate-capture-lead
 slug: alterestate
 tags:
 - Company

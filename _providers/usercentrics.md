@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.1
-  scored_at: '2026-10-17'
+  score: 18.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 1
@@ -99,9 +103,6 @@ apis:
 artifact_total: 88
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Usercentrics App CMP SDK API
   slug: open-usercentrics-app-cmp-sdk
 - collection_type: open
@@ -142,17 +143,17 @@ collections:
   slug: open-usercentrics-web-cmp-v3
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/capabilities/usercentrics-capability-edges.yml
+  href: https://artifacts.apis.io/usercentrics/capabilities/usercentrics-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/usercentrics-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/agentic-access/usercentrics-agentic-access.yml
+  href: https://artifacts.apis.io/usercentrics/agentic-access/usercentrics-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/usercentrics-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/security/usercentrics-domain-security.yml
+  href: https://artifacts.apis.io/usercentrics/security/usercentrics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/usercentrics-domain-security.yml
@@ -173,17 +174,17 @@ common:
   type: Pricing
   url: https://usercentrics.com/pricing/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/plans/usercentrics-plans-pricing.yml
+  href: https://artifacts.apis.io/usercentrics/plans/usercentrics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/usercentrics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/rate-limits/usercentrics-rate-limits.yml
+  href: https://artifacts.apis.io/usercentrics/rate-limits/usercentrics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/usercentrics-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/finops/usercentrics-finops.yml
+  href: https://artifacts.apis.io/usercentrics/finops/usercentrics-finops.yml
   title: ''
   type: FinOps
   url: finops/usercentrics-finops.yml
@@ -299,30 +300,46 @@ network: true
 overview: 'Usercentrics publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including CCPA API, Consent API, Consent Mode API, and 8 more. Tagged areas include Privacy, Consent, CMP, Compliance, and GDPR.
 
 
+  The Usercentrics catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Usercentrics'' developer surface includes developer portal, signup flow, pricing, engineering blog, support, documentation, and 12 more developer resources.'
 plans:
 - name: Usercentrics Plans Pricing
   plan_count: 19
   slug: usercentrics-plans-pricing
-random_paper: 8
+random_paper: 10
 rate_limits:
 - limit_count: 4
   name: Usercentrics Rate Limits
   slug: usercentrics-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 79
+  extends:
+  - spectral:oas
+  name: Usercentrics API Rules
+  rule_count: 38
+  severity_counts:
+    error: 32
+    hint: 0
+    info: 2
+    warn: 4
+  slug: usercentrics-rules
 score:
   band: thin
-  composite: 36.6
+  composite: 38.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 52.6
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.3
     developer_ergonomics: 42.9
     discoverability: 62.5
@@ -335,7 +352,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 44.9
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -349,13 +366,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/screenshots/usercentrics-2026-06-20T200655.png
+screenshot: https://apis.io/screenshots/usercentrics/usercentrics-2026-06-20T200655.png
 security:
 - kind: domain-security
   name: Usercentrics Domain Security

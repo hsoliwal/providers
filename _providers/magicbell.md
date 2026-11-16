@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Enterprise
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: enterprise
+  pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 80
   human_in_the_loop: 0
@@ -51,21 +55,133 @@ apis:
   description: The integrations API from MagicBell — 42 operation(s) for integrations.
   name: MagicBell Integrations API
   slug: magicbell-integrations-api
-- baseURL: https://api.magicbell.com/v2
+- baseURL: https://api.magicbell.com
   baseurl_source: declared
-  description: The project API from MagicBell — 52 operation(s) for project.
-  name: MagicBell Project API
-  slug: magicbell-project-api
-- baseURL: https://api.magicbell.com/v2
+  description: The apns API from MagicBell — 1 operation(s) for apns.
+  name: MagicBell Apns API
+  slug: magicbell-apns-api
+- baseURL: https://api.magicbell.com
   baseurl_source: declared
-  description: The user API from MagicBell — 20 operation(s) for user.
-  name: MagicBell User API
-  slug: magicbell-user-api
-artifact_total: 55
+  description: The Broadcasts API from MagicBell — 2 operation(s) for broadcasts.
+  name: MagicBell Broadcasts API
+  slug: magicbell-broadcasts-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The Channels API from MagicBell — 3 operation(s) for channels.
+  name: MagicBell Channels API
+  slug: magicbell-channels-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The Events API from MagicBell — 2 operation(s) for events.
+  name: MagicBell Events API
+  slug: magicbell-events-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The eventsource API from MagicBell — 1 operation(s) for eventsource.
+  name: MagicBell Eventsource API
+  slug: magicbell-eventsource-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The expo API from MagicBell — 1 operation(s) for expo.
+  name: MagicBell Expo API
+  slug: magicbell-expo-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The fcm API from MagicBell — 1 operation(s) for fcm.
+  name: MagicBell Fcm API
+  slug: magicbell-fcm-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The github API from MagicBell — 1 operation(s) for github.
+  name: MagicBell GitHub API
+  slug: magicbell-github-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The in_app API from MagicBell — 4 operation(s) for in_app.
+  name: MagicBell In App API
+  slug: magicbell-in-app-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The inbox API from MagicBell — 3 operation(s) for inbox.
+  name: MagicBell Inbox API
+  slug: magicbell-inbox-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The magicbell_slackbot API from MagicBell — 4 operation(s) for magicbell_slackbot.
+  name: MagicBell Magicbell Slackbot API
+  slug: magicbell-magicbell-slackbot-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The mailgun API from MagicBell — 1 operation(s) for mailgun.
+  name: MagicBell Mailgun API
+  slug: magicbell-mailgun-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The mobile_push API from MagicBell — 12 operation(s) for mobile_push.
+  name: MagicBell Mobile Push API
+  slug: magicbell-mobile-push-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The Notifications API from MagicBell — 11 operation(s) for notifications.
+  name: MagicBell Notifications API
+  slug: magicbell-notifications-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The ping_email API from MagicBell — 1 operation(s) for ping_email.
+  name: MagicBell Ping Email API
+  slug: magicbell-ping-email-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The sendgrid API from MagicBell — 1 operation(s) for sendgrid.
+  name: MagicBell Sendgrid API
+  slug: magicbell-sendgrid-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The ses API from MagicBell — 1 operation(s) for ses.
+  name: MagicBell Ses API
+  slug: magicbell-ses-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The slack API from MagicBell — 12 operation(s) for slack.
+  name: MagicBell Slack API
+  slug: magicbell-slack-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The smtp API from MagicBell — 1 operation(s) for smtp.
+  name: MagicBell Smtp API
+  slug: magicbell-smtp-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The stripe API from MagicBell — 1 operation(s) for stripe.
+  name: MagicBell Stripe API
+  slug: magicbell-stripe-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The teams API from MagicBell — 4 operation(s) for teams.
+  name: MagicBell Teams API
+  slug: magicbell-teams-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The twilio API from MagicBell — 1 operation(s) for twilio.
+  name: MagicBell Twilio API
+  slug: magicbell-twilio-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The Users API from MagicBell — 2 operation(s) for users.
+  name: MagicBell Users API
+  slug: magicbell-users-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The web_push API from MagicBell — 7 operation(s) for web_push.
+  name: MagicBell Web Push API
+  slug: magicbell-web-push-api
+- baseURL: https://api.magicbell.com
+  baseurl_source: declared
+  description: The Workflows API from MagicBell — 5 operation(s) for workflows.
+  name: MagicBell Workflows API
+  slug: magicbell-workflows-api
+artifact_total: 78
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: MagicBell apns API
   slug: open-magicbell-apns-api
@@ -149,17 +265,17 @@ collections:
   slug: open-magicbell-web-push-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/agentic-access/magicbell-agentic-access.yml
+  href: https://artifacts.apis.io/magicbell/agentic-access/magicbell-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/magicbell-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/security/magicbell-trust-center.yml
+  href: https://artifacts.apis.io/magicbell/security/magicbell-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/magicbell-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/security/magicbell-domain-security.yml
+  href: https://artifacts.apis.io/magicbell/security/magicbell-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/magicbell-domain-security.yml
@@ -212,27 +328,27 @@ common:
   type: DeveloperTools
   url: https://www.magicbell.com/tools
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/plans/magicbell-plans-pricing.yml
+  href: https://artifacts.apis.io/magicbell/plans/magicbell-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/magicbell-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/rate-limits/magicbell-rate-limits.yml
+  href: https://artifacts.apis.io/magicbell/rate-limits/magicbell-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/magicbell-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/finops/magicbell-finops.yml
+  href: https://artifacts.apis.io/magicbell/finops/magicbell-finops.yml
   title: ''
   type: FinOps
   url: finops/magicbell-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/vocabulary/magicbell-vocabulary.yml
+  href: https://artifacts.apis.io/magicbell/vocabulary/magicbell-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/magicbell-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/json-ld/magicbell-context.jsonld
+  href: https://artifacts.apis.io/magicbell/json-ld/magicbell-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/magicbell-context.jsonld
@@ -253,9 +369,9 @@ examples:
   slug: magicbell-user-example
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Magicbell Finops
-  primary_unit: ''
+  primary_unit: subscription
   service_category: ''
   slug: magicbell-finops
   template: false
@@ -289,7 +405,7 @@ json_schemas:
   property_count: 1
   slug: magicbell-topic
 - name: user
-  property_count: 0
+  property_count: 6
   slug: magicbell-user
 - name: WebPushToken
   property_count: 2
@@ -304,7 +420,7 @@ modified: '2026-06-12'
 name: MagicBell
 nav: Providers
 network: true
-overview: 'MagicBell publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including REST API v1, Integrations API, Project API, and 1 more. Tagged areas include Notification, Push Notifications, In-App Notifications, Email, and SMS.
+overview: 'MagicBell publishes 27 API contracts indexed on the [APIs.io](https://apis.io/) network, including REST API v1, Integrations API, Apns API, and 24 more. Tagged areas include Notification, Push Notifications, In-App Notifications, Email, and SMS.
 
 
   The MagicBell catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -315,7 +431,10 @@ plans:
 - name: Magicbell Plans Pricing
   plan_count: 3
   slug: magicbell-plans-pricing
-random_paper: 4
+- name: Magicbell Price Estimates
+  plan_count: 0
+  slug: magicbell-price-estimates
+random_paper: 16
 rate_limits:
 - limit_count: 4
   name: Magicbell Rate Limits
@@ -334,43 +453,43 @@ rules:
   slug: magicbell-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 40.0
+  composite: 47.4
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 58.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 56.3
+    artifact_dirs: 17
+    catalog_earned: 70.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 1.0
   facets:
-    access_clarity: 26.3
+    access_clarity: 57.9
     contract_governance: 23.5
-    contract_quality: 47.7
+    contract_quality: 52.3
     developer_ergonomics: 35.7
     discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 48.3
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 3
+      marker_coverage: 86.7
+      total: 30
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
     score: 18.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/magicbell/refs/heads/main/screenshots/magicbell-2026-06-20T184842.png
+screenshot: https://apis.io/screenshots/magicbell/magicbell-2026-06-20T184842.png
 security:
 - kind: domain-security
   name: Magicbell Domain Security

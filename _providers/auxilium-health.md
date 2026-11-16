@@ -1,6 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: human-only
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,40 +25,43 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.5
-  scored_at: '2026-10-17'
+  score: 5.4
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auxilium-health/refs/heads/main/llms/auxilium-health-llms.txt
+  href: https://artifacts.apis.io/auxilium-health/llms/auxilium-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/auxilium-health-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auxilium-health/refs/heads/main/mcp/auxilium-health-mcp.yml
+  href: https://artifacts.apis.io/auxilium-health/mcp/auxilium-health-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/auxilium-health-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/auxilium-health/refs/heads/main/hosts/auxilium-health-hosts.yml
+  href: https://artifacts.apis.io/auxilium-health/hosts/auxilium-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/auxilium-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/auxilium-health/refs/heads/main/vendors/auxilium-health-vendors.yml
+  href: https://artifacts.apis.io/auxilium-health/vendors/auxilium-health-vendors.yml
   title: ''
   type: Vendors
   url: vendors/auxilium-health-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auxilium-health/refs/heads/main/security/auxilium-health-domain-security.yml
+  href: https://artifacts.apis.io/auxilium-health/security/auxilium-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/auxilium-health-domain-security.yml
@@ -92,10 +105,10 @@ overview: 'Auxilium Health is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Auxilium Health''s developer surface includes documentation, support, and 7 more developer resources.'
-random_paper: 13
+random_paper: 17
 score:
   band: minimal
-  composite: 10.1
+  composite: 7.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -103,12 +116,12 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.7
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 14.3
+    developer_ergonomics: 7.1
     discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
@@ -126,15 +139,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 6.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/auxilium-health/refs/heads/main/screenshots/auxilium-health-2026-10-11T101021.png
+screenshot: https://apis.io/screenshots/auxilium-health/auxilium-health-2026-10-11T101021.png
 security:
 - kind: domain-security
   name: Auxilium Health Domain Security

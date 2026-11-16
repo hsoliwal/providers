@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,47 +37,47 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/security/trufla-trust-center.yml
+  href: https://artifacts.apis.io/trufla/security/trufla-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/trufla-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/security/trufla-domain-security.yml
+  href: https://artifacts.apis.io/trufla/security/trufla-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trufla-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/llms/trufla-llms.txt
+  href: https://artifacts.apis.io/trufla/llms/trufla-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/trufla-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/packages/trufla-packages.yml
+  href: https://artifacts.apis.io/trufla/packages/trufla-packages.yml
   title: ''
   type: Packages
   url: packages/trufla-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/components/trufla-components.yml
+  href: https://artifacts.apis.io/trufla/components/trufla-components.yml
   title: ''
   type: Components
   url: components/trufla-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/changelog/trufla-changelog.yml
+  href: https://artifacts.apis.io/trufla/changelog/trufla-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/trufla-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/lifecycle/trufla-lifecycle.yml
+  href: https://artifacts.apis.io/trufla/lifecycle/trufla-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/trufla-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/conformance/trufla-conformance.yml
+  href: https://artifacts.apis.io/trufla/conformance/trufla-conformance.yml
   title: ''
   type: Conformance
   url: conformance/trufla-conformance.yml
@@ -168,12 +171,12 @@ overview: 'Trufla is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Trufla''s developer surface includes changelog, engineering blog, support, signup flow, and 23 more developer resources.'
-random_paper: 16
+random_paper: 6
 score:
   band: emerging
   composite: 19.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -203,14 +206,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/trufla/refs/heads/main/screenshots/trufla-2026-09-02T164358.png
+screenshot: https://apis.io/screenshots/trufla/trufla-2026-09-02T164358.png
 security:
 - kind: authentication
   name: Trufla Authentication

@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 29.8
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.pay-i.com
   baseurl_source: declared
@@ -108,10 +111,10 @@ apis:
   description: Use Cases
   name: Pay-i Use Cases API
   slug: pay-i-use-cases-api
-artifact_total: 19
+artifact_total: 24
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/overlays/pay-i-openapi-overlay.yaml
+  href: https://artifacts.apis.io/pay-i/overlays/pay-i-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pay-i-openapi-overlay.yaml
@@ -156,62 +159,62 @@ common:
   type: Blog
   url: https://www.pay-i.com/resources
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/packages/pay-i-packages.yml
+  href: https://artifacts.apis.io/pay-i/packages/pay-i-packages.yml
   title: ''
   type: Packages
   url: packages/pay-i-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/packages/pay-i-packages.yml
+  href: https://artifacts.apis.io/pay-i/packages/pay-i-packages.yml
   title: ''
   type: SDKs
   url: packages/pay-i-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/mcp/pay-i-mcp.yml
+  href: https://artifacts.apis.io/pay-i/mcp/pay-i-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pay-i-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/mcp/pay-i-tool-crosswalk.yml
+  href: https://artifacts.apis.io/pay-i/mcp/pay-i-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/pay-i-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/llms/pay-i-llms.txt
+  href: https://artifacts.apis.io/pay-i/llms/pay-i-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pay-i-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pay-i/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/conformance/pay-i-conformance.yml
+  href: https://artifacts.apis.io/pay-i/conformance/pay-i-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pay-i-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/errors/pay-i-error-codes.yml
+  href: https://artifacts.apis.io/pay-i/errors/pay-i-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/pay-i-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/lifecycle/pay-i-lifecycle.yml
+  href: https://artifacts.apis.io/pay-i/lifecycle/pay-i-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pay-i-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/security/pay-i-domain-security.yml
+  href: https://artifacts.apis.io/pay-i/security/pay-i-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pay-i-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/plans/pay-i-plans-pricing.yml
+  href: https://artifacts.apis.io/pay-i/plans/pay-i-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pay-i-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/rate-limits/pay-i-rate-limits.yml
+  href: https://artifacts.apis.io/pay-i/rate-limits/pay-i-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pay-i-rate-limits.yml
@@ -230,35 +233,51 @@ network: true
 overview: 'Pay-i publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Anthropic Requests API, AWS Bedrock Requests API, Azure Anthropic Requests API, and 11 more. Tagged areas include Company, Artificial Intelligence, FinOps, Observability, and Cost Management.
 
 
+  The Pay-i catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pay-i''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, and 18 more developer resources.'
 plans:
 - name: Pay I Plans Pricing
   plan_count: 0
   slug: pay-i-plans-pricing
-random_paper: 18
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Pay I Rate Limits
   slug: pay-i-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Pay-i API Rules
+  rule_count: 52
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 3
+    warn: 6
+  slug: pay-i-rules
 score:
-  band: thin
-  composite: 38.9
+  band: developing
+  composite: 43.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 2.8
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 48.3
-    developer_ergonomics: 47.0
+    developer_ergonomics: 61.3
     discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 39.3
+  previous_composite: 40.6
   provenance:
     conformance: derived
     contracts:
@@ -274,13 +293,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/pay-i/refs/heads/main/screenshots/pay-i-2026-09-02T150923.png
+screenshot: https://apis.io/screenshots/pay-i/pay-i-2026-09-02T150923.png
 security:
 - kind: authentication
   name: Pay I Authentication
@@ -290,6 +309,16 @@ security:
   name: Pay I Domain Security
   slug: pay-i-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: pay-i-enforce-spend-limit
+  slug: pay-i-enforce-spend-limit
+- name: pay-i-ingest-cost-events
+  slug: pay-i-ingest-cost-events
+- name: pay-i-instrument-genai-requests
+  slug: pay-i-instrument-genai-requests
+- name: pay-i-measure-use-case-value
+  slug: pay-i-measure-use-case-value
 slug: pay-i
 tags:
 - Company

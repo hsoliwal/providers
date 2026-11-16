@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Zebec''s developer platform is delivered as first-party TypeScript SDKs that interact with Zebec''s on-chain streaming, payroll, card, staking, vault, DAO and cross-chain bridge programs across Solana, '
@@ -81,42 +85,42 @@ common:
   type: Support
   url: https://discord.gg/jfmmF32aY5
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/packages/zebec-packages.yml
+  href: https://artifacts.apis.io/zebec/packages/zebec-packages.yml
   title: ''
   type: SDKs
   url: packages/zebec-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/packages/zebec-packages.yml
+  href: https://artifacts.apis.io/zebec/packages/zebec-packages.yml
   title: ''
   type: Packages
   url: packages/zebec-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/components/zebec-components.yml
+  href: https://artifacts.apis.io/zebec/components/zebec-components.yml
   title: ''
   type: Components
   url: components/zebec-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/llms/zebec-llms.txt
+  href: https://artifacts.apis.io/zebec/llms/zebec-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zebec-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/well-known/zebec-well-known.yml
+  href: https://artifacts.apis.io/zebec/well-known/zebec-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zebec-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/lifecycle/zebec-lifecycle.yml
+  href: https://artifacts.apis.io/zebec/lifecycle/zebec-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zebec-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/security/zebec-domain-security.yml
+  href: https://artifacts.apis.io/zebec/security/zebec-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zebec-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/security/zebec-trust-center.yml
+  href: https://artifacts.apis.io/zebec/security/zebec-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zebec-trust-center.yml
@@ -132,12 +136,12 @@ overview: 'Zebec is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   Zebec''s developer surface includes documentation, getting-started guide, engineering blog, support, and 14 more developer resources.'
-random_paper: 15
+random_paper: 17
 score:
   band: emerging
   composite: 23.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -158,14 +162,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 13.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zebec/refs/heads/main/screenshots/zebec-2026-09-02T171504.png
+screenshot: https://apis.io/screenshots/zebec/zebec-2026-09-02T171504.png
 security:
 - kind: domain-security
   name: Zebec Domain Security

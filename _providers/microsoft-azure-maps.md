@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -84,9 +88,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Azure Maps Search REST Geocoding API
   slug: open-microsoft-azure-maps-geocoding-api
 - collection_type: open
@@ -96,38 +97,42 @@ collections:
   name: Azure Maps Search REST API
   slug: open-microsoft-azure-maps
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/azure-maps/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/plans/microsoft-azure-maps-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/plans/microsoft-azure-maps-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-azure-maps-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/rate-limits/microsoft-azure-maps-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/rate-limits/microsoft-azure-maps-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-azure-maps-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/finops/microsoft-azure-maps-finops.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/finops/microsoft-azure-maps-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-azure-maps-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/agentic-access/microsoft-azure-maps-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/agentic-access/microsoft-azure-maps-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-azure-maps-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/security/microsoft-azure-maps-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/security/microsoft-azure-maps-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-azure-maps-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/authentication/microsoft-azure-maps-authentication.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/authentication/microsoft-azure-maps-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-azure-maps-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/scopes/microsoft-azure-maps-scopes.yml
+  href: https://artifacts.apis.io/microsoft-azure-maps/scopes/microsoft-azure-maps-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-azure-maps-scopes.yml
@@ -202,11 +207,11 @@ common:
 created: '2026-03-13'
 description: Azure Maps provides geospatial APIs for maps, routing, geocoding, traffic, weather, and spatial analysis. The service offers a comprehensive suite of REST APIs to embed location intelligence into applications spanning mobile, web, and IoT scenarios across multiple transport modes.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Microsoft Azure Maps Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: microsoft-azure-maps-finops
   template: true
 image: https://azure.microsoft.com/svghandler/azure-maps/
@@ -218,16 +223,32 @@ network: true
 overview: 'Azure Maps is listed with 11 APIs on the [APIs.io](https://apis.io/) network, including Geocoding API, Search API, and 9 more. Tagged areas include Geocoding, Geospatial, Location, Maps, and Mobility.
 
 
-  Azure Maps'' developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, support, engineering blog, and 17 more developer resources.'
+  The Azure Maps catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Azure Maps'' developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, support, engineering blog, and 18 more developer resources.'
 plans:
 - name: Microsoft Azure Maps Plans Pricing
-  plan_count: 3
+  plan_count: 1
   slug: microsoft-azure-maps-plans-pricing
-random_paper: 10
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Microsoft Azure Maps Rate Limits
   slug: microsoft-azure-maps-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: Azure Maps API Rules
+  rule_count: 43
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 1
+  slug: microsoft-azure-maps-rules
 scopes:
 - name: Microsoft Azure Maps Scopes
   scope_count: 1
@@ -235,23 +256,23 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 49.6
+  composite: 54.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 46.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    artifact_dirs: 16
+    catalog_earned: 55.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 52.6
-    contract_governance: 0.0
+    access_clarity: 65.8
+    contract_governance: 13.6
     contract_quality: 42.2
-    developer_ergonomics: 61.9
+    developer_ergonomics: 63.1
     discoverability: 85.7
     operational_transparency: 42.1
-  previous_composite: 51.1
+  previous_composite: 54.1
   provenance:
     agentic_access: derived
     contracts:
@@ -265,14 +286,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-maps/refs/heads/main/screenshots/microsoft-azure-maps-2026-06-20T185424.png
+screenshot: https://apis.io/screenshots/microsoft-azure-maps/microsoft-azure-maps-2026-06-20T185424.png
 security:
 - kind: authentication
   name: Microsoft Azure Maps Authentication

@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Search 1 billion people profiles across LinkedIn and GitHub for talent sourcing
@@ -42,12 +45,12 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/herohunt-people-search/refs/heads/main/a2a/herohunt-people-search-a2a.yml
+  href: https://artifacts.apis.io/herohunt-people-search/a2a/herohunt-people-search-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/herohunt-people-search-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/herohunt-people-search/refs/heads/main/security/herohunt-people-search-domain-security.yml
+  href: https://artifacts.apis.io/herohunt-people-search/security/herohunt-people-search-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/herohunt-people-search-domain-security.yml
@@ -78,18 +81,18 @@ overview: 'HeroHunt People Search is listed with 1 API on the [APIs.io](https://
 
 
   HeroHunt People Search''s developer surface includes engineering blog, support, and 4 more developer resources.'
-random_paper: 20
+random_paper: 10
 score:
   band: minimal
   composite: 6.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 20.0
     catalog_earned_first_party: 0.0
     catalog_gap: 95.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -97,21 +100,21 @@ score:
     developer_ergonomics: 16.7
     discoverability: 42.9
     operational_transparency: 0.0
-  previous_composite: 6.2
+  previous_composite: 6.3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/herohunt-people-search/refs/heads/main/screenshots/herohunt-people-search-2026-06-20T182646.png
+screenshot: https://apis.io/screenshots/herohunt-people-search/herohunt-people-search-2026-06-20T182646.png
 security:
 - kind: domain-security
   name: Herohunt People Search Domain Security

@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -57,47 +62,47 @@ common:
   type: Documentation
   url: https://chill.com/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/llms/chill-llms.txt
+  href: https://artifacts.apis.io/chill/llms/chill-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chill-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/well-known/chill-well-known.yml
+  href: https://artifacts.apis.io/chill/well-known/chill-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/chill-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/mcp/chill-mcp.yml
+  href: https://artifacts.apis.io/chill/mcp/chill-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/chill-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/authentication/chill-authentication.yml
+  href: https://artifacts.apis.io/chill/authentication/chill-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chill-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/scopes/chill-scopes.yml
+  href: https://artifacts.apis.io/chill/scopes/chill-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/chill-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/conformance/chill-conformance.yml
+  href: https://artifacts.apis.io/chill/conformance/chill-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chill-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/conventions/chill-conventions.yml
+  href: https://artifacts.apis.io/chill/conventions/chill-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chill-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/agentic-access/chill-agentic-access.yml
+  href: https://artifacts.apis.io/chill/agentic-access/chill-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/chill-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/security/chill-domain-security.yml
+  href: https://artifacts.apis.io/chill/security/chill-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chill-domain-security.yml
@@ -137,7 +142,7 @@ overview: 'Chill is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Chill''s developer surface includes documentation, authentication, engineering blog, support, and 13 more developer resources.'
-random_paper: 18
+random_paper: 20
 scopes:
 - name: Chill Scopes
   scope_count: 4
@@ -147,13 +152,13 @@ score:
   band: emerging
   composite: 22.4
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -161,7 +166,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 22.3
+  previous_composite: 22.4
   provenance:
     agentic_access: first-party
     conformance: first-party
@@ -172,14 +177,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/chill/refs/heads/main/screenshots/chill-2026-08-07T163311.png
+screenshot: https://apis.io/screenshots/chill/chill-2026-08-07T163311.png
 security:
 - kind: authentication
   name: Chill Authentication

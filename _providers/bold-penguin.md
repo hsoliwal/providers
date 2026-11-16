@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 api_count: 12
 apis:
 - description: API for submission ingestion, market intelligence, and marketplace access as described in the developer documentation.
@@ -91,72 +105,72 @@ asyncapis:
   slug: bold-penguin-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/rules/bold-penguin-rules.yml
+  href: https://artifacts.apis.io/bold-penguin/rules/bold-penguin-rules.yml
   title: ''
   type: Spectral
   url: rules/bold-penguin-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/json-ld/bold-penguin-context.jsonld
+  href: https://artifacts.apis.io/bold-penguin/json-ld/bold-penguin-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/bold-penguin-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/vocabulary/bold-penguin-vocabulary.yml
+  href: https://artifacts.apis.io/bold-penguin/vocabulary/bold-penguin-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/bold-penguin-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/asyncapi/bold-penguin-webhooks.yml
+  href: https://artifacts.apis.io/bold-penguin/asyncapi/bold-penguin-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bold-penguin-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/data-model/bold-penguin-data-model.yml
+  href: https://artifacts.apis.io/bold-penguin/data-model/bold-penguin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bold-penguin-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/changelog/bold-penguin-changelog.yml
+  href: https://artifacts.apis.io/bold-penguin/changelog/bold-penguin-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bold-penguin-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/authentication/bold-penguin-authentication.yml
+  href: https://artifacts.apis.io/bold-penguin/authentication/bold-penguin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bold-penguin-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/conformance/bold-penguin-conformance.yml
+  href: https://artifacts.apis.io/bold-penguin/conformance/bold-penguin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bold-penguin-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/well-known/bold-penguin-status-security.txt
+  href: https://artifacts.apis.io/bold-penguin/well-known/bold-penguin-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bold-penguin-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/well-known/bold-penguin-well-known.yml
+  href: https://artifacts.apis.io/bold-penguin/well-known/bold-penguin-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bold-penguin-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/hosts/bold-penguin-hosts.yml
+  href: https://artifacts.apis.io/bold-penguin/hosts/bold-penguin-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bold-penguin-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/vendors/bold-penguin-vendors.yml
+  href: https://artifacts.apis.io/bold-penguin/vendors/bold-penguin-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bold-penguin-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/packages/bold-penguin-packages.yml
+  href: https://artifacts.apis.io/bold-penguin/packages/bold-penguin-packages.yml
   title: ''
   type: SDKs
   url: packages/bold-penguin-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/packages/bold-penguin-packages.yml
+  href: https://artifacts.apis.io/bold-penguin/packages/bold-penguin-packages.yml
   title: ''
   type: Packages
   url: packages/bold-penguin-packages.yml
@@ -193,7 +207,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/forgeglobal
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bold-penguin/refs/heads/main/security/bold-penguin-domain-security.yml
+  href: https://artifacts.apis.io/bold-penguin/security/bold-penguin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bold-penguin-domain-security.yml
@@ -263,7 +277,7 @@ overview: 'Bold Penguin is listed with 12 APIs on the [APIs.io](https://apis.io/
 
 
   Bold Penguin''s developer surface includes changelog, authentication, getting-started guide, and 21 more developer resources.'
-random_paper: 10
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -278,24 +292,24 @@ rules:
     warn: 1
   slug: bold-penguin-rules
 score:
-  band: developing
-  composite: 40.5
+  band: thin
+  composite: 34.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -11.9
+  delta: -7.3
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 33.5
-    developer_ergonomics: 40.5
-    discoverability: 64.3
+    developer_ergonomics: 29.8
+    discoverability: 63.4
     operational_transparency: 44.7
-  previous_composite: 52.4
+  previous_composite: 41.8
   provenance:
     conformance: derived
     contracts:
@@ -309,13 +323,14 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/bold-penguin/bold-penguin-2026-11-03T122139.png
 security:
 - kind: authentication
   name: Bold Penguin Authentication

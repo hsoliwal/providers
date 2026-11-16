@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -41,7 +45,7 @@ common:
   type: Blog
   url: https://www.angi.com/articles
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/angies-list/refs/heads/main/security/angies-list-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/angies-list/security/angies-list-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/angies-list-vulnerability-disclosure.yml
@@ -50,17 +54,17 @@ common:
   type: Security
   url: https://www.angi.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/angies-list/refs/heads/main/security/angies-list-domain-security.yml
+  href: https://artifacts.apis.io/angies-list/security/angies-list-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/angies-list-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/angies-list/refs/heads/main/well-known/angies-list-well-known.yml
+  href: https://artifacts.apis.io/angies-list/well-known/angies-list-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/angies-list-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/angies-list/refs/heads/main/well-known/angies-list-security.txt
+  href: https://artifacts.apis.io/angies-list/well-known/angies-list-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/angies-list-security.txt
@@ -80,18 +84,18 @@ overview: 'Angie’s List is profiled on the [APIs.io](https://apis.io/) network
 
 
   Angie’s List''s developer surface includes engineering blog and 6 more developer resources.'
-random_paper: 20
+random_paper: 16
 score:
   band: minimal
   composite: 5.5
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -99,15 +103,15 @@ score:
     developer_ergonomics: 2.4
     discoverability: 48.2
     operational_transparency: 5.3
-  previous_composite: 4.9
+  previous_composite: 5.5
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

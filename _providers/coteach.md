@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -42,7 +47,7 @@ common:
   type: BlogRSS
   url: https://coteach.ai/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/security/coteach-domain-security.yml
+  href: https://artifacts.apis.io/coteach/security/coteach-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coteach-domain-security.yml
@@ -79,32 +84,32 @@ common:
   type: Roadmap
   url: https://coteach.feedbear.com/roadmap
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/llms/coteach-llms.txt
+  href: https://artifacts.apis.io/coteach/llms/coteach-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coteach-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/well-known/coteach-well-known.yml
+  href: https://artifacts.apis.io/coteach/well-known/coteach-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coteach-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/mcp/coteach-mcp.yml
+  href: https://artifacts.apis.io/coteach/mcp/coteach-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/coteach-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/authentication/coteach-authentication.yml
+  href: https://artifacts.apis.io/coteach/authentication/coteach-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coteach-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/scopes/coteach-scopes.yml
+  href: https://artifacts.apis.io/coteach/scopes/coteach-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/coteach-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/conformance/coteach-conformance.yml
+  href: https://artifacts.apis.io/coteach/conformance/coteach-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coteach-conformance.yml
@@ -124,7 +129,7 @@ overview: 'CoTeach is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   CoTeach''s developer surface includes pricing, engineering blog, support, authentication, and 12 more developer resources.'
-random_paper: 1
+random_paper: 7
 scopes:
 - name: Coteach Scopes
   scope_count: 4
@@ -134,7 +139,7 @@ score:
   band: emerging
   composite: 22.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -158,14 +163,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/screenshots/coteach-2026-07-25T210502.png
+screenshot: https://apis.io/screenshots/coteach/coteach-2026-07-25T210502.png
 security:
 - kind: authentication
   name: Coteach Authentication

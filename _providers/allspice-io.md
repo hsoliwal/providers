@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
+  onboarding: self-serve
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: API for AllSpice platform to manage hardware design data.
@@ -37,67 +55,67 @@ apis:
 artifact_total: 11
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/plans/allspice-io-plans-pricing.yml
+  href: https://artifacts.apis.io/allspice-io/plans/allspice-io-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/allspice-io-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/rules/allspice-io-rules.yml
+  href: https://artifacts.apis.io/allspice-io/rules/allspice-io-rules.yml
   title: ''
   type: Spectral
   url: rules/allspice-io-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/json-ld/allspice-io-context.jsonld
+  href: https://artifacts.apis.io/allspice-io/json-ld/allspice-io-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/allspice-io-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/vocabulary/allspice-io-vocabulary.yml
+  href: https://artifacts.apis.io/allspice-io/vocabulary/allspice-io-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/allspice-io-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/data-model/allspice-io-data-model.yml
+  href: https://artifacts.apis.io/allspice-io/data-model/allspice-io-data-model.yml
   title: ''
   type: DataModel
   url: data-model/allspice-io-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/authentication/allspice-io-authentication.yml
+  href: https://artifacts.apis.io/allspice-io/authentication/allspice-io-authentication.yml
   title: ''
   type: Authentication
   url: authentication/allspice-io-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/conformance/allspice-io-conformance.yml
+  href: https://artifacts.apis.io/allspice-io/conformance/allspice-io-conformance.yml
   title: ''
   type: Conformance
   url: conformance/allspice-io-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/llms/allspice-io-llms.txt
+  href: https://artifacts.apis.io/allspice-io/llms/allspice-io-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/allspice-io-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/well-known/allspice-io-partner-security.txt
+  href: https://artifacts.apis.io/allspice-io/well-known/allspice-io-partner-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/allspice-io-partner-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/well-known/allspice-io-hub-security.txt
+  href: https://artifacts.apis.io/allspice-io/well-known/allspice-io-hub-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/allspice-io-hub-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/well-known/allspice-io-well-known.yml
+  href: https://artifacts.apis.io/allspice-io/well-known/allspice-io-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/allspice-io-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/hosts/allspice-io-hosts.yml
+  href: https://artifacts.apis.io/allspice-io/hosts/allspice-io-hosts.yml
   title: ''
   type: Hosts
   url: hosts/allspice-io-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/vendors/allspice-io-vendors.yml
+  href: https://artifacts.apis.io/allspice-io/vendors/allspice-io-vendors.yml
   title: ''
   type: Vendors
   url: vendors/allspice-io-vendors.yml
@@ -114,7 +132,7 @@ common:
   type: GettingStarted
   url: https://learn.allspice.io/docs/getting-started-with-allpice-actions
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allspice-io/refs/heads/main/security/allspice-io-domain-security.yml
+  href: https://artifacts.apis.io/allspice-io/security/allspice-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/allspice-io-domain-security.yml
@@ -187,7 +205,7 @@ plans:
 - name: Allspice Io Plans
   plan_count: 4
   slug: allspice-io-plans
-random_paper: 6
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -203,23 +221,23 @@ rules:
   slug: allspice-io-rules
 score:
   band: thin
-  composite: 39.1
+  composite: 32.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 19
     catalog_earned: 63.8
     catalog_earned_first_party: 12.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 38.0
+  delta: -8.3
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
     contract_quality: 21.3
-    developer_ergonomics: 45.2
+    developer_ergonomics: 28.6
     discoverability: 64.3
-    operational_transparency: 0.0
-  previous_composite: 1.1
+    operational_transparency: 10.5
+  previous_composite: 40.5
   provenance:
     conformance: derived
     contracts:
@@ -233,13 +251,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/allspice-io/allspice-io-2026-11-03T120653.png
 security:
 - kind: authentication
   name: Allspice Io Authentication

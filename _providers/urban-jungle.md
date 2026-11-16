@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urban-jungle/refs/heads/main/security/urban-jungle-domain-security.yml
+  href: https://artifacts.apis.io/urban-jungle/security/urban-jungle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/urban-jungle-domain-security.yml
@@ -111,17 +114,17 @@ common:
   type: Instagram
   url: https://www.instagram.com/urbanjungle_ins
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/urban-jungle/refs/heads/main/conformance/urban-jungle-conformance.yml
+  href: https://artifacts.apis.io/urban-jungle/conformance/urban-jungle-conformance.yml
   title: ''
   type: Conformance
   url: conformance/urban-jungle-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urban-jungle/refs/heads/main/llms/urban-jungle-llms.txt
+  href: https://artifacts.apis.io/urban-jungle/llms/urban-jungle-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/urban-jungle-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urban-jungle/refs/heads/main/well-known/urban-jungle-well-known.yml
+  href: https://artifacts.apis.io/urban-jungle/well-known/urban-jungle-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/urban-jungle-well-known.yml
@@ -138,12 +141,12 @@ overview: 'Urban Jungle is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Urban Jungle''s developer surface includes engineering blog, support, legal docs, YouTube channel, and 17 more developer resources.'
-random_paper: 16
+random_paper: 2
 score:
   band: minimal
   composite: 9.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -178,14 +181,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 9.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/urban-jungle/refs/heads/main/screenshots/urban-jungle-2026-09-02T165148.png
+screenshot: https://apis.io/screenshots/urban-jungle/urban-jungle-2026-09-02T165148.png
 security:
 - kind: domain-security
   name: Urban Jungle Domain Security

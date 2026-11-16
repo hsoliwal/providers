@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST and SOAP object API (v1) for reading and writing Impartner platform records (accounts, partners, deals, and tenant-defined custom objects) using the THQL query language with skip/take paging, fie
@@ -86,67 +91,67 @@ common:
   type: StatusPage
   url: https://status.impartner.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/authentication/impartner-authentication.yml
+  href: https://artifacts.apis.io/impartner/authentication/impartner-authentication.yml
   title: ''
   type: Authentication
   url: authentication/impartner-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/scopes/impartner-scopes.yml
+  href: https://artifacts.apis.io/impartner/scopes/impartner-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/impartner-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/conventions/impartner-conventions.yml
+  href: https://artifacts.apis.io/impartner/conventions/impartner-conventions.yml
   title: ''
   type: Conventions
   url: conventions/impartner-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/packages/impartner-packages.yml
+  href: https://artifacts.apis.io/impartner/packages/impartner-packages.yml
   title: ''
   type: Packages
   url: packages/impartner-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/packages/impartner-packages.yml
+  href: https://artifacts.apis.io/impartner/packages/impartner-packages.yml
   title: ''
   type: SDKs
   url: packages/impartner-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/cli/impartner-cli.yml
+  href: https://artifacts.apis.io/impartner/cli/impartner-cli.yml
   title: ''
   type: CLI
   url: cli/impartner-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/lifecycle/impartner-lifecycle.yml
+  href: https://artifacts.apis.io/impartner/lifecycle/impartner-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/impartner-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/conformance/impartner-conformance.yml
+  href: https://artifacts.apis.io/impartner/conformance/impartner-conformance.yml
   title: ''
   type: Conformance
   url: conformance/impartner-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/mcp/impartner-mcp.yml
+  href: https://artifacts.apis.io/impartner/mcp/impartner-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/impartner-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/asyncapi/impartner-webhooks.yml
+  href: https://artifacts.apis.io/impartner/asyncapi/impartner-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/impartner-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/well-known/impartner-well-known.yml
+  href: https://artifacts.apis.io/impartner/well-known/impartner-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/impartner-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/security/impartner-domain-security.yml
+  href: https://artifacts.apis.io/impartner/security/impartner-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/impartner-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/llms/impartner-llms.txt
+  href: https://artifacts.apis.io/impartner/llms/impartner-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/impartner-llms.txt
@@ -165,7 +170,7 @@ overview: 'Impartner is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Impartner''s developer surface includes documentation, API reference, pricing, engineering blog, support, authentication, CLI, and 16 more developer resources.'
-random_paper: 10
+random_paper: 18
 scopes:
 - name: Impartner Scopes
   scope_count: 14
@@ -175,7 +180,7 @@ score:
   band: thin
   composite: 37.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -206,14 +211,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/impartner/refs/heads/main/screenshots/impartner-2026-08-17T123914.png
+screenshot: https://apis.io/screenshots/impartner/impartner-2026-08-17T123914.png
 security:
 - kind: authentication
   name: Impartner Authentication

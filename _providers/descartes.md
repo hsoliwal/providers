@@ -1,50 +1,53 @@
 ---
 access_model:
   confidence: medium
-  label: Paid · Requires approval
-  onboarding: approval
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: human-only
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
-    auth_clarity: false
+    auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: documented
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
-    spec_presence: false
+    spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 0.6
-  scored_at: '2026-10-17'
-api_count: 6
+  score: 27.4
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 16
+  human_in_the_loop: 2
+  name: Descartes Agentic Access
+  operation_count: 25
+  slug: descartes-agentic-access
+  summary_line: 25 operations · 16 acting · 2 human-in-the-loop
+api_count: 3
 apis:
-- description: Real-time freight and shipment visibility. Lets a shipper, broker, or 3PL create, update, monitor, and stop tracking sessions on loads directly from a TMS or ERP and receive location, order-status, tr
-  name: Descartes MacroPoint Visibility API
-  slug: descartes-macropoint-visibility-api
-- description: Intelligent carrier sourcing and capacity matching. An Import API pushes available-capacity and load data into MacroPoint Capacity, and an Export API returns carrier matches back into the customer's s
-  name: Descartes MacroPoint Capacity Integration API
-  slug: descartes-macropoint-capacity-api
-- description: Carrier-facing integration for the MacroPoint Visibility network. Lets carriers and telematics/ELD providers supply location updates as lat/long coordinate sets or addresses, plus load event updates (
-  name: Descartes MacroPoint Carrier Integration API
-  slug: descartes-macropoint-carrier-api
 - description: Trade content and classification for customs and regulatory compliance. Delivers Harmonized System (HS) codes and product classification, current tariff and duty rates and preferential-tariff details,
   name: Descartes CustomsInfo Trade Content API
   provenance: modeled
@@ -56,14 +59,122 @@ apis:
 - description: Real-time B2B connectivity over the Descartes Global Logistics Network, complementing traditional EDI. Provides synchronous request/response integrations for marketplace connectivity (exchanging listi
   name: Descartes B2B API Connectivity
   slug: descartes-b2b-api-connectivity
-artifact_total: 10
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The 3rd Party TMS Integration API from Descartes Systems Group — 5 operation(s) for 3rd party tms integration.
+  name: Descartes Systems Group 3rd Party TMS Integration API
+  slug: descartes-3rd-party-tms-integration-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The API - XML API from Descartes Systems Group — 5 operation(s) for api - xml.
+  name: Descartes Systems Group API - XML API
+  slug: descartes-api-xml-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Carrier Data Connection and Communication API from Descartes Systems Group — 3 operation(s) for carrier data connection and communication.
+  name: Descartes Systems Group Carrier Data Connection and Communication API
+  slug: descartes-carrier-data-connection-and-communication-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Custom Integration API from Descartes Systems Group — 2 operation(s) for custom integration.
+  name: Descartes Systems Group Custom Integration API
+  slug: descartes-custom-integration-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Export API API from Descartes Systems Group — 1 operation(s) for export api.
+  name: Descartes Systems Group Export API
+  slug: descartes-export-api-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The FraudGuard Carrier and Load Lookup API from Descartes Systems Group — 2 operation(s) for fraudguard carrier and load lookup.
+  name: Descartes Systems Group FraudGuard Carrier and Load Lookup API
+  slug: descartes-fraudguard-carrier-and-load-lookup-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Import API API from Descartes Systems Group — 2 operation(s) for import api.
+  name: Descartes Systems Group Import API
+  slug: descartes-import-api-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Load Visibility Order Creation - XML API from Descartes Systems Group — 3 operation(s) for load visibility order creation - xml.
+  name: Descartes Systems Group Load Visibility Order Creation - XML API
+  slug: descartes-load-visibility-order-creation-xml-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Load Visibility URL and Data Export Retrieval API from Descartes Systems Group — 1 operation(s) for load visibility url and data export retrieval.
+  name: Descartes Systems Group Load Visibility URL and Data Export Retrieval API
+  slug: descartes-load-visibility-url-and-data-export-retrieval-api
+- baseURL: https://macropoint-lite.com/api/1.0
+  baseurl_source: declared
+  description: The Search API API from Descartes Systems Group — 1 operation(s) for search api.
+  name: Descartes Systems Group Search API
+  slug: descartes-search-api-api
+artifact_total: 20
 common:
+- group: other
+  href: https://artifacts.apis.io/descartes/capabilities/descartes-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/descartes-capability-edges.yml
+- group: commercial
+  title: ''
+  type: Pricing
+  url: http://www.descartes.com/resources/blog/pricing-guide-to-denied-party-screening-software-solutions
+- group: agent
+  href: https://artifacts.apis.io/descartes/agentic-access/descartes-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/descartes-agentic-access.yml
+- group: design
+  href: https://artifacts.apis.io/descartes/rules/descartes-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/descartes-rules.yml
+- group: design
+  href: https://artifacts.apis.io/descartes/vocabulary/descartes-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/descartes-vocabulary.yml
+- group: auth
+  href: https://artifacts.apis.io/descartes/authentication/descartes-authentication.yml
+  title: ''
+  type: Authentication
+  url: authentication/descartes-authentication.yml
+- group: design
+  href: https://artifacts.apis.io/descartes/errors/descartes-error-codes.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/descartes-error-codes.yml
+- group: design
+  href: https://artifacts.apis.io/descartes/conformance/descartes-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/descartes-conformance.yml
+- group: other
+  href: https://artifacts.apis.io/descartes/hosts/descartes-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/descartes-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/descartes/integrations/descartes-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/descartes-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/descartes/vendors/descartes-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/descartes-vendors.yml
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://dev.descartes.com/solutions/transportation-management/carrier-onboarding-fraud-prevention
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.descartes.com/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/descartes/refs/heads/main/security/descartes-domain-security.yml
+  href: https://artifacts.apis.io/descartes/security/descartes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/descartes-domain-security.yml
@@ -87,18 +198,46 @@ common:
   title: ''
   type: PostmanWorkspace
   url: https://www.postman.com/macropoint-telematics
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.descartes.com/resources/blog
+- group: start
+  title: ''
+  type: Login
+  url: https://www.descartes.com/login-register
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/descartes/refs/heads/main/plans/descartes-plans-pricing.yml
+  title: ''
+  type: PrivacyPolicy
+  url: https://www.descartes.com/privacy-center
+- group: operate
+  title: ''
+  type: Support
+  url: https://www.descartes.com/customer-success/customer-support-and-training/customer-service-desk
+- group: commercial
+  title: ''
+  type: TermsOfService
+  url: https://www.descartes.com/legal/general-terms/terms-use-descartes-ideas-portals
+- group: other
+  title: ''
+  type: Leadership
+  url: https://www.descartes.com/who-we-are/leadership
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.descartes.com/media
+- group: commercial
+  href: https://artifacts.apis.io/descartes/plans/descartes-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/descartes-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/descartes/refs/heads/main/rate-limits/descartes-rate-limits.yml
+  href: https://artifacts.apis.io/descartes/rate-limits/descartes-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/descartes-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/descartes/refs/heads/main/finops/descartes-finops.yml
+  href: https://artifacts.apis.io/descartes/finops/descartes-finops.yml
   title: ''
   type: FinOps
   url: finops/descartes-finops.yml
@@ -118,53 +257,81 @@ modified: '2026-10-06'
 name: Descartes Systems Group
 nav: Providers
 network: true
-overview: 'Descartes Systems Group is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Descartes MacroPoint Carrier Integration API, and 5 more. Tagged areas include Logistics, Supply Chain, Freight Visibility, Shipment Tracking, and Customs Compliance.
+overview: 'Descartes Systems Group publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including 3rd Party TMS Integration API, API - XML API, Carrier Data Connection and Communication API, and 10 more. Tagged areas include Logistics, Supply Chain, Freight Visibility, Shipment Tracking, and Customs Compliance.
 
 
-  Descartes Systems Group''s developer surface includes documentation and 9 more developer resources.'
+  The Descartes Systems Group catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Descartes Systems Group''s developer surface includes pricing, authentication, getting-started guide, documentation, engineering blog, support, and 23 more developer resources.'
 plans:
 - name: Descartes Plans Pricing
   plan_count: 4
   slug: descartes-plans-pricing
-random_paper: 12
+random_paper: 22
 rate_limits:
 - limit_count: 4
   name: Descartes Rate Limits
   slug: descartes-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 54
+  extends:
+  - spectral:oas
+  name: Descartes Systems Group API Rules
+  rule_count: 13
+  severity_counts:
+    error: 12
+    hint: 0
+    info: 1
+    warn: 0
+  slug: descartes-rules
 score:
-  band: emerging
-  composite: 11.3
+  band: thin
+  composite: 36.3
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 41.0
+    artifact_dirs: 23
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: -7.1
   facets:
-    access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 0.0
-    developer_ergonomics: 23.8
-    discoverability: 62.5
+    access_clarity: 30.3
+    contract_governance: 19.7
+    contract_quality: 50.2
+    developer_ergonomics: 45.2
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 19.7
+  previous_composite: 43.4
+  provenance:
+    agentic_access: derived
+    conformance: derived
+    contracts:
+      callable: 100.0
+      derived: 0
+      marker_coverage: 0.0
+      total: 10
+    mcp: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 5.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
-    applies: false
-    note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
-    reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/descartes/refs/heads/main/screenshots/descartes-2026-07-25T211743.png
+    applies: true
+    score: 0.0
+screenshot: https://apis.io/screenshots/descartes/descartes-2026-07-25T211743.png
 security:
+- kind: authentication
+  name: Descartes Authentication
+  slug: descartes-authentication
+  summary_line: 2 schemes
 - kind: domain-security
   name: Descartes Domain Security
   slug: descartes-domain-security

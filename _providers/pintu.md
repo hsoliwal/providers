@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Pintu Pro's institutional/partner trading API. A unified message format is used over both an HTTP endpoint and a WebSocket transport, authenticated with an HMAC-SHA256 signature computed from an API k
@@ -88,57 +91,57 @@ common:
   type: PrivacyPolicy
   url: https://pintu.co.id/en/pages/privacy-policy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/packages/pintu-packages.yml
+  href: https://artifacts.apis.io/pintu/packages/pintu-packages.yml
   title: ''
   type: Packages
   url: packages/pintu-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/authentication/pintu-authentication.yml
+  href: https://artifacts.apis.io/pintu/authentication/pintu-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pintu-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/conventions/pintu-conventions.yml
+  href: https://artifacts.apis.io/pintu/conventions/pintu-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pintu-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/conventions/pintu-conventions.yml
+  href: https://artifacts.apis.io/pintu/conventions/pintu-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/pintu-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/errors/pintu-error-codes.yml
+  href: https://artifacts.apis.io/pintu/errors/pintu-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/pintu-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/lifecycle/pintu-lifecycle.yml
+  href: https://artifacts.apis.io/pintu/lifecycle/pintu-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pintu-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/sandbox/pintu-sandbox.yml
+  href: https://artifacts.apis.io/pintu/sandbox/pintu-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pintu-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/well-known/pintu-well-known.yml
+  href: https://artifacts.apis.io/pintu/well-known/pintu-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pintu-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/well-known/pintu-security.txt
+  href: https://artifacts.apis.io/pintu/well-known/pintu-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/pintu-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/security/pintu-domain-security.yml
+  href: https://artifacts.apis.io/pintu/security/pintu-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pintu-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/security/pintu-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/pintu/security/pintu-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/pintu-vulnerability-disclosure.yml
@@ -147,22 +150,22 @@ common:
   type: Security
   url: https://pintu.co.id/security/bug-bounty
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/asyncapi/pintu-partner-asyncapi.yml
+  href: https://artifacts.apis.io/pintu/asyncapi/pintu-partner-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/pintu-partner-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/llms/pintu-llms.txt
+  href: https://artifacts.apis.io/pintu/llms/pintu-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pintu-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/conformance/pintu-conformance.yml
+  href: https://artifacts.apis.io/pintu/conformance/pintu-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pintu-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/security/pintu-trust-center.yml
+  href: https://artifacts.apis.io/pintu/security/pintu-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/pintu-trust-center.yml
@@ -185,12 +188,12 @@ overview: 'Pintu is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   Pintu''s developer surface includes engineering blog, documentation, support, authentication, sandbox, and 22 more developer resources.'
-random_paper: 10
+random_paper: 8
 score:
   band: thin
   composite: 39.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -220,14 +223,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 33.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pintu/refs/heads/main/screenshots/pintu-2026-08-17T081247.png
+screenshot: https://apis.io/screenshots/pintu/pintu-2026-08-17T081247.png
 security:
 - kind: authentication
   name: Pintu Authentication

@@ -25,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.9
-  scored_at: '2026-10-17'
+  score: 18.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 178
   human_in_the_loop: 0
@@ -98,11 +101,8 @@ apis:
   description: The VersioningService API from Verta — 40 operation(s) for versioningservice.
   name: Verta VersioningService API
   slug: verta-versioningservice-api
-artifact_total: 25
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: deployment/APISync.proto AuthzService API
   slug: open-verta-authzservice-api
@@ -138,7 +138,7 @@ collections:
   slug: open-verta-versioningservice-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/capabilities/verta-capability-edges.yml
+  href: https://artifacts.apis.io/verta/capabilities/verta-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/verta-capability-edges.yml
@@ -159,7 +159,7 @@ common:
   type: Releases
   url: https://github.com/VertaAI/modeldb/releases
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/overlays/verta-apisync-overlay.yaml
+  href: https://artifacts.apis.io/verta/overlays/verta-apisync-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/verta-apisync-overlay.yaml
@@ -168,67 +168,67 @@ common:
   type: License
   url: https://github.com/VertaAI/modeldb/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/agentic-access/verta-agentic-access.yml
+  href: https://artifacts.apis.io/verta/agentic-access/verta-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/verta-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/authentication/verta-authentication.yml
+  href: https://artifacts.apis.io/verta/authentication/verta-authentication.yml
   title: ''
   type: Authentication
   url: authentication/verta-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/conventions/verta-conventions.yml
+  href: https://artifacts.apis.io/verta/conventions/verta-conventions.yml
   title: ''
   type: Conventions
   url: conventions/verta-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/errors/verta-problem-types.yml
+  href: https://artifacts.apis.io/verta/errors/verta-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/verta-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/data-model/verta-data-model.yml
+  href: https://artifacts.apis.io/verta/data-model/verta-data-model.yml
   title: ''
   type: DataModel
   url: data-model/verta-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/conformance/verta-conformance.yml
+  href: https://artifacts.apis.io/verta/conformance/verta-conformance.yml
   title: ''
   type: Conformance
   url: conformance/verta-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/lifecycle/verta-lifecycle.yml
+  href: https://artifacts.apis.io/verta/lifecycle/verta-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/verta-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/changelog/verta-changelog.yml
+  href: https://artifacts.apis.io/verta/changelog/verta-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/verta-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/packages/verta-packages.yml
+  href: https://artifacts.apis.io/verta/packages/verta-packages.yml
   title: ''
   type: Packages
   url: packages/verta-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/packages/verta-packages.yml
+  href: https://artifacts.apis.io/verta/packages/verta-packages.yml
   title: ''
   type: SDKs
   url: packages/verta-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/mcp/verta-mcp.yml
+  href: https://artifacts.apis.io/verta/mcp/verta-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/verta-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/llms/verta-llms.txt
+  href: https://artifacts.apis.io/verta/llms/verta-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/verta-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/verta/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -255,22 +255,38 @@ network: true
 overview: 'Verta publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including AuthzService API, DatasetService API, ExperimentRunService API, and 8 more. Tagged areas include MLOps, Machine Learning, Model Management, Experiment Tracking, and Model Registry.
 
 
+  The Verta catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Verta''s developer surface includes authentication, changelog, documentation, and 20 more developer resources.'
 random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 79
+  extends:
+  - spectral:oas
+  name: Verta API Rules
+  rule_count: 38
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 2
+    warn: 2
+  slug: verta-rules
 score:
   band: emerging
-  composite: 23.3
+  composite: 24.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 34.2
     developer_ergonomics: 20.8
     discoverability: 78.6
@@ -278,7 +294,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 23.2
+  previous_composite: 24.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -295,18 +311,24 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/verta/refs/heads/main/screenshots/verta-2026-09-02T165805.png
+screenshot: https://apis.io/screenshots/verta/verta-2026-09-02T165805.png
 security:
 - kind: authentication
   name: Verta Authentication
   slug: verta-authentication
   summary_line: custom · 0 schemes
+skill_count: 2
+skills:
+- name: Register and version a model in Verta ModelDB
+  slug: verta-register-model
+- name: Track an ML experiment in Verta ModelDB
+  slug: verta-track-experiment
 slug: verta
 tags:
 - MLOps

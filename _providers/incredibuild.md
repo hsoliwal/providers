@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Standard REST APIs exposed by the Incredibuild Coordinator for managing build groups and users, and a Build History API that returns build telemetry as JSON. Requests authenticate with a custom API ke
@@ -47,17 +50,17 @@ common:
   type: BlogRSS
   url: https://www.incredibuild.com/feed
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/incredibuild/refs/heads/main/security/incredibuild-domain-security.yml
+  href: https://artifacts.apis.io/incredibuild/security/incredibuild-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/incredibuild-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/incredibuild/refs/heads/main/authentication/incredibuild-authentication.yml
+  href: https://artifacts.apis.io/incredibuild/authentication/incredibuild-authentication.yml
   title: ''
   type: Authentication
   url: authentication/incredibuild-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/incredibuild/refs/heads/main/conventions/incredibuild-conventions.yml
+  href: https://artifacts.apis.io/incredibuild/conventions/incredibuild-conventions.yml
   title: ''
   type: Conventions
   url: conventions/incredibuild-conventions.yml
@@ -125,18 +128,18 @@ overview: 'Incredibuild is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   Incredibuild''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, engineering blog, support, and 10 more developer resources.'
-random_paper: 8
+random_paper: 14
 score:
   band: thin
   composite: 27.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
@@ -144,21 +147,21 @@ score:
     developer_ergonomics: 57.1
     discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 27.3
+  previous_composite: 27.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/incredibuild/refs/heads/main/screenshots/incredibuild-2026-07-25T222249.png
+screenshot: https://apis.io/screenshots/incredibuild/incredibuild-2026-07-25T222249.png
 security:
 - kind: authentication
   name: Incredibuild Authentication

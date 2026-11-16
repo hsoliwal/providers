@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/connectrn/refs/heads/main/security/connectrn-domain-security.yml
+  href: https://artifacts.apis.io/connectrn/security/connectrn-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/connectrn-domain-security.yml
@@ -79,17 +82,17 @@ common:
   type: StatusPage
   url: https://status.connectrn.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/connectrn/refs/heads/main/lifecycle/connectrn-lifecycle.yml
+  href: https://artifacts.apis.io/connectrn/lifecycle/connectrn-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/connectrn-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/connectrn/refs/heads/main/packages/connectrn-packages.yml
+  href: https://artifacts.apis.io/connectrn/packages/connectrn-packages.yml
   title: ''
   type: Packages
   url: packages/connectrn-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/connectrn/refs/heads/main/llms/connectrn-llms.txt
+  href: https://artifacts.apis.io/connectrn/llms/connectrn-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/connectrn-llms.txt
@@ -121,12 +124,12 @@ overview: 'ConnectRN is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   ConnectRN''s developer surface includes engineering blog, signup flow, and 11 more developer resources.'
-random_paper: 2
+random_paper: 10
 score:
   band: emerging
   composite: 14.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -147,14 +150,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/connectrn/refs/heads/main/screenshots/connectrn-2026-09-02T145131.png
+screenshot: https://apis.io/screenshots/connectrn/connectrn-2026-09-02T145131.png
 security:
 - kind: domain-security
   name: Connectrn Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: 'The Three.js core library provides the scene graph, cameras, lights, geometries, materials, textures, loaders, and animation primitives used to build interactive 3D applications in the browser and on '
@@ -60,7 +64,7 @@ common:
   type: Website
   url: https://threejs.org
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/threejs/refs/heads/main/security/threejs-domain-security.yml
+  href: https://artifacts.apis.io/threejs/security/threejs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/threejs-domain-security.yml
@@ -233,7 +237,7 @@ overview: 'Three.js is listed with 6 APIs on the [APIs.io](https://apis.io/) net
 
 
   Three.js'' developer surface includes developer portal, documentation, code examples, sandbox, changelog, support, tooling, and 23 more developer resources.'
-random_paper: 9
+random_paper: 13
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -250,7 +254,7 @@ score:
   band: emerging
   composite: 24.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 55.3
     catalog_earned_first_party: 0.0
     catalog_gap: 59.8
@@ -271,14 +275,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/threejs/refs/heads/main/screenshots/threejs-2026-06-20T195317.png
+screenshot: https://apis.io/screenshots/threejs/threejs-2026-06-20T195317.png
 security:
 - kind: domain-security
   name: Threejs Domain Security

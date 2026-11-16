@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 23.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -82,9 +89,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Jawg Maps Isochrone API
   slug: open-jawg-maps-isochrone-api
 - collection_type: open
@@ -110,17 +114,17 @@ collections:
   slug: open-jawg-maps
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/agentic-access/jawg-maps-agentic-access.yml
+  href: https://artifacts.apis.io/jawg-maps/agentic-access/jawg-maps-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jawg-maps-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/security/jawg-maps-domain-security.yml
+  href: https://artifacts.apis.io/jawg-maps/security/jawg-maps-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jawg-maps-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/authentication/jawg-maps-authentication.yml
+  href: https://artifacts.apis.io/jawg-maps/authentication/jawg-maps-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jawg-maps-authentication.yml
@@ -141,17 +145,17 @@ common:
   type: Documentation
   url: https://www.jawg.io/docs/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/plans/jawg-maps-plans-pricing.yml
+  href: https://artifacts.apis.io/jawg-maps/plans/jawg-maps-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jawg-maps-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/rate-limits/jawg-maps-rate-limits.yml
+  href: https://artifacts.apis.io/jawg-maps/rate-limits/jawg-maps-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jawg-maps-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/finops/jawg-maps-finops.yml
+  href: https://artifacts.apis.io/jawg-maps/finops/jawg-maps-finops.yml
   title: ''
   type: FinOps
   url: finops/jawg-maps-finops.yml
@@ -178,30 +182,46 @@ network: true
 overview: 'Jawg Maps publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Isochrone API, Matrix API, Places API, and 4 more. Tagged areas include Maps, Geospatial, Tiles, Geocoding, and Routing.
 
 
+  The Jawg Maps catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Jawg Maps'' developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Jawg Maps Plans Pricing
   plan_count: 4
   slug: jawg-maps-plans-pricing
-random_paper: 1
+random_paper: 15
 rate_limits:
 - limit_count: 4
   name: Jawg Maps Rate Limits
   slug: jawg-maps-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Jawg Maps API Rules
+  rule_count: 64
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 2
+  slug: jawg-maps-rules
 score:
   band: thin
-  composite: 27.0
+  composite: 28.7
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 15
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.0
     developer_ergonomics: 32.1
     discoverability: 66.1
@@ -211,7 +231,7 @@ score:
     countries:
     - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 35.3
+  previous_composite: 28.7
   provenance:
     agentic_access: derived
     contracts:
@@ -225,13 +245,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jawg-maps/refs/heads/main/screenshots/jawg-maps-2026-07-25T223104.png
+screenshot: https://apis.io/screenshots/jawg-maps/jawg-maps-2026-07-25T223104.png
 security:
 - kind: authentication
   name: Jawg Maps Authentication

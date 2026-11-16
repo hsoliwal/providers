@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.4
-  scored_at: '2026-10-17'
+  score: 52.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 0
@@ -46,102 +52,332 @@ agentic_access:
   summary_line: 64 operations · 32 acting
 api_count: 1
 apis:
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage content within a change request.
   name: GitBook Change Request Content API
   slug: gitbook-change-request-content-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage reviewers for change requests.
   name: GitBook Change Request Reviewers API
   slug: gitbook-change-request-reviewers-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Create, list, review, merge, and update change requests for collaborative editing.
   name: GitBook Change Requests API
   slug: gitbook-change-requests-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Organize and manage grouped sets of spaces.
   name: GitBook Collections API
   slug: gitbook-collections-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Configure custom hostnames for docs sites.
   name: GitBook Custom Hostnames API
   slug: gitbook-custom-hostnames-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
-  description: Manage published documentation sites.
-  name: GitBook Docs Sites API
-  slug: gitbook-docs-sites-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Import content into spaces.
   name: GitBook Imports API
   slug: gitbook-imports-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Install and manage third-party integrations.
   name: GitBook Integrations API
   slug: gitbook-integrations-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
-  description: Upload and manage OpenAPI specifications.
-  name: GitBook OpenAPI Specs API
-  slug: gitbook-openapi-specs-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage members and their roles within an organization.
   name: GitBook Organization Members API
   slug: gitbook-organization-members-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
-  description: Manage teams within an organization.
-  name: GitBook Organization Teams API
-  slug: gitbook-organization-teams-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Create and configure organizations to group users, spaces, and collections.
   name: GitBook Organizations API
   slug: gitbook-organizations-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
-  description: Search content across an organization.
-  name: GitBook Search API
-  slug: gitbook-search-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage spaces within a docs site.
   name: GitBook Site Spaces API
   slug: gitbook-site-spaces-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage pages and content within a space.
   name: GitBook Space Content API
   slug: gitbook-space-content-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
-  description: Manage user permissions within a space.
-  name: GitBook Space Users API
-  slug: gitbook-space-users-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage spaces which are containers for documentation or knowledge base content.
   name: GitBook Spaces API
   slug: gitbook-spaces-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Resolve and manage content URLs.
   name: GitBook URLs API
   slug: gitbook-urls-api
-- baseURL: https://api.gitbook.com/v1
-  baseurl_source: spec
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
   description: Manage user accounts and profiles.
   name: GitBook Users API
   slug: gitbook-users-api
-artifact_total: 60
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The agents API from GitBook — 3 operation(s) for agents.
+  name: GitBook Agents API
+  slug: gitbook-agents-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Centralize billing activities here, including updating payment methods, adjusting subscriptions, or reviewing invoices. Simplify how you track and control costs.
+  name: GitBook Billing API
+  slug: gitbook-billing-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: This API powers the inline discussion around any new or updated documentation. Participate in comment threads and resolve them after reaching consensus. {% openapi-schemas spec="gitbook" schemas="Comm
+  name: GitBook Change Request Comments API
+  slug: gitbook-change-request-comments-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Quickly access the full list of collaborators and their contributions within a change request for better traceability and communication. {% openapi-schemas spec="gitbook" schemas="UserContributor" gro
+  name: GitBook Change Request Contributors API
+  slug: gitbook-change-request-contributors-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The change-request-conversations API from GitBook — 2 operation(s) for change-request-conversations.
+  name: GitBook Change Request Conversations API
+  slug: gitbook-change-request-conversations-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The change-requests-reviews API from GitBook — 3 operation(s) for change-requests-reviews.
+  name: GitBook Change Requests Reviews API
+  slug: gitbook-change-requests-reviews-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Control which users and teams have access to a collection's spaces. This ensures only the right individuals can view or modify sensitive content.
+  name: GitBook Collection Permissions API
+  slug: gitbook-collection-permissions-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The critical API from GitBook — 12 operation(s) for critical.
+  name: GitBook Critical API
+  slug: gitbook-critical-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Upload and manage custom fonts for branding or aesthetic purposes. Once added, fonts can be applied to your spaces or sites to achieve a unique look. {% openapi-schemas spec="gitbook" schemas="Customi
+  name: GitBook Custom Fonts API
+  slug: gitbook-custom-fonts-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The git API from GitBook — 9 operation(s) for git.
+  name: GitBook Git API
+  slug: gitbook-git-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: 'Define terms and specify their translations for different languages to ensure consistent wording. {% openapi-schemas spec="gitbook" schemas="GlossaryEntry" grouped="false" %} The GlossaryEntry object '
+  name: GitBook Glossary API
+  slug: gitbook-glossary-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Keep a history of your OpenAPI specs, enabling you to compare different versions, revert, or maintain multiple concurrent versions for testing or documentation. {% openapi-schemas spec="gitbook" schem
+  name: GitBook Openapi Versions API
+  slug: gitbook-openapi-versions-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Enhance your team's knowledge base with the Organization AI ask endpoint, which allows you to query AI models trained on your organization's GitBook content for quick, intelligent responses.
+  name: GitBook Organization Ask API
+  slug: gitbook-organization-ask-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Use this API to create and revoke invitations for new members. By automating invite flows, you can maintain a cohesive onboarding experience for collaborators and speed up team expansion.
+  name: GitBook Organization Invites API
+  slug: gitbook-organization-invites-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Manage the advertisement strategy within your docs. You can specify ad placements, track usage, and adjust settings to best fit your organization's needs.
+  name: GitBook Site Ads API
+  slug: gitbook-site-ads-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Collect structured feedback from AI agents about the tools, operations, commands and content they worked with, so you can see where agents struggle instead of only how often they call you. Feedback is
+  name: GitBook Site Agent Feedback API
+  slug: gitbook-site-agent-feedback-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Configure how site issue remediation should behave and provide site-specific instructions for the editing and topic analyst agents. {% openapi-schemas spec="gitbook" schemas="SiteAgentSettings" groupe
+  name: GitBook Site Agent Settings API
+  slug: gitbook-site-agent-settings-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Build advanced conversational AI experiences within your docs site that go beyond basic Q&A.
+  name: GitBook Site AI API
+  slug: gitbook-site-ai-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Give your users a way to ask content-aware AI queries that are scoped entirely to the site's published documents.
+  name: GitBook Site Ask API
+  slug: gitbook-site-ask-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: A site change request groups changes to a site's structure and to the content of any number of its spaces into one review, with a single lifecycle and a single merge decision. {% openapi-schemas spec=
+  name: GitBook Site Change Requests API
+  slug: gitbook-site-change-requests-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Manage the channels used as origins for questions and answers in your site ask data. {% openapi-schemas spec="gitbook" schemas="SiteChannel" grouped="false" %} The SiteChannel object {% endopenapi-sch
+  name: GitBook Site Channels API
+  slug: gitbook-site-channels-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Manage the contextual records and topics used by your site to power AI experiences and insights. {% openapi-schemas spec="gitbook" schemas="ContextRecord,ContextConnection,SiteTopic,SiteFinding,SiteFi
+  name: GitBook Site Context API
+  slug: gitbook-site-context-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Update your site's branding, styling, and layout to match your organization's identity. This includes theming elements like color palette, logos, and more. {% openapi-schemas spec="gitbook" schemas="S
+  name: GitBook Site Customization API
+  slug: gitbook-site-customization-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: External links add absolute HTTP or HTTPS destinations alongside sections and groups in a site's navigation. {% openapi-schemas spec="gitbook" schemas="SiteExternalLink" grouped="false" %} The SiteExt
+  name: GitBook Site External Links API
+  slug: gitbook-site-external-links-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: This API delivers insights about how visitors interact with your site, including page views and user engagement, helping you measure and optimize your content strategy.
+  name: GitBook Site Insights API
+  slug: gitbook-site-insights-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Manage Model Context Protocol (Mcp) servers used by your site. {% openapi-schemas spec="gitbook" schemas="SiteMcpServer" grouped="false" %} The SiteMcpServer object {% endopenapi-schemas %}
+  name: GitBook Site MCP Servers API
+  slug: gitbook-site-mcp-servers-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Invite, remove, or update users and teams permissions for a site. This provides a way to tightly control collaboration and visibility among your teammates.
+  name: GitBook Site Permissions API
+  slug: gitbook-site-permissions-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Quickly generate a preview of how your site's content and layout will appear once published, allowing for final checks and refinement prior to going live.
+  name: GitBook Site Preview API
+  slug: gitbook-site-preview-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Configure the credentials or tokens required to publish documentation externally. This helps ensure your site is consistently kept up to date. {% openapi-schemas spec="gitbook" schemas="SitePublishing
+  name: GitBook Site Publishing Auth API
+  slug: gitbook-site-publishing-auth-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Inspect the canonical questions asked on your site, the generated answers linked to each question, and the sources used for each answer. {% openapi-schemas spec="gitbook" schemas="SiteQuestion,SiteQue
+  name: GitBook Site Questions API
+  slug: gitbook-site-questions-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Keep your site's content fresh without breaking old links. This API allows you to create and manage redirection rules. {% openapi-schemas spec="gitbook" schemas="SiteRedirect" grouped="false" %} The S
+  name: GitBook Site Redirects API
+  slug: gitbook-site-redirects-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Section groups let you bundle multiple top-level sections together, offering additional structuring capabilities and simplifying navigation for your readers. {% openapi-schemas spec="gitbook" schemas=
+  name: GitBook Site Section Groups API
+  slug: gitbook-site-section-groups-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Sections help partition your site's content at the top level. They can be modified, deleted, or reorganized to reflect your site's changing structure. {% openapi-schemas spec="gitbook" schemas="SiteSe
+  name: GitBook Site Sections API
+  slug: gitbook-site-sections-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Manage the lifecycle of share links for your published sites. This includes generating new links for external sharing and revoking or updating existing ones. {% openapi-schemas spec="gitbook" schemas=
+  name: GitBook Site Share Links API
+  slug: gitbook-site-share-links-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Provides a complete overview of how content is organized on a site. With this API, you can discover page nesting, identify sections, and reorder site elements as needed. {% openapi-schemas spec="gitbo
+  name: GitBook Site Structure API
+  slug: gitbook-site-structure-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The site-users API from GitBook — 3 operation(s) for site-users.
+  name: GitBook Site Users API
+  slug: gitbook-site-users-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The Docs Sites API lets you programmatically manage published documentation sites within your organization. You can list and update all sites created under a specific organization, making it easy to a
+  name: GitBook Sites API
+  slug: gitbook-sites-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The space-comment API from GitBook — 1 operation(s) for space-comment.
+  name: GitBook Space Comment API
+  slug: gitbook-space-comment-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Comments are a powerful way to gather feedback on your documentation. Use this API to post, list, update, or delete comments and keep conversations organized. {% openapi-schemas spec="gitbook" schemas
+  name: GitBook Space Comments API
+  slug: gitbook-space-comments-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Automatically fetch metadata or previews for embedded resources such as videos, images, or external docs, enabling richer content experiences in your space.
+  name: GitBook Space Embeds API
+  slug: gitbook-space-embeds-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Manage the linkage between your GitBook space and external Git repositories, enabling commits, merges, and pull requests directly tied to your documentation.
+  name: GitBook Space Git API
+  slug: gitbook-space-git-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: This API handles the registration and removal of integrations, automating how data flows between GitBook and your chosen external services.
+  name: GitBook Space Integrations API
+  slug: gitbook-space-integrations-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Give your collaborators the right level of access for specific spaces, or assign entire teams to your spaces and streamline the process of granting or revoking access at scale, without dealing with in
+  name: GitBook Space Permissions API
+  slug: gitbook-space-permissions-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Tie GitBook into your corporate identity management and authentication providers (like SAML or OAuth). This centralizes user authentication and improves security. {% openapi-schemas spec="gitbook" sch
+  name: GitBook SSO API
+  slug: gitbook-sso-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Whether you're hosting images, documents, or other assets, Storage endpoints allow you to integrate those files into your documentation and spaces seamlessly.
+  name: GitBook Storage API
+  slug: gitbook-storage-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Provide a branded subdomain for each organization to create a consistent user experience. This API supports subdomain creation, DNS checks, and more. {% openapi-schemas spec="gitbook" schemas="Subdoma
+  name: GitBook Subdomains API
+  slug: gitbook-subdomains-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Use these endpoints to monitor the overall health of GitBook's infrastructure or to retrieve version information for debugging and compliance purposes.
+  name: GitBook System API
+  slug: gitbook-system-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Easily add or remove users from teams, as well as fine-tune their specific roles within a team to ensure secure, well-organized collaboration. {% openapi-schemas spec="gitbook" schemas="TeamMember" gr
+  name: GitBook Team Members API
+  slug: gitbook-team-members-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: Teams offer a convenient way to assign roles and access to multiple users at once. This helps maintain large-scale projects more efficiently by reducing overhead in user-by-user management. {% openapi
+  name: GitBook Teams API
+  slug: gitbook-teams-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The Translations API provides ways to localize your content into various languages. It supports custom strings, default language settings, and more.
+  name: GitBook Translations API
+  slug: gitbook-translations-api
+- baseURL_template: '{host}/v1'
+  baseurl_source: spec_template
+  description: The OpenAPI endpoints let you integrate your existing or newly generated OpenAPI definitions into GitBook. This includes uploading, updating, and retrieving specs. {% openapi-schemas spec="gitbook" sc
+  name: GitBook Open API
+  slug: gitbook-open-api-api
+artifact_total: 110
 asyncapis:
 - description: AsyncAPI specification for GitBook webhook events. GitBook emits webhook notifications when key events occur within organizations, spaces, pages, change requests, docs sites, collections, and user acc
   name: GitBook Webhook Events
@@ -150,9 +386,6 @@ asyncapis:
   name: Gitbook Webhooks
   slug: gitbook-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: GitBook Change Request Content API
   slug: open-gitbook-change-request-content-api
@@ -211,118 +444,123 @@ collections:
   name: GitBook Change Request Content Users API
   slug: open-gitbook-users-api
 common:
+- group: other
+  href: https://artifacts.apis.io/gitbook/capabilities/gitbook-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gitbook-capability-edges.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/changelog/gitbook-changelog.yml
+  href: https://artifacts.apis.io/gitbook/changelog/gitbook-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/gitbook-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/scopes/gitbook-scopes.yml
+  href: https://artifacts.apis.io/gitbook/scopes/gitbook-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/gitbook-scopes.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/finops/gitbook-finops.yml
+  href: https://artifacts.apis.io/gitbook/finops/gitbook-finops.yml
   title: ''
   type: FinOps
   url: finops/gitbook-finops.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/rate-limits/gitbook-rate-limits.yml
+  href: https://artifacts.apis.io/gitbook/rate-limits/gitbook-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gitbook-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/plans/gitbook-plans-pricing.yml
+  href: https://artifacts.apis.io/gitbook/plans/gitbook-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gitbook-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/rules/gitbook-rules.yml
+  href: https://artifacts.apis.io/gitbook/rules/gitbook-rules.yml
   title: ''
   type: Spectral
   url: rules/gitbook-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/rules/gitbook-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/gitbook/rules/gitbook-jsonschema-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/gitbook-jsonschema-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/rules/gitbook-asyncapi-spectral-rules.yml
+  href: https://artifacts.apis.io/gitbook/rules/gitbook-asyncapi-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/gitbook-asyncapi-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/vocabulary/gitbook-vocabulary.yml
+  href: https://artifacts.apis.io/gitbook/vocabulary/gitbook-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/gitbook-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gitbook/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/asyncapi/gitbook-webhooks.yml
+  href: https://artifacts.apis.io/gitbook/asyncapi/gitbook-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/gitbook-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/data-model/gitbook-data-model.yml
+  href: https://artifacts.apis.io/gitbook/data-model/gitbook-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gitbook-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/cli/gitbook-cli.yml
+  href: https://artifacts.apis.io/gitbook/cli/gitbook-cli.yml
   title: ''
   type: CLI
   url: cli/gitbook-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/conventions/gitbook-conventions.yml
+  href: https://artifacts.apis.io/gitbook/conventions/gitbook-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gitbook-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/errors/gitbook-problem-types.yml
+  href: https://artifacts.apis.io/gitbook/errors/gitbook-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gitbook-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/conformance/gitbook-conformance.yml
+  href: https://artifacts.apis.io/gitbook/conformance/gitbook-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gitbook-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/llms/gitbook-llms.txt
+  href: https://artifacts.apis.io/gitbook/llms/gitbook-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gitbook-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/mcp/gitbook-mcp.yml
+  href: https://artifacts.apis.io/gitbook/mcp/gitbook-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/gitbook-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/well-known/gitbook-well-known.yml
+  href: https://artifacts.apis.io/gitbook/well-known/gitbook-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gitbook-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/hosts/gitbook-hosts.yml
+  href: https://artifacts.apis.io/gitbook/hosts/gitbook-hosts.yml
   title: ''
   type: Hosts
   url: hosts/gitbook-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/vendors/gitbook-vendors.yml
+  href: https://artifacts.apis.io/gitbook/vendors/gitbook-vendors.yml
   title: ''
   type: Vendors
   url: vendors/gitbook-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/packages/gitbook-packages.yml
+  href: https://artifacts.apis.io/gitbook/packages/gitbook-packages.yml
   title: ''
   type: SDKs
   url: packages/gitbook-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/packages/gitbook-packages.yml
+  href: https://artifacts.apis.io/gitbook/packages/gitbook-packages.yml
   title: ''
   type: Packages
   url: packages/gitbook-packages.yml
@@ -343,22 +581,22 @@ common:
   type: Documentation
   url: https://developer.gitbook.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/vendor-facets/gitbook-vendor-facets.yml
+  href: https://artifacts.apis.io/gitbook/vendor-facets/gitbook-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/gitbook-vendor-facets.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/agentic-access/gitbook-agentic-access.yml
+  href: https://artifacts.apis.io/gitbook/agentic-access/gitbook-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gitbook-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/security/gitbook-domain-security.yml
+  href: https://artifacts.apis.io/gitbook/security/gitbook-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gitbook-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/authentication/gitbook-authentication.yml
+  href: https://artifacts.apis.io/gitbook/authentication/gitbook-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gitbook-authentication.yml
@@ -421,13 +659,13 @@ common:
 created: '2025-01-08'
 description: GitBook is a documentation and knowledge platform, positioned as "the knowledge layer for AI", that connects a company's docs, product and users, answers user questions with AI, and identifies gaps in its knowledge. Teams write and publish product and API documentation with docs-as-code support and AI insights built in.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Gitbook Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: site/month
+  service_category: ''
   slug: gitbook-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gitbook.png
 json_schemas:
 - name: GitBook Change Request
@@ -465,18 +703,21 @@ modified: '2026-05-19'
 name: GitBook
 nav: Providers
 network: true
-overview: 'GitBook publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Change Request Content API, Change Request Reviewers API, Change Requests API, and 16 more. Tagged areas include Content, Documentation, Experience, Integration, and Platform.
+overview: 'GitBook publishes 65 API contracts indexed on the [APIs.io](https://apis.io/) network, including Change Request Content API, Change Request Reviewers API, Change Requests API, and 62 more. Tagged areas include Content, Documentation, Experience, Integration, and Platform.
 
 
   The GitBook catalog on APIs.io includes 2 event-driven AsyncAPI specifications, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  GitBook''s developer surface includes changelog, CLI, support, documentation, authentication, pricing, engineering blog, and 38 more developer resources.'
+  GitBook''s developer surface includes changelog, CLI, support, documentation, authentication, pricing, engineering blog, and 39 more developer resources.'
 plans:
 - name: Gitbook Plans Pricing
-  plan_count: 3
+  plan_count: 8
   slug: gitbook-plans-pricing
-random_paper: 3
+- name: Gitbook Price Estimates
+  plan_count: 0
+  slug: gitbook-price-estimates
+random_paper: 7
 rate_limits:
 - limit_count: 5
   name: Gitbook Rate Limits
@@ -524,31 +765,31 @@ scopes:
   summary_line: 29 scopes · authorizationCode
 score:
   band: strong
-  composite: 61.3
+  composite: 61.9
   coverage:
-    artifact_dirs: 35
-    catalog_earned: 57.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 57.3
+    artifact_dirs: 38
+    catalog_earned: 69.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 45.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: -8.6
   facets:
-    access_clarity: 52.6
+    access_clarity: 67.1
     contract_governance: 35.6
-    contract_quality: 68.4
-    developer_ergonomics: 63.7
+    contract_quality: 70.6
+    developer_ergonomics: 51.8
     discoverability: 66.7
-    operational_transparency: 60.5
-  previous_composite: 57.0
+    operational_transparency: 35.5
+  previous_composite: 70.5
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 19
+      marker_coverage: 76.5
+      total: 85
     mcp: first-party
     skills: derived
   regulatory:
@@ -560,14 +801,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 30.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gitbook/refs/heads/main/screenshots/gitbook-2026-06-20T181833.png
+    score: 33.3
+screenshot: https://apis.io/screenshots/gitbook/gitbook-2026-06-20T181833.png
 security:
 - kind: authentication
   name: Gitbook Authentication
@@ -577,6 +818,16 @@ security:
   name: Gitbook Domain Security
   slug: gitbook-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 4
+skills:
+- name: gitbook-collection-management
+  slug: gitbook-collection-management
+- name: gitbook-create-and-list-spaces
+  slug: gitbook-create-and-list-spaces
+- name: gitbook-manage-docs-sites
+  slug: gitbook-manage-docs-sites
+- name: gitbook-openapi-specs-workflow
+  slug: gitbook-openapi-specs-workflow
 slug: gitbook
 tags:
 - Content
@@ -585,5 +836,7 @@ tags:
 - Integration
 - Platform
 - SDK
+- API Documentation
+- Developer Portal
 website: https://www.gitbook.com/
 ---

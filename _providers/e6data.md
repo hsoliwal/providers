@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -86,47 +90,47 @@ common:
   type: GitHubOrganization
   url: https://github.com/e6x-labs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/llms/e6data-llms.txt
+  href: https://artifacts.apis.io/e6data/llms/e6data-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/e6data-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/packages/e6data-packages.yml
+  href: https://artifacts.apis.io/e6data/packages/e6data-packages.yml
   title: ''
   type: Packages
   url: packages/e6data-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/packages/e6data-packages.yml
+  href: https://artifacts.apis.io/e6data/packages/e6data-packages.yml
   title: ''
   type: SDKs
   url: packages/e6data-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/authentication/e6data-authentication.yml
+  href: https://artifacts.apis.io/e6data/authentication/e6data-authentication.yml
   title: ''
   type: Authentication
   url: authentication/e6data-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/conventions/e6data-conventions.yml
+  href: https://artifacts.apis.io/e6data/conventions/e6data-conventions.yml
   title: ''
   type: Conventions
   url: conventions/e6data-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/errors/e6data-error-codes.yml
+  href: https://artifacts.apis.io/e6data/errors/e6data-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/e6data-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/lifecycle/e6data-lifecycle.yml
+  href: https://artifacts.apis.io/e6data/lifecycle/e6data-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/e6data-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/changelog/e6data-changelog.yml
+  href: https://artifacts.apis.io/e6data/changelog/e6data-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/e6data-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/conformance/e6data-conformance.yml
+  href: https://artifacts.apis.io/e6data/conformance/e6data-conformance.yml
   title: ''
   type: Conformance
   url: conformance/e6data-conformance.yml
@@ -135,7 +139,7 @@ common:
   type: Compliance
   url: https://www.e6data.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/security/e6data-domain-security.yml
+  href: https://artifacts.apis.io/e6data/security/e6data-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/e6data-domain-security.yml
@@ -151,12 +155,12 @@ overview: 'e6data is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   e6data''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 16 more developer resources.'
-random_paper: 15
+random_paper: 13
 score:
   band: thin
   composite: 35.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -179,14 +183,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/e6data/refs/heads/main/screenshots/e6data-2026-07-25T212626.png
+screenshot: https://apis.io/screenshots/e6data/e6data-2026-07-25T212626.png
 security:
 - kind: authentication
   name: E6Data Authentication

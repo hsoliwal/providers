@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.9
-  scored_at: '2026-10-17'
+  score: 37.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 0
@@ -147,69 +153,69 @@ apis:
   description: Topics provide schema information for messages in the data source.
   name: Foxglove Technologies Topics API
   slug: foxglove-technologies-topics-api
-artifact_total: 78
+artifact_total: 85
 asyncapis:
 - description: ''
   name: Foxglove Technologies Webhooks
   slug: foxglove-technologies-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/overlays/foxglove-technologies-api-overlay.yaml
+  href: https://artifacts.apis.io/foxglove-technologies/overlays/foxglove-technologies-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/foxglove-technologies-api-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/packages/foxglove-technologies-packages.yml
+  href: https://artifacts.apis.io/foxglove-technologies/packages/foxglove-technologies-packages.yml
   title: ''
   type: Packages
   url: packages/foxglove-technologies-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/packages/foxglove-technologies-packages.yml
+  href: https://artifacts.apis.io/foxglove-technologies/packages/foxglove-technologies-packages.yml
   title: ''
   type: SDKs
   url: packages/foxglove-technologies-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/cli/foxglove-technologies-cli.yml
+  href: https://artifacts.apis.io/foxglove-technologies/cli/foxglove-technologies-cli.yml
   title: ''
   type: CLI
   url: cli/foxglove-technologies-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/components/foxglove-technologies-components.yml
+  href: https://artifacts.apis.io/foxglove-technologies/components/foxglove-technologies-components.yml
   title: ''
   type: Components
   url: components/foxglove-technologies-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/mcp/foxglove-technologies-mcp.yml
+  href: https://artifacts.apis.io/foxglove-technologies/mcp/foxglove-technologies-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/foxglove-technologies-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/foxglove-technologies/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/llms/foxglove-technologies-llms.txt
+  href: https://artifacts.apis.io/foxglove-technologies/llms/foxglove-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/foxglove-technologies-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/asyncapi/foxglove-technologies-webhooks.yml
+  href: https://artifacts.apis.io/foxglove-technologies/asyncapi/foxglove-technologies-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/foxglove-technologies-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/conventions/foxglove-technologies-conventions.yml
+  href: https://artifacts.apis.io/foxglove-technologies/conventions/foxglove-technologies-conventions.yml
   title: ''
   type: Conventions
   url: conventions/foxglove-technologies-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/lifecycle/foxglove-technologies-lifecycle.yml
+  href: https://artifacts.apis.io/foxglove-technologies/lifecycle/foxglove-technologies-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/foxglove-technologies-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/conformance/foxglove-technologies-conformance.yml
+  href: https://artifacts.apis.io/foxglove-technologies/conformance/foxglove-technologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/foxglove-technologies-conformance.yml
@@ -218,27 +224,27 @@ common:
   type: Compliance
   url: https://foxglove.dev/security
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/sandbox/foxglove-technologies-sandbox.yml
+  href: https://artifacts.apis.io/foxglove-technologies/sandbox/foxglove-technologies-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/foxglove-technologies-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/plans/foxglove-technologies-plans-pricing.yml
+  href: https://artifacts.apis.io/foxglove-technologies/plans/foxglove-technologies-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/foxglove-technologies-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/rate-limits/foxglove-technologies-rate-limits.yml
+  href: https://artifacts.apis.io/foxglove-technologies/rate-limits/foxglove-technologies-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/foxglove-technologies-rate-limits.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/json-schema/_index.yml
+  href: https://artifacts.apis.io/foxglove-technologies/json-schema/_index.yml
   title: ''
   type: JSONSchema
   url: json-schema/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/grpc/_index.yml
+  href: https://artifacts.apis.io/foxglove-technologies/grpc/_index.yml
   title: ''
   type: Protobuf
   url: grpc/_index.yml
@@ -247,17 +253,17 @@ common:
   type: Download
   url: https://foxglove.dev/download
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/agentic-access/foxglove-technologies-agentic-access.yml
+  href: https://artifacts.apis.io/foxglove-technologies/agentic-access/foxglove-technologies-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/foxglove-technologies-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/security/foxglove-technologies-trust-center.yml
+  href: https://artifacts.apis.io/foxglove-technologies/security/foxglove-technologies-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/foxglove-technologies-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/security/foxglove-technologies-domain-security.yml
+  href: https://artifacts.apis.io/foxglove-technologies/security/foxglove-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/foxglove-technologies-domain-security.yml
@@ -326,12 +332,20 @@ common:
   type: ChangeLog
   url: https://docs.foxglove.dev/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/changelog/foxglove-technologies-changelog.yml
+  href: https://artifacts.apis.io/foxglove-technologies/changelog/foxglove-technologies-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/foxglove-technologies-changelog.yml
 created: '2026-08-16'
 description: Foxglove Technologies, Inc. (foxglove.dev) builds a multimodal data platform for robotics, autonomy and physical AI. Its products cover visualization and debugging of robot data (3D scenes, images, plots, logs, maps), cloud and self-hosted data infrastructure for recording ingest and retention, fleet and device management, and an agent layer that lets AI assistants inspect recordings. Foxglove publishes an OpenAPI 3.1 REST API at api.foxglove.dev/v1 for devices, recordings, sessions, events, event types, custom properties, sites, tokens, extensions and layouts; a webhook event surface; SDKs for Python, Rust, C++, C, Go and TypeScript; a Go CLI; and the open-source MCAP container format and Foxglove message schemas.
+finops:
+- has_sources: true
+  method: derived
+  name: Foxglove Technologies Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: foxglove-technologies-finops
+  template: false
 image: https://foxglove.dev/images/logo-icon-round.png
 json_schemas:
 - name: foxglove.ArrowPrimitive
@@ -496,7 +510,7 @@ network: true
 overview: 'Foxglove Technologies publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Coverage API, Custom Properties API, Device Tokens API, and 17 more. Tagged areas include Robotics, Observability, Visualization, Data Platform, and Physical AI.
 
 
-  The Foxglove Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Foxglove Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Foxglove Technologies'' developer surface includes CLI, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 32 more developer resources.'
@@ -504,30 +518,46 @@ plans:
 - name: Foxglove Technologies Plans Pricing
   plan_count: 4
   slug: foxglove-technologies-plans-pricing
-random_paper: 3
+- name: Foxglove Technologies Price Estimates
+  plan_count: 0
+  slug: foxglove-technologies-price-estimates
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Foxglove Technologies Rate Limits
   slug: foxglove-technologies-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Foxglove Technologies API Rules
+  rule_count: 58
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 11
+  slug: foxglove-technologies-rules
 score:
   band: strong
-  composite: 59.4
+  composite: 62.7
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 49.0
+    artifact_dirs: 33
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 78.9
-    contract_governance: 4.5
+    access_clarity: 86.8
+    contract_governance: 18.2
     contract_quality: 55.9
     developer_ergonomics: 80.4
     discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 59.4
+  previous_composite: 62.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -548,13 +578,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/foxglove-technologies/refs/heads/main/screenshots/foxglove-technologies-2026-08-17T080933.png
+screenshot: https://apis.io/screenshots/foxglove-technologies/foxglove-technologies-2026-08-17T080933.png
 security:
 - kind: authentication
   name: Foxglove Technologies Authentication
@@ -568,6 +598,16 @@ security:
   name: Foxglove Technologies Trust Center
   slug: foxglove-technologies-trust-center
   summary_line: SOC 2, GDPR
+skill_count: 4
+skills:
+- name: Annotate Foxglove data with typed events
+  slug: foxglove-technologies-annotate-data-with-events
+- name: Consume Foxglove webhooks safely
+  slug: foxglove-technologies-consume-webhooks-safely
+- name: Onboard a Foxglove device and issue its tokens
+  slug: foxglove-technologies-onboard-a-device-and-issue-tokens
+- name: Upload and track a Foxglove recording
+  slug: foxglove-technologies-upload-and-track-a-recording
 slug: foxglove-technologies
 tags:
 - Robotics

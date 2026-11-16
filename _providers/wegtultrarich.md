@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Free
   onboarding: unknown
-  pricing: unknown
+  pricing: free
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.0
-  scored_at: '2026-10-17'
+  score: 47.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +47,7 @@ agentic_access:
   operation_count: 6
   slug: wegtultrarich-agentic-access
   summary_line: 6 operations
-api_count: 2
+api_count: 1
 apis:
 - description: Hosted, no-auth Model Context Protocol server (Streamable HTTP) exposing the same five wealth computations as agent tools with published JSON Schema inputs. Answers protocol revisions 2025-03-26 throu
   name: We > Ultrarich MCP Server
@@ -67,11 +71,8 @@ arazzos:
 - description: Discover the available wealth expressions, run a direction-aware them-vs-you comparison, then add a purchasing-power lens on the ultrarich side — the three calls behind a quotable inequality briefing.
   name: We > Ultrarich — wealth inequality briefing
   slug: wegtultrarich-wealth-inequality-briefing
-artifact_total: 24
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: We > Ultrarich Comparison API
   slug: open-wegtultrarich-comparison-api
@@ -82,8 +83,13 @@ collections:
   name: We > Ultrarich Wealth Expression API
   slug: open-wegtultrarich-wealth-expression-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/wegtultrarich/plans/wegtultrarich-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/wegtultrarich-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/mcp/wegtultrarich-mcp.yml
+  href: https://artifacts.apis.io/wegtultrarich/mcp/wegtultrarich-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/wegtultrarich-mcp.yml
@@ -96,7 +102,7 @@ common:
   type: Pricing
   url: https://wegtultrarich.org/pricing.html
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/overlays/wegtultrarich-openapi-overlay.yaml
+  href: https://artifacts.apis.io/wegtultrarich/overlays/wegtultrarich-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wegtultrarich-openapi-overlay.yaml
@@ -157,12 +163,12 @@ common:
   type: ChangeLog
   url: https://wegtultrarich.org/CHANGELOG.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/changelog/wegtultrarich-changelog.yml
+  href: https://artifacts.apis.io/wegtultrarich/changelog/wegtultrarich-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/wegtultrarich-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/lifecycle/wegtultrarich-lifecycle.yml
+  href: https://artifacts.apis.io/wegtultrarich/lifecycle/wegtultrarich-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wegtultrarich-lifecycle.yml
@@ -171,7 +177,7 @@ common:
   type: Security
   url: https://wegtultrarich.org/SECURITY.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/security/wegtultrarich-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/wegtultrarich/security/wegtultrarich-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/wegtultrarich-vulnerability-disclosure.yml
@@ -180,82 +186,82 @@ common:
   type: SecurityTxt
   url: https://api.wegtultrarich.org/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/security/wegtultrarich-domain-security.yml
+  href: https://artifacts.apis.io/wegtultrarich/security/wegtultrarich-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wegtultrarich-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/well-known/wegtultrarich-well-known.yml
+  href: https://artifacts.apis.io/wegtultrarich/well-known/wegtultrarich-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wegtultrarich-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/authentication/wegtultrarich-authentication.yml
+  href: https://artifacts.apis.io/wegtultrarich/authentication/wegtultrarich-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wegtultrarich-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/conventions/wegtultrarich-conventions.yml
+  href: https://artifacts.apis.io/wegtultrarich/conventions/wegtultrarich-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wegtultrarich-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/conventions/wegtultrarich-conventions.yml
+  href: https://artifacts.apis.io/wegtultrarich/conventions/wegtultrarich-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/wegtultrarich-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/errors/wegtultrarich-problem-types.yml
+  href: https://artifacts.apis.io/wegtultrarich/errors/wegtultrarich-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/wegtultrarich-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/rate-limits/wegtultrarich-rate-limits.yml
+  href: https://artifacts.apis.io/wegtultrarich/rate-limits/wegtultrarich-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wegtultrarich-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/conformance/wegtultrarich-conformance.yml
+  href: https://artifacts.apis.io/wegtultrarich/conformance/wegtultrarich-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wegtultrarich-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/vocabulary/wegtultrarich-vocabulary.yml
+  href: https://artifacts.apis.io/wegtultrarich/vocabulary/wegtultrarich-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/wegtultrarich-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/data-model/wegtultrarich-data-model.yml
+  href: https://artifacts.apis.io/wegtultrarich/data-model/wegtultrarich-data-model.yml
   title: ''
   type: DataModel
   url: data-model/wegtultrarich-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/packages/wegtultrarich-packages.yml
+  href: https://artifacts.apis.io/wegtultrarich/packages/wegtultrarich-packages.yml
   title: ''
   type: Packages
   url: packages/wegtultrarich-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/rules/wegtultrarich-spectral.yaml
+  href: https://artifacts.apis.io/wegtultrarich/rules/wegtultrarich-spectral.yaml
   title: ''
   type: Rules
   url: rules/wegtultrarich-spectral.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/wegtultrarich/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/skills/wegtultrarich-agent-prompt.md
+  href: https://artifacts.apis.io/wegtultrarich/skills/wegtultrarich-agent-prompt.md
   title: ''
   type: AgentPrompt
   url: skills/wegtultrarich-agent-prompt.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/agentic-access/wegtultrarich-agentic-access.yml
+  href: https://artifacts.apis.io/wegtultrarich/agentic-access/wegtultrarich-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wegtultrarich-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/llms/wegtultrarich-llms.txt
+  href: https://artifacts.apis.io/wegtultrarich/llms/wegtultrarich-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wegtultrarich-llms.txt
@@ -298,6 +304,14 @@ examples:
 - key_count: 2
   name: Wegtultrarich Numberofitems Example
   slug: wegtultrarich-numberOfItems-example
+finops:
+- has_sources: true
+  method: derived
+  name: Wegtultrarich Finops
+  primary_unit: ''
+  service_category: ''
+  slug: wegtultrarich-finops
+  template: true
 image: https://wegtultrarich.org/apple-touch-icon.png
 layout: provider
 mcp_servers:
@@ -314,8 +328,12 @@ overview: 'We > Ultrarich publishes 4 API contracts indexed on the [APIs.io](htt
   The We > Ultrarich catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  We > Ultrarich''s developer surface includes pricing, documentation, API reference, getting-started guide, support, FAQ, changelog, and 35 more developer resources.'
-random_paper: 5
+  We > Ultrarich''s developer surface includes pricing, documentation, API reference, getting-started guide, support, FAQ, changelog, and 36 more developer resources.'
+plans:
+- name: Wegtultrarich Plans Pricing
+  plan_count: 1
+  slug: wegtultrarich-plans-pricing
+random_paper: 21
 rate_limits:
 - limit_count: 3
   name: Wegtultrarich Rate Limits
@@ -334,31 +352,37 @@ rules:
     warn: 2
   slug: wegtultrarich-spectral
 score:
-  band: developing
-  composite: 51.5
+  band: strong
+  composite: 57.1
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 54.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 61.0
+    artifact_dirs: 28
+    catalog_earned: 62.0
+    catalog_earned_first_party: 20.0
+    catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.5
+  delta: 1.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 52.6
     contract_governance: 19.7
-    contract_quality: 51.1
+    contract_quality: 56.5
     developer_ergonomics: 61.3
     discoverability: 91.7
     operational_transparency: 52.6
-  previous_composite: 55.0
+  needs_work:
+    note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
+    owner: catalog
+    reasons:
+    - owner: catalog
+      reason: no_resolvable_host
+  previous_composite: 55.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: first-party
     skills: derived
@@ -368,14 +392,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/wegtultrarich/refs/heads/main/screenshots/wegtultrarich-2026-08-17T082904.png
+screenshot: https://apis.io/screenshots/wegtultrarich/wegtultrarich-2026-08-17T082904.png
 security:
 - kind: authentication
   name: Wegtultrarich Authentication
@@ -389,6 +413,12 @@ security:
   name: Wegtultrarich Vulnerability Disclosure
   slug: wegtultrarich-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 2
+skills:
+- name: Make a single sum of money tangible
+  slug: wegtultrarich-make-a-sum-tangible
+- name: Compare a person's wealth against ultrarich wealth
+  slug: wegtultrarich-them-vs-you-comparison
 slug: wegtultrarich
 tags:
 - wealth inequality

@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +31,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Cito UFC API provides esports data including UFC match info and statistics.
@@ -79,84 +98,89 @@ apis:
   description: Health and status endpoints.
   name: Cito CS2 API Utility API
   slug: citoapi-utility-api
-artifact_total: 24
+artifact_total: 25
 asyncapis:
 - description: ''
   name: Citoapi Webhooks
   slug: citoapi-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/citoapi/capabilities/citoapi-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/citoapi-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/rules/citoapi-rules.yml
+  href: https://artifacts.apis.io/citoapi/rules/citoapi-rules.yml
   title: ''
   type: Spectral
   url: rules/citoapi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/json-ld/citoapi-context.jsonld
+  href: https://artifacts.apis.io/citoapi/json-ld/citoapi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/citoapi-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/vocabulary/citoapi-vocabulary.yml
+  href: https://artifacts.apis.io/citoapi/vocabulary/citoapi-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/citoapi-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/conformance/citoapi-conformance.yml
+  href: https://artifacts.apis.io/citoapi/conformance/citoapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/citoapi-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/rate-limits/citoapi-rate-limits.yml
+  href: https://artifacts.apis.io/citoapi/rate-limits/citoapi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/citoapi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/plans/citoapi-plans-pricing.yml
+  href: https://artifacts.apis.io/citoapi/plans/citoapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/citoapi-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/asyncapi/citoapi-webhooks.yml
+  href: https://artifacts.apis.io/citoapi/asyncapi/citoapi-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/citoapi-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/data-model/citoapi-data-model.yml
+  href: https://artifacts.apis.io/citoapi/data-model/citoapi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/citoapi-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/changelog/citoapi-changelog.yml
+  href: https://artifacts.apis.io/citoapi/changelog/citoapi-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/citoapi-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/authentication/citoapi-authentication.yml
+  href: https://artifacts.apis.io/citoapi/authentication/citoapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/citoapi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/errors/citoapi-problem-types.yml
+  href: https://artifacts.apis.io/citoapi/errors/citoapi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/citoapi-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/llms/citoapi-llms.txt
+  href: https://artifacts.apis.io/citoapi/llms/citoapi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/citoapi-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/well-known/citoapi-well-known.yml
+  href: https://artifacts.apis.io/citoapi/well-known/citoapi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/citoapi-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/hosts/citoapi-hosts.yml
+  href: https://artifacts.apis.io/citoapi/hosts/citoapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/citoapi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/vendors/citoapi-vendors.yml
+  href: https://artifacts.apis.io/citoapi/vendors/citoapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/citoapi-vendors.yml
@@ -177,7 +201,7 @@ common:
   type: ChangeLog
   url: https://citoapi.com/docs/changelog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/citoapi/refs/heads/main/security/citoapi-domain-security.yml
+  href: https://artifacts.apis.io/citoapi/security/citoapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/citoapi-domain-security.yml
@@ -223,6 +247,14 @@ common:
   url: https://citoapi.com/privacy/
 created: '2026-10-08'
 description: Cito CS2 API provides live data for Counter-Strike 2, League of Legends, Dota 2, Call of Duty, Apex Legends, and UFC. It aggregates match scores, player statistics, team rosters, rankings, and skin/item prices across dozens of marketplaces, delivering clean JSON via a single API key. The service includes an MCP server for agent integration and SDKs for JavaScript and Python, targeting developers building esports analytics, betting, or game‑related applications.
+finops:
+- has_sources: true
+  method: derived
+  name: Citoapi Finops
+  primary_unit: ''
+  service_category: ''
+  slug: citoapi-finops
+  template: true
 image: https://citoapi.com/images/og-image.png
 json_schemas:
 - name: BkfcBout
@@ -259,12 +291,12 @@ overview: 'Cito CS2 API publishes 11 API contracts indexed on the [APIs.io](http
   The Cito CS2 API catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Cito CS2 API''s developer surface includes changelog, authentication, sandbox, documentation, API reference, getting-started guide, support, and 23 more developer resources.'
+  Cito CS2 API''s developer surface includes changelog, authentication, sandbox, documentation, API reference, getting-started guide, support, and 24 more developer resources.'
 plans:
 - name: Citoapi Plans Pricing
   plan_count: 4
   slug: citoapi-plans-pricing
-random_paper: 19
+random_paper: 1
 rate_limits:
 - limit_count: 4
   name: Citoapi Rate Limits
@@ -283,22 +315,24 @@ rules:
     warn: 4
   slug: citoapi-rules
 score:
-  band: strong
-  composite: 63.0
+  band: developing
+  composite: 51.1
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 26
     catalog_earned: 81.8
     catalog_earned_first_party: 24.0
     catalog_gap: 33.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.9
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
     contract_quality: 71.2
-    developer_ergonomics: 54.8
+    developer_ergonomics: 33.3
     discoverability: 64.3
-    operational_transparency: 71.1
+    operational_transparency: 51.3
+  previous_composite: 63.0
   provenance:
     conformance: derived
     contracts:
@@ -312,12 +346,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/citoapi/citoapi-2026-11-03T124225.png
 security:
 - kind: authentication
   name: Citoapi Authentication

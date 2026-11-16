@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Web services API for CosmoLex legal practice management. Enables programmatic access to matters, time entries, billing, trust accounting, documents, and client data. Access is subject to a maximum of '
@@ -42,7 +46,7 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cosmolex/refs/heads/main/security/cosmolex-domain-security.yml
+  href: https://artifacts.apis.io/cosmolex/security/cosmolex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cosmolex-domain-security.yml
@@ -118,7 +122,7 @@ plans:
 - name: Cosmolex Plans Pricing
   plan_count: 3
   slug: cosmolex-plans-pricing
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 3
   name: Cosmolex Rate Limits
@@ -133,7 +137,7 @@ score:
     catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 46.1
     contract_governance: 0.0
@@ -141,21 +145,21 @@ score:
     developer_ergonomics: 16.7
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 32.7
+  previous_composite: 24.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cosmolex/refs/heads/main/screenshots/cosmolex-2026-06-20T175047.png
+screenshot: https://apis.io/screenshots/cosmolex/cosmolex-2026-06-20T175047.png
 security:
 - kind: domain-security
   name: Cosmolex Domain Security

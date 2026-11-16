@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.6
-  scored_at: '2026-10-17'
+  score: 43.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -90,57 +98,57 @@ asyncapis:
   slug: astra-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/agentic-access/astra-agentic-access.yml
+  href: https://artifacts.apis.io/astra/agentic-access/astra-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/astra-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/rules/astra-rules.yml
+  href: https://artifacts.apis.io/astra/rules/astra-rules.yml
   title: ''
   type: Spectral
   url: rules/astra-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/json-ld/astra-context.jsonld
+  href: https://artifacts.apis.io/astra/json-ld/astra-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/astra-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/vocabulary/astra-vocabulary.yml
+  href: https://artifacts.apis.io/astra/vocabulary/astra-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/astra-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/data-model/astra-data-model.yml
+  href: https://artifacts.apis.io/astra/data-model/astra-data-model.yml
   title: ''
   type: DataModel
   url: data-model/astra-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/conventions/astra-conventions.yml
+  href: https://artifacts.apis.io/astra/conventions/astra-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/astra-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/security/astra-trust-center.yml
+  href: https://artifacts.apis.io/astra/security/astra-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/astra-trust-center.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/lifecycle/astra-lifecycle.yml
+  href: https://artifacts.apis.io/astra/lifecycle/astra-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/astra-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/errors/astra-problem-types.yml
+  href: https://artifacts.apis.io/astra/errors/astra-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/astra-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/hosts/astra-hosts.yml
+  href: https://artifacts.apis.io/astra/hosts/astra-hosts.yml
   title: ''
   type: Hosts
   url: hosts/astra-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/vendors/astra-vendors.yml
+  href: https://artifacts.apis.io/astra/vendors/astra-vendors.yml
   title: ''
   type: Vendors
   url: vendors/astra-vendors.yml
@@ -149,7 +157,7 @@ common:
   type: Website
   url: https://astra.finance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/security/astra-domain-security.yml
+  href: https://artifacts.apis.io/astra/security/astra-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/astra-domain-security.yml
@@ -202,42 +210,42 @@ common:
   type: Compliance
   url: https://astrafi.com/security-and-privacy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/llms/astra-llms.txt
+  href: https://artifacts.apis.io/astra/llms/astra-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/astra-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/authentication/astra-authentication.yml
+  href: https://artifacts.apis.io/astra/authentication/astra-authentication.yml
   title: ''
   type: Authentication
   url: authentication/astra-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/conventions/astra-conventions.yml
+  href: https://artifacts.apis.io/astra/conventions/astra-conventions.yml
   title: ''
   type: Conventions
   url: conventions/astra-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/errors/astra-error-codes.yml
+  href: https://artifacts.apis.io/astra/errors/astra-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/astra-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/asyncapi/astra-webhooks.yml
+  href: https://artifacts.apis.io/astra/asyncapi/astra-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/astra-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/lifecycle/astra-lifecycle.yml
+  href: https://artifacts.apis.io/astra/lifecycle/astra-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/astra-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/sandbox/astra-sandbox.yml
+  href: https://artifacts.apis.io/astra/sandbox/astra-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/astra-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/conformance/astra-conformance.yml
+  href: https://artifacts.apis.io/astra/conformance/astra-conformance.yml
   title: ''
   type: Conformance
   url: conformance/astra-conformance.yml
@@ -281,7 +289,7 @@ rules:
   slug: astra-rules
 score:
   band: developing
-  composite: 47.7
+  composite: 52.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 59.2
@@ -289,15 +297,15 @@ score:
     catalog_gap: 55.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 10.1
+  delta: 5.2
   facets:
     access_clarity: 35.5
     contract_governance: 35.6
-    contract_quality: 69.6
-    developer_ergonomics: 40.5
+    contract_quality: 75.1
+    developer_ergonomics: 59.5
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 37.6
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -319,13 +327,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 33.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/astra/refs/heads/main/screenshots/astra-2026-07-25T201458.png
+screenshot: https://apis.io/screenshots/astra/astra-2026-07-25T201458.png
 security:
 - kind: authentication
   name: Astra Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Fleetmatics Reveal API - delivered through the Fleetmatics Integration Manager (FIM) / Reveal Integration Services - exposes REST endpoints for vehicles, drivers, real-time and historical GPS posi
@@ -45,7 +49,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/verizon/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fleetmatics/refs/heads/main/security/fleetmatics-domain-security.yml
+  href: https://artifacts.apis.io/fleetmatics/security/fleetmatics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fleetmatics-domain-security.yml
@@ -70,7 +74,7 @@ common:
   type: Support
   url: https://support.verizonconnect.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fleetmatics/refs/heads/main/llms/fleetmatics-llms.txt
+  href: https://artifacts.apis.io/fleetmatics/llms/fleetmatics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fleetmatics-llms.txt
@@ -87,7 +91,7 @@ overview: 'Fleetmatics is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Fleetmatics'' developer surface includes documentation, API reference, support, and 5 more developer resources.'
-random_paper: 3
+random_paper: 17
 score:
   band: emerging
   composite: 12.1
@@ -118,14 +122,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fleetmatics/refs/heads/main/screenshots/fleetmatics-2026-07-25T214737.png
+screenshot: https://apis.io/screenshots/fleetmatics/fleetmatics-2026-07-25T214737.png
 security:
 - kind: domain-security
   name: Fleetmatics Domain Security

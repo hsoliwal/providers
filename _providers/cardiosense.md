@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A live Model Context Protocol endpoint served from the Cardiosense corporate host. It is a WordPress MCP Adapter deployment over the website's content and abilities rather than a product API for the C
@@ -44,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/security/cardiosense-domain-security.yml
+  href: https://artifacts.apis.io/cardiosense/security/cardiosense-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cardiosense-domain-security.yml
@@ -89,42 +92,42 @@ common:
   type: Regulatory
   url: https://cardiosense.com/regulatory/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/llms/cardiosense-llms.txt
+  href: https://artifacts.apis.io/cardiosense/llms/cardiosense-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cardiosense-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/well-known/cardiosense-well-known.yml
+  href: https://artifacts.apis.io/cardiosense/well-known/cardiosense-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cardiosense-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/mcp/cardiosense-mcp.yml
+  href: https://artifacts.apis.io/cardiosense/mcp/cardiosense-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cardiosense-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/authentication/cardiosense-authentication.yml
+  href: https://artifacts.apis.io/cardiosense/authentication/cardiosense-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cardiosense-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/scopes/cardiosense-scopes.yml
+  href: https://artifacts.apis.io/cardiosense/scopes/cardiosense-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cardiosense-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/conformance/cardiosense-conformance.yml
+  href: https://artifacts.apis.io/cardiosense/conformance/cardiosense-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cardiosense-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/conformance/cardiosense-conformance.yml
+  href: https://artifacts.apis.io/cardiosense/conformance/cardiosense-conformance.yml
   title: ''
   type: Compliance
   url: conformance/cardiosense-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/agentic-access/cardiosense-robots.txt
+  href: https://artifacts.apis.io/cardiosense/agentic-access/cardiosense-robots.txt
   title: ''
   type: RobotsTxt
   url: agentic-access/cardiosense-robots.txt
@@ -144,7 +147,7 @@ overview: 'Cardiosense is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Cardiosense''s developer surface includes engineering blog, authentication, and 17 more developer resources.'
-random_paper: 2
+random_paper: 16
 scopes:
 - name: Cardiosense Scopes
   scope_count: 1
@@ -154,13 +157,13 @@ score:
   band: emerging
   composite: 18.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
     contract_governance: 18.2
@@ -175,7 +178,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 17.9
+  previous_composite: 18.0
   provenance:
     agentic_access: first-party
     conformance: first-party
@@ -186,14 +189,14 @@ score:
     regime: Health
     regime_id: health
     score: 30.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cardiosense/refs/heads/main/screenshots/cardiosense-2026-09-02T145015.png
+screenshot: https://apis.io/screenshots/cardiosense/cardiosense-2026-09-02T145015.png
 security:
 - kind: authentication
   name: Cardiosense Authentication

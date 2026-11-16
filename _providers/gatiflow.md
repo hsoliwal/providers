@@ -1,9 +1,25 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: true
+  try_now: true
 agent_readiness:
   band: agent-native
   dimensions:
     agent_card: false
-    agent_skills: unknown
+    agent_skills: derived
     agentic_access: unknown
     agentic_commerce: false
     auth_clarity: bearer
@@ -15,16 +31,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 58.3
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 56.7
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://api.gatiflow.io
   baseurl_source: declared
@@ -73,14 +92,34 @@ apis:
   description: The intelligence:alert webhook GatiFlow pushes to HTTPS endpoints registered by Pro and Business organizations — spike, emerging and new_hirer alerts matching the watchlist, signed with HMAC-SHA256 (X
   name: GatiFlow Webhooks API
   slug: gatiflow-webhooks-api
-artifact_total: 19
+- baseURL: https://api.gatiflow.io
+  baseurl_source: declared
+  description: 'Topic signals for AI agents, paid per call in USDC over x402: no account, no API key. The first request returns 402 with the price; the retried, paid request returns the signals.'
+  name: GatiFlow Agent API
+  slug: gatiflow-agent-api
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Gatiflow Webhooks
   slug: gatiflow-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/asyncapi/gatiflow-webhooks.yml
+  href: https://artifacts.apis.io/gatiflow/rules/gatiflow-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/gatiflow-rules.yml
+- group: design
+  href: https://artifacts.apis.io/gatiflow/json-ld/gatiflow-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/gatiflow-context.jsonld
+- group: other
+  href: https://artifacts.apis.io/gatiflow/capabilities/gatiflow-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gatiflow-capability-edges.yml
+- group: design
+  href: https://artifacts.apis.io/gatiflow/asyncapi/gatiflow-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/gatiflow-webhooks.yml
@@ -89,27 +128,27 @@ common:
   type: Deprecation
   url: https://gatiflow.io/api-docs#versioning
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/well-known/gatiflow-security.txt
+  href: https://artifacts.apis.io/gatiflow/well-known/gatiflow-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/gatiflow-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/well-known/gatiflow-well-known.yml
+  href: https://artifacts.apis.io/gatiflow/well-known/gatiflow-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gatiflow-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/security/gatiflow-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gatiflow/security/gatiflow-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gatiflow-vulnerability-disclosure.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/hosts/gatiflow-hosts.yml
+  href: https://artifacts.apis.io/gatiflow/hosts/gatiflow-hosts.yml
   title: ''
   type: Hosts
   url: hosts/gatiflow-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/vendors/gatiflow-vendors.yml
+  href: https://artifacts.apis.io/gatiflow/vendors/gatiflow-vendors.yml
   title: ''
   type: Vendors
   url: vendors/gatiflow-vendors.yml
@@ -118,12 +157,12 @@ common:
   type: AgenticAccess
   url: https://gatiflow.io/agentic-access.json
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/rate-limits/gatiflow-rate-limits.yml
+  href: https://artifacts.apis.io/gatiflow/rate-limits/gatiflow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gatiflow-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/plans/gatiflow-plans-pricing.yml
+  href: https://artifacts.apis.io/gatiflow/plans/gatiflow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gatiflow-plans-pricing.yml
@@ -148,17 +187,17 @@ common:
   type: Overlay
   url: https://gatiflow.io/overlays/api-key-client.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/data-model/gatiflow-data-model.yml
+  href: https://artifacts.apis.io/gatiflow/data-model/gatiflow-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gatiflow-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/changelog/gatiflow-changelog.yml
+  href: https://artifacts.apis.io/gatiflow/changelog/gatiflow-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/gatiflow-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/conventions/gatiflow-conventions.yml
+  href: https://artifacts.apis.io/gatiflow/conventions/gatiflow-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gatiflow-conventions.yml
@@ -167,17 +206,17 @@ common:
   type: Compliance
   url: https://gatiflow.io/compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/security/gatiflow-trust-center.yml
+  href: https://artifacts.apis.io/gatiflow/security/gatiflow-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/gatiflow-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/security/gatiflow-domain-security.yml
+  href: https://artifacts.apis.io/gatiflow/security/gatiflow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gatiflow-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/authentication/gatiflow-authentication.yml
+  href: https://artifacts.apis.io/gatiflow/authentication/gatiflow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gatiflow-authentication.yml
@@ -186,17 +225,17 @@ common:
   type: StatusPage
   url: https://stats.uptimerobot.com/9fR5IzLq0q
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/lifecycle/gatiflow-lifecycle.yml
+  href: https://artifacts.apis.io/gatiflow/lifecycle/gatiflow-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gatiflow-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/errors/gatiflow-error-codes.yml
+  href: https://artifacts.apis.io/gatiflow/errors/gatiflow-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/gatiflow-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/errors/gatiflow-problem-types.yml
+  href: https://artifacts.apis.io/gatiflow/errors/gatiflow-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gatiflow-problem-types.yml
@@ -205,7 +244,7 @@ common:
   type: Conformance
   url: https://gatiflow.io/conformance.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/llms/gatiflow-llms.txt
+  href: https://artifacts.apis.io/gatiflow/llms/gatiflow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gatiflow-llms.txt
@@ -302,7 +341,7 @@ common:
   type: Console
   url: https://api.gatiflow.io/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/finops/gatiflow-finops.yml
+  href: https://artifacts.apis.io/gatiflow/finops/gatiflow-finops.yml
   title: ''
   type: FinOps
   url: finops/gatiflow-finops.yml
@@ -337,7 +376,7 @@ finops:
 - has_sources: true
   method: authored
   name: Gatiflow Finops
-  primary_unit: ''
+  primary_unit: subscription
   service_category: Analytics
   slug: gatiflow-finops
   template: false
@@ -368,18 +407,21 @@ modified: '2026-10-12'
 name: GatiFlow
 nav: Providers
 network: true
-overview: 'GatiFlow publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Intelligence API, Public API, Usage API, and 1 more. Tagged areas include Market Intelligence, Developer Signals, Trends, Hiring, and Open Source.
+overview: 'GatiFlow publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Intelligence API, Public API, Usage API, and 2 more. Tagged areas include Market Intelligence, Developer Signals, Trends, Hiring, and Open Source.
 
 
   The GatiFlow catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  GatiFlow''s developer surface includes changelog, authentication, getting-started guide, pricing, support, engineering blog, code examples, and 51 more developer resources.'
+  GatiFlow''s developer surface includes changelog, authentication, getting-started guide, pricing, support, engineering blog, code examples, and 54 more developer resources.'
 plans:
 - name: Gatiflow Plans Pricing
   plan_count: 4
   slug: gatiflow-plans-pricing
-random_paper: 3
+- name: Gatiflow Price Estimates
+  plan_count: 0
+  slug: gatiflow-price-estimates
+random_paper: 21
 rate_limits:
 - limit_count: 8
   name: Gatiflow Rate Limits
@@ -399,44 +441,45 @@ rules:
   slug: gatiflow-rules
 score:
   band: exemplar
-  composite: 82.5
+  composite: 80.1
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 110.5
+    artifact_dirs: 35
+    catalog_earned: 108.3
     catalog_earned_first_party: 42.0
-    catalog_gap: 4.5
+    catalog_gap: 6.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 7.9
+  delta: -14.8
   facets:
-    access_clarity: 92.1
-    contract_governance: 80.3
-    contract_quality: 37.3
-    developer_ergonomics: 75.5
-    discoverability: 96.4
-    operational_transparency: 94.7
-  previous_composite: 74.6
+    access_clarity: 73.7
+    contract_governance: 89.8
+    contract_quality: 84.5
+    developer_ergonomics: 46.1
+    discoverability: 91.1
+    operational_transparency: 63.2
+  previous_composite: 94.9
   provenance:
     contracts:
       callable: 100.0
-      derived: 4
+      derived: 0
       marker_coverage: 100.0
-      total: 4
+      total: 5
     mcp: derived
+    skills: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 69.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 60.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/gatiflow/refs/heads/main/screenshots/gatiflow-2026-10-11T104741.png
+screenshot: https://apis.io/screenshots/gatiflow/gatiflow-2026-10-11T104741.png
 security:
 - kind: authentication
   name: Gatiflow Authentication
@@ -454,6 +497,10 @@ security:
   name: Gatiflow Trust Center
   slug: gatiflow-trust-center
   summary_line: trust center published
+skill_count: 1
+skills:
+- name: gatiflow-intelligence
+  slug: gatiflow-intelligence
 slug: gatiflow
 tags:
 - Market Intelligence

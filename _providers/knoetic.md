@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Requires approval
   onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/knoetic/refs/heads/main/security/knoetic-domain-security.yml
+  href: https://artifacts.apis.io/knoetic/security/knoetic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/knoetic-domain-security.yml
@@ -66,12 +70,12 @@ common:
   type: Careers
   url: https://cpohq.com/careers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/knoetic/refs/heads/main/security/knoetic-trust-center.yml
+  href: https://artifacts.apis.io/knoetic/security/knoetic-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/knoetic-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/knoetic/refs/heads/main/llms/knoetic-llms.txt
+  href: https://artifacts.apis.io/knoetic/llms/knoetic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/knoetic-llms.txt
@@ -85,7 +89,7 @@ name: Knoetic
 nav: Providers
 network: true
 overview: Knoetic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Human Resources, People Analytics, Workforce Analytics, and Artificial Intelligence.
-random_paper: 1
+random_paper: 5
 score:
   band: minimal
   composite: 9.0
@@ -111,14 +115,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/knoetic/refs/heads/main/screenshots/knoetic-2026-07-25T224041.png
+screenshot: https://apis.io/screenshots/knoetic/knoetic-2026-07-25T224041.png
 security:
 - kind: domain-security
   name: Knoetic Domain Security

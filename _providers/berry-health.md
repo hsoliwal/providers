@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/berry-health/refs/heads/main/security/berry-health-domain-security.yml
+  href: https://artifacts.apis.io/berry-health/security/berry-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/berry-health-domain-security.yml
@@ -66,7 +70,7 @@ common:
   type: Crunchbase
   url: https://www.crunchbase.com/organization/berry-health
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/berry-health/refs/heads/main/llms/berry-health-llms.txt
+  href: https://artifacts.apis.io/berry-health/llms/berry-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/berry-health-llms.txt
@@ -80,7 +84,7 @@ name: Berry Health
 nav: Providers
 network: true
 overview: Berry Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Digital Health, Telehealth, and Consumer Health.
-random_paper: 13
+random_paper: 23
 score:
   band: minimal
   composite: 4.4
@@ -101,6 +105,8 @@ score:
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - ghana
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
@@ -111,14 +117,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/berry-health/refs/heads/main/screenshots/berry-health-2026-10-11T182808.png
+screenshot: https://apis.io/screenshots/berry-health/berry-health-2026-10-11T182808.png
 security:
 - kind: domain-security
   name: Berry Health Domain Security

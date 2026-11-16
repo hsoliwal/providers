@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: British Airways' IATA New Distribution Capability API - a direct link into BA's host reservation system for flight shopping, ordering, ticketing and post-booking servicing, operated jointly across IAG
@@ -49,12 +52,12 @@ asyncapis:
   slug: british-airways-ndc-notifications
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/security/british-airways-domain-security.yml
+  href: https://artifacts.apis.io/british-airways/security/british-airways-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/british-airways-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/security/british-airways-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/british-airways/security/british-airways-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/british-airways-vulnerability-disclosure.yml
@@ -63,52 +66,52 @@ common:
   type: Security
   url: https://hackerone.com/british_airways_vdp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/authentication/british-airways-authentication.yml
+  href: https://artifacts.apis.io/british-airways/authentication/british-airways-authentication.yml
   title: ''
   type: Authentication
   url: authentication/british-airways-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/scopes/british-airways-scopes.yml
+  href: https://artifacts.apis.io/british-airways/scopes/british-airways-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/british-airways-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/well-known/british-airways-well-known.yml
+  href: https://artifacts.apis.io/british-airways/well-known/british-airways-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/british-airways-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/conformance/british-airways-conformance.yml
+  href: https://artifacts.apis.io/british-airways/conformance/british-airways-conformance.yml
   title: ''
   type: Conformance
   url: conformance/british-airways-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/lifecycle/british-airways-lifecycle.yml
+  href: https://artifacts.apis.io/british-airways/lifecycle/british-airways-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/british-airways-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/conventions/british-airways-conventions.yml
+  href: https://artifacts.apis.io/british-airways/conventions/british-airways-conventions.yml
   title: ''
   type: Conventions
   url: conventions/british-airways-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/asyncapi/british-airways-ndc-notifications.yml
+  href: https://artifacts.apis.io/british-airways/asyncapi/british-airways-ndc-notifications.yml
   title: ''
   type: Webhooks
   url: asyncapi/british-airways-ndc-notifications.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/sandbox/british-airways-sandbox.yml
+  href: https://artifacts.apis.io/british-airways/sandbox/british-airways-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/british-airways-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/packages/british-airways-packages.yml
+  href: https://artifacts.apis.io/british-airways/packages/british-airways-packages.yml
   title: ''
   type: Packages
   url: packages/british-airways-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/llms/british-airways-llms.txt
+  href: https://artifacts.apis.io/british-airways/llms/british-airways-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/british-airways-llms.txt
@@ -164,7 +167,7 @@ overview: 'British Airways is listed with 1 API on the [APIs.io](https://apis.io
 
 
   British Airways'' developer surface includes authentication, sandbox, developer portal, documentation, and 18 more developer resources.'
-random_paper: 8
+random_paper: 10
 scopes:
 - name: British Airways Scopes
   scope_count: 4
@@ -174,7 +177,7 @@ score:
   band: thin
   composite: 27.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -209,14 +212,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/british-airways/refs/heads/main/screenshots/british-airways-2026-08-07T162825.png
+screenshot: https://apis.io/screenshots/british-airways/british-airways-2026-08-07T162825.png
 security:
 - kind: authentication
   name: British Airways Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -118,9 +124,6 @@ apis:
 artifact_total: 33
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: what3words Public Autosuggest API
   slug: open-what3words-autosuggest-api
 - collection_type: open
@@ -148,17 +151,17 @@ common:
   type: IssueTracker
   url: https://github.com/what3words/what3words-api-docs/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/agentic-access/what3words-agentic-access.yml
+  href: https://artifacts.apis.io/what3words/agentic-access/what3words-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/what3words-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/security/what3words-domain-security.yml
+  href: https://artifacts.apis.io/what3words/security/what3words-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/what3words-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/authentication/what3words-authentication.yml
+  href: https://artifacts.apis.io/what3words/authentication/what3words-authentication.yml
   title: ''
   type: Authentication
   url: authentication/what3words-authentication.yml
@@ -179,17 +182,17 @@ common:
   type: GitHub
   url: https://github.com/what3words
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/plans/what3words-plans-pricing.yml
+  href: https://artifacts.apis.io/what3words/plans/what3words-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/what3words-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/rate-limits/what3words-rate-limits.yml
+  href: https://artifacts.apis.io/what3words/rate-limits/what3words-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/what3words-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/finops/what3words-finops.yml
+  href: https://artifacts.apis.io/what3words/finops/what3words-finops.yml
   title: ''
   type: FinOps
   url: finops/what3words-finops.yml
@@ -212,35 +215,51 @@ network: true
 overview: 'what3words publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Autosuggest API, Available Languages API, Convert To 3wa API, and 17 more. Tagged areas include Geocoding, Addressing, Location, Three Word Address, and Maps.
 
 
+  The what3words catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   what3words'' developer surface includes engineering blog, authentication, documentation, GitHub presence, and 8 more developer resources.'
 plans:
 - name: What3Words Plans Pricing
   plan_count: 1
   slug: what3words-plans-pricing
-random_paper: 12
+random_paper: 14
 rate_limits:
 - limit_count: 2
   name: What3Words Rate Limits
   slug: what3words-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: what3words API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: what3words-rules
 score:
   band: emerging
-  composite: 24.2
+  composite: 25.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.5
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 29.7
+  previous_composite: 25.8
   provenance:
     agentic_access: derived
     contracts:
@@ -254,14 +273,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/screenshots/what3words-2026-06-20T201420.png
+screenshot: https://apis.io/screenshots/what3words/what3words-2026-06-20T201420.png
 security:
 - kind: authentication
   name: What3Words Authentication

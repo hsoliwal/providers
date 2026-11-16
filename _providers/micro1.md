@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-10-17'
+  score: 35.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 18
   slug: micro1-agentic-access
   summary_line: 18 operations · 10 acting
-api_count: 4
+api_count: 1
 apis:
 - baseURL: https://public.api.micro1.ai
   baseurl_source: declared
@@ -74,7 +77,7 @@ apis:
   description: The Webhook API from micro1 — 3 operation(s) for webhook.
   name: micro1 Webhook API
   slug: micro1-webhook-api
-artifact_total: 12
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Micro1 Webhooks
@@ -85,7 +88,7 @@ collections:
   slug: open-micro1-ai-recruiter
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/capabilities/micro1-capability-edges.yml
+  href: https://artifacts.apis.io/micro1/capabilities/micro1-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/micro1-capability-edges.yml
@@ -134,82 +137,82 @@ common:
   type: PrivacyPolicy
   url: https://www.micro1.ai/legal/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/llms/micro1-llms.txt
+  href: https://artifacts.apis.io/micro1/llms/micro1-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/micro1-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/well-known/micro1-well-known.yml
+  href: https://artifacts.apis.io/micro1/well-known/micro1-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/micro1-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/a2a/micro1-a2a.yml
+  href: https://artifacts.apis.io/micro1/a2a/micro1-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/micro1-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/mcp/micro1-mcp.yml
+  href: https://artifacts.apis.io/micro1/mcp/micro1-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/micro1-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/mcp/micro1-tool-crosswalk.yml
+  href: https://artifacts.apis.io/micro1/mcp/micro1-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/micro1-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/micro1/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/agentic-access/micro1-agentic-access.yml
+  href: https://artifacts.apis.io/micro1/agentic-access/micro1-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/micro1-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/authentication/micro1-authentication.yml
+  href: https://artifacts.apis.io/micro1/authentication/micro1-authentication.yml
   title: ''
   type: Authentication
   url: authentication/micro1-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/conventions/micro1-conventions.yml
+  href: https://artifacts.apis.io/micro1/conventions/micro1-conventions.yml
   title: ''
   type: Conventions
   url: conventions/micro1-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/conformance/micro1-conformance.yml
+  href: https://artifacts.apis.io/micro1/conformance/micro1-conformance.yml
   title: ''
   type: Conformance
   url: conformance/micro1-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/errors/micro1-problem-types.yml
+  href: https://artifacts.apis.io/micro1/errors/micro1-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/micro1-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/lifecycle/micro1-lifecycle.yml
+  href: https://artifacts.apis.io/micro1/lifecycle/micro1-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/micro1-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/data-model/micro1-data-model.yml
+  href: https://artifacts.apis.io/micro1/data-model/micro1-data-model.yml
   title: ''
   type: DataModel
   url: data-model/micro1-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/asyncapi/micro1-webhooks.yml
+  href: https://artifacts.apis.io/micro1/asyncapi/micro1-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/micro1-webhooks.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/overlays/micro1-ai-recruiter-overlay.yaml
+  href: https://artifacts.apis.io/micro1/overlays/micro1-ai-recruiter-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/micro1-ai-recruiter-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/security/micro1-domain-security.yml
+  href: https://artifacts.apis.io/micro1/security/micro1-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/micro1-domain-security.yml
@@ -228,37 +231,50 @@ network: true
 overview: 'micro1 publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Interview API, Interview Reports API, Invite Candidate API, and 3 more. Tagged areas include Company, Recruiting, Hiring, AI Interviews, and Talent Assessment.
 
 
-  The micro1 catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The micro1 catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   micro1''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 21 more developer resources.'
-random_paper: 15
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 112
+  extends:
+  - spectral:oas
+  name: micro1 API Rules
+  rule_count: 71
+  severity_counts:
+    error: 69
+    hint: 0
+    info: 1
+    warn: 1
+  slug: micro1-rules
 score:
   band: developing
-  composite: 42.3
+  composite: 44.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.3
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 57.0
+    contract_governance: 18.2
+    contract_quality: 62.4
     developer_ergonomics: 64.3
-    discoverability: 80.0
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 41.8
+  previous_composite: 43.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 6
     mcp: first-party
     skills: first-party
@@ -268,13 +284,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/micro1/refs/heads/main/screenshots/micro1-2026-08-07T172821.png
+screenshot: https://apis.io/screenshots/micro1/micro1-2026-08-07T172821.png
 security:
 - kind: authentication
   name: Micro1 Authentication
@@ -284,6 +300,16 @@ security:
   name: Micro1 Domain Security
   slug: micro1-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Run a job applicant pipeline
+  slug: micro1-job-applicant-pipeline
+- name: Micro1
+  slug: micro1-recruiter-skill
+- name: Screen candidates with an AI interview
+  slug: micro1-screen-candidates
+- name: Keep an ATS in sync with micro1 webhooks
+  slug: micro1-webhook-ats-sync
 slug: micro1
 tags:
 - Company

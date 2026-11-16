@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -70,11 +76,8 @@ apis:
   description: Trigger and manage data synchronization between services
   name: Terapi Sync API
   slug: terapi-sync-api
-artifact_total: 25
+artifact_total: 24
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Terapi Actions API
   slug: open-terapi-actions-api
@@ -95,32 +98,32 @@ collections:
   slug: open-terapi
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/terapi/refs/heads/main/plans/terapi-plans-pricing.yml
+  href: https://artifacts.apis.io/terapi/plans/terapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/terapi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/terapi/refs/heads/main/rate-limits/terapi-rate-limits.yml
+  href: https://artifacts.apis.io/terapi/rate-limits/terapi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/terapi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/terapi/refs/heads/main/finops/terapi-finops.yml
+  href: https://artifacts.apis.io/terapi/finops/terapi-finops.yml
   title: ''
   type: FinOps
   url: finops/terapi-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terapi/refs/heads/main/agentic-access/terapi-agentic-access.yml
+  href: https://artifacts.apis.io/terapi/agentic-access/terapi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/terapi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terapi/refs/heads/main/security/terapi-domain-security.yml
+  href: https://artifacts.apis.io/terapi/security/terapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/terapi-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terapi/refs/heads/main/authentication/terapi-authentication.yml
+  href: https://artifacts.apis.io/terapi/authentication/terapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/terapi-authentication.yml
@@ -157,7 +160,7 @@ finops:
 - has_sources: false
   method: generated
   name: Terapi Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: terapi-finops
   template: true
@@ -191,7 +194,7 @@ plans:
 - name: Terapi Plans Pricing
   plan_count: 3
   slug: terapi-plans-pricing
-random_paper: 7
+random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Terapi Rate Limits
@@ -222,27 +225,27 @@ rules:
   slug: terapi-rules
 score:
   band: thin
-  composite: 30.3
+  composite: 29.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 58.0
     catalog_earned_first_party: 0.0
     catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
-    contract_quality: 55.9
+    contract_quality: 52.8
     developer_ergonomics: 22.6
     discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 31.8
+  previous_composite: 29.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 5
@@ -252,8 +255,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true

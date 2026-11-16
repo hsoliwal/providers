@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/splash-financial/refs/heads/main/security/splash-financial-domain-security.yml
+  href: https://artifacts.apis.io/splash-financial/security/splash-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/splash-financial-domain-security.yml
@@ -75,12 +78,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/splashfinancial
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/splash-financial/refs/heads/main/llms/splash-financial-llms.txt
+  href: https://artifacts.apis.io/splash-financial/llms/splash-financial-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/splash-financial-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/splash-financial/refs/heads/main/well-known/splash-financial-well-known.yml
+  href: https://artifacts.apis.io/splash-financial/well-known/splash-financial-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/splash-financial-well-known.yml
@@ -110,12 +113,12 @@ overview: 'Splash Financial is profiled on the [APIs.io](https://apis.io/) netwo
 
 
   Splash Financial''s developer surface includes engineering blog, support, signup flow, and 8 more developer resources.'
-random_paper: 1
+random_paper: 21
 score:
   band: minimal
   composite: 10.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -136,14 +139,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/splash-financial/refs/heads/main/screenshots/splash-financial-2026-09-02T160500.png
+screenshot: https://apis.io/screenshots/splash-financial/splash-financial-2026-09-02T160500.png
 security:
 - kind: domain-security
   name: Splash Financial Domain Security

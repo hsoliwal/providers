@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.0
-  scored_at: '2026-10-17'
+  score: 35.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 540
   human_in_the_loop: 26
@@ -612,7 +615,7 @@ apis:
   description: The yealink API from Wazo — 4 operation(s) for yealink.
   name: Wazo Yealink API
   slug: wazo-yealink-api
-artifact_total: 131
+artifact_total: 137
 asyncapis:
 - description: ''
   name: wazo-agentd events
@@ -659,72 +662,72 @@ common:
   type: License
   url: https://github.com/wazo-platform/wazo-provd/blob/master/LICENSE
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-auth-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-auth-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-auth-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-confd-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-confd-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-confd-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-calld-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-calld-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-calld-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-call-logd-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-call-logd-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-call-logd-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-dird-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-dird-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-dird-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-webhookd-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-webhookd-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-webhookd-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-plugind-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-plugind-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-plugind-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-agentd-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-agentd-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-agentd-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-chatd-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-chatd-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-chatd-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-phoned-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-phoned-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-phoned-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-setupd-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-setupd-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-setupd-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/overlays/wazo-amid-overlay.yaml
+  href: https://artifacts.apis.io/wazo/overlays/wazo-amid-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wazo-amid-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/agentic-access/wazo-agentic-access.yml
+  href: https://artifacts.apis.io/wazo/agentic-access/wazo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wazo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/security/wazo-domain-security.yml
+  href: https://artifacts.apis.io/wazo/security/wazo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wazo-domain-security.yml
@@ -805,42 +808,42 @@ common:
   type: Tutorials
   url: https://wazo-platform.org/tutorials/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/packages/wazo-packages.yml
+  href: https://artifacts.apis.io/wazo/packages/wazo-packages.yml
   title: ''
   type: Packages
   url: packages/wazo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/packages/wazo-packages.yml
+  href: https://artifacts.apis.io/wazo/packages/wazo-packages.yml
   title: ''
   type: SDKs
   url: packages/wazo-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/authentication/wazo-authentication.yml
+  href: https://artifacts.apis.io/wazo/authentication/wazo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wazo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/scopes/wazo-acl-permissions.yml
+  href: https://artifacts.apis.io/wazo/scopes/wazo-acl-permissions.yml
   title: ''
   type: Scopes
   url: scopes/wazo-acl-permissions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/conventions/wazo-conventions.yml
+  href: https://artifacts.apis.io/wazo/conventions/wazo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wazo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/errors/wazo-problem-types.yml
+  href: https://artifacts.apis.io/wazo/errors/wazo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/wazo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/lifecycle/wazo-lifecycle.yml
+  href: https://artifacts.apis.io/wazo/lifecycle/wazo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wazo-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/changelog/wazo-changelog.yml
+  href: https://artifacts.apis.io/wazo/changelog/wazo-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/wazo-changelog.yml
@@ -849,27 +852,27 @@ common:
   type: ChangeLog
   url: https://wazo-platform.org/uc-doc/api_sdk/rest_api/changelog
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/conformance/wazo-conformance.yml
+  href: https://artifacts.apis.io/wazo/conformance/wazo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wazo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/data-model/wazo-data-model.yml
+  href: https://artifacts.apis.io/wazo/data-model/wazo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/wazo-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/cli/wazo-cli.yml
+  href: https://artifacts.apis.io/wazo/cli/wazo-cli.yml
   title: ''
   type: CLI
   url: cli/wazo-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/components/wazo-components.yml
+  href: https://artifacts.apis.io/wazo/components/wazo-components.yml
   title: ''
   type: Components
   url: components/wazo-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/sandbox/wazo-sandbox.yml
+  href: https://artifacts.apis.io/wazo/sandbox/wazo-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/wazo-sandbox.yml
@@ -878,87 +881,87 @@ common:
   type: Console
   url: https://api.wazo.io/documentation/console/authentication/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-events-webhooks.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/wazo-events-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/wazo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/llms/wazo-llms.txt
+  href: https://artifacts.apis.io/wazo/llms/wazo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wazo-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/plans/wazo-plans-pricing.yml
+  href: https://artifacts.apis.io/wazo/plans/wazo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wazo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/rate-limits/wazo-rate-limits.yml
+  href: https://artifacts.apis.io/wazo/rate-limits/wazo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wazo-rate-limits.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-unattributed-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-unattributed-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-unattributed-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-agentd-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-agentd-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-agentd-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-amid-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-amid-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-amid-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-auth-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-auth-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-auth-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-call-logd-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-call-logd-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-call-logd-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-calld-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-calld-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-calld-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-chatd-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-chatd-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-chatd-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-confd-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-confd-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-confd-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-dird-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-dird-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-dird-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-plugind-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-plugind-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-plugind-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-sysconfd-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-sysconfd-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-sysconfd-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/asyncapi/wazo-webhookd-asyncapi.yml
+  href: https://artifacts.apis.io/wazo/asyncapi/wazo-webhookd-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/wazo-webhookd-asyncapi.yml
@@ -973,7 +976,7 @@ network: true
 overview: 'Wazo publishes 113 API contracts indexed on the [APIs.io](https://apis.io/) network, including Phone Provisioning API (wazo-provd), Websocket Event Stream (wazo-websocketd), Aastra API, and 110 more. Tagged areas include Telephony, VoIP, Unified Communications, UCaaS, and Contact Center.
 
 
-  The Wazo catalog on APIs.io includes 13 event-driven AsyncAPI specifications.
+  The Wazo catalog on APIs.io includes 13 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   Wazo''s developer surface includes developer portal, documentation, API reference, getting-started guide, quickstart, support, engineering blog, and 59 more developer resources.'
@@ -981,30 +984,43 @@ plans:
 - name: Wazo Plans Pricing
   plan_count: 0
   slug: wazo-plans-pricing
-random_paper: 9
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Wazo Rate Limits
   slug: wazo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Wazo API Rules
+  rule_count: 57
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 7
+    warn: 13
+  slug: wazo-rules
 score:
-  band: thin
-  composite: 38.9
+  band: developing
+  composite: 48.4
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 40.0
+    artifact_dirs: 30
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 7.8
   facets:
-    access_clarity: 0.0
-    contract_governance: 4.5
+    access_clarity: 34.2
+    contract_governance: 18.2
     contract_quality: 26.7
     developer_ergonomics: 80.4
     discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 38.9
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1020,14 +1036,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 13.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 19.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/wazo/refs/heads/main/screenshots/wazo-2026-09-02T170515.png
+screenshot: https://apis.io/screenshots/wazo/wazo-2026-09-02T170515.png
 security:
 - kind: authentication
   name: Wazo Authentication
@@ -1037,6 +1053,18 @@ security:
   name: Wazo Domain Security
   slug: wazo-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: Authenticate against a Wazo stack and scope the token
+  slug: wazo-authenticate-and-scope-token
+- name: Place and control a call on a Wazo stack
+  slug: wazo-place-and-control-a-call
+- name: Provision a Wazo user with a line, SIP endpoint and extension
+  slug: wazo-provision-user-line-extension
+- name: Retrieve and export Wazo call detail records
+  slug: wazo-retrieve-and-export-cdrs
+- name: Subscribe to Wazo platform events as webhooks
+  slug: wazo-subscribe-to-events
 slug: wazo
 tags:
 - Telephony

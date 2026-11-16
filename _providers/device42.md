@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 22.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 290
   human_in_the_loop: 1
@@ -288,60 +302,65 @@ apis:
   description: The Vendors API from Device42 — 4 operation(s) for vendors.
   name: Device42 Vendors API
   slug: device42-vendors-api
-artifact_total: 62
+artifact_total: 67
 common:
+- group: commercial
+  href: https://artifacts.apis.io/device42/plans/device42-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/device42-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/agentic-access/device42-agentic-access.yml
+  href: https://artifacts.apis.io/device42/agentic-access/device42-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/device42-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/rules/device42-rules.yml
+  href: https://artifacts.apis.io/device42/rules/device42-rules.yml
   title: ''
   type: Spectral
   url: rules/device42-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/json-ld/device42-context.jsonld
+  href: https://artifacts.apis.io/device42/json-ld/device42-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/device42-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/vocabulary/device42-vocabulary.yml
+  href: https://artifacts.apis.io/device42/vocabulary/device42-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/device42-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/device42/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/data-model/device42-data-model.yml
+  href: https://artifacts.apis.io/device42/data-model/device42-data-model.yml
   title: ''
   type: DataModel
   url: data-model/device42-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/authentication/device42-authentication.yml
+  href: https://artifacts.apis.io/device42/authentication/device42-authentication.yml
   title: ''
   type: Authentication
   url: authentication/device42-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/errors/device42-problem-types.yml
+  href: https://artifacts.apis.io/device42/errors/device42-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/device42-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/conformance/device42-conformance.yml
+  href: https://artifacts.apis.io/device42/conformance/device42-conformance.yml
   title: ''
   type: Conformance
   url: conformance/device42-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/hosts/device42-hosts.yml
+  href: https://artifacts.apis.io/device42/hosts/device42-hosts.yml
   title: ''
   type: Hosts
   url: hosts/device42-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/vendors/device42-vendors.yml
+  href: https://artifacts.apis.io/device42/vendors/device42-vendors.yml
   title: ''
   type: Vendors
   url: vendors/device42-vendors.yml
@@ -354,7 +373,7 @@ common:
   type: Leadership
   url: https://www.device42.com/team/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/device42/refs/heads/main/security/device42-domain-security.yml
+  href: https://artifacts.apis.io/device42/security/device42-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/device42-domain-security.yml
@@ -400,10 +419,18 @@ common:
   url: https://www.postman.com/device42
 created: '2026-10-14'
 description: Device42, a Freshworks company, provides a comprehensive, agentless discovery and dependency mapping solution that spans legacy mainframes to cloud containers. It helps IT teams automatically discover, map, and manage their infrastructure, applications, and services, delivering real-time visibility and insights for better operations and planning.
+finops:
+- has_sources: true
+  method: derived
+  name: Device42 Finops
+  primary_unit: ''
+  service_category: ''
+  slug: device42-finops
+  template: true
 image: https://www.device42.com/wp-content/uploads/2024/06/D42-Freshworks.jpg
 json_schemas:
 - name: AppGroupCalcRuleGet
-  property_count: 0
+  property_count: 22
   slug: device42-app-group-calc-rule-get
 - name: AppGroupCalcTemplate
   property_count: 15
@@ -436,8 +463,12 @@ overview: 'Device42 publishes 51 API contracts indexed on the [APIs.io](https://
   The Device42 catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Device42''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 17 more developer resources.'
-random_paper: 0
+  Device42''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 18 more developer resources.'
+plans:
+- name: Device42 Plans Pricing
+  plan_count: 0
+  slug: device42-plans-pricing
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -453,21 +484,23 @@ rules:
   slug: device42-rules
 score:
   band: developing
-  composite: 46.5
+  composite: 39.5
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 23
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 64.1
-    developer_ergonomics: 54.2
-    discoverability: 69.6
-    operational_transparency: 5.3
+    developer_ergonomics: 33.9
+    discoverability: 67.9
+    operational_transparency: 2.6
+  previous_composite: 46.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -483,12 +516,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 50.0
+screenshot: https://apis.io/screenshots/device42/device42-2026-11-03T130610.png
 security:
 - kind: authentication
   name: Device42 Authentication
@@ -498,6 +533,14 @@ security:
   name: Device42 Domain Security
   slug: device42-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: device42-api-token-authentication
+  slug: device42-api-token-authentication
+- name: device42-create-customer
+  slug: device42-create-customer
+- name: device42-manage-purchases
+  slug: device42-manage-purchases
 slug: device42
 tags:
 - IT Asset Management

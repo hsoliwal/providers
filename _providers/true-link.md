@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/true-link/refs/heads/main/security/true-link-domain-security.yml
+  href: https://artifacts.apis.io/true-link/security/true-link-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/true-link-domain-security.yml
@@ -54,12 +58,12 @@ name: True Link
 nav: Providers
 network: true
 overview: True Link is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurtech, Fintech, Financial Services, and Prepaid Cards.
-random_paper: 21
+random_paper: 11
 score:
   band: minimal
   composite: 3.1
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -80,14 +84,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 5.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/true-link/refs/heads/main/screenshots/true-link-2026-09-02T164334.png
+screenshot: https://apis.io/screenshots/true-link/true-link-2026-09-02T164334.png
 security:
 - kind: domain-security
   name: True Link Domain Security

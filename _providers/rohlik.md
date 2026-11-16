@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Official hosted Model Context Protocol server for Rohlik online grocery. Search the catalog, manage a cart, discover recipes, track and repeat orders, manage shopping lists, and reach customer service
@@ -54,32 +59,32 @@ common:
   type: Documentation
   url: https://rohlik.cz/mcp-docs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/mcp/rohlik-mcp.yml
+  href: https://artifacts.apis.io/rohlik/mcp/rohlik-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rohlik-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/authentication/rohlik-authentication.yml
+  href: https://artifacts.apis.io/rohlik/authentication/rohlik-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rohlik-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/scopes/rohlik-scopes.yml
+  href: https://artifacts.apis.io/rohlik/scopes/rohlik-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/rohlik-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/conformance/rohlik-conformance.yml
+  href: https://artifacts.apis.io/rohlik/conformance/rohlik-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rohlik-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/conventions/rohlik-conventions.yml
+  href: https://artifacts.apis.io/rohlik/conventions/rohlik-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rohlik-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/lifecycle/rohlik-lifecycle.yml
+  href: https://artifacts.apis.io/rohlik/lifecycle/rohlik-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rohlik-lifecycle.yml
@@ -108,22 +113,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/rohlikgroup
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/well-known/rohlik-well-known.yml
+  href: https://artifacts.apis.io/rohlik/well-known/rohlik-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rohlik-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/well-known/rohlik-security.txt
+  href: https://artifacts.apis.io/rohlik/well-known/rohlik-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/rohlik-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/security/rohlik-domain-security.yml
+  href: https://artifacts.apis.io/rohlik/security/rohlik-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rohlik-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/security/rohlik-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rohlik/security/rohlik-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rohlik-vulnerability-disclosure.yml
@@ -132,7 +137,7 @@ common:
   type: Security
   url: https://www.rohlik.cz/.well-known/security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/llms/rohlik-llms.txt
+  href: https://artifacts.apis.io/rohlik/llms/rohlik-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rohlik-llms.txt
@@ -152,7 +157,7 @@ overview: 'Rohlik is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Rohlik''s developer surface includes documentation, authentication, support, pricing, and 17 more developer resources.'
-random_paper: 11
+random_paper: 1
 scopes:
 - name: Rohlik Scopes
   scope_count: 3
@@ -192,14 +197,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rohlik/refs/heads/main/screenshots/rohlik-2026-09-02T154054.png
+screenshot: https://apis.io/screenshots/rohlik/rohlik-2026-09-02T154054.png
 security:
 - kind: authentication
   name: Rohlik Authentication
@@ -222,7 +227,8 @@ tags:
 - Delivery
 - Logistics
 - MCP
-- Authentication
+- OAuth
 - Europe
+- Authentication
 website: http://rohlik.cz
 ---

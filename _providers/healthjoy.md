@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/healthjoy/refs/heads/main/security/healthjoy-domain-security.yml
+  href: https://artifacts.apis.io/healthjoy/security/healthjoy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/healthjoy-domain-security.yml
@@ -75,17 +78,17 @@ common:
   type: Compliance
   url: https://www.healthjoy.com/privacy-security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/healthjoy/refs/heads/main/llms/healthjoy-llms.txt
+  href: https://artifacts.apis.io/healthjoy/llms/healthjoy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/healthjoy-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/healthjoy/refs/heads/main/packages/healthjoy-packages.yml
+  href: https://artifacts.apis.io/healthjoy/packages/healthjoy-packages.yml
   title: ''
   type: Packages
   url: packages/healthjoy-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/healthjoy/refs/heads/main/conformance/healthjoy-conformance.yml
+  href: https://artifacts.apis.io/healthjoy/conformance/healthjoy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/healthjoy-conformance.yml
@@ -106,12 +109,12 @@ overview: 'HealthJoy is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   HealthJoy''s developer surface includes engineering blog, support, and 11 more developer resources.'
-random_paper: 0
+random_paper: 8
 score:
   band: emerging
   composite: 17.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -145,14 +148,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/healthjoy/refs/heads/main/screenshots/healthjoy-2026-08-07T170219.png
+screenshot: https://apis.io/screenshots/healthjoy/healthjoy-2026-08-07T170219.png
 security:
 - kind: domain-security
   name: Healthjoy Domain Security

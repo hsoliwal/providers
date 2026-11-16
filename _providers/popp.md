@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.1
-  scored_at: '2026-10-17'
+  score: 41.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 94
   human_in_the_loop: 1
@@ -142,37 +145,37 @@ asyncapis:
   slug: popp-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/agentic-access/popp-agentic-access.yml
+  href: https://artifacts.apis.io/popp/agentic-access/popp-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/popp-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/rules/popp-rules.yml
+  href: https://artifacts.apis.io/popp/rules/popp-rules.yml
   title: ''
   type: Spectral
   url: rules/popp-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/json-ld/popp-context.jsonld
+  href: https://artifacts.apis.io/popp/json-ld/popp-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/popp-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/vocabulary/popp-vocabulary.yml
+  href: https://artifacts.apis.io/popp/vocabulary/popp-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/popp-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/well-known/popp-well-known.yml
+  href: https://artifacts.apis.io/popp/well-known/popp-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/popp-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/hosts/popp-hosts.yml
+  href: https://artifacts.apis.io/popp/hosts/popp-hosts.yml
   title: ''
   type: Hosts
   url: hosts/popp-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/vendors/popp-vendors.yml
+  href: https://artifacts.apis.io/popp/vendors/popp-vendors.yml
   title: ''
   type: Vendors
   url: vendors/popp-vendors.yml
@@ -213,52 +216,52 @@ common:
   type: PrivacyPolicy
   url: https://joinpopp.com/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/mcp/popp-mcp.yml
+  href: https://artifacts.apis.io/popp/mcp/popp-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/popp-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/authentication/popp-authentication.yml
+  href: https://artifacts.apis.io/popp/authentication/popp-authentication.yml
   title: ''
   type: Authentication
   url: authentication/popp-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/asyncapi/popp-webhooks.yml
+  href: https://artifacts.apis.io/popp/asyncapi/popp-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/popp-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/conventions/popp-conventions.yml
+  href: https://artifacts.apis.io/popp/conventions/popp-conventions.yml
   title: ''
   type: Conventions
   url: conventions/popp-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/errors/popp-problem-types.yml
+  href: https://artifacts.apis.io/popp/errors/popp-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/popp-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/lifecycle/popp-lifecycle.yml
+  href: https://artifacts.apis.io/popp/lifecycle/popp-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/popp-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/data-model/popp-data-model.yml
+  href: https://artifacts.apis.io/popp/data-model/popp-data-model.yml
   title: ''
   type: DataModel
   url: data-model/popp-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/conformance/popp-conformance.yml
+  href: https://artifacts.apis.io/popp/conformance/popp-conformance.yml
   title: ''
   type: Conformance
   url: conformance/popp-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/security/popp-domain-security.yml
+  href: https://artifacts.apis.io/popp/security/popp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/popp-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/llms/popp-llms.txt
+  href: https://artifacts.apis.io/popp/llms/popp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/popp-llms.txt
@@ -305,7 +308,7 @@ overview: 'Popp publishes 18 API contracts indexed on the [APIs.io](https://apis
 
 
   Popp''s developer surface includes support, documentation, API reference, getting-started guide, signup flow, authentication, and 20 more developer resources.'
-random_paper: 7
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -321,7 +324,7 @@ rules:
   slug: popp-rules
 score:
   band: developing
-  composite: 47.7
+  composite: 51.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 62.8
@@ -329,15 +332,15 @@ score:
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 18.4
+  delta: 3.8
   facets:
     access_clarity: 21.1
     contract_governance: 22.0
-    contract_quality: 73.7
-    developer_ergonomics: 31.0
+    contract_quality: 79.1
+    developer_ergonomics: 42.9
     discoverability: 71.7
     operational_transparency: 7.9
-  previous_composite: 29.3
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -353,13 +356,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 77.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/popp/refs/heads/main/screenshots/popp-2026-09-02T151750.png
+screenshot: https://apis.io/screenshots/popp/popp-2026-09-02T151750.png
 security:
 - kind: authentication
   name: Popp Authentication

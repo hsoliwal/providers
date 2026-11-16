@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST/JSON API for the AttackIQ Security Optimization Platform. Manage assessments, tests, scenarios, and assets and retrieve execution results. Authenticated with a per-user API token (Authorization: '
@@ -103,52 +106,52 @@ common:
   type: TrustCenter
   url: https://trust.attackiq.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/packages/attackiq-packages.yml
+  href: https://artifacts.apis.io/attackiq/packages/attackiq-packages.yml
   title: ''
   type: Packages
   url: packages/attackiq-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/packages/attackiq-packages.yml
+  href: https://artifacts.apis.io/attackiq/packages/attackiq-packages.yml
   title: ''
   type: SDKs
   url: packages/attackiq-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/cli/attackiq-cli.yml
+  href: https://artifacts.apis.io/attackiq/cli/attackiq-cli.yml
   title: ''
   type: CLI
   url: cli/attackiq-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/authentication/attackiq-authentication.yml
+  href: https://artifacts.apis.io/attackiq/authentication/attackiq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/attackiq-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/conventions/attackiq-conventions.yml
+  href: https://artifacts.apis.io/attackiq/conventions/attackiq-conventions.yml
   title: ''
   type: Conventions
   url: conventions/attackiq-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/lifecycle/attackiq-lifecycle.yml
+  href: https://artifacts.apis.io/attackiq/lifecycle/attackiq-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/attackiq-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/mcp/attackiq-mcp.yml
+  href: https://artifacts.apis.io/attackiq/mcp/attackiq-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/attackiq-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/conformance/attackiq-conformance.yml
+  href: https://artifacts.apis.io/attackiq/conformance/attackiq-conformance.yml
   title: ''
   type: Conformance
   url: conformance/attackiq-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/llms/attackiq-llms.txt
+  href: https://artifacts.apis.io/attackiq/llms/attackiq-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/attackiq-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/security/attackiq-domain-security.yml
+  href: https://artifacts.apis.io/attackiq/security/attackiq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/attackiq-domain-security.yml
@@ -164,18 +167,18 @@ overview: 'AttackIQ is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   AttackIQ''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 18 more developer resources.'
-random_paper: 14
+random_paper: 10
 score:
   band: emerging
   composite: 24.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
@@ -183,7 +186,7 @@ score:
     developer_ergonomics: 40.5
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 23.9
+  previous_composite: 24.0
   provenance:
     conformance: derived
     mcp: derived
@@ -193,14 +196,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/attackiq/refs/heads/main/screenshots/attackiq-2026-07-25T201626.png
+screenshot: https://apis.io/screenshots/attackiq/attackiq-2026-07-25T201626.png
 security:
 - kind: authentication
   name: Attackiq Authentication

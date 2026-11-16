@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 22.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -66,9 +72,6 @@ apis:
 artifact_total: 15
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Ocelot Administration API
   slug: open-ocelot-administration
 - collection_type: open
@@ -82,17 +85,17 @@ collections:
   slug: open-ocelot-configuration-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/plans/ocelot-plans-pricing.yml
+  href: https://artifacts.apis.io/ocelot/plans/ocelot-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ocelot-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/rate-limits/ocelot-rate-limits.yml
+  href: https://artifacts.apis.io/ocelot/rate-limits/ocelot-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ocelot-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/finops/ocelot-finops.yml
+  href: https://artifacts.apis.io/ocelot/finops/ocelot-finops.yml
   title: ''
   type: FinOps
   url: finops/ocelot-finops.yml
@@ -113,17 +116,17 @@ common:
   type: License
   url: https://github.com/ThreeMammals/Ocelot/blob/develop/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/agentic-access/ocelot-agentic-access.yml
+  href: https://artifacts.apis.io/ocelot/agentic-access/ocelot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ocelot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/security/ocelot-domain-security.yml
+  href: https://artifacts.apis.io/ocelot/security/ocelot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ocelot-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/authentication/ocelot-authentication.yml
+  href: https://artifacts.apis.io/ocelot/authentication/ocelot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ocelot-authentication.yml
@@ -169,7 +172,7 @@ finops:
 - has_sources: false
   method: generated
   name: Ocelot Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: ocelot-finops
   template: true
@@ -182,30 +185,46 @@ network: true
 overview: 'Ocelot publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Cache API, Configuration API, and 1 more. Tagged areas include .NET, API Gateway, Microservices, and Open Source.
 
 
+  The Ocelot catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ocelot''s developer surface includes authentication, documentation, getting-started guide, changelog, and 15 more developer resources.'
 plans:
 - name: Ocelot Plans Pricing
   plan_count: 3
   slug: ocelot-plans-pricing
-random_paper: 8
+random_paper: 22
 rate_limits:
 - limit_count: 5
   name: Ocelot Rate Limits
   slug: ocelot-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Ocelot API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ocelot-rules
 score:
   band: thin
-  composite: 33.5
+  composite: 35.0
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 33.0
+    artifact_dirs: 14
+    catalog_earned: 37.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 82.0
+    catalog_gap: 77.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.1
     developer_ergonomics: 50.0
     discoverability: 48.2
@@ -213,7 +232,7 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 34.9
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -227,13 +246,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/screenshots/ocelot-2026-06-20T190607.png
+screenshot: https://apis.io/screenshots/ocelot/ocelot-2026-06-20T190607.png
 security:
 - kind: authentication
   name: Ocelot Authentication

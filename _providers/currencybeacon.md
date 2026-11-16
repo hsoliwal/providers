@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -60,11 +66,8 @@ apis:
   description: Currency exchange rate operations
   name: CurrencyBeacon Rates API
   slug: currencybeacon-rates-api
-artifact_total: 21
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CurrencyBeacon conversion API
   slug: open-currencybeacon-conversion-api
@@ -76,17 +79,17 @@ collections:
   slug: open-currencybeacon-rates-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/agentic-access/currencybeacon-agentic-access.yml
+  href: https://artifacts.apis.io/currencybeacon/agentic-access/currencybeacon-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/currencybeacon-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/security/currencybeacon-domain-security.yml
+  href: https://artifacts.apis.io/currencybeacon/security/currencybeacon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/currencybeacon-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/authentication/currencybeacon-authentication.yml
+  href: https://artifacts.apis.io/currencybeacon/authentication/currencybeacon-authentication.yml
   title: ''
   type: Authentication
   url: authentication/currencybeacon-authentication.yml
@@ -115,17 +118,17 @@ common:
   type: X
   url: https://x.com/currencybeacon
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/plans/currencybeacon-plans-pricing.yml
+  href: https://artifacts.apis.io/currencybeacon/plans/currencybeacon-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/currencybeacon-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/rate-limits/currencybeacon-rate-limits.yml
+  href: https://artifacts.apis.io/currencybeacon/rate-limits/currencybeacon-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/currencybeacon-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/finops/currencybeacon-finops.yml
+  href: https://artifacts.apis.io/currencybeacon/finops/currencybeacon-finops.yml
   title: ''
   type: FinOps
   url: finops/currencybeacon-finops.yml
@@ -179,7 +182,7 @@ plans:
 - name: Currencybeacon Plans Pricing
   plan_count: 5
   slug: currencybeacon-plans-pricing
-random_paper: 17
+random_paper: 3
 rate_limits:
 - limit_count: 4
   name: Currencybeacon Rate Limits
@@ -200,13 +203,13 @@ score:
   band: thin
   composite: 31.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 46.3
     catalog_earned_first_party: 0.0
     catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -214,7 +217,7 @@ score:
     developer_ergonomics: 21.4
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 39.4
+  previous_composite: 31.2
   provenance:
     agentic_access: derived
     contracts:
@@ -228,14 +231,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/currencybeacon/refs/heads/main/screenshots/currencybeacon-2026-06-20T175338.png
+screenshot: https://apis.io/screenshots/currencybeacon/currencybeacon-2026-06-20T175338.png
 security:
 - kind: authentication
   name: Currencybeacon Authentication

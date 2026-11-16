@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -78,9 +81,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Notch API (unreconciled capability model) Bank Accounts API
   slug: open-notch-financial-bank-accounts-api
 - collection_type: open
@@ -103,22 +103,22 @@ collections:
   slug: open-notch-financial
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/capabilities/notch-financial-capability-edges.yml
+  href: https://artifacts.apis.io/notch-financial/capabilities/notch-financial-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/notch-financial-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/agentic-access/notch-financial-agentic-access.yml
+  href: https://artifacts.apis.io/notch-financial/agentic-access/notch-financial-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/notch-financial-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/security/notch-financial-domain-security.yml
+  href: https://artifacts.apis.io/notch-financial/security/notch-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/notch-financial-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/authentication/notch-financial-authentication.yml
+  href: https://artifacts.apis.io/notch-financial/authentication/notch-financial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/notch-financial-authentication.yml
@@ -139,17 +139,17 @@ common:
   type: Documentation
   url: https://www.notch.financial/integrations
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/plans/notch-financial-plans-pricing.yml
+  href: https://artifacts.apis.io/notch-financial/plans/notch-financial-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/notch-financial-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/rate-limits/notch-financial-rate-limits.yml
+  href: https://artifacts.apis.io/notch-financial/rate-limits/notch-financial-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/notch-financial-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/finops/notch-financial-finops.yml
+  href: https://artifacts.apis.io/notch-financial/finops/notch-financial-finops.yml
   title: ''
   type: FinOps
   url: finops/notch-financial-finops.yml
@@ -172,35 +172,51 @@ network: true
 overview: 'Notch publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bank Accounts API, Customers API, Invoices API, and 3 more. Tagged areas include Accounts Receivable, Accounts Payable, B2B Payments, Invoicing, and Fintech.
 
 
+  The Notch catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Notch''s developer surface includes authentication, engineering blog, documentation, and 8 more developer resources.'
 plans:
 - name: Notch Financial Plans Pricing
   plan_count: 1
   slug: notch-financial-plans-pricing
-random_paper: 0
+random_paper: 6
 rate_limits:
 - limit_count: 1
   name: Notch Financial Rate Limits
   slug: notch-financial-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Notch API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: notch-financial-rules
 score:
   band: emerging
-  composite: 20.4
+  composite: 22.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 36.0
+    artifact_dirs: 16
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 41.0
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 26.5
+  previous_composite: 22.1
   provenance:
     agentic_access: derived
     contracts:
@@ -214,13 +230,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/notch-financial/refs/heads/main/screenshots/notch-financial-2026-08-07T185542.png
+screenshot: https://apis.io/screenshots/notch-financial/notch-financial-2026-08-07T185542.png
 security:
 - kind: authentication
   name: Notch Financial Authentication

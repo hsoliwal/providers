@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: documented
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 15.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Hosted, authenticated Model Context Protocol server for managing assessments, reviewing candidates, and analyzing hiring data. Streamable-HTTP transport; Bearer MeritFirst API key (mf_) required.
@@ -43,7 +46,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/security/meritfirst-domain-security.yml
+  href: https://artifacts.apis.io/meritfirst/security/meritfirst-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/meritfirst-domain-security.yml
@@ -64,32 +67,32 @@ common:
   type: Security
   url: https://www.meritfirst.us/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/mcp/meritfirst-mcp.yml
+  href: https://artifacts.apis.io/meritfirst/mcp/meritfirst-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/meritfirst-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/well-known/meritfirst-well-known.yml
+  href: https://artifacts.apis.io/meritfirst/well-known/meritfirst-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/meritfirst-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/well-known/meritfirst-security.txt
+  href: https://artifacts.apis.io/meritfirst/well-known/meritfirst-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/meritfirst-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/authentication/meritfirst-authentication.yml
+  href: https://artifacts.apis.io/meritfirst/authentication/meritfirst-authentication.yml
   title: ''
   type: Authentication
   url: authentication/meritfirst-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/security/meritfirst-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/meritfirst/security/meritfirst-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/meritfirst-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/llms/meritfirst-llms.txt
+  href: https://artifacts.apis.io/meritfirst/llms/meritfirst-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/meritfirst-llms.txt
@@ -109,7 +112,7 @@ overview: 'Meritfirst is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Meritfirst''s developer surface includes signup flow, authentication, and 9 more developer resources.'
-random_paper: 19
+random_paper: 17
 score:
   band: emerging
   composite: 12.9
@@ -137,14 +140,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/meritfirst/refs/heads/main/screenshots/meritfirst-2026-08-07T172605.png
+screenshot: https://apis.io/screenshots/meritfirst/meritfirst-2026-08-07T172605.png
 security:
 - kind: authentication
   name: Meritfirst Authentication

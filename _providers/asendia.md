@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.5
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 4
@@ -31,7 +44,7 @@ agentic_access:
   operation_count: 50
   slug: asendia-agentic-access
   summary_line: 50 operations · 33 acting · 4 human-in-the-loop
-api_count: 32
+api_count: 16
 apis:
 - baseURL: https://a1api.asendiausa.com
   baseurl_source: declared
@@ -116,52 +129,52 @@ apis:
 artifact_total: 70
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/agentic-access/asendia-agentic-access.yml
+  href: https://artifacts.apis.io/asendia/agentic-access/asendia-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/asendia-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/rules/asendia-rules.yml
+  href: https://artifacts.apis.io/asendia/rules/asendia-rules.yml
   title: ''
   type: Spectral
   url: rules/asendia-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/json-ld/asendia-context.jsonld
+  href: https://artifacts.apis.io/asendia/json-ld/asendia-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/asendia-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/vocabulary/asendia-vocabulary.yml
+  href: https://artifacts.apis.io/asendia/vocabulary/asendia-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/asendia-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/data-model/asendia-data-model.yml
+  href: https://artifacts.apis.io/asendia/data-model/asendia-data-model.yml
   title: ''
   type: DataModel
   url: data-model/asendia-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/conformance/asendia-conformance.yml
+  href: https://artifacts.apis.io/asendia/conformance/asendia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/asendia-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/llms/asendia-llms.txt
+  href: https://artifacts.apis.io/asendia/llms/asendia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/asendia-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/hosts/asendia-hosts.yml
+  href: https://artifacts.apis.io/asendia/hosts/asendia-hosts.yml
   title: ''
   type: Hosts
   url: hosts/asendia-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/vendors/asendia-vendors.yml
+  href: https://artifacts.apis.io/asendia/vendors/asendia-vendors.yml
   title: ''
   type: Vendors
   url: vendors/asendia-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asendia/refs/heads/main/security/asendia-domain-security.yml
+  href: https://artifacts.apis.io/asendia/security/asendia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/asendia-domain-security.yml
@@ -360,7 +373,7 @@ overview: 'Asendia publishes 16 API contracts indexed on the [APIs.io](https://a
 
 
   Asendia''s developer surface includes documentation and 15 more developer resources.'
-random_paper: 21
+random_paper: 5
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -375,29 +388,31 @@ rules:
     warn: 0
   slug: asendia-rules
 score:
-  band: thin
-  composite: 28.9
+  band: emerging
+  composite: 25.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 65.0
     catalog_earned_first_party: 0.0
     catalog_gap: 50.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.7
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 19.7
-    contract_quality: 50.2
-    developer_ergonomics: 9.5
-    discoverability: 80.4
+    contract_quality: 50.5
+    developer_ergonomics: 4.8
+    discoverability: 79.5
     operational_transparency: 0.0
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 6.3
       total: 16
     mcp: derived
   regulatory:
@@ -405,12 +420,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/asendia/asendia-2026-11-03T121150.png
 security:
 - kind: domain-security
   name: Asendia Domain Security

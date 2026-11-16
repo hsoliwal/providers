@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -22,19 +22,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: verified
     event_surface_described: false
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.1
-  scored_at: '2026-10-17'
+  score: 39.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -51,23 +54,32 @@ apis:
   slug: amazon-aurora-dsql-clusters-api
 - baseURL: https://dsql.us-east-1.amazonaws.com
   baseurl_source: declared
+  description: The Aurora Dsql Operations API from Amazon Aurora DSQL — 1 operation(s) for aurora dsql operations.
+  name: Amazon Aurora DSQL Aurora Dsql Operations API
+  slug: amazon-aurora-dsql-operations-api
+- baseURL: https://dsql.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Aurora Dsql Policy API from Amazon Aurora DSQL — 1 operation(s) for aurora dsql policy.
+  name: Amazon Aurora DSQL Aurora Dsql Policy API
+  slug: amazon-aurora-dsql-policy-api
+- baseURL: https://dsql.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Aurora Dsql Stream API from Amazon Aurora DSQL — 2 operation(s) for aurora dsql stream.
+  name: Amazon Aurora DSQL Aurora Dsql Stream API
+  slug: amazon-aurora-dsql-stream-api
+- baseURL: https://dsql.us-east-1.amazonaws.com
+  baseurl_source: declared
   description: Operations for managing multi-region cluster configurations
   name: Amazon Aurora DSQL Multi-Region Clusters API
   slug: amazon-aurora-dsql-multi-region-clusters-api
-artifact_total: 96
+artifact_total: 85
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon Aurora DSQL Clusters API
   slug: open-amazon-aurora-dsql-clusters-api
-- collection_type: open
-  name: Amazon Aurora DSQL Clusters Multi-Region Clusters API
-  slug: open-amazon-aurora-dsql-multi-region-clusters-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/capabilities/amazon-aurora-dsql-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/capabilities/amazon-aurora-dsql-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-aurora-dsql-capability-edges.yml
@@ -76,32 +88,32 @@ common:
   type: Website
   url: https://aws.amazon.com/rds/aurora/dsql/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/mcp/amazon-aurora-dsql-mcp.yml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/mcp/amazon-aurora-dsql-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/amazon-aurora-dsql-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/overlays/amazon-aurora-dsql-openapi-overlay.yaml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/overlays/amazon-aurora-dsql-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amazon-aurora-dsql-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/agentic-access/amazon-aurora-dsql-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/agentic-access/amazon-aurora-dsql-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-aurora-dsql-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/security/amazon-aurora-dsql-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/security/amazon-aurora-dsql-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-aurora-dsql-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/security/amazon-aurora-dsql-domain-security.yml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/security/amazon-aurora-dsql-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-aurora-dsql-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/authentication/amazon-aurora-dsql-authentication.yml
+  href: https://artifacts.apis.io/amazon-aurora-dsql/authentication/amazon-aurora-dsql-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-aurora-dsql-authentication.yml
@@ -129,20 +141,8 @@ examples:
   name: Aurora Dsql Create Cluster Output Example
   slug: aurora-dsql-create-cluster-output-example
 - key_count: 3
-  name: Aurora Dsql Create Multi Region Clusters Input Example
-  slug: aurora-dsql-create-multi-region-clusters-input-example
-- key_count: 3
-  name: Aurora Dsql Create Multi Region Clusters Output Example
-  slug: aurora-dsql-create-multi-region-clusters-output-example
-- key_count: 3
   name: Aurora Dsql Delete Cluster Output Example
   slug: aurora-dsql-delete-cluster-output-example
-- key_count: 3
-  name: Aurora Dsql Delete Multi Region Clusters Input Example
-  slug: aurora-dsql-delete-multi-region-clusters-input-example
-- key_count: 3
-  name: Aurora Dsql Delete Multi Region Clusters Output Example
-  slug: aurora-dsql-delete-multi-region-clusters-output-example
 - key_count: 3
   name: Aurora Dsql Get Cluster Endpoint Output Example
   slug: aurora-dsql-get-cluster-endpoint-output-example
@@ -209,21 +209,9 @@ json_schemas:
 - name: CreateClusterOutput
   property_count: 0
   slug: aurora-dsql-create-cluster-output
-- name: CreateMultiRegionClustersInput
-  property_count: 0
-  slug: aurora-dsql-create-multi-region-clusters-input
-- name: CreateMultiRegionClustersOutput
-  property_count: 0
-  slug: aurora-dsql-create-multi-region-clusters-output
 - name: DeleteClusterOutput
   property_count: 0
   slug: aurora-dsql-delete-cluster-output
-- name: DeleteMultiRegionClustersInput
-  property_count: 0
-  slug: aurora-dsql-delete-multi-region-clusters-input
-- name: DeleteMultiRegionClustersOutput
-  property_count: 0
-  slug: aurora-dsql-delete-multi-region-clusters-output
 - name: GetClusterEndpointOutput
   property_count: 0
   slug: aurora-dsql-get-cluster-endpoint-output
@@ -267,21 +255,9 @@ json_structures:
 - name: Aurora Dsql Create Cluster Output Structure
   property_count: 0
   slug: aurora-dsql-create-cluster-output-structure
-- name: Aurora Dsql Create Multi Region Clusters Input Structure
-  property_count: 0
-  slug: aurora-dsql-create-multi-region-clusters-input-structure
-- name: Aurora Dsql Create Multi Region Clusters Output Structure
-  property_count: 0
-  slug: aurora-dsql-create-multi-region-clusters-output-structure
 - name: Aurora Dsql Delete Cluster Output Structure
   property_count: 0
   slug: aurora-dsql-delete-cluster-output-structure
-- name: Aurora Dsql Delete Multi Region Clusters Input Structure
-  property_count: 0
-  slug: aurora-dsql-delete-multi-region-clusters-input-structure
-- name: Aurora Dsql Delete Multi Region Clusters Output Structure
-  property_count: 0
-  slug: aurora-dsql-delete-multi-region-clusters-output-structure
 - name: Aurora Dsql Get Cluster Endpoint Output Structure
   property_count: 0
   slug: aurora-dsql-get-cluster-endpoint-output-structure
@@ -326,14 +302,14 @@ modified: '2026-09-16'
 name: Amazon Aurora DSQL
 nav: Providers
 network: true
-overview: 'Amazon Aurora DSQL publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Clusters API and Multi-Region Clusters API. Tagged areas include Amazon Aurora DSQL, Distributed SQL, PostgreSQL, and Serverless.
+overview: 'Amazon Aurora DSQL publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clusters API, Aurora Dsql Operations API, Aurora Dsql Policy API, and 2 more. Tagged areas include Amazon Aurora DSQL, Distributed SQL, PostgreSQL, Serverless, and Amazon Web Services.
 
 
   The Amazon Aurora DSQL catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
   Amazon Aurora DSQL''s developer surface includes authentication and 9 more developer resources.'
-random_paper: 18
+random_paper: 22
 rules:
 - authorship: generated
   effective_rule_count: 4
@@ -360,45 +336,45 @@ rules:
   slug: amazon-aurora-dsql-spectral-rules
 score:
   band: thin
-  composite: 30.0
+  composite: 34.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 55.0
+    artifact_dirs: 26
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.0
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.8
   facets:
     access_clarity: 0.0
     contract_governance: 31.8
-    contract_quality: 65.9
+    contract_quality: 71.8
     developer_ergonomics: 11.9
-    discoverability: 73.3
-    operational_transparency: 0.0
-  previous_composite: 30.0
+    discoverability: 81.7
+    operational_transparency: 10.5
+  previous_composite: 32.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 0.0
+      callable: 80.0
       derived: 0
-      marker_coverage: 0.0
-      total: 2
+      marker_coverage: 60.0
+      total: 5
     mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 22.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/screenshots/amazon-aurora-dsql-2026-07-25T195931.png
+screenshot: https://apis.io/screenshots/amazon-aurora-dsql/amazon-aurora-dsql-2026-07-25T195931.png
 security:
 - kind: authentication
   name: Amazon Aurora Dsql Authentication
@@ -418,6 +394,7 @@ tags:
 - Distributed SQL
 - PostgreSQL
 - Serverless
+- Amazon Web Services
 use_cases:
 - Build globally distributed transactional applications
 - Run PostgreSQL workloads without managing instances

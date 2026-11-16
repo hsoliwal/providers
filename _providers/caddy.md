@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.1
-  scored_at: '2026-10-17'
+  score: 18.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 1
@@ -74,9 +78,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Caddy Admin Adapt API
   slug: open-caddy-adapt-api
 - collection_type: open
@@ -96,17 +97,17 @@ collections:
   slug: open-caddy
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/plans/caddy-plans-pricing.yml
+  href: https://artifacts.apis.io/caddy/plans/caddy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/caddy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/rate-limits/caddy-rate-limits.yml
+  href: https://artifacts.apis.io/caddy/rate-limits/caddy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/caddy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/finops/caddy-finops.yml
+  href: https://artifacts.apis.io/caddy/finops/caddy-finops.yml
   title: ''
   type: FinOps
   url: finops/caddy-finops.yml
@@ -131,12 +132,12 @@ common:
   type: License
   url: https://github.com/caddyserver/caddy/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/agentic-access/caddy-agentic-access.yml
+  href: https://artifacts.apis.io/caddy/agentic-access/caddy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/caddy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/security/caddy-domain-security.yml
+  href: https://artifacts.apis.io/caddy/security/caddy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/caddy-domain-security.yml
@@ -170,7 +171,7 @@ finops:
 - has_sources: false
   method: generated
   name: Caddy Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: caddy-finops
   template: true
@@ -183,30 +184,46 @@ network: true
 overview: 'Caddy is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Adapt API, Configuration API, Lifecycle API, and 3 more. Tagged areas include Automatic HTTPS, Go, Load Balancer, Reverse Proxy, and TLS.
 
 
+  The Caddy catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Caddy''s developer surface includes documentation and 15 more developer resources.'
 plans:
 - name: Caddy Plans Pricing
   plan_count: 3
   slug: caddy-plans-pricing
-random_paper: 11
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Caddy Rate Limits
   slug: caddy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 77
+  extends:
+  - spectral:oas
+  name: Caddy API Rules
+  rule_count: 36
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 2
+    warn: 1
+  slug: caddy-rules
 score:
-  band: emerging
-  composite: 25.8
+  band: thin
+  composite: 27.3
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 41.0
+    artifact_dirs: 15
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 34.2
     developer_ergonomics: 21.4
     discoverability: 62.5
@@ -214,7 +231,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 27.2
+  previous_composite: 27.3
   provenance:
     agentic_access: derived
     contracts:
@@ -228,13 +245,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/caddy/refs/heads/main/screenshots/caddy-2026-06-20T173835.png
+screenshot: https://apis.io/screenshots/caddy/caddy-2026-06-20T173835.png
 security:
 - kind: domain-security
   name: Caddy Domain Security

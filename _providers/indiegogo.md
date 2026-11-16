@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -53,11 +57,8 @@ apis:
   description: The Projects API from Indiegogo — 2 operation(s) for projects.
   name: Indiegogo Projects API
   slug: indiegogo-projects-api
-artifact_total: 8
+artifact_total: 10
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Indiegogo Public Creators API
   slug: open-indiegogo-creators-api
@@ -66,7 +67,7 @@ collections:
   slug: open-indiegogo-projects-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/overlays/indiegogo-public-overlay.yaml
+  href: https://artifacts.apis.io/indiegogo/overlays/indiegogo-public-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/indiegogo-public-overlay.yaml
@@ -111,67 +112,67 @@ common:
   type: PrivacyPolicy
   url: https://www.indiegogo.com/about/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/authentication/indiegogo-authentication.yml
+  href: https://artifacts.apis.io/indiegogo/authentication/indiegogo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/indiegogo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/errors/indiegogo-problem-types.yml
+  href: https://artifacts.apis.io/indiegogo/errors/indiegogo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/indiegogo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/conventions/indiegogo-conventions.yml
+  href: https://artifacts.apis.io/indiegogo/conventions/indiegogo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/indiegogo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/data-model/indiegogo-data-model.yml
+  href: https://artifacts.apis.io/indiegogo/data-model/indiegogo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/indiegogo-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/mcp/indiegogo-mcp.yml
+  href: https://artifacts.apis.io/indiegogo/mcp/indiegogo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/indiegogo-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/conformance/indiegogo-conformance.yml
+  href: https://artifacts.apis.io/indiegogo/conformance/indiegogo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/indiegogo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/lifecycle/indiegogo-lifecycle.yml
+  href: https://artifacts.apis.io/indiegogo/lifecycle/indiegogo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/indiegogo-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/well-known/indiegogo-well-known.yml
+  href: https://artifacts.apis.io/indiegogo/well-known/indiegogo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/indiegogo-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/packages/indiegogo-packages.yml
+  href: https://artifacts.apis.io/indiegogo/packages/indiegogo-packages.yml
   title: ''
   type: Packages
   url: packages/indiegogo-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/llms/indiegogo-llms.txt
+  href: https://artifacts.apis.io/indiegogo/llms/indiegogo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/indiegogo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/indiegogo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/agentic-access/indiegogo-agentic-access.yml
+  href: https://artifacts.apis.io/indiegogo/agentic-access/indiegogo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/indiegogo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/security/indiegogo-domain-security.yml
+  href: https://artifacts.apis.io/indiegogo/security/indiegogo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/indiegogo-domain-security.yml
@@ -190,27 +191,43 @@ network: true
 overview: 'Indiegogo publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Creators API and Projects API. Tagged areas include Company, Consumer, Crowdfunding, Fundraising, and Campaigns.
 
 
+  The Indiegogo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Indiegogo''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 18 more developer resources.'
-random_paper: 3
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Indiegogo API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: indiegogo-rules
 score:
-  band: thin
-  composite: 39.1
+  band: developing
+  composite: 40.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 48.4
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 39.0
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -227,14 +244,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/indiegogo/refs/heads/main/screenshots/indiegogo-2026-07-25T222320.png
+screenshot: https://apis.io/screenshots/indiegogo/indiegogo-2026-07-25T222320.png
 security:
 - kind: authentication
   name: Indiegogo Authentication
@@ -244,6 +261,12 @@ security:
   name: Indiegogo Domain Security
   slug: indiegogo-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Discover active Indiegogo crowdfunding projects
+  slug: indiegogo-discover-projects
+- name: Look up an Indiegogo creator
+  slug: indiegogo-lookup-creator
 slug: indiegogo
 tags:
 - Company

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-10-17'
+  score: 26.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -59,15 +62,12 @@ apis:
   description: Loan and payment ingestion and retrieval.
   name: Credgenics Lending API
   slug: credgenics-lending-api
-artifact_total: 12
+artifact_total: 13
 asyncapis:
 - description: ''
   name: Credgenics Webhooks
   slug: credgenics-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Credgenics Recovery Authentication API
   slug: open-credgenics-authentication-api
@@ -127,77 +127,77 @@ common:
   type: Compliance
   url: https://www.credgenics.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/security/credgenics-trust-center.yml
+  href: https://artifacts.apis.io/credgenics/security/credgenics-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/credgenics-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/authentication/credgenics-authentication.yml
+  href: https://artifacts.apis.io/credgenics/authentication/credgenics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/credgenics-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/agentic-access/credgenics-agentic-access.yml
+  href: https://artifacts.apis.io/credgenics/agentic-access/credgenics-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/credgenics-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/security/credgenics-domain-security.yml
+  href: https://artifacts.apis.io/credgenics/security/credgenics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/credgenics-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/conventions/credgenics-conventions.yml
+  href: https://artifacts.apis.io/credgenics/conventions/credgenics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/credgenics-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/errors/credgenics-problem-types.yml
+  href: https://artifacts.apis.io/credgenics/errors/credgenics-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/credgenics-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/well-known/credgenics-well-known.yml
+  href: https://artifacts.apis.io/credgenics/well-known/credgenics-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/credgenics-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/lifecycle/credgenics-lifecycle.yml
+  href: https://artifacts.apis.io/credgenics/lifecycle/credgenics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/credgenics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/conformance/credgenics-conformance.yml
+  href: https://artifacts.apis.io/credgenics/conformance/credgenics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/credgenics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/asyncapi/credgenics-webhooks.yml
+  href: https://artifacts.apis.io/credgenics/asyncapi/credgenics-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/credgenics-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/mcp/credgenics-mcp.yml
+  href: https://artifacts.apis.io/credgenics/mcp/credgenics-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/credgenics-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/llms/credgenics-llms.txt
+  href: https://artifacts.apis.io/credgenics/llms/credgenics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/credgenics-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/data-model/credgenics-data-model.yml
+  href: https://artifacts.apis.io/credgenics/data-model/credgenics-data-model.yml
   title: ''
   type: DataModel
   url: data-model/credgenics-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/overlays/credgenics-recovery-overlay.yaml
+  href: https://artifacts.apis.io/credgenics/overlays/credgenics-recovery-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/credgenics-recovery-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/credgenics/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -212,25 +212,38 @@ network: true
 overview: 'Credgenics publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Authentication API, Credit Line API, and Lending API. Tagged areas include Company, Enterprise, Financial Services, Debt Collection, and Loan Recovery.
 
 
-  The Credgenics catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Credgenics catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Credgenics'' developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, and 22 more developer resources.'
-random_paper: 13
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Credgenics API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: credgenics-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 31.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 22.1
     developer_ergonomics: 16.1
     discoverability: 73.2
@@ -242,7 +255,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 29.7
+  previous_composite: 31.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -259,13 +272,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/credgenics/refs/heads/main/screenshots/credgenics-2026-07-25T210716.png
+screenshot: https://apis.io/screenshots/credgenics/credgenics-2026-07-25T210716.png
 security:
 - kind: authentication
   name: Credgenics Authentication
@@ -279,6 +292,10 @@ security:
   name: Credgenics Trust Center
   slug: credgenics-trust-center
   summary_line: PCI DSS, ISO (certificate displayed; specific ISO standard not named on the page)
+skill_count: 1
+skills:
+- name: Sync a loan and record a payment in Credgenics
+  slug: credgenics-loan-collections-sync
 slug: credgenics
 tags:
 - Company

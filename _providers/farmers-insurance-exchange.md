@@ -1,11 +1,16 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +40,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/farmers-insurance-exchange/refs/heads/main/security/farmers-insurance-exchange-domain-security.yml
+  href: https://artifacts.apis.io/farmers-insurance-exchange/security/farmers-insurance-exchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/farmers-insurance-exchange-domain-security.yml
@@ -78,22 +86,22 @@ common:
   type: Newsroom
   url: https://newsroom.farmers.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/farmers-insurance-exchange/refs/heads/main/packages/farmers-insurance-exchange-packages.yml
+  href: https://artifacts.apis.io/farmers-insurance-exchange/packages/farmers-insurance-exchange-packages.yml
   title: ''
   type: Packages
   url: packages/farmers-insurance-exchange-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/farmers-insurance-exchange/refs/heads/main/plans/farmers-insurance-exchange-plans-pricing.yml
+  href: https://artifacts.apis.io/farmers-insurance-exchange/plans/farmers-insurance-exchange-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/farmers-insurance-exchange-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/farmers-insurance-exchange/refs/heads/main/rate-limits/farmers-insurance-exchange-rate-limits.yml
+  href: https://artifacts.apis.io/farmers-insurance-exchange/rate-limits/farmers-insurance-exchange-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/farmers-insurance-exchange-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/farmers-insurance-exchange/refs/heads/main/llms/farmers-insurance-exchange-llms.txt
+  href: https://artifacts.apis.io/farmers-insurance-exchange/llms/farmers-insurance-exchange-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/farmers-insurance-exchange-llms.txt
@@ -156,7 +164,7 @@ score:
   band: emerging
   composite: 11.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -184,14 +192,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/farmers-insurance-exchange/refs/heads/main/screenshots/farmers-insurance-exchange-2026-06-20T181045.png
+screenshot: https://apis.io/screenshots/farmers-insurance-exchange/farmers-insurance-exchange-2026-06-20T181045.png
 security:
 - kind: domain-security
   name: Farmers Insurance Exchange Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 1
@@ -96,9 +102,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Local REST API for Obsidian Active File API
   slug: open-obsidian-active-file-api
 - collection_type: open
@@ -127,27 +130,27 @@ collections:
   slug: open-obsidian-vault-files-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/capabilities/obsidian-capability-edges.yml
+  href: https://artifacts.apis.io/obsidian/capabilities/obsidian-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/obsidian-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/agentic-access/obsidian-agentic-access.yml
+  href: https://artifacts.apis.io/obsidian/agentic-access/obsidian-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/obsidian-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/security/obsidian-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/obsidian/security/obsidian-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/obsidian-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/security/obsidian-domain-security.yml
+  href: https://artifacts.apis.io/obsidian/security/obsidian-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/obsidian-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/authentication/obsidian-authentication.yml
+  href: https://artifacts.apis.io/obsidian/authentication/obsidian-authentication.yml
   title: ''
   type: Authentication
   url: authentication/obsidian-authentication.yml
@@ -172,17 +175,17 @@ common:
   type: GitHub
   url: https://github.com/obsidianmd
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/plans/obsidian-plans-pricing.yml
+  href: https://artifacts.apis.io/obsidian/plans/obsidian-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/obsidian-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/rate-limits/obsidian-rate-limits.yml
+  href: https://artifacts.apis.io/obsidian/rate-limits/obsidian-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/obsidian-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/finops/obsidian-finops.yml
+  href: https://artifacts.apis.io/obsidian/finops/obsidian-finops.yml
   title: ''
   type: FinOps
   url: finops/obsidian-finops.yml
@@ -221,35 +224,51 @@ network: true
 overview: 'Obsidian publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Active File API, Commands API, Open API, and 7 more. Tagged areas include Productivity, Knowledge Management, Markdown, Notes, and Local-First.
 
 
+  The Obsidian catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Obsidian''s developer surface includes authentication, documentation, pricing, GitHub presence, engineering blog, and 12 more developer resources.'
 plans:
 - name: Obsidian Plans Pricing
   plan_count: 5
   slug: obsidian-plans-pricing
-random_paper: 5
+random_paper: 1
 rate_limits:
 - limit_count: 4
   name: Obsidian Rate Limits
   slug: obsidian-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Obsidian API Rules
+  rule_count: 49
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 5
+  slug: obsidian-rules
 score:
   band: thin
-  composite: 32.9
+  composite: 35.9
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.1
     developer_ergonomics: 38.1
     discoverability: 73.2
-    operational_transparency: 13.2
-  previous_composite: 34.4
+    operational_transparency: 23.7
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     contracts:
@@ -263,13 +282,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/obsidian/refs/heads/main/screenshots/obsidian-2026-06-20T190555.png
+screenshot: https://apis.io/screenshots/obsidian/obsidian-2026-06-20T190555.png
 security:
 - kind: authentication
   name: Obsidian Authentication

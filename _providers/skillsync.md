@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -42,7 +46,7 @@ common:
   type: BlogRSS
   url: https://skillsync.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/security/skillsync-domain-security.yml
+  href: https://artifacts.apis.io/skillsync/security/skillsync-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/skillsync-domain-security.yml
@@ -79,37 +83,37 @@ common:
   type: PrivacyPolicy
   url: https://skillsync.com/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/mcp/skillsync-mcp.yml
+  href: https://artifacts.apis.io/skillsync/mcp/skillsync-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/skillsync-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/cli/skillsync-cli.yml
+  href: https://artifacts.apis.io/skillsync/cli/skillsync-cli.yml
   title: ''
   type: CLI
   url: cli/skillsync-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/packages/skillsync-packages.yml
+  href: https://artifacts.apis.io/skillsync/packages/skillsync-packages.yml
   title: ''
   type: Packages
   url: packages/skillsync-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/authentication/skillsync-authentication.yml
+  href: https://artifacts.apis.io/skillsync/authentication/skillsync-authentication.yml
   title: ''
   type: Authentication
   url: authentication/skillsync-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/changelog/skillsync-changelog.yml
+  href: https://artifacts.apis.io/skillsync/changelog/skillsync-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/skillsync-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/llms/skillsync-llms.txt
+  href: https://artifacts.apis.io/skillsync/llms/skillsync-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/skillsync-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/conformance/skillsync-conformance.yml
+  href: https://artifacts.apis.io/skillsync/conformance/skillsync-conformance.yml
   title: ''
   type: Conformance
   url: conformance/skillsync-conformance.yml
@@ -129,12 +133,12 @@ overview: 'Skillsync is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Skillsync''s developer surface includes documentation, getting-started guide, engineering blog, CLI, authentication, changelog, and 11 more developer resources.'
-random_paper: 20
+random_paper: 4
 score:
   band: emerging
   composite: 22.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -158,14 +162,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/skillsync/refs/heads/main/screenshots/skillsync-2026-09-02T155724.png
+screenshot: https://apis.io/screenshots/skillsync/skillsync-2026-09-02T155724.png
 security:
 - kind: authentication
   name: Skillsync Authentication

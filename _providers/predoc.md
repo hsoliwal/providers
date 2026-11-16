@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.7
-  scored_at: '2026-10-17'
+  score: 26.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 13
@@ -80,39 +83,44 @@ apis:
   description: The Retrieval API from Predoc — 2 operation(s) for retrieval.
   name: Predoc Retrieval API
   slug: predoc-retrieval-api
-artifact_total: 20
+artifact_total: 23
 asyncapis:
 - description: ''
   name: Predoc Webhooks
   slug: predoc-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/predoc/capabilities/predoc-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/predoc-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/agentic-access/predoc-agentic-access.yml
+  href: https://artifacts.apis.io/predoc/agentic-access/predoc-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/predoc-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/rules/predoc-rules.yml
+  href: https://artifacts.apis.io/predoc/rules/predoc-rules.yml
   title: ''
   type: Spectral
   url: rules/predoc-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/json-ld/predoc-context.jsonld
+  href: https://artifacts.apis.io/predoc/json-ld/predoc-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/predoc-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/vocabulary/predoc-vocabulary.yml
+  href: https://artifacts.apis.io/predoc/vocabulary/predoc-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/predoc-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/hosts/predoc-hosts.yml
+  href: https://artifacts.apis.io/predoc/hosts/predoc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/predoc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/vendors/predoc-vendors.yml
+  href: https://artifacts.apis.io/predoc/vendors/predoc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/predoc-vendors.yml
@@ -121,7 +129,7 @@ common:
   type: Newsroom
   url: https://www.predoc.ai/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/security/predoc-domain-security.yml
+  href: https://artifacts.apis.io/predoc/security/predoc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/predoc-domain-security.yml
@@ -178,72 +186,72 @@ common:
   type: Compliance
   url: https://www.predoc.ai/security-compliance
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/llms/predoc-llms.txt
+  href: https://artifacts.apis.io/predoc/llms/predoc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/predoc-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/authentication/predoc-authentication.yml
+  href: https://artifacts.apis.io/predoc/authentication/predoc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/predoc-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/conventions/predoc-conventions.yml
+  href: https://artifacts.apis.io/predoc/conventions/predoc-conventions.yml
   title: ''
   type: Conventions
   url: conventions/predoc-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/conformance/predoc-conformance.yml
+  href: https://artifacts.apis.io/predoc/conformance/predoc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/predoc-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/security/predoc-trust-center.yml
+  href: https://artifacts.apis.io/predoc/security/predoc-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/predoc-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/lifecycle/predoc-lifecycle.yml
+  href: https://artifacts.apis.io/predoc/lifecycle/predoc-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/predoc-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/lifecycle/predoc-lifecycle.yml
+  href: https://artifacts.apis.io/predoc/lifecycle/predoc-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/predoc-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/changelog/predoc-changelog.yml
+  href: https://artifacts.apis.io/predoc/changelog/predoc-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/predoc-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/sandbox/predoc-sandbox.yml
+  href: https://artifacts.apis.io/predoc/sandbox/predoc-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/predoc-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/mcp/predoc-mcp.yml
+  href: https://artifacts.apis.io/predoc/mcp/predoc-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/predoc-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/asyncapi/predoc-webhooks.yml
+  href: https://artifacts.apis.io/predoc/asyncapi/predoc-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/predoc-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/data-model/predoc-data-model.yml
+  href: https://artifacts.apis.io/predoc/data-model/predoc-data-model.yml
   title: ''
   type: DataModel
   url: data-model/predoc-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/errors/predoc-problem-types.yml
+  href: https://artifacts.apis.io/predoc/errors/predoc-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/predoc-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/predoc/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -285,8 +293,8 @@ overview: 'Predoc publishes 7 API contracts indexed on the [APIs.io](https://api
   The Predoc catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Predoc''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 28 more developer resources.'
-random_paper: 21
+  Predoc''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 29 more developer resources.'
+random_paper: 13
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -302,23 +310,23 @@ rules:
   slug: predoc-rules
 score:
   band: strong
-  composite: 55.0
+  composite: 59.8
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 9.0
+  delta: 4.8
   facets:
     access_clarity: 43.4
     contract_governance: 35.6
-    contract_quality: 68.4
-    developer_ergonomics: 53.0
-    discoverability: 75.0
-    operational_transparency: 39.5
-  previous_composite: 46.0
+    contract_quality: 73.4
+    developer_ergonomics: 66.1
+    discoverability: 74.1
+    operational_transparency: 47.4
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -339,13 +347,13 @@ score:
     regime: Health
     regime_id: health
     score: 27.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/predoc/refs/heads/main/screenshots/predoc-2026-08-17T081335.png
+screenshot: https://apis.io/screenshots/predoc/predoc-2026-08-17T081335.png
 security:
 - kind: authentication
   name: Predoc Authentication
@@ -359,6 +367,14 @@ security:
   name: Predoc Trust Center
   slug: predoc-trust-center
   summary_line: SOC 2 Type II, HIPAA, FDA 21 CFR Part 11
+skill_count: 3
+skills:
+- name: Generate and download a patient clinical summary
+  slug: predoc-clinical-summary
+- name: Request and retrieve a patient's medical records
+  slug: predoc-retrieve-patient-records
+- name: Configure webhooks for record lifecycle events
+  slug: predoc-webhook-setup
 slug: predoc
 tags:
 - Company

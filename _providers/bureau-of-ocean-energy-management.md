@@ -1,64 +1,149 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: freemium
+  pricing: paid
   public: false
   source:
-  - plans
+  - finops
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: na
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: false
+    idempotency: na
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
-    reversibility_documented: false
-    spec_presence: false
+    reversibility_documented: na
+    spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.9
-  scored_at: '2026-10-17'
-api_count: 3
+  score: 30.9
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 0
+  human_in_the_loop: 0
+  name: Bureau Of Ocean Energy Management Agentic Access
+  operation_count: 17
+  slug: bureau-of-ocean-energy-management-agentic-access
+  summary_line: 17 operations
+api_count: 2
 apis:
-- description: MarineCadastre.gov is the authoritative source for marine cadastre data and services. It provides an interactive map viewer with integrated submerged lands information including legal, property owners
-  name: MarineCadastre.gov
-  slug: marine-cadastre
 - description: BOEM provides ArcGIS REST Services exposing geospatial data for the Outer Continental Shelf (OCS) regions. Data includes active leases, offshore block grids, boundaries, wells, and pipelines for Atlan
   name: BOEM ArcGIS REST Services
   slug: boem-arcgis-rest-services
 - description: ESPIS provides access to BOEM's environmental studies data, including research reports, environmental impact studies, and scientific literature related to offshore energy development. Searchable by to
   name: Environmental Studies Program Information System (ESPIS)
   slug: espis
-artifact_total: 10
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The Catalog API from Bureau of Ocean Energy Management — 1 operation(s) for catalog.
+  name: Bureau of Ocean Energy Management Catalog API
+  slug: bureau-of-ocean-energy-management-catalog-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The Collection API from Bureau of Ocean Energy Management — 2 operation(s) for collection.
+  name: Bureau of Ocean Energy Management Collection API
+  slug: bureau-of-ocean-energy-management-collection-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The Geoservice-Beta API from Bureau of Ocean Energy Management — 6 operation(s) for geoservice-beta.
+  name: Bureau of Ocean Energy Management Geoservice Beta API
+  slug: bureau-of-ocean-energy-management-geoservice-beta-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The OgcItem API from Bureau of Ocean Energy Management — 4 operation(s) for ogcitem.
+  name: Bureau of Ocean Energy Management Ogc Item API
+  slug: bureau-of-ocean-energy-management-ogcitem-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The OgcItemAggregation API from Bureau of Ocean Energy Management — 1 operation(s) for ogcitemaggregation.
+  name: Bureau of Ocean Energy Management Ogc Item Aggregation API
+  slug: bureau-of-ocean-energy-management-ogcitemaggregation-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The OgcRoot API from Bureau of Ocean Energy Management — 1 operation(s) for ogcroot.
+  name: Bureau of Ocean Energy Management Ogc Root API
+  slug: bureau-of-ocean-energy-management-ogcroot-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The OgcRootConformance API from Bureau of Ocean Energy Management — 1 operation(s) for ogcrootconformance.
+  name: Bureau of Ocean Energy Management Ogc Root Conformance API
+  slug: bureau-of-ocean-energy-management-ogcrootconformance-api
+- baseURL: https://hub.marinecadastre.gov/
+  baseurl_source: declared
+  description: The Queryable API from Bureau of Ocean Energy Management — 1 operation(s) for queryable.
+  name: Bureau of Ocean Energy Management Queryable API
+  slug: bureau-of-ocean-energy-management-queryable-api
+artifact_total: 26
 common:
+- group: agent
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/agentic-access/bureau-of-ocean-energy-management-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/bureau-of-ocean-energy-management-agentic-access.yml
+- group: design
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/rules/bureau-of-ocean-energy-management-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/bureau-of-ocean-energy-management-rules.yml
+- group: design
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/json-ld/bureau-of-ocean-energy-management-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/bureau-of-ocean-energy-management-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/vocabulary/bureau-of-ocean-energy-management-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/bureau-of-ocean-energy-management-vocabulary.yml
+- group: operate
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/lifecycle/bureau-of-ocean-energy-management-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/bureau-of-ocean-energy-management-lifecycle.yml
+- group: other
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/hosts/bureau-of-ocean-energy-management-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/bureau-of-ocean-energy-management-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/vendors/bureau-of-ocean-energy-management-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/bureau-of-ocean-energy-management-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/finops/bureau-of-ocean-energy-management-finops.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/finops/bureau-of-ocean-energy-management-finops.yml
   title: ''
   type: FinOps
   url: finops/bureau-of-ocean-energy-management-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/security/bureau-of-ocean-energy-management-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/security/bureau-of-ocean-energy-management-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bureau-of-ocean-energy-management-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/security/bureau-of-ocean-energy-management-domain-security.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/security/bureau-of-ocean-energy-management-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bureau-of-ocean-energy-management-domain-security.yml
@@ -102,72 +187,75 @@ common:
   title: ''
   type: Support
   url: https://www.boem.gov/about-boem/contact-us
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.boem.gov/newsroom
+- group: operate
+  title: ''
+  type: HelpCenter
+  url: https://help.boem.gov/bss
 - group: commercial
   title: ''
   type: TermsOfService
   url: https://www.boem.gov/about-boem/disclaimer-liability-and-endorsement
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/security/bureau-of-ocean-energy-management-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/security/bureau-of-ocean-energy-management-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/bureau-of-ocean-energy-management-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/well-known/bureau-of-ocean-energy-management-security.txt
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/well-known/bureau-of-ocean-energy-management-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bureau-of-ocean-energy-management-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/well-known/bureau-of-ocean-energy-management-well-known.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/well-known/bureau-of-ocean-energy-management-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bureau-of-ocean-energy-management-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/conformance/bureau-of-ocean-energy-management-conformance.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/conformance/bureau-of-ocean-energy-management-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bureau-of-ocean-energy-management-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/authentication/bureau-of-ocean-energy-management-authentication.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/authentication/bureau-of-ocean-energy-management-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bureau-of-ocean-energy-management-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/conventions/bureau-of-ocean-energy-management-conventions.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/conventions/bureau-of-ocean-energy-management-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bureau-of-ocean-energy-management-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/data-model/bureau-of-ocean-energy-management-data-model.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/data-model/bureau-of-ocean-energy-management-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bureau-of-ocean-energy-management-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/errors/bureau-of-ocean-energy-management-problem-types.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/errors/bureau-of-ocean-energy-management-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bureau-of-ocean-energy-management-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/lifecycle/bureau-of-ocean-energy-management-lifecycle.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/lifecycle/bureau-of-ocean-energy-management-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bureau-of-ocean-energy-management-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/llms/bureau-of-ocean-energy-management-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/bureau-of-ocean-energy-management-llms.txt
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/mcp/bureau-of-ocean-energy-management-mcp.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/mcp/bureau-of-ocean-energy-management-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bureau-of-ocean-energy-management-mcp.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/plans/bureau-of-ocean-energy-management-plans-pricing.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/plans/bureau-of-ocean-energy-management-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bureau-of-ocean-energy-management-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/rate-limits/bureau-of-ocean-energy-management-rate-limits.yml
+  href: https://artifacts.apis.io/bureau-of-ocean-energy-management/rate-limits/bureau-of-ocean-energy-management-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bureau-of-ocean-energy-management-rate-limits.yml
@@ -177,79 +265,125 @@ finops:
 - has_sources: false
   method: generated
   name: Bureau Of Ocean Energy Management Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: bureau-of-ocean-energy-management-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bureau-of-ocean-energy-management.png
+json_schemas:
+- name: CollectionWithLinksDto
+  property_count: 8
+  slug: bureau-of-ocean-energy-management-collection-with-links-dto
+- name: FeatureLayerDto
+  property_count: 67
+  slug: bureau-of-ocean-energy-management-feature-layer-dto
+- name: FeatureLayerQueryDto
+  property_count: 10
+  slug: bureau-of-ocean-energy-management-feature-layer-query-dto
+- name: FeatureServerDto
+  property_count: 35
+  slug: bureau-of-ocean-energy-management-feature-server-dto
+- name: OgcItemDto
+  property_count: 5
+  slug: bureau-of-ocean-energy-management-ogc-item-dto
+- name: OgcQueryablesResponseDto
+  property_count: 5
+  slug: bureau-of-ocean-energy-management-ogc-queryables-response-dto
+jsonld:
+- class_count: 46
+  name: Bureau Of Ocean Energy Management Context
+  property_count: 209
+  slug: bureau-of-ocean-energy-management-context
 layout: provider
 mcp_servers:
 - description: MCP server; 9 tools listed. A candidate, not confirmed as published by the provider.
   name: Bureau of Ocean Energy Management MCP Server
   slug: bureau-of-ocean-energy-management-mcp-yml
-modified: '2026-09-05'
+modified: '2026-10-20'
 name: Bureau of Ocean Energy Management
 nav: Providers
 network: true
-overview: 'Bureau of Ocean Energy Management is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Federal Government, Marine, Ocean, and GIS.
+overview: 'Bureau of Ocean Energy Management publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Collection API, Geoservice Beta API, and 7 more. Tagged areas include Energy, Federal Government, Marine, Ocean, and GIS.
 
 
-  Bureau of Ocean Energy Management''s developer surface includes developer portal, engineering blog, documentation, support, authentication, and 22 more developer resources.'
+  The Bureau of Ocean Energy Management catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  Bureau of Ocean Energy Management''s developer surface includes developer portal, engineering blog, documentation, support, authentication, and 30 more developer resources.'
 plans:
 - name: Bureau Of Ocean Energy Management Plans Pricing
   plan_count: 0
   slug: bureau-of-ocean-energy-management-plans-pricing
-random_paper: 2
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Bureau Of Ocean Energy Management Rate Limits
   slug: bureau-of-ocean-energy-management-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 51
+  extends:
+  - spectral:oas
+  name: Bureau of Ocean Energy Management API Rules
+  rule_count: 10
+  severity_counts:
+    error: 9
+    hint: 0
+    info: 1
+    warn: 0
+  slug: bureau-of-ocean-energy-management-rules
 score:
-  band: thin
-  composite: 26.5
+  band: developing
+  composite: 43.3
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 40.0
+    artifact_dirs: 26
+    catalog_earned: 62.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 18.2
-    contract_quality: 0.0
+    contract_governance: 33.3
+    contract_quality: 55.0
     developer_ergonomics: 45.2
-    discoverability: 78.6
-    operational_transparency: 10.5
+    discoverability: 74.1
+    operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.0
+  previous_composite: 43.3
   provenance:
+    agentic_access: derived
     conformance: first-party
+    contracts:
+      callable: 100.0
+      derived: 0
+      marker_coverage: 0.0
+      total: 8
     mcp: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 25.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 29.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
-    note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
-    reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bureau-of-ocean-energy-management/refs/heads/main/screenshots/bureau-of-ocean-energy-management-2026-06-20T173814.png
+    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
+    reason: read_only
+screenshot: https://apis.io/screenshots/bureau-of-ocean-energy-management/bureau-of-ocean-energy-management-2026-06-20T173814.png
 security:
 - kind: authentication
   name: Bureau Of Ocean Energy Management Authentication
   slug: bureau-of-ocean-energy-management-authentication
-  summary_line: 0 schemes
+  summary_line: 1 scheme
 - kind: domain-security
   name: Bureau Of Ocean Energy Management Domain Security
   slug: bureau-of-ocean-energy-management-domain-security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,7 +57,7 @@ common:
   type: AppStore
   url: https://apps.apple.com/us/developer/dream-voyage-inc/id1714126758
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dream-voyage-inc/refs/heads/main/security/dream-voyage-inc-domain-security.yml
+  href: https://artifacts.apis.io/dream-voyage-inc/security/dream-voyage-inc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dream-voyage-inc-domain-security.yml
@@ -66,7 +70,7 @@ name: Dream Voyage
 nav: Providers
 network: true
 overview: Dream Voyage is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Consumer App, Mobile, and Astrology.
-random_paper: 14
+random_paper: 16
 score:
   band: minimal
   composite: 2.6
@@ -92,14 +96,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 5.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dream-voyage-inc/refs/heads/main/screenshots/dream-voyage-inc-2026-10-11T184322.png
+screenshot: https://apis.io/screenshots/dream-voyage-inc/dream-voyage-inc-2026-10-11T184322.png
 security:
 - kind: domain-security
   name: Dream Voyage Inc Domain Security

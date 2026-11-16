@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Token-authenticated REST API for managing an Edools school — team and role administration, content (courses, learning paths, lessons, media), student management and engagement triggers, and school pro
@@ -96,47 +99,47 @@ common:
   type: StatusPage
   url: https://status.herospark.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/authentication/edools-authentication.yml
+  href: https://artifacts.apis.io/edools/authentication/edools-authentication.yml
   title: ''
   type: Authentication
   url: authentication/edools-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/conventions/edools-conventions.yml
+  href: https://artifacts.apis.io/edools/conventions/edools-conventions.yml
   title: ''
   type: Conventions
   url: conventions/edools-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/errors/edools-problem-types.yml
+  href: https://artifacts.apis.io/edools/errors/edools-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/edools-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/lifecycle/edools-lifecycle.yml
+  href: https://artifacts.apis.io/edools/lifecycle/edools-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/edools-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/packages/edools-packages.yml
+  href: https://artifacts.apis.io/edools/packages/edools-packages.yml
   title: ''
   type: Packages
   url: packages/edools-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/packages/edools-packages.yml
+  href: https://artifacts.apis.io/edools/packages/edools-packages.yml
   title: ''
   type: SDKs
   url: packages/edools-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/cli/edools-cli.yml
+  href: https://artifacts.apis.io/edools/cli/edools-cli.yml
   title: ''
   type: CLI
   url: cli/edools-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/security/edools-domain-security.yml
+  href: https://artifacts.apis.io/edools/security/edools-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/edools-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/llms/edools-llms.txt
+  href: https://artifacts.apis.io/edools/llms/edools-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/edools-llms.txt
@@ -152,12 +155,12 @@ overview: 'Edools is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Edools'' developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 15 more developer resources.'
-random_paper: 8
+random_paper: 22
 score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -185,14 +188,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/edools/refs/heads/main/screenshots/edools-2026-07-25T212856.png
+screenshot: https://apis.io/screenshots/edools/edools-2026-07-25T212856.png
 security:
 - kind: authentication
   name: Edools Authentication

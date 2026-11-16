@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://thrivecart.com/api/external
@@ -210,7 +213,7 @@ apis:
     question: What price options does an upsell offer have?
   phrasing_ops: 3
   slug: thrivecart-upsells-api
-artifact_total: 21
+artifact_total: 28
 asyncapis:
 - description: ThriveCart delivers account events to subscriber endpoints over HTTP POST. Two surfaces exist and they do not share event names. **Event Subscription API (this document).** Created programmatically wi
   name: ThriveCart Event Subscriptions
@@ -224,12 +227,12 @@ collections:
   slug: open-thrivecart-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/plans/thrivecart-plans-pricing.yml
+  href: https://artifacts.apis.io/thrivecart/plans/thrivecart-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/thrivecart-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/rate-limits/thrivecart-rate-limits.yml
+  href: https://artifacts.apis.io/thrivecart/rate-limits/thrivecart-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/thrivecart-rate-limits.yml
@@ -238,27 +241,27 @@ common:
   type: Pricing
   url: https://thrivecart.com/products/proplus/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/capabilities/thrivecart-capability-edges.yml
+  href: https://artifacts.apis.io/thrivecart/capabilities/thrivecart-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/thrivecart-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/overlays/thrivecart-api-overlay.yaml
+  href: https://artifacts.apis.io/thrivecart/overlays/thrivecart-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/thrivecart-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/mcp/thrivecart-mcp.yml
+  href: https://artifacts.apis.io/thrivecart/mcp/thrivecart-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/thrivecart-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/thrivecart/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/scopes/thrivecart-scopes.yml
+  href: https://artifacts.apis.io/thrivecart/scopes/thrivecart-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/thrivecart-scopes.yml
@@ -335,87 +338,95 @@ common:
   type: ChangeLog
   url: https://thrivecart.com/blog/category/product-updates/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/packages/thrivecart-packages.yml
+  href: https://artifacts.apis.io/thrivecart/packages/thrivecart-packages.yml
   title: ''
   type: Packages
   url: packages/thrivecart-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/packages/thrivecart-packages.yml
+  href: https://artifacts.apis.io/thrivecart/packages/thrivecart-packages.yml
   title: ''
   type: SDKs
   url: packages/thrivecart-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/well-known/thrivecart-well-known.yml
+  href: https://artifacts.apis.io/thrivecart/well-known/thrivecart-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/thrivecart-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/well-known/thrivecart-security.txt
+  href: https://artifacts.apis.io/thrivecart/well-known/thrivecart-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/thrivecart-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/security/thrivecart-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/thrivecart/security/thrivecart-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/thrivecart-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/security/thrivecart-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/thrivecart/security/thrivecart-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/thrivecart-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/security/thrivecart-domain-security.yml
+  href: https://artifacts.apis.io/thrivecart/security/thrivecart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/thrivecart-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/lifecycle/thrivecart-lifecycle.yml
+  href: https://artifacts.apis.io/thrivecart/lifecycle/thrivecart-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/thrivecart-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/conformance/thrivecart-conformance.yml
+  href: https://artifacts.apis.io/thrivecart/conformance/thrivecart-conformance.yml
   title: ''
   type: Conformance
   url: conformance/thrivecart-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/conformance/thrivecart-conformance.yml
+  href: https://artifacts.apis.io/thrivecart/conformance/thrivecart-conformance.yml
   title: ''
   type: Compliance
   url: conformance/thrivecart-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/components/thrivecart-components.yml
+  href: https://artifacts.apis.io/thrivecart/components/thrivecart-components.yml
   title: ''
   type: Components
   url: components/thrivecart-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/sandbox/thrivecart-sandbox.yml
+  href: https://artifacts.apis.io/thrivecart/sandbox/thrivecart-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/thrivecart-sandbox.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/changelog/thrivecart-changelog.yml
+  href: https://artifacts.apis.io/thrivecart/changelog/thrivecart-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/thrivecart-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/plans/thrivecart-plans-pricing.yml
+  href: https://artifacts.apis.io/thrivecart/plans/thrivecart-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/thrivecart-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/rate-limits/thrivecart-rate-limits.yml
+  href: https://artifacts.apis.io/thrivecart/rate-limits/thrivecart-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/thrivecart-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/llms/thrivecart-llms.txt
+  href: https://artifacts.apis.io/thrivecart/llms/thrivecart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/thrivecart-llms.txt
 created: '2026-08-12'
 description: ThriveCart is a hosted shopping cart, checkout and course platform for creators, coaches and digital-product sellers, operated by ThriveCart LLC. It sells one-time and recurring digital and physical products through customisable checkout pages with order bumps, one-click upsells and downsells, A/B testing, abandoned-cart recovery, sales-tax automation and a built-in affiliate centre, and bundles a learning-management product (ThriveCart Learn / ThriveCart Academy). Payments are processed through Stripe, PayPal, Authorize.net and ThrivePay Installments rather than by ThriveCart itself. The public ThriveCart API is a bearer-token REST surface at https://thrivecart.com/api/external covering products, bump offers, upsells, downsells, pricing options, transactions, customers, subscriptions, affiliates, Learn students and event subscriptions, with an account-wide webhook surface and a targeted Event Subscription API alongside it.
+finops:
+- has_sources: true
+  method: derived
+  name: Thrivecart Finops
+  primary_unit: account
+  service_category: ''
+  slug: thrivecart-finops
+  template: false
 image: https://thrivecart.com/wp-content/uploads/2025/07/TC-logo-on-White.png
 layout: provider
 modified: '2026-08-12'
@@ -425,7 +436,7 @@ network: true
 overview: 'ThriveCart publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Affiliates API, Bumps API, and 8 more. Tagged areas include Company, Checkout, Shopping Cart, Payments, and E-Commerce.
 
 
-  The ThriveCart catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The ThriveCart catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   ThriveCart''s developer surface includes pricing, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 35 more developer resources.'
@@ -433,11 +444,27 @@ plans:
 - name: Thrivecart Plans Pricing
   plan_count: 3
   slug: thrivecart-plans-pricing
-random_paper: 6
+- name: Thrivecart Price Estimates
+  plan_count: 0
+  slug: thrivecart-price-estimates
+random_paper: 4
 rate_limits:
 - limit_count: 1
   name: Thrivecart Rate Limits
   slug: thrivecart-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 119
+  extends:
+  - spectral:oas
+  name: ThriveCart API Rules
+  rule_count: 78
+  severity_counts:
+    error: 70
+    hint: 0
+    info: 2
+    warn: 6
+  slug: thrivecart-rules
 scopes:
 - name: Thrivecart Scopes
   scope_count: 0
@@ -445,23 +472,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: exemplar
-  composite: 67.5
+  composite: 70.7
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 57.0
+    artifact_dirs: 33
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 84.2
-    contract_governance: 18.2
+    access_clarity: 92.1
+    contract_governance: 31.8
     contract_quality: 55.8
     developer_ergonomics: 72.0
     discoverability: 73.2
     operational_transparency: 78.9
-  previous_composite: 67.5
+  previous_composite: 70.7
   provenance:
     conformance: first-party
     contracts:
@@ -477,13 +504,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 41.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/thrivecart/refs/heads/main/screenshots/thrivecart-2026-08-17T082349.png
+screenshot: https://apis.io/screenshots/thrivecart/thrivecart-2026-08-17T082349.png
 security:
 - kind: authentication
   name: Thrivecart Authentication
@@ -501,6 +528,16 @@ security:
   name: Thrivecart Trust Center
   slug: thrivecart-trust-center
   summary_line: PCI DSS, GDPR, CCPA
+skill_count: 4
+skills:
+- name: thrivecart-manage-a-subscription
+  slug: thrivecart-manage-a-subscription
+- name: thrivecart-onboard-an-affiliate
+  slug: thrivecart-onboard-an-affiliate
+- name: thrivecart-refund-a-purchase
+  slug: thrivecart-refund-a-purchase
+- name: thrivecart-subscribe-to-events
+  slug: thrivecart-subscribe-to-events
 slug: thrivecart
 tags:
 - Company

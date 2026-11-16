@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/security/booknook-domain-security.yml
+  href: https://artifacts.apis.io/booknook/security/booknook-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/booknook-domain-security.yml
@@ -99,27 +102,27 @@ common:
   type: Careers
   url: https://www.booknook.com/careers
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/lifecycle/booknook-lifecycle.yml
+  href: https://artifacts.apis.io/booknook/lifecycle/booknook-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/booknook-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/changelog/booknook-changelog.yml
+  href: https://artifacts.apis.io/booknook/changelog/booknook-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/booknook-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/conformance/booknook-conformance.yml
+  href: https://artifacts.apis.io/booknook/conformance/booknook-conformance.yml
   title: ''
   type: Conformance
   url: conformance/booknook-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/conformance/booknook-conformance.yml
+  href: https://artifacts.apis.io/booknook/conformance/booknook-conformance.yml
   title: ''
   type: Compliance
   url: conformance/booknook-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/llms/booknook-llms.txt
+  href: https://artifacts.apis.io/booknook/llms/booknook-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/booknook-llms.txt
@@ -154,18 +157,18 @@ overview: 'BookNook is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   BookNook''s developer surface includes support, engineering blog, changelog, and 17 more developer resources.'
-random_paper: 8
+random_paper: 2
 score:
   band: emerging
   composite: 21.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
@@ -173,7 +176,7 @@ score:
     developer_ergonomics: 7.1
     discoverability: 55.4
     operational_transparency: 34.2
-  previous_composite: 21.4
+  previous_composite: 21.5
   provenance:
     conformance: first-party
   regulatory:
@@ -182,14 +185,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/booknook/refs/heads/main/screenshots/booknook-2026-09-02T144934.png
+screenshot: https://apis.io/screenshots/booknook/booknook-2026-09-02T144934.png
 security:
 - kind: domain-security
   name: Booknook Domain Security

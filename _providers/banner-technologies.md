@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -10,55 +20,62 @@ agent_readiness:
     consent_identity: false
     delegated_identity: served
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-10-17'
+  score: 18.7
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/well-known/banner-technologies-withbanner-security.txt
+  href: https://artifacts.apis.io/banner-technologies/well-known/banner-technologies-withbanner-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/banner-technologies-withbanner-security.txt
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://withbanner.com/home/press/happyco-acquires-banner-technologies
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/llms/banner-technologies-llms.txt
+  href: https://artifacts.apis.io/banner-technologies/llms/banner-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/banner-technologies-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/a2a/banner-technologies-a2a.yml
+  href: https://artifacts.apis.io/banner-technologies/a2a/banner-technologies-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/banner-technologies-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/well-known/banner-technologies-docs-security.txt
+  href: https://artifacts.apis.io/banner-technologies/well-known/banner-technologies-docs-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/banner-technologies-docs-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/well-known/banner-technologies-well-known.yml
+  href: https://artifacts.apis.io/banner-technologies/well-known/banner-technologies-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/banner-technologies-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/hosts/banner-technologies-hosts.yml
+  href: https://artifacts.apis.io/banner-technologies/hosts/banner-technologies-hosts.yml
   title: ''
   type: Hosts
   url: hosts/banner-technologies-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/vendors/banner-technologies-vendors.yml
+  href: https://artifacts.apis.io/banner-technologies/vendors/banner-technologies-vendors.yml
   title: ''
   type: Vendors
   url: vendors/banner-technologies-vendors.yml
@@ -71,7 +88,7 @@ common:
   type: DeveloperPortal
   url: https://withbanner.com/home/solutions/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/security/banner-technologies-domain-security.yml
+  href: https://artifacts.apis.io/banner-technologies/security/banner-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/banner-technologies-domain-security.yml
@@ -118,27 +135,27 @@ network: true
 overview: 'Banner Technologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, CapEx, Software-as-a-Service, and Property Management.
 
 
-  Banner Technologies'' developer surface includes documentation, support, engineering blog, and 13 more developer resources.'
-random_paper: 1
+  Banner Technologies'' developer surface includes documentation, support, engineering blog, and 14 more developer resources.'
+random_paper: 15
 score:
   band: emerging
-  composite: 17.7
+  composite: 12.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.2
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 26.2
-    discoverability: 55.4
-    operational_transparency: 15.8
-  previous_composite: 17.7
+    developer_ergonomics: 13.1
+    discoverability: 57.1
+    operational_transparency: 18.4
+  previous_composite: 19.1
   provenance:
     mcp: unknown
   regulatory:
@@ -146,15 +163,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/banner-technologies/refs/heads/main/screenshots/banner-technologies-2026-10-11T101530.png
+screenshot: https://apis.io/screenshots/banner-technologies/banner-technologies-2026-10-11T101530.png
 security:
 - kind: domain-security
   name: Banner Technologies Domain Security

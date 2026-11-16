@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
+  pricing: unknown
+  public: true
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,16 +42,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A live Model Context Protocol server implementing the Universal Commerce Protocol shopping service for the Willie's Reserve store. Thirteen tools cover catalog search and lookup, cart lifecycle, check
   name: Willie's Reserve Commerce Agent API (UCP/MCP)
   slug: willies-reserve-commerce-agent-api-ucpmcp
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/security/willie-s-reserve-domain-security.yml
+  href: https://artifacts.apis.io/willie-s-reserve/security/willie-s-reserve-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/willie-s-reserve-domain-security.yml
@@ -45,67 +64,67 @@ common:
   type: Documentation
   url: https://williesreserve.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/mcp/willie-s-reserve-mcp.yml
+  href: https://artifacts.apis.io/willie-s-reserve/mcp/willie-s-reserve-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/willie-s-reserve-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/willie-s-reserve/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/llms/willie-s-reserve-llms.txt
+  href: https://artifacts.apis.io/willie-s-reserve/llms/willie-s-reserve-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/willie-s-reserve-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/well-known/willie-s-reserve-well-known.yml
+  href: https://artifacts.apis.io/willie-s-reserve/well-known/willie-s-reserve-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/willie-s-reserve-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/authentication/willie-s-reserve-authentication.yml
+  href: https://artifacts.apis.io/willie-s-reserve/authentication/willie-s-reserve-authentication.yml
   title: ''
   type: Authentication
   url: authentication/willie-s-reserve-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/scopes/willie-s-reserve-scopes.yml
+  href: https://artifacts.apis.io/willie-s-reserve/scopes/willie-s-reserve-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/willie-s-reserve-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/conformance/willie-s-reserve-conformance.yml
+  href: https://artifacts.apis.io/willie-s-reserve/conformance/willie-s-reserve-conformance.yml
   title: ''
   type: Conformance
   url: conformance/willie-s-reserve-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/conventions/willie-s-reserve-conventions.yml
+  href: https://artifacts.apis.io/willie-s-reserve/conventions/willie-s-reserve-conventions.yml
   title: ''
   type: Conventions
   url: conventions/willie-s-reserve-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/conventions/willie-s-reserve-conventions.yml
+  href: https://artifacts.apis.io/willie-s-reserve/conventions/willie-s-reserve-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/willie-s-reserve-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/data-model/willie-s-reserve-data-model.yml
+  href: https://artifacts.apis.io/willie-s-reserve/data-model/willie-s-reserve-data-model.yml
   title: ''
   type: DataModel
   url: data-model/willie-s-reserve-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/lifecycle/willie-s-reserve-lifecycle.yml
+  href: https://artifacts.apis.io/willie-s-reserve/lifecycle/willie-s-reserve-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/willie-s-reserve-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/rate-limits/willie-s-reserve-rate-limits.yml
+  href: https://artifacts.apis.io/willie-s-reserve/rate-limits/willie-s-reserve-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/willie-s-reserve-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/plans/willie-s-reserve-plans-pricing.yml
+  href: https://artifacts.apis.io/willie-s-reserve/plans/willie-s-reserve-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/willie-s-reserve-plans-pricing.yml
@@ -145,7 +164,7 @@ plans:
 - name: Willie S Reserve Plans Pricing
   plan_count: 0
   slug: willie-s-reserve-plans-pricing
-random_paper: 9
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Willie S Reserve Rate Limits
@@ -165,7 +184,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -173,7 +192,7 @@ score:
     developer_ergonomics: 35.7
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 23.8
+  previous_composite: 23.9
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -184,14 +203,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/willie-s-reserve/refs/heads/main/screenshots/willie-s-reserve-2026-10-11T193527.png
+screenshot: https://apis.io/screenshots/willie-s-reserve/willie-s-reserve-2026-10-11T193527.png
 security:
 - kind: authentication
   name: Willie S Reserve Authentication
@@ -201,6 +220,10 @@ security:
   name: Willie S Reserve Domain Security
   slug: willie-s-reserve-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: willie-s-reserve-agent-purchase
+  slug: willie-s-reserve-agent-purchase
 slug: willie-s-reserve
 tags:
 - Company

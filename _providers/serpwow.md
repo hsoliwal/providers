@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 33.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -54,15 +57,12 @@ apis:
   description: The real-time Search API from SerpWow — GET /search, /places, /shopping, /news, /product and /place_reviews against https://api.serpwow.com/live, authenticated with an api_key query parameter and mete
   name: SerpWow Search API
   slug: serpwow-search-api
-artifact_total: 12
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Serpwow Batches Webhooks
   slug: serpwow-batches-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SerpWow Search API
   slug: open-serpwow-search-api
@@ -71,7 +71,7 @@ collections:
   slug: open-serpwow
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/finops/serpwow-finops.yml
+  href: https://artifacts.apis.io/serpwow/finops/serpwow-finops.yml
   title: ''
   type: FinOps
   url: finops/serpwow-finops.yml
@@ -128,7 +128,7 @@ common:
   type: StatusPage
   url: https://serpwow.statuspage.io/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/changelog/serpwow-changelog.yml
+  href: https://artifacts.apis.io/serpwow/changelog/serpwow-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/serpwow-changelog.yml
@@ -137,87 +137,87 @@ common:
   type: Postman
   url: https://www.postman.com/cyfebytraject/traject-data-apis/collection/5cd4b562-7a19-47be-ad54-c0e7d38e6579/serpwow-api
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/agentic-access/serpwow-agentic-access.yml
+  href: https://artifacts.apis.io/serpwow/agentic-access/serpwow-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/serpwow-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/security/serpwow-domain-security.yml
+  href: https://artifacts.apis.io/serpwow/security/serpwow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/serpwow-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/authentication/serpwow-authentication.yml
+  href: https://artifacts.apis.io/serpwow/authentication/serpwow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/serpwow-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/packages/serpwow-packages.yml
+  href: https://artifacts.apis.io/serpwow/packages/serpwow-packages.yml
   title: ''
   type: Packages
   url: packages/serpwow-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/packages/serpwow-packages.yml
+  href: https://artifacts.apis.io/serpwow/packages/serpwow-packages.yml
   title: ''
   type: SDKs
   url: packages/serpwow-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/llms/serpwow-llms.txt
+  href: https://artifacts.apis.io/serpwow/llms/serpwow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/serpwow-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/mcp/serpwow-mcp.yml
+  href: https://artifacts.apis.io/serpwow/mcp/serpwow-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/serpwow-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/conventions/serpwow-conventions.yml
+  href: https://artifacts.apis.io/serpwow/conventions/serpwow-conventions.yml
   title: ''
   type: Conventions
   url: conventions/serpwow-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/errors/serpwow-error-codes.yml
+  href: https://artifacts.apis.io/serpwow/errors/serpwow-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/serpwow-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/lifecycle/serpwow-lifecycle.yml
+  href: https://artifacts.apis.io/serpwow/lifecycle/serpwow-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/serpwow-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/conformance/serpwow-conformance.yml
+  href: https://artifacts.apis.io/serpwow/conformance/serpwow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/serpwow-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/sandbox/serpwow-sandbox.yml
+  href: https://artifacts.apis.io/serpwow/sandbox/serpwow-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/serpwow-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/data-model/serpwow-data-model.yml
+  href: https://artifacts.apis.io/serpwow/data-model/serpwow-data-model.yml
   title: ''
   type: DataModel
   url: data-model/serpwow-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/asyncapi/serpwow-batches-webhooks.yml
+  href: https://artifacts.apis.io/serpwow/asyncapi/serpwow-batches-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/serpwow-batches-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/serpwow/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/plans/serpwow-plans-pricing.yml
+  href: https://artifacts.apis.io/serpwow/plans/serpwow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/serpwow-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/rate-limits/serpwow-rate-limits.yml
+  href: https://artifacts.apis.io/serpwow/rate-limits/serpwow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/serpwow-rate-limits.yml
@@ -225,13 +225,13 @@ created: '2025-01-07'
 description: SerpWow is a real-time SERP (search engine results page) API from Traject Data. A single GET request to https://api.serpwow.com/live returns clean, structured JSON, HTML or CSV results from Google, Bing, Yahoo, Baidu, Yandex, Naver, Amazon or eBay, with fine-grained control over location (down to ZIP/postal code), device (desktop, tablet, mobile), language, country and result type — organic search, Maps places and reviews, Shopping, Product, News, Images, Videos, Scholar, Trends, Autocomplete, Reverse Image and Google AI Overviews. Alongside the real-time Search API, SerpWow ships a Batches API for scheduling up to 15,000 searches at a time with webhook or object-storage delivery, a free Locations API, a Destinations API that pushes result sets to S3, Google Cloud Storage, Azure Blob or any S3-compatible store, an Error Logs API, and an Account API for credit and platform-status telemetry. Billing is metered in credits with published per-tier overage rates, and requests that
   do not return HTTP 200 are not charged.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Serpwow Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: credits
+  service_category: ''
   slug: serpwow-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/serpwow.png
 layout: provider
 modified: '2026-08-27'
@@ -241,7 +241,7 @@ network: true
 overview: 'SerpWow publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Search API, and 1 more. Tagged areas include Search, SERP, Web Data, Web Scraping, and SEO.
 
 
-  The SerpWow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The SerpWow catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   SerpWow''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
@@ -249,30 +249,46 @@ plans:
 - name: Serpwow Plans Pricing
   plan_count: 5
   slug: serpwow-plans-pricing
-random_paper: 21
+- name: Serpwow Price Estimates
+  plan_count: 0
+  slug: serpwow-price-estimates
+random_paper: 23
 rate_limits:
 - limit_count: 6
   name: Serpwow Rate Limits
   slug: serpwow-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: SerpWow API Rules
+  rule_count: 39
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 1
+    warn: 1
+  slug: serpwow-rules
 score:
   band: strong
-  composite: 60.7
+  composite: 63.9
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 61.0
+    artifact_dirs: 29
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 71.1
-    contract_governance: 4.5
+    access_clarity: 78.9
+    contract_governance: 18.2
     contract_quality: 48.5
     developer_ergonomics: 75.6
     discoverability: 73.2
     operational_transparency: 71.1
-  previous_composite: 62.2
+  previous_composite: 63.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -293,14 +309,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/serpwow/refs/heads/main/screenshots/serpwow-2026-06-20T193727.png
+screenshot: https://apis.io/screenshots/serpwow/serpwow-2026-06-20T193727.png
 security:
 - kind: authentication
   name: Serpwow Authentication
@@ -310,6 +326,14 @@ security:
   name: Serpwow Domain Security
   slug: serpwow-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: serpwow-local-and-place-research
+  slug: serpwow-local-and-place-research
+- name: serpwow-product-and-shopping-data
+  slug: serpwow-product-and-shopping-data
+- name: serpwow-serp-monitoring
+  slug: serpwow-serp-monitoring
 slug: serpwow
 tags:
 - Search

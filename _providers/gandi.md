@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 18.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -121,9 +127,6 @@ apis:
 artifact_total: 37
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Gandi Domain Authorization API
   slug: open-gandi-authorization-api
 - collection_type: open
@@ -158,37 +161,37 @@ collections:
   slug: open-gandi-zone-transfers-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/plans/gandi-plans-pricing.yml
+  href: https://artifacts.apis.io/gandi/plans/gandi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gandi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/rate-limits/gandi-rate-limits.yml
+  href: https://artifacts.apis.io/gandi/rate-limits/gandi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gandi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/finops/gandi-finops.yml
+  href: https://artifacts.apis.io/gandi/finops/gandi-finops.yml
   title: ''
   type: FinOps
   url: finops/gandi-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/agentic-access/gandi-agentic-access.yml
+  href: https://artifacts.apis.io/gandi/agentic-access/gandi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gandi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/security/gandi-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gandi/security/gandi-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gandi-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/security/gandi-domain-security.yml
+  href: https://artifacts.apis.io/gandi/security/gandi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gandi-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/authentication/gandi-authentication.yml
+  href: https://artifacts.apis.io/gandi/authentication/gandi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gandi-authentication.yml
@@ -239,35 +242,51 @@ network: true
 overview: 'Gandi publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorization API, Availability API, DNSSEC API, and 14 more. Tagged areas include DNS, Domains, Domain Registrar, Email, and Hosting.
 
 
+  The Gandi catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Gandi''s developer surface includes authentication, documentation, sandbox, engineering blog, and 9 more developer resources.'
 plans:
 - name: Gandi Plans Pricing
   plan_count: 2
   slug: gandi-plans-pricing
-random_paper: 9
+random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Gandi Rate Limits
   slug: gandi-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Gandi API Rules
+  rule_count: 55
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 5
+  slug: gandi-rules
 score:
-  band: emerging
-  composite: 26.0
+  band: thin
+  composite: 29.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 36.0
+    artifact_dirs: 20
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.2
     developer_ergonomics: 31.0
     discoverability: 57.1
-    operational_transparency: 7.9
-  previous_composite: 27.5
+    operational_transparency: 18.4
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -281,13 +300,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gandi/refs/heads/main/screenshots/gandi-2026-06-20T181644.png
+screenshot: https://apis.io/screenshots/gandi/gandi-2026-06-20T181644.png
 security:
 - kind: authentication
   name: Gandi Authentication

@@ -1,4 +1,13 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source: []
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,16 +24,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 21.2
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 24.1
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://scopewise.youworkagent.online/api/v1
   baseurl_source: declared
@@ -36,44 +48,44 @@ apis:
   description: The Project Quote API from YouWork Agent — 1 operation(s) for project quote.
   name: YouWork Agent Project Quote API
   slug: youworkagent-project-quote-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
   type: Blog
   url: https://youworkagent.online/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/capabilities/youworkagent-capability-edges.yml
+  href: https://artifacts.apis.io/youworkagent/capabilities/youworkagent-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/youworkagent-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/well-known/youworkagent-provider-apis.json
+  href: https://artifacts.apis.io/youworkagent/well-known/youworkagent-provider-apis.json
   title: ''
   type: APIsJSON
   url: well-known/youworkagent-provider-apis.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/well-known/youworkagent-api-catalog.json
+  href: https://artifacts.apis.io/youworkagent/well-known/youworkagent-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/youworkagent-api-catalog.json
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/well-known/youworkagent-api-onboarding.json
+  href: https://artifacts.apis.io/youworkagent/well-known/youworkagent-api-onboarding.json
   title: ''
   type: Onboarding
   url: well-known/youworkagent-api-onboarding.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/a2a/youworkagent-agent-card.json
+  href: https://artifacts.apis.io/youworkagent/a2a/youworkagent-agent-card.json
   title: ''
   type: AgentCard
   url: a2a/youworkagent-agent-card.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/skills/youworkagent-agent-skills.json
+  href: https://artifacts.apis.io/youworkagent/skills/youworkagent-agent-skills.json
   title: ''
   type: AgentSkill
   url: skills/youworkagent-agent-skills.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/llms/youworkagent-llms.txt
+  href: https://artifacts.apis.io/youworkagent/llms/youworkagent-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/youworkagent-llms.txt
@@ -100,32 +112,48 @@ network: true
 overview: 'YouWork Agent publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Overdue Invoice Follow Up API and Project Quote API. Tagged areas include Freelance, Project Pricing, INR, Business, and Deterministic API.
 
 
+  The YouWork Agent catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   YouWork Agent''s developer surface includes engineering blog and 10 more developer resources.'
 random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: YouWork Agent API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: youworkagent-rules
 score:
-  band: emerging
-  composite: 24.9
+  band: thin
+  composite: 27.3
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 40.0
+    artifact_dirs: 11
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.1
+  delta: 1.3
   facets:
     access_clarity: 10.5
-    contract_governance: 0.0
-    contract_quality: 47.1
+    contract_governance: 13.6
+    contract_quality: 52.4
     developer_ergonomics: 27.9
-    discoverability: 78.6
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 23.8
+  previous_composite: 26.0
   provenance:
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
   regulatory:
     applies: true
@@ -133,13 +161,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 3.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/youworkagent/refs/heads/main/screenshots/youworkagent-2026-10-11T194000.png
+screenshot: https://apis.io/screenshots/youworkagent/youworkagent-2026-10-11T194000.png
 slug: youworkagent
 tags:
 - Freelance

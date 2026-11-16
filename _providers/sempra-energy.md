@@ -1,11 +1,17 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
   pricing: unknown
-  public: false
+  public: true
   source:
+  - authentication
+  - rate-limits
+  - security
   - '{''url'': ''https://www.sempra-energy.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.sempra.com/ — a different registrable domain (sempra-energy.com -> sempra.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Sempra Energy runs a Google Apigee API program. api.sempra.com is the Apigee runtime gateway — an unrouted request returns the genuine Apigee messaging.adaptors.http.flow.ApplicationNotFound JSON faul
@@ -42,42 +51,42 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/security/sempra-energy-domain-security.yml
+  href: https://artifacts.apis.io/sempra-energy/security/sempra-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sempra-energy-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/plans/sempra-energy-plans-pricing.yml
+  href: https://artifacts.apis.io/sempra-energy/plans/sempra-energy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sempra-energy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/rate-limits/sempra-energy-rate-limits.yml
+  href: https://artifacts.apis.io/sempra-energy/rate-limits/sempra-energy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sempra-energy-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/llms/sempra-energy-llms.txt
+  href: https://artifacts.apis.io/sempra-energy/llms/sempra-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sempra-energy-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/authentication/sempra-energy-authentication.yml
+  href: https://artifacts.apis.io/sempra-energy/authentication/sempra-energy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sempra-energy-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/errors/sempra-energy-problem-types.yml
+  href: https://artifacts.apis.io/sempra-energy/errors/sempra-energy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sempra-energy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/conventions/sempra-energy-conventions.yml
+  href: https://artifacts.apis.io/sempra-energy/conventions/sempra-energy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sempra-energy-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/packages/sempra-energy-packages.yml
+  href: https://artifacts.apis.io/sempra-energy/packages/sempra-energy-packages.yml
   title: ''
   type: Packages
   url: packages/sempra-energy-packages.yml
@@ -152,7 +161,7 @@ press:
 - date: ''
   title: February 27, 2020 Sempra Energy ...
   url: https://www.sec.gov/Archives/edgar/data/0000086521/000008652120000003/ex9912019123110-k.htm
-random_paper: 1
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Sempra Energy Rate Limits
@@ -189,14 +198,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/screenshots/sempra-energy-2026-10-11T125706.png
+screenshot: https://apis.io/screenshots/sempra-energy/sempra-energy-2026-10-11T125706.png
 security:
 - kind: authentication
   name: Sempra Energy Authentication

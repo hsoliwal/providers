@@ -1,15 +1,20 @@
 ---
 access_model:
-  confidence: medium
-  label: Paid · Partner onboarding (sandbox available)
-  onboarding: unknown
-  pricing: paid
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
-  - documentation
-  trial: true
-  try_now: false
+  - security
+  - sandbox
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -27,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.7
-  scored_at: '2026-10-17'
+  score: 42.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -150,7 +158,7 @@ apis:
   description: The Transactions API from Tyro Payments — 2 operation(s) for transactions.
   name: Tyro Payments Transactions API
   slug: tyro-transactions-api
-artifact_total: 38
+artifact_total: 46
 asyncapis:
 - description: ''
   name: Tyro Webhooks
@@ -196,88 +204,93 @@ collections:
   name: Pay Terminal API
   slug: open-tyro-pos-pay-terminal
 common:
+- group: commercial
+  href: https://artifacts.apis.io/tyro/plans/tyro-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tyro-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/capabilities/tyro-capability-edges.yml
+  href: https://artifacts.apis.io/tyro/capabilities/tyro-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tyro-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-pay-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-pay-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-pay-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-pos-pay-terminal-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-pos-pay-terminal-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-pos-pay-terminal-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-pos-embedded-payments-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-pos-embedded-payments-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-pos-embedded-payments-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-booking-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-booking-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-booking-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-ordering-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-ordering-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-ordering-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-menu-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-menu-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-menu-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-tables-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-tables-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-tables-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-sales-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-sales-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-sales-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-reporting-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-reporting-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-reporting-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-loyalty-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-loyalty-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-loyalty-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-refunds-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-refunds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-refunds-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-locations-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-locations-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-locations-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/overlays/tyro-connect-referrals-overlay.yaml
+  href: https://artifacts.apis.io/tyro/overlays/tyro-connect-referrals-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tyro-connect-referrals-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/agentic-access/tyro-agentic-access.yml
+  href: https://artifacts.apis.io/tyro/agentic-access/tyro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tyro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/security/tyro-domain-security.yml
+  href: https://artifacts.apis.io/tyro/security/tyro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tyro-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/authentication/tyro-authentication.yml
+  href: https://artifacts.apis.io/tyro/authentication/tyro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tyro-authentication.yml
@@ -342,82 +355,90 @@ common:
   type: Security
   url: https://www.tyro.com/security/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/well-known/tyro-openid-configuration.json
+  href: https://artifacts.apis.io/tyro/well-known/tyro-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/tyro-openid-configuration.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/well-known/tyro-well-known.yml
+  href: https://artifacts.apis.io/tyro/well-known/tyro-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tyro-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/conventions/tyro-conventions.yml
+  href: https://artifacts.apis.io/tyro/conventions/tyro-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tyro-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/errors/tyro-error-codes.yml
+  href: https://artifacts.apis.io/tyro/errors/tyro-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/tyro-error-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/errors/tyro-decline-codes.yml
+  href: https://artifacts.apis.io/tyro/errors/tyro-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/tyro-decline-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/sandbox/tyro-sandbox.yml
+  href: https://artifacts.apis.io/tyro/sandbox/tyro-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/tyro-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/lifecycle/tyro-lifecycle.yml
+  href: https://artifacts.apis.io/tyro/lifecycle/tyro-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tyro-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/changelog/tyro-changelog.yml
+  href: https://artifacts.apis.io/tyro/changelog/tyro-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tyro-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/components/tyro-components.yml
+  href: https://artifacts.apis.io/tyro/components/tyro-components.yml
   title: ''
   type: Components
   url: components/tyro-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/data-model/tyro-data-model.yml
+  href: https://artifacts.apis.io/tyro/data-model/tyro-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tyro-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/conformance/tyro-conformance.yml
+  href: https://artifacts.apis.io/tyro/conformance/tyro-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tyro-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/asyncapi/tyro-webhooks.yml
+  href: https://artifacts.apis.io/tyro/asyncapi/tyro-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/tyro-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/mcp/tyro-mcp.yml
+  href: https://artifacts.apis.io/tyro/mcp/tyro-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/tyro-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tyro/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/llms/tyro-llms.txt
+  href: https://artifacts.apis.io/tyro/llms/tyro-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tyro-llms.txt
 created: '2026-07-24'
 description: 'Tyro Payments is an ASX-listed Australian payments company and one of the country''s largest merchant acquirers outside the major banks, holding its own banking licence. Founded in 2003, Tyro provides EFTPOS terminals, in-person and online card acceptance, and integrated payments for more than 70,000 Australian merchants across hospitality, retail and health. Its developer surface, Tyro Connect, is a genuinely API-first platform: a REST API family (served from https://api.tyro.com/connect and secured with OpenID Connect / OAuth 2.0) that links Point of Sale software, ordering, booking, loyalty and reporting apps to Tyro merchants, alongside Tyro.js, mobile SDKs and Tap to Pay (SoftPOS) for card-present and online payments. Home market is Australia.'
+finops:
+- has_sources: true
+  method: derived
+  name: Tyro Finops
+  primary_unit: transaction
+  service_category: ''
+  slug: tyro-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 modified: '2026-09-16'
@@ -427,29 +448,49 @@ network: true
 overview: 'Tyro Payments publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bookings API, Connections API, Locations API, and 18 more. Tagged areas include Payments, Australia, Merchant Acquiring, Payment Gateway, and In-Person Payments.
 
 
-  The Tyro Payments catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Tyro Payments catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Tyro Payments'' developer surface includes authentication, documentation, API reference, getting-started guide, pricing, engineering blog, support, and 40 more developer resources.'
-random_paper: 0
+  Tyro Payments'' developer surface includes authentication, documentation, API reference, getting-started guide, pricing, engineering blog, support, and 41 more developer resources.'
+plans:
+- name: Tyro Plans Pricing
+  plan_count: 11
+  slug: tyro-plans-pricing
+- name: Tyro Price Estimates
+  plan_count: 0
+  slug: tyro-price-estimates
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Tyro Payments API Rules
+  rule_count: 60
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 4
+    warn: 16
+  slug: tyro-rules
 score:
-  band: developing
-  composite: 40.2
+  band: strong
+  composite: 57.8
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 40.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    artifact_dirs: 31
+    catalog_earned: 59.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 8.1
   facets:
-    access_clarity: 0.0
-    contract_governance: 18.2
+    access_clarity: 60.5
+    contract_governance: 31.8
     contract_quality: 60.3
-    developer_ergonomics: 49.4
+    developer_ergonomics: 56.5
     discoverability: 78.6
-    operational_transparency: 42.1
+    operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -457,7 +498,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 40.2
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -473,14 +514,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 29.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tyro/refs/heads/main/screenshots/tyro-2026-08-17T082516.png
+screenshot: https://apis.io/screenshots/tyro/tyro-2026-08-17T082516.png
 security:
 - kind: authentication
   name: Tyro Authentication
@@ -490,6 +531,16 @@ security:
   name: Tyro Domain Security
   slug: tyro-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Accept an online card payment and refund it
+  slug: tyro-accept-online-payment
+- name: Take an in-store payment on a Tyro EFTPOS terminal
+  slug: tyro-pay-at-terminal
+- name: Send an order into a merchant POS and track its lifecycle
+  slug: tyro-send-order-to-pos
+- name: Onboard a merchant device for Tap to Pay (Embedded Payments)
+  slug: tyro-tap-to-pay-onboard
 slug: tyro
 tags:
 - Payments

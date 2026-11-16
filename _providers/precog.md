@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.8
-  scored_at: '2026-10-17'
+  score: 46.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 4
@@ -42,7 +48,7 @@ agentic_access:
   operation_count: 62
   slug: precog-agentic-access
   summary_line: 62 operations · 35 acting · 4 human-in-the-loop
-api_count: 5
+api_count: 3
 apis:
 - baseURL: https://api.precog.cloud
   baseurl_source: declared
@@ -104,11 +110,8 @@ apis:
   description: The Stripe API from Precog — 2 operation(s) for stripe.
   name: Precog Stripe API
   slug: precog-stripe-api
-artifact_total: 34
+artifact_total: 37
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: http-api Admin API
   slug: open-precog-admin-api
@@ -147,27 +150,27 @@ collections:
   slug: open-precog-stripe-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/plans/precog-plans-pricing.yml
+  href: https://artifacts.apis.io/precog/plans/precog-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/precog-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/capabilities/precog-capability-edges.yml
+  href: https://artifacts.apis.io/precog/capabilities/precog-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/precog-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/security/precog-domain-security.yml
+  href: https://artifacts.apis.io/precog/security/precog-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/precog-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/agentic-access/precog-agentic-access.yml
+  href: https://artifacts.apis.io/precog/agentic-access/precog-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/precog-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/authentication/precog-authentication.yml
+  href: https://artifacts.apis.io/precog/authentication/precog-authentication.yml
   title: ''
   type: Authentication
   url: authentication/precog-authentication.yml
@@ -212,27 +215,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/precog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/mcp/precog-mcp.yml
+  href: https://artifacts.apis.io/precog/mcp/precog-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/precog-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/well-known/precog-well-known.yml
+  href: https://artifacts.apis.io/precog/well-known/precog-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/precog-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/well-known/precog-security.txt
+  href: https://artifacts.apis.io/precog/well-known/precog-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/precog-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/scopes/precog-scopes.yml
+  href: https://artifacts.apis.io/precog/scopes/precog-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/precog-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/security/precog-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/precog/security/precog-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/precog-vulnerability-disclosure.yml
@@ -241,7 +244,7 @@ common:
   type: Security
   url: https://api.precog.cloud/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/security/precog-trust-center.yml
+  href: https://artifacts.apis.io/precog/security/precog-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/precog-trust-center.yml
@@ -250,52 +253,60 @@ common:
   type: Compliance
   url: https://precog.com/express-security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/conformance/precog-conformance.yml
+  href: https://artifacts.apis.io/precog/conformance/precog-conformance.yml
   title: ''
   type: Conformance
   url: conformance/precog-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/errors/precog-problem-types.yml
+  href: https://artifacts.apis.io/precog/errors/precog-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/precog-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/conventions/precog-conventions.yml
+  href: https://artifacts.apis.io/precog/conventions/precog-conventions.yml
   title: ''
   type: Conventions
   url: conventions/precog-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/data-model/precog-data-model.yml
+  href: https://artifacts.apis.io/precog/data-model/precog-data-model.yml
   title: ''
   type: DataModel
   url: data-model/precog-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/precog/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/llms/precog-llms.txt
+  href: https://artifacts.apis.io/precog/llms/precog-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/precog-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/overlays/precog-public-http-api-overlay.yaml
+  href: https://artifacts.apis.io/precog/overlays/precog-public-http-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/precog-public-http-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/overlays/precog-admin-http-api-overlay.yaml
+  href: https://artifacts.apis.io/precog/overlays/precog-admin-http-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/precog-admin-http-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/overlays/precog-metadata-http-api-overlay.yaml
+  href: https://artifacts.apis.io/precog/overlays/precog-metadata-http-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/precog-metadata-http-api-overlay.yaml
 created: '2026-07-17'
 description: Precog is an enterprise AI platform that acts as a "context engine" — turning fragmented, context-stripped data from SaaS applications and databases into live semantic layers that business users can query in natural language through AI assistants like Claude and ChatGPT. Its Intelligent Ingest builds no-code ETL pipelines from any business application into a data warehouse, detecting data relationships automatically and injecting business logic, definitions and relationships during ingestion, while its AI Assistants layer adds source tracing and SQL visibility for trustworthy answers. Precog exposes a public HTTP REST API (sources, destinations, pipelines, datasets, semantic-model generation) and an OAuth-secured Model Context Protocol (MCP) server, and was surfaced through the Techstars portfolio into the API Evangelist network.
+finops:
+- has_sources: true
+  method: derived
+  name: Precog Finops
+  primary_unit: ''
+  service_category: ''
+  slug: precog-finops
+  template: true
 image: https://studio.precog.cloud/precog-logo-full.svg
 json_schemas:
 - name: Foundation Semantic Model
@@ -313,12 +324,28 @@ network: true
 overview: 'Precog publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Data Model API, Datasets API, and 9 more. Tagged areas include Company, Data Integration, ETL, Artificial Intelligence, and Semantic Layer.
 
 
+  The Precog catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Precog''s developer surface includes authentication, documentation, signup flow, pricing, engineering blog, support, and 26 more developer resources.'
 plans:
 - name: Precog Plans Pricing
   plan_count: 2
   slug: precog-plans-pricing
-random_paper: 2
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Precog API Rules
+  rule_count: 56
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 6
+    warn: 10
+  slug: precog-rules
 scopes:
 - name: Precog Scopes
   scope_count: 3
@@ -326,30 +353,30 @@ scopes:
   summary_line: 3 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 48.9
+  composite: 51.4
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 53.4
+    artifact_dirs: 26
+    catalog_earned: 59.9
     catalog_earned_first_party: 8.0
-    catalog_gap: 61.6
+    catalog_gap: 55.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: 0.8
   facets:
     access_clarity: 68.4
-    contract_governance: 18.2
-    contract_quality: 51.0
+    contract_governance: 37.9
+    contract_quality: 51.4
     developer_ergonomics: 39.9
     discoverability: 80.0
     operational_transparency: 7.9
-  previous_composite: 44.6
+  previous_composite: 50.6
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 8.3
       total: 12
     mcp: first-party
     skills: derived
@@ -359,13 +386,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/precog/refs/heads/main/screenshots/precog-2026-08-17T081331.png
+screenshot: https://apis.io/screenshots/precog/precog-2026-08-17T081331.png
 security:
 - kind: authentication
   name: Precog Authentication
@@ -383,6 +410,12 @@ security:
   name: Precog Trust Center
   slug: precog-trust-center
   summary_line: SOC 2 Type II
+skill_count: 2
+skills:
+- name: Generate a semantic model and add context with Precog
+  slug: precog-generate-semantic-model
+- name: Ingest a source into a data warehouse with Precog
+  slug: precog-ingest-source-to-warehouse
 slug: precog
 tags:
 - Company

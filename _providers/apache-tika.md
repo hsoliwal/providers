@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -109,9 +113,6 @@ apis:
 artifact_total: 49
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Apache Tika Server REST Apache Tika Server REST API API
   slug: open-apache-tika-apache-tika-server-rest-api-api
 - collection_type: open
@@ -152,17 +153,17 @@ collections:
   slug: open-apache-tika
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/plans/apache-tika-plans-pricing.yml
+  href: https://artifacts.apis.io/apache-tika/plans/apache-tika-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apache-tika-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/rate-limits/apache-tika-rate-limits.yml
+  href: https://artifacts.apis.io/apache-tika/rate-limits/apache-tika-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apache-tika-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/finops/apache-tika-finops.yml
+  href: https://artifacts.apis.io/apache-tika/finops/apache-tika-finops.yml
   title: ''
   type: FinOps
   url: finops/apache-tika-finops.yml
@@ -187,17 +188,17 @@ common:
   type: License
   url: https://github.com/apache/tika/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/agentic-access/apache-tika-agentic-access.yml
+  href: https://artifacts.apis.io/apache-tika/agentic-access/apache-tika-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apache-tika-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/security/apache-tika-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apache-tika/security/apache-tika-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apache-tika-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/security/apache-tika-domain-security.yml
+  href: https://artifacts.apis.io/apache-tika/security/apache-tika-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apache-tika-domain-security.yml
@@ -254,7 +255,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apache Tika Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apache-tika-finops
   template: true
@@ -278,30 +279,46 @@ network: true
 overview: 'Apache Tika is listed with 13 APIs on the [APIs.io](https://apis.io/) network, including Apache Tika Server REST API, Detect API, Detectors API, and 10 more. Tagged areas include Content Extraction, Document Processing, Metadata, Text Extraction, and Open Source.
 
 
+  The Apache Tika catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Apache Tika''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 14 more developer resources.'
 plans:
 - name: Apache Tika Plans Pricing
   plan_count: 3
   slug: apache-tika-plans-pricing
-random_paper: 2
+random_paper: 0
 rate_limits:
 - limit_count: 5
   name: Apache Tika Rate Limits
   slug: apache-tika-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 75
+  extends:
+  - spectral:oas
+  name: Apache Tika API Rules
+  rule_count: 34
+  severity_counts:
+    error: 32
+    hint: 0
+    info: 1
+    warn: 1
+  slug: apache-tika-rules
 score:
   band: thin
-  composite: 32.7
+  composite: 34.2
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 41.0
+    artifact_dirs: 14
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 33.7
     developer_ergonomics: 26.2
     discoverability: 62.5
@@ -309,7 +326,7 @@ score:
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 34.1
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     contracts:
@@ -323,13 +340,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apache-tika/refs/heads/main/screenshots/apache-tika-2026-06-20T172153.png
+screenshot: https://apis.io/screenshots/apache-tika/apache-tika-2026-06-20T172153.png
 security:
 - kind: domain-security
   name: Apache Tika Domain Security

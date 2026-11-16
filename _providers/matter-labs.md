@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Ethereum-compatible JSON-RPC 2.0 API for the ZKsync Era ZK rollup. Standard eth_* methods plus the ZKsync-specific zks_* namespace (batches, bridging, fee estimation, proofs) over HTTPS POST, with a W
@@ -46,7 +50,7 @@ asyncapis:
   slug: matter-labs-pubsub-asyncapi
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/security/matter-labs-domain-security.yml
+  href: https://artifacts.apis.io/matter-labs/security/matter-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/matter-labs-domain-security.yml
@@ -83,62 +87,62 @@ common:
   type: PrivacyPolicy
   url: https://www.zksync.io/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/packages/matter-labs-packages.yml
+  href: https://artifacts.apis.io/matter-labs/packages/matter-labs-packages.yml
   title: ''
   type: Packages
   url: packages/matter-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/packages/matter-labs-packages.yml
+  href: https://artifacts.apis.io/matter-labs/packages/matter-labs-packages.yml
   title: ''
   type: SDKs
   url: packages/matter-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/cli/matter-labs-cli.yml
+  href: https://artifacts.apis.io/matter-labs/cli/matter-labs-cli.yml
   title: ''
   type: CLI
   url: cli/matter-labs-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/authentication/matter-labs-authentication.yml
+  href: https://artifacts.apis.io/matter-labs/authentication/matter-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/matter-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/conventions/matter-labs-conventions.yml
+  href: https://artifacts.apis.io/matter-labs/conventions/matter-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/matter-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/conformance/matter-labs-conformance.yml
+  href: https://artifacts.apis.io/matter-labs/conformance/matter-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/matter-labs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/errors/matter-labs-problem-types.yml
+  href: https://artifacts.apis.io/matter-labs/errors/matter-labs-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/matter-labs-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/lifecycle/matter-labs-lifecycle.yml
+  href: https://artifacts.apis.io/matter-labs/lifecycle/matter-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/matter-labs-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/well-known/matter-labs-well-known.yml
+  href: https://artifacts.apis.io/matter-labs/well-known/matter-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/matter-labs-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/mcp/matter-labs-mcp.yml
+  href: https://artifacts.apis.io/matter-labs/mcp/matter-labs-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/matter-labs-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/llms/matter-labs-llms.txt
+  href: https://artifacts.apis.io/matter-labs/llms/matter-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/matter-labs-llms.txt
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/asyncapi/matter-labs-pubsub-asyncapi.yml
+  href: https://artifacts.apis.io/matter-labs/asyncapi/matter-labs-pubsub-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/matter-labs-pubsub-asyncapi.yml
@@ -157,12 +161,12 @@ overview: 'Matter Labs is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Matter Labs'' developer surface includes documentation, API reference, quickstart, CLI, authentication, and 16 more developer resources.'
-random_paper: 16
+random_paper: 12
 score:
   band: thin
   composite: 36.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -186,14 +190,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/matter-labs/refs/heads/main/screenshots/matter-labs-2026-07-25T230425.png
+screenshot: https://apis.io/screenshots/matter-labs/matter-labs-2026-07-25T230425.png
 security:
 - kind: authentication
   name: Matter Labs Authentication

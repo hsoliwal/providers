@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for the EasyPay/Fawaterak payment gateway. Authenticated with a vendor Bearer token, it lists available payment methods, creates invoice and payment links, initiates payment on an invoice, an
@@ -88,42 +91,42 @@ common:
   type: Support
   url: https://fawaterk.com/contact-us/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/authentication/easypay-authentication.yml
+  href: https://artifacts.apis.io/easypay/authentication/easypay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/easypay-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/conventions/easypay-conventions.yml
+  href: https://artifacts.apis.io/easypay/conventions/easypay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/easypay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/errors/easypay-problem-types.yml
+  href: https://artifacts.apis.io/easypay/errors/easypay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/easypay-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/rate-limits/easypay-rate-limits.yml
+  href: https://artifacts.apis.io/easypay/rate-limits/easypay-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/easypay-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/lifecycle/easypay-lifecycle.yml
+  href: https://artifacts.apis.io/easypay/lifecycle/easypay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/easypay-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/security/easypay-domain-security.yml
+  href: https://artifacts.apis.io/easypay/security/easypay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/easypay-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/well-known/easypay-well-known.yml
+  href: https://artifacts.apis.io/easypay/well-known/easypay-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/easypay-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/mcp/easypay-mcp.yml
+  href: https://artifacts.apis.io/easypay/mcp/easypay-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/easypay-mcp.yml
@@ -139,7 +142,7 @@ overview: 'EasyPay is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   EasyPay''s developer surface includes documentation, API reference, signup flow, pricing, engineering blog, support, authentication, and 12 more developer resources.'
-random_paper: 16
+random_paper: 20
 rate_limits:
 - limit_count: 1
   name: Easypay Rate Limits
@@ -180,14 +183,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 17.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/easypay/refs/heads/main/screenshots/easypay-2026-07-25T212717.png
+screenshot: https://apis.io/screenshots/easypay/easypay-2026-07-25T212717.png
 security:
 - kind: authentication
   name: Easypay Authentication

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
+  score: 35.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -155,44 +158,49 @@ apis:
   description: The Webhooks (v1) API from August Health — 1 operation(s) for webhooks (v1).
   name: August Health Webhooks (v1) API
   slug: august-health-webhooks-v1-api
-artifact_total: 36
+artifact_total: 40
 asyncapis:
 - description: Event surface for the August Health EHR platform. Consumers subscribe via the webhooks application portal and receive HTTP POST callbacks. Each delivery carries the envelope { eventType, eventId, even
   name: August Health Webhooks
   slug: august-health-events-asyncapi
 common:
+- group: other
+  href: https://artifacts.apis.io/august-health/capabilities/august-health-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/august-health-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/agentic-access/august-health-agentic-access.yml
+  href: https://artifacts.apis.io/august-health/agentic-access/august-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/august-health-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/rules/august-health-rules.yml
+  href: https://artifacts.apis.io/august-health/rules/august-health-rules.yml
   title: ''
   type: Spectral
   url: rules/august-health-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/json-ld/august-health-context.jsonld
+  href: https://artifacts.apis.io/august-health/json-ld/august-health-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/august-health-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/vocabulary/august-health-vocabulary.yml
+  href: https://artifacts.apis.io/august-health/vocabulary/august-health-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/august-health-vocabulary.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/security/august-health-trust-center.yml
+  href: https://artifacts.apis.io/august-health/security/august-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/august-health-trust-center.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/hosts/august-health-hosts.yml
+  href: https://artifacts.apis.io/august-health/hosts/august-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/august-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/vendors/august-health-vendors.yml
+  href: https://artifacts.apis.io/august-health/vendors/august-health-vendors.yml
   title: ''
   type: Vendors
   url: vendors/august-health-vendors.yml
@@ -257,72 +265,72 @@ common:
   type: Compliance
   url: https://trust.augusthealth.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/authentication/august-health-authentication.yml
+  href: https://artifacts.apis.io/august-health/authentication/august-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/august-health-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/conventions/august-health-conventions.yml
+  href: https://artifacts.apis.io/august-health/conventions/august-health-conventions.yml
   title: ''
   type: Conventions
   url: conventions/august-health-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/conventions/august-health-conventions.yml
+  href: https://artifacts.apis.io/august-health/conventions/august-health-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/august-health-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/rate-limits/august-health-rate-limits.yml
+  href: https://artifacts.apis.io/august-health/rate-limits/august-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/august-health-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/errors/august-health-problem-types.yml
+  href: https://artifacts.apis.io/august-health/errors/august-health-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/august-health-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/lifecycle/august-health-lifecycle.yml
+  href: https://artifacts.apis.io/august-health/lifecycle/august-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/august-health-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/conformance/august-health-conformance.yml
+  href: https://artifacts.apis.io/august-health/conformance/august-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/august-health-conformance.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/asyncapi/august-health-events-asyncapi.yml
+  href: https://artifacts.apis.io/august-health/asyncapi/august-health-events-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/august-health-events-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/asyncapi/august-health-events-asyncapi.yml
+  href: https://artifacts.apis.io/august-health/asyncapi/august-health-events-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/august-health-events-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/mcp/august-health-mcp.yml
+  href: https://artifacts.apis.io/august-health/mcp/august-health-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/august-health-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/august-health/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/data-model/august-health-data-model.yml
+  href: https://artifacts.apis.io/august-health/data-model/august-health-data-model.yml
   title: ''
   type: DataModel
   url: data-model/august-health-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/llms/august-health-llms.txt
+  href: https://artifacts.apis.io/august-health/llms/august-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/august-health-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/security/august-health-domain-security.yml
+  href: https://artifacts.apis.io/august-health/security/august-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/august-health-domain-security.yml
@@ -364,7 +372,7 @@ overview: 'August Health publishes 22 API contracts indexed on the [APIs.io](htt
   The August Health catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  August Health''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 30 more developer resources.'
+  August Health''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 31 more developer resources.'
 random_paper: 20
 rate_limits:
 - limit_count: 1
@@ -384,24 +392,24 @@ rules:
     warn: 2
   slug: august-health-rules
 score:
-  band: developing
-  composite: 53.6
+  band: strong
+  composite: 58.7
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 27
     catalog_earned: 70.8
     catalog_earned_first_party: 8.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 13.6
+  delta: 5.1
   facets:
     access_clarity: 27.6
     contract_governance: 35.6
-    contract_quality: 69.3
-    developer_ergonomics: 39.9
-    discoverability: 75.0
+    contract_quality: 74.6
+    developer_ergonomics: 58.9
+    discoverability: 74.1
     operational_transparency: 47.4
-  previous_composite: 40.0
+  previous_composite: 53.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -422,13 +430,13 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: rising
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/august-health/refs/heads/main/screenshots/august-health-2026-07-25T201720.png
+screenshot: https://apis.io/screenshots/august-health/august-health-2026-07-25T201720.png
 security:
 - kind: authentication
   name: August Health Authentication
@@ -442,6 +450,16 @@ security:
   name: August Health Trust Center
   slug: august-health-trust-center
   summary_line: SOC 2, HIPAA, AICPA
+skill_count: 4
+skills:
+- name: Keep a community's resident roster in sync
+  slug: august-health-census-sync
+- name: Build a dining / point-of-sale integration
+  slug: august-health-dining-integration
+- name: Retrieve clinical data and write visit notes as an external provider
+  slug: august-health-external-provider
+- name: Record a batch of collected payments as a deposit
+  slug: august-health-record-deposit
 slug: august-health
 tags:
 - Company

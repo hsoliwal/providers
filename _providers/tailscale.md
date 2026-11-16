@@ -1,15 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -82,9 +90,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Tailscale REST Devices API
   slug: open-tailscale-devices-api
 - collection_type: open
@@ -110,42 +115,42 @@ collections:
   slug: open-tailscale
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/rate-limits/tailscale-rate-limits.yml
+  href: https://artifacts.apis.io/tailscale/rate-limits/tailscale-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tailscale-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/plans/tailscale-plans-pricing.yml
+  href: https://artifacts.apis.io/tailscale/plans/tailscale-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tailscale-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/capabilities/tailscale-capability-edges.yml
+  href: https://artifacts.apis.io/tailscale/capabilities/tailscale-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tailscale-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/agentic-access/tailscale-agentic-access.yml
+  href: https://artifacts.apis.io/tailscale/agentic-access/tailscale-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tailscale-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/security/tailscale-trust-center.yml
+  href: https://artifacts.apis.io/tailscale/security/tailscale-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tailscale-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/security/tailscale-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tailscale/security/tailscale-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tailscale-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/security/tailscale-domain-security.yml
+  href: https://artifacts.apis.io/tailscale/security/tailscale-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tailscale-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/authentication/tailscale-authentication.yml
+  href: https://artifacts.apis.io/tailscale/authentication/tailscale-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tailscale-authentication.yml
@@ -188,6 +193,9 @@ network: true
 overview: 'Tailscale publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Devices API, DNS API, Invites API, and 4 more. Tagged areas include VPN, Mesh Networking, WireGuard, Zero Trust, and Networking.
 
 
+  The Tailscale catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tailscale''s developer surface includes authentication, documentation, pricing, signup flow, GitHub presence, engineering blog, and 9 more developer resources.'
 plans:
 - name: Tailscale Plans Pricing
@@ -196,30 +204,43 @@ plans:
 - name: Tailscale Price Estimates
   plan_count: 0
   slug: tailscale-price-estimates
-random_paper: 0
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Tailscale Rate Limits
   slug: tailscale-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Tailscale API Rules
+  rule_count: 41
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 1
+    warn: 1
+  slug: tailscale-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 42.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 57.0
+    artifact_dirs: 16
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 63.2
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.3
     developer_ergonomics: 23.8
     discoverability: 66.1
-    operational_transparency: 26.3
-  previous_composite: 39.1
+    operational_transparency: 36.8
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     contracts:
@@ -233,13 +254,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tailscale/refs/heads/main/screenshots/tailscale-2026-06-20T194858.png
+screenshot: https://apis.io/screenshots/tailscale/tailscale-2026-06-20T194858.png
 security:
 - kind: authentication
   name: Tailscale Authentication

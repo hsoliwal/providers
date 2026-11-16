@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.9
-  scored_at: '2026-10-17'
+  score: 48.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://voice.getprosperapp.com
@@ -67,11 +72,8 @@ apis:
   description: The Targets API from Prosper AI — 1 operation(s) for targets.
   name: Prosper AI Targets API
   slug: prosper-ai-targets-api
-artifact_total: 17
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Prosper Voice API Keys API
   slug: open-prosper-ai-api-keys-api
@@ -92,12 +94,12 @@ collections:
   slug: open-prosper-ai-targets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/overlays/prosper-ai-voice-overlay.yaml
+  href: https://artifacts.apis.io/prosper-ai/overlays/prosper-ai-voice-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/prosper-ai-voice-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/security/prosper-ai-domain-security.yml
+  href: https://artifacts.apis.io/prosper-ai/security/prosper-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prosper-ai-domain-security.yml
@@ -118,32 +120,32 @@ common:
   type: GettingStarted
   url: https://docs.getprosperapp.com/quickstart/campaign-call
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/mcp/prosper-ai-mcp.yml
+  href: https://artifacts.apis.io/prosper-ai/mcp/prosper-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/prosper-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/llms/prosper-ai-llms.txt
+  href: https://artifacts.apis.io/prosper-ai/llms/prosper-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prosper-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/well-known/prosper-ai-well-known.yml
+  href: https://artifacts.apis.io/prosper-ai/well-known/prosper-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/prosper-ai-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/authentication/prosper-ai-authentication.yml
+  href: https://artifacts.apis.io/prosper-ai/authentication/prosper-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prosper-ai-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/prosper-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/conformance/prosper-ai-conformance.yml
+  href: https://artifacts.apis.io/prosper-ai/conformance/prosper-ai-conformance.yml
   title: ''
   type: Compliance
   url: conformance/prosper-ai-conformance.yml
@@ -190,8 +192,24 @@ network: true
 overview: 'Prosper AI publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Keys API, Call Logs API, Campaigns API, and 3 more. Tagged areas include Company, Healthcare, Voice AI, Revenue Cycle Management, and Patient Access.
 
 
+  The Prosper AI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Prosper AI''s developer surface includes documentation, API reference, getting-started guide, authentication, signup flow, engineering blog, and 13 more developer resources.'
-random_paper: 14
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Prosper AI API Rules
+  rule_count: 41
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 1
+    warn: 4
+  slug: prosper-ai-rules
 scopes:
 - name: Prosper Ai Scopes
   scope_count: 1
@@ -199,23 +217,23 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 45.3
+  composite: 46.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 38.5
     developer_ergonomics: 58.9
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 45.2
+  previous_composite: 46.9
   provenance:
     conformance: first-party
     contracts:
@@ -235,13 +253,13 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/prosper-ai/refs/heads/main/screenshots/prosper-ai-2026-08-17T081402.png
+screenshot: https://apis.io/screenshots/prosper-ai/prosper-ai-2026-08-17T081402.png
 security:
 - kind: authentication
   name: Prosper Ai Authentication
@@ -251,6 +269,12 @@ security:
   name: Prosper Ai Domain Security
   slug: prosper-ai-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Export call logs and outcomes from a Prosper campaign
+  slug: prosper-ai-export-call-data
+- name: Add targets and launch calls in a Prosper campaign
+  slug: prosper-ai-launch-campaign-calls
 slug: prosper-ai
 tags:
 - Company

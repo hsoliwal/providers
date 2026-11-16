@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nervonik/refs/heads/main/security/nervonik-domain-security.yml
+  href: https://artifacts.apis.io/nervonik/security/nervonik-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nervonik-domain-security.yml
@@ -72,17 +75,17 @@ common:
   type: Team
   url: https://nervonik.com/team/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nervonik/refs/heads/main/llms/nervonik-llms.txt
+  href: https://artifacts.apis.io/nervonik/llms/nervonik-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nervonik-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nervonik/refs/heads/main/plans/nervonik-plans-pricing.yml
+  href: https://artifacts.apis.io/nervonik/plans/nervonik-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nervonik-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nervonik/refs/heads/main/rate-limits/nervonik-rate-limits.yml
+  href: https://artifacts.apis.io/nervonik/rate-limits/nervonik-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nervonik-rate-limits.yml
@@ -116,7 +119,7 @@ plans:
 - name: Nervonik Plans Pricing
   plan_count: 0
   slug: nervonik-plans-pricing
-random_paper: 18
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Nervonik Rate Limits
@@ -125,7 +128,7 @@ score:
   band: minimal
   composite: 8.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -146,14 +149,14 @@ score:
     regime: Health
     regime_id: health
     score: 7.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nervonik/refs/heads/main/screenshots/nervonik-2026-09-02T150733.png
+screenshot: https://apis.io/screenshots/nervonik/nervonik-2026-09-02T150733.png
 security:
 - kind: domain-security
   name: Nervonik Domain Security

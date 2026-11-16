@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.1
-  scored_at: '2026-10-17'
+  score: 18.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -71,9 +75,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Loki HTTP Config API
   slug: open-loki-config-api
 - collection_type: open
@@ -93,22 +94,22 @@ collections:
   slug: open-loki
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/plans/loki-plans-pricing.yml
+  href: https://artifacts.apis.io/loki/plans/loki-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/loki-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/rate-limits/loki-rate-limits.yml
+  href: https://artifacts.apis.io/loki/rate-limits/loki-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/loki-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/finops/loki-finops.yml
+  href: https://artifacts.apis.io/loki/finops/loki-finops.yml
   title: ''
   type: FinOps
   url: finops/loki-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/capabilities/loki-capability-edges.yml
+  href: https://artifacts.apis.io/loki/capabilities/loki-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/loki-capability-edges.yml
@@ -133,17 +134,17 @@ common:
   type: License
   url: https://github.com/grafana/loki/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/agentic-access/loki-agentic-access.yml
+  href: https://artifacts.apis.io/loki/agentic-access/loki-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/loki-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/security/loki-trust-center.yml
+  href: https://artifacts.apis.io/loki/security/loki-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/loki-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/security/loki-domain-security.yml
+  href: https://artifacts.apis.io/loki/security/loki-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/loki-domain-security.yml
@@ -169,7 +170,7 @@ finops:
 - has_sources: false
   method: generated
   name: Loki Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: loki-finops
   template: true
@@ -182,30 +183,46 @@ network: true
 overview: 'Loki is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Config API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Open Source, and Grafana.
 
 
+  The Loki catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Loki''s developer surface includes documentation, engineering blog, and 14 more developer resources.'
 plans:
 - name: Loki Plans Pricing
   plan_count: 3
   slug: loki-plans-pricing
-random_paper: 13
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Loki Rate Limits
   slug: loki-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 74
+  extends:
+  - spectral:oas
+  name: Loki API Rules
+  rule_count: 33
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 1
+    warn: 1
+  slug: loki-rules
 score:
   band: thin
-  composite: 27.0
+  composite: 28.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 31.0
+    artifact_dirs: 14
+    catalog_earned: 35.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 84.0
+    catalog_gap: 79.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 33.7
     developer_ergonomics: 11.9
     discoverability: 44.6
@@ -213,7 +230,7 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 28.4
+  previous_composite: 28.5
   provenance:
     agentic_access: derived
     contracts:
@@ -227,13 +244,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/screenshots/loki-2026-06-20T184708.png
+screenshot: https://apis.io/screenshots/loki/loki-2026-06-20T184708.png
 security:
 - kind: domain-security
   name: Loki Domain Security

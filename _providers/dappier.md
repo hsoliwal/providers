@@ -1,29 +1,43 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
-    protected_resource_metadata: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
+    protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-10-17'
+  score: 25.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -40,78 +54,83 @@ apis:
   slug: dappier-app-api
 artifact_total: 8
 common:
+- group: build
+  href: https://artifacts.apis.io/dappier/integrations/dappier-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/dappier-integration-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/vocabulary/dappier-vocabulary.yml
+  href: https://artifacts.apis.io/dappier/vocabulary/dappier-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dappier-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/data-model/dappier-data-model.yml
+  href: https://artifacts.apis.io/dappier/data-model/dappier-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dappier-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/agentic-access/dappier-agentic-access.yml
+  href: https://artifacts.apis.io/dappier/agentic-access/dappier-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dappier-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/rules/dappier-rules.yml
+  href: https://artifacts.apis.io/dappier/rules/dappier-rules.yml
   title: ''
   type: Spectral
   url: rules/dappier-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/authentication/dappier-authentication.yml
+  href: https://artifacts.apis.io/dappier/authentication/dappier-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dappier-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/conformance/dappier-conformance.yml
+  href: https://artifacts.apis.io/dappier/conformance/dappier-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dappier-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/overlays/dappier-openapi-overlay.yaml
+  href: https://artifacts.apis.io/dappier/overlays/dappier-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/dappier-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/llms/dappier-llms.txt
+  href: https://artifacts.apis.io/dappier/llms/dappier-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dappier-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/a2a/dappier-a2a.yml
+  href: https://artifacts.apis.io/dappier/a2a/dappier-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/dappier-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/mcp/dappier-mcp.yml
+  href: https://artifacts.apis.io/dappier/mcp/dappier-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/dappier-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/well-known/dappier-well-known.yml
+  href: https://artifacts.apis.io/dappier/well-known/dappier-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dappier-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/hosts/dappier-hosts.yml
+  href: https://artifacts.apis.io/dappier/hosts/dappier-hosts.yml
   title: ''
   type: Hosts
   url: hosts/dappier-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/vendors/dappier-vendors.yml
+  href: https://artifacts.apis.io/dappier/vendors/dappier-vendors.yml
   title: ''
   type: Vendors
   url: vendors/dappier-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/packages/dappier-packages.yml
+  href: https://artifacts.apis.io/dappier/packages/dappier-packages.yml
   title: ''
   type: SDKs
   url: packages/dappier-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/packages/dappier-packages.yml
+  href: https://artifacts.apis.io/dappier/packages/dappier-packages.yml
   title: ''
   type: Packages
   url: packages/dappier-packages.yml
@@ -120,7 +139,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/DappierAI
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dappier/refs/heads/main/security/dappier-domain-security.yml
+  href: https://artifacts.apis.io/dappier/security/dappier-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dappier-domain-security.yml
@@ -204,38 +223,40 @@ overview: 'Dappier publishes 1 API contract indexed on the [APIs.io](https://api
   The Dappier catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Dappier''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 20 more developer resources.'
-random_paper: 15
+  Dappier''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 21 more developer resources.'
+random_paper: 21
 rules:
 - authorship: generated
-  effective_rule_count: 50
+  effective_rule_count: 81
   extends:
   - spectral:oas
   name: Dappier API Rules
-  rule_count: 9
+  rule_count: 40
   severity_counts:
-    error: 7
+    error: 38
     hint: 0
     info: 1
     warn: 1
   slug: dappier-rules
 score:
-  band: developing
-  composite: 43.0
+  band: thin
+  composite: 34.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 22
     catalog_earned: 51.8
     catalog_earned_first_party: 0.0
     catalog_gap: 63.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.6
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 50.2
-    developer_ergonomics: 64.3
+    developer_ergonomics: 41.7
     discoverability: 75.0
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -250,12 +271,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/dappier/dappier-2026-11-03T130103.png
 security:
 - kind: authentication
   name: Dappier Authentication

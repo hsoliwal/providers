@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,20 +37,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public gRPC API for the StellarStation ground-station-as-a-service platform. Lets satellite operators list upcoming available passes, reserve and cancel plans, add and retrieve TLE orbital data, set p
   name: StellarStation API
   slug: stellarstation-api
-artifact_total: 3
+artifact_total: 5
 common:
 - group: company
   title: ''
   type: Blog
   url: https://www.infostellar.net/news/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/security/infostellar-domain-security.yml
+  href: https://artifacts.apis.io/infostellar/security/infostellar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infostellar-domain-security.yml
@@ -79,67 +83,67 @@ common:
   type: ChangeLog
   url: https://github.com/infostellarinc/stellarstation-api/releases
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/changelog/infostellar-changelog.yml
+  href: https://artifacts.apis.io/infostellar/changelog/infostellar-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/infostellar-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/lifecycle/infostellar-lifecycle.yml
+  href: https://artifacts.apis.io/infostellar/lifecycle/infostellar-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/infostellar-lifecycle.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/grpc/infostellar-stellarstation.proto
+  href: https://artifacts.apis.io/infostellar/grpc/infostellar-stellarstation.proto
   title: ''
   type: Protobuf
   url: grpc/infostellar-stellarstation.proto
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/packages/infostellar-packages.yml
+  href: https://artifacts.apis.io/infostellar/packages/infostellar-packages.yml
   title: ''
   type: Packages
   url: packages/infostellar-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/packages/infostellar-packages.yml
+  href: https://artifacts.apis.io/infostellar/packages/infostellar-packages.yml
   title: ''
   type: SDKs
   url: packages/infostellar-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/authentication/infostellar-authentication.yml
+  href: https://artifacts.apis.io/infostellar/authentication/infostellar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infostellar-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/conformance/infostellar-conformance.yml
+  href: https://artifacts.apis.io/infostellar/conformance/infostellar-conformance.yml
   title: ''
   type: Conformance
   url: conformance/infostellar-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/conventions/infostellar-conventions.yml
+  href: https://artifacts.apis.io/infostellar/conventions/infostellar-conventions.yml
   title: ''
   type: Conventions
   url: conventions/infostellar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/data-model/infostellar-data-model.yml
+  href: https://artifacts.apis.io/infostellar/data-model/infostellar-data-model.yml
   title: ''
   type: DataModel
   url: data-model/infostellar-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/errors/infostellar-problem-types.yml
+  href: https://artifacts.apis.io/infostellar/errors/infostellar-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/infostellar-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/mcp/infostellar-mcp.yml
+  href: https://artifacts.apis.io/infostellar/mcp/infostellar-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/infostellar-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/infostellar/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/llms/infostellar-llms.txt
+  href: https://artifacts.apis.io/infostellar/llms/infostellar-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/infostellar-llms.txt
@@ -155,18 +159,18 @@ overview: 'Infostellar is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Infostellar''s developer surface includes engineering blog, documentation, API reference, changelog, authentication, and 17 more developer resources.'
-random_paper: 21
+random_paper: 11
 score:
   band: thin
   composite: 26.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
@@ -181,7 +185,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 25.8
+  previous_composite: 26.4
   provenance:
     conformance: derived
     mcp: derived
@@ -192,14 +196,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/screenshots/infostellar-2026-07-25T222423.png
+screenshot: https://apis.io/screenshots/infostellar/infostellar-2026-07-25T222423.png
 security:
 - kind: authentication
   name: Infostellar Authentication
@@ -209,6 +213,12 @@ security:
   name: Infostellar Domain Security
   slug: infostellar-domain-security
   summary_line: TLSv1.3 · DNSSEC
+skill_count: 2
+skills:
+- name: Manage satellite TLE orbital data
+  slug: infostellar-manage-tle-orbital-data
+- name: Schedule and stream a satellite pass
+  slug: infostellar-schedule-and-stream-pass
 slug: infostellar
 tags:
 - Company

@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,18 +38,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for the Solarize meter-to-cash platform — customers, sites, meters, contracts, measurements, readings, invoices, payments, pricing, and outgoing webhooks. JSON over HTTPS, JWT bearer auth, of
   name: Solarize API
   slug: solarize-api
-artifact_total: 5
+artifact_total: 7
 asyncapis:
 - description: Outgoing webhooks deliver entity lifecycle and bill-run events to an external endpoint configured in the Solarize app (Settings > Notifications), where the endpoint URL, optional headers, and triggeri
   name: Solarize Outgoing Webhooks
   slug: solarize-webhooks-asyncapi
 common:
+- group: commercial
+  href: https://artifacts.apis.io/solarize/plans/solarize-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/solarize-plans-pricing.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -92,67 +100,75 @@ common:
   type: StatusPage
   url: https://solarize.statuspage.io
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/authentication/solarize-authentication.yml
+  href: https://artifacts.apis.io/solarize/authentication/solarize-authentication.yml
   title: ''
   type: Authentication
   url: authentication/solarize-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/conventions/solarize-conventions.yml
+  href: https://artifacts.apis.io/solarize/conventions/solarize-conventions.yml
   title: ''
   type: Conventions
   url: conventions/solarize-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/rate-limits/solarize-rate-limits.yml
+  href: https://artifacts.apis.io/solarize/rate-limits/solarize-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/solarize-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/lifecycle/solarize-lifecycle.yml
+  href: https://artifacts.apis.io/solarize/lifecycle/solarize-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/solarize-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/lifecycle/solarize-lifecycle.yml
+  href: https://artifacts.apis.io/solarize/lifecycle/solarize-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/solarize-lifecycle.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/asyncapi/solarize-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/solarize/asyncapi/solarize-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/solarize-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/asyncapi/solarize-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/solarize/asyncapi/solarize-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/solarize-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/data-model/solarize-data-model.yml
+  href: https://artifacts.apis.io/solarize/data-model/solarize-data-model.yml
   title: ''
   type: DataModel
   url: data-model/solarize-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/mcp/solarize-mcp.yml
+  href: https://artifacts.apis.io/solarize/mcp/solarize-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/solarize-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/conformance/solarize-conformance.yml
+  href: https://artifacts.apis.io/solarize/conformance/solarize-conformance.yml
   title: ''
   type: Conformance
   url: conformance/solarize-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/security/solarize-domain-security.yml
+  href: https://artifacts.apis.io/solarize/security/solarize-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/solarize-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/llms/solarize-llms.txt
+  href: https://artifacts.apis.io/solarize/llms/solarize-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/solarize-llms.txt
 created: '2026-07-17'
 description: Solarize is a German energy software company offering a meter-to-cash billing platform as a software-as-a-service for utilities, municipal utilities (Stadtwerke), and energy providers. The platform converts metering data into a revenue stream through automated billing and invoicing, metering data management, monitoring and reporting, and flexible electricity-product configuration. Solarize exposes a REST API at api.solarize.energy covering customers, sites, meters, contracts, measurements, readings, invoices, payments, pricing, and outgoing webhooks, enabling open-architecture integration with ERP, CRM, and metering-operator systems.
+finops:
+- has_sources: true
+  method: derived
+  name: Solarize Finops
+  primary_unit: ''
+  service_category: ''
+  slug: solarize-finops
+  template: true
 image: https://api-docs.solarize.energy/_next/static/media/solarize-api-docs.b9d189f5.png
 layout: provider
 modified: '2026-10-06'
@@ -165,8 +181,12 @@ overview: 'Solarize is listed with 1 API on the [APIs.io](https://apis.io/) netw
   The Solarize catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Solarize''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 16 more developer resources.'
-random_paper: 15
+  Solarize''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 17 more developer resources.'
+plans:
+- name: Solarize Plans Pricing
+  plan_count: 0
+  slug: solarize-plans-pricing
+random_paper: 9
 rate_limits:
 - limit_count: 1
   name: Solarize Rate Limits
@@ -175,7 +195,7 @@ score:
   band: developing
   composite: 39.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -204,14 +224,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/solarize/refs/heads/main/screenshots/solarize-2026-09-02T160114.png
+screenshot: https://apis.io/screenshots/solarize/solarize-2026-09-02T160114.png
 security:
 - kind: authentication
   name: Solarize Authentication

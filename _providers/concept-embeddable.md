@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-09-03'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -23,7 +23,7 @@ modified: '2026-07-19'
 name: Embeddable
 nav: Providers
 network: true
-random_paper: 2
+random_paper: 6
 slug: concept-embeddable
 tags:
 - Company

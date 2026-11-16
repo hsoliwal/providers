@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -19,7 +22,7 @@ name: Poncho
 nav: Providers
 network: true
 overview: Poncho is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Weather, Chatbots, Messaging, and Conversational AI.
-random_paper: 9
+random_paper: 23
 slug: poncho
 tags:
 - Company

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-10-17'
+  score: 34.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 81
   human_in_the_loop: 4
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 150
   slug: beyond-identity-agentic-access
   summary_line: 150 operations · 81 acting · 4 human-in-the-loop
-api_count: 3
+api_count: 2
 apis:
 - description: The Next Generation Beyond Identity API provides the latest version of the platform's REST endpoints including updated identity management, credential binding, continuous risk assessment, and policy e
   name: Beyond Identity Next Generation API
@@ -128,7 +131,7 @@ apis:
   description: The Tokens API from Beyond Identity — 2 operation(s) for tokens.
   name: Beyond Identity Tokens API
   slug: beyond-identity-tokens-api
-artifact_total: 63
+artifact_total: 62
 collections:
 - collection_type: postman
   name: Beyond Identity Secure Access Applications API
@@ -179,9 +182,6 @@ collections:
   name: Beyond Identity Secure Access Applications Tokens API
   slug: postman-beyond-identity-tokens-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Beyond Identity Secure Access Applications API
   slug: open-beyond-identity-applications-api
 - collection_type: open
@@ -231,7 +231,7 @@ collections:
   slug: open-beyond-identity-tokens-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/capabilities/beyond-identity-capability-edges.yml
+  href: https://artifacts.apis.io/beyond-identity/capabilities/beyond-identity-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/beyond-identity-capability-edges.yml
@@ -240,22 +240,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/beyond-identity/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/agentic-access/beyond-identity-agentic-access.yml
+  href: https://artifacts.apis.io/beyond-identity/agentic-access/beyond-identity-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/beyond-identity-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/security/beyond-identity-trust-center.yml
+  href: https://artifacts.apis.io/beyond-identity/security/beyond-identity-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/beyond-identity-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/security/beyond-identity-domain-security.yml
+  href: https://artifacts.apis.io/beyond-identity/security/beyond-identity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/beyond-identity-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/authentication/beyond-identity-authentication.yml
+  href: https://artifacts.apis.io/beyond-identity/authentication/beyond-identity-authentication.yml
   title: ''
   type: Authentication
   url: authentication/beyond-identity-authentication.yml
@@ -300,27 +300,27 @@ common:
   type: Support
   url: https://support.beyondidentity.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/plans/beyond-identity-plans-pricing.yml
+  href: https://artifacts.apis.io/beyond-identity/plans/beyond-identity-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/beyond-identity-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/rate-limits/beyond-identity-rate-limits.yml
+  href: https://artifacts.apis.io/beyond-identity/rate-limits/beyond-identity-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/beyond-identity-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/finops/beyond-identity-finops.yml
+  href: https://artifacts.apis.io/beyond-identity/finops/beyond-identity-finops.yml
   title: ''
   type: FinOps
   url: finops/beyond-identity-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/vocabulary/beyond-identity-vocabulary.yml
+  href: https://artifacts.apis.io/beyond-identity/vocabulary/beyond-identity-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/beyond-identity-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/json-ld/beyond-identity-context.jsonld
+  href: https://artifacts.apis.io/beyond-identity/json-ld/beyond-identity-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/beyond-identity-context.jsonld
@@ -334,8 +334,8 @@ examples:
   name: Beyond Identity Credential Binding Job Example
   slug: beyond-identity-credential-binding-job-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Beyond Identity Finops
   primary_unit: ''
   service_category: ''
@@ -370,7 +370,7 @@ plans:
 - name: Beyond Identity Plans Pricing
   plan_count: 3
   slug: beyond-identity-plans-pricing
-random_paper: 20
+random_paper: 0
 rate_limits:
 - limit_count: 3
   name: Beyond Identity Rate Limits
@@ -388,30 +388,30 @@ rules:
     warn: 4
   slug: beyond-identity-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 48.9
+  band: strong
+  composite: 54.6
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 73.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 41.3
+    artifact_dirs: 21
+    catalog_earned: 79.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 35.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 1.5
   facets:
-    access_clarity: 26.3
+    access_clarity: 50.0
     contract_governance: 23.5
-    contract_quality: 72.4
+    contract_quality: 78.3
     developer_ergonomics: 29.8
-    discoverability: 71.4
+    discoverability: 66.1
     operational_transparency: 42.1
-  previous_composite: 56.7
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 16
   regulatory:
     applies: true
@@ -419,13 +419,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/beyond-identity/refs/heads/main/screenshots/beyond-identity-2026-06-20T173212.png
+screenshot: https://apis.io/screenshots/beyond-identity/beyond-identity-2026-06-20T173212.png
 security:
 - kind: authentication
   name: Beyond Identity Authentication
@@ -448,6 +448,7 @@ tags:
 - Passkeys
 - MFA
 - Device Security
+- OAuth
 - OpenID Connect
 - SCIM
 - Identity Federation

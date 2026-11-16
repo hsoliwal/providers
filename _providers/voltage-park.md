@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 7
@@ -83,9 +86,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Voltage Park On-Demand Bare Metal API
   slug: open-voltage-park-bare-metal-api
 - collection_type: open
@@ -115,27 +115,27 @@ common:
   type: Pricing
   url: https://voltagepark.com/pricing?tier=on-demand
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/capabilities/voltage-park-capability-edges.yml
+  href: https://artifacts.apis.io/voltage-park/capabilities/voltage-park-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/voltage-park-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/agentic-access/voltage-park-agentic-access.yml
+  href: https://artifacts.apis.io/voltage-park/agentic-access/voltage-park-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/voltage-park-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/security/voltage-park-trust-center.yml
+  href: https://artifacts.apis.io/voltage-park/security/voltage-park-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/voltage-park-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/security/voltage-park-domain-security.yml
+  href: https://artifacts.apis.io/voltage-park/security/voltage-park-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/voltage-park-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/authentication/voltage-park-authentication.yml
+  href: https://artifacts.apis.io/voltage-park/authentication/voltage-park-authentication.yml
   title: ''
   type: Authentication
   url: authentication/voltage-park-authentication.yml
@@ -152,17 +152,17 @@ common:
   type: Documentation
   url: https://docs.voltagepark.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/plans/voltage-park-plans-pricing.yml
+  href: https://artifacts.apis.io/voltage-park/plans/voltage-park-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/voltage-park-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/rate-limits/voltage-park-rate-limits.yml
+  href: https://artifacts.apis.io/voltage-park/rate-limits/voltage-park-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/voltage-park-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/finops/voltage-park-finops.yml
+  href: https://artifacts.apis.io/voltage-park/finops/voltage-park-finops.yml
   title: ''
   type: FinOps
   url: finops/voltage-park-finops.yml
@@ -189,35 +189,51 @@ network: true
 overview: 'Voltage Park publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bare Metal API, Billing API, Locations API, and 4 more. Tagged areas include GPU, Cloud, AI Infrastructure, H100, and H200.
 
 
+  The Voltage Park catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Voltage Park''s developer surface includes pricing, authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Voltage Park Plans Pricing
   plan_count: 4
   slug: voltage-park-plans-pricing
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Voltage Park Rate Limits
   slug: voltage-park-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Voltage Park API Rules
+  rule_count: 57
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 4
+  slug: voltage-park-rules
 score:
   band: thin
-  composite: 34.6
+  composite: 35.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 52.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: -1.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
+    access_clarity: 44.7
+    contract_governance: 13.6
     contract_quality: 48.5
     developer_ergonomics: 15.5
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 38.8
+  previous_composite: 36.2
   provenance:
     agentic_access: derived
     contracts:
@@ -231,13 +247,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/voltage-park/refs/heads/main/screenshots/voltage-park-2026-09-02T170221.png
+screenshot: https://apis.io/screenshots/voltage-park/voltage-park-2026-09-02T170221.png
 security:
 - kind: authentication
   name: Voltage Park Authentication

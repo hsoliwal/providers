@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-10-17'
+  score: 27.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: BankID Relying Party API for authentication and signing
@@ -70,87 +83,87 @@ apis:
 artifact_total: 18
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/rules/bankid-rules.yml
+  href: https://artifacts.apis.io/bankid/rules/bankid-rules.yml
   title: ''
   type: Spectral
   url: rules/bankid-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/json-ld/bankid-context.jsonld
+  href: https://artifacts.apis.io/bankid/json-ld/bankid-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/bankid-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/vocabulary/bankid-vocabulary.yml
+  href: https://artifacts.apis.io/bankid/vocabulary/bankid-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/bankid-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/conformance/bankid-conformance.yml
+  href: https://artifacts.apis.io/bankid/conformance/bankid-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bankid-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/data-model/bankid-data-model.yml
+  href: https://artifacts.apis.io/bankid/data-model/bankid-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bankid-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/errors/bankid-problem-types.yml
+  href: https://artifacts.apis.io/bankid/errors/bankid-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bankid-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/llms/bankid-llms.txt
+  href: https://artifacts.apis.io/bankid/llms/bankid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bankid-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/well-known/bankid-support-security.txt
+  href: https://artifacts.apis.io/bankid/well-known/bankid-support-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bankid-support-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/well-known/bankid-status-security.txt
+  href: https://artifacts.apis.io/bankid/well-known/bankid-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bankid-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/well-known/bankid-security.txt
+  href: https://artifacts.apis.io/bankid/well-known/bankid-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bankid-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/well-known/bankid-developers-security.txt
+  href: https://artifacts.apis.io/bankid/well-known/bankid-developers-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bankid-developers-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/well-known/bankid-app-security.txt
+  href: https://artifacts.apis.io/bankid/well-known/bankid-app-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bankid-app-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/well-known/bankid-well-known.yml
+  href: https://artifacts.apis.io/bankid/well-known/bankid-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bankid-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/hosts/bankid-hosts.yml
+  href: https://artifacts.apis.io/bankid/hosts/bankid-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bankid-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/vendors/bankid-vendors.yml
+  href: https://artifacts.apis.io/bankid/vendors/bankid-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bankid-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/packages/bankid-packages.yml
+  href: https://artifacts.apis.io/bankid/packages/bankid-packages.yml
   title: ''
   type: SDKs
   url: packages/bankid-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/packages/bankid-packages.yml
+  href: https://artifacts.apis.io/bankid/packages/bankid-packages.yml
   title: ''
   type: Packages
   url: packages/bankid-packages.yml
@@ -175,7 +188,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/BankID
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankid/refs/heads/main/security/bankid-domain-security.yml
+  href: https://artifacts.apis.io/bankid/security/bankid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bankid-domain-security.yml
@@ -243,7 +256,7 @@ overview: 'BankID publishes 9 API contracts indexed on the [APIs.io](https://api
 
 
   BankID''s developer surface includes getting-started guide, API reference, documentation, and 24 more developer resources.'
-random_paper: 1
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 56
@@ -258,22 +271,32 @@ rules:
     warn: 1
   slug: bankid-rules
 score:
-  band: developing
-  composite: 41.1
+  band: thin
+  composite: 34.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.8
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 61.1
-    developer_ergonomics: 45.2
+    developer_ergonomics: 26.2
     discoverability: 73.2
     operational_transparency: 21.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - nordics
+  previous_composite: 42.4
   provenance:
     conformance: derived
     contracts:
@@ -287,12 +310,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/bankid/bankid-2026-11-03T121536.png
 security:
 - kind: domain-security
   name: Bankid Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -22,21 +25,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: true
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.2
-  scored_at: '2026-10-17'
+  score: 60.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 1
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 66
   slug: exa-ai-agentic-access
   summary_line: 66 operations · 34 acting · 1 human-in-the-loop
-api_count: 8
+api_count: 7
 apis:
 - baseURL: https://api.exa.ai
   baseurl_source: declared
@@ -199,9 +205,6 @@ collections:
   name: Exa Websets API
   slug: postman-exa-websets-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Exa Agent API
   slug: open-exa-agent-api
 - collection_type: open
@@ -282,112 +285,112 @@ common:
   type: Website
   url: https://www.exa.ai/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/agentic-access/exa-ai-agentic-access.yml
+  href: https://artifacts.apis.io/exa-ai/agentic-access/exa-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/exa-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/security/exa-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/exa-ai/security/exa-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/exa-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/security/exa-ai-domain-security.yml
+  href: https://artifacts.apis.io/exa-ai/security/exa-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/exa-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/authentication/exa-ai-authentication.yml
+  href: https://artifacts.apis.io/exa-ai/authentication/exa-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/exa-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/security/exa-ai-trust-center.yml
+  href: https://artifacts.apis.io/exa-ai/security/exa-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/exa-ai-trust-center.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/packages/exa-ai-packages.yml
+  href: https://artifacts.apis.io/exa-ai/packages/exa-ai-packages.yml
   title: ''
   type: Packages
   url: packages/exa-ai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/mcp/exa-ai-mcp.yml
+  href: https://artifacts.apis.io/exa-ai/mcp/exa-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/exa-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/well-known/exa-ai-well-known.yml
+  href: https://artifacts.apis.io/exa-ai/well-known/exa-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/exa-ai-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/llms/exa-ai-llms.txt
+  href: https://artifacts.apis.io/exa-ai/llms/exa-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/exa-ai-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/conformance/exa-ai-conformance.yml
+  href: https://artifacts.apis.io/exa-ai/conformance/exa-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/exa-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/errors/exa-ai-problem-types.yml
+  href: https://artifacts.apis.io/exa-ai/errors/exa-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/exa-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/lifecycle/exa-ai-lifecycle.yml
+  href: https://artifacts.apis.io/exa-ai/lifecycle/exa-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/exa-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/conventions/exa-ai-conventions.yml
+  href: https://artifacts.apis.io/exa-ai/conventions/exa-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/exa-ai-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/changelog/exa-ai-changelog.yml
+  href: https://artifacts.apis.io/exa-ai/changelog/exa-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/exa-ai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/data-model/exa-ai-data-model.yml
+  href: https://artifacts.apis.io/exa-ai/data-model/exa-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/exa-ai-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-search-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-search-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-search-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-research-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-research-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-research-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-monitors-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-monitors-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-monitors-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-agent-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-agent-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-agent-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-websets-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-websets-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-websets-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-team-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-team-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-team-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/overlays/exa-ai-team-management-api-overlay.yaml
+  href: https://artifacts.apis.io/exa-ai/overlays/exa-ai-team-management-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/exa-ai-team-management-api-overlay.yaml
@@ -396,57 +399,57 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/exa/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-answer-with-deep-sources-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-answer-with-deep-sources-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-answer-with-deep-sources-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-create-and-poll-research-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-create-and-poll-research-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-create-and-poll-research-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-create-webset-and-list-items-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-create-webset-and-list-items-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-create-webset-and-list-items-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-enrich-webset-and-poll-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-enrich-webset-and-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-enrich-webset-and-poll-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-expand-webset-search-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-expand-webset-search-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-expand-webset-search-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-find-similar-and-fetch-contents-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-find-similar-and-fetch-contents-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-find-similar-and-fetch-contents-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-preview-then-create-webset-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-preview-then-create-webset-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-preview-then-create-webset-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-resume-latest-research-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-resume-latest-research-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-resume-latest-research-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-scout-then-research-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-scout-then-research-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-scout-then-research-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-search-and-fetch-contents-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-search-and-fetch-contents-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-search-and-fetch-contents-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/arazzo/exa-ai-webset-item-deep-contents-workflow.yml
+  href: https://artifacts.apis.io/exa-ai/arazzo/exa-ai-webset-item-deep-contents-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/exa-ai-webset-item-deep-contents-workflow.yml
@@ -583,17 +586,17 @@ common:
   type: OpenAPI
   url: https://exa.ai/docs/team-management-spec.yaml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/plans/exa-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/exa-ai/plans/exa-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/exa-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/rate-limits/exa-ai-rate-limits.yml
+  href: https://artifacts.apis.io/exa-ai/rate-limits/exa-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/exa-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/finops/exa-ai-finops.yml
+  href: https://artifacts.apis.io/exa-ai/finops/exa-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/exa-ai-finops.yml
@@ -621,10 +624,10 @@ features:
 - $1,000 startup/education grant program
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Exa Ai Finops
-  primary_unit: request
-  service_category: AI and Machine Learning
+  primary_unit: 1k requests
+  service_category: ''
   slug: exa-ai-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/exa-ai.png
@@ -658,9 +661,12 @@ overview: 'Exa publishes 19 API contracts indexed on the [APIs.io](https://apis.
   Exa''s developer surface includes authentication, changelog, developer portal, documentation, getting-started guide, signup flow, sandbox, and 64 more developer resources.'
 plans:
 - name: Exa Ai Plans Pricing
-  plan_count: 8
+  plan_count: 19
   slug: exa-ai-plans-pricing
-random_paper: 15
+- name: Exa Ai Price Estimates
+  plan_count: 0
+  slug: exa-ai-price-estimates
+random_paper: 13
 rate_limits:
 - limit_count: 6
   name: Exa Ai Rate Limits
@@ -678,31 +684,31 @@ rules:
     warn: 3
   slug: exa-ai-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 52.3
+  band: strong
+  composite: 58.5
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 69.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 45.8
+    artifact_dirs: 30
+    catalog_earned: 78.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 36.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.7
+  delta: 0.1
   facets:
-    access_clarity: 57.9
+    access_clarity: 81.6
     contract_governance: 14.4
-    contract_quality: 67.3
+    contract_quality: 67.6
     developer_ergonomics: 38.1
     discoverability: 80.0
-    operational_transparency: 18.4
-  previous_composite: 59.0
+    operational_transparency: 28.9
+  previous_composite: 58.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 5.3
       total: 19
     mcp: first-party
   regulatory:
@@ -711,13 +717,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/exa-ai/refs/heads/main/screenshots/exa-ai-2026-06-20T180928.png
+screenshot: https://apis.io/screenshots/exa-ai/exa-ai-2026-06-20T180928.png
 security:
 - kind: authentication
   name: Exa Ai Authentication

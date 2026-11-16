@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.8
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://gpt-oss.cray-lm.com
@@ -62,11 +68,8 @@ apis:
   description: Megatron-LM training jobs, chunked dataset upload, checkpoints and Hugging Face publishing.
   name: TensorWave Training API
   slug: tensorwave-training-api
-artifact_total: 15
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ScalarLM Generate API
   slug: open-tensorwave-generate-api
@@ -84,7 +87,7 @@ collections:
   slug: open-tensorwave-training-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/capabilities/tensorwave-capability-edges.yml
+  href: https://artifacts.apis.io/tensorwave/capabilities/tensorwave-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tensorwave-capability-edges.yml
@@ -97,22 +100,22 @@ common:
   type: Releases
   url: https://github.com/tensorwavecloud/ScalarLM/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/skills/tensorwave-batch-inference.md
+  href: https://artifacts.apis.io/tensorwave/skills/tensorwave-batch-inference.md
   title: ''
   type: AgentSkill
   url: skills/tensorwave-batch-inference.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/mcp/tensorwave-mcp.yml
+  href: https://artifacts.apis.io/tensorwave/mcp/tensorwave-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/tensorwave-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/overlays/tensorwave-scalarlm-overlay.yaml
+  href: https://artifacts.apis.io/tensorwave/overlays/tensorwave-scalarlm-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tensorwave-scalarlm-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/security/tensorwave-trust-center.yml
+  href: https://artifacts.apis.io/tensorwave/security/tensorwave-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tensorwave-trust-center.yml
@@ -165,52 +168,52 @@ common:
   type: Contact
   url: https://tensorwave.com/connect
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/llms/tensorwave-llms.txt
+  href: https://artifacts.apis.io/tensorwave/llms/tensorwave-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tensorwave-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/packages/tensorwave-packages.yml
+  href: https://artifacts.apis.io/tensorwave/packages/tensorwave-packages.yml
   title: ''
   type: Packages
   url: packages/tensorwave-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/packages/tensorwave-packages.yml
+  href: https://artifacts.apis.io/tensorwave/packages/tensorwave-packages.yml
   title: ''
   type: SDKs
   url: packages/tensorwave-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/cli/tensorwave-cli.yml
+  href: https://artifacts.apis.io/tensorwave/cli/tensorwave-cli.yml
   title: ''
   type: CLI
   url: cli/tensorwave-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/well-known/tensorwave-well-known.yml
+  href: https://artifacts.apis.io/tensorwave/well-known/tensorwave-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tensorwave-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/conformance/tensorwave-conformance.yml
+  href: https://artifacts.apis.io/tensorwave/conformance/tensorwave-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tensorwave-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/lifecycle/tensorwave-lifecycle.yml
+  href: https://artifacts.apis.io/tensorwave/lifecycle/tensorwave-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tensorwave-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/changelog/tensorwave-changelog.yml
+  href: https://artifacts.apis.io/tensorwave/changelog/tensorwave-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tensorwave-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/security/tensorwave-domain-security.yml
+  href: https://artifacts.apis.io/tensorwave/security/tensorwave-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tensorwave-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/security/tensorwave-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tensorwave/security/tensorwave-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tensorwave-vulnerability-disclosure.yml
@@ -225,22 +228,38 @@ network: true
 overview: 'TensorWave publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Generate API, Health API, Open AI API, and 2 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Cloud Computing, and GPU.
 
 
+  The TensorWave catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   TensorWave''s developer surface includes documentation, getting-started guide, support, engineering blog, CLI, changelog, and 23 more developer resources.'
-random_paper: 2
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: TensorWave API Rules
+  rule_count: 59
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 3
+  slug: tensorwave-rules
 score:
   band: developing
-  composite: 48.1
+  composite: 49.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 36.8
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 43.5
     developer_ergonomics: 73.2
     discoverability: 73.2
@@ -252,7 +271,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.0
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     contracts:
@@ -268,13 +287,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tensorwave/refs/heads/main/screenshots/tensorwave-2026-08-17T082314.png
+screenshot: https://apis.io/screenshots/tensorwave/tensorwave-2026-08-17T082314.png
 security:
 - kind: authentication
   name: Tensorwave Authentication
@@ -292,6 +311,14 @@ security:
   name: Tensorwave Trust Center
   slug: tensorwave-trust-center
   summary_line: SOC 2, ISO 27001, HIPAA
+skill_count: 3
+skills:
+- name: Run batch inference on a ScalarLM deployment
+  slug: tensorwave-batch-inference
+- name: Fine-tune a model on ScalarLM and publish it to Hugging Face
+  slug: tensorwave-fine-tune-and-publish
+- name: Call ScalarLM as an OpenAI-compatible endpoint
+  slug: tensorwave-openai-compatible-chat
 slug: tensorwave
 tags:
 - Company

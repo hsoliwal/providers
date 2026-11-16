@@ -1,16 +1,20 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 2
@@ -78,11 +85,6 @@ apis:
   description: Manage organization domains
   name: Elementum Domains API
   slug: elementum-domains-api
-- baseURL: https://api.elementum.io/v1
-  baseurl_source: declared
-  description: Manage elements imported from connected cloud sources
-  name: Elementum Elements API
-  slug: elementum-elements-api
 - baseURL: https://api.elementum.io/v1
   baseurl_source: declared
   description: Manage flows
@@ -133,11 +135,8 @@ apis:
   description: Manage the watchers of a record
   name: Elementum Watchers API
   slug: elementum-watchers-api
-artifact_total: 41
+artifact_total: 43
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Elementum Access Token API
   slug: open-elementum-access-token-api
@@ -193,12 +192,17 @@ collections:
   name: Elementum Access Token Watchers API
   slug: open-elementum-watchers-api
 common:
+- group: other
+  href: https://artifacts.apis.io/elementum/capabilities/elementum-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/elementum-capability-edges.yml
 - group: company
   title: ''
   type: Website
   url: https://www.elementum.io/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/overlays/elementum-openapi-overlay.yaml
+  href: https://artifacts.apis.io/elementum/overlays/elementum-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/elementum-openapi-overlay.yaml
@@ -247,62 +251,62 @@ common:
   type: StatusPage
   url: https://status.elementum.io/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/mcp/elementum-mcp.yml
+  href: https://artifacts.apis.io/elementum/mcp/elementum-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/elementum-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/authentication/elementum-authentication.yml
+  href: https://artifacts.apis.io/elementum/authentication/elementum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/elementum-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/agentic-access/elementum-agentic-access.yml
+  href: https://artifacts.apis.io/elementum/agentic-access/elementum-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/elementum-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/conventions/elementum-conventions.yml
+  href: https://artifacts.apis.io/elementum/conventions/elementum-conventions.yml
   title: ''
   type: Conventions
   url: conventions/elementum-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/errors/elementum-problem-types.yml
+  href: https://artifacts.apis.io/elementum/errors/elementum-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/elementum-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/lifecycle/elementum-lifecycle.yml
+  href: https://artifacts.apis.io/elementum/lifecycle/elementum-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/elementum-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/data-model/elementum-data-model.yml
+  href: https://artifacts.apis.io/elementum/data-model/elementum-data-model.yml
   title: ''
   type: DataModel
   url: data-model/elementum-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/conformance/elementum-conformance.yml
+  href: https://artifacts.apis.io/elementum/conformance/elementum-conformance.yml
   title: ''
   type: Conformance
   url: conformance/elementum-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/llms/elementum-llms.txt
+  href: https://artifacts.apis.io/elementum/llms/elementum-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/elementum-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/elementum/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/changelog/elementum-changelog.yml
+  href: https://artifacts.apis.io/elementum/changelog/elementum-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/elementum-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/security/elementum-domain-security.yml
+  href: https://artifacts.apis.io/elementum/security/elementum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/elementum-domain-security.yml
@@ -318,38 +322,54 @@ modified: '2026-07-19'
 name: Elementum
 nav: Providers
 network: true
-overview: 'Elementum publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Token API, Agents API, Apps API, and 15 more. Tagged areas include Company, Artificial Intelligence, Automation, Workflows, and Orchestration.
+overview: 'Elementum publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Token API, Agents API, Apps API, and 14 more. Tagged areas include Company, Artificial Intelligence, Automation, Workflows, and Orchestration.
 
 
-  Elementum''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 18 more developer resources.'
-random_paper: 4
+  The Elementum catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Elementum''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 19 more developer resources.'
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Elementum API Rules
+  rule_count: 58
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 3
+    warn: 12
+  slug: elementum-rules
 score:
   band: developing
-  composite: 41.3
+  composite: 43.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 40.8
+    contract_governance: 18.2
+    contract_quality: 43.0
     developer_ergonomics: 58.9
     discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 41.3
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 18
+      marker_coverage: 48.6
+      total: 35
     mcp: first-party
     skills: derived
   regulatory:
@@ -358,13 +378,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/elementum/refs/heads/main/screenshots/elementum-2026-07-25T213131.png
+screenshot: https://apis.io/screenshots/elementum/elementum-2026-07-25T213131.png
 security:
 - kind: authentication
   name: Elementum Authentication
@@ -374,6 +394,14 @@ security:
   name: Elementum Domain Security
   slug: elementum-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Manage Elementum records
+  slug: elementum-manage-records
+- name: Provision Elementum users and groups
+  slug: elementum-provision-users
+- name: Collaborate on an Elementum record
+  slug: elementum-record-collaboration
 slug: elementum
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -75,7 +81,7 @@ apis:
   description: Registered agent appointment and management for business entities.
   name: Harbor Compliance Registered Agents API
   slug: harbor-compliance-registered-agents-api
-artifact_total: 29
+artifact_total: 28
 collections:
 - collection_type: postman
   name: Harbor Compliance Compliance Filings API
@@ -95,9 +101,6 @@ collections:
 - collection_type: postman
   name: Harbor Compliance Compliance Filings Registered Agents API
   slug: postman-harbor-compliance-registered-agents-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Harbor Compliance Compliance Filings API
   slug: open-harbor-compliance-compliance-filings-api
@@ -121,22 +124,22 @@ collections:
   slug: open-harbor-compliance
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/plans/harbor-compliance-plans-pricing.yml
+  href: https://artifacts.apis.io/harbor-compliance/plans/harbor-compliance-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/harbor-compliance-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/rate-limits/harbor-compliance-rate-limits.yml
+  href: https://artifacts.apis.io/harbor-compliance/rate-limits/harbor-compliance-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/harbor-compliance-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/finops/harbor-compliance-finops.yml
+  href: https://artifacts.apis.io/harbor-compliance/finops/harbor-compliance-finops.yml
   title: ''
   type: FinOps
   url: finops/harbor-compliance-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/capabilities/harbor-compliance-capability-edges.yml
+  href: https://artifacts.apis.io/harbor-compliance/capabilities/harbor-compliance-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/harbor-compliance-capability-edges.yml
@@ -145,17 +148,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/harbor-compliance/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/agentic-access/harbor-compliance-agentic-access.yml
+  href: https://artifacts.apis.io/harbor-compliance/agentic-access/harbor-compliance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/harbor-compliance-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/security/harbor-compliance-domain-security.yml
+  href: https://artifacts.apis.io/harbor-compliance/security/harbor-compliance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/harbor-compliance-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/authentication/harbor-compliance-authentication.yml
+  href: https://artifacts.apis.io/harbor-compliance/authentication/harbor-compliance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/harbor-compliance-authentication.yml
@@ -204,12 +207,12 @@ common:
   type: Security
   url: https://www.harborcompliance.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/json-ld/harbor-compliance-context.jsonld
+  href: https://artifacts.apis.io/harbor-compliance/json-ld/harbor-compliance-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/harbor-compliance-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/json-schema/harbor-compliance-entity-schema.json
+  href: https://artifacts.apis.io/harbor-compliance/json-schema/harbor-compliance-entity-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/harbor-compliance-entity-schema.json
@@ -219,7 +222,7 @@ finops:
 - has_sources: false
   method: generated
   name: Harbor Compliance Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: harbor-compliance-finops
   template: true
@@ -249,7 +252,7 @@ plans:
 - name: Harbor Compliance Plans Pricing
   plan_count: 3
   slug: harbor-compliance-plans-pricing
-random_paper: 18
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Harbor Compliance Rate Limits
@@ -270,13 +273,13 @@ score:
   band: developing
   composite: 41.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 46.7
     catalog_earned_first_party: 0.0
     catalog_gap: 68.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 9.8
@@ -284,7 +287,7 @@ score:
     developer_ergonomics: 51.2
     discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 42.8
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     contracts:
@@ -298,13 +301,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/harbor-compliance/refs/heads/main/screenshots/harbor-compliance-2026-06-20T182514.png
+screenshot: https://apis.io/screenshots/harbor-compliance/harbor-compliance-2026-06-20T182514.png
 security:
 - kind: authentication
   name: Harbor Compliance Authentication

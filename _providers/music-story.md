@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 25.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: Provides access to music metadata, credits, and licensing information via REST endpoints.
+- baseURL: https://api.v2.music-story.com
+  baseurl_source: spec
+  description: Provides access to music metadata, credits, and licensing information via REST endpoints.
   name: Music Story API
-  slug: music-story-api-2
+  slug: music-story-api
 - baseURL: https://api.v2.music-story.com
   baseurl_source: declared
   description: The Artist API from Music Story — 2 operation(s) for artist.
@@ -42,52 +57,52 @@ apis:
 artifact_total: 9
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/rules/music-story-rules.yml
+  href: https://artifacts.apis.io/music-story/rules/music-story-rules.yml
   title: ''
   type: Spectral
   url: rules/music-story-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/json-ld/music-story-context.jsonld
+  href: https://artifacts.apis.io/music-story/json-ld/music-story-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/music-story-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/vocabulary/music-story-vocabulary.yml
+  href: https://artifacts.apis.io/music-story/vocabulary/music-story-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/music-story-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/data-model/music-story-data-model.yml
+  href: https://artifacts.apis.io/music-story/data-model/music-story-data-model.yml
   title: ''
   type: DataModel
   url: data-model/music-story-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/changelog/music-story-changelog.yml
+  href: https://artifacts.apis.io/music-story/changelog/music-story-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/music-story-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/conformance/music-story-conformance.yml
+  href: https://artifacts.apis.io/music-story/conformance/music-story-conformance.yml
   title: ''
   type: Conformance
   url: conformance/music-story-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/llms/music-story-llms.txt
+  href: https://artifacts.apis.io/music-story/llms/music-story-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/music-story-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/hosts/music-story-hosts.yml
+  href: https://artifacts.apis.io/music-story/hosts/music-story-hosts.yml
   title: ''
   type: Hosts
   url: hosts/music-story-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/packages/music-story-packages.yml
+  href: https://artifacts.apis.io/music-story/packages/music-story-packages.yml
   title: ''
   type: SDKs
   url: packages/music-story-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/packages/music-story-packages.yml
+  href: https://artifacts.apis.io/music-story/packages/music-story-packages.yml
   title: ''
   type: Packages
   url: packages/music-story-packages.yml
@@ -100,7 +115,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/music-story
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/music-story/refs/heads/main/security/music-story-domain-security.yml
+  href: https://artifacts.apis.io/music-story/security/music-story-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/music-story-domain-security.yml
@@ -178,7 +193,7 @@ overview: 'Music Story is listed with 3 APIs on the [APIs.io](https://apis.io/) 
 
 
   Music Story''s developer surface includes changelog, documentation, API reference, getting-started guide, support, signup flow, and 16 more developer resources.'
-random_paper: 1
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -194,21 +209,23 @@ rules:
   slug: music-story-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 26.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 52.8
     catalog_earned_first_party: 0.0
     catalog_gap: 62.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.7
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 35.6
     contract_quality: 23.6
-    developer_ergonomics: 50.0
+    developer_ergonomics: 28.6
     discoverability: 60.7
-    operational_transparency: 21.1
+    operational_transparency: 10.5
+  previous_composite: 36.4
   provenance:
     conformance: first-party
     contracts:
@@ -226,13 +243,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/music-story/music-story-2026-11-03T135922.png
 security:
 - kind: domain-security
   name: Music Story Domain Security

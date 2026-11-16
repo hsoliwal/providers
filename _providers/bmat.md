@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: BMAT provides a music operating system API for usage data aggregation and rights management.
@@ -36,22 +49,22 @@ common:
   type: Compliance
   url: https://trust.bmat.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bmat/refs/heads/main/well-known/bmat-well-known.yml
+  href: https://artifacts.apis.io/bmat/well-known/bmat-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bmat-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bmat/refs/heads/main/hosts/bmat-hosts.yml
+  href: https://artifacts.apis.io/bmat/hosts/bmat-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bmat-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bmat/refs/heads/main/packages/bmat-packages.yml
+  href: https://artifacts.apis.io/bmat/packages/bmat-packages.yml
   title: ''
   type: SDKs
   url: packages/bmat-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bmat/refs/heads/main/packages/bmat-packages.yml
+  href: https://artifacts.apis.io/bmat/packages/bmat-packages.yml
   title: ''
   type: Packages
   url: packages/bmat-packages.yml
@@ -76,12 +89,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/bmat
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bmat/refs/heads/main/security/bmat-trust-center.yml
+  href: https://artifacts.apis.io/bmat/security/bmat-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bmat-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bmat/refs/heads/main/security/bmat-domain-security.yml
+  href: https://artifacts.apis.io/bmat/security/bmat-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bmat-domain-security.yml
@@ -105,30 +118,30 @@ modified: '2026-09-29'
 name: Bmat
 nav: Providers
 network: true
-overview: 'Bmat is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Music, Data, Analytics, RightsManagement, and Platform.
+overview: 'Bmat is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Music, Data, Analytics, Rights Management, and Platform.
 
 
   Bmat''s developer surface includes engineering blog and 12 more developer resources.'
-random_paper: 2
+random_paper: 12
 score:
-  band: emerging
-  composite: 13.9
+  band: minimal
+  composite: 10.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -3.3
   facets:
-    access_clarity: 26.3
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 9.5
-    discoverability: 60.7
-    operational_transparency: 5.3
-  previous_composite: 13.8
+    developer_ergonomics: 8.3
+    discoverability: 58.9
+    operational_transparency: 2.6
+  previous_composite: 13.9
   provenance:
     mcp: derived
   regulatory:
@@ -136,9 +149,9 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 10.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -158,7 +171,7 @@ tags:
 - Music
 - Data
 - Analytics
-- RightsManagement
+- Rights Management
 - Platform
 website: https://www.bmat.com
 ---

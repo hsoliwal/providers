@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -39,47 +54,47 @@ apis:
 artifact_total: 6
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/agentic-access/bitcall-agentic-access.yml
+  href: https://artifacts.apis.io/bitcall/agentic-access/bitcall-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bitcall-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/rate-limits/bitcall-rate-limits.yml
+  href: https://artifacts.apis.io/bitcall/rate-limits/bitcall-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bitcall-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/rules/bitcall-rules.yml
+  href: https://artifacts.apis.io/bitcall/rules/bitcall-rules.yml
   title: ''
   type: Spectral
   url: rules/bitcall-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/conventions/bitcall-conventions.yml
+  href: https://artifacts.apis.io/bitcall/conventions/bitcall-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bitcall-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/authentication/bitcall-authentication.yml
+  href: https://artifacts.apis.io/bitcall/authentication/bitcall-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bitcall-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/conformance/bitcall-conformance.yml
+  href: https://artifacts.apis.io/bitcall/conformance/bitcall-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitcall-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/llms/bitcall-llms.txt
+  href: https://artifacts.apis.io/bitcall/llms/bitcall-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitcall-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/hosts/bitcall-hosts.yml
+  href: https://artifacts.apis.io/bitcall/hosts/bitcall-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bitcall-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/vendors/bitcall-vendors.yml
+  href: https://artifacts.apis.io/bitcall/vendors/bitcall-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bitcall-vendors.yml
@@ -112,7 +127,7 @@ common:
   type: GettingStarted
   url: https://docs.bitcall.io/docs/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitcall/refs/heads/main/security/bitcall-domain-security.yml
+  href: https://artifacts.apis.io/bitcall/security/bitcall-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitcall-domain-security.yml
@@ -146,7 +161,7 @@ overview: 'Bitcall is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Bitcall''s developer surface includes authentication, support, engineering blog, getting-started guide, documentation, and 14 more developer resources.'
-random_paper: 5
+random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Bitcall Rate Limits
@@ -165,24 +180,24 @@ rules:
     warn: 1
   slug: bitcall-rules
 score:
-  band: thin
-  composite: 28.3
+  band: emerging
+  composite: 20.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 15
     catalog_earned: 44.5
     catalog_earned_first_party: 8.0
     catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.4
+  delta: -7.8
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 50.0
+    developer_ergonomics: 31.0
     discoverability: 64.3
     operational_transparency: 21.1
-  previous_composite: 31.7
+  previous_composite: 28.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -192,14 +207,15 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 17.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/bitcall/bitcall-2026-11-03T121812.png
 security:
 - kind: authentication
   name: Bitcall Authentication

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -60,9 +63,6 @@ apis:
 artifact_total: 11
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: JetBrains Marketplace Plugins API
   slug: open-jetbrains-plugin-plugins-api
 - collection_type: open
@@ -77,22 +77,22 @@ common:
   type: BlogRSS
   url: https://blog.jetbrains.com/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/agentic-access/jetbrains-plugin-agentic-access.yml
+  href: https://artifacts.apis.io/jetbrains-plugin/agentic-access/jetbrains-plugin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jetbrains-plugin-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/security/jetbrains-plugin-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/jetbrains-plugin/security/jetbrains-plugin-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/jetbrains-plugin-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/security/jetbrains-plugin-domain-security.yml
+  href: https://artifacts.apis.io/jetbrains-plugin/security/jetbrains-plugin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jetbrains-plugin-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/authentication/jetbrains-plugin-authentication.yml
+  href: https://artifacts.apis.io/jetbrains-plugin/authentication/jetbrains-plugin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jetbrains-plugin-authentication.yml
@@ -135,27 +135,43 @@ network: true
 overview: 'JetBrains Marketplace publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Plugins API, Updates API, and 1 more. Tagged areas include Plugins, IDE, Marketplace, Developer Tools, and JetBrains.
 
 
+  The JetBrains Marketplace catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   JetBrains Marketplace''s developer surface includes authentication, documentation, signup flow, pricing, and 8 more developer resources.'
-random_paper: 12
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: JetBrains Marketplace API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: jetbrains-plugin-rules
 score:
   band: thin
-  composite: 28.6
+  composite: 31.6
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 32.0
+    artifact_dirs: 10
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.3
     developer_ergonomics: 31.0
     discoverability: 57.1
-    operational_transparency: 0.0
-  previous_composite: 28.6
+    operational_transparency: 10.5
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -169,13 +185,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jetbrains-plugin/refs/heads/main/screenshots/jetbrains-plugin-2026-06-20T183726.png
+screenshot: https://apis.io/screenshots/jetbrains-plugin/jetbrains-plugin-2026-06-20T183726.png
 security:
 - kind: authentication
   name: Jetbrains Plugin Authentication

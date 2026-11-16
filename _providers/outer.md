@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Universal Commerce Protocol shopping service Outer's storefront exposes over MCP, advertised in the merchant profile at https://liveouter.com/.well-known/ucp. It carries the dev.ucp.shopping servi
@@ -72,52 +75,52 @@ common:
   type: PrivacyPolicy
   url: https://liveouter.com/policies/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/llms/outer-llms.txt
+  href: https://artifacts.apis.io/outer/llms/outer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/outer-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/outer/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/mcp/outer-mcp.yml
+  href: https://artifacts.apis.io/outer/mcp/outer-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/outer-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/well-known/outer-well-known.yml
+  href: https://artifacts.apis.io/outer/well-known/outer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/outer-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/authentication/outer-authentication.yml
+  href: https://artifacts.apis.io/outer/authentication/outer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/outer-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/scopes/outer-scopes.yml
+  href: https://artifacts.apis.io/outer/scopes/outer-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/outer-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/conventions/outer-conventions.yml
+  href: https://artifacts.apis.io/outer/conventions/outer-conventions.yml
   title: ''
   type: Conventions
   url: conventions/outer-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/conformance/outer-conformance.yml
+  href: https://artifacts.apis.io/outer/conformance/outer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/outer-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/lifecycle/outer-lifecycle.yml
+  href: https://artifacts.apis.io/outer/lifecycle/outer-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/outer-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/security/outer-domain-security.yml
+  href: https://artifacts.apis.io/outer/security/outer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/outer-domain-security.yml
@@ -137,7 +140,7 @@ overview: 'Outer is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   Outer''s developer surface includes engineering blog, support, signup flow, authentication, and 13 more developer resources.'
-random_paper: 9
+random_paper: 7
 scopes:
 - name: Outer Scopes
   scope_count: 4
@@ -147,7 +150,7 @@ score:
   band: emerging
   composite: 24.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -179,14 +182,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/outer/refs/heads/main/screenshots/outer-2026-08-07T191054.png
+screenshot: https://apis.io/screenshots/outer/outer-2026-08-07T191054.png
 security:
 - kind: authentication
   name: Outer Authentication

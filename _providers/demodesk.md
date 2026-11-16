@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,16 +30,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.5
-  scored_at: '2026-10-17'
-api_count: 3
+  score: 56.2
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL_template: https://{defaultHost}
   baseurl_source: spec_template
@@ -57,15 +64,12 @@ apis:
   description: The Demodesk Public API API from Demodesk — 0 operation(s) for demodesk public api.
   name: Demodesk Public API
   slug: demodesk-demodesk-public-api-api
-artifact_total: 16
+artifact_total: 20
 asyncapis:
 - description: Event notifications Demodesk POSTs to a subscriber endpoint.
   name: Demodesk Webhooks
   slug: demodesk-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: API V1 Externally recorded demos API
   slug: open-demodesk-externally-recorded-demos-api
@@ -77,12 +81,12 @@ collections:
   slug: open-demodesk-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/overlays/demodesk-v1-overlay.yaml
+  href: https://artifacts.apis.io/demodesk/overlays/demodesk-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/demodesk-v1-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/overlays/demodesk-v2-overlay.yaml
+  href: https://artifacts.apis.io/demodesk/overlays/demodesk-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/demodesk-v2-overlay.yaml
@@ -139,67 +143,67 @@ common:
   type: Roadmap
   url: https://demodesk.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/authentication/demodesk-authentication.yml
+  href: https://artifacts.apis.io/demodesk/authentication/demodesk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/demodesk-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/scopes/demodesk-scopes.yml
+  href: https://artifacts.apis.io/demodesk/scopes/demodesk-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/demodesk-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/mcp/demodesk-mcp.yml
+  href: https://artifacts.apis.io/demodesk/mcp/demodesk-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/demodesk-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/mcp/demodesk-tool-crosswalk.yml
+  href: https://artifacts.apis.io/demodesk/mcp/demodesk-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/demodesk-tool-crosswalk.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/plans/demodesk-plans-pricing.yml
+  href: https://artifacts.apis.io/demodesk/plans/demodesk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/demodesk-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/rate-limits/demodesk-rate-limits.yml
+  href: https://artifacts.apis.io/demodesk/rate-limits/demodesk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/demodesk-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/llms/demodesk-llms.txt
+  href: https://artifacts.apis.io/demodesk/llms/demodesk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/demodesk-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/llms/demodesk-mcp-llms.txt
+  href: https://artifacts.apis.io/demodesk/llms/demodesk-mcp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/demodesk-mcp-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/packages/demodesk-packages.yml
+  href: https://artifacts.apis.io/demodesk/packages/demodesk-packages.yml
   title: ''
   type: Packages
   url: packages/demodesk-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/components/demodesk-components.yml
+  href: https://artifacts.apis.io/demodesk/components/demodesk-components.yml
   title: ''
   type: Components
   url: components/demodesk-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/well-known/demodesk-well-known.yml
+  href: https://artifacts.apis.io/demodesk/well-known/demodesk-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/demodesk-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/conventions/demodesk-conventions.yml
+  href: https://artifacts.apis.io/demodesk/conventions/demodesk-conventions.yml
   title: ''
   type: Conventions
   url: conventions/demodesk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/conformance/demodesk-conformance.yml
+  href: https://artifacts.apis.io/demodesk/conformance/demodesk-conformance.yml
   title: ''
   type: Conformance
   url: conformance/demodesk-conformance.yml
@@ -208,32 +212,40 @@ common:
   type: Compliance
   url: https://security.demodesk.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/lifecycle/demodesk-lifecycle.yml
+  href: https://artifacts.apis.io/demodesk/lifecycle/demodesk-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/demodesk-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/lifecycle/demodesk-lifecycle.yml
+  href: https://artifacts.apis.io/demodesk/lifecycle/demodesk-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/demodesk-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/security/demodesk-domain-security.yml
+  href: https://artifacts.apis.io/demodesk/security/demodesk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/demodesk-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/security/demodesk-trust-center.yml
+  href: https://artifacts.apis.io/demodesk/security/demodesk-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/demodesk-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/demodesk/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Demodesk is an AI Sales Agent platform for B2B revenue teams, founded in 2018 in Munich, Germany. Four AI agents (Assistant, Coach, Analyst, CRM Concierge) plus a custom AI Agent Builder record and transcribe sales conversations, generate summaries and scorecards, update CRMs (Salesforce, HubSpot, Pipedrive), coach reps, and flag at-risk deals. The company exposes a public REST API (v2, OpenAPI 3.1) for recordings, transcripts, AI summaries, scorecards, and users, authenticated with Bearer API keys, plus a webhook event surface for meeting and recording lifecycle events and an official hosted MCP server (OAuth2) at demodesk.com/mcp. GDPR-native with EU-only data residency (Azure Frankfurt) and ISO 27001:2022 certification.
+finops:
+- has_sources: true
+  method: derived
+  name: Demodesk Finops
+  primary_unit: user
+  service_category: ''
+  slug: demodesk-finops
+  template: false
 image: https://demodesk.com/favicon.ico
 layout: provider
 mcp_servers:
@@ -247,7 +259,7 @@ network: true
 overview: 'Demodesk publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Externally recorded demos API, Recordings API, Users API, and 1 more. Tagged areas include Company, Sales, Artificial Intelligence, Conversation Intelligence, and Video Conferencing.
 
 
-  The Demodesk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Demodesk catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Demodesk''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 27 more developer resources.'
@@ -255,11 +267,27 @@ plans:
 - name: Demodesk Plans Pricing
   plan_count: 3
   slug: demodesk-plans-pricing
-random_paper: 8
+- name: Demodesk Price Estimates
+  plan_count: 0
+  slug: demodesk-price-estimates
+random_paper: 4
 rate_limits:
 - limit_count: 2
   name: Demodesk Rate Limits
   slug: demodesk-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Demodesk API Rules
+  rule_count: 46
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 4
+    warn: 2
+  slug: demodesk-rules
 scopes:
 - name: Demodesk Scopes
   scope_count: 1
@@ -267,29 +295,29 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 57.4
+  composite: 61.5
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 55.0
+    artifact_dirs: 29
+    catalog_earned: 59.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 60.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.4
   facets:
-    access_clarity: 84.2
-    contract_governance: 4.5
-    contract_quality: 55.1
+    access_clarity: 92.1
+    contract_governance: 18.2
+    contract_quality: 60.6
     developer_ergonomics: 47.0
-    discoverability: 71.7
+    discoverability: 66.7
     operational_transparency: 60.5
-  previous_composite: 56.8
+  previous_composite: 61.1
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 25.0
       total: 4
     mcp: first-party
     skills: derived
@@ -303,13 +331,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/demodesk/refs/heads/main/screenshots/demodesk-2026-07-25T211714.png
+screenshot: https://apis.io/screenshots/demodesk/demodesk-2026-07-25T211714.png
 security:
 - kind: authentication
   name: Demodesk Authentication
@@ -323,6 +351,12 @@ security:
   name: Demodesk Trust Center
   slug: demodesk-trust-center
   summary_line: ISO 27001, GDPR
+skill_count: 2
+skills:
+- name: Fetch Demodesk recording insights
+  slug: demodesk-fetch-recording-insights
+- name: React to Demodesk meeting events
+  slug: demodesk-react-to-meeting-events
 slug: demodesk
 tags:
 - Company

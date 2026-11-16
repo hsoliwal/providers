@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,13 +36,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'A flexible, powerful standard gRPC / Protocol Buffers API for neural interface devices. The SynapseDevice service exposes device discovery, info, configuration of on-device signal chains, start/stop, '
   name: Synapse Protocol
   slug: synapse-protocol
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -81,7 +85,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/sciencecorp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/science-corporation/refs/heads/main/security/science-corporation-domain-security.yml
+  href: https://artifacts.apis.io/science-corporation/security/science-corporation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/science-corporation-domain-security.yml
@@ -97,12 +101,12 @@ overview: 'Science Corporation is listed with 1 API on the [APIs.io](https://api
 
 
   Science Corporation''s developer surface includes engineering blog, documentation, getting-started guide, changelog, support, and 6 more developer resources.'
-random_paper: 17
+random_paper: 7
 score:
   band: thin
   composite: 33.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -127,19 +131,23 @@ score:
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/science-corporation/refs/heads/main/screenshots/science-corporation-2026-09-02T154534.png
+screenshot: https://apis.io/screenshots/science-corporation/science-corporation-2026-09-02T154534.png
 security:
 - kind: domain-security
   name: Science Corporation Domain Security
   slug: science-corporation-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Record neural data from a Synapse device
+  slug: science-corporation-record-neural-data
 slug: science-corporation
 tags:
 - Company

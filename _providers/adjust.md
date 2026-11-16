@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-10-17'
+  score: 23.8
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
-- description: Adjust mobile measurement and fraud prevention API documentation
+- baseURL: https://api.adjust.com
+  baseurl_source: spec
+  description: Adjust mobile measurement and fraud prevention API documentation
   name: Adjust API
-  slug: adjust-api-2
+  slug: adjust-api
 - baseURL: https://api.adjust.com
   baseurl_source: declared
   description: The Cost API from Adjust — 1 operation(s) for cost.
@@ -57,67 +73,67 @@ apis:
 artifact_total: 16
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/rate-limits/adjust-rate-limits.yml
+  href: https://artifacts.apis.io/adjust/rate-limits/adjust-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/adjust-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/rules/adjust-rules.yml
+  href: https://artifacts.apis.io/adjust/rules/adjust-rules.yml
   title: ''
   type: Spectral
   url: rules/adjust-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/json-ld/adjust-context.jsonld
+  href: https://artifacts.apis.io/adjust/json-ld/adjust-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/adjust-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/vocabulary/adjust-vocabulary.yml
+  href: https://artifacts.apis.io/adjust/vocabulary/adjust-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/adjust-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/data-model/adjust-data-model.yml
+  href: https://artifacts.apis.io/adjust/data-model/adjust-data-model.yml
   title: ''
   type: DataModel
   url: data-model/adjust-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/conformance/adjust-conformance.yml
+  href: https://artifacts.apis.io/adjust/conformance/adjust-conformance.yml
   title: ''
   type: Conformance
   url: conformance/adjust-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/llms/adjust-llms.txt
+  href: https://artifacts.apis.io/adjust/llms/adjust-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/adjust-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/well-known/adjust-status-security.txt
+  href: https://artifacts.apis.io/adjust/well-known/adjust-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/adjust-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/well-known/adjust-well-known.yml
+  href: https://artifacts.apis.io/adjust/well-known/adjust-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/adjust-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/hosts/adjust-hosts.yml
+  href: https://artifacts.apis.io/adjust/hosts/adjust-hosts.yml
   title: ''
   type: Hosts
   url: hosts/adjust-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/vendors/adjust-vendors.yml
+  href: https://artifacts.apis.io/adjust/vendors/adjust-vendors.yml
   title: ''
   type: Vendors
   url: vendors/adjust-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/packages/adjust-packages.yml
+  href: https://artifacts.apis.io/adjust/packages/adjust-packages.yml
   title: ''
   type: SDKs
   url: packages/adjust-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/packages/adjust-packages.yml
+  href: https://artifacts.apis.io/adjust/packages/adjust-packages.yml
   title: ''
   type: Packages
   url: packages/adjust-packages.yml
@@ -142,7 +158,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/adjust
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/adjust/refs/heads/main/security/adjust-domain-security.yml
+  href: https://artifacts.apis.io/adjust/security/adjust-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/adjust-domain-security.yml
@@ -206,14 +222,14 @@ modified: '2026-10-13'
 name: Adjust
 nav: Providers
 network: true
-overview: 'Adjust is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Cost API, Dashboard API, Device Service API, and 3 more. Tagged areas include Measurements, Analytics, Attribution, Deep Linking, and Fraud Prevention.
+overview: 'Adjust is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Cost API, Dashboard API, and 4 more. Tagged areas include Measurements, Analytics, Attribution, Deep Linking, and Fraud Prevention.
 
 
   The Adjust catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Adjust''s developer surface includes support, getting-started guide, documentation, pricing, engineering blog, and 19 more developer resources.'
-random_paper: 13
+random_paper: 3
 rate_limits:
 - limit_count: 2
   name: Adjust Rate Limits
@@ -232,22 +248,24 @@ rules:
     warn: 1
   slug: adjust-rules
 score:
-  band: thin
-  composite: 30.8
+  band: emerging
+  composite: 24.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 21
     catalog_earned: 68.8
     catalog_earned_first_party: 8.0
     catalog_gap: 46.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.9
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
-    contract_quality: 25.9
-    developer_ergonomics: 35.7
+    contract_quality: 26.0
+    developer_ergonomics: 21.4
     discoverability: 69.6
-    operational_transparency: 52.6
+    operational_transparency: 36.8
+  previous_composite: 30.8
   provenance:
     conformance: derived
     contracts:
@@ -262,11 +280,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/adjust/adjust-2026-11-03T120321.png
 security:
 - kind: domain-security
   name: Adjust Domain Security

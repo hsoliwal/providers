@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +33,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.9
-  scored_at: '2026-10-17'
+  score: 44.9
+  scored_at: '2026-11-06'
 api_count: 15
 apis:
 - baseURL: https://api.contactout.com
@@ -102,129 +122,129 @@ apis:
   description: The People Search API API from ContactOut — 1 operation(s) for people search api.
   name: ContactOut People Search API
   slug: contactout-people-search-api-api
-artifact_total: 30
+artifact_total: 36
 asyncapis:
 - description: ''
   name: Contactout Webhooks
   slug: contactout-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/json-ld/contactout-context.jsonld
+  href: https://artifacts.apis.io/contactout/json-ld/contactout-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/contactout-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/vocabulary/contactout-vocabulary.yml
+  href: https://artifacts.apis.io/contactout/vocabulary/contactout-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/contactout-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/contactout/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/asyncapi/contactout-webhooks.yml
+  href: https://artifacts.apis.io/contactout/asyncapi/contactout-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/contactout-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/data-model/contactout-data-model.yml
+  href: https://artifacts.apis.io/contactout/data-model/contactout-data-model.yml
   title: ''
   type: DataModel
   url: data-model/contactout-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/conventions/contactout-conventions.yml
+  href: https://artifacts.apis.io/contactout/conventions/contactout-conventions.yml
   title: ''
   type: Conventions
   url: conventions/contactout-conventions.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/overlays/contactout-openapi-generated-overlay.yaml
+  href: https://artifacts.apis.io/contactout/overlays/contactout-openapi-generated-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/contactout-openapi-generated-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/mcp/contactout-tool-crosswalk.yml
+  href: https://artifacts.apis.io/contactout/mcp/contactout-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/contactout-tool-crosswalk.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/rate-limits/contactout-rate-limits.yml
+  href: https://artifacts.apis.io/contactout/rate-limits/contactout-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/contactout-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/plans/contactout-plans-pricing.yml
+  href: https://artifacts.apis.io/contactout/plans/contactout-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/contactout-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/rules/contactout-rules.yml
+  href: https://artifacts.apis.io/contactout/rules/contactout-rules.yml
   title: ''
   type: Spectral
   url: rules/contactout-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/authentication/contactout-authentication.yml
+  href: https://artifacts.apis.io/contactout/authentication/contactout-authentication.yml
   title: ''
   type: Authentication
   url: authentication/contactout-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/scopes/contactout-scopes.yml
+  href: https://artifacts.apis.io/contactout/scopes/contactout-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/contactout-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/lifecycle/contactout-lifecycle.yml
+  href: https://artifacts.apis.io/contactout/lifecycle/contactout-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/contactout-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/errors/contactout-problem-types.yml
+  href: https://artifacts.apis.io/contactout/errors/contactout-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/contactout-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/conformance/contactout-conformance.yml
+  href: https://artifacts.apis.io/contactout/conformance/contactout-conformance.yml
   title: ''
   type: Conformance
   url: conformance/contactout-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/llms/contactout-llms.txt
+  href: https://artifacts.apis.io/contactout/llms/contactout-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/contactout-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/mcp/contactout-mcp.yml
+  href: https://artifacts.apis.io/contactout/mcp/contactout-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/contactout-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/well-known/contactout-well-known.yml
+  href: https://artifacts.apis.io/contactout/well-known/contactout-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/contactout-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/hosts/contactout-hosts.yml
+  href: https://artifacts.apis.io/contactout/hosts/contactout-hosts.yml
   title: ''
   type: Hosts
   url: hosts/contactout-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/vendors/contactout-vendors.yml
+  href: https://artifacts.apis.io/contactout/vendors/contactout-vendors.yml
   title: ''
   type: Vendors
   url: vendors/contactout-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/packages/contactout-packages.yml
+  href: https://artifacts.apis.io/contactout/packages/contactout-packages.yml
   title: ''
   type: SDKs
   url: packages/contactout-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/packages/contactout-packages.yml
+  href: https://artifacts.apis.io/contactout/packages/contactout-packages.yml
   title: ''
   type: Packages
   url: packages/contactout-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/security/contactout-domain-security.yml
+  href: https://artifacts.apis.io/contactout/security/contactout-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/contactout-domain-security.yml
@@ -282,6 +302,14 @@ common:
   url: https://contactout.com/llms.txt
 created: '2026-10-07'
 description: ContactOut is a B2B email finder and professional contact data platform (ContactOut Pty Ltd, founded 2015, San Francisco) that provides verified personal and work emails, phone numbers and enriched people and company profiles for 350M professionals across 40M companies, delivered through a Chrome extension, search portal, bulk tools, a REST API at api.contactout.com and a hosted MCP server at contactout.com/mcp. Used by recruiters and sales teams; GDPR and CCPA compliant with a published opt-out, and intended for professional B2B use only.
+finops:
+- has_sources: true
+  method: derived
+  name: Contactout Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: contactout-finops
+  template: false
 image: https://contactout.com/images/logo-square-200px.png
 json_schemas:
 - name: CompanyInformationFromDomainsResponse
@@ -327,7 +355,10 @@ plans:
 - name: Contactout Plans Pricing
   plan_count: 4
   slug: contactout-plans-pricing
-random_paper: 14
+- name: Contactout Price Estimates
+  plan_count: 0
+  slug: contactout-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 3
   name: Contactout Rate Limits
@@ -352,23 +383,23 @@ scopes:
   summary_line: 1 scope
 score:
   band: developing
-  composite: 53.5
+  composite: 46.3
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 89.0
+    artifact_dirs: 31
+    catalog_earned: 92.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 26.0
+    catalog_gap: 23.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.6
+  delta: -8.8
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 19.7
     contract_quality: 35.7
-    developer_ergonomics: 44.6
+    developer_ergonomics: 32.7
     discoverability: 80.0
-    operational_transparency: 60.5
-  previous_composite: 51.9
+    operational_transparency: 50.0
+  previous_composite: 55.1
   provenance:
     conformance: derived
     contracts:
@@ -383,14 +414,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 30.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/contactout/refs/heads/main/screenshots/contactout-2026-10-11T103232.png
+screenshot: https://apis.io/screenshots/contactout/contactout-2026-10-11T103232.png
 security:
 - kind: authentication
   name: Contactout Authentication
@@ -400,6 +431,16 @@ security:
   name: Contactout Domain Security
   slug: contactout-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: contactout-find-contact-from-linkedin
+  slug: contactout-find-contact-from-linkedin
+- name: contactout-prospect-search
+  slug: contactout-prospect-search
+- name: contactout-run-campaign
+  slug: contactout-run-campaign
+- name: contactout-verify-emails
+  slug: contactout-verify-emails
 slug: contactout
 tags:
 - Company

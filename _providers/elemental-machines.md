@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
+  score: 35.0
+  scored_at: '2026-11-06'
 api_count: 14
 apis:
 - description: A remote Model Context Protocol server served from the elementalmachines.com WordPress host via the WordPress MCP Adapter, advertised by /.well-known/oauth-protected-resource and /.well-known/oauth-au
@@ -102,29 +105,29 @@ apis:
   description: The Users API from Elemental Machines — 2 operation(s) for users.
   name: Elemental Machines Users API
   slug: elemental-machines-users-api
-artifact_total: 20
+artifact_total: 24
 collections:
 - collection_type: open
   name: Elemental Machines API
   slug: open-elemental-machines-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/plans/elemental-machines-plans-pricing.yml
+  href: https://artifacts.apis.io/elemental-machines/plans/elemental-machines-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/elemental-machines-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/rate-limits/elemental-machines-rate-limits.yml
+  href: https://artifacts.apis.io/elemental-machines/rate-limits/elemental-machines-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/elemental-machines-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/capabilities/elemental-machines-capability-edges.yml
+  href: https://artifacts.apis.io/elemental-machines/capabilities/elemental-machines-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/elemental-machines-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/overlays/elemental-machines-api-overlay.yaml
+  href: https://artifacts.apis.io/elemental-machines/overlays/elemental-machines-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/elemental-machines-api-overlay.yaml
@@ -181,68 +184,76 @@ common:
   type: StatusPage
   url: https://status.elementalmachines.io
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/lifecycle/elemental-machines-lifecycle.yml
+  href: https://artifacts.apis.io/elemental-machines/lifecycle/elemental-machines-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/elemental-machines-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/changelog/elemental-machines-changelog.yml
+  href: https://artifacts.apis.io/elemental-machines/changelog/elemental-machines-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/elemental-machines-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/conformance/elemental-machines-conformance.yml
+  href: https://artifacts.apis.io/elemental-machines/conformance/elemental-machines-conformance.yml
   title: ''
   type: Conformance
   url: conformance/elemental-machines-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/conformance/elemental-machines-conformance.yml
+  href: https://artifacts.apis.io/elemental-machines/conformance/elemental-machines-conformance.yml
   title: ''
   type: Compliance
   url: conformance/elemental-machines-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/conventions/elemental-machines-conventions.yml
+  href: https://artifacts.apis.io/elemental-machines/conventions/elemental-machines-conventions.yml
   title: ''
   type: Conventions
   url: conventions/elemental-machines-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/authentication/elemental-machines-authentication.yml
+  href: https://artifacts.apis.io/elemental-machines/authentication/elemental-machines-authentication.yml
   title: ''
   type: Authentication
   url: authentication/elemental-machines-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/scopes/elemental-machines-scopes.yml
+  href: https://artifacts.apis.io/elemental-machines/scopes/elemental-machines-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/elemental-machines-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/security/elemental-machines-domain-security.yml
+  href: https://artifacts.apis.io/elemental-machines/security/elemental-machines-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/elemental-machines-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/packages/elemental-machines-packages.yml
+  href: https://artifacts.apis.io/elemental-machines/packages/elemental-machines-packages.yml
   title: ''
   type: Packages
   url: packages/elemental-machines-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/well-known/elemental-machines-well-known.yml
+  href: https://artifacts.apis.io/elemental-machines/well-known/elemental-machines-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/elemental-machines-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/llms/elemental-machines-llms.txt
+  href: https://artifacts.apis.io/elemental-machines/llms/elemental-machines-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/elemental-machines-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/elemental-machines/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-08-12'
 description: Elemental Machines is a Cambridge, Massachusetts LabOps connectivity company that instruments laboratories and manufacturing floors with IoT sensors and a vendor-agnostic cloud platform for environmental monitoring, cold-storage and freezer health, equipment utilization, alerting, calibration and compliance reporting across life sciences R&D, biomanufacturing, academia and government facilities. The platform ingests sensor and third-party equipment data at 15-second resolution and exposes it through a public REST API at api.elementalmachines.io covering machines, machine samples and sample statistics, utilization (aggregated, hourly and status), alert logs, alert rules, users, user activities, customer groups, release notes and a server status check, authenticated with OAuth 2.0 access tokens. The same data is pushed into ELN/LIMS/SDMS, QMS, MES, BMS and CMMS systems and data warehouses through the company's data-integration services. The company is ISO 9001:2015 certified,
   operates calibration to ISO 17025, and positions the platform as a 21 CFR Part 11 / ALCOA+ compliant recording system for GxP-regulated laboratories.
+finops:
+- has_sources: true
+  method: derived
+  name: Elemental Machines Finops
+  primary_unit: ''
+  service_category: ''
+  slug: elemental-machines-finops
+  template: true
 image: https://elementalmachines.com/wp-content/uploads/2024/11/connectivity-alerts-video.jpeg
 layout: provider
 mcp_servers:
@@ -256,16 +267,32 @@ network: true
 overview: 'Elemental Machines publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alert Logs API, Alert Rules API, Authentication API, and 10 more. Tagged areas include lab-operations, laboratory-monitoring, IoT, Sensors, and Life Sciences.
 
 
+  The Elemental Machines catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Elemental Machines'' developer surface includes documentation, API reference, support, engineering blog, signup flow, changelog, authentication, and 22 more developer resources.'
 plans:
 - name: Elemental Machines Plans Pricing
   plan_count: 0
   slug: elemental-machines-plans-pricing
-random_paper: 10
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Elemental Machines Rate Limits
   slug: elemental-machines-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Elemental Machines API Rules
+  rule_count: 59
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 4
+  slug: elemental-machines-rules
 scopes:
 - name: Elemental Machines Scopes
   scope_count: 0
@@ -273,23 +300,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.6
+  composite: 47.3
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
+    artifact_dirs: 27
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 41.1
     developer_ergonomics: 47.0
     discoverability: 73.3
     operational_transparency: 34.2
-  previous_composite: 45.6
+  previous_composite: 47.3
   provenance:
     conformance: first-party
     contracts:
@@ -305,13 +332,13 @@ score:
     regime: Health
     regime_id: health
     score: 40.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/screenshots/elemental-machines-2026-08-17T080912.png
+screenshot: https://apis.io/screenshots/elemental-machines/elemental-machines-2026-08-17T080912.png
 security:
 - kind: authentication
   name: Elemental Machines Authentication
@@ -321,6 +348,12 @@ security:
   name: Elemental Machines Domain Security
   slug: elemental-machines-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: elemental-machines-cold-storage-excursion-review
+  slug: elemental-machines-cold-storage-excursion-review
+- name: elemental-machines-equipment-utilization-report
+  slug: elemental-machines-equipment-utilization-report
 slug: elemental-machines
 tags:
 - lab-operations

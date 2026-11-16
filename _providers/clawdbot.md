@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 14.8
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://clawhub.ai
@@ -64,37 +77,37 @@ apis:
 artifact_total: 10
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/rules/clawdbot-rules.yml
+  href: https://artifacts.apis.io/clawdbot/rules/clawdbot-rules.yml
   title: ''
   type: Spectral
   url: rules/clawdbot-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/conformance/clawdbot-conformance.yml
+  href: https://artifacts.apis.io/clawdbot/conformance/clawdbot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/clawdbot-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/llms/clawdbot-llms.txt
+  href: https://artifacts.apis.io/clawdbot/llms/clawdbot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/clawdbot-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/well-known/clawdbot-clawhub-security.txt
+  href: https://artifacts.apis.io/clawdbot/well-known/clawdbot-clawhub-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/clawdbot-clawhub-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/well-known/clawdbot-well-known.yml
+  href: https://artifacts.apis.io/clawdbot/well-known/clawdbot-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/clawdbot-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/hosts/clawdbot-hosts.yml
+  href: https://artifacts.apis.io/clawdbot/hosts/clawdbot-hosts.yml
   title: ''
   type: Hosts
   url: hosts/clawdbot-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/vendors/clawdbot-vendors.yml
+  href: https://artifacts.apis.io/clawdbot/vendors/clawdbot-vendors.yml
   title: ''
   type: Vendors
   url: vendors/clawdbot-vendors.yml
@@ -119,12 +132,12 @@ common:
   type: GettingStarted
   url: https://docs.openclaw.ai/start/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/security/clawdbot-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/clawdbot/security/clawdbot-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/clawdbot-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clawdbot/refs/heads/main/security/clawdbot-domain-security.yml
+  href: https://artifacts.apis.io/clawdbot/security/clawdbot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clawdbot-domain-security.yml
@@ -167,14 +180,14 @@ modified: '2026-10-08'
 name: Clawdbot
 nav: Providers
 network: true
-overview: 'Clawdbot is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Clawdbot API, Npm API, Packages API, and 4 more. Tagged areas include Company, Artificial Intelligence, Open Source, PersonalAssistant, and Automation.
+overview: 'Clawdbot is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Clawdbot API, Npm API, Packages API, and 4 more. Tagged areas include Company, Artificial Intelligence, Open Source, Personal Assistant, and Automation.
 
 
   The Clawdbot catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Clawdbot''s developer surface includes changelog, getting-started guide, documentation, API reference, engineering blog, and 14 more developer resources.'
-random_paper: 12
+random_paper: 8
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -190,21 +203,23 @@ rules:
   slug: clawdbot-rules
 score:
   band: emerging
-  composite: 25.1
+  composite: 18.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 12
     catalog_earned: 43.8
     catalog_earned_first_party: 0.0
     catalog_gap: 71.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.2
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 15.9
     contract_quality: 14.1
-    developer_ergonomics: 31.0
-    discoverability: 80.4
-    operational_transparency: 26.3
+    developer_ergonomics: 15.5
+    discoverability: 79.5
+    operational_transparency: 13.2
+  previous_composite: 25.1
   provenance:
     conformance: derived
     contracts:
@@ -218,12 +233,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/clawdbot/clawdbot-2026-11-03T124329.png
 security:
 - kind: domain-security
   name: Clawdbot Domain Security
@@ -238,7 +255,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Open Source
-- PersonalAssistant
+- Personal Assistant
 - Automation
 website: https://openclaw.ai
 ---

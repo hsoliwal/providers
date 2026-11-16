@@ -1,17 +1,22 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - scopes
+  - rate-limits
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -29,15 +34,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 65.0
-  scored_at: '2026-10-17'
+  score: 63.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 82
   human_in_the_loop: 1
@@ -45,7 +53,7 @@ agentic_access:
   operation_count: 104
   slug: bria-agentic-access
   summary_line: 104 operations · 82 acting · 1 human-in-the-loop
-api_count: 10
+api_count: 11
 apis:
 - description: Bria's hosted, remote Model Context Protocol server, exposing image generation and editing to any MCP client. Authenticated with either a static api_token header or an OAuth 2.0 bearer token; anonymou
   name: Bria MCP Server
@@ -115,15 +123,22 @@ apis:
   description: Image-to-Video capabilities
   name: Bria Video Generation API
   slug: bria-video-generation-api
-artifact_total: 38
+- baseURL: https://mcp.prod.bria-api.com/mcp
+  baseurl_source: declared
+  description: The FastAPI API from Bria — 1 operation(s) for fastapi.
+  name: Bria Fast API
+  slug: bria-fastapi-api
+- baseURL: https://mcp.prod.bria-api.com/mcp
+  baseurl_source: declared
+  description: The Health API from Bria — 2 operation(s) for health.
+  name: Bria Health API
+  slug: bria-health-api
+artifact_total: 48
 asyncapis:
 - description: ''
   name: Bria Webhooks
   slug: bria-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Product Shot API Reference Automotive Endpoints API
   slug: open-bria-automotive-endpoints-api
@@ -165,22 +180,22 @@ collections:
   slug: open-bria-video-generation-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/rate-limits/bria-rate-limits.yml
+  href: https://artifacts.apis.io/bria/rate-limits/bria-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bria-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/plans/bria-plans-pricing.yml
+  href: https://artifacts.apis.io/bria/plans/bria-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bria-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/capabilities/bria-capability-edges.yml
+  href: https://artifacts.apis.io/bria/capabilities/bria-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bria-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/overlays/bria-ad-generation-overlay.yaml
+  href: https://artifacts.apis.io/bria/overlays/bria-ad-generation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bria-ad-generation-overlay.yaml
@@ -241,112 +256,120 @@ common:
   type: Compliance
   url: https://bria.ai/security-and-compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/security/bria-trust-center.yml
+  href: https://artifacts.apis.io/bria/security/bria-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bria-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/llms/bria-llms.txt
+  href: https://artifacts.apis.io/bria/llms/bria-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bria-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/llms/bria-platform-llms.txt
+  href: https://artifacts.apis.io/bria/llms/bria-platform-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bria-platform-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/packages/bria-packages.yml
+  href: https://artifacts.apis.io/bria/packages/bria-packages.yml
   title: ''
   type: Packages
   url: packages/bria-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/packages/bria-packages.yml
+  href: https://artifacts.apis.io/bria/packages/bria-packages.yml
   title: ''
   type: SDKs
   url: packages/bria-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/cli/bria-cli.yml
+  href: https://artifacts.apis.io/bria/cli/bria-cli.yml
   title: ''
   type: CLI
   url: cli/bria-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/components/bria-components.yml
+  href: https://artifacts.apis.io/bria/components/bria-components.yml
   title: ''
   type: Components
   url: components/bria-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/authentication/bria-authentication.yml
+  href: https://artifacts.apis.io/bria/authentication/bria-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bria-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/scopes/bria-scopes.yml
+  href: https://artifacts.apis.io/bria/scopes/bria-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bria-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/well-known/bria-well-known.yml
+  href: https://artifacts.apis.io/bria/well-known/bria-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bria-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/conventions/bria-conventions.yml
+  href: https://artifacts.apis.io/bria/conventions/bria-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bria-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/errors/bria-problem-types.yml
+  href: https://artifacts.apis.io/bria/errors/bria-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bria-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/lifecycle/bria-lifecycle.yml
+  href: https://artifacts.apis.io/bria/lifecycle/bria-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bria-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/lifecycle/bria-lifecycle.yml
+  href: https://artifacts.apis.io/bria/lifecycle/bria-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/bria-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/conformance/bria-conformance.yml
+  href: https://artifacts.apis.io/bria/conformance/bria-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bria-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/data-model/bria-data-model.yml
+  href: https://artifacts.apis.io/bria/data-model/bria-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bria-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/sandbox/bria-sandbox.yml
+  href: https://artifacts.apis.io/bria/sandbox/bria-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bria-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/asyncapi/bria-webhooks.yml
+  href: https://artifacts.apis.io/bria/asyncapi/bria-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bria-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bria/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/agentic-access/bria-agentic-access.yml
+  href: https://artifacts.apis.io/bria/agentic-access/bria-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bria-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/security/bria-domain-security.yml
+  href: https://artifacts.apis.io/bria/security/bria-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bria-domain-security.yml
 created: '2026-08-08'
 description: 'Bria is an enterprise visual generative AI platform that exposes image generation, image editing, video editing, product-shot and automotive imagery, tailored (fine-tuned) model training, ads generation and content attribution as production REST APIs on engine.prod.bria-api.com. Its models are trained exclusively on licensed data from partners such as Getty Images, Alamy and Envato, and outputs carry commercial licensing and IP indemnification. The v2 API is asynchronous by default: endpoints return a request_id plus a status_url for polling, with signed webhook delivery as the production alternative. Bria publishes ten OpenAPI 3.0 descriptions, a hosted MCP server at mcp.prod.bria-api.com, first-party Agent Skills for coding agents, a Python SDK, ComfyUI/Photoshop/Figma/Nuke/Houdini/OBS integrations, and an llms.txt index on both its documentation and platform hosts.'
+finops:
+- has_sources: true
+  method: derived
+  name: Bria Finops
+  primary_unit: image
+  service_category: ''
+  slug: bria-finops
+  template: false
 image: https://cdn.sanity.io/images/zppcnj0l/production/315c9e01bd4534858413ec77d68e9130e9e86b17-1270x240.png
 layout: provider
 mcp_servers:
@@ -357,10 +380,10 @@ modified: '2026-08-08'
 name: Bria
 nav: Providers
 network: true
-overview: 'Bria publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Automotive Endpoints API, Dataset API, Editing Endpoints API, and 11 more. Tagged areas include Artificial Intelligence, Generative AI, Image, Image Generation, and Image Editing.
+overview: 'Bria publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Automotive Endpoints API, Dataset API, Editing Endpoints API, and 13 more. Tagged areas include Artificial Intelligence, Generative AI, Image, Image Generation, and Image Editing.
 
 
-  The Bria catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Bria catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Bria''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, engineering blog, and 32 more developer resources.'
@@ -371,43 +394,56 @@ plans:
 - name: Bria Price Estimates
   plan_count: 0
   slug: bria-price-estimates
-random_paper: 18
+random_paper: 6
 rate_limits:
 - limit_count: 3
   name: Bria Rate Limits
   slug: bria-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Bria API Rules
+  rule_count: 53
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 7
+    warn: 15
+  slug: bria-rules
 scopes:
 - name: Bria Scopes
   scope_count: 3
   slug: bria-scopes
   summary_line: 3 scopes · authorizationCode/deviceCode
 score:
-  band: strong
-  composite: 64.4
+  band: exemplar
+  composite: 68.2
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 64.0
+    artifact_dirs: 33
+    catalog_earned: 71.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 43.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.7
+  delta: 0.2
   facets:
-    access_clarity: 78.9
-    contract_governance: 4.5
-    contract_quality: 52.6
+    access_clarity: 86.8
+    contract_governance: 18.2
+    contract_quality: 54.7
     developer_ergonomics: 76.2
     discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 63.7
+  previous_composite: 68.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 86.7
       derived: 0
-      marker_coverage: 0.0
-      total: 13
+      marker_coverage: 13.3
+      total: 15
     mcp: first-party
     skills: first-party
   regulatory:
@@ -416,13 +452,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 43.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bria/refs/heads/main/screenshots/bria-2026-08-17T080703.png
+screenshot: https://apis.io/screenshots/bria/bria-2026-08-17T080703.png
 security:
 - kind: authentication
   name: Bria Authentication
@@ -436,6 +472,22 @@ security:
   name: Bria Trust Center
   slug: bria-trust-center
   summary_line: SOC 2, ISO 27001, C2PA
+skill_count: 7
+skills:
+- name: bria-ai
+  slug: bria-bria-ai
+- name: image-utils
+  slug: bria-image-utils
+- name: bria-product-shot-pipeline
+  slug: bria-product-shot-pipeline
+- name: remove-background
+  slug: bria-remove-background
+- name: bria-tailored-model-training
+  slug: bria-tailored-model-training
+- name: vgl
+  slug: bria-vgl
+- name: video-remove-background
+  slug: bria-video-remove-background
 slug: bria
 tags:
 - Artificial Intelligence
